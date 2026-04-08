@@ -388,6 +388,35 @@
   .hk-uni-list { color: #fbbf24; font-weight: 600; }
   @media (max-width: 600px) { .feed-grid { grid-template-columns: 1fr; } .podcast-card { grid-column: span 1; } }
 
+  /* ── Nav Hub (Home) ── */
+  .nav-hub { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-bottom: 2rem; }
+  .nav-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 18px; padding: 2rem 1.5rem; cursor: pointer;
+    transition: all 0.3s; position: relative; overflow: hidden;
+  }
+  .nav-card:hover {
+    border-color: var(--accent); transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(59,130,246,0.12);
+  }
+  .nav-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; border-radius: 18px 18px 0 0;
+  }
+  .nav-card:nth-child(1)::before { background: linear-gradient(90deg, #3b82f6, #60a5fa); }
+  .nav-card:nth-child(2)::before { background: linear-gradient(90deg, #a855f7, #c084fc); }
+  .nav-card:nth-child(3)::before { background: linear-gradient(90deg, #22c55e, #4ade80); }
+  .nav-card:nth-child(4)::before { background: linear-gradient(90deg, #f97316, #fb923c); }
+  .nav-card:nth-child(5)::before { background: linear-gradient(90deg, #ec4899, #f472b6); }
+  .nav-card:nth-child(6)::before { background: linear-gradient(90deg, #eab308, #fbbf24); }
+  .nav-card-icon { font-size: 2.5rem; margin-bottom: 0.75rem; }
+  .nav-card-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.3rem; }
+  .nav-card-desc { font-size: 0.78rem; color: var(--text2); line-height: 1.5; }
+  .nav-card-badge { display: inline-block; margin-top: 0.75rem; font-size: 0.7rem; padding: 0.2rem 0.6rem; border-radius: 6px; background: rgba(59,130,246,0.15); color: var(--accent2); font-weight: 600; }
+  .page-view { display: none; }
+  .page-view.active { display: block; }
+  @media (max-width: 900px) { .nav-hub { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px) { .nav-hub { grid-template-columns: 1fr; } .nav-card { padding: 1.25rem 1rem; } }
+
   @keyframes fadeIn { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
   .paper-card, .stat-card, .platform-card, .radar-card, .report-card { animation: fadeIn 0.4s ease both; }
   .loading { text-align: center; padding: 3rem; color: var(--text2); }
@@ -399,86 +428,135 @@
 
 <div class="header">
   <div class="header-inner">
-    <div class="logo">
+    <div class="logo" style="cursor:pointer" onclick="navigateTo('home')">
       <div class="logo-icon">🔭</div>
       <div class="logo-text">
         <h1>AI Research Radar</h1>
         <p>AI 研究情报监控站 · 每日更新</p>
       </div>
     </div>
-    <div class="header-nav">
-      <button class="active" onclick="showDashboard()">总览</button>
-      <button onclick="showFeed()">社媒动态</button>
-      <button onclick="showTalent()">人才追踪</button>
+    <div class="header-nav" id="headerNav">
+      <button class="active" onclick="navigateTo('home')">🏠 主页</button>
     </div>
   </div>
 </div>
 
 <div class="main">
-  <div class="dashboard-view" id="dashboardView">
+  <!-- ═══ HOME: Navigation Hub ═══ -->
+  <div class="page-view active" id="page-home">
     <div class="stats-grid" id="statsGrid"></div>
-
-    <!-- Platform Status - clickable -->
+    <div class="section-head"><h2><span>🧭</span> 情报中心</h2></div>
+    <div class="nav-hub">
+      <div class="nav-card" onclick="navigateTo('arxiv')">
+        <div class="nav-card-icon">📄</div>
+        <div class="nav-card-title">arXiv 每日论文</div>
+        <div class="nav-card-desc">自动扫描10家AI公司最新arXiv论文，识别高校合作与港校合作，AI方向自动分类</div>
+        <div class="nav-card-badge" id="arxivBadge">加载中…</div>
+      </div>
+      <div class="nav-card" onclick="navigateTo('feed')">
+        <div class="nav-card-icon">🐦</div>
+        <div class="nav-card-title">社媒动态</div>
+        <div class="nav-card-desc">追踪25位顶级AI Builders的推文、播客和博客，按热度排序</div>
+        <div class="nav-card-badge" id="feedBadge">加载中…</div>
+      </div>
+      <div class="nav-card" onclick="navigateTo('intel')">
+        <div class="nav-card-icon">🔬</div>
+        <div class="nav-card-title">深度情报分析</div>
+        <div class="nav-card-desc">对重点论文做深度分析，追踪高校合作人才、导师信息、实验室</div>
+        <div class="nav-card-badge" id="intelBadge">加载中…</div>
+      </div>
+      <div class="nav-card" onclick="navigateTo('reports')">
+        <div class="nav-card-icon">📋</div>
+        <div class="nav-card-title">完整日报</div>
+        <div class="nav-card-desc">每日生成的完整情报日报，可查看历史报告全文</div>
+        <div class="nav-card-badge" id="reportBadge">加载中…</div>
+      </div>
+      <div class="nav-card" onclick="navigateTo('talent')">
+        <div class="nav-card-icon">🎓</div>
+        <div class="nav-card-title">人才追踪</div>
+        <div class="nav-card-desc">在读博士生追踪：个人主页、导师、实验室、预计毕业时间</div>
+        <div class="nav-card-badge" id="talentBadge">5 位追踪中</div>
+      </div>
+      <div class="nav-card" onclick="navigateTo('radar')">
+        <div class="nav-card-icon">📊</div>
+        <div class="nav-card-title">公司动向雷达</div>
+        <div class="nav-card-desc">8家公司的研究方向、战略趋势判断，点击可筛选相关情报</div>
+        <div class="nav-card-badge">8 家公司</div>
+      </div>
+    </div>
+    <!-- Platform Status on home -->
     <div class="section-head">
-      <h2><span>📡</span> 监控平台状态 <span style="font-size:0.7rem;color:var(--text2);font-weight:400;margin-left:0.5rem">点击公司查看相关情报 ↓</span></h2>
+      <h2><span>📡</span> 监控平台状态</h2>
     </div>
     <div class="platform-grid" id="platformGrid"></div>
+  </div>
 
-    <!-- Social Feed -->
-    <div id="feedSection">
-      <div class="section-head">
-        <h2><span>🐦</span> AI Builders 社媒动态</h2>
-      </div>
-      <div class="feed-tabs" id="feedTabs"></div>
-      <div class="feed-grid" id="feedGrid">
-        <div class="loading"><div class="spinner"></div>正在加载社媒动态…</div>
-      </div>
-    </div>
-
-    <!-- arXiv Daily Papers -->
-    <div id="arxivSection">
-      <div class="section-head">
-        <h2><span>📄</span> arXiv 每日论文 <span style="font-size:0.7rem;color:var(--text2);font-weight:400;margin-left:0.5rem" id="arxivMeta"></span></h2>
-      </div>
-      <div class="arxiv-company-tabs" id="arxivTabs"></div>
-      <div class="arxiv-list" id="arxivList">
-        <div class="loading"><div class="spinner"></div>正在加载 arXiv 论文…</div>
-      </div>
-    </div>
-
-    <!-- Company Filter Bar -->
+  <!-- ═══ PAGE: arXiv Papers ═══ -->
+  <div class="page-view" id="page-arxiv">
+    <button class="back-btn" onclick="navigateTo('home')">← 返回主页</button>
     <div class="section-head">
-      <h2><span>🔬</span> 论文情报</h2>
+      <h2><span>📄</span> arXiv 每日论文 <span style="font-size:0.7rem;color:var(--text2);font-weight:400;margin-left:0.5rem" id="arxivMeta"></span></h2>
+    </div>
+    <div class="arxiv-company-tabs" id="arxivTabs"></div>
+    <div class="arxiv-list" id="arxivList">
+      <div class="loading"><div class="spinner"></div>正在加载 arXiv 论文…</div>
+    </div>
+  </div>
+
+  <!-- ═══ PAGE: Social Feed ═══ -->
+  <div class="page-view" id="page-feed">
+    <button class="back-btn" onclick="navigateTo('home')">← 返回主页</button>
+    <div class="section-head">
+      <h2><span>🐦</span> AI Builders 社媒动态</h2>
+    </div>
+    <div class="feed-tabs" id="feedTabs"></div>
+    <div class="feed-grid" id="feedGrid">
+      <div class="loading"><div class="spinner"></div>正在加载社媒动态…</div>
+    </div>
+  </div>
+
+  <!-- ═══ PAGE: Deep Intel (papers + filter) ═══ -->
+  <div class="page-view" id="page-intel">
+    <button class="back-btn" onclick="navigateTo('home')">← 返回主页</button>
+    <div class="section-head">
+      <h2><span>🔬</span> 深度情报分析</h2>
     </div>
     <div class="filter-bar" id="filterBar"></div>
-
-    <!-- Paper Cards (filtered) -->
     <div class="paper-list" id="paperList">
       <div class="loading"><div class="spinner"></div>正在加载…</div>
     </div>
+  </div>
 
-    <!-- Full Reports -->
+  <!-- ═══ PAGE: Full Reports ═══ -->
+  <div class="page-view" id="page-reports">
+    <button class="back-btn" onclick="navigateTo('home')">← 返回主页</button>
     <div class="section-head">
       <h2><span>📋</span> 完整日报</h2>
     </div>
     <div class="report-list" id="reportList"></div>
+  </div>
 
-    <!-- Company Radar - clickable -->
+  <!-- ═══ PAGE: Talent ═══ -->
+  <div class="page-view" id="page-talent">
+    <button class="back-btn" onclick="navigateTo('home')">← 返回主页</button>
+    <div class="section-head">
+      <h2><span>🎓</span> 高校合作人才追踪</h2>
+    </div>
+    <table class="talent-table" id="talentTable"></table>
+  </div>
+
+  <!-- ═══ PAGE: Company Radar ═══ -->
+  <div class="page-view" id="page-radar">
+    <button class="back-btn" onclick="navigateTo('home')">← 返回主页</button>
     <div class="section-head">
       <h2><span>📊</span> 各公司研究动向</h2>
     </div>
     <div class="radar-grid" id="radarGrid"></div>
-
-    <div id="talentSection">
-      <div class="section-head">
-        <h2><span>🎓</span> 高校合作人才追踪</h2>
-      </div>
-      <table class="talent-table" id="talentTable"></table>
-    </div>
   </div>
 
+  <!-- ═══ DETAIL VIEW (report/paper detail) ═══ -->
   <div class="detail-view" id="detailView">
-    <button class="back-btn" onclick="backToDashboard()">← 返回总览</button>
+    <button class="back-btn" id="detailBackBtn" onclick="backToDashboard()">← 返回</button>
     <div class="detail-content" id="detailContent"></div>
   </div>
 </div>
@@ -781,65 +859,71 @@ function renderTalent() {
 }
 
 // ══════════════════════════════════════
-// Filter & Navigation
+// Navigation System
 // ══════════════════════════════════════
+let currentPage = 'home';
+let previousPage = 'home';
+
+function navigateTo(page) {
+  previousPage = currentPage;
+  currentPage = page;
+  // Hide all pages
+  document.querySelectorAll('.page-view').forEach(function(el) { el.classList.remove('active'); });
+  document.getElementById('detailView').classList.remove('active');
+  document.getElementById('detailView').style.display = 'none';
+  // Show target
+  var target = document.getElementById('page-' + page);
+  if (target) target.classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function openPaperDetail(idx) {
+  var paper = ALL_PAPERS[idx];
+  if (!paper) return;
+  previousPage = currentPage;
+  document.querySelectorAll('.page-view').forEach(function(el) { el.classList.remove('active'); });
+  var dv = document.getElementById('detailView');
+  dv.style.display = 'block';
+  dv.classList.add('active');
+  document.getElementById('detailBackBtn').onclick = function() {
+    dv.style.display = 'none';
+    dv.classList.remove('active');
+    navigateTo(previousPage);
+  };
+  document.getElementById('detailContent').innerHTML = parseMd('### ' + paper.title + '\n\n' + paper.rawSection);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function openReport(idx) {
+  var report = REPORTS_DATA[idx];
+  if (!report) return;
+  previousPage = currentPage;
+  document.querySelectorAll('.page-view').forEach(function(el) { el.classList.remove('active'); });
+  var dv = document.getElementById('detailView');
+  dv.style.display = 'block';
+  dv.classList.add('active');
+  document.getElementById('detailBackBtn').onclick = function() {
+    dv.style.display = 'none';
+    dv.classList.remove('active');
+    navigateTo(previousPage);
+  };
+  document.getElementById('detailContent').innerHTML = parseMd(report.raw);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function backToDashboard() {
+  document.getElementById('detailView').style.display = 'none';
+  document.getElementById('detailView').classList.remove('active');
+  navigateTo(previousPage || 'home');
+}
 
 function filterByCompany(companyId) {
   currentFilter = currentFilter === companyId ? 'all' : companyId;
   renderPlatforms();
   renderFilterBar();
   renderPapers();
-  renderRadar();
   renderTalent();
-  // Scroll to papers
-  document.getElementById('filterBar').scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-
-function openPaperDetail(idx) {
-  const paper = ALL_PAPERS[idx];
-  if (!paper) return;
-  document.getElementById('dashboardView').classList.add('hidden');
-  const dv = document.getElementById('detailView');
-  dv.classList.add('active');
-  document.getElementById('detailContent').innerHTML = parseMd('### ' + paper.title + '\n\n' + paper.rawSection);
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-function openReport(idx) {
-  const report = REPORTS_DATA[idx];
-  if (!report) return;
-  document.getElementById('dashboardView').classList.add('hidden');
-  document.getElementById('detailView').classList.add('active');
-  document.getElementById('detailContent').innerHTML = parseMd(report.raw);
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-function backToDashboard() {
-  document.getElementById('detailView').classList.remove('active');
-  document.getElementById('dashboardView').classList.remove('hidden');
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-function showDashboard() {
-  document.querySelectorAll('.header-nav button').forEach(b => b.classList.remove('active'));
-  document.querySelectorAll('.header-nav button')[0].classList.add('active');
-  currentFilter = 'all';
-  backToDashboard();
-  renderPlatforms(); renderFilterBar(); renderPapers(); renderRadar(); renderTalent();
-}
-
-function showFeed() {
-  document.querySelectorAll('.header-nav button').forEach(b => b.classList.remove('active'));
-  document.querySelectorAll('.header-nav button')[1].classList.add('active');
-  backToDashboard();
-  document.getElementById('feedSection').scrollIntoView({ behavior: 'smooth' });
-}
-
-function showTalent() {
-  document.querySelectorAll('.header-nav button').forEach(b => b.classList.remove('active'));
-  document.querySelectorAll('.header-nav button')[2].classList.add('active');
-  backToDashboard();
-  document.getElementById('talentSection').scrollIntoView({ behavior: 'smooth' });
+  navigateTo('intel');
 }
 
 // ══════════════════════════════════════
@@ -959,6 +1043,9 @@ async function loadFeeds() {
 
   renderFeedTabs();
   renderFeedGrid();
+  // Update home badge
+  var total = feedData.tweets.length + feedData.podcasts.length + feedData.blogs.length;
+  if (total) document.getElementById('feedBadge').textContent = feedData.tweets.length + ' 推文 · ' + feedData.podcasts.length + ' 播客';
 }
 
 // ══════════════════════════════════════
@@ -978,6 +1065,10 @@ async function loadArxiv() {
       document.getElementById('arxivMeta').textContent = meta;
       renderArxivTabs();
       renderArxivList();
+      // Update home badge
+      var badgeText = arxivData.totalPapers + ' 篇论文';
+      if (arxivData.totalUniCollab) badgeText += ' · ' + arxivData.totalUniCollab + ' 校企合作';
+      document.getElementById('arxivBadge').textContent = badgeText;
     } else {
       document.getElementById('arxivList').innerHTML = '<div class="no-results">暂无 arXiv 数据</div>';
     }
@@ -1085,6 +1176,9 @@ async function loadReports() {
   renderReports();
   renderRadar();
   renderTalent();
+  // Update home badges
+  if (ALL_PAPERS.length) document.getElementById('intelBadge').textContent = ALL_PAPERS.length + ' 篇深度分析';
+  if (REPORTS_DATA.length) document.getElementById('reportBadge').textContent = REPORTS_DATA.length + ' 份日报';
 }
 
 loadReports();

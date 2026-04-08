@@ -1483,6 +1483,7 @@ function deleteTalent(key) {
   delete local[key];
   saveLocalTalentNotes(local);
   renderTalentExistingList();
+  renderTalent();
   renderArxivList();
   syncToRemote();
   showEditorMsg('success', '已删除: ' + key);
@@ -1490,6 +1491,20 @@ function deleteTalent(key) {
 
 async function syncToRemote() {
   try {
+    // 先从服务器拉取最新数据，合并后再推送（避免覆盖）
+    var freshNotes = {};
+    try {
+      var getResp = await fetch(TALENT_API);
+      if (getResp.ok) {
+        var freshData = await getResp.json();
+        freshNotes = freshData.notes || {};
+      }
+    } catch(e) {}
+    // 合并：本地数据覆盖到最新服务端数据上（本地优先）
+    for (var key in talentNotes) {
+      freshNotes[key] = talentNotes[key];
+    }
+    talentNotes = freshNotes;
     var payload = { generatedAt: new Date().toISOString(), notes: talentNotes };
     var resp = await fetch(TALENT_API, {
       method: 'POST',
@@ -1498,12 +1513,10 @@ async function syncToRemote() {
     });
     if (resp.ok) {
       console.log('Synced to remote API');
-      // Also save locally as backup
-      saveLocalTalentNotes(talentNotes);
-    } else {
-      console.log('Remote sync failed, saved locally');
-      saveLocalTalentNotes(talentNotes);
     }
+    saveLocalTalentNotes(talentNotes);
+    renderTalentExistingList();
+    renderTalent();
   } catch(e) {
     console.log('Remote unavailable, saved locally only');
     saveLocalTalentNotes(talentNotes);

@@ -377,6 +377,15 @@
   .arxiv-paper-tags { display: flex; gap: 0.3rem; margin-top: 0.35rem; flex-wrap: wrap; }
   .arxiv-tag { font-size: 0.58rem; padding: 0.1rem 0.35rem; border-radius: 4px; background: rgba(59,130,246,0.1); color: var(--accent2); }
   .arxiv-venue-tag { background: rgba(168,85,247,0.15); color: #c084fc; }
+  .arxiv-dir-tag { font-weight: 600; }
+  /* University collab highlighting */
+  .arxiv-paper.has-uni { border-left: 3px solid var(--green); }
+  .arxiv-paper.has-hk { border-left: 3px solid #f59e0b; box-shadow: 0 0 12px rgba(245,158,11,0.15); background: linear-gradient(135deg, var(--surface) 0%, rgba(245,158,11,0.03) 100%); }
+  .uni-badge { font-size: 0.62rem; padding: 0.12rem 0.4rem; border-radius: 4px; background: rgba(34,197,94,0.15); color: #4ade80; font-weight: 600; }
+  .hk-badge { background: linear-gradient(135deg, rgba(245,158,11,0.25), rgba(239,68,68,0.15)); color: #fbbf24; font-weight: 700; animation: hkGlow 2s ease-in-out infinite alternate; }
+  @keyframes hkGlow { from { box-shadow: 0 0 4px rgba(245,158,11,0.2); } to { box-shadow: 0 0 10px rgba(245,158,11,0.5); } }
+  .uni-list { font-size: 0.65rem; color: var(--green); margin-top: 0.2rem; }
+  .hk-uni-list { color: #fbbf24; font-weight: 600; }
   @media (max-width: 600px) { .feed-grid { grid-template-columns: 1fr; } .podcast-card { grid-column: span 1; } }
 
   @keyframes fadeIn { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
@@ -963,7 +972,10 @@ async function loadArxiv() {
     const resp = await fetch('reports/arxiv-daily.json');
     if (resp.ok) {
       arxivData = await resp.json();
-      document.getElementById('arxivMeta').textContent = arxivData.totalPapers + ' 篇 · 自 ' + arxivData.since + ' 起';
+      var meta = arxivData.totalPapers + ' 篇';
+      if (arxivData.totalUniCollab) meta += ' · 🎓' + arxivData.totalUniCollab + '篇高校合作';
+      if (arxivData.totalHKCollab) meta += ' · 🇭🇰' + arxivData.totalHKCollab + '篇港校合作';
+      document.getElementById('arxivMeta').textContent = meta;
       renderArxivTabs();
       renderArxivList();
     } else {
@@ -1002,7 +1014,26 @@ function renderArxivList() {
     var authors = p.authors.join(', ') + (p.authorCount > 8 ? ' 等' + p.authorCount + '人' : '');
     var venue = p.comment ? (p.comment.match(/(AAAI|ICLR|ICML|NeurIPS|CVPR|ICCV|ECCV|ACL|EMNLP)\s*\d{4}/i) || [null])[0] : null;
     var cats = p.categories.map(function(c) { return '<span class="arxiv-tag">' + c + '</span>'; }).join('');
-    return '<div class="arxiv-paper"><div class="arxiv-paper-head"><div class="arxiv-paper-title"><a href="' + p.arxivUrl + '" target="_blank">' + p.title + '</a></div><div class="arxiv-paper-date">' + p._icon + ' ' + date + '</div></div><div class="arxiv-paper-authors">' + authors + '</div><div class="arxiv-paper-summary">' + p.summary + '</div><div class="arxiv-paper-tags"><span class="arxiv-tag">' + p._company + '</span>' + cats + (venue ? '<span class="arxiv-tag arxiv-venue-tag">🏆 ' + venue + '</span>' : '') + (p.pdfUrl ? '<a class="arxiv-tag" href="' + p.pdfUrl + '" target="_blank" style="text-decoration:none">📎 PDF</a>' : '') + '</div></div>';
+    // Direction tags
+    var dirTags = (p.directions || []).map(function(d) { return '<span class="arxiv-tag arxiv-dir-tag" style="background:' + d.color + '22;color:' + d.color + '">' + d.label + '</span>'; }).join('');
+    // University collab badges
+    var uniBadge = '';
+    var uniDetail = '';
+    var cardClass = 'arxiv-paper';
+    if (p.hasHKCollab) {
+      cardClass += ' has-hk';
+      uniBadge = '<span class="uni-badge hk-badge">🇭🇰 港校合作</span>';
+      uniDetail = '<div class="uni-list hk-uni-list">🏫 ' + p.hkUniversities.join(', ') + '</div>';
+      if (p.universities && p.universities.length > p.hkUniversities.length) {
+        var others = p.universities.filter(function(u) { return p.hkUniversities.indexOf(u) === -1; });
+        if (others.length) uniDetail += '<div class="uni-list">+ ' + others.join(', ') + '</div>';
+      }
+    } else if (p.hasUniCollab) {
+      cardClass += ' has-uni';
+      uniBadge = '<span class="uni-badge">🎓 高校合作</span>';
+      uniDetail = '<div class="uni-list">🏫 ' + (p.universities || []).join(', ') + '</div>';
+    }
+    return '<div class="' + cardClass + '"><div class="arxiv-paper-head"><div class="arxiv-paper-title"><a href="' + p.arxivUrl + '" target="_blank">' + p.title + '</a></div><div class="arxiv-paper-date">' + p._icon + ' ' + date + '</div></div><div class="arxiv-paper-authors">' + authors + '</div>' + uniDetail + '<div class="arxiv-paper-summary">' + p.summary + '</div><div class="arxiv-paper-tags">' + dirTags + '<span class="arxiv-tag">' + p._company + '</span>' + cats + (venue ? '<span class="arxiv-tag arxiv-venue-tag">🏆 ' + venue + '</span>' : '') + uniBadge + (p.pdfUrl ? '<a class="arxiv-tag" href="' + p.pdfUrl + '" target="_blank" style="text-decoration:none">📎 PDF</a>' : '') + '</div></div>';
   }).join('');
 }
 

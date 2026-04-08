@@ -1,12 +1,58 @@
 {
-  "generatedAt": "2026-04-08T12:08:41.219520Z",
+  "generatedAt": "2026-04-08T13:52:39.214444Z",
   "since": "2026-04-01",
-  "totalPapers": 72,
+  "totalPapers": 73,
+  "totalUniCollab": 58,
+  "totalHKCollab": 0,
   "companies": {
     "bytedance": {
       "company": "字节Seed",
       "icon": "🌱",
       "papers": [
+        {
+          "title": "In-Place Test-Time Training",
+          "summary": "The static ``train then deploy\" paradigm fundamentally limits Large Language Models (LLMs) from dynamically adapting their weights in response to continuous streams of new information inherent in real-world tasks. Test-Time Training (TTT) offers a compelling alternative by updating a subset of model",
+          "published": "2026-04-07T17:59:44Z",
+          "arxivId": "2604.06169v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.06169v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.06169v1",
+          "authors": [
+            "Guhao Feng",
+            "Shengjie Luo",
+            "Kai Hua",
+            "Ge Zhang",
+            "Di He",
+            "Wenhao Huang",
+            "Tianle Cai"
+          ],
+          "authorCount": 7,
+          "affiliations": [],
+          "categories": [
+            "cs.LG",
+            "cs.AI",
+            "cs.CL"
+          ],
+          "comment": "ICLR 2026 Oral Presentation; Code is released at https://github.com/ByteDance-Seed/In-Place-TTT",
+          "universities": [
+            "HIT",
+            "MIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            }
+          ]
+        },
         {
           "title": "Convex cocompact groups with three-dimensional limit sets",
           "summary": "We provide a general construction of convex cocompact hyperbolic reflection groups with three-dimensional limit sets. More precisely, our construction takes as input an arbitrary simplicial complex L of dimension 3 on n vertices, and outputs a convex cocompact right-angled reflection group acting on",
@@ -21,14 +67,30 @@
             "Lorenzo Ruffoni"
           ],
           "authorCount": 4,
+          "affiliations": [],
           "categories": [
             "math.GR",
             "math.GT"
           ],
-          "comment": "14 pages, 3 figures"
+          "comment": "14 pages, 3 figures",
+          "universities": [
+            "MIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Math",
+              "label": "数学推理",
+              "color": "#06b6d4"
+            }
+          ]
         }
       ],
-      "count": 1
+      "count": 2,
+      "uniCollabCount": 2,
+      "hkCollabCount": 0
     },
     "alibaba": {
       "company": "阿里通义",
@@ -49,11 +111,33 @@
             "Luiz Bonifacio"
           ],
           "authorCount": 5,
+          "affiliations": [],
           "categories": [
             "cs.IR",
             "cs.CL"
           ],
-          "comment": ""
+          "comment": "",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            },
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            }
+          ]
         },
         {
           "title": "Swiss-Bench 003: Evaluating LLM Reliability and Adversarial Security for Swiss Regulatory Contexts",
@@ -66,12 +150,34 @@
             "Fatih Uenal"
           ],
           "authorCount": 1,
+          "affiliations": [],
           "categories": [
             "cs.CR",
             "cs.AI",
             "cs.CL"
           ],
-          "comment": "23 pages, 5 figures, 8 tables"
+          "comment": "23 pages, 5 figures, 8 tables",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            },
+            {
+              "id": "Safety",
+              "label": "安全",
+              "color": "#ef4444"
+            }
+          ]
         },
         {
           "title": "T2T: Captioning Smartphone Activities Using Mobile Traffic",
@@ -88,10 +194,34 @@
             "Wanqing Tu"
           ],
           "authorCount": 5,
+          "affiliations": [],
           "categories": [
             "cs.CR"
           ],
-          "comment": "Accepted by IEEE International Joint Conference on Neural Networks 2026"
+          "comment": "Accepted by IEEE International Joint Conference on Neural Networks 2026",
+          "universities": [
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Multimodal",
+              "label": "多模态",
+              "color": "#a855f7"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            }
+          ]
         },
         {
           "title": "CUE-R: Beyond the Final Answer in Retrieval-Augmented Generation",
@@ -105,12 +235,34 @@
             "Venkat Narayan Vedam"
           ],
           "authorCount": 2,
+          "affiliations": [],
           "categories": [
             "cs.IR",
             "cs.CL",
             "cs.LG"
           ],
-          "comment": "6 figures, 14 tables; appendix includes bootstrap CIs, metric definitions, duplicate position sensitivity, prompt template, and reproducibility details"
+          "comment": "6 figures, 14 tables; appendix includes bootstrap CIs, metric definitions, duplicate position sensitivity, prompt template, and reproducibility details",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            }
+          ]
         },
         {
           "title": "LatentAudit: Real-Time White-Box Faithfulness Monitoring for Retrieval-Augmented Generation with Verifiable Deployment",
@@ -125,11 +277,37 @@
             "Meng Han"
           ],
           "authorCount": 3,
+          "affiliations": [],
           "categories": [
             "cs.AI",
             "cs.LG"
           ],
-          "comment": ""
+          "comment": "",
+          "universities": [
+            "HIT",
+            "MIT",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            }
+          ]
         },
         {
           "title": "Improving Sparse Memory Finetuning",
@@ -145,11 +323,30 @@
             "Prakhar Gupta"
           ],
           "authorCount": 4,
+          "affiliations": [],
           "categories": [
             "cs.LG",
             "cs.CL"
           ],
-          "comment": ""
+          "comment": "",
+          "universities": [
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            }
+          ]
         },
         {
           "title": "Integration of Object Detection and Small VLMs for Construction Safety Hazard Identification",
@@ -167,10 +364,34 @@
             "Qipei Mei"
           ],
           "authorCount": 6,
+          "affiliations": [],
           "categories": [
             "cs.CV"
           ],
-          "comment": ""
+          "comment": "",
+          "universities": [
+            "MIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Multimodal",
+              "label": "多模态",
+              "color": "#a855f7"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            }
+          ]
         },
         {
           "title": "MIRAGE: Benchmarking and Aligning Multi-Instance Image Editing",
@@ -184,10 +405,35 @@
             "Stephan Alaniz"
           ],
           "authorCount": 2,
+          "affiliations": [],
           "categories": [
             "cs.CV"
           ],
-          "comment": ""
+          "comment": "",
+          "universities": [
+            "Mila",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            },
+            {
+              "id": "Multimodal",
+              "label": "多模态",
+              "color": "#a855f7"
+            }
+          ]
         },
         {
           "title": "Gradient-Controlled Decoding: A Safety Guardrail for LLMs with Dual-Anchor Steering",
@@ -202,10 +448,35 @@
             "Sagar Chaturvedi"
           ],
           "authorCount": 3,
+          "affiliations": [],
           "categories": [
             "cs.CL"
           ],
-          "comment": "Accepted at LREC2026"
+          "comment": "Accepted at LREC2026",
+          "universities": [
+            "USC",
+            "MIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Safety",
+              "label": "安全",
+              "color": "#ef4444"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            }
+          ]
         },
         {
           "title": "StarVLA: A Lego-like Codebase for Vision-Language-Action Model Developing",
@@ -218,12 +489,38 @@
             "StarVLA Community"
           ],
           "authorCount": 1,
+          "affiliations": [],
           "categories": [
             "cs.RO",
             "cs.AI",
             "cs.CV"
           ],
-          "comment": "Open-source VLA infra, Technical Report"
+          "comment": "Open-source VLA infra, Technical Report",
+          "universities": [
+            "HIT",
+            "ETH",
+            "CAS"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Multimodal",
+              "label": "多模态",
+              "color": "#a855f7"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            }
+          ]
         },
         {
           "title": "Cog-DRIFT: Exploration on Adaptively Reformulated Instances Enables Learning from Hard Reasoning Problems",
@@ -242,12 +539,38 @@
             "Mohit Bansal"
           ],
           "authorCount": 7,
+          "affiliations": [],
           "categories": [
             "cs.LG",
             "cs.AI",
             "cs.CL"
           ],
-          "comment": "22 pages, 4 figures. Code: https://github.com/dinobby/Cog-DRIFT"
+          "comment": "22 pages, 4 figures. Code: https://github.com/dinobby/Cog-DRIFT",
+          "universities": [
+            "HIT",
+            "MIT",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            }
+          ]
         },
         {
           "title": "Relative Density Ratio Optimization for Stable and Statistically Consistent Model Alignment",
@@ -266,12 +589,31 @@
             "Kazutoshi Shinoda"
           ],
           "authorCount": 7,
+          "affiliations": [],
           "categories": [
             "cs.LG",
             "cs.AI",
             "cs.CL"
           ],
-          "comment": "Code is available at https://github.com/takahashihiroshi/rdro"
+          "comment": "Code is available at https://github.com/takahashihiroshi/rdro",
+          "universities": [
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Safety",
+              "label": "安全",
+              "color": "#ef4444"
+            }
+          ]
         },
         {
           "title": "Solar-VLM: Multimodal Vision-Language Models for Augmented Solar Power Forecasting",
@@ -289,10 +631,35 @@
             "Wei Wei"
           ],
           "authorCount": 6,
+          "affiliations": [],
           "categories": [
             "cs.AI"
           ],
-          "comment": ""
+          "comment": "",
+          "universities": [
+            "CAS",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Multimodal",
+              "label": "多模态",
+              "color": "#a855f7"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            }
+          ]
         },
         {
           "title": "Extracting and Steering Emotion Representations in Small Language Models: A Methodological Comparison",
@@ -305,11 +672,36 @@
             "Jihoon Jeong"
           ],
           "authorCount": 1,
+          "affiliations": [],
           "categories": [
             "cs.CL",
             "cs.AI"
           ],
-          "comment": "14 pages, 4 figures, 7 tables. Paper #6 in the Model Medicine series"
+          "comment": "14 pages, 4 figures, 7 tables. Paper #6 in the Model Medicine series",
+          "universities": [
+            "HIT",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            },
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            }
+          ]
         },
         {
           "title": "Benchmarking and Evaluating VLMs for Software Architecture Diagram Understanding",
@@ -329,10 +721,34 @@
             "Adam Ziolkowski"
           ],
           "authorCount": 10,
+          "affiliations": [],
           "categories": [
             "cs.SE"
           ],
-          "comment": ""
+          "comment": "",
+          "universities": [
+            "HIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Multimodal",
+              "label": "多模态",
+              "color": "#a855f7"
+            },
+            {
+              "id": "Code",
+              "label": "代码",
+              "color": "#8b5cf6"
+            }
+          ]
         },
         {
           "title": "AdaptFuse: Training-Free Sequential Preference Learning via Externalized Bayesian Inference",
@@ -352,11 +768,35 @@
             "Haichong Zhang"
           ],
           "authorCount": 9,
+          "affiliations": [],
           "categories": [
             "cs.CL",
             "cs.AI"
           ],
-          "comment": "20 pages, 4 figures, 5 tables"
+          "comment": "20 pages, 4 figures, 5 tables",
+          "universities": [
+            "MIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "Safety",
+              "label": "安全",
+              "color": "#ef4444"
+            }
+          ]
         },
         {
           "title": "Squeez: Task-Conditioned Tool-Output Pruning for Coding Agents",
@@ -369,11 +809,35 @@
             "Ádám Kovács"
           ],
           "authorCount": 1,
+          "affiliations": [],
           "categories": [
             "cs.SE",
             "cs.AI"
           ],
-          "comment": "7 pages"
+          "comment": "7 pages",
+          "universities": [
+            "ANU"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Code",
+              "label": "代码",
+              "color": "#8b5cf6"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            }
+          ]
         },
         {
           "title": "EDGE-Shield: Efficient Denoising-staGE Shield for Violative Content Filtering via Scalable Reference-Based Matching",
@@ -391,11 +855,36 @@
             "Teppei Suzuki"
           ],
           "authorCount": 6,
+          "affiliations": [],
           "categories": [
             "cs.CV",
             "cs.MM"
           ],
-          "comment": ""
+          "comment": "",
+          "universities": [
+            "HIT",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Vision",
+              "label": "视觉",
+              "color": "#ec4899"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            }
+          ]
         },
         {
           "title": "Entropy and Attention Dynamics in Small Language Models: A Trace-Level Structural Analysis on the TruthfulQA Benchmark",
@@ -411,10 +900,34 @@
             "Jouni Isoaho"
           ],
           "authorCount": 4,
+          "affiliations": [],
           "categories": [
             "cs.AI"
           ],
-          "comment": "Accepted to Publish it in 12th Intelligent Systems Conference 2026, 3-4 September 2026 in Amsterdam, The Netherlands"
+          "comment": "Accepted to Publish it in 12th Intelligent Systems Conference 2026, 3-4 September 2026 in Amsterdam, The Netherlands",
+          "universities": [
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            }
+          ]
         },
         {
           "title": "Improving Role Consistency in Multi-Agent Collaboration via Quantitative Role Clarity",
@@ -432,10 +945,35 @@
             "Zhiguo Fu"
           ],
           "authorCount": 6,
+          "affiliations": [],
           "categories": [
             "cs.AI"
           ],
-          "comment": ""
+          "comment": "",
+          "universities": [
+            "Mila",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "Safety",
+              "label": "安全",
+              "color": "#ef4444"
+            }
+          ]
         },
         {
           "title": "Efficient and Principled Scientific Discovery through Bayesian Optimization: A Tutorial",
@@ -455,13 +993,41 @@
             "Zijing Li"
           ],
           "authorCount": 16,
+          "affiliations": [],
           "categories": [
             "cs.LG"
           ],
-          "comment": ""
+          "comment": "",
+          "universities": [
+            "ANU",
+            "CAS",
+            "NTU"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "Math",
+              "label": "数学推理",
+              "color": "#06b6d4"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            }
+          ]
         }
       ],
-      "count": 21
+      "count": 21,
+      "uniCollabCount": 18,
+      "hkCollabCount": 0
     },
     "deepseek": {
       "company": "DeepSeek",
@@ -482,10 +1048,29 @@
             "Razvan Pascanu"
           ],
           "authorCount": 5,
+          "affiliations": [],
           "categories": [
             "cs.CL"
           ],
-          "comment": "Under review"
+          "comment": "Under review",
+          "universities": [
+            "ANU"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Code",
+              "label": "代码",
+              "color": "#8b5cf6"
+            }
+          ]
         },
         {
           "title": "ETR: Entropy Trend Reward for Efficient Chain-of-Thought Reasoning",
@@ -504,11 +1089,36 @@
             "Yang Wang"
           ],
           "authorCount": 7,
+          "affiliations": [],
           "categories": [
             "cs.AI",
             "cs.CL"
           ],
-          "comment": "ACL 2026 (Main)"
+          "comment": "ACL 2026 (Main)",
+          "universities": [
+            "MIT",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            }
+          ]
         },
         {
           "title": "EffiPair: Improving the Efficiency of LLM-generated Code with Relative Contrastive Feedback",
@@ -522,12 +1132,36 @@
             "Suman Jana"
           ],
           "authorCount": 2,
+          "affiliations": [],
           "categories": [
             "cs.PL",
             "cs.AI",
             "cs.CL"
           ],
-          "comment": ""
+          "comment": "",
+          "universities": [
+            "Mila"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            }
+          ]
         },
         {
           "title": "QED-Nano: Teaching a Tiny Model to Prove Hard Theorems",
@@ -547,12 +1181,34 @@
             "Lewis Tunstall"
           ],
           "authorCount": 9,
+          "affiliations": [],
           "categories": [
             "cs.AI",
             "cs.CL",
             "cs.LG"
           ],
-          "comment": ""
+          "comment": "",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            },
+            {
+              "id": "Math",
+              "label": "数学推理",
+              "color": "#06b6d4"
+            }
+          ]
         },
         {
           "title": "Mapping the Exploitation Surface: A 10,000-Trial Taxonomy of What Makes LLM Agents Exploit Vulnerabilities",
@@ -565,12 +1221,34 @@
             "Charafeddine Mouzouni"
           ],
           "authorCount": 1,
+          "affiliations": [],
           "categories": [
             "cs.CR",
             "cs.AI",
             "cs.CL"
           ],
-          "comment": "18 pages, 8 tables, code and data at https://github.com/Cmouzouni/exploitation-surface"
+          "comment": "18 pages, 8 tables, code and data at https://github.com/Cmouzouni/exploitation-surface",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Safety",
+              "label": "安全",
+              "color": "#ef4444"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            }
+          ]
         },
         {
           "title": "Talk2AI: A Longitudinal Dataset of Human--AI Persuasive Conversations",
@@ -587,12 +1265,34 @@
             "Massimo Stella"
           ],
           "authorCount": 5,
+          "affiliations": [],
           "categories": [
             "cs.HC",
             "cs.CL",
             "cs.CY"
           ],
-          "comment": "17 pages, 2 figures, 7 tables"
+          "comment": "17 pages, 2 figures, 7 tables",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            }
+          ]
         },
         {
           "title": "Comparative reversal learning reveals rigid adaptation in LLMs under non-stationary uncertainty",
@@ -607,10 +1307,27 @@
             "Lili Zhang"
           ],
           "authorCount": 3,
+          "affiliations": [],
           "categories": [
             "cs.AI"
           ],
-          "comment": "14 pages, 2 figures, accepted by IPMU 2026, SS04: Explainable AI and Decision-Making Under Uncertainty: Bridging Interpretability and Robustness"
+          "comment": "14 pages, 2 figures, accepted by IPMU 2026, SS04: Explainable AI and Decision-Making Under Uncertainty: Bridging Interpretability and Robustness",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            }
+          ]
         },
         {
           "title": "Entropy and Attention Dynamics in Small Language Models: A Trace-Level Structural Analysis on the TruthfulQA Benchmark",
@@ -626,10 +1343,34 @@
             "Jouni Isoaho"
           ],
           "authorCount": 4,
+          "affiliations": [],
           "categories": [
             "cs.AI"
           ],
-          "comment": "Accepted to Publish it in 12th Intelligent Systems Conference 2026, 3-4 September 2026 in Amsterdam, The Netherlands"
+          "comment": "Accepted to Publish it in 12th Intelligent Systems Conference 2026, 3-4 September 2026 in Amsterdam, The Netherlands",
+          "universities": [
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            }
+          ]
         },
         {
           "title": "Fine-tuning DeepSeek-OCR-2 for Molecular Structure Recognition",
@@ -644,12 +1385,34 @@
             "Junmei Wang"
           ],
           "authorCount": 3,
+          "affiliations": [],
           "categories": [
             "cs.CV",
             "cs.AI",
             "q-bio.BM"
           ],
-          "comment": ""
+          "comment": "",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Multimodal",
+              "label": "多模态",
+              "color": "#a855f7"
+            },
+            {
+              "id": "Safety",
+              "label": "安全",
+              "color": "#ef4444"
+            }
+          ]
         },
         {
           "title": "PAFT: Preservation Aware Fine-Tuning for Minimal-Edit Program Repair",
@@ -665,10 +1428,34 @@
             "Haoye Tian"
           ],
           "authorCount": 4,
+          "affiliations": [],
           "categories": [
             "cs.SE"
           ],
-          "comment": ""
+          "comment": "",
+          "universities": [
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            }
+          ]
         },
         {
           "title": "Querying Structured Data Through Natural Language Using Language Models",
@@ -684,11 +1471,36 @@
             "Popovici Dan-Matei"
           ],
           "authorCount": 4,
+          "affiliations": [],
           "categories": [
             "cs.CL",
             "cs.AI"
           ],
-          "comment": "in publication"
+          "comment": "in publication",
+          "universities": [
+            "MIT",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            }
+          ]
         },
         {
           "title": "FoE: Forest of Errors Makes the First Solution the Best in Large Reasoning Models",
@@ -705,11 +1517,33 @@
             "Guojie Song"
           ],
           "authorCount": 5,
+          "affiliations": [],
           "categories": [
             "cs.AI",
             "cs.CL"
           ],
-          "comment": ""
+          "comment": "",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            }
+          ]
         },
         {
           "title": "AgentHazard: A Benchmark for Evaluating Harmful Behavior in Computer-Use Agents",
@@ -729,10 +1563,34 @@
             "Kun Zhai"
           ],
           "authorCount": 9,
+          "affiliations": [],
           "categories": [
             "cs.AI"
           ],
-          "comment": ""
+          "comment": "",
+          "universities": [
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "Safety",
+              "label": "安全",
+              "color": "#ef4444"
+            }
+          ]
         },
         {
           "title": "Single-Agent LLMs Outperform Multi-Agent Systems on Multi-Hop Reasoning Under Equal Thinking Token Budgets",
@@ -746,11 +1604,37 @@
             "Douwe Kiela"
           ],
           "authorCount": 2,
+          "affiliations": [],
           "categories": [
             "cs.CL",
             "cs.MA"
           ],
-          "comment": ""
+          "comment": "",
+          "universities": [
+            "UW",
+            "HIT",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            }
+          ]
         },
         {
           "title": "Blinded Radiologist and LLM-Based Evaluation of LLM-Generated Japanese Translations of Chest CT Reports: Comparative Study",
@@ -769,11 +1653,36 @@
             "Osamu Abe"
           ],
           "authorCount": 7,
+          "affiliations": [],
           "categories": [
             "cs.AI",
             "cs.CL"
           ],
-          "comment": "25 pages, 4 figures"
+          "comment": "25 pages, 4 figures",
+          "universities": [
+            "CAS",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            }
+          ]
         },
         {
           "title": "FlatAttention: Dataflow and Fabric Collectives Co-Optimization for Large Attention-Based Model Inference on Tile-Based Accelerators",
@@ -789,10 +1698,35 @@
             "Luca Benini"
           ],
           "authorCount": 4,
+          "affiliations": [],
           "categories": [
             "cs.AR"
           ],
-          "comment": "Submitted to IEEE Transactions on Computers. 14 pages"
+          "comment": "Submitted to IEEE Transactions on Computers. 14 pages",
+          "universities": [
+            "HIT",
+            "MIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            }
+          ]
         },
         {
           "title": "On the Role of Reasoning Patterns in the Generalization Discrepancy of Long Chain-of-Thought Supervised Fine-Tuning",
@@ -812,10 +1746,32 @@
             "Ying Wei"
           ],
           "authorCount": 9,
+          "affiliations": [],
           "categories": [
             "cs.CL"
           ],
-          "comment": "Under Review. version2: correct typos in Table 4 and add an ablation study (Table 5)"
+          "comment": "Under Review. version2: correct typos in Table 4 and add an ablation study (Table 5)",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            }
+          ]
         },
         {
           "title": "DWDP: Distributed Weight Data Parallelism for High-Performance LLM Inference on NVL72",
@@ -835,11 +1791,30 @@
             "Dongxu Yang"
           ],
           "authorCount": 10,
+          "affiliations": [],
           "categories": [
             "cs.DC",
             "cs.AI"
           ],
-          "comment": "Technical Report. 17 pages. 8 figures"
+          "comment": "Technical Report. 17 pages. 8 figures",
+          "universities": [
+            "NYU"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            }
+          ]
         },
         {
           "title": "True (VIS) Lies: Analyzing How Generative AI Recognizes Intentionality, Rhetoric, and Misleadingness in Visualization Lies",
@@ -853,12 +1828,38 @@
             "Marco Angelini"
           ],
           "authorCount": 2,
+          "affiliations": [],
           "categories": [
             "cs.HC",
             "cs.CL",
             "cs.CV"
           ],
-          "comment": ""
+          "comment": "",
+          "universities": [
+            "Mila",
+            "HIT",
+            "CAS"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            },
+            {
+              "id": "Multimodal",
+              "label": "多模态",
+              "color": "#a855f7"
+            }
+          ]
         },
         {
           "title": "Adversarial Moral Stress Testing of Large Language Models",
@@ -876,13 +1877,40 @@
             "Kawser Wazed Nafi"
           ],
           "authorCount": 6,
+          "affiliations": [],
           "categories": [
             "cs.AI"
           ],
-          "comment": ""
+          "comment": "",
+          "universities": [
+            "MIT",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Safety",
+              "label": "安全",
+              "color": "#ef4444"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            }
+          ]
         }
       ],
-      "count": 20
+      "count": 20,
+      "uniCollabCount": 13,
+      "hkCollabCount": 0
     },
     "moonshot": {
       "company": "月之暗面",
@@ -904,12 +1932,36 @@
             "Aimin Zhou"
           ],
           "authorCount": 6,
+          "affiliations": [],
           "categories": [
             "cs.CY",
             "cs.AI",
             "cs.CL"
           ],
-          "comment": ""
+          "comment": "",
+          "universities": [
+            "MIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            },
+            {
+              "id": "Multimodal",
+              "label": "多模态",
+              "color": "#a855f7"
+            }
+          ]
         },
         {
           "title": "An Independent Safety Evaluation of Kimi K2.5",
@@ -929,12 +1981,37 @@
             "Elle Najt"
           ],
           "authorCount": 15,
+          "affiliations": [],
           "categories": [
             "cs.CR",
             "cs.AI",
             "cs.CL"
           ],
-          "comment": ""
+          "comment": "",
+          "universities": [
+            "CAS",
+            "Mila"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Safety",
+              "label": "安全",
+              "color": "#ef4444"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            }
+          ]
         },
         {
           "title": "AgentHazard: A Benchmark for Evaluating Harmful Behavior in Computer-Use Agents",
@@ -954,10 +2031,34 @@
             "Kun Zhai"
           ],
           "authorCount": 9,
+          "affiliations": [],
           "categories": [
             "cs.AI"
           ],
-          "comment": ""
+          "comment": "",
+          "universities": [
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "Safety",
+              "label": "安全",
+              "color": "#ef4444"
+            }
+          ]
         },
         {
           "title": "True (VIS) Lies: Analyzing How Generative AI Recognizes Intentionality, Rhetoric, and Misleadingness in Visualization Lies",
@@ -971,15 +2072,43 @@
             "Marco Angelini"
           ],
           "authorCount": 2,
+          "affiliations": [],
           "categories": [
             "cs.HC",
             "cs.CL",
             "cs.CV"
           ],
-          "comment": ""
+          "comment": "",
+          "universities": [
+            "Mila",
+            "HIT",
+            "CAS"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            },
+            {
+              "id": "Multimodal",
+              "label": "多模态",
+              "color": "#a855f7"
+            }
+          ]
         }
       ],
-      "count": 4
+      "count": 4,
+      "uniCollabCount": 4,
+      "hkCollabCount": 0
     },
     "openai": {
       "company": "OpenAI",
@@ -998,11 +2127,35 @@
             "Veit Hagenmeyer"
           ],
           "authorCount": 3,
+          "affiliations": [],
           "categories": [
             "cs.CR",
             "cs.AI"
           ],
-          "comment": "16 pages, 4 figures, 3 tables. Submitted to the 3rd ACM SIGEnergy Workshop on Cybersecurity and Privacy of Energy Systems (ACM EnergySP '26)"
+          "comment": "16 pages, 4 figures, 3 tables. Submitted to the 3rd ACM SIGEnergy Workshop on Cybersecurity and Privacy of Energy Systems (ACM EnergySP '26)",
+          "universities": [
+            "MIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            }
+          ]
         },
         {
           "title": "AI-Driven Modular Services for Accessible Multilingual Education in Immersive Extended Reality Settings: Integrating Speech Processing, Translation, and Sign Language Rendering",
@@ -1018,12 +2171,37 @@
             "E. Papatheou"
           ],
           "authorCount": 4,
+          "affiliations": [],
           "categories": [
             "cs.CE",
             "cs.AI",
             "cs.CL"
           ],
-          "comment": "21"
+          "comment": "21",
+          "universities": [
+            "MIT",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            }
+          ]
         },
         {
           "title": "PRISM-MCTS: Learning from Reasoning Trajectories with Metacognitive Reflection",
@@ -1039,11 +2217,37 @@
             "Zheng Wei"
           ],
           "authorCount": 4,
+          "affiliations": [],
           "categories": [
             "cs.AI",
             "cs.CL"
           ],
-          "comment": ""
+          "comment": "",
+          "universities": [
+            "NTU",
+            "MIT",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            }
+          ]
         },
         {
           "title": "Document Optimization for Black-Box Retrieval via Reinforcement Learning",
@@ -1059,11 +2263,37 @@
             "Christopher Potts"
           ],
           "authorCount": 4,
+          "affiliations": [],
           "categories": [
             "cs.CL",
             "cs.IR"
           ],
-          "comment": ""
+          "comment": "",
+          "universities": [
+            "UW",
+            "CAS",
+            "USC"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            }
+          ]
         },
         {
           "title": "Mapping the Exploitation Surface: A 10,000-Trial Taxonomy of What Makes LLM Agents Exploit Vulnerabilities",
@@ -1076,12 +2306,34 @@
             "Charafeddine Mouzouni"
           ],
           "authorCount": 1,
+          "affiliations": [],
           "categories": [
             "cs.CR",
             "cs.AI",
             "cs.CL"
           ],
-          "comment": "18 pages, 8 tables, code and data at https://github.com/Cmouzouni/exploitation-surface"
+          "comment": "18 pages, 8 tables, code and data at https://github.com/Cmouzouni/exploitation-surface",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Safety",
+              "label": "安全",
+              "color": "#ef4444"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            }
+          ]
         },
         {
           "title": "FermiLink: A Unified Agent Framework for Multidomain Autonomous Scientific Simulations",
@@ -1101,11 +2353,33 @@
             "Mohammadhasan Dinpajooh"
           ],
           "authorCount": 10,
+          "affiliations": [],
           "categories": [
             "physics.chem-ph",
             "physics.comp-ph"
           ],
-          "comment": "Simulation data available at https://www.taoeli.org/publications; source code available at Github https://github.com/TaoELi/FermiLink"
+          "comment": "Simulation data available at https://www.taoeli.org/publications; source code available at Github https://github.com/TaoELi/FermiLink",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            },
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            }
+          ]
         },
         {
           "title": "ABTest: Behavior-Driven Testing for AI Coding Agents",
@@ -1123,10 +2397,35 @@
             "Song Wang"
           ],
           "authorCount": 6,
+          "affiliations": [],
           "categories": [
             "cs.SE"
           ],
-          "comment": ""
+          "comment": "",
+          "universities": [
+            "ANU",
+            "CAS"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "Safety",
+              "label": "安全",
+              "color": "#ef4444"
+            },
+            {
+              "id": "Code",
+              "label": "代码",
+              "color": "#8b5cf6"
+            }
+          ]
         },
         {
           "title": "From Industry Claims to Empirical Reality: An Empirical Study of Code Review Agents in Pull Requests",
@@ -1142,10 +2441,35 @@
             "Shazibul Islam Shamim"
           ],
           "authorCount": 4,
+          "affiliations": [],
           "categories": [
             "cs.SE"
           ],
-          "comment": "Accepted at 23rd International Conference on Mining Software Repositories (MSR), 2026"
+          "comment": "Accepted at 23rd International Conference on Mining Software Repositories (MSR), 2026",
+          "universities": [
+            "MIT",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            },
+            {
+              "id": "Code",
+              "label": "代码",
+              "color": "#8b5cf6"
+            }
+          ]
         },
         {
           "title": "Generative AI for Video Trailer Synthesis: From Extractive Heuristics to Autoregressive Creativity",
@@ -1161,12 +2485,34 @@
             "Anushree Sinha"
           ],
           "authorCount": 4,
+          "affiliations": [],
           "categories": [
             "cs.CV",
             "cs.AI",
             "cs.HC"
           ],
-          "comment": "7 pages, 3 figures, accepted in WSDM 2026"
+          "comment": "7 pages, 3 figures, accepted in WSDM 2026",
+          "universities": [
+            "NUS",
+            "ANU",
+            "HIT",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Multimodal",
+              "label": "多模态",
+              "color": "#a855f7"
+            }
+          ]
         },
         {
           "title": "Generalization Limits of Reinforcement Learning Alignment",
@@ -1181,11 +2527,35 @@
             "Keigo Kansa"
           ],
           "authorCount": 3,
+          "affiliations": [],
           "categories": [
             "cs.LG",
             "cs.AI"
           ],
-          "comment": "7 pages, 2 figures, 2 tables, accepted at JSAI 2026"
+          "comment": "7 pages, 2 figures, 2 tables, accepted at JSAI 2026",
+          "universities": [
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Safety",
+              "label": "安全",
+              "color": "#ef4444"
+            },
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            }
+          ]
         },
         {
           "title": "Open-Domain Safety Policy Construction",
@@ -1204,10 +2574,32 @@
             "Kai-Wei Chang"
           ],
           "authorCount": 7,
+          "affiliations": [],
           "categories": [
             "cs.CL"
           ],
-          "comment": "EACL 2026 (Findings)"
+          "comment": "EACL 2026 (Findings)",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            }
+          ]
         },
         {
           "title": "True (VIS) Lies: Analyzing How Generative AI Recognizes Intentionality, Rhetoric, and Misleadingness in Visualization Lies",
@@ -1221,12 +2613,38 @@
             "Marco Angelini"
           ],
           "authorCount": 2,
+          "affiliations": [],
           "categories": [
             "cs.HC",
             "cs.CL",
             "cs.CV"
           ],
-          "comment": ""
+          "comment": "",
+          "universities": [
+            "Mila",
+            "HIT",
+            "CAS"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            },
+            {
+              "id": "Multimodal",
+              "label": "多模态",
+              "color": "#a855f7"
+            }
+          ]
         },
         {
           "title": "Investigating Autonomous Agent Contributions in the Wild: Activity Patterns and Code Change over Time",
@@ -1244,12 +2662,36 @@
             "Maliheh Izadi"
           ],
           "authorCount": 6,
+          "affiliations": [],
           "categories": [
             "cs.SE",
             "cs.AI",
             "cs.LG"
           ],
-          "comment": "MSR 2026 Technical Track"
+          "comment": "MSR 2026 Technical Track",
+          "universities": [
+            "MIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "Code",
+              "label": "代码",
+              "color": "#8b5cf6"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            }
+          ]
         },
         {
           "title": "Cost-Penalized Fitness in FMA-Orchestrated Mixture of Experts: Experimental Evidence for Molecular Memory in Domain Adaptation",
@@ -1262,10 +2704,27 @@
             "Martin Jaraiz"
           ],
           "authorCount": 1,
+          "affiliations": [],
           "categories": [
             "cs.LG"
           ],
-          "comment": "10 pages, 3 figures, draft"
+          "comment": "10 pages, 3 figures, draft",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            }
+          ]
         },
         {
           "title": "In harmony with gpt-oss",
@@ -1278,14 +2737,35 @@
             "Borislav Mavrin"
           ],
           "authorCount": 1,
+          "affiliations": [],
           "categories": [
             "cs.AI",
             "cs.LG"
           ],
-          "comment": ""
+          "comment": "",
+          "universities": [
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            }
+          ]
         }
       ],
-      "count": 15
+      "count": 15,
+      "uniCollabCount": 11,
+      "hkCollabCount": 0
     },
     "deepmind": {
       "company": "Google DeepMind",
@@ -1309,11 +2789,31 @@
             "Swarat Chaudhuri"
           ],
           "authorCount": 8,
+          "affiliations": [],
           "categories": [
             "math.OC",
             "cs.AI"
           ],
-          "comment": ""
+          "comment": "",
+          "universities": [
+            "MIT",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Math",
+              "label": "数学推理",
+              "color": "#06b6d4"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            }
+          ]
         },
         {
           "title": "The Rank and Gradient Lost in Non-stationarity: Sample Weight Decay for Mitigating Plasticity Loss in Reinforcement Learning",
@@ -1331,13 +2831,41 @@
             "Jianye Hao"
           ],
           "authorCount": 6,
+          "affiliations": [],
           "categories": [
             "cs.LG"
           ],
-          "comment": "ICLR"
+          "comment": "ICLR",
+          "universities": [
+            "HIT",
+            "MIT",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            },
+            {
+              "id": "Math",
+              "label": "数学推理",
+              "color": "#06b6d4"
+            }
+          ]
         }
       ],
-      "count": 2
+      "count": 2,
+      "uniCollabCount": 2,
+      "hkCollabCount": 0
     },
     "anthropic": {
       "company": "Anthropic",
@@ -1355,11 +2883,36 @@
             "Gaurav Kumar Gupta"
           ],
           "authorCount": 2,
+          "affiliations": [],
           "categories": [
             "cs.CR",
             "cs.AI"
           ],
-          "comment": ""
+          "comment": "",
+          "universities": [
+            "HIT",
+            "MIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            }
+          ]
         },
         {
           "title": "Instruction-Tuned LLMs for Parsing and Mining Unstructured Logs on Leadership HPC Systems",
@@ -1375,10 +2928,34 @@
             "Awais Khan"
           ],
           "authorCount": 4,
+          "affiliations": [],
           "categories": [
             "cs.AI"
           ],
-          "comment": ""
+          "comment": "",
+          "universities": [
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            }
+          ]
         },
         {
           "title": "Measuring the Permission Gate: A Stress-Test Evaluation of Claude Code's Auto Mode",
@@ -1395,12 +2972,37 @@
             "Shuai Wang"
           ],
           "authorCount": 5,
+          "affiliations": [],
           "categories": [
             "cs.SE",
             "cs.AI",
             "cs.CR"
           ],
-          "comment": ""
+          "comment": "",
+          "universities": [
+            "ANU",
+            "NYU"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            }
+          ]
         },
         {
           "title": "Corporations Constitute Intelligence",
@@ -1413,11 +3015,31 @@
             "Gilad Abiri"
           ],
           "authorCount": 1,
+          "affiliations": [],
           "categories": [
             "cs.CY",
             "cs.AI"
           ],
-          "comment": ""
+          "comment": "",
+          "universities": [
+            "ANU",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Multimodal",
+              "label": "多模态",
+              "color": "#a855f7"
+            },
+            {
+              "id": "Safety",
+              "label": "安全",
+              "color": "#ef4444"
+            }
+          ]
         },
         {
           "title": "An Empirical Study of Sustainability in Prompt-driven Test Script Generation Using Small Language Models",
@@ -1431,10 +3053,32 @@
             "Novarun Deb"
           ],
           "authorCount": 2,
+          "affiliations": [],
           "categories": [
             "cs.SE"
           ],
-          "comment": "6 pages. arXiv admin note: substantial text overlap with arXiv:2602.18012"
+          "comment": "6 pages. arXiv admin note: substantial text overlap with arXiv:2602.18012",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            }
+          ]
         },
         {
           "title": "EvoSkills: Self-Evolving Agent Skills via Co-Evolutionary Verification",
@@ -1454,10 +3098,35 @@
             "Wei-Chieh Huang"
           ],
           "authorCount": 13,
+          "affiliations": [],
           "categories": [
             "cs.AI"
           ],
-          "comment": "Code will be released"
+          "comment": "Code will be released",
+          "universities": [
+            "ANU",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "Safety",
+              "label": "安全",
+              "color": "#ef4444"
+            }
+          ]
         },
         {
           "title": "CORAL: Towards Autonomous Multi-Agent Evolution for Open-Ended Discovery",
@@ -1477,10 +3146,35 @@
             "Kaichen Zhou"
           ],
           "authorCount": 17,
+          "affiliations": [],
           "categories": [
             "cs.AI"
           ],
-          "comment": ""
+          "comment": "",
+          "universities": [
+            "MIT",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            }
+          ]
         },
         {
           "title": "Preference learning in shades of gray: Interpretable and bias-aware reward modeling for human preferences",
@@ -1494,11 +3188,36 @@
             "Adela Bâra"
           ],
           "authorCount": 2,
+          "affiliations": [],
           "categories": [
             "cs.CL",
             "cs.AI"
           ],
-          "comment": ""
+          "comment": "",
+          "universities": [
+            "Mila",
+            "MIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Safety",
+              "label": "安全",
+              "color": "#ef4444"
+            },
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            }
+          ]
         },
         {
           "title": "VibeGuard: A Security Gate Framework for AI-Generated Code",
@@ -1511,14 +3230,40 @@
             "Ying Xie"
           ],
           "authorCount": 1,
+          "affiliations": [],
           "categories": [
             "cs.CR",
             "cs.AI"
           ],
-          "comment": ""
+          "comment": "",
+          "universities": [
+            "ANU"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Code",
+              "label": "代码",
+              "color": "#8b5cf6"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "Math",
+              "label": "数学推理",
+              "color": "#06b6d4"
+            }
+          ]
         }
       ],
-      "count": 9
+      "count": 9,
+      "uniCollabCount": 8,
+      "hkCollabCount": 0
     }
   }
 }

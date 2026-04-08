@@ -897,7 +897,8 @@ function getTalentsForTable() {
       statusNote: t.statusNote || '',
       wechatAdded: t.wechatAdded || false,
       manuallyEdited: t.manuallyEdited || false,
-      lastManualEdit: t.lastManualEdit || ''
+      lastManualEdit: t.lastManualEdit || '',
+      editedAt: t.editedAt || ''
     };
   }).sort(function(a,b) {
     var order = {high:0,medium:1,low:2};
@@ -1146,19 +1147,27 @@ function renderTalent() {
     '</tr></thead><tbody>' +
     (allTalents.length ? allTalents.map(function(t) {
       var hkFlag = t.isHK ? ' 🇭🇰' : '';
-      // Check if manually edited
+      // Determine if this record has been manually edited
+      // Compatible with old data: if statusNote has content or editedAt exists, treat as edited
+      var isEdited = t.manuallyEdited || (t.statusNote && t.statusNote.length > 0) || false;
+      var editDateStr = t.lastManualEdit || t.editedAt || '';
       var editedMarker = '';
       var remindBadge = '';
-      if (t.manuallyEdited) {
-        editedMarker = '<span class="edited-marker" title="已人为修改 (' + (t.lastManualEdit || '') + ')"></span>';
-        // Monthly reminder: check if lastManualEdit is > 30 days ago
-        if (t.lastManualEdit) {
-          var editDate = new Date(t.lastManualEdit);
+      var noteStyle = 'font-size:0.7rem;';
+      if (isEdited) {
+        // Yellow background for edited rows' note cell
+        noteStyle += 'background:rgba(245,158,11,0.1);border-radius:6px;padding:0.3rem 0.5rem;';
+        editedMarker = '<span class="edited-marker" title="已人为修改 (' + editDateStr + ')"></span>';
+        // Monthly reminder: check if last edit > 30 days ago
+        if (editDateStr) {
+          var editDate = new Date(editDateStr);
           var diffDays = Math.floor((today - editDate) / (1000*60*60*24));
           if (diffDays >= 30) {
-            remindBadge = ' <span class="remind-badge" title="距上次修改已' + diffDays + '天，建议核实更新">⏰ 需更新</span>';
+            remindBadge = '<br><span class="remind-badge" title="距上次修改已' + diffDays + '天，建议核实更新">⏰ 已' + diffDays + '天未更新，请核实</span>';
           }
         }
+      } else {
+        noteStyle += 'color:var(--text2);';
       }
       // Wechat checkbox
       var wechatHTML = '<input type="checkbox" class="wechat-check" ' +
@@ -1176,7 +1185,7 @@ function renderTalent() {
         '<td>' + t.direction + '</td>' +
         '<td>' + t.grad + '</td>' +
         '<td style="text-align:center">' + wechatHTML + '</td>' +
-        '<td class="edited-cell" style="font-size:0.7rem;color:var(--text2)">' + editedMarker + (t.statusNote || '') + remindBadge + '</td>' +
+        '<td class="edited-cell" style="' + noteStyle + '">' + editedMarker + (t.statusNote || '<span style="color:var(--text2);opacity:0.4">—</span>') + remindBadge + '</td>' +
         '</tr>';
     }).join('') : '<tr><td colspan="9" style="text-align:center;color:var(--text2)">暂无人才数据，请在上方添加</td></tr>') +
     '</tbody>';
@@ -1855,6 +1864,63 @@ let netAnimId = null;
 let netDrag = null;
 let netHover = null;
 
+// University name mapping: English abbreviation → Chinese name
+var UNI_NAME_MAP = {
+  'MIT': 'MIT (麻省理工)',
+  'HIT': '哈尔滨工业大学',
+  'PKU': '北京大学',
+  'Peking University': '北京大学',
+  'THU': '清华大学',
+  'Tsinghua University': '清华大学',
+  'Princeton': '普林斯顿大学',
+  'Stanford': '斯坦福大学',
+  'CMU': '卡内基梅隆大学',
+  'Berkeley': 'UC Berkeley',
+  'Fudan': '复旦大学',
+  'ZJU': '浙江大学',
+  'Zhejiang University': '浙江大学',
+  'SJTU': '上海交通大学',
+  'NJU': '南京大学',
+  'USTC': '中国科学技术大学',
+  'CAS': '中国科学院',
+  'HKUST': '香港科技大学 🇭🇰',
+  'HKU': '香港大学 🇭🇰',
+  'CUHK': '香港中文大学 🇭🇰',
+  'PolyU': '香港理工大学 🇭🇰',
+  'CityU': '香港城市大学 🇭🇰',
+  'HKBU': '香港浸会大学 🇭🇰',
+  'NUS': '新加坡国立大学',
+  'NTU': '南洋理工大学',
+  'ETH': 'ETH Zurich (苏黎世联邦理工)',
+  'Oxford': '牛津大学',
+  'Cambridge': '剑桥大学',
+  'UMich': '密歇根大学',
+  'UW': '华盛顿大学',
+  'GaTech': '佐治亚理工',
+  'Georgia Tech': '佐治亚理工',
+  'UIUC': '伊利诺伊大学',
+  'UCLA': 'UCLA',
+  'Cornell': '康奈尔大学',
+  'Columbia': '哥伦比亚大学',
+  'NYU': '纽约大学',
+  'Yale': '耶鲁大学',
+  'EPFL': 'EPFL (洛桑联邦理工)',
+  'Mila': '蒙特利尔大学/Mila',
+  'U of T': '多伦多大学',
+  'Toronto': '多伦多大学',
+  'Waterloo': '滑铁卢大学',
+  'Sydney': '悉尼大学',
+  'UIC': '伊利诺伊大学芝加哥分校',
+  'RUC': '中国人民大学',
+  'BUAA': '北京航空航天大学',
+  'Tencent': '腾讯',
+  'Microsoft': '微软',
+};
+
+function getUniDisplayName(shortName) {
+  return UNI_NAME_MAP[shortName] || shortName;
+}
+
 function buildNetworkData() {
   // Build from arxivData + talentNotes
   var nodeMap = {}; // id -> node
@@ -1873,14 +1939,23 @@ function buildNetworkData() {
         (p.universities || []).forEach(function(uni) {
           var isHK = (p.hkUniversities || []).indexOf(uni) >= 0;
           var uniId = 'uni_' + uni.replace(/\s+/g, '_');
+          var displayName = getUniDisplayName(uni);
           if (!nodeMap[uniId]) {
-            nodeMap[uniId] = { id: uniId, label: uni, type: isHK ? 'hk_uni' : 'uni', x: 0, y: 0, vx: 0, vy: 0, radius: 18 };
+            nodeMap[uniId] = { id: uniId, label: displayName, shortName: uni, type: isHK ? 'hk_uni' : 'uni', x: 0, y: 0, vx: 0, vy: 0, radius: 18 };
           }
           var edgeKey = companyId + '|' + uniId;
           if (!edgeMap[edgeKey]) {
-            edgeMap[edgeKey] = { source: companyId, target: uniId, directions: [], papers: 0 };
+            edgeMap[edgeKey] = { source: companyId, target: uniId, directions: [], papers: 0, paperList: [], talents: [] };
           }
           edgeMap[edgeKey].papers++;
+          // Store paper info for detail view
+          edgeMap[edgeKey].paperList.push({
+            title: p.title,
+            url: p.arxivUrl,
+            pdfUrl: p.pdfUrl || '',
+            date: p.published ? p.published.slice(0,10) : '',
+            authors: p.authors.slice(0,5).join(', ') + (p.authorCount > 5 ? ' 等' : '')
+          });
           dirs.forEach(function(d) {
             if (edgeMap[edgeKey].directions.indexOf(d) === -1) edgeMap[edgeKey].directions.push(d);
           });
@@ -1888,12 +1963,29 @@ function buildNetworkData() {
       });
     });
   }
-  // Also extract from talentNotes → lab connections
-  Object.values(talentNotes).forEach(function(t) {
-    if (!t.university || !t.lab) return;
+  // Also extract from talentNotes → enrich edges with talent info
+  Object.entries(talentNotes).forEach(function(te) {
+    var key = te[0], t = te[1];
+    if (!t.university) return;
     var uniId = 'uni_' + t.university.replace(/\s+/g, '_');
+    var displayName = getUniDisplayName(t.university);
     if (!nodeMap[uniId]) {
-      nodeMap[uniId] = { id: uniId, label: t.university, type: t.isHK ? 'hk_uni' : 'uni', x: 0, y: 0, vx: 0, vy: 0, radius: 18 };
+      nodeMap[uniId] = { id: uniId, label: displayName, shortName: t.university, type: t.isHK ? 'hk_uni' : 'uni', x: 0, y: 0, vx: 0, vy: 0, radius: 18 };
+    }
+    // Try to find which company edge to attach talent to
+    for (var ek in edgeMap) {
+      if (ek.indexOf(uniId) >= 0) {
+        var alreadyHas = edgeMap[ek].talents.some(function(x) { return x.name === (t.name || key); });
+        if (!alreadyHas) {
+          edgeMap[ek].talents.push({
+            name: t.name || key,
+            lab: t.lab || '',
+            direction: t.direction || '',
+            homepage: t.homepage || '',
+            status: t.status || ''
+          });
+        }
+      }
     }
   });
   networkNodes = Object.values(nodeMap);
@@ -2129,12 +2221,33 @@ function renderNetworkDetails(data) {
     var s = data.nodes.find(function(n){ return n.id === e.source; });
     var t = data.nodes.find(function(n){ return n.id === e.target; });
     var isHK = t && t.type === 'hk_uni';
-    return '<div class="net-detail-card">' +
-      '<span class="net-detail-company">' + (s ? s.icon + ' ' + s.label : e.source) + '</span>' +
-      '<span class="net-detail-arrow">⟷</span>' +
-      '<span class="net-detail-uni' + (isHK ? ' hk' : '') + '">' + (t ? t.label : e.target) + (isHK ? ' 🇭🇰' : '') + '</span>' +
-      '<span class="net-detail-dirs">' + e.directions.map(function(d) { return '<span class="net-detail-dir">' + d + '</span>'; }).join('') + '</span>' +
-      '<span class="net-detail-count">' + e.papers + ' 篇论文</span>' +
+    // Paper links
+    var paperLinks = (e.paperList || []).map(function(p) {
+      return '<div style="margin:0.25rem 0;font-size:0.72rem;line-height:1.4">' +
+        '<a href="' + p.url + '" target="_blank" style="color:var(--accent2);text-decoration:none">📄 ' + p.title + ' ↗</a>' +
+        '<span style="color:var(--text2);margin-left:0.4rem">' + p.date + '</span>' +
+        (p.pdfUrl ? ' <a href="' + p.pdfUrl + '" target="_blank" style="color:#f87171;text-decoration:none;font-size:0.65rem">[PDF]</a>' : '') +
+        '<div style="font-size:0.65rem;color:var(--text2);margin-top:0.05rem">✍️ ' + p.authors + '</div>' +
+        '</div>';
+    }).join('');
+    // Talent info
+    var talentInfo = (e.talents || []).map(function(p) {
+      return '<span style="font-size:0.68rem;display:inline-flex;align-items:center;gap:0.2rem;margin:0.15rem 0.2rem;background:rgba(168,85,247,0.1);padding:0.12rem 0.4rem;border-radius:5px;color:#c084fc">' +
+        (p.homepage ? '<a href="' + p.homepage + '" target="_blank" style="color:#c084fc;text-decoration:none">👤 ' + p.name + ' ↗</a>' : '👤 ' + p.name) +
+        (p.lab ? ' <span style="color:var(--text2)">· ' + p.lab + '</span>' : '') +
+        (p.status ? ' <span style="color:var(--text2)">· ' + p.status + '</span>' : '') +
+        '</span>';
+    }).join('');
+    return '<div class="net-detail-card" style="flex-direction:column;align-items:stretch">' +
+      '<div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.5rem">' +
+        '<span class="net-detail-company">' + (s ? s.icon + ' ' + s.label : e.source) + '</span>' +
+        '<span class="net-detail-arrow">⟷</span>' +
+        '<span class="net-detail-uni' + (isHK ? ' hk' : '') + '">' + (t ? t.label : e.target) + (isHK ? ' 🇭🇰' : '') + '</span>' +
+        '<span class="net-detail-dirs">' + e.directions.map(function(d) { return '<span class="net-detail-dir">' + d + '</span>'; }).join('') + '</span>' +
+        '<span class="net-detail-count">' + e.papers + ' 篇论文</span>' +
+      '</div>' +
+      (talentInfo ? '<div style="margin-bottom:0.4rem;display:flex;flex-wrap:wrap">' + talentInfo + '</div>' : '') +
+      '<div style="border-top:1px solid var(--border);padding-top:0.4rem">' + paperLinks + '</div>' +
       '</div>';
   }).join('');
 }

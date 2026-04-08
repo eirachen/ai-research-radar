@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-04-08T20:10:18.411384Z",
+  "generatedAt": "2026-04-08T20:16:51.094139Z",
   "since": "2026-03-01",
-  "totalPapers": 246,
-  "totalUniCollab": 214,
+  "totalPapers": 264,
+  "totalUniCollab": 227,
   "totalHKCollab": 1,
   "companies": {
     "bytedance": {
@@ -598,8 +598,8 @@
           ],
           "comment": "",
           "universities": [
-            "Mila",
-            "ETH"
+            "ETH",
+            "Mila"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -641,8 +641,8 @@
           ],
           "comment": "Accepted at LREC2026",
           "universities": [
-            "USC",
-            "MIT"
+            "MIT",
+            "USC"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -1138,8 +1138,8 @@
           ],
           "comment": "",
           "universities": [
-            "Mila",
-            "ETH"
+            "ETH",
+            "Mila"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -1266,8 +1266,8 @@
           "comment": "",
           "universities": [
             "MIT",
-            "Mila",
-            "ETH"
+            "ETH",
+            "Mila"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -1443,8 +1443,8 @@
           "comment": "",
           "universities": [
             "MIT",
-            "Mila",
             "HIT",
+            "Mila",
             "ETH"
           ],
           "hkUniversities": [],
@@ -1863,8 +1863,8 @@
           ],
           "comment": "16 pages, 8 figures. Began as an April Fools' idea, regrettably became a real methods paper, No language models were physically harmed. GitHub repository of this work: https://github.com/ChunHuangPhy/",
           "universities": [
-            "NUS",
-            "ETH"
+            "ETH",
+            "NUS"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -2129,8 +2129,8 @@
           ],
           "comment": "25 pages, 5 figures, 7 tables. Pre-registered on OSF (osf.io/qrxf3). Code at https://anonymous.4open.science/r/weber-B02C",
           "universities": [
-            "Mila",
-            "HIT"
+            "HIT",
+            "Mila"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -2443,9 +2443,9 @@
           "comment": "10 pages, 4 figures,",
           "universities": [
             "HIT",
-            "ANU",
             "NUS",
-            "USC"
+            "USC",
+            "ANU"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -3720,8 +3720,8 @@
           ],
           "comment": "",
           "universities": [
-            "UW",
             "HIT",
+            "UW",
             "ETH"
           ],
           "hkUniversities": [],
@@ -3946,8 +3946,8 @@
           "comment": "",
           "universities": [
             "CAS",
-            "Mila",
-            "HIT"
+            "HIT",
+            "Mila"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -4214,8 +4214,8 @@
           ],
           "comment": "16 pages, 8 figures. Began as an April Fools' idea, regrettably became a real methods paper, No language models were physically harmed. GitHub repository of this work: https://github.com/ChunHuangPhy/",
           "universities": [
-            "NUS",
-            "ETH"
+            "ETH",
+            "NUS"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -4265,9 +4265,9 @@
           "comment": "48 pages, 4 figures, 1 table. Clean arXiv version prepared. Includes main manuscript plus appendix/supplementary-style implementation details and prompt listings. Dated 30 March 2026",
           "universities": [
             "HIT",
-            "ANU",
             "NUS",
-            "USC"
+            "USC",
+            "ANU"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -4765,8 +4765,8 @@
           ],
           "comment": "",
           "universities": [
-            "ANU",
-            "ETH"
+            "ETH",
+            "ANU"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -5519,8 +5519,8 @@
           "comment": "",
           "universities": [
             "CAS",
-            "Mila",
-            "HIT"
+            "HIT",
+            "Mila"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -5775,9 +5775,9 @@
           ],
           "comment": "27 pages, figures, tables, and appendix. Primary category: human-computer interaction / human-AI interaction. Public artifact repository and implementation resources are referenced in the manuscript",
           "universities": [
-            "ANU",
             "NUS",
-            "USC"
+            "USC",
+            "ANU"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -5912,8 +5912,8 @@
           ],
           "comment": "",
           "universities": [
-            "HIT",
             "NYU",
+            "HIT",
             "ETH"
           ],
           "hkUniversities": [],
@@ -6271,8 +6271,8 @@
           "comment": "",
           "universities": [
             "CAS",
-            "USC",
-            "UW"
+            "UW",
+            "USC"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -6493,10 +6493,10 @@
           ],
           "comment": "7 pages, 3 figures, accepted in WSDM 2026",
           "universities": [
-            "ANU",
             "HIT",
-            "ETH",
-            "NUS"
+            "ANU",
+            "NUS",
+            "ETH"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -6622,8 +6622,8 @@
           "comment": "",
           "universities": [
             "CAS",
-            "Mila",
-            "HIT"
+            "HIT",
+            "Mila"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -7047,8 +7047,8 @@
           ],
           "comment": "17 pages, 3 figures",
           "universities": [
-            "ETH",
-            "Peking University"
+            "Peking University",
+            "ETH"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -7090,8 +7090,8 @@
           "comment": "",
           "universities": [
             "MIT",
-            "Mila",
-            "ETH"
+            "ETH",
+            "Mila"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -7804,8 +7804,8 @@
           ],
           "comment": "9 pages, 5 figures, 2 tables; MSc dissertation reformatted as conference paper; extended version available at github.com/unseen1980/acro-helper",
           "universities": [
-            "ANU",
-            "ETH"
+            "ETH",
+            "ANU"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -8931,8 +8931,8 @@
           ],
           "comment": "",
           "universities": [
-            "ANU",
-            "NYU"
+            "NYU",
+            "ANU"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -8973,8 +8973,8 @@
           ],
           "comment": "",
           "universities": [
-            "ANU",
-            "ETH"
+            "ETH",
+            "ANU"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -9055,8 +9055,8 @@
           ],
           "comment": "Code will be released",
           "universities": [
-            "ANU",
-            "ETH"
+            "ETH",
+            "ANU"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -9146,8 +9146,8 @@
           ],
           "comment": "",
           "universities": [
-            "Mila",
-            "MIT"
+            "MIT",
+            "Mila"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -9360,8 +9360,8 @@
           ],
           "comment": "",
           "universities": [
-            "UCL",
-            "ETH"
+            "ETH",
+            "UCL"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -10109,12 +10109,12 @@
           ],
           "comment": "27 pages, 2 figures",
           "universities": [
-            "Mila",
             "CAS",
             "USC",
-            "ANU",
+            "NTU",
             "MIT",
-            "NTU"
+            "Mila",
+            "ANU"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -10405,8 +10405,8 @@
           "comment": "8 pages, 2 figures",
           "universities": [
             "MIT",
-            "Mila",
-            "HIT"
+            "HIT",
+            "Mila"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -10422,213 +10422,6 @@
       ],
       "count": 38,
       "uniCollabCount": 34,
-      "hkCollabCount": 0
-    },
-    "baidu": {
-      "company": "百度",
-      "icon": "🔴",
-      "papers": [
-        {
-          "title": "Short Data, Long Context: Distilling Positional Knowledge in Transformers",
-          "summary": "Extending the context window of language models typically requires expensive long-context pre-training, posing significant challenges for both training efficiency and data collection. In this paper, we present evidence that long-context retrieval capabilities can be transferred to student models thr",
-          "published": "2026-04-07T16:50:43Z",
-          "arxivId": "2604.06070v1",
-          "arxivUrl": "http://arxiv.org/abs/2604.06070v1",
-          "pdfUrl": "https://arxiv.org/pdf/2604.06070v1",
-          "authors": [
-            "Patrick Huber",
-            "Ernie Chang",
-            "Chinnadhurai Sankar",
-            "Rylan Conway",
-            "Igor Fedorov",
-            "Md Rifat Arefin",
-            "Adithya Sagar"
-          ],
-          "authorCount": 7,
-          "affiliations": [],
-          "categories": [
-            "cs.CL",
-            "cs.LG"
-          ],
-          "comment": "",
-          "universities": [],
-          "hkUniversities": [],
-          "hasUniCollab": false,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "LLM",
-              "label": "LLM",
-              "color": "#3b82f6"
-            },
-            {
-              "id": "RAG",
-              "label": "RAG/检索",
-              "color": "#64748b"
-            },
-            {
-              "id": "Infra",
-              "label": "Infra",
-              "color": "#22c55e"
-            }
-          ]
-        },
-        {
-          "title": "Scaling Reasoning Tokens via RL and Parallel Thinking: Evidence From Competitive Programming",
-          "summary": "We study how to scale reasoning token budgets for competitive programming through two complementary approaches: training-time reinforcement learning (RL) and test-time parallel thinking. During RL training, we observe an approximately log-linear relationship between validation accuracy and the avera",
-          "published": "2026-04-01T18:05:49Z",
-          "arxivId": "2604.01302v1",
-          "arxivUrl": "http://arxiv.org/abs/2604.01302v1",
-          "pdfUrl": "https://arxiv.org/pdf/2604.01302v1",
-          "authors": [
-            "Qianfan Zhang",
-            "Tianyu Guo",
-            "Xuandi Ren",
-            "Jiale Chen",
-            "Ming Ding",
-            "Ran Xin",
-            "Xia Xiao"
-          ],
-          "authorCount": 7,
-          "affiliations": [],
-          "categories": [
-            "cs.CL"
-          ],
-          "comment": "",
-          "universities": [
-            "ETH",
-            "NYU"
-          ],
-          "hkUniversities": [],
-          "hasUniCollab": true,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "LLM",
-              "label": "LLM",
-              "color": "#3b82f6"
-            },
-            {
-              "id": "RL",
-              "label": "强化学习",
-              "color": "#eab308"
-            },
-            {
-              "id": "RAG",
-              "label": "RAG/检索",
-              "color": "#64748b"
-            }
-          ]
-        },
-        {
-          "title": "True (VIS) Lies: Analyzing How Generative AI Recognizes Intentionality, Rhetoric, and Misleadingness in Visualization Lies",
-          "summary": "This study investigates the ability of multimodal Large Language Models (LLMs) to identify and interpret misleading visualizations, and recognize these observations along with their underlying causes and potential intentionality. Our analysis leverages concepts from visualization rhetoric and a newl",
-          "published": "2026-04-01T17:33:10Z",
-          "arxivId": "2604.01181v1",
-          "arxivUrl": "http://arxiv.org/abs/2604.01181v1",
-          "pdfUrl": "https://arxiv.org/pdf/2604.01181v1",
-          "authors": [
-            "Graziano Blasilli",
-            "Marco Angelini"
-          ],
-          "authorCount": 2,
-          "affiliations": [],
-          "categories": [
-            "cs.HC",
-            "cs.CL",
-            "cs.CV"
-          ],
-          "comment": "",
-          "universities": [
-            "CAS",
-            "Mila",
-            "HIT"
-          ],
-          "hkUniversities": [],
-          "hasUniCollab": true,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "LLM",
-              "label": "LLM",
-              "color": "#3b82f6"
-            },
-            {
-              "id": "RAG",
-              "label": "RAG/检索",
-              "color": "#64748b"
-            },
-            {
-              "id": "Multimodal",
-              "label": "多模态",
-              "color": "#a855f7"
-            }
-          ]
-        }
-      ],
-      "count": 3,
-      "uniCollabCount": 2,
-      "hkCollabCount": 0
-    },
-    "xiaomi": {
-      "company": "小米",
-      "icon": "📱",
-      "papers": [
-        {
-          "title": "UniDriveVLA: Unifying Understanding, Perception, and Action Planning for Autonomous Driving",
-          "summary": "Vision-Language-Action (VLA) models have recently emerged in autonomous driving, with the promise of leveraging rich world knowledge to improve the cognitive capabilities of driving systems. However, adapting such models for driving tasks currently faces a critical dilemma between spatial perception",
-          "published": "2026-04-02T15:48:45Z",
-          "arxivId": "2604.02190v1",
-          "arxivUrl": "http://arxiv.org/abs/2604.02190v1",
-          "pdfUrl": "https://arxiv.org/pdf/2604.02190v1",
-          "authors": [
-            "Yongkang Li",
-            "Lijun Zhou",
-            "Sixu Yan",
-            "Bencheng Liao",
-            "Tianyi Yan",
-            "Kaixin Xiong",
-            "Long Chen",
-            "Hongwei Xie"
-          ],
-          "authorCount": 14,
-          "affiliations": [],
-          "categories": [
-            "cs.CV",
-            "cs.RO"
-          ],
-          "comment": "code has been released at https://github.com/xiaomi-research/unidrivevla",
-          "universities": [
-            "CAS",
-            "NUS",
-            "NYU",
-            "USC",
-            "MIT"
-          ],
-          "hkUniversities": [],
-          "hasUniCollab": true,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "Multimodal",
-              "label": "多模态",
-              "color": "#a855f7"
-            },
-            {
-              "id": "LLM",
-              "label": "LLM",
-              "color": "#3b82f6"
-            },
-            {
-              "id": "Agent",
-              "label": "Agent",
-              "color": "#f97316"
-            }
-          ]
-        }
-      ],
-      "count": 1,
-      "uniCollabCount": 1,
       "hkCollabCount": 0
     },
     "meta": {
@@ -10765,6 +10558,1037 @@
       ],
       "count": 3,
       "uniCollabCount": 3,
+      "hkCollabCount": 0
+    },
+    "baidu": {
+      "company": "百度",
+      "icon": "🔴",
+      "papers": [
+        {
+          "title": "Short Data, Long Context: Distilling Positional Knowledge in Transformers",
+          "summary": "Extending the context window of language models typically requires expensive long-context pre-training, posing significant challenges for both training efficiency and data collection. In this paper, we present evidence that long-context retrieval capabilities can be transferred to student models thr",
+          "published": "2026-04-07T16:50:43Z",
+          "arxivId": "2604.06070v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.06070v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.06070v1",
+          "authors": [
+            "Patrick Huber",
+            "Ernie Chang",
+            "Chinnadhurai Sankar",
+            "Rylan Conway",
+            "Igor Fedorov",
+            "Md Rifat Arefin",
+            "Adithya Sagar"
+          ],
+          "authorCount": 7,
+          "affiliations": [],
+          "categories": [
+            "cs.CL",
+            "cs.LG"
+          ],
+          "comment": "",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            }
+          ]
+        },
+        {
+          "title": "Scaling Reasoning Tokens via RL and Parallel Thinking: Evidence From Competitive Programming",
+          "summary": "We study how to scale reasoning token budgets for competitive programming through two complementary approaches: training-time reinforcement learning (RL) and test-time parallel thinking. During RL training, we observe an approximately log-linear relationship between validation accuracy and the avera",
+          "published": "2026-04-01T18:05:49Z",
+          "arxivId": "2604.01302v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.01302v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.01302v1",
+          "authors": [
+            "Qianfan Zhang",
+            "Tianyu Guo",
+            "Xuandi Ren",
+            "Jiale Chen",
+            "Ming Ding",
+            "Ran Xin",
+            "Xia Xiao"
+          ],
+          "authorCount": 7,
+          "affiliations": [],
+          "categories": [
+            "cs.CL"
+          ],
+          "comment": "",
+          "universities": [
+            "NYU",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            }
+          ]
+        },
+        {
+          "title": "True (VIS) Lies: Analyzing How Generative AI Recognizes Intentionality, Rhetoric, and Misleadingness in Visualization Lies",
+          "summary": "This study investigates the ability of multimodal Large Language Models (LLMs) to identify and interpret misleading visualizations, and recognize these observations along with their underlying causes and potential intentionality. Our analysis leverages concepts from visualization rhetoric and a newl",
+          "published": "2026-04-01T17:33:10Z",
+          "arxivId": "2604.01181v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.01181v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.01181v1",
+          "authors": [
+            "Graziano Blasilli",
+            "Marco Angelini"
+          ],
+          "authorCount": 2,
+          "affiliations": [],
+          "categories": [
+            "cs.HC",
+            "cs.CL",
+            "cs.CV"
+          ],
+          "comment": "",
+          "universities": [
+            "CAS",
+            "HIT",
+            "Mila"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            },
+            {
+              "id": "Multimodal",
+              "label": "多模态",
+              "color": "#a855f7"
+            }
+          ]
+        },
+        {
+          "title": "Multimodal-NF: A Wireless Dataset for Near-Field Low-Altitude Sensing and Communications",
+          "summary": "Environment-aware 6G wireless networks demand the deep integration of multimodal and wireless data. However, most existing datasets are confined to 2D terrestrial far-field scenarios, lacking the 3D spatial context and near-field characteristics crucial for low-altitude extremely large-scale multipl",
+          "published": "2026-03-30T11:03:06Z",
+          "arxivId": "2603.28280v1",
+          "arxivUrl": "http://arxiv.org/abs/2603.28280v1",
+          "pdfUrl": "https://arxiv.org/pdf/2603.28280v1",
+          "authors": [
+            "Mengyuan Li",
+            "Qianfan Lu",
+            "Jiachen Tian",
+            "Hongjun Hu",
+            "Yu Han",
+            "Xiao Li",
+            "Chao-Kai Wen",
+            "Shi Jin"
+          ],
+          "authorCount": 8,
+          "affiliations": [],
+          "categories": [
+            "eess.SP"
+          ],
+          "comment": "",
+          "universities": [
+            "CAS"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Vision",
+              "label": "视觉",
+              "color": "#ec4899"
+            },
+            {
+              "id": "Multimodal",
+              "label": "多模态",
+              "color": "#a855f7"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            }
+          ]
+        },
+        {
+          "title": "dTRPO: Trajectory Reduction in Policy Optimization of Diffusion Large Language Models",
+          "summary": "Diffusion Large Language Models (dLLMs) introduce a new paradigm for language generation, which in turn presents new challenges for aligning them with human preferences. In this work, we aim to improve the policy optimization for dLLMs by reducing the cost of the trajectory probability calculation, ",
+          "published": "2026-03-19T11:55:52Z",
+          "arxivId": "2603.18806v1",
+          "arxivUrl": "http://arxiv.org/abs/2603.18806v1",
+          "pdfUrl": "https://arxiv.org/pdf/2603.18806v1",
+          "authors": [
+            "Wenxuan Zhang",
+            "Lemeng Wu",
+            "Changsheng Zhao",
+            "Ernie Chang",
+            "Mingchen Zhuge",
+            "Zechun Liu",
+            "Andy Su",
+            "Hanxian Huang"
+          ],
+          "authorCount": 14,
+          "affiliations": [],
+          "categories": [
+            "cs.AI"
+          ],
+          "comment": "",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            }
+          ]
+        },
+        {
+          "title": "Structure-Aware Multimodal LLM Framework for Trustworthy Near-Field Beam Prediction",
+          "summary": "In near-field extremely large-scale multiple-input multiple-output (XL-MIMO) systems, spherical wavefront propagation expands the traditional beam codebook into the joint angular-distance domain, rendering conventional beam training prohibitively inefficient, especially in complex 3-dimensional (3D)",
+          "published": "2026-03-17T05:52:13Z",
+          "arxivId": "2603.16143v1",
+          "arxivUrl": "http://arxiv.org/abs/2603.16143v1",
+          "pdfUrl": "https://arxiv.org/pdf/2603.16143v1",
+          "authors": [
+            "Mengyuan Li",
+            "Qianfan Lu",
+            "Jiachen Tian",
+            "Hongjun Hu",
+            "Yu Han",
+            "Xiao Li",
+            "Chao-kai Wen",
+            "Shi Jin"
+          ],
+          "authorCount": 8,
+          "affiliations": [],
+          "categories": [
+            "eess.SP",
+            "cs.AI"
+          ],
+          "comment": "",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Multimodal",
+              "label": "多模态",
+              "color": "#a855f7"
+            },
+            {
+              "id": "Vision",
+              "label": "视觉",
+              "color": "#ec4899"
+            }
+          ]
+        },
+        {
+          "title": "Face-to-Face: A Video Dataset for Multi-Person Interaction Modeling",
+          "summary": "Modeling the reactive tempo of human conversation remains difficult because most audio-visual datasets portray isolated speakers delivering short monologues. We introduce \\textbf{Face-to-Face with Jimmy Fallon (F2F-JF)}, a 70-hour, 14k-clip dataset of two-person talk-show exchanges that preserves th",
+          "published": "2026-03-16T03:50:02Z",
+          "arxivId": "2603.14794v2",
+          "arxivUrl": "http://arxiv.org/abs/2603.14794v2",
+          "pdfUrl": "https://arxiv.org/pdf/2603.14794v2",
+          "authors": [
+            "Ernie Chu",
+            "Vishal M. Patel"
+          ],
+          "authorCount": 2,
+          "affiliations": [],
+          "categories": [
+            "cs.CV",
+            "cs.LG"
+          ],
+          "comment": "Project Page: https://face2face2026.github.io",
+          "universities": [
+            "CAS",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Speech",
+              "label": "语音",
+              "color": "#14b8a6"
+            },
+            {
+              "id": "Multimodal",
+              "label": "多模态",
+              "color": "#a855f7"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            }
+          ]
+        },
+        {
+          "title": "Hilbert cubes in sets with arithmetic properties",
+          "summary": "In this paper, we introduce new general frameworks for estimating the maximal dimension of Hilbert cubes contained in finite truncations of arbitrary sets. As applications, we investigate Hilbert cubes in a range of arithmetic sets, including perfect powers, powerful numbers, primes, smooth numbers,",
+          "published": "2026-03-15T23:17:59Z",
+          "arxivId": "2603.14654v1",
+          "arxivUrl": "http://arxiv.org/abs/2603.14654v1",
+          "pdfUrl": "https://arxiv.org/pdf/2603.14654v1",
+          "authors": [
+            "Ernie Croot",
+            "Junzhe Mao",
+            "Chi Hoi Yip"
+          ],
+          "authorCount": 3,
+          "affiliations": [],
+          "categories": [
+            "math.NT",
+            "math.CO"
+          ],
+          "comment": "41 pages",
+          "universities": [
+            "CAS"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Math",
+              "label": "数学推理",
+              "color": "#06b6d4"
+            }
+          ]
+        },
+        {
+          "title": "Qianfan-OCR: A Unified End-to-End Model for Document Intelligence",
+          "summary": "We present Qianfan-OCR, a 4B-parameter end-to-end vision-language model that unifies document parsing, layout analysis, and document understanding within a single architecture. It performs direct image-to-Markdown conversion and supports diverse prompt-driven tasks including table extraction, chart ",
+          "published": "2026-03-11T16:08:22Z",
+          "arxivId": "2603.13398v1",
+          "arxivUrl": "http://arxiv.org/abs/2603.13398v1",
+          "pdfUrl": "https://arxiv.org/pdf/2603.13398v1",
+          "authors": [
+            "Daxiang Dong",
+            "Mingming Zheng",
+            "Dong Xu",
+            "Chunhua Luo",
+            "Bairong Zhuang",
+            "Yuxuan Li",
+            "Ruoyun He",
+            "Haoran Wang"
+          ],
+          "authorCount": 20,
+          "affiliations": [],
+          "categories": [
+            "cs.CV"
+          ],
+          "comment": "",
+          "universities": [
+            "NYU",
+            "HIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Multimodal",
+              "label": "多模态",
+              "color": "#a855f7"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            }
+          ]
+        },
+        {
+          "title": "CTPX1: A Highly Integrated and High-Throughput Data-Driven Camera Based on Timepix4",
+          "summary": "The upgrade of the China Spallation Neutron Source (CSNS-II) will raise the proton beam power to 500 kW. Consequently, the existing Timepix3-based detector systems, limited to a count rate of 80 Mhits/s, will encounter severe saturation challenges. To address the demand of the Energy-Resolved Neutro",
+          "published": "2026-03-10T11:44:51Z",
+          "arxivId": "2603.09534v1",
+          "arxivUrl": "http://arxiv.org/abs/2603.09534v1",
+          "pdfUrl": "https://arxiv.org/pdf/2603.09534v1",
+          "authors": [
+            "Qicai Li",
+            "Hongbin Liu",
+            "Xingfen Jiang",
+            "Jianrong Zhou",
+            "Yujie Zhou",
+            "Haoran Guo",
+            "Dongcheng Cai",
+            "Weile Gong"
+          ],
+          "authorCount": 13,
+          "affiliations": [],
+          "categories": [
+            "physics.ins-det"
+          ],
+          "comment": "Submitted to JINST",
+          "universities": [
+            "MIT",
+            "HIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "Safety",
+              "label": "安全",
+              "color": "#ef4444"
+            }
+          ]
+        },
+        {
+          "title": "Bulk OsO2 Single Crystals: Superior Catalysts for Water Oxidation",
+          "summary": "Although rutile RuO2 has been a well-known and almost the best oxygen evolution reaction (OER) catalyst, the OER properties for the similar rutile oxide OsO2 with the same group element with Ru have been unknown, mainly due to long-standing synthesis difficulties. In this work, we report the success",
+          "published": "2026-03-07T03:09:58Z",
+          "arxivId": "2603.07009v1",
+          "arxivUrl": "http://arxiv.org/abs/2603.07009v1",
+          "pdfUrl": "https://arxiv.org/pdf/2603.07009v1",
+          "authors": [
+            "Guojian Zhao",
+            "Zhihao Li",
+            "Ziang Meng",
+            "Shucheng Wang",
+            "Li Liu",
+            "Zhiyuan Duan",
+            "Xiaoning Wang",
+            "Hongyu Chen"
+          ],
+          "authorCount": 16,
+          "affiliations": [],
+          "categories": [
+            "cond-mat.mtrl-sci",
+            "cond-mat.mes-hall",
+            "cond-mat.str-el"
+          ],
+          "comment": "36 pages,18 figures, published online at Advanced Functional Materials",
+          "universities": [
+            "Mila"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": []
+        }
+      ],
+      "count": 11,
+      "uniCollabCount": 8,
+      "hkCollabCount": 0
+    },
+    "kuaishou": {
+      "company": "快手",
+      "icon": "📹",
+      "papers": [
+        {
+          "title": "KAT-Coder-V2 Technical Report",
+          "summary": "We present KAT-Coder-V2, an agentic coding model developed by the KwaiKAT team at Kuaishou. KAT-Coder-V2 adopts a \"Specialize-then-Unify\" paradigm that decomposes agentic coding into five expert domains - SWE, WebCoding, Terminal, WebSearch, and General - each undergoing independent supervised fine-",
+          "published": "2026-03-29T14:01:35Z",
+          "arxivId": "2603.27703v1",
+          "arxivUrl": "http://arxiv.org/abs/2603.27703v1",
+          "pdfUrl": "https://arxiv.org/pdf/2603.27703v1",
+          "authors": [
+            "Fengxiang Li",
+            "Han Zhang",
+            "Haoyang Huang",
+            "Jinghui Wang",
+            "Jinhua Hao",
+            "Kun Yuan",
+            "Mengtong Li",
+            "Minglei Zhang"
+          ],
+          "authorCount": 46,
+          "affiliations": [],
+          "categories": [
+            "cs.CL",
+            "cs.LG"
+          ],
+          "comment": "22 pages, 7 figures",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            }
+          ]
+        },
+        {
+          "title": "Unbiased Multimodal Reranking for Long-Tail Short-Video Search",
+          "summary": "Kuaishou serving hundreds of millions of searches daily, the quality of short-video search is paramount. However, it suffers from a severe Matthew effect on long-tail queries: sparse user behavior data causes models to amplify low-quality content such as clickbait and shallow content. The recent adv",
+          "published": "2026-03-26T03:07:15Z",
+          "arxivId": "2603.24975v2",
+          "arxivUrl": "http://arxiv.org/abs/2603.24975v2",
+          "pdfUrl": "https://arxiv.org/pdf/2603.24975v2",
+          "authors": [
+            "Wenyi Xu",
+            "Feiran Zhu",
+            "Songyang Li",
+            "Renzhe Zhou",
+            "Chao Zhang",
+            "Chenglei Dai",
+            "Yuren Mao",
+            "Yunjun Gao"
+          ],
+          "authorCount": 9,
+          "affiliations": [],
+          "categories": [
+            "cs.IR"
+          ],
+          "comment": "",
+          "universities": [
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "Multimodal",
+              "label": "多模态",
+              "color": "#a855f7"
+            }
+          ]
+        },
+        {
+          "title": "SaFRO: Satisfaction-Aware Fusion via Dual-Relative Policy Optimization for Short-Video Search",
+          "summary": "Multi-Task Fusion plays a pivotal role in industrial short-video search systems by aggregating heterogeneous prediction signals into a unified ranking score. However, existing approaches predominantly optimize for immediate engagement metrics, which often fail to align with long-term user satisfacti",
+          "published": "2026-03-20T02:57:50Z",
+          "arxivId": "2603.19585v1",
+          "arxivUrl": "http://arxiv.org/abs/2603.19585v1",
+          "pdfUrl": "https://arxiv.org/pdf/2603.19585v1",
+          "authors": [
+            "Renzhe Zhou",
+            "Songyang Li",
+            "Feiran Zhu",
+            "Chenglei Dai",
+            "Yi Zhang",
+            "Yi Wang",
+            "Jingwei Zhuo"
+          ],
+          "authorCount": 7,
+          "affiliations": [],
+          "categories": [
+            "cs.IR"
+          ],
+          "comment": "9 pages, 8 figures",
+          "universities": [
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            }
+          ]
+        },
+        {
+          "title": "FlashEvaluator: Expanding Search Space with Parallel Evaluation",
+          "summary": "The Generator-Evaluator (G-E) framework, i.e., evaluating K sequences from a generator and selecting the top-ranked one according to evaluator scores, is a foundational paradigm in tasks such as Recommender Systems (RecSys) and Natural Language Processing (NLP). Traditional evaluators process sequen",
+          "published": "2026-03-03T03:35:34Z",
+          "arxivId": "2603.02565v1",
+          "arxivUrl": "http://arxiv.org/abs/2603.02565v1",
+          "pdfUrl": "https://arxiv.org/pdf/2603.02565v1",
+          "authors": [
+            "Chao Feng",
+            "Yuanhao Pu",
+            "Chenghao Zhang",
+            "Shanqi Liu",
+            "Shuchang Liu",
+            "Xiang Li",
+            "Yongqi Liu",
+            "Lantao Hu"
+          ],
+          "authorCount": 11,
+          "affiliations": [],
+          "categories": [
+            "cs.IR",
+            "cs.CL",
+            "cs.LG"
+          ],
+          "comment": "23 pages, 2 figures",
+          "universities": [
+            "MIT",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            }
+          ]
+        },
+        {
+          "title": "SOLAR: SVD-Optimized Lifelong Attention for Recommendation",
+          "summary": "Attention mechanism remains the defining operator in Transformers since it provides expressive global credit assignment, yet its $O(N^2 d)$ time and memory cost in sequence length $N$ makes long-context modeling expensive and often forces truncation or other heuristics. Linear attention reduces comp",
+          "published": "2026-03-03T03:28:36Z",
+          "arxivId": "2603.02561v1",
+          "arxivUrl": "http://arxiv.org/abs/2603.02561v1",
+          "pdfUrl": "https://arxiv.org/pdf/2603.02561v1",
+          "authors": [
+            "Chenghao Zhang",
+            "Chao Feng",
+            "Yuanhao Pu",
+            "Xunyong Yang",
+            "Wenhui Yu",
+            "Xiang Li",
+            "Yongqi Liu",
+            "Lantao Hu"
+          ],
+          "authorCount": 11,
+          "affiliations": [],
+          "categories": [
+            "cs.IR",
+            "cs.CV",
+            "cs.LG"
+          ],
+          "comment": "18 pages, 4 figures",
+          "universities": [
+            "CAS",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            }
+          ]
+        }
+      ],
+      "count": 5,
+      "uniCollabCount": 4,
+      "hkCollabCount": 0
+    },
+    "xiaomi": {
+      "company": "小米",
+      "icon": "📱",
+      "papers": [
+        {
+          "title": "UniDriveVLA: Unifying Understanding, Perception, and Action Planning for Autonomous Driving",
+          "summary": "Vision-Language-Action (VLA) models have recently emerged in autonomous driving, with the promise of leveraging rich world knowledge to improve the cognitive capabilities of driving systems. However, adapting such models for driving tasks currently faces a critical dilemma between spatial perception",
+          "published": "2026-04-02T15:48:45Z",
+          "arxivId": "2604.02190v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.02190v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.02190v1",
+          "authors": [
+            "Yongkang Li",
+            "Lijun Zhou",
+            "Sixu Yan",
+            "Bencheng Liao",
+            "Tianyi Yan",
+            "Kaixin Xiong",
+            "Long Chen",
+            "Hongwei Xie"
+          ],
+          "authorCount": 14,
+          "affiliations": [],
+          "categories": [
+            "cs.CV",
+            "cs.RO"
+          ],
+          "comment": "code has been released at https://github.com/xiaomi-research/unidrivevla",
+          "universities": [
+            "NYU",
+            "NUS",
+            "CAS",
+            "USC",
+            "MIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Multimodal",
+              "label": "多模态",
+              "color": "#a855f7"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            }
+          ]
+        },
+        {
+          "title": "DreamLite: A Lightweight On-Device Unified Model for Image Generation and Editing",
+          "summary": "Diffusion models have made significant progress in both text-to-image (T2I) generation and text-guided image editing. However, these models are typically built with billions of parameters, leading to high latency and increased deployment challenges. While on-device diffusion models improve efficienc",
+          "published": "2026-03-30T17:30:25Z",
+          "arxivId": "2603.28713v1",
+          "arxivUrl": "http://arxiv.org/abs/2603.28713v1",
+          "pdfUrl": "https://arxiv.org/pdf/2603.28713v1",
+          "authors": [
+            "Kailai Feng",
+            "Yuxiang Wei",
+            "Bo Chen",
+            "Yang Pan",
+            "Hu Ye",
+            "Songwei Liu",
+            "Chenqian Yan",
+            "Yuan Gao"
+          ],
+          "authorCount": 8,
+          "affiliations": [],
+          "categories": [
+            "cs.CV"
+          ],
+          "comment": "https://carlofkl.github.io/dreamlite/",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Vision",
+              "label": "视觉",
+              "color": "#ec4899"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            }
+          ]
+        },
+        {
+          "title": "ACAVCaps: Enabling large-scale training for fine-grained and diverse audio understanding",
+          "summary": "General audio understanding is a fundamental goal for large audio-language models, with audio captioning serving as a cornerstone task for their development. However, progress in this domain is hindered by existing datasets, which lack the scale and descriptive granularity required to train truly ve",
+          "published": "2026-03-25T07:49:39Z",
+          "arxivId": "2603.24038v1",
+          "arxivUrl": "http://arxiv.org/abs/2603.24038v1",
+          "pdfUrl": "https://arxiv.org/pdf/2603.24038v1",
+          "authors": [
+            "Yadong Niu",
+            "Tianzi Wang",
+            "Heinrich Dinkel",
+            "Xingwei Sun",
+            "Jiahao Zhou",
+            "Gang Li",
+            "Jizhong Liu",
+            "Junbo Zhang"
+          ],
+          "authorCount": 9,
+          "affiliations": [],
+          "categories": [
+            "eess.AS",
+            "cs.SD"
+          ],
+          "comment": "accepted by ICASSP 2026",
+          "universities": [
+            "CAS",
+            "ANU"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Speech",
+              "label": "语音",
+              "color": "#14b8a6"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            }
+          ]
+        }
+      ],
+      "count": 3,
+      "uniCollabCount": 2,
+      "hkCollabCount": 0
+    },
+    "taotian": {
+      "company": "阿里淘天",
+      "icon": "🛒",
+      "papers": [
+        {
+          "title": "Prototype-Aligned Federated Soft-Prompts for Continual Web Personalization",
+          "summary": "Continual web personalization is essential for engagement, yet real-world non-stationarity and privacy constraints make it hard to adapt quickly without forgetting long-term preferences. We target this gap by seeking a privacy-conscious, parameter-efficient interface that controls stability-plastici",
+          "published": "2026-03-29T12:59:59Z",
+          "arxivId": "2603.27678v1",
+          "arxivUrl": "http://arxiv.org/abs/2603.27678v1",
+          "pdfUrl": "https://arxiv.org/pdf/2603.27678v1",
+          "authors": [
+            "Canran Xiao",
+            "Liwei Hou"
+          ],
+          "authorCount": 2,
+          "affiliations": [],
+          "categories": [
+            "cs.LG"
+          ],
+          "comment": "Accepted by WWW 2026",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Safety",
+              "label": "安全",
+              "color": "#ef4444"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            }
+          ]
+        },
+        {
+          "title": "KARMA: Knowledge-Action Regularized Multimodal Alignment for Personalized Search at Taobao",
+          "summary": "Large Language Models (LLMs) are equipped with profound semantic knowledge, making them a natural choice for injecting semantic generalization into personalized search systems. However, in practice we find that directly fine-tuning LLMs on industrial personalized tasks (e.g. next item prediction) of",
+          "published": "2026-03-24T04:13:30Z",
+          "arxivId": "2603.22779v2",
+          "arxivUrl": "http://arxiv.org/abs/2603.22779v2",
+          "pdfUrl": "https://arxiv.org/pdf/2603.22779v2",
+          "authors": [
+            "Zhi Sun",
+            "Wenming Zhang",
+            "Yi Wei",
+            "Liren Yu",
+            "Zhixuan Zhang",
+            "Dan Ou",
+            "Haihong Tang"
+          ],
+          "authorCount": 7,
+          "affiliations": [],
+          "categories": [
+            "cs.IR",
+            "cs.AI",
+            "cs.LG"
+          ],
+          "comment": "",
+          "universities": [
+            "MIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            }
+          ]
+        },
+        {
+          "title": "AIGQ: An End-to-End Hybrid Generative Architecture for E-commerce Query Recommendation",
+          "summary": "Pre-search query recommendation, widely known as HintQ on Taobao's homepage, plays a vital role in intent capture and demand discovery, yet traditional methods suffer from shallow semantics, poor cold-start performance and low serendipity due to reliance on ID-based matching and co-click heuristics.",
+          "published": "2026-03-20T07:27:59Z",
+          "arxivId": "2603.19710v1",
+          "arxivUrl": "http://arxiv.org/abs/2603.19710v1",
+          "pdfUrl": "https://arxiv.org/pdf/2603.19710v1",
+          "authors": [
+            "Jingcao Xu",
+            "Jianyun Zou",
+            "Renkai Yang",
+            "Zili Geng",
+            "Qiang Liu",
+            "Haihong Tang"
+          ],
+          "authorCount": 6,
+          "affiliations": [],
+          "categories": [
+            "cs.IR",
+            "cs.AI"
+          ],
+          "comment": "",
+          "universities": [
+            "NYU",
+            "HIT",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            }
+          ]
+        }
+      ],
+      "count": 3,
+      "uniCollabCount": 2,
       "hkCollabCount": 0
     }
   }

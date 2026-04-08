@@ -1174,13 +1174,13 @@ function renderReports() {
 function renderRadar() {
   const grid = document.getElementById('radarGrid');
   grid.innerHTML = RADARS.map(r => `
-    <div class="radar-card">
+    <div class="radar-card ${currentFilter === r.companyId ? 'selected' : ''}"
+         onclick="filterByCompany('${r.companyId}')" style="cursor:pointer">
       <h4>${r.company}</h4>
       <div class="direction">${r.direction}</div>
       <div class="trend">趋势：${r.trend}</div>
-      <div style="margin-top:0.4rem;display:flex;gap:0.3rem;flex-wrap:wrap">
-        <a href="${r.url}" target="_blank" style="font-size:0.62rem;color:var(--accent2);text-decoration:none;background:rgba(59,130,246,0.1);padding:0.12rem 0.4rem;border-radius:4px">🔗 官网 ↗</a>
-        <span style="font-size:0.62rem;color:var(--text2);background:var(--surface2);padding:0.12rem 0.4rem;border-radius:4px;cursor:pointer" onclick="filterByCompany('${r.companyId}')">📄 查看论文</span>
+      <div style="margin-top:0.4rem">
+        <a href="${r.url}" target="_blank" onclick="event.stopPropagation()" style="font-size:0.62rem;color:var(--accent2);text-decoration:none;background:rgba(59,130,246,0.1);padding:0.12rem 0.4rem;border-radius:4px">🔗 官网 ↗</a>
       </div>
     </div>
   `).join('');

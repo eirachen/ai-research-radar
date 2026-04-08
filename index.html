@@ -1369,8 +1369,10 @@ function filterArxiv(companyId) {
 // Talent Editor (localStorage + remote sync)
 // ══════════════════════════════════════
 
-// Remote API for real-time sync (Lighthouse server)
-var TALENT_API = 'http://43.167.194.82:8800/talent-notes.json';
+// Remote API - use same-origin if on Lighthouse, otherwise use absolute URL
+var TALENT_API = (location.port === '8800' || location.hostname === '43.167.194.82')
+  ? '/talent-notes.json'
+  : 'http://43.167.194.82:8800/talent-notes.json';
 
 function getLocalTalentNotes() {
   try {

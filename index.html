@@ -2242,13 +2242,9 @@ function renderTalentExistingList() {
   });
 
   // Alphabet groups
-  var alphaGroups = [
-    { label: 'A - E', range: 'ABCDE' },
-    { label: 'F - J', range: 'FGHIJ' },
-    { label: 'K - O', range: 'KLMNO' },
-    { label: 'P - T', range: 'PQRST' },
-    { label: 'U - Z', range: 'UVWXYZ' },
-  ];
+  var alphaGroups = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map(function(c) {
+    return { label: c, range: c };
+  });
 
   function groupByAlpha(arr) {
     var groups = alphaGroups.map(function(g) { return { label: g.label, range: g.range, items: [] }; });
@@ -2262,17 +2258,18 @@ function renderTalentExistingList() {
   }
 
   function renderAlphaSection(groups, prefix) {
-    return groups.map(function(g) {
-      var gid = prefix + '_' + g.label.replace(/\s/g, '');
-      return '<div style="margin:0.3rem 0">' +
-        '<div style="display:flex;align-items:center;gap:0.4rem;cursor:pointer;padding:0.3rem 0.5rem;background:var(--surface2);border-radius:6px;font-size:0.75rem" onclick="toggleAlphaGroup(\'' + gid + '\',this)">' +
-          '<span class="net-chevron" style="font-size:0.7rem;color:var(--text2);transition:transform 0.2s">▶</span>' +
-          '<span style="font-weight:600;color:var(--text)">' + g.label + '</span>' +
-          '<span style="color:var(--text2);font-size:0.68rem">(' + g.items.length + ' 人)</span>' +
+    // Two columns: each letter group is a grid item
+    return '<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.3rem">' + groups.map(function(g) {
+      var gid = prefix + '_' + g.label;
+      return '<div style="background:var(--surface2);border-radius:6px;overflow:hidden">' +
+        '<div style="display:flex;align-items:center;gap:0.4rem;cursor:pointer;padding:0.3rem 0.5rem;font-size:0.75rem" onclick="toggleAlphaGroup(\'' + gid + '\',this)">' +
+          '<span class="net-chevron" style="font-size:0.65rem;color:var(--text2);transition:transform 0.2s">▶</span>' +
+          '<span style="font-weight:700;color:var(--accent2);min-width:1rem">' + g.label + '</span>' +
+          '<span style="color:var(--text2);font-size:0.65rem">(' + g.items.length + ')</span>' +
         '</div>' +
-        '<div id="' + gid + '" style="display:none;padding-left:0.3rem">' + g.items.map(renderTalentCard).join('') + '</div>' +
+        '<div id="' + gid + '" style="display:none;padding:0 0.3rem 0.3rem">' + g.items.map(renderTalentCard).join('') + '</div>' +
       '</div>';
-    }).join('');
+    }).join('') + '</div>';
   }
 
   var html = '';

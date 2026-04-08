@@ -404,10 +404,22 @@ def deduplicate(entries):
 
 def main():
     today = datetime.now().date()
-    april_1 = datetime(2026, 4, 1).date()
-    since = max(april_1, today - timedelta(days=7))
+    since = today - timedelta(days=7)
 
     print(f"Scanning arXiv papers since {since}...")
+
+    # Load existing data to merge (incremental mode)
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    output_path = os.path.join(script_dir, "..", "reports", "arxiv-daily.json")
+    output_path = os.path.normpath(output_path)
+    existing_data = {}
+    if os.path.exists(output_path):
+        try:
+            with open(output_path, "r", encoding="utf-8") as f:
+                existing_data = json.load(f)
+            print(f"Loaded existing data: {existing_data.get('totalPapers', 0)} papers")
+        except:
+            pass
 
     all_papers = {}
     total_uni = 0
@@ -443,9 +455,35 @@ def main():
             }
             print(f"  -> {len(company_papers)} unique, {uni_count} uni-collab, {hk_count} HK-collab")
 
+    # Merge with existing data (keep old papers, add new ones)
+    if existing_data.get("companies"):
+        for company_id, existing_company in existing_data["companies"].items():
+            if company_id in all_papers:
+                # Merge: add old papers that aren't in new scan
+                new_ids = {p["arxivId"] for p in all_papers[company_id]["papers"]}
+                for old_paper in existing_company.get("papers", []):
+                    if old_paper["arxivId"] not in new_ids:
+                        all_papers[company_id]["papers"].append(old_paper)
+                # Re-sort and update counts
+                all_papers[company_id]["papers"].sort(key=lambda x: x["published"], reverse=True)
+                all_papers[company_id]["count"] = len(all_papers[company_id]["papers"])
+                all_papers[company_id]["uniCollabCount"] = sum(1 for p in all_papers[company_id]["papers"] if p["hasUniCollab"])
+                all_papers[company_id]["hkCollabCount"] = sum(1 for p in all_papers[company_id]["papers"] if p["hasHKCollab"])
+            elif existing_company.get("papers"):
+                # Company not in new scan, keep old data entirely
+                all_papers[company_id] = existing_company
+
+    # Recalculate totals
+    total_uni = sum(c.get("uniCollabCount", 0) for c in all_papers.values())
+    total_hk = sum(c.get("hkCollabCount", 0) for c in all_papers.values())
+
+    # Use earliest 'since' date
+    old_since = existing_data.get("since", since.isoformat())
+    final_since = min(old_since, since.isoformat())
+
     output = {
         "generatedAt": datetime.now().isoformat() + "Z",
-        "since": since.isoformat(),
+        "since": final_since,
         "totalPapers": sum(c["count"] for c in all_papers.values()),
         "totalUniCollab": total_uni,
         "totalHKCollab": total_hk,

@@ -1482,11 +1482,23 @@ function deleteTalent(key) {
   var local = getLocalTalentNotes() || {};
   delete local[key];
   saveLocalTalentNotes(local);
+  // 删除时直接推送完整数据（不合并，否则会拉回被删的）
+  directPushToRemote();
   renderTalentExistingList();
   renderTalent();
   renderArxivList();
-  syncToRemote();
   showEditorMsg('success', '已删除: ' + key);
+}
+
+async function directPushToRemote() {
+  try {
+    var payload = { generatedAt: new Date().toISOString(), notes: talentNotes };
+    await fetch(TALENT_API, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+  } catch(e) {}
 }
 
 async function syncToRemote() {

@@ -790,13 +790,13 @@ function renderPapers() {
       <div class="paper-meta">
         <span>📅 ${p.date || '近期'}</span>
         <span>📌 ${p.source || ci.name}</span>
-        ${p.arxiv ? '<span>📎 arXiv</span>' : ''}
+        ${p.arxiv ? `<a href="${p.arxiv}" target="_blank" onclick="event.stopPropagation()" style="color:var(--accent2);text-decoration:none">📎 arXiv ↗</a>` : ''}
       </div>
       <div class="paper-summary">${p.summary || ''}</div>
       <div class="paper-tags">
         ${p.venue ? `<span class="paper-tag tag-venue">🏆 ${p.venue}</span>` : ''}
         ${p.hasCollab ? '<span class="paper-tag tag-collab">🎓 高校合作</span>' : ''}
-        ${p.arxiv ? '<span class="paper-tag tag-arxiv">📄 arXiv</span>' : ''}
+        ${p.arxiv ? `<a class="paper-tag tag-arxiv" href="${p.arxiv}" target="_blank" onclick="event.stopPropagation()" style="text-decoration:none">📄 arXiv 原文 ↗</a>` : ''}
         ${p.highlights.length ? '<span class="paper-tag tag-fire">🔥 重点关注</span>' : ''}
       </div>
     </div>`;
@@ -960,10 +960,16 @@ function renderFeedGrid() {
     grid.innerHTML = sorted.map(t => `
       <div class="tweet-card">
         <div class="tweet-header">
-          <div class="tweet-avatar">${t.name.charAt(0)}</div>
+          <a href="https://x.com/${t.handle}" target="_blank" style="text-decoration:none">
+            <div class="tweet-avatar">${t.name.charAt(0)}</div>
+          </a>
           <div class="tweet-author">
-            <div class="tweet-name">${t.name}</div>
-            <div class="tweet-handle">@${t.handle}</div>
+            <a href="https://x.com/${t.handle}" target="_blank" style="text-decoration:none;color:var(--text)">
+              <div class="tweet-name">${t.name}</div>
+            </a>
+            <a href="https://x.com/${t.handle}" target="_blank" style="text-decoration:none">
+              <div class="tweet-handle">@${t.handle} ↗</div>
+            </a>
           </div>
         </div>
         <div class="tweet-text">${t.text.replace(/https?:\/\/\S+/g, '').trim()}</div>
@@ -971,7 +977,7 @@ function renderFeedGrid() {
           <span>❤️ ${t.likes}</span>
           <span>🔁 ${t.retweets}</span>
           <span>💬 ${t.replies}</span>
-          <a class="tweet-link" href="${t.url}" target="_blank">查看原文 →</a>
+          <a class="tweet-link" href="${t.url}" target="_blank" style="background:rgba(59,130,246,0.1);padding:0.15rem 0.5rem;border-radius:5px">查看原文 ↗</a>
         </div>
       </div>
     `).join('');
@@ -981,10 +987,10 @@ function renderFeedGrid() {
       const summary = p.transcript ? p.transcript.substring(0, 500).replace(/Speaker \d+/g, '🎤').replace(/\|\s*[\d:]+\s*-\s*[\d:]+/g, '') + '…' : '暂无摘要';
       return `
       <div class="podcast-card">
-        <div class="podcast-title">🎙️ ${p.title}</div>
+        <div class="podcast-title">🎙️ <a href="${p.url}" target="_blank" style="color:var(--text);text-decoration:none">${p.title}</a></div>
         <div class="podcast-meta">📻 ${p.name} · 📅 ${new Date(p.publishedAt).toLocaleDateString('zh-CN')}</div>
         <div class="podcast-summary">${summary}</div>
-        <a class="tweet-link" href="${p.url}" target="_blank" style="display:inline-block;margin-top:0.5rem">收听 →</a>
+        <a class="tweet-link" href="${p.url}" target="_blank" style="display:inline-block;margin-top:0.5rem;background:rgba(59,130,246,0.1);padding:0.2rem 0.6rem;border-radius:5px">🎧 收听/观看 ↗</a>
       </div>`;
     }).join('');
   } else {
@@ -1124,7 +1130,7 @@ function renderArxivList() {
       uniBadge = '<span class="uni-badge">🎓 高校合作</span>';
       uniDetail = '<div class="uni-list">🏫 ' + (p.universities || []).join(', ') + '</div>';
     }
-    return '<div class="' + cardClass + '"><div class="arxiv-paper-head"><div class="arxiv-paper-title"><a href="' + p.arxivUrl + '" target="_blank">' + p.title + '</a></div><div class="arxiv-paper-date">' + p._icon + ' ' + date + '</div></div><div class="arxiv-paper-authors">' + authors + '</div>' + uniDetail + '<div class="arxiv-paper-summary">' + p.summary + '</div><div class="arxiv-paper-tags">' + dirTags + '<span class="arxiv-tag">' + p._company + '</span>' + cats + (venue ? '<span class="arxiv-tag arxiv-venue-tag">🏆 ' + venue + '</span>' : '') + uniBadge + (p.pdfUrl ? '<a class="arxiv-tag" href="' + p.pdfUrl + '" target="_blank" style="text-decoration:none">📎 PDF</a>' : '') + '</div></div>';
+    return '<div class="' + cardClass + '"><div class="arxiv-paper-head"><div class="arxiv-paper-title"><a href="' + p.arxivUrl + '" target="_blank">' + p.title + ' ↗</a></div><div class="arxiv-paper-date">' + p._icon + ' ' + date + '</div></div><div class="arxiv-paper-authors">' + authors + '</div>' + uniDetail + '<div class="arxiv-paper-summary">' + p.summary + '</div><div class="arxiv-paper-tags">' + dirTags + '<span class="arxiv-tag">' + p._company + '</span>' + cats + (venue ? '<span class="arxiv-tag arxiv-venue-tag">🏆 ' + venue + '</span>' : '') + uniBadge + '<a class="arxiv-tag" href="' + p.arxivUrl + '" target="_blank" style="text-decoration:none;background:rgba(59,130,246,0.15)">📄 论文原文 ↗</a>' + (p.pdfUrl ? '<a class="arxiv-tag" href="' + p.pdfUrl + '" target="_blank" style="text-decoration:none;background:rgba(239,68,68,0.1);color:#f87171">📎 PDF下载 ↗</a>' : '') + '</div></div>';
   }).join('');
 }
 

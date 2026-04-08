@@ -411,6 +411,55 @@
     background: rgba(59,130,246,0.1); padding: 0.1rem 0.35rem; border-radius: 4px;
   }
   .talent-person-links a:hover { background: rgba(59,130,246,0.2); }
+
+  /* ── Talent Editor ── */
+  .talent-editor {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; padding: 1.5rem; margin-bottom: 2rem;
+  }
+  .talent-editor h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.4rem; }
+  .editor-form { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+  .editor-form.full-row { grid-template-columns: 1fr; }
+  .editor-field { display: flex; flex-direction: column; gap: 0.2rem; }
+  .editor-field label { font-size: 0.68rem; color: var(--text2); font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; }
+  .editor-field input, .editor-field select {
+    background: var(--surface2); border: 1px solid var(--border); color: var(--text);
+    padding: 0.45rem 0.65rem; border-radius: 8px; font-size: 0.8rem;
+    outline: none; transition: border-color 0.2s;
+  }
+  .editor-field input:focus, .editor-field select:focus { border-color: var(--accent); }
+  .editor-field input::placeholder { color: var(--text2); opacity: 0.5; }
+  .editor-actions { display: flex; gap: 0.5rem; margin-top: 0.8rem; grid-column: span 2; }
+  .editor-btn {
+    padding: 0.45rem 1.2rem; border-radius: 8px; font-size: 0.78rem;
+    cursor: pointer; font-weight: 600; border: none; transition: all 0.2s;
+  }
+  .editor-btn-save { background: var(--accent); color: #fff; }
+  .editor-btn-save:hover { background: #2563eb; }
+  .editor-btn-clear { background: var(--surface2); color: var(--text2); border: 1px solid var(--border); }
+  .editor-btn-clear:hover { border-color: var(--accent); color: var(--text); }
+  .editor-btn-export { background: rgba(34,197,94,0.15); color: #4ade80; border: 1px solid rgba(34,197,94,0.3); }
+  .editor-btn-export:hover { background: rgba(34,197,94,0.25); }
+  .editor-msg { font-size: 0.75rem; margin-top: 0.5rem; padding: 0.4rem 0.8rem; border-radius: 6px; display: none; }
+  .editor-msg.success { display: block; background: rgba(34,197,94,0.15); color: #4ade80; }
+  .editor-msg.error { display: block; background: rgba(239,68,68,0.15); color: #f87171; }
+  .talent-existing { margin-top: 1rem; }
+  .talent-existing-item {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0.5rem 0.7rem; border-bottom: 1px solid var(--border);
+    font-size: 0.78rem; transition: background 0.15s;
+  }
+  .talent-existing-item:hover { background: var(--surface2); }
+  .talent-existing-item .te-name { font-weight: 600; min-width: 140px; }
+  .talent-existing-item .te-info { color: var(--text2); font-size: 0.7rem; flex: 1; }
+  .talent-existing-item .te-actions { display: flex; gap: 0.3rem; }
+  .te-btn {
+    font-size: 0.65rem; padding: 0.15rem 0.4rem; border-radius: 4px;
+    cursor: pointer; border: 1px solid var(--border); background: var(--surface2); color: var(--text2);
+  }
+  .te-btn:hover { border-color: var(--accent); color: var(--accent2); }
+  .te-btn-del:hover { border-color: var(--red); color: var(--red); }
+  @media (max-width: 600px) { .editor-form { grid-template-columns: 1fr; } .editor-actions { grid-column: span 1; } }
   @media (max-width: 600px) { .feed-grid { grid-template-columns: 1fr; } .podcast-card { grid-column: span 1; } }
 
   /* ── Nav Hub (Home) ── */
@@ -567,7 +616,76 @@
     <div class="section-head">
       <h2><span>🎓</span> 高校合作人才追踪</h2>
     </div>
-    <table class="talent-table" id="talentTable"></table>
+
+    <!-- Talent Editor -->
+    <div class="talent-editor">
+      <h3>✏️ 添加 / 编辑人才信息</h3>
+      <div class="editor-form" id="talentForm">
+        <div class="editor-field">
+          <label>姓名（英文，用于匹配论文作者）*</label>
+          <input type="text" id="te-key" placeholder="如: Ye Tian">
+        </div>
+        <div class="editor-field">
+          <label>中文名 / 显示名</label>
+          <input type="text" id="te-name" placeholder="如: 田野 (Ye Tian)">
+        </div>
+        <div class="editor-field">
+          <label>学校 *</label>
+          <input type="text" id="te-university" placeholder="如: 北京大学">
+        </div>
+        <div class="editor-field">
+          <label>是否港校</label>
+          <select id="te-isHK"><option value="false">否</option><option value="true">是 🇭🇰</option></select>
+        </div>
+        <div class="editor-field">
+          <label>导师</label>
+          <input type="text" id="te-advisor" placeholder="如: 童云海教授">
+        </div>
+        <div class="editor-field">
+          <label>学历 / 身份</label>
+          <input type="text" id="te-status" placeholder="如: 博三 / 助理教授">
+        </div>
+        <div class="editor-field">
+          <label>预计毕业时间</label>
+          <input type="text" id="te-gradYear" placeholder="如: 2027 / 已毕业">
+        </div>
+        <div class="editor-field">
+          <label>研究方向</label>
+          <input type="text" id="te-direction" placeholder="如: LLM / 多模态 / Agent">
+        </div>
+        <div class="editor-field">
+          <label>个人主页</label>
+          <input type="text" id="te-homepage" placeholder="https://...">
+        </div>
+        <div class="editor-field">
+          <label>Google Scholar</label>
+          <input type="text" id="te-scholar" placeholder="https://scholar.google.com/...">
+        </div>
+        <div class="editor-field">
+          <label>实验室</label>
+          <input type="text" id="te-lab" placeholder="如: THUNLP / Princeton Visual AI Lab">
+        </div>
+        <div class="editor-field">
+          <label>当前状态 - 日期</label>
+          <input type="text" id="te-statusNote" placeholder="如: 2026-04 已接受字节offer">
+        </div>
+        <div class="editor-actions">
+          <button class="editor-btn editor-btn-save" onclick="saveTalent()">💾 保存</button>
+          <button class="editor-btn editor-btn-clear" onclick="clearForm()">🗑️ 清空</button>
+          <button class="editor-btn editor-btn-export" onclick="exportTalentJSON()">📥 导出JSON</button>
+        </div>
+      </div>
+      <div class="editor-msg" id="editorMsg"></div>
+    </div>
+
+    <!-- Existing talent list (editable) -->
+    <div class="section-head"><h2><span>📋</span> 已录入人才 <span style="font-size:0.7rem;color:var(--text2);font-weight:400" id="talentCount"></span></h2></div>
+    <div class="talent-existing" id="talentExistingList"></div>
+
+    <div style="margin-top:1.5rem">
+      <div class="section-head"><h2><span>📊</span> 人才总表</h2></div>
+      <table class="talent-table" id="talentTable"></table>
+    </div>
   </div>
 
   <!-- ═══ PAGE: Company Radar ═══ -->
@@ -1091,6 +1209,9 @@ async function loadTalentNotes() {
     var resp = await fetch('reports/talent-notes.json');
     if (resp.ok) { var d = await resp.json(); talentNotes = d.notes || {}; }
   } catch(e) {}
+  // Merge local edits
+  mergeTalentNotes();
+  renderTalentExistingList();
 }
 
 function getTalentNotesForPaper(authorNames) {
@@ -1228,6 +1349,136 @@ function filterArxiv(companyId) {
   currentArxivCompany = companyId;
   renderArxivTabs();
   renderArxivList();
+}
+
+// ══════════════════════════════════════
+// Talent Editor (localStorage + export)
+// ══════════════════════════════════════
+
+function getLocalTalentNotes() {
+  try {
+    var local = localStorage.getItem('talentNotesLocal');
+    if (local) return JSON.parse(local);
+  } catch(e) {}
+  return null;
+}
+
+function saveLocalTalentNotes(notes) {
+  localStorage.setItem('talentNotesLocal', JSON.stringify(notes));
+}
+
+function mergeTalentNotes() {
+  // Merge: remote (from JSON file) + local (from localStorage)
+  var local = getLocalTalentNotes();
+  if (local) {
+    for (var key in local) {
+      talentNotes[key] = local[key];
+    }
+  }
+}
+
+function saveTalent() {
+  var key = document.getElementById('te-key').value.trim();
+  if (!key) { showEditorMsg('error', '请填写英文姓名（必填）'); return; }
+  var uni = document.getElementById('te-university').value.trim();
+  if (!uni) { showEditorMsg('error', '请填写学校（必填）'); return; }
+
+  var entry = {
+    name: document.getElementById('te-name').value.trim() || key,
+    university: uni,
+    isHK: document.getElementById('te-isHK').value === 'true',
+    status: document.getElementById('te-status').value.trim() || '待确认',
+    advisor: document.getElementById('te-advisor').value.trim() || '待确认',
+    lab: document.getElementById('te-lab').value.trim() || '',
+    homepage: document.getElementById('te-homepage').value.trim() || '',
+    scholar: document.getElementById('te-scholar').value.trim() || '',
+    direction: document.getElementById('te-direction').value.trim() || '',
+    gradYear: document.getElementById('te-gradYear').value.trim() || '待确认',
+    statusNote: document.getElementById('te-statusNote').value.trim() || '',
+    editedAt: new Date().toISOString().slice(0, 10)
+  };
+
+  // Save to local storage
+  var local = getLocalTalentNotes() || {};
+  local[key] = entry;
+  saveLocalTalentNotes(local);
+
+  // Also update in-memory
+  talentNotes[key] = entry;
+
+  showEditorMsg('success', '已保存: ' + entry.name + '（存储在本地浏览器中，点击"导出JSON"可同步到网站）');
+  clearForm();
+  renderTalentExistingList();
+  renderArxivList(); // Refresh to show new talent notes
+}
+
+function clearForm() {
+  ['te-key','te-name','te-university','te-advisor','te-status','te-gradYear','te-direction','te-homepage','te-scholar','te-lab','te-statusNote'].forEach(function(id) {
+    document.getElementById(id).value = '';
+  });
+  document.getElementById('te-isHK').value = 'false';
+}
+
+function editTalent(key) {
+  var t = talentNotes[key];
+  if (!t) return;
+  document.getElementById('te-key').value = key;
+  document.getElementById('te-name').value = t.name || '';
+  document.getElementById('te-university').value = t.university || '';
+  document.getElementById('te-isHK').value = t.isHK ? 'true' : 'false';
+  document.getElementById('te-advisor').value = t.advisor || '';
+  document.getElementById('te-status').value = t.status || '';
+  document.getElementById('te-gradYear').value = t.gradYear || '';
+  document.getElementById('te-direction').value = t.direction || '';
+  document.getElementById('te-homepage').value = t.homepage || '';
+  document.getElementById('te-scholar').value = t.scholar || '';
+  document.getElementById('te-lab').value = t.lab || '';
+  document.getElementById('te-statusNote').value = t.statusNote || '';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function deleteTalent(key) {
+  if (!confirm('确认删除 ' + key + '？')) return;
+  delete talentNotes[key];
+  var local = getLocalTalentNotes() || {};
+  delete local[key];
+  saveLocalTalentNotes(local);
+  renderTalentExistingList();
+  renderArxivList();
+  showEditorMsg('success', '已删除: ' + key);
+}
+
+function exportTalentJSON() {
+  var output = { generatedAt: new Date().toISOString(), notes: talentNotes };
+  var blob = new Blob([JSON.stringify(output, null, 2)], { type: 'application/json' });
+  var a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'talent-notes.json';
+  a.click();
+  showEditorMsg('success', '已导出 talent-notes.json，把这个文件发给AI助手即可同步到网站');
+}
+
+function showEditorMsg(type, text) {
+  var el = document.getElementById('editorMsg');
+  el.className = 'editor-msg ' + type;
+  el.textContent = text;
+  setTimeout(function() { el.className = 'editor-msg'; }, 5000);
+}
+
+function renderTalentExistingList() {
+  var list = document.getElementById('talentExistingList');
+  var keys = Object.keys(talentNotes).sort();
+  document.getElementById('talentCount').textContent = keys.length + ' 人';
+  if (!keys.length) { list.innerHTML = '<div style="color:var(--text2);font-size:0.8rem;padding:1rem">暂无人才数据</div>'; return; }
+  list.innerHTML = keys.map(function(key) {
+    var t = talentNotes[key];
+    var isLocal = getLocalTalentNotes() && getLocalTalentNotes()[key];
+    return '<div class="talent-existing-item">' +
+      '<span class="te-name">' + (t.name || key) + (isLocal ? ' 📝' : '') + '</span>' +
+      '<span class="te-info">' + (t.university || '') + ' · ' + (t.status || '') + (t.advisor && t.advisor !== '待确认' ? ' · 导师:' + t.advisor : '') + (t.statusNote ? ' · ' + t.statusNote : '') + '</span>' +
+      '<span class="te-actions"><button class="te-btn" onclick="editTalent(\'' + key.replace(/'/g,"\\'") + '\')">✏️ 编辑</button><button class="te-btn te-btn-del" onclick="deleteTalent(\'' + key.replace(/'/g,"\\'") + '\')">🗑️</button></span>' +
+      '</div>';
+  }).join('');
 }
 
 // ══════════════════════════════════════

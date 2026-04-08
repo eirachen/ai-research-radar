@@ -349,6 +349,34 @@
   .podcast-title { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.3rem; }
   .podcast-meta { font-size: 0.72rem; color: var(--text2); margin-bottom: 0.5rem; }
   .podcast-summary { font-size: 0.8rem; line-height: 1.6; color: var(--text); display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+
+  /* ── arXiv Section ── */
+  .arxiv-company-tabs { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 1rem; }
+  .arxiv-company-tab {
+    background: var(--surface); border: 1px solid var(--border);
+    color: var(--text2); padding: 0.35rem 0.7rem; border-radius: 8px;
+    cursor: pointer; font-size: 0.72rem; transition: all 0.2s;
+    display: inline-flex; align-items: center; gap: 0.25rem;
+  }
+  .arxiv-company-tab:hover, .arxiv-company-tab.active {
+    background: var(--accent); color: #fff; border-color: var(--accent);
+  }
+  .arxiv-list { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 2.5rem; }
+  .arxiv-paper {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 10px; padding: 0.9rem 1.1rem; transition: all 0.2s;
+  }
+  .arxiv-paper:hover { border-color: var(--accent); }
+  .arxiv-paper-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 0.75rem; }
+  .arxiv-paper-title { font-size: 0.85rem; font-weight: 600; flex: 1; line-height: 1.4; }
+  .arxiv-paper-title a { color: var(--text); text-decoration: none; }
+  .arxiv-paper-title a:hover { color: var(--accent2); }
+  .arxiv-paper-date { font-size: 0.65rem; color: var(--text2); white-space: nowrap; }
+  .arxiv-paper-authors { font-size: 0.7rem; color: var(--text2); margin-top: 0.25rem; }
+  .arxiv-paper-summary { font-size: 0.75rem; color: var(--text2); margin-top: 0.35rem; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .arxiv-paper-tags { display: flex; gap: 0.3rem; margin-top: 0.35rem; flex-wrap: wrap; }
+  .arxiv-tag { font-size: 0.58rem; padding: 0.1rem 0.35rem; border-radius: 4px; background: rgba(59,130,246,0.1); color: var(--accent2); }
+  .arxiv-venue-tag { background: rgba(168,85,247,0.15); color: #c084fc; }
   @media (max-width: 600px) { .feed-grid { grid-template-columns: 1fr; } .podcast-card { grid-column: span 1; } }
 
   @keyframes fadeIn { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
@@ -395,6 +423,17 @@
       <div class="feed-tabs" id="feedTabs"></div>
       <div class="feed-grid" id="feedGrid">
         <div class="loading"><div class="spinner"></div>正在加载社媒动态…</div>
+      </div>
+    </div>
+
+    <!-- arXiv Daily Papers -->
+    <div id="arxivSection">
+      <div class="section-head">
+        <h2><span>📄</span> arXiv 每日论文 <span style="font-size:0.7rem;color:var(--text2);font-weight:400;margin-left:0.5rem" id="arxivMeta"></span></h2>
+      </div>
+      <div class="arxiv-company-tabs" id="arxivTabs"></div>
+      <div class="arxiv-list" id="arxivList">
+        <div class="loading"><div class="spinner"></div>正在加载 arXiv 论文…</div>
       </div>
     </div>
 
@@ -914,6 +953,66 @@ async function loadFeeds() {
 }
 
 // ══════════════════════════════════════
+// arXiv Daily Papers
+// ══════════════════════════════════════
+let arxivData = null;
+let currentArxivCompany = 'all';
+
+async function loadArxiv() {
+  try {
+    const resp = await fetch('reports/arxiv-daily.json');
+    if (resp.ok) {
+      arxivData = await resp.json();
+      document.getElementById('arxivMeta').textContent = arxivData.totalPapers + ' 篇 · 自 ' + arxivData.since + ' 起';
+      renderArxivTabs();
+      renderArxivList();
+    } else {
+      document.getElementById('arxivList').innerHTML = '<div class="no-results">暂无 arXiv 数据</div>';
+    }
+  } catch(e) {
+    document.getElementById('arxivList').innerHTML = '<div class="no-results">加载失败</div>';
+  }
+}
+
+function renderArxivTabs() {
+  if (!arxivData) return;
+  const tabs = document.getElementById('arxivTabs');
+  const companies = Object.entries(arxivData.companies);
+  tabs.innerHTML = '<div class="arxiv-company-tab ' + (currentArxivCompany==='all'?'active':'') + '" onclick="filterArxiv(\'all\')">全部 (' + arxivData.totalPapers + ')</div>' +
+    companies.map(function(e) { var id=e[0],c=e[1]; return '<div class="arxiv-company-tab ' + (currentArxivCompany===id?'active':'') + '" onclick="filterArxiv(\'' + id + '\')">' + c.icon + ' ' + c.company + ' (' + c.count + ')</div>'; }).join('');
+}
+
+function renderArxivList() {
+  if (!arxivData) return;
+  var list = document.getElementById('arxivList');
+  var papers = [];
+  if (currentArxivCompany === 'all') {
+    Object.entries(arxivData.companies).forEach(function(e) {
+      var id=e[0],c=e[1];
+      c.papers.forEach(function(p) { papers.push(Object.assign({}, p, {_company: c.company, _icon: c.icon})); });
+    });
+    papers.sort(function(a,b) { return b.published.localeCompare(a.published); });
+  } else {
+    var c = arxivData.companies[currentArxivCompany];
+    if (c) papers = c.papers.map(function(p) { return Object.assign({}, p, {_company: c.company, _icon: c.icon}); });
+  }
+  if (!papers.length) { list.innerHTML = '<div class="no-results">该公司暂无论文</div>'; return; }
+  list.innerHTML = papers.slice(0, 50).map(function(p) {
+    var date = p.published ? new Date(p.published).toLocaleDateString('zh-CN') : '';
+    var authors = p.authors.join(', ') + (p.authorCount > 8 ? ' 等' + p.authorCount + '人' : '');
+    var venue = p.comment ? (p.comment.match(/(AAAI|ICLR|ICML|NeurIPS|CVPR|ICCV|ECCV|ACL|EMNLP)\s*\d{4}/i) || [null])[0] : null;
+    var cats = p.categories.map(function(c) { return '<span class="arxiv-tag">' + c + '</span>'; }).join('');
+    return '<div class="arxiv-paper"><div class="arxiv-paper-head"><div class="arxiv-paper-title"><a href="' + p.arxivUrl + '" target="_blank">' + p.title + '</a></div><div class="arxiv-paper-date">' + p._icon + ' ' + date + '</div></div><div class="arxiv-paper-authors">' + authors + '</div><div class="arxiv-paper-summary">' + p.summary + '</div><div class="arxiv-paper-tags"><span class="arxiv-tag">' + p._company + '</span>' + cats + (venue ? '<span class="arxiv-tag arxiv-venue-tag">🏆 ' + venue + '</span>' : '') + (p.pdfUrl ? '<a class="arxiv-tag" href="' + p.pdfUrl + '" target="_blank" style="text-decoration:none">📎 PDF</a>' : '') + '</div></div>';
+  }).join('');
+}
+
+function filterArxiv(companyId) {
+  currentArxivCompany = companyId;
+  renderArxivTabs();
+  renderArxivList();
+}
+
+// ══════════════════════════════════════
 // Load Reports
 // ══════════════════════════════════════
 async function loadReports() {
@@ -959,6 +1058,7 @@ async function loadReports() {
 
 loadReports();
 loadFeeds();
+loadArxiv();
 </script>
 </body>
 </html>

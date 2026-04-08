@@ -1897,38 +1897,69 @@ function showEditorMsg(type, text) {
   setTimeout(function() { el.className = 'editor-msg'; }, 5000);
 }
 
+function isStudent(status) {
+  if (!status) return false;
+  var s = status.toLowerCase();
+  return /博|硕|在读|学生|phd|student|master|mphil|候选/.test(s);
+}
+
+function renderTalentCard(key) {
+  var t = talentNotes[key];
+  var isLocal = getLocalTalentNotes() && getLocalTalentNotes()[key];
+  var papers = talentPaperMap[key] || [];
+  var paperHTML = '';
+  if (papers.length) {
+    paperHTML = '<div style="margin-top:0.3rem;padding-left:0.5rem;border-left:2px solid var(--accent);font-size:0.68rem">' +
+      papers.map(function(p) {
+        return '<div style="margin:0.15rem 0">' +
+          '<span style="color:var(--text2)">' + p.companyIcon + ' ' + p.company + '</span> ' +
+          '<a href="' + p.url + '" target="_blank" style="color:var(--accent2);text-decoration:none">' + p.title + ' ↗</a>' +
+          (p.dirs.length ? ' <span style="color:var(--text2);font-size:0.6rem">(' + p.dirs.join('/') + ')</span>' : '') +
+          '</div>';
+      }).join('') +
+      '</div>';
+  }
+  return '<div class="talent-existing-item" style="flex-direction:column;align-items:stretch">' +
+    '<div style="display:flex;align-items:center;justify-content:space-between">' +
+      '<span class="te-name">' + (t.name || key) + (isLocal ? ' 📝' : '') + '</span>' +
+      '<span class="te-info">' + (t.university || '') + ' · ' + (t.status || '') + (t.advisor && t.advisor !== '待确认' ? ' · 导师:' + t.advisor : '') + (t.statusNote ? ' · ' + t.statusNote : '') + '</span>' +
+      '<span class="te-actions"><button class="te-btn" onclick="editTalent(\'' + key.replace(/'/g,"\\'") + '\')">✏️ 编辑</button><button class="te-btn te-btn-del" onclick="deleteTalent(\'' + key.replace(/'/g,"\\'") + '\')">🗑️</button></span>' +
+    '</div>' +
+    (papers.length ? '<div style="font-size:0.65rem;color:var(--text2);margin-top:0.2rem">📄 录入来源：' + papers.length + ' 篇合作论文</div>' : '<div style="font-size:0.65rem;color:var(--text2);opacity:0.5;margin-top:0.2rem">📄 暂无匹配论文</div>') +
+    paperHTML +
+    '</div>';
+}
+
 function renderTalentExistingList() {
   var list = document.getElementById('talentExistingList');
   var keys = Object.keys(talentNotes).sort();
   document.getElementById('talentCount').textContent = keys.length + ' 人';
   if (!keys.length) { list.innerHTML = '<div style="color:var(--text2);font-size:0.8rem;padding:1rem">暂无人才数据</div>'; return; }
-  list.innerHTML = keys.map(function(key) {
+
+  var students = [];
+  var nonStudents = [];
+  keys.forEach(function(key) {
     var t = talentNotes[key];
-    var isLocal = getLocalTalentNotes() && getLocalTalentNotes()[key];
-    // Source papers for this talent
-    var papers = talentPaperMap[key] || [];
-    var paperHTML = '';
-    if (papers.length) {
-      paperHTML = '<div style="margin-top:0.3rem;padding-left:0.5rem;border-left:2px solid var(--accent);font-size:0.68rem">' +
-        papers.map(function(p) {
-          return '<div style="margin:0.15rem 0">' +
-            '<span style="color:var(--text2)">' + p.companyIcon + ' ' + p.company + '</span> ' +
-            '<a href="' + p.url + '" target="_blank" style="color:var(--accent2);text-decoration:none">' + p.title + ' ↗</a>' +
-            (p.dirs.length ? ' <span style="color:var(--text2);font-size:0.6rem">(' + p.dirs.join('/') + ')</span>' : '') +
-            '</div>';
-        }).join('') +
-        '</div>';
+    if (isStudent(t.status)) {
+      students.push(key);
+    } else {
+      nonStudents.push(key);
     }
-    return '<div class="talent-existing-item" style="flex-direction:column;align-items:stretch">' +
-      '<div style="display:flex;align-items:center;justify-content:space-between">' +
-        '<span class="te-name">' + (t.name || key) + (isLocal ? ' 📝' : '') + '</span>' +
-        '<span class="te-info">' + (t.university || '') + ' · ' + (t.status || '') + (t.advisor && t.advisor !== '待确认' ? ' · 导师:' + t.advisor : '') + (t.statusNote ? ' · ' + t.statusNote : '') + '</span>' +
-        '<span class="te-actions"><button class="te-btn" onclick="editTalent(\'' + key.replace(/'/g,"\\'") + '\')">✏️ 编辑</button><button class="te-btn te-btn-del" onclick="deleteTalent(\'' + key.replace(/'/g,"\\'") + '\')">🗑️</button></span>' +
-      '</div>' +
-      (papers.length ? '<div style="font-size:0.65rem;color:var(--text2);margin-top:0.2rem">📄 录入来源：' + papers.length + ' 篇合作论文</div>' : '<div style="font-size:0.65rem;color:var(--text2);opacity:0.5;margin-top:0.2rem">📄 暂无匹配论文</div>') +
-      paperHTML +
-      '</div>';
-  }).join('');
+  });
+
+  var html = '';
+  // Students section
+  html += '<div style="margin-bottom:0.6rem;padding:0.5rem 0.8rem;background:rgba(34,197,94,0.08);border-radius:10px;border-left:3px solid var(--green)">' +
+    '<div style="font-size:0.82rem;font-weight:700;color:var(--green);margin-bottom:0.4rem">🎓 在校学生 <span style="font-weight:400;font-size:0.72rem;color:var(--text2)">(' + students.length + ' 人)</span></div>' +
+    (students.length ? students.map(renderTalentCard).join('') : '<div style="font-size:0.75rem;color:var(--text2);padding:0.5rem 0">暂无在校学生</div>') +
+    '</div>';
+  // Non-students section
+  html += '<div style="margin-bottom:0.6rem;padding:0.5rem 0.8rem;background:rgba(168,85,247,0.06);border-radius:10px;border-left:3px solid var(--purple)">' +
+    '<div style="font-size:0.82rem;font-weight:700;color:var(--purple);margin-bottom:0.4rem">👔 教授 / 研究员 / 业界 <span style="font-weight:400;font-size:0.72rem;color:var(--text2)">(' + nonStudents.length + ' 人)</span></div>' +
+    (nonStudents.length ? nonStudents.map(renderTalentCard).join('') : '<div style="font-size:0.75rem;color:var(--text2);padding:0.5rem 0">暂无</div>') +
+    '</div>';
+
+  list.innerHTML = html;
 }
 
 // ══════════════════════════════════════

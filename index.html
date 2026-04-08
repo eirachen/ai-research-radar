@@ -2007,7 +2007,7 @@ function renderTalentCard(key) {
 
 function renderTalentExistingList() {
   var list = document.getElementById('talentExistingList');
-  var keys = Object.keys(talentNotes).sort();
+  var keys = Object.keys(talentNotes).sort(function(a,b) { return a.toLowerCase().localeCompare(b.toLowerCase()); });
   document.getElementById('talentCount').textContent = keys.length + ' 人';
   if (!keys.length) { list.innerHTML = '<div style="color:var(--text2);font-size:0.8rem;padding:1rem">暂无人才数据</div>'; return; }
 
@@ -2022,19 +2022,68 @@ function renderTalentExistingList() {
     }
   });
 
+  // Alphabet groups
+  var alphaGroups = [
+    { label: 'A - E', range: 'ABCDE' },
+    { label: 'F - J', range: 'FGHIJ' },
+    { label: 'K - O', range: 'KLMNO' },
+    { label: 'P - T', range: 'PQRST' },
+    { label: 'U - Z', range: 'UVWXYZ' },
+  ];
+
+  function groupByAlpha(arr) {
+    var groups = alphaGroups.map(function(g) { return { label: g.label, range: g.range, items: [] }; });
+    arr.forEach(function(key) {
+      var first = key.charAt(0).toUpperCase();
+      for (var i = 0; i < groups.length; i++) {
+        if (groups[i].range.indexOf(first) >= 0) { groups[i].items.push(key); break; }
+      }
+    });
+    return groups.filter(function(g) { return g.items.length > 0; });
+  }
+
+  function renderAlphaSection(groups, prefix) {
+    return groups.map(function(g) {
+      var gid = prefix + '_' + g.label.replace(/\s/g, '');
+      return '<div style="margin:0.3rem 0">' +
+        '<div style="display:flex;align-items:center;gap:0.4rem;cursor:pointer;padding:0.3rem 0.5rem;background:var(--surface2);border-radius:6px;font-size:0.75rem" onclick="toggleAlphaGroup(\'' + gid + '\',this)">' +
+          '<span class="net-chevron" style="font-size:0.7rem;color:var(--text2);transition:transform 0.2s">▶</span>' +
+          '<span style="font-weight:600;color:var(--text)">' + g.label + '</span>' +
+          '<span style="color:var(--text2);font-size:0.68rem">(' + g.items.length + ' 人)</span>' +
+        '</div>' +
+        '<div id="' + gid + '" style="display:none;padding-left:0.3rem">' + g.items.map(renderTalentCard).join('') + '</div>' +
+      '</div>';
+    }).join('');
+  }
+
   var html = '';
   // Students section
+  var studentGroups = groupByAlpha(students);
   html += '<div style="margin-bottom:0.6rem;padding:0.5rem 0.8rem;background:rgba(34,197,94,0.08);border-radius:10px;border-left:3px solid var(--green)">' +
     '<div style="font-size:0.82rem;font-weight:700;color:var(--green);margin-bottom:0.4rem">🎓 在校学生 <span style="font-weight:400;font-size:0.72rem;color:var(--text2)">(' + students.length + ' 人)</span></div>' +
-    (students.length ? students.map(renderTalentCard).join('') : '<div style="font-size:0.75rem;color:var(--text2);padding:0.5rem 0">暂无在校学生</div>') +
+    (students.length ? renderAlphaSection(studentGroups, 'stu') : '<div style="font-size:0.75rem;color:var(--text2);padding:0.5rem 0">暂无在校学生</div>') +
     '</div>';
   // Non-students section
+  var nonStudentGroups = groupByAlpha(nonStudents);
   html += '<div style="margin-bottom:0.6rem;padding:0.5rem 0.8rem;background:rgba(168,85,247,0.06);border-radius:10px;border-left:3px solid var(--purple)">' +
     '<div style="font-size:0.82rem;font-weight:700;color:var(--purple);margin-bottom:0.4rem">👔 教授 / 研究员 / 业界 <span style="font-weight:400;font-size:0.72rem;color:var(--text2)">(' + nonStudents.length + ' 人)</span></div>' +
-    (nonStudents.length ? nonStudents.map(renderTalentCard).join('') : '<div style="font-size:0.75rem;color:var(--text2);padding:0.5rem 0">暂无</div>') +
+    (nonStudents.length ? renderAlphaSection(nonStudentGroups, 'pro') : '<div style="font-size:0.75rem;color:var(--text2);padding:0.5rem 0">暂无</div>') +
     '</div>';
 
   list.innerHTML = html;
+}
+
+function toggleAlphaGroup(id, headerEl) {
+  var el = document.getElementById(id);
+  if (!el) return;
+  var chevron = headerEl.querySelector('.net-chevron');
+  if (el.style.display === 'none') {
+    el.style.display = 'block';
+    if (chevron) chevron.style.transform = 'rotate(90deg)';
+  } else {
+    el.style.display = 'none';
+    if (chevron) chevron.style.transform = '';
+  }
 }
 
 // ══════════════════════════════════════

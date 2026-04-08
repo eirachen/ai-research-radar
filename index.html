@@ -1143,7 +1143,7 @@ function renderTalent() {
   });
   var today = new Date();
   table.innerHTML = '<thead><tr>' +
-    '<th>紧急度</th><th>姓名</th><th>高校</th><th>身份</th><th>实验室/导师</th><th>研究方向</th><th>预计毕业</th><th>微信</th><th>备注</th>' +
+    '<th>紧急度</th><th>姓名</th><th>高校</th><th>身份</th><th>实验室/导师</th><th>研究方向</th><th>预计毕业</th><th>来源论文</th><th>微信</th><th>备注</th>' +
     '</tr></thead><tbody>' +
     (allTalents.length ? allTalents.map(function(t) {
       var hkFlag = t.isHK ? ' 🇭🇰' : '';
@@ -1169,6 +1169,20 @@ function renderTalent() {
       } else {
         noteStyle += 'color:var(--text2);';
       }
+      // Source papers
+      var papers = talentPaperMap[t.key] || [];
+      var paperHTML = '';
+      if (papers.length) {
+        paperHTML = papers.map(function(p) {
+          return '<div style="margin:0.1rem 0;line-height:1.3">' +
+            '<span style="font-size:0.6rem;color:var(--text2)">' + p.companyIcon + '</span> ' +
+            '<a href="' + p.url + '" target="_blank" style="color:var(--accent2);text-decoration:none;font-size:0.65rem">' +
+              (p.title.length > 35 ? p.title.substring(0,33) + '…' : p.title) + ' ↗</a>' +
+          '</div>';
+        }).join('');
+      } else {
+        paperHTML = '<span style="color:var(--text2);opacity:0.4;font-size:0.65rem">—</span>';
+      }
       // Wechat checkbox
       var wechatHTML = '<input type="checkbox" class="wechat-check" ' +
         (t.wechatAdded ? 'checked ' : '') +
@@ -1184,10 +1198,11 @@ function renderTalent() {
         '<td>' + t.advisor + '</td>' +
         '<td>' + t.direction + '</td>' +
         '<td>' + t.grad + '</td>' +
+        '<td style="max-width:220px">' + paperHTML + '</td>' +
         '<td style="text-align:center">' + wechatHTML + '</td>' +
         '<td class="edited-cell" style="' + noteStyle + '">' + editedMarker + (t.statusNote || '<span style="color:var(--text2);opacity:0.4">—</span>') + remindBadge + '</td>' +
         '</tr>';
-    }).join('') : '<tr><td colspan="9" style="text-align:center;color:var(--text2)">暂无人才数据，请在上方添加</td></tr>') +
+    }).join('') : '<tr><td colspan="10" style="text-align:center;color:var(--text2)">暂无人才数据，请在上方添加</td></tr>') +
     '</tbody>';
 }
 
@@ -1397,6 +1412,62 @@ let currentArxivCompany = 'all';
 let talentNotes = {};
 let arxivSearchQuery = '';
 let talentSearchQuery = '';
+// Reverse map: talent key → [{title, url, company, pdfUrl}]
+let talentPaperMap = {};
+
+function buildTalentPaperMap() {
+  talentPaperMap = {};
+  if (!arxivData) return;
+  var talentKeys = Object.keys(talentNotes);
+  Object.entries(arxivData.companies).forEach(function(e) {
+    var companyId = e[0], companyData = e[1];
+    companyData.papers.forEach(function(p) {
+      if (!p.hasUniCollab) return;
+      var authorStr = p.authors.join(' ').toLowerCase();
+      talentKeys.forEach(function(key) {
+        // Match by key (English name) in author list
+        var keyLower = key.toLowerCase();
+        var keyParts = keyLower.split(' ');
+        var matched = false;
+        // Try full name match
+        if (authorStr.indexOf(keyLower) >= 0) matched = true;
+        // Try reversed name (Chinese name order vs Western)
+        if (!matched && keyParts.length === 2) {
+          var reversed = keyParts[1] + ' ' + keyParts[0];
+          if (authorStr.indexOf(reversed) >= 0) matched = true;
+        }
+        // Try matching individual authors
+        if (!matched) {
+          for (var ai = 0; ai < p.authors.length; ai++) {
+            var a = p.authors[ai].toLowerCase();
+            if (a === keyLower) { matched = true; break; }
+            if (keyParts.length >= 2) {
+              var aParts = a.split(' ');
+              if (aParts.length >= 2 && aParts[aParts.length-1] === keyParts[keyParts.length-1] && aParts[0] === keyParts[0]) {
+                matched = true; break;
+              }
+            }
+          }
+        }
+        if (matched) {
+          if (!talentPaperMap[key]) talentPaperMap[key] = [];
+          // Avoid duplicates
+          var exists = talentPaperMap[key].some(function(x) { return x.url === p.arxivUrl; });
+          if (!exists) {
+            talentPaperMap[key].push({
+              title: p.title,
+              url: p.arxivUrl,
+              pdfUrl: p.pdfUrl || '',
+              company: companyData.company,
+              companyIcon: companyData.icon,
+              dirs: (p.directions || []).map(function(d) { return d.label; })
+            });
+          }
+        }
+      });
+    });
+  });
+}
 
 async function loadTalentNotes() {
   // Try remote API first (real-time data)
@@ -1834,10 +1905,28 @@ function renderTalentExistingList() {
   list.innerHTML = keys.map(function(key) {
     var t = talentNotes[key];
     var isLocal = getLocalTalentNotes() && getLocalTalentNotes()[key];
-    return '<div class="talent-existing-item">' +
-      '<span class="te-name">' + (t.name || key) + (isLocal ? ' 📝' : '') + '</span>' +
-      '<span class="te-info">' + (t.university || '') + ' · ' + (t.status || '') + (t.advisor && t.advisor !== '待确认' ? ' · 导师:' + t.advisor : '') + (t.statusNote ? ' · ' + t.statusNote : '') + '</span>' +
-      '<span class="te-actions"><button class="te-btn" onclick="editTalent(\'' + key.replace(/'/g,"\\'") + '\')">✏️ 编辑</button><button class="te-btn te-btn-del" onclick="deleteTalent(\'' + key.replace(/'/g,"\\'") + '\')">🗑️</button></span>' +
+    // Source papers for this talent
+    var papers = talentPaperMap[key] || [];
+    var paperHTML = '';
+    if (papers.length) {
+      paperHTML = '<div style="margin-top:0.3rem;padding-left:0.5rem;border-left:2px solid var(--accent);font-size:0.68rem">' +
+        papers.map(function(p) {
+          return '<div style="margin:0.15rem 0">' +
+            '<span style="color:var(--text2)">' + p.companyIcon + ' ' + p.company + '</span> ' +
+            '<a href="' + p.url + '" target="_blank" style="color:var(--accent2);text-decoration:none">' + p.title + ' ↗</a>' +
+            (p.dirs.length ? ' <span style="color:var(--text2);font-size:0.6rem">(' + p.dirs.join('/') + ')</span>' : '') +
+            '</div>';
+        }).join('') +
+        '</div>';
+    }
+    return '<div class="talent-existing-item" style="flex-direction:column;align-items:stretch">' +
+      '<div style="display:flex;align-items:center;justify-content:space-between">' +
+        '<span class="te-name">' + (t.name || key) + (isLocal ? ' 📝' : '') + '</span>' +
+        '<span class="te-info">' + (t.university || '') + ' · ' + (t.status || '') + (t.advisor && t.advisor !== '待确认' ? ' · 导师:' + t.advisor : '') + (t.statusNote ? ' · ' + t.statusNote : '') + '</span>' +
+        '<span class="te-actions"><button class="te-btn" onclick="editTalent(\'' + key.replace(/'/g,"\\'") + '\')">✏️ 编辑</button><button class="te-btn te-btn-del" onclick="deleteTalent(\'' + key.replace(/'/g,"\\'") + '\')">🗑️</button></span>' +
+      '</div>' +
+      (papers.length ? '<div style="font-size:0.65rem;color:var(--text2);margin-top:0.2rem">📄 录入来源：' + papers.length + ' 篇合作论文</div>' : '<div style="font-size:0.65rem;color:var(--text2);opacity:0.5;margin-top:0.2rem">📄 暂无匹配论文</div>') +
+      paperHTML +
       '</div>';
   }).join('');
 }
@@ -2301,7 +2390,7 @@ async function loadReports() {
   if (talentCount) document.getElementById('talentBadge').textContent = talentCount + ' 位追踪中';
 }
 
-loadTalentNotes().then(function() { loadArxiv().then(function() { renderNetwork(); }); });
+loadTalentNotes().then(function() { loadArxiv().then(function() { buildTalentPaperMap(); renderTalentExistingList(); renderTalent(); renderNetwork(); }); });
 loadReports();
 loadFeeds();
 </script>

@@ -309,6 +309,48 @@
     .detail-content { padding: 1.25rem; }
     .filter-bar { padding: 0.75rem; }
   }
+  /* ── Social Feed ── */
+  .feed-tabs { display: flex; gap: 0.4rem; margin-bottom: 1rem; }
+  .feed-tab {
+    background: var(--surface); border: 1px solid var(--border);
+    color: var(--text2); padding: 0.4rem 0.9rem; border-radius: 8px;
+    cursor: pointer; font-size: 0.78rem; transition: all 0.2s;
+    display: flex; align-items: center; gap: 0.35rem;
+  }
+  .feed-tab:hover, .feed-tab.active {
+    background: var(--accent); color: #fff; border-color: var(--accent);
+  }
+  .feed-tab .tab-count { font-size: 0.65rem; opacity: 0.7; }
+  .feed-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin-bottom: 2.5rem; }
+  .tweet-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 1rem 1.15rem; transition: all 0.2s;
+  }
+  .tweet-card:hover { border-color: var(--accent); }
+  .tweet-header { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.6rem; }
+  .tweet-avatar {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), var(--purple));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.85rem; font-weight: 700; color: #fff; flex-shrink: 0;
+  }
+  .tweet-author .tweet-name { font-size: 0.82rem; font-weight: 600; }
+  .tweet-author .tweet-handle { font-size: 0.7rem; color: var(--text2); }
+  .tweet-text { font-size: 0.8rem; line-height: 1.6; margin-bottom: 0.6rem; color: var(--text); display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden; }
+  .tweet-stats { display: flex; gap: 1rem; font-size: 0.68rem; color: var(--text2); }
+  .tweet-stats span { display: flex; align-items: center; gap: 0.2rem; }
+  .tweet-link { color: var(--accent2); text-decoration: none; font-size: 0.7rem; margin-left: auto; }
+  .tweet-link:hover { text-decoration: underline; }
+  .podcast-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 1.15rem; grid-column: span 2;
+  }
+  .podcast-card:hover { border-color: var(--accent); }
+  .podcast-title { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.3rem; }
+  .podcast-meta { font-size: 0.72rem; color: var(--text2); margin-bottom: 0.5rem; }
+  .podcast-summary { font-size: 0.8rem; line-height: 1.6; color: var(--text); display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+  @media (max-width: 600px) { .feed-grid { grid-template-columns: 1fr; } .podcast-card { grid-column: span 1; } }
+
   @keyframes fadeIn { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
   .paper-card, .stat-card, .platform-card, .radar-card, .report-card { animation: fadeIn 0.4s ease both; }
   .loading { text-align: center; padding: 3rem; color: var(--text2); }
@@ -329,6 +371,7 @@
     </div>
     <div class="header-nav">
       <button class="active" onclick="showDashboard()">总览</button>
+      <button onclick="showFeed()">社媒动态</button>
       <button onclick="showTalent()">人才追踪</button>
     </div>
   </div>
@@ -343,6 +386,17 @@
       <h2><span>📡</span> 监控平台状态 <span style="font-size:0.7rem;color:var(--text2);font-weight:400;margin-left:0.5rem">点击公司查看相关情报 ↓</span></h2>
     </div>
     <div class="platform-grid" id="platformGrid"></div>
+
+    <!-- Social Feed -->
+    <div id="feedSection">
+      <div class="section-head">
+        <h2><span>🐦</span> AI Builders 社媒动态</h2>
+      </div>
+      <div class="feed-tabs" id="feedTabs"></div>
+      <div class="feed-grid" id="feedGrid">
+        <div class="loading"><div class="spinner"></div>正在加载社媒动态…</div>
+      </div>
+    </div>
 
     <!-- Company Filter Bar -->
     <div class="section-head">
@@ -386,7 +440,16 @@ const REPORTS_DATA = [];
 let REPORT_FILES = [];
 let currentFilter = 'all';
 
-// ── Company mapping (key → display name, icon, css class, keywords for matching)
+let currentFeedTab = 'tweets';
+let feedData = { tweets: [], podcasts: [], blogs: [] };
+
+const FEED_URLS = {
+  x: 'https://raw.githubusercontent.com/zarazhangrui/follow-builders/main/feed-x.json',
+  blogs: 'https://raw.githubusercontent.com/zarazhangrui/follow-builders/main/feed-blogs.json',
+  podcasts: 'https://raw.githubusercontent.com/zarazhangrui/follow-builders/main/feed-podcasts.json'
+};
+
+// ── Company mapping
 const COMPANIES = [
   { id: 'huawei', name: '华为诺亚', icon: '🏢', css: 'company-huawei', keywords: ['华为','诺亚','Huawei','Noah'] },
   { id: 'bytedance', name: '字节Seed', icon: '🌱', css: 'company-bytedance', keywords: ['字节','Seed','ByteDance'] },
@@ -717,15 +780,141 @@ function showDashboard() {
   renderPlatforms(); renderFilterBar(); renderPapers(); renderRadar(); renderTalent();
 }
 
-function showTalent() {
+function showFeed() {
   document.querySelectorAll('.header-nav button').forEach(b => b.classList.remove('active'));
   document.querySelectorAll('.header-nav button')[1].classList.add('active');
+  backToDashboard();
+  document.getElementById('feedSection').scrollIntoView({ behavior: 'smooth' });
+}
+
+function showTalent() {
+  document.querySelectorAll('.header-nav button').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.header-nav button')[2].classList.add('active');
   backToDashboard();
   document.getElementById('talentSection').scrollIntoView({ behavior: 'smooth' });
 }
 
 // ══════════════════════════════════════
-// Load
+// Social Feed
+// ══════════════════════════════════════
+
+function renderFeedTabs() {
+  const tabs = document.getElementById('feedTabs');
+  const counts = {
+    tweets: feedData.tweets.length,
+    podcasts: feedData.podcasts.length,
+    blogs: feedData.blogs.length
+  };
+  tabs.innerHTML = `
+    <div class="feed-tab ${currentFeedTab==='tweets'?'active':''}" onclick="switchFeedTab('tweets')">
+      🐦 推文 <span class="tab-count">${counts.tweets}</span>
+    </div>
+    <div class="feed-tab ${currentFeedTab==='podcasts'?'active':''}" onclick="switchFeedTab('podcasts')">
+      🎙️ 播客 <span class="tab-count">${counts.podcasts}</span>
+    </div>
+    <div class="feed-tab ${currentFeedTab==='blogs'?'active':''}" onclick="switchFeedTab('blogs')">
+      📝 博客 <span class="tab-count">${counts.blogs}</span>
+    </div>
+  `;
+}
+
+function renderFeedGrid() {
+  const grid = document.getElementById('feedGrid');
+
+  if (currentFeedTab === 'tweets') {
+    if (!feedData.tweets.length) { grid.innerHTML = '<div class="no-results" style="grid-column:span 2">暂无推文数据</div>'; return; }
+    // Sort by likes, take top ones
+    const sorted = [...feedData.tweets].sort((a,b) => b.likes - a.likes);
+    grid.innerHTML = sorted.map(t => `
+      <div class="tweet-card">
+        <div class="tweet-header">
+          <div class="tweet-avatar">${t.name.charAt(0)}</div>
+          <div class="tweet-author">
+            <div class="tweet-name">${t.name}</div>
+            <div class="tweet-handle">@${t.handle}</div>
+          </div>
+        </div>
+        <div class="tweet-text">${t.text.replace(/https?:\/\/\S+/g, '').trim()}</div>
+        <div class="tweet-stats">
+          <span>❤️ ${t.likes}</span>
+          <span>🔁 ${t.retweets}</span>
+          <span>💬 ${t.replies}</span>
+          <a class="tweet-link" href="${t.url}" target="_blank">查看原文 →</a>
+        </div>
+      </div>
+    `).join('');
+  } else if (currentFeedTab === 'podcasts') {
+    if (!feedData.podcasts.length) { grid.innerHTML = '<div class="no-results" style="grid-column:span 2">暂无播客数据</div>'; return; }
+    grid.innerHTML = feedData.podcasts.map(p => {
+      const summary = p.transcript ? p.transcript.substring(0, 500).replace(/Speaker \d+/g, '🎤').replace(/\|\s*[\d:]+\s*-\s*[\d:]+/g, '') + '…' : '暂无摘要';
+      return `
+      <div class="podcast-card">
+        <div class="podcast-title">🎙️ ${p.title}</div>
+        <div class="podcast-meta">📻 ${p.name} · 📅 ${new Date(p.publishedAt).toLocaleDateString('zh-CN')}</div>
+        <div class="podcast-summary">${summary}</div>
+        <a class="tweet-link" href="${p.url}" target="_blank" style="display:inline-block;margin-top:0.5rem">收听 →</a>
+      </div>`;
+    }).join('');
+  } else {
+    if (!feedData.blogs.length) { grid.innerHTML = '<div class="no-results" style="grid-column:span 2">暂无博客数据（最近72小时无更新）</div>'; return; }
+    grid.innerHTML = feedData.blogs.map(b => `
+      <div class="podcast-card">
+        <div class="podcast-title">📝 ${b.title || '无标题'}</div>
+        <div class="podcast-meta">${b.source || ''} · ${b.publishedAt ? new Date(b.publishedAt).toLocaleDateString('zh-CN') : ''}</div>
+        <div class="podcast-summary">${b.content ? b.content.substring(0, 300) + '…' : '暂无内容'}</div>
+      </div>
+    `).join('');
+  }
+}
+
+function switchFeedTab(tab) {
+  currentFeedTab = tab;
+  renderFeedTabs();
+  renderFeedGrid();
+}
+
+async function loadFeeds() {
+  try {
+    // Load tweets
+    const xResp = await fetch(FEED_URLS.x);
+    if (xResp.ok) {
+      const xData = await xResp.json();
+      feedData.tweets = [];
+      (xData.x || []).forEach(user => {
+        (user.tweets || []).forEach(tweet => {
+          if (tweet.text && tweet.text.length > 20) {
+            feedData.tweets.push({
+              name: user.name, handle: user.handle, bio: user.bio,
+              ...tweet
+            });
+          }
+        });
+      });
+    }
+  } catch(e) { console.warn('Failed to load X feed', e); }
+
+  try {
+    const podResp = await fetch(FEED_URLS.podcasts);
+    if (podResp.ok) {
+      const podData = await podResp.json();
+      feedData.podcasts = podData.podcasts || [];
+    }
+  } catch(e) { console.warn('Failed to load podcast feed', e); }
+
+  try {
+    const blogResp = await fetch(FEED_URLS.blogs);
+    if (blogResp.ok) {
+      const blogData = await blogResp.json();
+      feedData.blogs = blogData.blogs || [];
+    }
+  } catch(e) { console.warn('Failed to load blog feed', e); }
+
+  renderFeedTabs();
+  renderFeedGrid();
+}
+
+// ══════════════════════════════════════
+// Load Reports
 // ══════════════════════════════════════
 async function loadReports() {
   try {
@@ -769,6 +958,7 @@ async function loadReports() {
 }
 
 loadReports();
+loadFeeds();
 </script>
 </body>
 </html>

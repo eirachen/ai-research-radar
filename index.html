@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 研究情报监控站</title>
+<style>
+  :root {
+    --bg: #0a0e17;
+    --surface: #111827;
+    --surface2: #1a2234;
+    --border: #1e293b;
+    --text: #e2e8f0;
+    --text2: #94a3b8;
+    --accent: #3b82f6;
+    --accent2: #60a5fa;
+    --green: #22c55e;
+    --yellow: #eab308;
+    --red: #ef4444;
+    --orange: #f97316;
+    --purple: #a855f7;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+  /* ── Header ── */
+  .header {
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 2rem 0;
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(20px);
+  }
+  .header-inner {
+    max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .logo { display: flex; align-items: center; gap: 0.75rem; }
+  .logo-icon {
+    width: 42px; height: 42px; border-radius: 12px;
+    background: linear-gradient(135deg, var(--accent), var(--purple));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.3rem;
+  }
+  .logo-text h1 { font-size: 1.25rem; font-weight: 700; letter-spacing: -0.02em; }
+  .logo-text p { font-size: 0.75rem; color: var(--text2); margin-top: 1px; }
+  .header-nav { display: flex; gap: 0.5rem; }
+  .header-nav button {
+    background: var(--surface); border: 1px solid var(--border);
+    color: var(--text2); padding: 0.4rem 1rem; border-radius: 8px;
+    cursor: pointer; font-size: 0.8rem; transition: all 0.2s;
+  }
+  .header-nav button:hover, .header-nav button.active {
+    background: var(--accent); color: #fff; border-color: var(--accent);
+  }
+
+  /* ── Main Layout ── */
+  .main { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+  /* ── Dashboard View ── */
+  .stats-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .stat-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; padding: 1.25rem; position: relative; overflow: hidden;
+  }
+  .stat-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    border-radius: 14px 14px 0 0;
+  }
+  .stat-card:nth-child(1)::before { background: var(--accent); }
+  .stat-card:nth-child(2)::before { background: var(--green); }
+  .stat-card:nth-child(3)::before { background: var(--purple); }
+  .stat-card:nth-child(4)::before { background: var(--orange); }
+  .stat-label { font-size: 0.75rem; color: var(--text2); text-transform: uppercase; letter-spacing: 0.05em; }
+  .stat-value { font-size: 2rem; font-weight: 800; margin: 0.25rem 0; letter-spacing: -0.03em; }
+  .stat-card:nth-child(1) .stat-value { color: var(--accent2); }
+  .stat-card:nth-child(2) .stat-value { color: var(--green); }
+  .stat-card:nth-child(3) .stat-value { color: var(--purple); }
+  .stat-card:nth-child(4) .stat-value { color: var(--orange); }
+  .stat-sub { font-size: 0.75rem; color: var(--text2); }
+
+  /* ── Section Header ── */
+  .section-head {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 1.25rem;
+  }
+  .section-head h2 { font-size: 1.1rem; font-weight: 700; display: flex; align-items: center; gap: 0.5rem; }
+  .section-head h2 span { font-size: 1.2rem; }
+
+  /* ── Report List ── */
+  .report-list { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2.5rem; }
+  .report-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; padding: 1.25rem 1.5rem;
+    cursor: pointer; transition: all 0.25s; display: flex; align-items: center;
+    gap: 1.25rem;
+  }
+  .report-card:hover {
+    border-color: var(--accent); transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(59,130,246,0.08);
+  }
+  .report-date {
+    min-width: 80px; text-align: center;
+    background: var(--surface2); border-radius: 10px; padding: 0.6rem 0.75rem;
+  }
+  .report-date .day { font-size: 1.5rem; font-weight: 800; color: var(--accent2); line-height: 1; }
+  .report-date .month { font-size: 0.7rem; color: var(--text2); text-transform: uppercase; margin-top: 2px; }
+  .report-info { flex: 1; }
+  .report-info h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.3rem; }
+  .report-info p { font-size: 0.8rem; color: var(--text2); }
+  .report-badges { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 0.5rem; }
+  .badge {
+    display: inline-flex; align-items: center; gap: 0.25rem;
+    font-size: 0.65rem; padding: 0.2rem 0.5rem; border-radius: 6px;
+    font-weight: 600; letter-spacing: 0.02em;
+  }
+  .badge-paper { background: rgba(59,130,246,0.15); color: var(--accent2); }
+  .badge-talent { background: rgba(168,85,247,0.15); color: #c084fc; }
+  .badge-collab { background: rgba(34,197,94,0.15); color: #4ade80; }
+  .badge-infra { background: rgba(249,115,22,0.15); color: #fb923c; }
+  .report-arrow { color: var(--text2); font-size: 1.2rem; transition: transform 0.2s; }
+  .report-card:hover .report-arrow { transform: translateX(4px); color: var(--accent2); }
+
+  /* ── Platform Status ── */
+  .platform-grid {
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.75rem;
+    margin-bottom: 2.5rem;
+  }
+  .platform-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 1rem; text-align: center;
+    transition: all 0.2s;
+  }
+  .platform-card:hover { border-color: var(--accent); }
+  .platform-icon { font-size: 1.5rem; margin-bottom: 0.4rem; }
+  .platform-name { font-size: 0.75rem; font-weight: 600; margin-bottom: 0.25rem; }
+  .platform-status { font-size: 0.65rem; }
+  .platform-status.online { color: var(--green); }
+  .platform-status.offline { color: var(--red); }
+  .platform-status.updated { color: var(--accent2); }
+
+  /* ── Talent Table ── */
+  .talent-table {
+    width: 100%; border-collapse: separate; border-spacing: 0;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; overflow: hidden; margin-bottom: 2.5rem;
+  }
+  .talent-table thead th {
+    background: var(--surface2); padding: 0.75rem 1rem;
+    font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em;
+    color: var(--text2); text-align: left; font-weight: 600;
+  }
+  .talent-table tbody td {
+    padding: 0.75rem 1rem; font-size: 0.8rem;
+    border-top: 1px solid var(--border);
+  }
+  .talent-table tbody tr:hover { background: var(--surface2); }
+  .urgency { display: inline-block; width: 10px; height: 10px; border-radius: 50%; }
+  .urgency.high { background: var(--red); box-shadow: 0 0 8px rgba(239,68,68,0.4); }
+  .urgency.medium { background: var(--orange); box-shadow: 0 0 8px rgba(249,115,22,0.4); }
+  .urgency.low { background: var(--yellow); }
+  .talent-link { color: var(--accent2); text-decoration: none; }
+  .talent-link:hover { text-decoration: underline; }
+
+  /* ── Report Detail View ── */
+  .detail-view { display: none; }
+  .detail-view.active { display: block; }
+  .dashboard-view.hidden { display: none; }
+  .back-btn {
+    background: var(--surface); border: 1px solid var(--border);
+    color: var(--text); padding: 0.5rem 1rem; border-radius: 8px;
+    cursor: pointer; font-size: 0.8rem; margin-bottom: 1.5rem;
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    transition: all 0.2s;
+  }
+  .back-btn:hover { border-color: var(--accent); color: var(--accent2); }
+  .detail-content {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; padding: 2.5rem; line-height: 1.8;
+  }
+  .detail-content h1 { font-size: 1.6rem; font-weight: 800; margin-bottom: 1.5rem; border-bottom: 2px solid var(--border); padding-bottom: 1rem; }
+  .detail-content h2 { font-size: 1.3rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--accent2); }
+  .detail-content h3 { font-size: 1.1rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.75rem; }
+  .detail-content h4 { font-size: 0.95rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--purple); }
+  .detail-content p { margin-bottom: 0.75rem; color: var(--text); }
+  .detail-content ul, .detail-content ol { margin: 0.5rem 0 0.75rem 1.5rem; }
+  .detail-content li { margin-bottom: 0.35rem; }
+  .detail-content strong { color: #f1f5f9; }
+  .detail-content a { color: var(--accent2); text-decoration: none; }
+  .detail-content a:hover { text-decoration: underline; }
+  .detail-content hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+  .detail-content table {
+    width: 100%; border-collapse: collapse; margin: 1rem 0;
+    font-size: 0.85rem;
+  }
+  .detail-content table th {
+    background: var(--surface2); padding: 0.6rem 0.75rem;
+    text-align: left; font-weight: 600; font-size: 0.75rem;
+    border: 1px solid var(--border);
+  }
+  .detail-content table td {
+    padding: 0.6rem 0.75rem; border: 1px solid var(--border);
+  }
+  .detail-content code {
+    background: var(--surface2); padding: 0.15rem 0.4rem; border-radius: 4px;
+    font-size: 0.85em; color: var(--accent2);
+  }
+  .detail-content blockquote {
+    border-left: 3px solid var(--accent); padding-left: 1rem;
+    margin: 1rem 0; color: var(--text2); font-style: italic;
+  }
+  .detail-content input[type="checkbox"] { margin-right: 0.4rem; accent-color: var(--accent); }
+
+  /* ── Radar Grid ── */
+  .radar-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem;
+    margin-bottom: 2.5rem;
+  }
+  .radar-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 1rem 1.15rem;
+  }
+  .radar-card h4 { font-size: 0.85rem; font-weight: 700; margin-bottom: 0.3rem; }
+  .radar-card .direction { font-size: 0.72rem; color: var(--accent2); margin-bottom: 0.15rem; }
+  .radar-card .trend { font-size: 0.68rem; color: var(--text2); }
+
+  /* ── Responsive ── */
+  @media (max-width: 900px) {
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .platform-grid { grid-template-columns: repeat(3, 1fr); }
+    .radar-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 600px) {
+    .stats-grid { grid-template-columns: 1fr; }
+    .platform-grid { grid-template-columns: repeat(2, 1fr); }
+    .radar-grid { grid-template-columns: 1fr; }
+    .header-nav { display: none; }
+    .detail-content { padding: 1.25rem; }
+  }
+
+  /* ── Animations ── */
+  @keyframes fadeIn { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+  .report-card, .stat-card, .platform-card, .radar-card { animation: fadeIn 0.4s ease both; }
+  .report-card:nth-child(1) { animation-delay: 0.05s; }
+  .report-card:nth-child(2) { animation-delay: 0.1s; }
+  .report-card:nth-child(3) { animation-delay: 0.15s; }
+
+  /* loading */
+  .loading { text-align: center; padding: 3rem; color: var(--text2); }
+  .spinner {
+    width: 32px; height: 32px; border: 3px solid var(--border);
+    border-top-color: var(--accent); border-radius: 50%;
+    animation: spin 0.8s linear infinite; margin: 0 auto 1rem;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-inner">
+    <div class="logo">
+      <div class="logo-icon">🔭</div>
+      <div class="logo-text">
+        <h1>AI Research Radar</h1>
+        <p>AI 研究情报监控站 · 自动更新</p>
+      </div>
+    </div>
+    <div class="header-nav">
+      <button class="active" onclick="showDashboard()">总览</button>
+      <button onclick="showTalent()">人才追踪</button>
+    </div>
+  </div>
+</div>
+
+<div class="main">
+  <!-- ── DASHBOARD VIEW ── -->
+  <div class="dashboard-view" id="dashboardView">
+
+    <!-- Stats -->
+    <div class="stats-grid" id="statsGrid"></div>
+
+    <!-- Platform Status -->
+    <div class="section-head">
+      <h2><span>📡</span> 监控平台状态</h2>
+    </div>
+    <div class="platform-grid" id="platformGrid"></div>
+
+    <!-- Reports Timeline -->
+    <div class="section-head">
+      <h2><span>📋</span> 情报日报</h2>
+    </div>
+    <div class="report-list" id="reportList">
+      <div class="loading"><div class="spinner"></div>正在加载报告…</div>
+    </div>
+
+    <!-- Company Radar -->
+    <div class="section-head">
+      <h2><span>📊</span> 各公司研究动向</h2>
+    </div>
+    <div class="radar-grid" id="radarGrid"></div>
+
+    <!-- Talent Table -->
+    <div id="talentSection">
+      <div class="section-head">
+        <h2><span>🎓</span> 高校合作人才追踪</h2>
+      </div>
+      <table class="talent-table" id="talentTable"></table>
+    </div>
+  </div>
+
+  <!-- ── DETAIL VIEW ── -->
+  <div class="detail-view" id="detailView">
+    <button class="back-btn" onclick="backToDashboard()">← 返回总览</button>
+    <div class="detail-content" id="detailContent"></div>
+  </div>
+</div>
+
+<script>
+// ══════════════════════════════════════
+// Data - 从reports目录的Markdown文件解析
+// ══════════════════════════════════════
+
+const REPORTS_DATA = [];
+let REPORT_FILES = [];
+
+const PLATFORMS = [
+  { name: '华为诺亚', icon: '🏢', status: 'updated', detail: 'AAAI 2026 论文' },
+  { name: '字节Seed', icon: '🌱', status: 'updated', detail: 'Seed 2.0 系列' },
+  { name: '阿里通义', icon: '☁️', status: 'updated', detail: 'Qwen3.6-Plus' },
+  { name: 'DeepSeek', icon: '🔍', status: 'updated', detail: '基础设施开源' },
+  { name: '月之暗面', icon: '🌙', status: 'updated', detail: 'Agent Swarm' },
+  { name: 'OpenAI', icon: '🤖', status: 'updated', detail: 'GPT-5.2' },
+  { name: 'DeepMind', icon: '🧠', status: 'updated', detail: 'ICLR 2026' },
+  { name: 'Anthropic', icon: '🔬', status: 'updated', detail: 'Diff Tool' },
+  { name: 'Meta AI', icon: '📘', status: 'offline', detail: '500 错误' },
+  { name: 'NVIDIA', icon: '💚', status: 'offline', detail: '403 禁止' },
+];
+
+const TALENTS = [
+  { name: '胡金毅 (Jinyi Hu)', school: '清华大学', status: '博五', company: '字节Seed', direction: '多模态/Physical AI', advisor: '孙茂松教授', grad: '2026', urgency: 'high', url: 'https://jameshujy.github.io/' },
+  { name: 'Thomas Jiralerspong', school: 'Mila/蒙特利尔大学', status: '博士生', company: 'Anthropic Fellow', direction: '可解释性/RL', advisor: 'Yoshua Bengio', grad: '待确认', urgency: 'medium', url: 'https://superkaiba.github.io/' },
+  { name: 'Tyler Zhu', school: '普林斯顿大学', status: '博三', company: 'Google DeepMind', direction: '计算机视觉/视频', advisor: 'Olga Russakovsky', grad: '~2027', urgency: 'low', url: 'https://tylerzhu.com/' },
+  { name: '田野 (Ye Tian)', school: '北京大学', status: '博一', company: '华为诺亚', direction: 'AIGC/扩散模型', advisor: '童云海教授', grad: '~2029', urgency: 'low', url: 'https://tyfeld.github.io/' },
+  { name: '王程程 (Chengcheng Wang)', school: '悉尼大学', status: '在读', company: '华为诺亚', direction: '深度学习/CV', advisor: '待确认', grad: '待确认', urgency: 'low', url: '#' },
+];
+
+const RADARS = [
+  { company: '华为诺亚', direction: '模型压缩 / 因果推理 / 扩散语言模型', trend: '端侧部署 + Agent 加速' },
+  { company: '字节Seed', direction: '数学推理 / 多模态生成 / 基础模型', trend: '全模态 + Agentic 能力' },
+  { company: '阿里Qwen', direction: 'Agent编码 / 百万上下文 / 多模态', trend: '强调 Agent 落地' },
+  { company: 'DeepSeek', direction: '训练基础设施 / 开源生态', trend: '开源基建战略' },
+  { company: '月之暗面', direction: '多智能体 / 推理模型', trend: '从单Agent到Agent组织' },
+  { company: 'OpenAI', direction: 'GPT-5系列 / Sora / 音频', trend: '多模态统一' },
+  { company: 'DeepMind', direction: '视频理解 / AI意识哲学', trend: '基础研究 + 哲学反思' },
+  { company: 'Anthropic', direction: '可解释性 / 模型安全 / 经济影响', trend: '安全审计工具化' },
+];
+
+// ══════════════════════════════════════
+// Markdown Parser (lightweight)
+// ══════════════════════════════════════
+function parseMd(md) {
+  let html = md;
+  // Horizontal rules
+  html = html.replace(/^---+$/gm, '<hr>');
+  // Headers
+  html = html.replace(/^#### (.+)$/gm, '<h4>$1</h4>');
+  html = html.replace(/^### (.+)$/gm, '<h3>$1</h3>');
+  html = html.replace(/^## (.+)$/gm, '<h2>$1</h2>');
+  html = html.replace(/^# (.+)$/gm, '<h1>$1</h1>');
+  // Bold
+  html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+  // Italic
+  html = html.replace(/\*(.+?)\*/g, '<em>$1</em>');
+  // Inline code
+  html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
+  // Links
+  html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+  // URLs without markdown syntax
+  html = html.replace(/(^|[^"(])((https?:\/\/[^\s<)"]+))/g, '$1<a href="$2" target="_blank" rel="noopener">$2</a>');
+  // Checkboxes
+  html = html.replace(/^- \[ \] (.+)$/gm, '<li><input type="checkbox" disabled> $1</li>');
+  html = html.replace(/^- \[x\] (.+)$/gm, '<li><input type="checkbox" checked disabled> $1</li>');
+
+  // Tables
+  html = html.replace(/(?:^(\|.+\|)\n(\|[-| :]+\|)\n((?:\|.+\|\n?)+))/gm, (match, header, sep, body) => {
+    const ths = header.split('|').filter(c => c.trim()).map(c => `<th>${c.trim()}</th>`).join('');
+    const rows = body.trim().split('\n').map(row => {
+      const tds = row.split('|').filter(c => c.trim()).map(c => `<td>${c.trim()}</td>`).join('');
+      return `<tr>${tds}</tr>`;
+    }).join('');
+    return `<table><thead><tr>${ths}</tr></thead><tbody>${rows}</tbody></table>`;
+  });
+
+  // Unordered list items
+  html = html.replace(/^(\s*)- (.+)$/gm, (m, indent, content) => {
+    return `<li>${content}</li>`;
+  });
+
+  // Ordered list items
+  html = html.replace(/^\d+\. (.+)$/gm, '<li>$1</li>');
+
+  // Wrap consecutive <li> in <ul>
+  html = html.replace(/((?:<li>.*<\/li>\n?)+)/g, '<ul>$1</ul>');
+
+  // Blockquotes
+  html = html.replace(/^> (.+)$/gm, '<blockquote>$1</blockquote>');
+
+  // Paragraphs - wrap remaining plain text lines
+  const lines = html.split('\n');
+  const result = [];
+  let inBlock = false;
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    const trimmed = line.trim();
+    if (!trimmed) { result.push(''); continue; }
+    if (trimmed.match(/^<(h[1-4]|hr|ul|ol|li|table|thead|tbody|tr|th|td|blockquote|div|pre)/)) {
+      result.push(line);
+      continue;
+    }
+    if (trimmed.match(/<\/(ul|ol|table|tbody|blockquote|div|pre)>/)) {
+      result.push(line);
+      continue;
+    }
+    if (!trimmed.startsWith('<')) {
+      result.push(`<p>${trimmed}</p>`);
+    } else {
+      result.push(line);
+    }
+  }
+  return result.join('\n');
+}
+
+// ══════════════════════════════════════
+// Rendering Functions
+// ══════════════════════════════════════
+
+function renderStats() {
+  const grid = document.getElementById('statsGrid');
+  const totalPapers = 12;
+  const totalTalents = 5;
+  const totalPlatforms = 10;
+  const activePlatforms = 8;
+  grid.innerHTML = `
+    <div class="stat-card">
+      <div class="stat-label">监控平台</div>
+      <div class="stat-value">${activePlatforms}/${totalPlatforms}</div>
+      <div class="stat-sub">平台在线</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">追踪论文</div>
+      <div class="stat-value">${totalPapers}</div>
+      <div class="stat-sub">最近一期</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">人才追踪</div>
+      <div class="stat-value">${totalTalents}</div>
+      <div class="stat-sub">在读博士生</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">高优先级</div>
+      <div class="stat-value">1</div>
+      <div class="stat-sub">即将毕业</div>
+    </div>
+  `;
+}
+
+function renderPlatforms() {
+  const grid = document.getElementById('platformGrid');
+  grid.innerHTML = PLATFORMS.map(p => `
+    <div class="platform-card">
+      <div class="platform-icon">${p.icon}</div>
+      <div class="platform-name">${p.name}</div>
+      <div class="platform-status ${p.status}">${
+        p.status === 'updated' ? '✅ ' + p.detail :
+        p.status === 'online' ? '🟢 在线' :
+        '🔴 ' + p.detail
+      }</div>
+    </div>
+  `).join('');
+}
+
+function renderReports() {
+  const list = document.getElementById('reportList');
+  if (REPORTS_DATA.length === 0) {
+    list.innerHTML = '<div class="loading">暂无报告数据</div>';
+    return;
+  }
+  list.innerHTML = REPORTS_DATA.map((r, i) => `
+    <div class="report-card" onclick="openReport(${i})">
+      <div class="report-date">
+        <div class="day">${r.day}</div>
+        <div class="month">${r.month} ${r.year}</div>
+      </div>
+      <div class="report-info">
+        <h3>${r.title}</h3>
+        <p>${r.summary}</p>
+        <div class="report-badges">
+          <span class="badge badge-paper">📄 ${r.papers} 篇论文</span>
+          <span class="badge badge-talent">🎓 ${r.talents} 位人才</span>
+          <span class="badge badge-collab">🏫 ${r.collabs} 校合作</span>
+          <span class="badge badge-infra">📡 ${r.platforms} 平台监控</span>
+        </div>
+      </div>
+      <div class="report-arrow">→</div>
+    </div>
+  `).join('');
+}
+
+function renderRadar() {
+  const grid = document.getElementById('radarGrid');
+  grid.innerHTML = RADARS.map(r => `
+    <div class="radar-card">
+      <h4>${r.company}</h4>
+      <div class="direction">${r.direction}</div>
+      <div class="trend">趋势：${r.trend}</div>
+    </div>
+  `).join('');
+}
+
+function renderTalent() {
+  const table = document.getElementById('talentTable');
+  table.innerHTML = `
+    <thead>
+      <tr>
+        <th>紧急度</th><th>姓名</th><th>高校</th><th>身份</th>
+        <th>合作公司</th><th>研究方向</th><th>导师</th><th>预计毕业</th>
+      </tr>
+    </thead>
+    <tbody>
+      ${TALENTS.map(t => `
+        <tr>
+          <td><span class="urgency ${t.urgency}"></span></td>
+          <td><a class="talent-link" href="${t.url}" target="_blank">${t.name}</a></td>
+          <td>${t.school}</td>
+          <td>${t.status}</td>
+          <td>${t.company}</td>
+          <td>${t.direction}</td>
+          <td>${t.advisor}</td>
+          <td>${t.grad}</td>
+        </tr>
+      `).join('')}
+    </tbody>
+  `;
+}
+
+// ══════════════════════════════════════
+// Navigation
+// ══════════════════════════════════════
+
+function openReport(idx) {
+  const report = REPORTS_DATA[idx];
+  if (!report) return;
+  document.getElementById('dashboardView').classList.add('hidden');
+  const dv = document.getElementById('detailView');
+  dv.classList.add('active');
+  document.getElementById('detailContent').innerHTML = parseMd(report.raw);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function backToDashboard() {
+  document.getElementById('detailView').classList.remove('active');
+  document.getElementById('dashboardView').classList.remove('hidden');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function showDashboard() {
+  document.querySelectorAll('.header-nav button').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.header-nav button')[0].classList.add('active');
+  backToDashboard();
+  document.getElementById('talentSection').style.display = '';
+}
+
+function showTalent() {
+  document.querySelectorAll('.header-nav button').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.header-nav button')[1].classList.add('active');
+  backToDashboard();
+  document.getElementById('talentSection').scrollIntoView({ behavior: 'smooth' });
+}
+
+// ══════════════════════════════════════
+// Load Reports
+// ══════════════════════════════════════
+
+async function loadReports() {
+  // Load report file list from index.json
+  try {
+    const indexResp = await fetch('reports/index.json');
+    if (indexResp.ok) {
+      REPORT_FILES = await indexResp.json();
+    }
+  } catch(e) {
+    // Fallback
+    REPORT_FILES = ['reports/2026-04-07-report.md'];
+  }
+
+  for (const file of REPORT_FILES) {
+    try {
+      const resp = await fetch(file);
+      if (!resp.ok) continue;
+      const md = await resp.text();
+      // Extract metadata
+      const dateMatch = file.match(/(\d{4})-(\d{2})-(\d{2})/);
+      const months = ['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+      const year = dateMatch ? dateMatch[1] : '2026';
+      const month = dateMatch ? months[parseInt(dateMatch[2])] : 'Apr';
+      const day = dateMatch ? dateMatch[3] : '07';
+
+      // Count papers
+      const paperCount = (md.match(/^### 论文\d+/gm) || []).length;
+      // Count talent tracking
+      const talentCount = (md.match(/学生深度追踪/g) || []).length;
+      // Count university collabs
+      const collabCount = (md.match(/合作高校/g) || []).length;
+
+      const titleMatch = md.match(/^# (.+)$/m);
+      const title = titleMatch ? titleMatch[1] : file;
+
+      REPORTS_DATA.push({
+        file, raw: md, year, month, day, title,
+        papers: paperCount,
+        talents: talentCount,
+        collabs: collabCount,
+        platforms: 10,
+        summary: `覆盖10个AI研究平台 · ${paperCount}篇论文深度分析 · ${talentCount}位在读博士生追踪`
+      });
+    } catch(e) {
+      console.warn('Failed to load', file, e);
+    }
+  }
+
+  renderStats();
+  renderPlatforms();
+  renderReports();
+  renderRadar();
+  renderTalent();
+}
+
+// Init
+loadReports();
+</script>
+</body>
+</html>

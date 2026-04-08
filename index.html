@@ -1238,6 +1238,19 @@ function renderTalent() {
     '</div>';
   }
 
+  function renderCompactRow(t) {
+    var rid = 'trow_' + t.key.replace(/[^a-zA-Z0-9]/g, '_');
+    var hkFlag = t.isHK ? ' 🇭🇰' : '';
+    return '<div style="border-bottom:1px solid var(--border);border-right:1px solid var(--border)">' +
+      '<div style="display:flex;align-items:center;gap:0.4rem;padding:0.4rem 0.5rem;cursor:pointer;font-size:0.78rem" onclick="toggleCompactDetail(\'' + rid + '\')">' +
+        '<span class="urgency ' + t.urgency + '" style="flex-shrink:0"></span>' +
+        '<a class="talent-link" href="' + t.url + '" target="_blank" onclick="event.stopPropagation()" style="font-weight:600;font-size:0.78rem">' + t.name + hkFlag + '</a>' +
+        '<span style="font-size:0.68rem;color:var(--text2);margin-left:auto;white-space:nowrap">' + t.school + '</span>' +
+      '</div>' +
+    '</div>' +
+    '<div id="' + rid + '" style="display:none;grid-column:1/-1;padding:0.5rem 0.8rem;background:var(--surface2);border-bottom:1px solid var(--border)">' + buildDetailHTML(t) + '</div>';
+  }
+
   function renderRow(t, defaultOpen) {
     var rid = 'trow_' + t.key.replace(/[^a-zA-Z0-9]/g, '_');
     var hkFlag = t.isHK ? ' 🇭🇰' : '';
@@ -1253,10 +1266,10 @@ function renderTalent() {
   }
 
   var html = '';
-  // Students - default open section, rows show name+school, details collapsed by default
+  // Students - 2-column grid, compact cards
   html += '<div style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden">' +
     '<div style="padding:0.7rem 1rem;background:rgba(34,197,94,0.08);border-bottom:1px solid var(--border);font-weight:700;font-size:0.85rem;color:var(--green)">🎓 在校学生 (' + studentList.length + '人)</div>' +
-    (studentList.length ? studentList.map(function(t) { return renderRow(t, false); }).join('') : '<div style="padding:1rem;color:var(--text2);font-size:0.8rem">暂无在校学生</div>') +
+    (studentList.length ? '<div style="display:grid;grid-template-columns:1fr 1fr;gap:0">' + studentList.map(function(t) { return renderCompactRow(t); }).join('') + '</div>' : '<div style="padding:1rem;color:var(--text2);font-size:0.8rem">暂无在校学生</div>') +
   '</div>';
   // Others - collapsed section
   html += '<div style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden">' +
@@ -1265,7 +1278,7 @@ function renderTalent() {
       '👔 教授 / 研究员 / 业界 / 待确认 (' + otherList.length + '人)' +
     '</div>' +
     '<div id="otherSection" style="display:none">' +
-      (otherList.length ? otherList.map(function(t) { return renderRow(t, false); }).join('') : '<div style="padding:1rem;color:var(--text2);font-size:0.8rem">暂无</div>') +
+      (otherList.length ? '<div style="display:grid;grid-template-columns:1fr 1fr;gap:0">' + otherList.map(function(t) { return renderCompactRow(t); }).join('') + '</div>' : '<div style="padding:1rem;color:var(--text2);font-size:0.8rem">暂无</div>') +
     '</div>' +
   '</div>';
 
@@ -1283,6 +1296,12 @@ function toggleTalentRow(id, headerEl) {
     el.style.display = 'none';
     if (chevron) chevron.style.transform = '';
   }
+}
+
+function toggleCompactDetail(id) {
+  var el = document.getElementById(id);
+  if (!el) return;
+  el.style.display = el.style.display === 'none' ? 'block' : 'none';
 }
 
 function toggleTalentSection(id, headerEl) {

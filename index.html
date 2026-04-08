@@ -809,9 +809,7 @@
       <h2><span>🕸️</span> 公司-高校合作关系网络</h2>
       <span style="font-size:0.72rem;color:var(--text2)" id="networkMeta"></span>
     </div>
-    <div class="network-controls">
-      <button class="filter-btn active" onclick="setNetworkView('all')" id="netViewAll">全部公司</button>
-    </div>
+    <div class="network-controls" id="networkControls"></div>
     <div class="network-container">
       <canvas id="networkCanvas" width="1160" height="700"></canvas>
       <div class="network-tooltip" id="netTooltip"></div>
@@ -1983,6 +1981,7 @@ let networkEdges = [];
 let netAnimId = null;
 let netDrag = null;
 let netHover = null;
+let currentNetCompany = 'all';
 
 // University name mapping: English abbreviation → Chinese name
 var UNI_NAME_MAP = {
@@ -2133,8 +2132,35 @@ function buildNetworkData() {
   return { nodes: networkNodes, edges: networkEdges };
 }
 
+function setNetworkCompany(companyId) {
+  currentNetCompany = companyId;
+  renderNetwork();
+}
+
 function renderNetwork() {
-  var data = buildNetworkData();
+  var fullData = buildNetworkData();
+  // Filter by company if needed
+  var data;
+  if (currentNetCompany === 'all') {
+    data = fullData;
+  } else {
+    var filteredEdges = fullData.edges.filter(function(e) { return e.source === currentNetCompany; });
+    var connectedIds = {};
+    connectedIds[currentNetCompany] = true;
+    filteredEdges.forEach(function(e) { connectedIds[e.target] = true; });
+    var filteredNodes = fullData.nodes.filter(function(n) { return connectedIds[n.id]; });
+    data = { nodes: filteredNodes, edges: filteredEdges };
+  }
+  // Render company filter tabs
+  var controls = document.getElementById('networkControls');
+  if (controls) {
+    var companiesWithEdges = {};
+    fullData.edges.forEach(function(e) { companiesWithEdges[e.source] = (companiesWithEdges[e.source]||0) + 1; });
+    controls.innerHTML = '<button class="filter-btn ' + (currentNetCompany === 'all' ? 'active' : '') + '" onclick="setNetworkCompany(\'all\')">全部公司</button>' +
+      COMPANIES.filter(function(c) { return companiesWithEdges[c.id]; }).map(function(c) {
+        return '<button class="filter-btn ' + (currentNetCompany === c.id ? 'active' : '') + '" onclick="setNetworkCompany(\'' + c.id + '\')">' + c.icon + ' ' + c.name + ' <span class="filter-count">' + (companiesWithEdges[c.id]||0) + '</span></button>';
+      }).join('');
+  }
   var canvas = document.getElementById('networkCanvas');
   if (!canvas) return;
   var ctx = canvas.getContext('2d');
@@ -2145,11 +2171,27 @@ function renderNetwork() {
   canvas.style.height = '700px';
   ctx.scale(dpr, dpr);
   var W = rect.width, H = 700;
+  // Relayout for filtered view
+  if (currentNetCompany !== 'all') {
+    var cx = W/2, cy = H/2;
+    var companyNode = data.nodes.find(function(n) { return n.id === currentNetCompany; });
+    if (companyNode) { companyNode.x = cx; companyNode.y = cy; companyNode.fx = cx; companyNode.fy = cy; }
+    var uniNodes = data.nodes.filter(function(n) { return n.type !== 'company'; });
+    uniNodes.forEach(function(n, i) {
+      var angle = (2 * Math.PI * i) / Math.max(uniNodes.length, 1);
+      n.x = cx + Math.cos(angle) * (180 + Math.random() * 60);
+      n.y = cy + Math.sin(angle) * (150 + Math.random() * 40);
+      delete n.fx; delete n.fy;
+    });
+  }
   // Update home badge
-  var uniCount = data.nodes.filter(function(n) { return n.type !== 'company'; }).length;
-  var edgeCount = data.edges.length;
+  var uniCount = fullData.nodes.filter(function(n) { return n.type !== 'company'; }).length;
+  var edgeCount = fullData.edges.length;
   try { document.getElementById('networkBadge').textContent = uniCount + ' 所高校 · ' + edgeCount + ' 条合作'; } catch(e){}
-  try { document.getElementById('networkMeta').textContent = data.nodes.length + ' 个节点 · ' + edgeCount + ' 条合作关系'; } catch(e){}
+  var metaText = currentNetCompany === 'all'
+    ? data.nodes.length + ' 个节点 · ' + data.edges.length + ' 条合作关系'
+    : (function(){ var ci = getCompanyInfo(currentNetCompany); return ci.icon + ' ' + ci.name + '：' + data.edges.length + ' 所合作高校'; })();
+  try { document.getElementById('networkMeta').textContent = metaText; } catch(e){}
   // Simulation
   var alpha = 1;
   function tick() {

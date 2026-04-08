@@ -386,6 +386,31 @@
   @keyframes hkGlow { from { box-shadow: 0 0 4px rgba(245,158,11,0.2); } to { box-shadow: 0 0 10px rgba(245,158,11,0.5); } }
   .uni-list { font-size: 0.65rem; color: var(--green); margin-top: 0.2rem; }
   .hk-uni-list { color: #fbbf24; font-weight: 600; }
+  /* Talent notes in arxiv cards */
+  .talent-note-area {
+    margin-top: 0.6rem; padding: 0.6rem 0.8rem;
+    background: var(--surface2); border-radius: 8px;
+    border-left: 3px solid var(--purple);
+  }
+  .talent-note-area.hk-note { border-left-color: #f59e0b; background: rgba(245,158,11,0.05); }
+  .talent-note-title { font-size: 0.68rem; color: var(--purple); font-weight: 700; margin-bottom: 0.35rem; }
+  .talent-note-area.hk-note .talent-note-title { color: #fbbf24; }
+  .talent-person {
+    display: flex; align-items: flex-start; gap: 0.5rem;
+    padding: 0.3rem 0; font-size: 0.7rem;
+  }
+  .talent-person + .talent-person { border-top: 1px solid var(--border); }
+  .talent-person-info { flex: 1; }
+  .talent-person-name { font-weight: 600; color: var(--text); }
+  .talent-person-name a { color: var(--accent2); text-decoration: none; }
+  .talent-person-name a:hover { text-decoration: underline; }
+  .talent-person-meta { color: var(--text2); font-size: 0.65rem; margin-top: 0.1rem; }
+  .talent-person-links { display: flex; gap: 0.3rem; margin-top: 0.15rem; }
+  .talent-person-links a {
+    font-size: 0.6rem; color: var(--accent2); text-decoration: none;
+    background: rgba(59,130,246,0.1); padding: 0.1rem 0.35rem; border-radius: 4px;
+  }
+  .talent-person-links a:hover { background: rgba(59,130,246,0.2); }
   @media (max-width: 600px) { .feed-grid { grid-template-columns: 1fr; } .podcast-card { grid-column: span 1; } }
 
   /* ── Nav Hub (Home) ── */
@@ -1059,6 +1084,65 @@ async function loadFeeds() {
 // ══════════════════════════════════════
 let arxivData = null;
 let currentArxivCompany = 'all';
+let talentNotes = {};
+
+async function loadTalentNotes() {
+  try {
+    var resp = await fetch('reports/talent-notes.json');
+    if (resp.ok) { var d = await resp.json(); talentNotes = d.notes || {}; }
+  } catch(e) {}
+}
+
+function getTalentNotesForPaper(authorNames) {
+  var matched = [];
+  for (var i = 0; i < authorNames.length; i++) {
+    var name = authorNames[i];
+    // Try exact match
+    if (talentNotes[name]) { matched.push(talentNotes[name]); continue; }
+    // Try partial match (last name + first name combinations)
+    for (var key in talentNotes) {
+      if (name.indexOf(key) >= 0 || key.indexOf(name) >= 0) {
+        matched.push(talentNotes[key]);
+        break;
+      }
+      // Also match by parts: "Ye Tian" matches "Tian" in author list
+      var parts = key.split(' ');
+      var nameParts = name.split(' ');
+      if (parts.length >= 2 && nameParts.length >= 2) {
+        if (parts[parts.length-1] === nameParts[nameParts.length-1] && parts[0] === nameParts[0]) {
+          matched.push(talentNotes[key]);
+          break;
+        }
+      }
+    }
+  }
+  return matched;
+}
+
+function renderTalentNoteHTML(notes, hasHK) {
+  if (!notes.length) return '';
+  var cssClass = hasHK ? 'talent-note-area hk-note' : 'talent-note-area';
+  var html = '<div class="' + cssClass + '"><div class="talent-note-title">👤 高校合作人才信息</div>';
+  for (var i = 0; i < notes.length; i++) {
+    var t = notes[i];
+    html += '<div class="talent-person"><div class="talent-person-info">';
+    html += '<div class="talent-person-name">';
+    if (t.homepage) { html += '<a href="' + t.homepage + '" target="_blank">' + t.name + ' ↗</a>'; }
+    else { html += t.name; }
+    html += '</div>';
+    html += '<div class="talent-person-meta">' + t.university + ' · ' + t.status;
+    if (t.advisor && t.advisor !== '待确认') html += ' · 导师: ' + t.advisor;
+    if (t.direction) html += ' · ' + t.direction;
+    html += '</div>';
+    html += '<div class="talent-person-links">';
+    if (t.homepage) html += '<a href="' + t.homepage + '" target="_blank">🏠 主页</a>';
+    if (t.scholar) html += '<a href="' + t.scholar + '" target="_blank">📚 Scholar</a>';
+    if (t.lab) html += '<span style="font-size:0.6rem;color:var(--text2)">🔬 ' + t.lab + '</span>';
+    html += '</div></div></div>';
+  }
+  html += '</div>';
+  return html;
+}
 
 async function loadArxiv() {
   try {
@@ -1130,7 +1214,13 @@ function renderArxivList() {
       uniBadge = '<span class="uni-badge">🎓 高校合作</span>';
       uniDetail = '<div class="uni-list">🏫 ' + (p.universities || []).join(', ') + '</div>';
     }
-    return '<div class="' + cardClass + '"><div class="arxiv-paper-head"><div class="arxiv-paper-title"><a href="' + p.arxivUrl + '" target="_blank">' + p.title + ' ↗</a></div><div class="arxiv-paper-date">' + p._icon + ' ' + date + '</div></div><div class="arxiv-paper-authors">' + authors + '</div>' + uniDetail + '<div class="arxiv-paper-summary">' + p.summary + '</div><div class="arxiv-paper-tags">' + dirTags + '<span class="arxiv-tag">' + p._company + '</span>' + cats + (venue ? '<span class="arxiv-tag arxiv-venue-tag">🏆 ' + venue + '</span>' : '') + uniBadge + '<a class="arxiv-tag" href="' + p.arxivUrl + '" target="_blank" style="text-decoration:none;background:rgba(59,130,246,0.15)">📄 论文原文 ↗</a>' + (p.pdfUrl ? '<a class="arxiv-tag" href="' + p.pdfUrl + '" target="_blank" style="text-decoration:none;background:rgba(239,68,68,0.1);color:#f87171">📎 PDF下载 ↗</a>' : '') + '</div></div>';
+    // Talent notes for this paper
+    var talentHTML = '';
+    if (p.hasUniCollab) {
+      var tNotes = getTalentNotesForPaper(p.authors);
+      talentHTML = renderTalentNoteHTML(tNotes, p.hasHKCollab);
+    }
+    return '<div class="' + cardClass + '"><div class="arxiv-paper-head"><div class="arxiv-paper-title"><a href="' + p.arxivUrl + '" target="_blank">' + p.title + ' ↗</a></div><div class="arxiv-paper-date">' + p._icon + ' ' + date + '</div></div><div class="arxiv-paper-authors">' + authors + '</div>' + uniDetail + '<div class="arxiv-paper-summary">' + p.summary + '</div><div class="arxiv-paper-tags">' + dirTags + '<span class="arxiv-tag">' + p._company + '</span>' + cats + (venue ? '<span class="arxiv-tag arxiv-venue-tag">🏆 ' + venue + '</span>' : '') + uniBadge + '<a class="arxiv-tag" href="' + p.arxivUrl + '" target="_blank" style="text-decoration:none;background:rgba(59,130,246,0.15)">📄 论文原文 ↗</a>' + (p.pdfUrl ? '<a class="arxiv-tag" href="' + p.pdfUrl + '" target="_blank" style="text-decoration:none;background:rgba(239,68,68,0.1);color:#f87171">📎 PDF下载 ↗</a>' : '') + '</div>' + talentHTML + '</div>';
   }).join('');
 }
 
@@ -1187,9 +1277,9 @@ async function loadReports() {
   if (REPORTS_DATA.length) document.getElementById('reportBadge').textContent = REPORTS_DATA.length + ' 份日报';
 }
 
+loadTalentNotes().then(function() { loadArxiv(); });
 loadReports();
 loadFeeds();
-loadArxiv();
 </script>
 </body>
 </html>

@@ -1,0 +1,77 @@
+{
+  "generatedAt": "2026-04-08T14:00:00Z",
+  "notes": {
+    "Ye Tian": {
+      "name": "田野 (Ye Tian)",
+      "university": "北京大学",
+      "isHK": false,
+      "status": "博一",
+      "advisor": "童云海教授",
+      "lab": "北京大学智能科学与技术学院",
+      "homepage": "https://tyfeld.github.io/",
+      "scholar": "https://scholar.google.com/citations?user=bBJiBjUAAAAJ",
+      "direction": "AIGC / 多模态 / 扩散模型",
+      "gradYear": "~2029"
+    },
+    "Chengcheng Wang": {
+      "name": "王程程 (Chengcheng Wang)",
+      "university": "悉尼大学",
+      "isHK": false,
+      "status": "在读",
+      "advisor": "待确认",
+      "lab": "University of Sydney",
+      "homepage": "",
+      "scholar": "https://scholar.google.com/citations?user=OfmE9XUAAAAJ",
+      "direction": "深度学习 / 计算机视觉",
+      "gradYear": "待确认"
+    },
+    "Jinyi Hu": {
+      "name": "胡金毅 (Jinyi Hu)",
+      "university": "清华大学",
+      "isHK": false,
+      "status": "博五（2026毕业）",
+      "advisor": "孙茂松教授",
+      "lab": "THUNLP (清华NLP实验室)",
+      "homepage": "https://jameshujy.github.io/",
+      "scholar": "https://scholar.google.com/citations?user=Cz70Xr8AAAAJ",
+      "direction": "多模态 / Physical AI",
+      "gradYear": "2026"
+    },
+    "Tyler Zhu": {
+      "name": "Tyler Zhu",
+      "university": "普林斯顿大学",
+      "isHK": false,
+      "status": "博三",
+      "advisor": "Olga Russakovsky",
+      "lab": "Princeton Visual AI Lab",
+      "homepage": "https://tylerzhu.com/",
+      "scholar": "https://scholar.google.com/citations?user=-aoybA4AAAAJ",
+      "direction": "计算机视觉 / 视频理解",
+      "gradYear": "~2027"
+    },
+    "Thomas Jiralerspong": {
+      "name": "Thomas Jiralerspong",
+      "university": "蒙特利尔大学 / Mila",
+      "isHK": false,
+      "status": "博士生",
+      "advisor": "Yoshua Bengio + Guillaume Lajoie",
+      "lab": "Mila - 魁北克AI研究所",
+      "homepage": "https://superkaiba.github.io/",
+      "scholar": "https://scholar.google.com/citations?user=ifQsJnIAAAAJ",
+      "direction": "可解释性 / RL / 生成模型",
+      "gradYear": "待确认"
+    },
+    "Guhao Feng": {
+      "name": "Guhao Feng",
+      "university": "待确认",
+      "isHK": false,
+      "status": "待确认",
+      "advisor": "待确认",
+      "lab": "",
+      "homepage": "",
+      "scholar": "",
+      "direction": "LLM / 推理优化",
+      "gradYear": ""
+    }
+  }
+}

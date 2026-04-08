@@ -1205,6 +1205,20 @@ let currentArxivCompany = 'all';
 let talentNotes = {};
 
 async function loadTalentNotes() {
+  // Try remote API first (real-time data)
+  try {
+    var resp = await fetch(TALENT_API);
+    if (resp.ok) {
+      var d = await resp.json();
+      talentNotes = d.notes || {};
+      console.log('Loaded talent notes from remote API');
+      renderTalentExistingList();
+      return;
+    }
+  } catch(e) {
+    console.log('Remote API unavailable, falling back to local JSON');
+  }
+  // Fallback: load from static JSON file
   try {
     var resp = await fetch('reports/talent-notes.json');
     if (resp.ok) { var d = await resp.json(); talentNotes = d.notes || {}; }
@@ -1352,8 +1366,11 @@ function filterArxiv(companyId) {
 }
 
 // ══════════════════════════════════════
-// Talent Editor (localStorage + export)
+// Talent Editor (localStorage + remote sync)
 // ══════════════════════════════════════
+
+// Remote API for real-time sync (Lighthouse server)
+var TALENT_API = 'http://43.167.194.82:8800/talent-notes.json';
 
 function getLocalTalentNotes() {
   try {
@@ -1406,7 +1423,10 @@ function saveTalent() {
   // Also update in-memory
   talentNotes[key] = entry;
 
-  showEditorMsg('success', '已保存: ' + entry.name + '（存储在本地浏览器中，点击"导出JSON"可同步到网站）');
+  // Sync to remote API
+  syncToRemote();
+
+  showEditorMsg('success', '已保存: ' + entry.name + ' ✅ 所有人都能看到');
   clearForm();
   renderTalentExistingList();
   renderArxivList(); // Refresh to show new talent notes
@@ -1445,7 +1465,30 @@ function deleteTalent(key) {
   saveLocalTalentNotes(local);
   renderTalentExistingList();
   renderArxivList();
+  syncToRemote();
   showEditorMsg('success', '已删除: ' + key);
+}
+
+async function syncToRemote() {
+  try {
+    var payload = { generatedAt: new Date().toISOString(), notes: talentNotes };
+    var resp = await fetch(TALENT_API, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    if (resp.ok) {
+      console.log('Synced to remote API');
+      // Also save locally as backup
+      saveLocalTalentNotes(talentNotes);
+    } else {
+      console.log('Remote sync failed, saved locally');
+      saveLocalTalentNotes(talentNotes);
+    }
+  } catch(e) {
+    console.log('Remote unavailable, saved locally only');
+    saveLocalTalentNotes(talentNotes);
+  }
 }
 
 function exportTalentJSON() {

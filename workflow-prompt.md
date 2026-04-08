@@ -13,6 +13,13 @@
 | 阿里通义实验室 | arXiv | 搜索 "Qwen" site:arxiv.org |
 | DeepSeek | GitHub | https://github.com/deepseek-ai |
 | 月之暗面 (Kimi) | 博客 | https://kimi.com/blog |
+| 百度 | 官网 | https://research.baidu.com/ |
+| 快手 | arXiv | 搜索 "Kuaishou" / "KwaiVGI" |
+| 滴滴 | arXiv | 搜索 "DiDi" |
+| 小米 | arXiv | 搜索 "Xiaomi" |
+| 阶跃星辰 | GitHub | https://github.com/stepfun-ai |
+| 阿里淘天 | arXiv | 搜索 "Taobao" / "Alibaba Taotian" |
+| 蚂蚁集团 | arXiv | 搜索 "Ant Group" |
 
 ### 国外公司
 | 公司 | 平台 | URL |

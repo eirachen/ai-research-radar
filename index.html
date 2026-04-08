@@ -120,7 +120,7 @@
 
   /* ── Platform Status ── */
   .platform-grid {
-    display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.75rem;
+    display: grid; grid-template-columns: repeat(6, 1fr); gap: 0.75rem;
     margin-bottom: 2.5rem;
   }
   .platform-card {
@@ -181,6 +181,13 @@
   .company-anthropic { background: rgba(244,114,182,0.15); color: #f472b6; }
   .company-meta { background: rgba(96,165,250,0.15); color: #93c5fd; }
   .company-nvidia { background: rgba(74,222,128,0.15); color: #4ade80; }
+  .company-baidu { background: rgba(239,68,68,0.15); color: #f87171; }
+  .company-kuaishou { background: rgba(251,146,60,0.15); color: #fb923c; }
+  .company-didi { background: rgba(251,191,36,0.15); color: #fbbf24; }
+  .company-xiaomi { background: rgba(249,115,22,0.15); color: #fb923c; }
+  .company-stepfun { background: rgba(234,179,8,0.15); color: #facc15; }
+  .company-taotian { background: rgba(239,68,68,0.15); color: #fca5a5; }
+  .company-antgroup { background: rgba(59,130,246,0.15); color: #93c5fd; }
 
   .no-results {
     text-align: center; padding: 2.5rem; color: var(--text2);
@@ -862,6 +869,13 @@ const COMPANIES = [
   { id: 'anthropic', name: 'Anthropic', icon: '🔬', css: 'company-anthropic', keywords: ['Anthropic','Claude'] },
   { id: 'meta', name: 'Meta AI', icon: '📘', css: 'company-meta', keywords: ['Meta','Llama'] },
   { id: 'nvidia', name: 'NVIDIA', icon: '💚', css: 'company-nvidia', keywords: ['NVIDIA'] },
+  { id: 'baidu', name: '百度', icon: '🔴', css: 'company-baidu', keywords: ['Baidu','百度','ERNIE','Qianfan'] },
+  { id: 'kuaishou', name: '快手', icon: '📹', css: 'company-kuaishou', keywords: ['Kuaishou','快手','Kling','KwaiVGI'] },
+  { id: 'didi', name: '滴滴', icon: '🚕', css: 'company-didi', keywords: ['DiDi','滴滴'] },
+  { id: 'xiaomi', name: '小米', icon: '📱', css: 'company-xiaomi', keywords: ['Xiaomi','小米'] },
+  { id: 'stepfun', name: '阶跃星辰', icon: '⭐', css: 'company-stepfun', keywords: ['StepFun','Step-','阶跃'] },
+  { id: 'taotian', name: '阿里淘天', icon: '🛒', css: 'company-taotian', keywords: ['Taobao','淘天','淘宝'] },
+  { id: 'antgroup', name: '蚂蚁集团', icon: '🐜', css: 'company-antgroup', keywords: ['Ant Group','蚂蚁','Alipay'] },
 ];
 
 const PLATFORMS = [
@@ -875,6 +889,13 @@ const PLATFORMS = [
   { name: 'Anthropic', icon: '🔬', status: 'updated', detail: 'Diff Tool', companyId: 'anthropic' },
   { name: 'Meta AI', icon: '📘', status: 'offline', detail: '500 错误', companyId: 'meta' },
   { name: 'NVIDIA', icon: '💚', status: 'offline', detail: '403 禁止', companyId: 'nvidia' },
+  { name: '百度', icon: '🔴', status: 'updated', detail: 'ERNIE / 千帆', companyId: 'baidu' },
+  { name: '快手', icon: '📹', status: 'updated', detail: 'Kling视频生成', companyId: 'kuaishou' },
+  { name: '滴滴', icon: '🚕', status: 'updated', detail: 'AI出行', companyId: 'didi' },
+  { name: '小米', icon: '📱', status: 'updated', detail: 'MiLM端侧AI', companyId: 'xiaomi' },
+  { name: '阶跃星辰', icon: '⭐', status: 'updated', detail: 'Step-3系列', companyId: 'stepfun' },
+  { name: '阿里淘天', icon: '🛒', status: 'updated', detail: '电商AI', companyId: 'taotian' },
+  { name: '蚂蚁集团', icon: '🐜', status: 'updated', detail: '金融AI', companyId: 'antgroup' },
 ];
 
 // TALENTS is now dynamically generated from talentNotes (no hardcoded data)
@@ -1045,7 +1066,7 @@ function renderStats() {
   }
   grid.innerHTML = `
     <div class="stat-card"><div class="stat-label">数据覆盖</div><div class="stat-value" style="font-size:1.1rem;letter-spacing:0">${dateRange}</div><div class="stat-sub">${arxivTotal} 篇 arXiv 论文</div></div>
-    <div class="stat-card"><div class="stat-label">监控平台</div><div class="stat-value">8/10</div><div class="stat-sub">平台在线</div></div>
+    <div class="stat-card"><div class="stat-label">监控平台</div><div class="stat-value">15/17</div><div class="stat-sub">平台在线</div></div>
     <div class="stat-card"><div class="stat-label">人才追踪</div><div class="stat-value">${tc}</div><div class="stat-sub">已录入人才</div></div>
     <div class="stat-card"><div class="stat-label">高优先级</div><div class="stat-value">${urgent}</div><div class="stat-sub">2026年毕业</div></div>
   `;

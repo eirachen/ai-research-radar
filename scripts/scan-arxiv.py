@@ -298,7 +298,35 @@ COMPANY_QUERIES = {
     "nvidia": {
         "name": "NVIDIA", "icon": "💚",
         "keywords": ['"NVIDIA Research"', '"NVIDIA Corporation"']
-    }
+    },
+    "baidu": {
+        "name": "百度", "icon": "🔴",
+        "keywords": ['"Baidu Research"', '"Baidu Inc"', '"ERNIE"', '"Qianfan"']
+    },
+    "kuaishou": {
+        "name": "快手", "icon": "📹",
+        "keywords": ['"Kuaishou"', '"Kuaishou Technology"', '"KwaiVGI"']
+    },
+    "didi": {
+        "name": "滴滴", "icon": "🚕",
+        "keywords": ['"DiDi Chuxing"', '"DiDi Global"']
+    },
+    "xiaomi": {
+        "name": "小米", "icon": "📱",
+        "keywords": ['"Xiaomi"', '"Xiaomi AI Lab"']
+    },
+    "stepfun": {
+        "name": "阶跃星辰", "icon": "⭐",
+        "keywords": ['"StepFun"', '"Step AI"', '"stepfun-ai"']
+    },
+    "taotian": {
+        "name": "阿里淘天", "icon": "🛒",
+        "keywords": ['"Taobao"', '"Alibaba Taotian"']
+    },
+    "antgroup": {
+        "name": "蚂蚁集团", "icon": "🐜",
+        "keywords": ['"Ant Group"', '"Ant Financial"', '"AntGroup"']
+    },
 }
 
 ARXIV_API = "https://export.arxiv.org/api/query"

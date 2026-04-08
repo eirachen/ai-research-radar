@@ -861,6 +861,8 @@ const FEED_URLS = {
 const COMPANIES = [
   { id: 'huawei', name: '华为诺亚', icon: '🏢', css: 'company-huawei', keywords: ['华为','诺亚','Huawei','Noah'] },
   { id: 'bytedance', name: '字节Seed', icon: '🌱', css: 'company-bytedance', keywords: ['字节','Seed','ByteDance'] },
+  { id: 'taotian', name: '阿里淘天', icon: '🛒', css: 'company-taotian', keywords: ['淘天','阿里淘天','Taobao','淘宝'] },
+  { id: 'antgroup', name: '蚂蚁集团', icon: '🐜', css: 'company-antgroup', keywords: ['蚂蚁','Ant Group','Ant Financial','AntGroup','Alipay'] },
   { id: 'alibaba', name: '阿里通义', icon: '☁️', css: 'company-alibaba', keywords: ['阿里','通义','Qwen','Alibaba','Tongyi'] },
   { id: 'deepseek', name: 'DeepSeek', icon: '🔍', css: 'company-deepseek', keywords: ['DeepSeek'] },
   { id: 'moonshot', name: '月之暗面', icon: '🌙', css: 'company-moonshot', keywords: ['月之暗面','Moonshot','Kimi'] },
@@ -874,8 +876,6 @@ const COMPANIES = [
   { id: 'didi', name: '滴滴', icon: '🚕', css: 'company-didi', keywords: ['DiDi','滴滴'] },
   { id: 'xiaomi', name: '小米', icon: '📱', css: 'company-xiaomi', keywords: ['Xiaomi','小米'] },
   { id: 'stepfun', name: '阶跃星辰', icon: '⭐', css: 'company-stepfun', keywords: ['StepFun','Step-','阶跃'] },
-  { id: 'taotian', name: '阿里淘天', icon: '🛒', css: 'company-taotian', keywords: ['Taobao','淘天','淘宝'] },
-  { id: 'antgroup', name: '蚂蚁集团', icon: '🐜', css: 'company-antgroup', keywords: ['Ant Group','蚂蚁','Alipay'] },
 ];
 
 const PLATFORMS = [
@@ -983,7 +983,7 @@ function extractPapers(md) {
     const venueMatch = body.match(/(AAAI|ICLR|ICML|NeurIPS|CVPR|ICCV|ECCV)\s*\d{4}/);
 
     const source = sourceMatch ? sourceMatch[1].trim() : '';
-    const companyId = detectCompany(source + ' ' + title + ' ' + body.substring(0, 300));
+    const companyId = detectCompany(source) !== 'unknown' ? detectCompany(source) : detectCompany(source + ' ' + title);
 
     // Extract key highlights
     const highlights = [];

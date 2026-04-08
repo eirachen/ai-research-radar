@@ -581,6 +581,24 @@
   }
   @keyframes remindPulse { from { opacity: 0.7; } to { opacity: 1; } }
 
+  /* ── Date Picker ── */
+  .date-picker {
+    display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;
+    margin-bottom: 1rem; padding: 0.6rem 1rem;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+  }
+  .date-picker .dp-label { font-size: 0.72rem; color: var(--text2); font-weight: 600; margin-right: 0.3rem; }
+  .date-picker .dp-month, .date-picker .dp-day {
+    background: var(--surface2); border: 1px solid var(--border); color: var(--text2);
+    padding: 0.28rem 0.55rem; border-radius: 7px; cursor: pointer;
+    font-size: 0.7rem; transition: all 0.15s;
+  }
+  .date-picker .dp-month:hover, .date-picker .dp-day:hover { border-color: var(--accent); color: var(--text); }
+  .date-picker .dp-month.active, .date-picker .dp-day.active {
+    background: var(--accent); color: #fff; border-color: var(--accent);
+  }
+  .date-picker .dp-sep { color: var(--text2); font-size: 0.65rem; margin: 0 0.2rem; }
+
   @keyframes fadeIn { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
   .paper-card, .stat-card, .platform-card, .radar-card, .report-card { animation: fadeIn 0.4s ease both; }
   .loading { text-align: center; padding: 3rem; color: var(--text2); }
@@ -677,6 +695,7 @@
       <button class="search-clear" id="arxivSearchClear" onclick="clearArxivSearch()">✕</button>
       <span class="search-count" id="arxivSearchCount"></span>
     </div>
+    <div class="date-picker" id="arxivDatePicker"></div>
     <div class="arxiv-company-tabs" id="arxivTabs"></div>
     <div class="arxiv-list" id="arxivList">
       <div class="loading"><div class="spinner"></div>正在加载 arXiv 论文…</div>
@@ -701,6 +720,7 @@
     <div class="section-head">
       <h2><span>🔬</span> 深度情报分析</h2>
     </div>
+    <div class="date-picker" id="intelDatePicker"></div>
     <div class="filter-bar" id="filterBar"></div>
     <div class="paper-list" id="paperList">
       <div class="loading"><div class="spinner"></div>正在加载…</div>
@@ -713,6 +733,7 @@
     <div class="section-head">
       <h2><span>📋</span> 完整日报</h2>
     </div>
+    <div class="date-picker" id="reportDatePicker"></div>
     <div class="report-list" id="reportList"></div>
   </div>
 
@@ -1120,7 +1141,13 @@ function renderFilterBar() {
 
 function renderPapers() {
   const list = document.getElementById('paperList');
-  const filtered = currentFilter === 'all' ? ALL_PAPERS : ALL_PAPERS.filter(p => p.companyId === currentFilter);
+  var filtered = currentFilter === 'all' ? ALL_PAPERS.slice() : ALL_PAPERS.filter(p => p.companyId === currentFilter);
+  // Date filter
+  if (intelDateFilter.day !== 'all') {
+    filtered = filtered.filter(function(p) { return p.date && p.date.indexOf(intelDateFilter.day) >= 0; });
+  } else if (intelDateFilter.month !== 'all') {
+    filtered = filtered.filter(function(p) { return p.date && p.date.indexOf(intelDateFilter.month) >= 0; });
+  }
 
   if (filtered.length === 0) {
     list.innerHTML = `<div class="no-results">该公司暂无论文情报</div>`;
@@ -1154,21 +1181,15 @@ function renderPapers() {
 function renderReports() {
   const list = document.getElementById('reportList');
   if (!REPORTS_DATA.length) { list.innerHTML = ''; return; }
-  list.innerHTML = REPORTS_DATA.map((r, i) => `
-    <div class="report-card" onclick="openReport(${i})">
-      <div class="report-date"><div class="day">${r.day}</div><div class="month">${r.month} ${r.year}</div></div>
-      <div class="report-info">
-        <h3>${r.title}</h3>
-        <p>${r.summary}</p>
-        <div class="report-badges">
-          <span class="badge badge-paper">📄 ${r.papers} 篇论文</span>
-          <span class="badge badge-talent">🎓 ${r.talents} 位人才</span>
-          <span class="badge badge-collab">🏫 ${r.collabs} 校合作</span>
-        </div>
-      </div>
-      <div class="report-arrow">→</div>
-    </div>
-  `).join('');
+  var mMap = {'Jan':'01','Feb':'02','Mar':'03','Apr':'04','May':'05','Jun':'06','Jul':'07','Aug':'08','Sep':'09','Oct':'10','Nov':'11','Dec':'12'};
+  var fr = REPORTS_DATA.filter(function(r) {
+    var rd = r.year + '-' + (mMap[r.month]||'01') + '-' + r.day;
+    if (reportDateFilter.day !== 'all') return rd === reportDateFilter.day;
+    if (reportDateFilter.month !== 'all') return rd.slice(0,7) === reportDateFilter.month;
+    return true;
+  });
+  if (!fr.length) { list.innerHTML = '<div class="no-results">该时间段暂无日报</div>'; return; }
+  list.innerHTML = fr.map(function(r) { var i = REPORTS_DATA.indexOf(r); return '<div class="report-card" onclick="openReport(' + i + ')"><div class="report-date"><div class="day">' + r.day + '</div><div class="month">' + r.month + ' ' + r.year + '</div></div><div class="report-info"><h3>' + r.title + '</h3><p>' + r.summary + '</p><div class="report-badges"><span class="badge badge-paper">📄 ' + r.papers + ' 篇论文</span><span class="badge badge-talent">🎓 ' + r.talents + ' 位人才</span><span class="badge badge-collab">🏫 ' + r.collabs + ' 校合作</span></div></div><div class="report-arrow">→</div></div>'; }).join('');
 }
 
 function renderRadar() {
@@ -1523,6 +1544,10 @@ let currentArxivCompany = 'all';
 let talentNotes = {};
 let arxivSearchQuery = '';
 let talentSearchQuery = '';
+// Date filter state: { month: '2026-03' or 'all', day: '2026-03-15' or 'all' }
+var arxivDateFilter = { month: 'all', day: 'all' };
+var intelDateFilter = { month: 'all', day: 'all' };
+var reportDateFilter = { month: 'all', day: 'all' };
 // Reverse map: talent key → [{title, url, company, pdfUrl}]
 let talentPaperMap = {};
 
@@ -1733,6 +1758,12 @@ function renderArxivList() {
     var c = arxivData.companies[currentArxivCompany];
     if (c) papers = c.papers.map(function(p) { return Object.assign({}, p, {_company: c.company, _icon: c.icon}); });
   }
+  // Date filter
+  if (arxivDateFilter.day !== 'all') {
+    papers = papers.filter(function(p) { return p.published && p.published.slice(0,10) === arxivDateFilter.day; });
+  } else if (arxivDateFilter.month !== 'all') {
+    papers = papers.filter(function(p) { return p.published && p.published.slice(0,7) === arxivDateFilter.month; });
+  }
   // Search filter
   if (arxivSearchQuery) {
     var q = arxivSearchQuery.toLowerCase();
@@ -1790,6 +1821,90 @@ function renderArxivList() {
     }
     return '<div class="' + cardClass + '"><div class="arxiv-paper-head"><div class="arxiv-paper-title"><a href="' + p.arxivUrl + '" target="_blank">' + p.title + ' ↗</a></div><div class="arxiv-paper-date">' + p._icon + ' ' + date + '</div></div><div class="arxiv-paper-authors">' + authors + '</div>' + uniDetail + '<div class="arxiv-paper-summary">' + p.summary + '</div><div class="arxiv-paper-tags">' + dirTags + '<span class="arxiv-tag">' + p._company + '</span>' + cats + (venue ? '<span class="arxiv-tag arxiv-venue-tag">🏆 ' + venue + '</span>' : '') + uniBadge + '<a class="arxiv-tag" href="' + p.arxivUrl + '" target="_blank" style="text-decoration:none;background:rgba(59,130,246,0.15)">📄 论文原文 ↗</a>' + (p.pdfUrl ? '<a class="arxiv-tag" href="' + p.pdfUrl + '" target="_blank" style="text-decoration:none;background:rgba(239,68,68,0.1);color:#f87171">📎 PDF下载 ↗</a>' : '') + '</div>' + talentHTML + '</div>';
   }).join('');
+}
+
+// ── Date Picker System ──
+function getMonthsFromDates(dates) {
+  var months = {};
+  dates.forEach(function(d) { if (d && d.length >= 7) months[d.slice(0,7)] = true; });
+  return Object.keys(months).sort().reverse();
+}
+function getDaysInMonth(dates, month) {
+  var days = {};
+  dates.forEach(function(d) { if (d && d.slice(0,7) === month) days[d.slice(0,10)] = true; });
+  return Object.keys(days).sort().reverse();
+}
+function renderDatePicker(containerId, filter, months, onMonthClick, onDayClick, dates) {
+  var el = document.getElementById(containerId);
+  if (!el) return;
+  var html = '<span class="dp-label">📅 时间</span>';
+  html += '<span class="dp-month ' + (filter.month==='all'?'active':'') + '" onclick="' + onMonthClick + '(\'all\')">全部</span>';
+  months.forEach(function(m) {
+    var label = m.slice(0,4) + '年' + parseInt(m.slice(5,7)) + '月';
+    html += '<span class="dp-month ' + (filter.month===m?'active':'') + '" onclick="' + onMonthClick + '(\'' + m + '\')">' + label + '</span>';
+  });
+  // Day buttons (only if a month is selected)
+  if (filter.month !== 'all') {
+    var days = getDaysInMonth(dates, filter.month);
+    if (days.length > 1) {
+      html += '<span class="dp-sep">|</span>';
+      html += '<span class="dp-day ' + (filter.day==='all'?'active':'') + '" onclick="' + onDayClick + '(\'all\')">整月</span>';
+      days.forEach(function(d) {
+        var dayNum = parseInt(d.slice(8,10));
+        html += '<span class="dp-day ' + (filter.day===d?'active':'') + '" onclick="' + onDayClick + '(\'' + d + '\')">' + dayNum + '日</span>';
+      });
+    }
+  }
+  el.innerHTML = html;
+}
+
+// arXiv date filter
+function arxivPickMonth(m) {
+  arxivDateFilter.month = m; arxivDateFilter.day = 'all';
+  renderArxivDatePicker(); renderArxivList();
+}
+function arxivPickDay(d) {
+  arxivDateFilter.day = d;
+  renderArxivDatePicker(); renderArxivList();
+}
+function renderArxivDatePicker() {
+  if (!arxivData) return;
+  var dates = [];
+  Object.values(arxivData.companies).forEach(function(c) {
+    c.papers.forEach(function(p) { if (p.published) dates.push(p.published.slice(0,10)); });
+  });
+  var months = getMonthsFromDates(dates);
+  renderDatePicker('arxivDatePicker', arxivDateFilter, months, 'arxivPickMonth', 'arxivPickDay', dates);
+}
+
+// Intel date filter
+function intelPickMonth(m) {
+  intelDateFilter.month = m; intelDateFilter.day = 'all';
+  renderIntelDatePicker(); renderPapers();
+}
+function intelPickDay(d) {
+  intelDateFilter.day = d;
+  renderIntelDatePicker(); renderPapers();
+}
+function renderIntelDatePicker() {
+  var dates = ALL_PAPERS.map(function(p) { return p.date || ''; });
+  var months = getMonthsFromDates(dates);
+  renderDatePicker('intelDatePicker', intelDateFilter, months, 'intelPickMonth', 'intelPickDay', dates);
+}
+
+// Report date filter
+function reportPickMonth(m) {
+  reportDateFilter.month = m; reportDateFilter.day = 'all';
+  renderReportDatePicker(); renderReports();
+}
+function reportPickDay(d) {
+  reportDateFilter.day = d;
+  renderReportDatePicker(); renderReports();
+}
+function renderReportDatePicker() {
+  var dates = REPORTS_DATA.map(function(r) { return r.year + '-' + (r.month ? {'Jan':'01','Feb':'02','Mar':'03','Apr':'04','May':'05','Jun':'06','Jul':'07','Aug':'08','Sep':'09','Oct':'10','Nov':'11','Dec':'12'}[r.month] || '01' : '01') + '-' + r.day; });
+  var months = getMonthsFromDates(dates);
+  renderDatePicker('reportDatePicker', reportDateFilter, months, 'reportPickMonth', 'reportPickDay', dates);
 }
 
 function filterArxiv(companyId) {
@@ -2668,6 +2783,8 @@ async function loadReports() {
   renderReports();
   renderRadar();
   renderTalent();
+  renderIntelDatePicker();
+  renderReportDatePicker();
   // Update home badges
   var talentCount = Object.keys(talentNotes).length;
   if (ALL_PAPERS.length) document.getElementById('intelBadge').textContent = ALL_PAPERS.length + ' 篇深度分析';
@@ -2675,7 +2792,7 @@ async function loadReports() {
   if (talentCount) document.getElementById('talentBadge').textContent = talentCount + ' 位追踪中';
 }
 
-loadTalentNotes().then(function() { loadArxiv().then(function() { buildTalentPaperMap(); renderTalentExistingList(); renderTalent(); renderStats(); renderNetwork(); }); });
+loadTalentNotes().then(function() { loadArxiv().then(function() { buildTalentPaperMap(); renderTalentExistingList(); renderTalent(); renderStats(); renderArxivDatePicker(); renderNetwork(); }); });
 loadReports();
 loadFeeds();
 </script>

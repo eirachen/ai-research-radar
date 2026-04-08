@@ -806,6 +806,10 @@
           <label>已加微信</label>
           <select id="te-wechat"><option value="false">否</option><option value="true">是 ✅</option></select>
         </div>
+        <div class="editor-field">
+          <label>身份分组</label>
+          <select id="te-group"><option value="auto">自动判断</option><option value="student">🎓 在校学生</option><option value="professional">👔 教授/研究员/业界</option><option value="unknown">❓ 未确认</option></select>
+        </div>
         <div class="editor-actions">
           <button class="editor-btn editor-btn-save" onclick="saveTalent()">💾 保存</button>
           <button class="editor-btn editor-btn-clear" onclick="clearForm()">🗑️ 清空</button>
@@ -942,7 +946,8 @@ function getTalentsForTable() {
       wechatAdded: t.wechatAdded || false,
       manuallyEdited: t.manuallyEdited || false,
       lastManualEdit: t.lastManualEdit || '',
-      editedAt: t.editedAt || ''
+      editedAt: t.editedAt || '',
+      group: t.group || 'auto'
     };
   }).sort(function(a,b) {
     var order = {high:0,medium:1,low:2};
@@ -1216,8 +1221,9 @@ function renderTalent() {
   });
   var today = new Date();
 
-  var studentList = allTalents.filter(function(t) { return isStudent(t.status); });
-  var otherList = allTalents.filter(function(t) { return !isStudent(t.status); });
+  var studentList = allTalents.filter(function(t) { return getTalentGroup(t) === 'student'; });
+  var proList = allTalents.filter(function(t) { return getTalentGroup(t) === 'professional'; });
+  var unknownList = allTalents.filter(function(t) { return getTalentGroup(t) === 'unknown'; });
 
   function buildDetailHTML(t) {
     var isEdited = t.manuallyEdited || (t.statusNote && t.statusNote.length > 0) || false;
@@ -1294,13 +1300,24 @@ function renderTalent() {
   '</div>';
   // Others - collapsed section
   html += '<div style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden">' +
-    '<div style="padding:0.7rem 1rem;background:rgba(168,85,247,0.06);border-bottom:1px solid var(--border);font-weight:700;font-size:0.85rem;color:var(--purple);cursor:pointer;display:flex;align-items:center;gap:0.4rem" onclick="toggleTalentSection(\'otherSection\',this)">' +
+    '<div style="padding:0.7rem 1rem;background:rgba(168,85,247,0.06);border-bottom:1px solid var(--border);font-weight:700;font-size:0.85rem;color:var(--purple);cursor:pointer;display:flex;align-items:center;gap:0.4rem" onclick="toggleTalentSection(\'proSection\',this)">' +
       '<span class="net-chevron" style="font-size:0.7rem;transition:transform 0.2s">▶</span>' +
-      '👔 教授 / 研究员 / 业界 / 待确认 (' + otherList.length + '人)' +
+      '👔 教授 / 研究员 / 业界 (' + proList.length + '人)' +
     '</div>' +
-    '<div id="otherSection" style="display:none">' +
-      (otherList.length ? '<div style="display:grid;grid-template-columns:1fr 1fr;gap:0">' + otherList.map(function(t) { return renderCompactRow(t); }).join('') + '</div>' : '<div style="padding:1rem;color:var(--text2);font-size:0.8rem">暂无</div>') +
+    '<div id="proSection" style="display:none">' +
+      (proList.length ? '<div style="display:grid;grid-template-columns:1fr 1fr;gap:0">' + proList.map(function(t) { return renderCompactRow(t); }).join('') + '</div>' : '<div style="padding:1rem;color:var(--text2);font-size:0.8rem">暂无</div>') +
     '</div>' +
+  '</div>';
+  // Unknown - collapsed section
+  html += '<div style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden">' +
+    '<div style="padding:0.7rem 1rem;background:rgba(148,163,184,0.08);border-bottom:1px solid var(--border);font-weight:700;font-size:0.85rem;color:var(--text2);cursor:pointer;display:flex;align-items:center;gap:0.4rem" onclick="toggleTalentSection(\'unknownSection\',this)">' +
+      '<span class="net-chevron" style="font-size:0.7rem;transition:transform 0.2s">▶</span>' +
+      '❓ 未确认 (' + unknownList.length + '人) <span style="font-size:0.65rem;font-weight:400;margin-left:0.3rem">编辑后可移动到其他分组</span>' +
+    '</div>' +
+    '<div id="unknownSection" style="display:none">' +
+      (unknownList.length ? '<div style="display:grid;grid-template-columns:1fr 1fr;gap:0">' + unknownList.map(function(t) { return renderCompactRow(t); }).join('') + '</div>' : '<div style="padding:1rem;color:var(--text2);font-size:0.8rem">暂无</div>') +
+    '</div>' +
+  '</div>';
   '</div>';
 
   container.innerHTML = html;
@@ -2024,6 +2041,7 @@ function saveTalent() {
     gradYear: document.getElementById('te-gradYear').value.trim() || '待确认',
     statusNote: document.getElementById('te-statusNote').value.trim() || '',
     wechatAdded: document.getElementById('te-wechat').value === 'true',
+    group: document.getElementById('te-group').value,
     manuallyEdited: true,
     lastManualEdit: new Date().toISOString().slice(0, 10),
     editedAt: new Date().toISOString().slice(0, 10)
@@ -2059,6 +2077,7 @@ function clearForm() {
   });
   document.getElementById('te-isHK').value = 'false';
   document.getElementById('te-wechat').value = 'false';
+  document.getElementById('te-group').value = 'auto';
 }
 
 function editTalent(key) {
@@ -2077,6 +2096,7 @@ function editTalent(key) {
   document.getElementById('te-lab').value = t.lab || '';
   document.getElementById('te-statusNote').value = t.statusNote || '';
   document.getElementById('te-wechat').value = t.wechatAdded ? 'true' : 'false';
+  document.getElementById('te-group').value = t.group || 'auto';
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -2162,6 +2182,21 @@ function isStudent(status) {
   return /博|硕|在读|学生|phd|student|master|mphil|候选/.test(s);
 }
 
+// Returns 'student', 'professional', or 'unknown'
+function getTalentGroup(t) {
+  // Manual group override
+  if (t.group === 'student') return 'student';
+  if (t.group === 'professional') return 'professional';
+  if (t.group === 'unknown') return 'unknown';
+  // Auto: check status field
+  var status = t.status || '';
+  if (isStudent(status)) return 'student';
+  if (/教授|研究员|professor|researcher|scientist|工程师|engineer|CEO|CTO|负责人|主任/i.test(status)) return 'professional';
+  // Default: if status is '待确认' or empty, it's unknown
+  if (!status || status === '待确认') return 'unknown';
+  return 'unknown';
+}
+
 function renderTalentCard(key) {
   var t = talentNotes[key];
   var isLocal = getLocalTalentNotes() && getLocalTalentNotes()[key];
@@ -2196,14 +2231,14 @@ function renderTalentExistingList() {
   if (!keys.length) { list.innerHTML = '<div style="color:var(--text2);font-size:0.8rem;padding:1rem">暂无人才数据</div>'; return; }
 
   var students = [];
-  var nonStudents = [];
+  var pros = [];
+  var unknowns = [];
   keys.forEach(function(key) {
     var t = talentNotes[key];
-    if (isStudent(t.status)) {
-      students.push(key);
-    } else {
-      nonStudents.push(key);
-    }
+    var g = getTalentGroup(t);
+    if (g === 'student') students.push(key);
+    else if (g === 'professional') pros.push(key);
+    else unknowns.push(key);
   });
 
   // Alphabet groups
@@ -2241,17 +2276,20 @@ function renderTalentExistingList() {
   }
 
   var html = '';
-  // Students section
   var studentGroups = groupByAlpha(students);
   html += '<div style="margin-bottom:0.6rem;padding:0.5rem 0.8rem;background:rgba(34,197,94,0.08);border-radius:10px;border-left:3px solid var(--green)">' +
     '<div style="font-size:0.82rem;font-weight:700;color:var(--green);margin-bottom:0.4rem">🎓 在校学生 <span style="font-weight:400;font-size:0.72rem;color:var(--text2)">(' + students.length + ' 人)</span></div>' +
     (students.length ? renderAlphaSection(studentGroups, 'stu') : '<div style="font-size:0.75rem;color:var(--text2);padding:0.5rem 0">暂无在校学生</div>') +
     '</div>';
-  // Non-students section
-  var nonStudentGroups = groupByAlpha(nonStudents);
+  var proGroups = groupByAlpha(pros);
   html += '<div style="margin-bottom:0.6rem;padding:0.5rem 0.8rem;background:rgba(168,85,247,0.06);border-radius:10px;border-left:3px solid var(--purple)">' +
-    '<div style="font-size:0.82rem;font-weight:700;color:var(--purple);margin-bottom:0.4rem">👔 教授 / 研究员 / 业界 <span style="font-weight:400;font-size:0.72rem;color:var(--text2)">(' + nonStudents.length + ' 人)</span></div>' +
-    (nonStudents.length ? renderAlphaSection(nonStudentGroups, 'pro') : '<div style="font-size:0.75rem;color:var(--text2);padding:0.5rem 0">暂无</div>') +
+    '<div style="font-size:0.82rem;font-weight:700;color:var(--purple);margin-bottom:0.4rem">👔 教授 / 研究员 / 业界 <span style="font-weight:400;font-size:0.72rem;color:var(--text2)">(' + pros.length + ' 人)</span></div>' +
+    (pros.length ? renderAlphaSection(proGroups, 'pro') : '<div style="font-size:0.75rem;color:var(--text2);padding:0.5rem 0">暂无</div>') +
+    '</div>';
+  var unknownGroups = groupByAlpha(unknowns);
+  html += '<div style="margin-bottom:0.6rem;padding:0.5rem 0.8rem;background:rgba(148,163,184,0.04);border-radius:10px;border-left:3px solid var(--text2)">' +
+    '<div style="font-size:0.82rem;font-weight:700;color:var(--text2);margin-bottom:0.4rem">❓ 未确认 <span style="font-weight:400;font-size:0.72rem">(' + unknowns.length + ' 人)</span></div>' +
+    (unknowns.length ? renderAlphaSection(unknownGroups, 'unk') : '<div style="font-size:0.75rem;color:var(--text2);padding:0.5rem 0">暂无</div>') +
     '</div>';
 
   list.innerHTML = html;

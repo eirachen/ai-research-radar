@@ -2477,18 +2477,35 @@ function renderNetworkDetails(data) {
         (p.status ? ' <span style="color:var(--text2)">· ' + p.status + '</span>' : '') +
         '</span>';
     }).join('');
+  var detailId = 'netDetail_' + e.source + '_' + e.target;
     return '<div class="net-detail-card" style="flex-direction:column;align-items:stretch">' +
-      '<div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.5rem">' +
+      '<div style="display:flex;align-items:center;gap:0.75rem;cursor:pointer" onclick="toggleNetDetail(\'' + detailId + '\',this)">' +
+        '<span style="font-size:0.8rem;color:var(--text2);transition:transform 0.2s" class="net-chevron">▶</span>' +
         '<span class="net-detail-company">' + (s ? s.icon + ' ' + s.label : e.source) + '</span>' +
         '<span class="net-detail-arrow">⟷</span>' +
         '<span class="net-detail-uni' + (isHK ? ' hk' : '') + '">' + (t ? t.label : e.target) + (isHK ? ' 🇭🇰' : '') + '</span>' +
         '<span class="net-detail-dirs">' + e.directions.map(function(d) { return '<span class="net-detail-dir">' + d + '</span>'; }).join('') + '</span>' +
         '<span class="net-detail-count">' + e.papers + ' 篇论文</span>' +
       '</div>' +
-      (talentInfo ? '<div style="margin-bottom:0.4rem;display:flex;flex-wrap:wrap">' + talentInfo + '</div>' : '') +
-      '<div style="border-top:1px solid var(--border);padding-top:0.4rem">' + paperLinks + '</div>' +
+      '<div id="' + detailId + '" style="display:none;margin-top:0.5rem">' +
+        (talentInfo ? '<div style="margin-bottom:0.4rem;display:flex;flex-wrap:wrap">' + talentInfo + '</div>' : '') +
+        '<div style="border-top:1px solid var(--border);padding-top:0.4rem">' + paperLinks + '</div>' +
+      '</div>' +
       '</div>';
   }).join('');
+}
+
+function toggleNetDetail(id, headerEl) {
+  var el = document.getElementById(id);
+  if (!el) return;
+  var chevron = headerEl.querySelector('.net-chevron');
+  if (el.style.display === 'none') {
+    el.style.display = 'block';
+    if (chevron) chevron.style.transform = 'rotate(90deg)';
+  } else {
+    el.style.display = 'none';
+    if (chevron) chevron.style.transform = '';
+  }
 }
 
 // ══════════════════════════════════════

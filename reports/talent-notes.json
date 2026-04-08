@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-08T14:00:00Z",
+  "generatedAt": "2026-04-08T17:15:00Z",
   "notes": {
     "Ye Tian": {
       "name": "田野 (Ye Tian)",
@@ -11,7 +11,9 @@
       "homepage": "https://tyfeld.github.io/",
       "scholar": "https://scholar.google.com/citations?user=bBJiBjUAAAAJ",
       "direction": "AIGC / 多模态 / 扩散模型",
-      "gradYear": "~2029"
+      "gradYear": "~2029",
+      "statusNote": "",
+      "editedAt": "2026-04-08"
     },
     "Chengcheng Wang": {
       "name": "王程程 (Chengcheng Wang)",
@@ -23,7 +25,9 @@
       "homepage": "",
       "scholar": "https://scholar.google.com/citations?user=OfmE9XUAAAAJ",
       "direction": "深度学习 / 计算机视觉",
-      "gradYear": "待确认"
+      "gradYear": "待确认",
+      "statusNote": "",
+      "editedAt": "2026-04-08"
     },
     "Jinyi Hu": {
       "name": "胡金毅 (Jinyi Hu)",
@@ -35,7 +39,9 @@
       "homepage": "https://jameshujy.github.io/",
       "scholar": "https://scholar.google.com/citations?user=Cz70Xr8AAAAJ",
       "direction": "多模态 / Physical AI",
-      "gradYear": "2026"
+      "gradYear": "2026",
+      "statusNote": "即将毕业，与字节Seed深度合作",
+      "editedAt": "2026-04-08"
     },
     "Tyler Zhu": {
       "name": "Tyler Zhu",
@@ -47,7 +53,9 @@
       "homepage": "https://tylerzhu.com/",
       "scholar": "https://scholar.google.com/citations?user=-aoybA4AAAAJ",
       "direction": "计算机视觉 / 视频理解",
-      "gradYear": "~2027"
+      "gradYear": "~2027",
+      "statusNote": "",
+      "editedAt": "2026-04-08"
     },
     "Thomas Jiralerspong": {
       "name": "Thomas Jiralerspong",
@@ -59,19 +67,163 @@
       "homepage": "https://superkaiba.github.io/",
       "scholar": "https://scholar.google.com/citations?user=ifQsJnIAAAAJ",
       "direction": "可解释性 / RL / 生成模型",
-      "gradYear": "待确认"
+      "gradYear": "待确认",
+      "statusNote": "Anthropic Fellow",
+      "editedAt": "2026-04-08"
     },
     "Guhao Feng": {
-      "name": "Guhao Feng",
-      "university": "待确认",
+      "name": "Guhao Feng (冯谷浩)",
+      "university": "北京大学",
       "isHK": false,
-      "status": "待确认",
-      "advisor": "待确认",
-      "lab": "",
+      "status": "在读博士生",
+      "advisor": "Di He (贺笛)",
+      "lab": "北京大学智能学院",
       "homepage": "",
       "scholar": "",
-      "direction": "LLM / 推理优化",
-      "gradYear": ""
+      "direction": "LLM / 推理优化 / 数值精度",
+      "gradYear": "待确认",
+      "statusNote": "In-Place TTT (ICLR 2026 Oral) 一作",
+      "editedAt": "2026-04-08"
+    },
+    "Shengjie Luo": {
+      "name": "罗胜杰 (Shengjie Luo)",
+      "university": "北京大学",
+      "isHK": false,
+      "status": "博士（末年）",
+      "advisor": "Liwei Wang (王立威) + Di He (贺笛)",
+      "lab": "北京大学智能科学与技术学院",
+      "homepage": "https://lsj2408.github.io/",
+      "scholar": "https://scholar.google.com/citations?user=ImWO7WYAAAAJ",
+      "direction": "Machine Learning / Transformer",
+      "gradYear": "2025",
+      "statusNote": "2025起在ByteDance Seed工作",
+      "editedAt": "2026-04-08"
+    },
+    "Tianle Cai": {
+      "name": "蔡天乐 (Tianle Cai)",
+      "university": "普林斯顿大学",
+      "isHK": false,
+      "status": "博士生",
+      "advisor": "Kai Li + Jason D. Lee",
+      "lab": "SysML@Princeton",
+      "homepage": "https://ctlllll.github.io/",
+      "scholar": "https://scholar.google.com/citations?user=CvwLRSMAAAAJ",
+      "direction": "Machine Learning / LLM效率",
+      "gradYear": "待确认",
+      "statusNote": "h-index 20, 3.6k+ citations，本科北大",
+      "editedAt": "2026-04-08"
+    },
+    "Di He": {
+      "name": "贺笛 (Di He)",
+      "university": "北京大学",
+      "isHK": false,
+      "status": "助理教授",
+      "advisor": "",
+      "lab": "北京大学智能科学与技术学院",
+      "homepage": "https://dihe-pku.github.io/",
+      "scholar": "https://scholar.google.com/citations?user=orVoz4IAAAAJ",
+      "direction": "生成模型 / LLM / AI4Science",
+      "gradYear": "",
+      "statusNote": "15,297 citations，前MSRA高级研究员",
+      "editedAt": "2026-04-08"
+    },
+    "Douwe Kiela": {
+      "name": "Douwe Kiela",
+      "university": "斯坦福大学",
+      "isHK": false,
+      "status": "兼职教授",
+      "advisor": "",
+      "lab": "Stanford Symbolic Systems / Contextual AI CEO",
+      "homepage": "https://douwekiela.github.io/",
+      "scholar": "https://scholar.google.com/citations?user=Q0piorUAAAAJ",
+      "direction": "NLP / 多模态",
+      "gradYear": "",
+      "statusNote": "Contextual AI CEO, 前HuggingFace研究负责人",
+      "editedAt": "2026-04-08"
+    },
+    "Xingjun Ma": {
+      "name": "马兴军 (Xingjun Ma)",
+      "university": "复旦大学",
+      "isHK": false,
+      "status": "副教授/研究员",
+      "advisor": "",
+      "lab": "复旦大学计算机学院 / OpenTAI",
+      "homepage": "http://xingjunma.com/",
+      "scholar": "https://scholar.google.com/citations?user=XQViiyYAAAAJ",
+      "direction": "可信AI / 对抗鲁棒性 / 安全",
+      "gradYear": "",
+      "statusNote": "国家级青年人才计划入选者，博导",
+      "editedAt": "2026-04-08"
+    },
+    "Zimo Ji": {
+      "name": "Zimo Ji",
+      "university": "香港科技大学 (HKUST)",
+      "isHK": true,
+      "status": "访问学生/在读",
+      "advisor": "Shuai Wang (王帅)",
+      "lab": "HKUST CSE",
+      "homepage": "",
+      "scholar": "",
+      "direction": "网络安全 / LLM安全",
+      "gradYear": "待确认",
+      "statusNote": "HKUST访问学生，与Shuai Wang合作，发表USENIX Security 2025",
+      "editedAt": "2026-04-08"
+    },
+    "Ao Qu": {
+      "name": "瞿骜 (Ao Qu)",
+      "university": "MIT",
+      "isHK": false,
+      "status": "博士生",
+      "advisor": "Paul Liang + Jinhua Zhao",
+      "lab": "MIT IDSS",
+      "homepage": "https://quao627.github.io/",
+      "scholar": "https://scholar.google.com/citations?user=qKdzvdwAAAAJ",
+      "direction": "Language Agent / 多智能体 / 社会计算",
+      "gradYear": "待确认",
+      "statusNote": "CORAL多智能体论文一作",
+      "editedAt": "2026-04-08"
+    },
+    "Hanrong Zhang": {
+      "name": "张涵容 (Hanrong Zhang)",
+      "university": "伊利诺伊大学芝加哥分校 (UIC)",
+      "isHK": false,
+      "status": "博一",
+      "advisor": "Philip S. Yu (ACM/IEEE/AAAS Fellow)",
+      "lab": "UIC BDSC Lab",
+      "homepage": "https://zhang-henry.github.io/",
+      "scholar": "https://scholar.google.com/citations?user=qG5_O40AAAAJ",
+      "direction": "LLM Agent / AI Safety / 数据挖掘",
+      "gradYear": "~2029",
+      "statusNote": "2026暑期Google Student Researcher，浙大硕士",
+      "editedAt": "2026-04-08"
+    },
+    "Wenhao Huang": {
+      "name": "Wenhao Huang (黄文昊)",
+      "university": "北京大学",
+      "isHK": false,
+      "status": "研究员",
+      "advisor": "",
+      "lab": "ByteDance Seed / 前01.AI联合创始人",
+      "homepage": "",
+      "scholar": "https://scholar.google.com/citations?user=OdE3MsQAAAAJ",
+      "direction": "机器学习 / 深度学习 / 数据挖掘",
+      "gradYear": "",
+      "statusNote": "Yi系列模型核心成员，h-index 22, 4.1k citations",
+      "editedAt": "2026-04-08"
+    },
+    "Ge Zhang": {
+      "name": "Ge Zhang (张歌)",
+      "university": "滑铁卢大学 / M-A-P",
+      "isHK": false,
+      "status": "研究员",
+      "advisor": "",
+      "lab": "M-A-P / ByteDance Seed",
+      "homepage": "",
+      "scholar": "https://scholar.google.com/citations?user=qyTrq4kAAAAJ",
+      "direction": "NLP / 多模态 / 音乐AI / Agent",
+      "gradYear": "",
+      "statusNote": "h-index 29, 13,243 citations，产出极高",
+      "editedAt": "2026-04-08"
     }
   }
 }

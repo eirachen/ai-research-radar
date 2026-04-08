@@ -516,6 +516,64 @@
     font-size: 0.7rem; color: var(--text2); white-space: nowrap; flex-shrink: 0;
   }
 
+  /* ── Collaboration Network ── */
+  .network-container {
+    position: relative; background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; overflow: hidden; margin-bottom: 1rem;
+  }
+  .network-container canvas { display: block; width: 100%; cursor: grab; }
+  .network-container canvas:active { cursor: grabbing; }
+  .network-tooltip {
+    display: none; position: absolute; background: var(--surface2); border: 1px solid var(--border);
+    border-radius: 10px; padding: 0.6rem 0.85rem; font-size: 0.75rem; color: var(--text);
+    pointer-events: none; z-index: 50; max-width: 320px; line-height: 1.5;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+  }
+  .network-controls {
+    display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 1rem;
+  }
+  .network-legend {
+    display: flex; gap: 1.2rem; align-items: center; padding: 0.6rem 1rem;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 10px; font-size: 0.72rem; color: var(--text2); flex-wrap: wrap;
+  }
+  .legend-item { display: flex; align-items: center; gap: 0.3rem; }
+  .legend-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+  .legend-line { color: var(--text2); letter-spacing: 0.05em; }
+  .network-detail-list { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 2rem; }
+  .net-detail-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 10px; padding: 0.85rem 1.1rem; display: flex; align-items: center; gap: 1rem;
+  }
+  .net-detail-card:hover { border-color: var(--accent); }
+  .net-detail-company { font-weight: 700; font-size: 0.85rem; min-width: 100px; }
+  .net-detail-arrow { color: var(--text2); font-size: 1.1rem; }
+  .net-detail-uni { font-weight: 600; font-size: 0.82rem; color: var(--green); min-width: 120px; }
+  .net-detail-uni.hk { color: #fbbf24; }
+  .net-detail-dirs { display: flex; gap: 0.25rem; flex-wrap: wrap; flex: 1; }
+  .net-detail-dir {
+    font-size: 0.62rem; padding: 0.1rem 0.35rem; border-radius: 4px;
+    background: rgba(59,130,246,0.12); color: var(--accent2); font-weight: 600;
+  }
+  .net-detail-count { font-size: 0.68rem; color: var(--text2); white-space: nowrap; }
+
+  /* ── Talent table enhancements ── */
+  .talent-table thead th.sortable { cursor: pointer; user-select: none; }
+  .talent-table thead th.sortable:hover { color: var(--accent2); }
+  .talent-table tbody td.edited-cell { position: relative; }
+  .edited-marker {
+    display: inline-block; width: 8px; height: 8px; border-radius: 50%;
+    background: #f59e0b; margin-right: 0.3rem; vertical-align: middle;
+    box-shadow: 0 0 6px rgba(245,158,11,0.4);
+  }
+  .wechat-check { accent-color: var(--green); cursor: pointer; width: 15px; height: 15px; }
+  .remind-badge {
+    font-size: 0.58rem; padding: 0.08rem 0.3rem; border-radius: 4px;
+    background: rgba(239,68,68,0.15); color: #f87171; font-weight: 600;
+    animation: remindPulse 2s ease-in-out infinite alternate;
+  }
+  @keyframes remindPulse { from { opacity: 0.7; } to { opacity: 1; } }
+
   @keyframes fadeIn { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
   .paper-card, .stat-card, .platform-card, .radar-card, .report-card { animation: fadeIn 0.4s ease both; }
   .loading { text-align: center; padding: 3rem; color: var(--text2); }
@@ -581,6 +639,12 @@
         <div class="nav-card-title">公司动向雷达</div>
         <div class="nav-card-desc">8家公司的研究方向、战略趋势判断，点击可筛选相关情报</div>
         <div class="nav-card-badge">8 家公司</div>
+      </div>
+      <div class="nav-card" onclick="navigateTo('network')">
+        <div class="nav-card-icon">🕸️</div>
+        <div class="nav-card-title">合作关系网络</div>
+        <div class="nav-card-desc">以公司为圆心，自动构建与高校实验室的合作关系图谱，连线标注合作方向</div>
+        <div class="nav-card-badge" id="networkBadge">构建中…</div>
       </div>
     </div>
     <!-- Platform Status on home -->
@@ -706,6 +770,10 @@
           <label>当前状态 - 日期</label>
           <input type="text" id="te-statusNote" placeholder="如: 2026-04 已接受字节offer">
         </div>
+        <div class="editor-field">
+          <label>已加微信</label>
+          <select id="te-wechat"><option value="false">否</option><option value="true">是 ✅</option></select>
+        </div>
         <div class="editor-actions">
           <button class="editor-btn editor-btn-save" onclick="saveTalent()">💾 保存</button>
           <button class="editor-btn editor-btn-clear" onclick="clearForm()">🗑️ 清空</button>
@@ -732,6 +800,31 @@
       <h2><span>📊</span> 各公司研究动向</h2>
     </div>
     <div class="radar-grid" id="radarGrid"></div>
+  </div>
+
+  <!-- ═══ PAGE: Collaboration Network ═══ -->
+  <div class="page-view" id="page-network">
+    <button class="back-btn" onclick="navigateTo('home')">← 返回主页</button>
+    <div class="section-head">
+      <h2><span>🕸️</span> 公司-高校合作关系网络</h2>
+      <span style="font-size:0.72rem;color:var(--text2)" id="networkMeta"></span>
+    </div>
+    <div class="network-controls">
+      <button class="filter-btn active" onclick="setNetworkView('all')" id="netViewAll">全部公司</button>
+    </div>
+    <div class="network-container">
+      <canvas id="networkCanvas" width="1160" height="700"></canvas>
+      <div class="network-tooltip" id="netTooltip"></div>
+    </div>
+    <div class="network-legend">
+      <span class="legend-item"><span class="legend-dot" style="background:#3b82f6"></span>公司</span>
+      <span class="legend-item"><span class="legend-dot" style="background:#22c55e"></span>高校</span>
+      <span class="legend-item"><span class="legend-dot" style="background:#f59e0b"></span>港校 🇭🇰</span>
+      <span class="legend-item"><span class="legend-dot" style="background:#a855f7"></span>实验室</span>
+      <span class="legend-line">──── 合作方向</span>
+    </div>
+    <div class="section-head" style="margin-top:1.5rem"><h2><span>📋</span> 合作关系明细</h2></div>
+    <div id="networkDetailList" class="network-detail-list"></div>
   </div>
 
   <!-- ═══ DETAIL VIEW (report/paper detail) ═══ -->
@@ -790,6 +883,7 @@ function getTalentsForTable() {
     if (t.gradYear === '2026') urgency = 'high';
     else if (t.gradYear === '2027' || t.gradYear === '~2027') urgency = 'medium';
     return {
+      key: key,
       name: t.name || key,
       school: t.university || '',
       status: t.status || '待确认',
@@ -800,7 +894,10 @@ function getTalentsForTable() {
       urgency: urgency,
       url: t.homepage || t.scholar || '#',
       isHK: t.isHK || false,
-      statusNote: t.statusNote || ''
+      statusNote: t.statusNote || '',
+      wechatAdded: t.wechatAdded || false,
+      manuallyEdited: t.manuallyEdited || false,
+      lastManualEdit: t.lastManualEdit || ''
     };
   }).sort(function(a,b) {
     var order = {high:0,medium:1,low:2};
@@ -1038,20 +1135,50 @@ function renderRadar() {
 function renderTalent() {
   var table = document.getElementById('talentTable');
   var allTalents = getTalentsForTable();
-  table.innerHTML = '<thead><tr><th>紧急度</th><th>姓名</th><th>高校</th><th>身份</th><th>实验室/导师</th><th>研究方向</th><th>预计毕业</th><th>备注</th></tr></thead><tbody>' +
+  // Sort by urgency: high → medium → low
+  allTalents.sort(function(a,b) {
+    var order = {high:0,medium:1,low:2};
+    return (order[a.urgency]||2) - (order[b.urgency]||2);
+  });
+  var today = new Date();
+  table.innerHTML = '<thead><tr>' +
+    '<th>紧急度</th><th>姓名</th><th>高校</th><th>身份</th><th>实验室/导师</th><th>研究方向</th><th>预计毕业</th><th>微信</th><th>备注</th>' +
+    '</tr></thead><tbody>' +
     (allTalents.length ? allTalents.map(function(t) {
       var hkFlag = t.isHK ? ' 🇭🇰' : '';
+      // Check if manually edited
+      var editedMarker = '';
+      var remindBadge = '';
+      if (t.manuallyEdited) {
+        editedMarker = '<span class="edited-marker" title="已人为修改 (' + (t.lastManualEdit || '') + ')"></span>';
+        // Monthly reminder: check if lastManualEdit is > 30 days ago
+        if (t.lastManualEdit) {
+          var editDate = new Date(t.lastManualEdit);
+          var diffDays = Math.floor((today - editDate) / (1000*60*60*24));
+          if (diffDays >= 30) {
+            remindBadge = ' <span class="remind-badge" title="距上次修改已' + diffDays + '天，建议核实更新">⏰ 需更新</span>';
+          }
+        }
+      }
+      // Wechat checkbox
+      var wechatHTML = '<input type="checkbox" class="wechat-check" ' +
+        (t.wechatAdded ? 'checked ' : '') +
+        'onchange="toggleWechat(\'' + t.key.replace(/'/g,"\\'") + '\', this.checked)" title="已加微信">';
       return '<tr>' +
-        '<td><span class="urgency ' + t.urgency + '"></span></td>' +
+        '<td><span class="urgency ' + t.urgency + '"></span> ' +
+          (t.urgency === 'high' ? '<span style="font-size:0.65rem;color:var(--red)">紧急</span>' :
+           t.urgency === 'medium' ? '<span style="font-size:0.65rem;color:var(--orange)">关注</span>' : '') +
+        '</td>' +
         '<td><a class="talent-link" href="' + t.url + '" target="_blank">' + t.name + hkFlag + '</a></td>' +
         '<td>' + t.school + '</td>' +
         '<td>' + t.status + '</td>' +
         '<td>' + t.advisor + '</td>' +
         '<td>' + t.direction + '</td>' +
         '<td>' + t.grad + '</td>' +
-        '<td style="font-size:0.7rem;color:var(--text2)">' + (t.statusNote || '') + '</td>' +
+        '<td style="text-align:center">' + wechatHTML + '</td>' +
+        '<td class="edited-cell" style="font-size:0.7rem;color:var(--text2)">' + editedMarker + (t.statusNote || '') + remindBadge + '</td>' +
         '</tr>';
-    }).join('') : '<tr><td colspan="8" style="text-align:center;color:var(--text2)">暂无人才数据，请在上方添加</td></tr>') +
+    }).join('') : '<tr><td colspan="9" style="text-align:center;color:var(--text2)">暂无人才数据，请在上方添加</td></tr>') +
     '</tbody>';
 }
 
@@ -1071,6 +1198,8 @@ function navigateTo(page) {
   // Show target
   var target = document.getElementById('page-' + page);
   if (target) target.classList.add('active');
+  // Render network canvas when entering the page (needs visible container)
+  if (page === 'network') { setTimeout(renderNetwork, 50); }
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -1555,8 +1684,18 @@ function saveTalent() {
     direction: document.getElementById('te-direction').value.trim() || '',
     gradYear: document.getElementById('te-gradYear').value.trim() || '待确认',
     statusNote: document.getElementById('te-statusNote').value.trim() || '',
+    wechatAdded: document.getElementById('te-wechat').value === 'true',
+    manuallyEdited: true,
+    lastManualEdit: new Date().toISOString().slice(0, 10),
     editedAt: new Date().toISOString().slice(0, 10)
   };
+  // Preserve wechat state if already set and not changed
+  var existing = talentNotes[key];
+  if (existing) {
+    if (document.getElementById('te-wechat').value === 'false' && existing.wechatAdded) {
+      entry.wechatAdded = existing.wechatAdded;
+    }
+  }
 
   // Save to local storage
   var local = getLocalTalentNotes() || {};
@@ -1580,6 +1719,7 @@ function clearForm() {
     document.getElementById(id).value = '';
   });
   document.getElementById('te-isHK').value = 'false';
+  document.getElementById('te-wechat').value = 'false';
 }
 
 function editTalent(key) {
@@ -1597,6 +1737,7 @@ function editTalent(key) {
   document.getElementById('te-scholar').value = t.scholar || '';
   document.getElementById('te-lab').value = t.lab || '';
   document.getElementById('te-statusNote').value = t.statusNote || '';
+  document.getElementById('te-wechat').value = t.wechatAdded ? 'true' : 'false';
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -1693,6 +1834,312 @@ function renderTalentExistingList() {
 }
 
 // ══════════════════════════════════════
+// Toggle Wechat in talent table
+// ══════════════════════════════════════
+function toggleWechat(key, checked) {
+  if (!talentNotes[key]) return;
+  talentNotes[key].wechatAdded = checked;
+  talentNotes[key].editedAt = new Date().toISOString().slice(0, 10);
+  var local = getLocalTalentNotes() || {};
+  local[key] = talentNotes[key];
+  saveLocalTalentNotes(local);
+  syncToRemote();
+}
+
+// ══════════════════════════════════════
+// Collaboration Network (Force-Directed Graph)
+// ══════════════════════════════════════
+let networkNodes = [];
+let networkEdges = [];
+let netAnimId = null;
+let netDrag = null;
+let netHover = null;
+
+function buildNetworkData() {
+  // Build from arxivData + talentNotes
+  var nodeMap = {}; // id -> node
+  var edgeMap = {}; // "company|uni" -> edge
+  // Add company nodes
+  COMPANIES.forEach(function(c) {
+    nodeMap[c.id] = { id: c.id, label: c.name, icon: c.icon, type: 'company', x: 0, y: 0, vx: 0, vy: 0, radius: 28 };
+  });
+  // Extract collaborations from arXiv data
+  if (arxivData) {
+    Object.entries(arxivData.companies).forEach(function(e) {
+      var companyId = e[0], companyData = e[1];
+      companyData.papers.forEach(function(p) {
+        if (!p.hasUniCollab) return;
+        var dirs = (p.directions || []).map(function(d) { return d.label; });
+        (p.universities || []).forEach(function(uni) {
+          var isHK = (p.hkUniversities || []).indexOf(uni) >= 0;
+          var uniId = 'uni_' + uni.replace(/\s+/g, '_');
+          if (!nodeMap[uniId]) {
+            nodeMap[uniId] = { id: uniId, label: uni, type: isHK ? 'hk_uni' : 'uni', x: 0, y: 0, vx: 0, vy: 0, radius: 18 };
+          }
+          var edgeKey = companyId + '|' + uniId;
+          if (!edgeMap[edgeKey]) {
+            edgeMap[edgeKey] = { source: companyId, target: uniId, directions: [], papers: 0 };
+          }
+          edgeMap[edgeKey].papers++;
+          dirs.forEach(function(d) {
+            if (edgeMap[edgeKey].directions.indexOf(d) === -1) edgeMap[edgeKey].directions.push(d);
+          });
+        });
+      });
+    });
+  }
+  // Also extract from talentNotes → lab connections
+  Object.values(talentNotes).forEach(function(t) {
+    if (!t.university || !t.lab) return;
+    var uniId = 'uni_' + t.university.replace(/\s+/g, '_');
+    if (!nodeMap[uniId]) {
+      nodeMap[uniId] = { id: uniId, label: t.university, type: t.isHK ? 'hk_uni' : 'uni', x: 0, y: 0, vx: 0, vy: 0, radius: 18 };
+    }
+  });
+  networkNodes = Object.values(nodeMap);
+  networkEdges = Object.values(edgeMap);
+  // Only keep company nodes that have edges
+  var connectedIds = {};
+  networkEdges.forEach(function(e) { connectedIds[e.source] = true; connectedIds[e.target] = true; });
+  networkNodes = networkNodes.filter(function(n) { return connectedIds[n.id] || n.type === 'company'; });
+  // Initial layout: companies in center ring, unis around
+  var cw = 1160, ch = 700;
+  var cx = cw/2, cy = ch/2;
+  var companyNodes = networkNodes.filter(function(n) { return n.type === 'company'; });
+  var uniNodes = networkNodes.filter(function(n) { return n.type !== 'company'; });
+  companyNodes.forEach(function(n, i) {
+    var angle = (2 * Math.PI * i) / companyNodes.length - Math.PI/2;
+    n.x = cx + Math.cos(angle) * 160;
+    n.y = cy + Math.sin(angle) * 130;
+    n.fx = n.x; n.fy = n.y; // Fixed position for companies
+  });
+  uniNodes.forEach(function(n, i) {
+    var angle = (2 * Math.PI * i) / Math.max(uniNodes.length, 1) + 0.5;
+    n.x = cx + Math.cos(angle) * (280 + Math.random() * 80);
+    n.y = cy + Math.sin(angle) * (220 + Math.random() * 60);
+  });
+  return { nodes: networkNodes, edges: networkEdges };
+}
+
+function renderNetwork() {
+  var data = buildNetworkData();
+  var canvas = document.getElementById('networkCanvas');
+  if (!canvas) return;
+  var ctx = canvas.getContext('2d');
+  var dpr = window.devicePixelRatio || 1;
+  var rect = canvas.parentElement.getBoundingClientRect();
+  canvas.width = rect.width * dpr;
+  canvas.height = 700 * dpr;
+  canvas.style.height = '700px';
+  ctx.scale(dpr, dpr);
+  var W = rect.width, H = 700;
+  // Update home badge
+  var uniCount = data.nodes.filter(function(n) { return n.type !== 'company'; }).length;
+  var edgeCount = data.edges.length;
+  try { document.getElementById('networkBadge').textContent = uniCount + ' 所高校 · ' + edgeCount + ' 条合作'; } catch(e){}
+  try { document.getElementById('networkMeta').textContent = data.nodes.length + ' 个节点 · ' + edgeCount + ' 条合作关系'; } catch(e){}
+  // Simulation
+  var alpha = 1;
+  function tick() {
+    alpha *= 0.98;
+    if (alpha < 0.001) alpha = 0;
+    // Repulsion between all nodes
+    for (var i = 0; i < data.nodes.length; i++) {
+      for (var j = i+1; j < data.nodes.length; j++) {
+        var a = data.nodes[i], b = data.nodes[j];
+        var dx = b.x - a.x, dy = b.y - a.y;
+        var dist = Math.sqrt(dx*dx + dy*dy) || 1;
+        var force = 800 / (dist * dist);
+        var fx = dx/dist * force * alpha;
+        var fy = dy/dist * force * alpha;
+        if (!a.fx) { a.vx -= fx; a.vy -= fy; }
+        if (!b.fx) { b.vx += fx; b.vy += fy; }
+      }
+    }
+    // Attraction along edges
+    data.edges.forEach(function(e) {
+      var s = data.nodes.find(function(n){ return n.id === e.source; });
+      var t = data.nodes.find(function(n){ return n.id === e.target; });
+      if (!s || !t) return;
+      var dx = t.x - s.x, dy = t.y - s.y;
+      var dist = Math.sqrt(dx*dx + dy*dy) || 1;
+      var force = (dist - 200) * 0.005 * alpha;
+      var fx = dx/dist * force;
+      var fy = dy/dist * force;
+      if (!s.fx) { s.vx += fx; s.vy += fy; }
+      if (!t.fx) { t.vx -= fx; t.vy -= fy; }
+    });
+    // Center gravity
+    data.nodes.forEach(function(n) {
+      if (n.fx) return;
+      n.vx += (W/2 - n.x) * 0.001 * alpha;
+      n.vy += (H/2 - n.y) * 0.001 * alpha;
+      n.vx *= 0.85; n.vy *= 0.85;
+      n.x += n.vx; n.y += n.vy;
+      n.x = Math.max(40, Math.min(W-40, n.x));
+      n.y = Math.max(40, Math.min(H-40, n.y));
+    });
+  }
+  function draw() {
+    tick();
+    ctx.clearRect(0, 0, W, H);
+    // Draw edges
+    data.edges.forEach(function(e) {
+      var s = data.nodes.find(function(n){ return n.id === e.source; });
+      var t = data.nodes.find(function(n){ return n.id === e.target; });
+      if (!s || !t) return;
+      var isHovered = netHover && (netHover.id === s.id || netHover.id === t.id);
+      ctx.beginPath();
+      ctx.moveTo(s.x, s.y);
+      ctx.lineTo(t.x, t.y);
+      ctx.strokeStyle = isHovered ? 'rgba(96,165,250,0.6)' : 'rgba(148,163,184,0.15)';
+      ctx.lineWidth = isHovered ? 2.5 : Math.min(1 + e.papers * 0.4, 3);
+      ctx.stroke();
+      // Direction labels on edge
+      if (isHovered && e.directions.length) {
+        var mx = (s.x + t.x) / 2, my = (s.y + t.y) / 2;
+        ctx.font = '10px system-ui';
+        ctx.fillStyle = '#60a5fa';
+        ctx.textAlign = 'center';
+        ctx.fillText(e.directions.slice(0,3).join(' / '), mx, my - 6);
+        ctx.fillStyle = 'rgba(148,163,184,0.6)';
+        ctx.font = '9px system-ui';
+        ctx.fillText(e.papers + '篇', mx, my + 8);
+      }
+    });
+    // Draw nodes
+    data.nodes.forEach(function(n) {
+      var isHovered = netHover && netHover.id === n.id;
+      var isConnected = netHover && data.edges.some(function(e) {
+        return (e.source === netHover.id && e.target === n.id) || (e.target === netHover.id && e.source === n.id);
+      });
+      var dimmed = netHover && !isHovered && !isConnected;
+      ctx.globalAlpha = dimmed ? 0.2 : 1;
+      ctx.beginPath();
+      var r = n.radius;
+      if (isHovered) r += 4;
+      ctx.arc(n.x, n.y, r, 0, Math.PI*2);
+      if (n.type === 'company') {
+        ctx.fillStyle = isHovered ? '#2563eb' : '#1e40af';
+        ctx.strokeStyle = '#3b82f6';
+        ctx.lineWidth = 2;
+      } else if (n.type === 'hk_uni') {
+        ctx.fillStyle = isHovered ? '#92400e' : '#78350f';
+        ctx.strokeStyle = '#f59e0b';
+        ctx.lineWidth = 2;
+      } else {
+        ctx.fillStyle = isHovered ? '#166534' : '#14532d';
+        ctx.strokeStyle = '#22c55e';
+        ctx.lineWidth = 1.5;
+      }
+      ctx.fill(); ctx.stroke();
+      // Label
+      ctx.fillStyle = '#e2e8f0';
+      ctx.font = n.type === 'company' ? 'bold 11px system-ui' : '10px system-ui';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      var label = n.label.length > 10 ? n.label.substring(0,9) + '…' : n.label;
+      if (n.type === 'company') {
+        ctx.fillText(n.icon, n.x, n.y - 7);
+        ctx.fillText(label, n.x, n.y + 9);
+      } else {
+        ctx.fillText(label, n.x, n.y);
+      }
+      ctx.globalAlpha = 1;
+    });
+    netAnimId = requestAnimationFrame(draw);
+  }
+  // Mouse interaction
+  canvas.onmousemove = function(ev) {
+    var rect = canvas.getBoundingClientRect();
+    var mx = ev.clientX - rect.left, my = ev.clientY - rect.top;
+    if (netDrag) {
+      netDrag.x = mx; netDrag.y = my;
+      netDrag.fx = mx; netDrag.fy = my;
+      alpha = 0.3;
+      return;
+    }
+    var found = null;
+    for (var i = data.nodes.length - 1; i >= 0; i--) {
+      var n = data.nodes[i];
+      var dx = mx - n.x, dy = my - n.y;
+      if (dx*dx + dy*dy < (n.radius+6)*(n.radius+6)) { found = n; break; }
+    }
+    netHover = found;
+    canvas.style.cursor = found ? 'pointer' : 'grab';
+    // Tooltip
+    var tooltip = document.getElementById('netTooltip');
+    if (found) {
+      var html = '<strong>' + found.label + '</strong>';
+      if (found.type === 'company') {
+        var ce = data.edges.filter(function(e) { return e.source === found.id; });
+        html += '<br><span style="color:var(--text2)">合作高校：' + ce.length + ' 所</span>';
+        ce.slice(0,5).forEach(function(e) {
+          var t = data.nodes.find(function(n){ return n.id === e.target; });
+          html += '<br>→ ' + (t ? t.label : '') + ' <span style="color:var(--accent2)">' + e.directions.join('/') + '</span> (' + e.papers + '篇)';
+        });
+        if (ce.length > 5) html += '<br><span style="color:var(--text2)">…及更多</span>';
+      } else {
+        var ue = data.edges.filter(function(e) { return e.target === found.id; });
+        html += (found.type === 'hk_uni' ? ' 🇭🇰' : '');
+        html += '<br><span style="color:var(--text2)">合作公司：' + ue.length + ' 家</span>';
+        ue.forEach(function(e) {
+          var s = data.nodes.find(function(n){ return n.id === e.source; });
+          html += '<br>← ' + (s ? s.icon + ' ' + s.label : '') + ' <span style="color:var(--accent2)">' + e.directions.join('/') + '</span> (' + e.papers + '篇)';
+        });
+      }
+      tooltip.innerHTML = html;
+      tooltip.style.display = 'block';
+      tooltip.style.left = Math.min(mx + 15, canvas.parentElement.offsetWidth - 340) + 'px';
+      tooltip.style.top = (my + 15) + 'px';
+    } else {
+      tooltip.style.display = 'none';
+    }
+  };
+  canvas.onmousedown = function(ev) {
+    if (netHover && netHover.type !== 'company') {
+      netDrag = netHover;
+      alpha = 0.5;
+    }
+  };
+  canvas.onmouseup = function() {
+    if (netDrag) {
+      delete netDrag.fx; delete netDrag.fy;
+      netDrag = null;
+    }
+  };
+  canvas.onmouseleave = function() {
+    netHover = null;
+    document.getElementById('netTooltip').style.display = 'none';
+    if (netDrag) { delete netDrag.fx; delete netDrag.fy; netDrag = null; }
+  };
+  // Render detail list
+  renderNetworkDetails(data);
+  // Start animation
+  if (netAnimId) cancelAnimationFrame(netAnimId);
+  draw();
+}
+
+function renderNetworkDetails(data) {
+  var list = document.getElementById('networkDetailList');
+  if (!data.edges.length) { list.innerHTML = '<div class="no-results">暂无合作数据</div>'; return; }
+  // Sort by paper count
+  var sorted = data.edges.slice().sort(function(a,b) { return b.papers - a.papers; });
+  list.innerHTML = sorted.map(function(e) {
+    var s = data.nodes.find(function(n){ return n.id === e.source; });
+    var t = data.nodes.find(function(n){ return n.id === e.target; });
+    var isHK = t && t.type === 'hk_uni';
+    return '<div class="net-detail-card">' +
+      '<span class="net-detail-company">' + (s ? s.icon + ' ' + s.label : e.source) + '</span>' +
+      '<span class="net-detail-arrow">⟷</span>' +
+      '<span class="net-detail-uni' + (isHK ? ' hk' : '') + '">' + (t ? t.label : e.target) + (isHK ? ' 🇭🇰' : '') + '</span>' +
+      '<span class="net-detail-dirs">' + e.directions.map(function(d) { return '<span class="net-detail-dir">' + d + '</span>'; }).join('') + '</span>' +
+      '<span class="net-detail-count">' + e.papers + ' 篇论文</span>' +
+      '</div>';
+  }).join('');
+}
+
+// ══════════════════════════════════════
 // Load Reports
 // ══════════════════════════════════════
 async function loadReports() {
@@ -1741,7 +2188,7 @@ async function loadReports() {
   if (talentCount) document.getElementById('talentBadge').textContent = talentCount + ' 位追踪中';
 }
 
-loadTalentNotes().then(function() { loadArxiv(); });
+loadTalentNotes().then(function() { loadArxiv().then(function() { renderNetwork(); }); });
 loadReports();
 loadFeeds();
 </script>

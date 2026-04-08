@@ -745,13 +745,31 @@ const PLATFORMS = [
   { name: 'NVIDIA', icon: '💚', status: 'offline', detail: '403 禁止', companyId: 'nvidia' },
 ];
 
-const TALENTS = [
-  { name: '胡金毅 (Jinyi Hu)', school: '清华大学', status: '博五', company: '字节Seed', companyId: 'bytedance', direction: '多模态/Physical AI', advisor: '孙茂松教授', grad: '2026', urgency: 'high', url: 'https://jameshujy.github.io/' },
-  { name: 'Thomas Jiralerspong', school: 'Mila/蒙特利尔大学', status: '博士生', company: 'Anthropic', companyId: 'anthropic', direction: '可解释性/RL', advisor: 'Yoshua Bengio', grad: '待确认', urgency: 'medium', url: 'https://superkaiba.github.io/' },
-  { name: 'Tyler Zhu', school: '普林斯顿大学', status: '博三', company: 'DeepMind', companyId: 'deepmind', direction: '计算机视觉/视频', advisor: 'Olga Russakovsky', grad: '~2027', urgency: 'low', url: 'https://tylerzhu.com/' },
-  { name: '田野 (Ye Tian)', school: '北京大学', status: '博一', company: '华为诺亚', companyId: 'huawei', direction: 'AIGC/扩散模型', advisor: '童云海教授', grad: '~2029', urgency: 'low', url: 'https://tyfeld.github.io/' },
-  { name: '王程程 (Chengcheng Wang)', school: '悉尼大学', status: '在读', company: '华为诺亚', companyId: 'huawei', direction: '深度学习/CV', advisor: '待确认', grad: '待确认', urgency: 'low', url: '#' },
-];
+// TALENTS is now dynamically generated from talentNotes (no hardcoded data)
+function getTalentsForTable() {
+  return Object.entries(talentNotes).map(function(e) {
+    var key = e[0], t = e[1];
+    var urgency = 'low';
+    if (t.gradYear === '2026') urgency = 'high';
+    else if (t.gradYear === '2027' || t.gradYear === '~2027') urgency = 'medium';
+    return {
+      name: t.name || key,
+      school: t.university || '',
+      status: t.status || '待确认',
+      company: t.lab || '',
+      direction: t.direction || '',
+      advisor: t.advisor || '待确认',
+      grad: t.gradYear || '待确认',
+      urgency: urgency,
+      url: t.homepage || t.scholar || '#',
+      isHK: t.isHK || false,
+      statusNote: t.statusNote || ''
+    };
+  }).sort(function(a,b) {
+    var order = {high:0,medium:1,low:2};
+    return (order[a.urgency]||2) - (order[b.urgency]||2);
+  });
+}
 
 const RADARS = [
   { company: '华为诺亚', companyId: 'huawei', direction: '模型压缩 / 因果推理 / 扩散语言模型', trend: '端侧部署 + Agent 加速' },
@@ -868,11 +886,13 @@ function parseMd(md) {
 
 function renderStats() {
   const grid = document.getElementById('statsGrid');
+  var tc = Object.keys(talentNotes).length;
+  var urgent = Object.values(talentNotes).filter(function(t){ return t.gradYear === '2026'; }).length;
   grid.innerHTML = `
     <div class="stat-card"><div class="stat-label">监控平台</div><div class="stat-value">8/10</div><div class="stat-sub">平台在线</div></div>
     <div class="stat-card"><div class="stat-label">追踪论文</div><div class="stat-value">${ALL_PAPERS.length}</div><div class="stat-sub">最近一期</div></div>
-    <div class="stat-card"><div class="stat-label">人才追踪</div><div class="stat-value">${TALENTS.length}</div><div class="stat-sub">在读博士生</div></div>
-    <div class="stat-card"><div class="stat-label">高优先级</div><div class="stat-value">${TALENTS.filter(t=>t.urgency==='high').length}</div><div class="stat-sub">即将毕业</div></div>
+    <div class="stat-card"><div class="stat-label">人才追踪</div><div class="stat-value">${tc}</div><div class="stat-sub">已录入人才</div></div>
+    <div class="stat-card"><div class="stat-label">高优先级</div><div class="stat-value">${urgent}</div><div class="stat-sub">2026年毕业</div></div>
   `;
 }
 
@@ -979,26 +999,23 @@ function renderRadar() {
 }
 
 function renderTalent() {
-  const table = document.getElementById('talentTable');
-  const filtered = currentFilter === 'all' ? TALENTS : TALENTS.filter(t => t.companyId === currentFilter);
-  table.innerHTML = `
-    <thead><tr>
-      <th>紧急度</th><th>姓名</th><th>高校</th><th>身份</th>
-      <th>合作公司</th><th>研究方向</th><th>导师</th><th>预计毕业</th>
-    </tr></thead>
-    <tbody>
-      ${filtered.map(t => `
-        <tr>
-          <td><span class="urgency ${t.urgency}"></span></td>
-          <td><a class="talent-link" href="${t.url}" target="_blank">${t.name}</a></td>
-          <td>${t.school}</td><td>${t.status}</td>
-          <td>${t.company}</td><td>${t.direction}</td>
-          <td>${t.advisor}</td><td>${t.grad}</td>
-        </tr>
-      `).join('')}
-      ${filtered.length === 0 ? '<tr><td colspan="8" style="text-align:center;color:var(--text2)">该公司暂无关联人才</td></tr>' : ''}
-    </tbody>
-  `;
+  var table = document.getElementById('talentTable');
+  var allTalents = getTalentsForTable();
+  table.innerHTML = '<thead><tr><th>紧急度</th><th>姓名</th><th>高校</th><th>身份</th><th>实验室/导师</th><th>研究方向</th><th>预计毕业</th><th>备注</th></tr></thead><tbody>' +
+    (allTalents.length ? allTalents.map(function(t) {
+      var hkFlag = t.isHK ? ' 🇭🇰' : '';
+      return '<tr>' +
+        '<td><span class="urgency ' + t.urgency + '"></span></td>' +
+        '<td><a class="talent-link" href="' + t.url + '" target="_blank">' + t.name + hkFlag + '</a></td>' +
+        '<td>' + t.school + '</td>' +
+        '<td>' + t.status + '</td>' +
+        '<td>' + t.advisor + '</td>' +
+        '<td>' + t.direction + '</td>' +
+        '<td>' + t.grad + '</td>' +
+        '<td style="font-size:0.7rem;color:var(--text2)">' + (t.statusNote || '') + '</td>' +
+        '</tr>';
+    }).join('') : '<tr><td colspan="8" style="text-align:center;color:var(--text2)">暂无人才数据，请在上方添加</td></tr>') +
+    '</tbody>';
 }
 
 // ══════════════════════════════════════
@@ -1569,8 +1586,10 @@ async function loadReports() {
   renderRadar();
   renderTalent();
   // Update home badges
+  var talentCount = Object.keys(talentNotes).length;
   if (ALL_PAPERS.length) document.getElementById('intelBadge').textContent = ALL_PAPERS.length + ' 篇深度分析';
   if (REPORTS_DATA.length) document.getElementById('reportBadge').textContent = REPORTS_DATA.length + ' 份日报';
+  if (talentCount) document.getElementById('talentBadge').textContent = talentCount + ' 位追踪中';
 }
 
 loadTalentNotes().then(function() { loadArxiv(); });

@@ -1630,28 +1630,39 @@ function getTalentNotesForPaper(authorNames) {
   return matched;
 }
 
+var _talentNoteId = 0;
 function renderTalentNoteHTML(notes, hasHK) {
   if (!notes.length) return '';
+  _talentNoteId++;
+  var tid = 'tnote_' + _talentNoteId;
   var cssClass = hasHK ? 'talent-note-area hk-note' : 'talent-note-area';
-  var html = '<div class="' + cssClass + '"><div class="talent-note-title">👤 高校合作人才信息</div>';
+  var summary = notes.length + '位合作人才';
+  var names = notes.map(function(t) { return t.name; }).slice(0, 3).join(', ');
+  if (notes.length > 3) names += ' …';
+
+  var detailHtml = '';
   for (var i = 0; i < notes.length; i++) {
     var t = notes[i];
-    html += '<div class="talent-person"><div class="talent-person-info">';
-    html += '<div class="talent-person-name">';
-    if (t.homepage) { html += '<a href="' + t.homepage + '" target="_blank">' + t.name + ' ↗</a>'; }
-    else { html += t.name; }
-    html += '</div>';
-    html += '<div class="talent-person-meta">' + t.university + ' · ' + t.status;
-    if (t.advisor && t.advisor !== '待确认') html += ' · 导师: ' + t.advisor;
-    if (t.direction) html += ' · ' + t.direction;
-    html += '</div>';
-    html += '<div class="talent-person-links">';
-    if (t.homepage) html += '<a href="' + t.homepage + '" target="_blank">🏠 主页</a>';
-    if (t.scholar) html += '<a href="' + t.scholar + '" target="_blank">📚 Scholar</a>';
-    if (t.lab) html += '<span style="font-size:0.6rem;color:var(--text2)">🔬 ' + t.lab + '</span>';
-    html += '</div></div></div>';
+    detailHtml += '<div class="talent-person"><div class="talent-person-info">';
+    detailHtml += '<div class="talent-person-name">';
+    if (t.homepage) { detailHtml += '<a href="' + t.homepage + '" target="_blank">' + t.name + ' ↗</a>'; }
+    else { detailHtml += t.name; }
+    detailHtml += '</div>';
+    detailHtml += '<div class="talent-person-meta">' + t.university + ' · ' + t.status;
+    if (t.advisor && t.advisor !== '待确认') detailHtml += ' · 导师: ' + t.advisor;
+    if (t.direction) detailHtml += ' · ' + t.direction;
+    detailHtml += '</div>';
+    detailHtml += '<div class="talent-person-links">';
+    if (t.homepage) detailHtml += '<a href="' + t.homepage + '" target="_blank">🏠 主页</a>';
+    if (t.scholar) detailHtml += '<a href="' + t.scholar + '" target="_blank">📚 Scholar</a>';
+    if (t.lab) detailHtml += '<span style="font-size:0.6rem;color:var(--text2)">🔬 ' + t.lab + '</span>';
+    detailHtml += '</div></div></div>';
   }
-  html += '</div>';
+
+  var html = '<div class="' + cssClass + '" style="cursor:pointer" onclick="var d=document.getElementById(\'' + tid + '\');d.style.display=d.style.display===\'none\'?\'block\':\'none\'">' +
+    '<div class="talent-note-title">👤 ' + summary + ' <span style="font-size:0.6rem;color:var(--text2);font-weight:400">(' + names + ') 点击展开</span></div>' +
+    '<div id="' + tid + '" style="display:none">' + detailHtml + '</div>' +
+  '</div>';
   return html;
 }
 

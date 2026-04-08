@@ -491,31 +491,6 @@
   @media (max-width: 900px) { .nav-hub { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 600px) { .nav-hub { grid-template-columns: 1fr; } .nav-card { padding: 1.25rem 1rem; } }
 
-  /* ── Search Bar ── */
-  .search-bar {
-    display: flex; align-items: center; gap: 0.5rem;
-    margin-bottom: 1rem; padding: 0.6rem 1rem;
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: 12px; transition: border-color 0.2s;
-  }
-  .search-bar:focus-within { border-color: var(--accent); }
-  .search-bar .search-icon { font-size: 1rem; color: var(--text2); flex-shrink: 0; }
-  .search-bar input {
-    flex: 1; background: none; border: none; color: var(--text);
-    font-size: 0.85rem; outline: none; min-width: 0;
-  }
-  .search-bar input::placeholder { color: var(--text2); opacity: 0.6; }
-  .search-bar .search-clear {
-    background: none; border: none; color: var(--text2); cursor: pointer;
-    font-size: 0.85rem; padding: 0.15rem 0.4rem; border-radius: 6px;
-    transition: all 0.15s; display: none;
-  }
-  .search-bar .search-clear.visible { display: inline-block; }
-  .search-bar .search-clear:hover { background: var(--surface2); color: var(--text); }
-  .search-bar .search-count {
-    font-size: 0.7rem; color: var(--text2); white-space: nowrap; flex-shrink: 0;
-  }
-
   @keyframes fadeIn { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
   .paper-card, .stat-card, .platform-card, .radar-card, .report-card { animation: fadeIn 0.4s ease both; }
   .loading { text-align: center; padding: 3rem; color: var(--text2); }
@@ -596,12 +571,6 @@
     <div class="section-head">
       <h2><span>📄</span> arXiv 每日论文 <span style="font-size:0.7rem;color:var(--text2);font-weight:400;margin-left:0.5rem" id="arxivMeta"></span></h2>
     </div>
-    <div class="search-bar" id="arxivSearchBar">
-      <span class="search-icon">🔍</span>
-      <input type="text" id="arxivSearchInput" placeholder="搜索论文标题、作者、方向、大学…" oninput="onArxivSearch()">
-      <button class="search-clear" id="arxivSearchClear" onclick="clearArxivSearch()">✕</button>
-      <span class="search-count" id="arxivSearchCount"></span>
-    </div>
     <div class="arxiv-company-tabs" id="arxivTabs"></div>
     <div class="arxiv-list" id="arxivList">
       <div class="loading"><div class="spinner"></div>正在加载 arXiv 论文…</div>
@@ -646,12 +615,6 @@
     <button class="back-btn" onclick="navigateTo('home')">← 返回主页</button>
     <div class="section-head">
       <h2><span>🎓</span> 高校合作人才追踪</h2>
-    </div>
-    <div class="search-bar" id="talentSearchBar">
-      <span class="search-icon">🔍</span>
-      <input type="text" id="talentSearchInput" placeholder="搜索姓名、学校、方向、导师、实验室…" oninput="onTalentSearch()">
-      <button class="search-clear" id="talentSearchClear" onclick="clearTalentSearch()">✕</button>
-      <span class="search-count" id="talentSearchCount"></span>
     </div>
 
     <!-- Talent Editor -->
@@ -1257,8 +1220,6 @@ async function loadFeeds() {
 let arxivData = null;
 let currentArxivCompany = 'all';
 let talentNotes = {};
-let arxivSearchQuery = '';
-let talentSearchQuery = '';
 
 async function loadTalentNotes() {
   // Try remote API first (real-time data)
@@ -1380,30 +1341,6 @@ function renderArxivList() {
     var c = arxivData.companies[currentArxivCompany];
     if (c) papers = c.papers.map(function(p) { return Object.assign({}, p, {_company: c.company, _icon: c.icon}); });
   }
-  // Search filter
-  if (arxivSearchQuery) {
-    var q = arxivSearchQuery.toLowerCase();
-    var terms = q.split(/\s+/).filter(function(t) { return t.length > 0; });
-    papers = papers.filter(function(p) {
-      var searchable = [
-        p.title, p.summary, p._company,
-        p.authors.join(' '),
-        (p.universities || []).join(' '),
-        (p.hkUniversities || []).join(' '),
-        (p.directions || []).map(function(d) { return d.label; }).join(' '),
-        p.categories.join(' '),
-        p.comment || ''
-      ].join(' ').toLowerCase();
-      return terms.every(function(t) { return searchable.indexOf(t) >= 0; });
-    });
-  }
-  // Update search count
-  var countEl = document.getElementById('arxivSearchCount');
-  if (arxivSearchQuery) {
-    countEl.textContent = papers.length + ' 条结果';
-  } else {
-    countEl.textContent = '';
-  }
   if (!papers.length) { list.innerHTML = '<div class="no-results">该公司暂无论文</div>'; return; }
   list.innerHTML = papers.slice(0, 50).map(function(p) {
     var date = p.published ? new Date(p.published).toLocaleDateString('zh-CN') : '';
@@ -1443,67 +1380,6 @@ function filterArxiv(companyId) {
   currentArxivCompany = companyId;
   renderArxivTabs();
   renderArxivList();
-}
-
-// ── arXiv Search
-function onArxivSearch() {
-  var input = document.getElementById('arxivSearchInput');
-  arxivSearchQuery = input.value.trim();
-  var clearBtn = document.getElementById('arxivSearchClear');
-  clearBtn.classList.toggle('visible', arxivSearchQuery.length > 0);
-  renderArxivList();
-}
-function clearArxivSearch() {
-  document.getElementById('arxivSearchInput').value = '';
-  arxivSearchQuery = '';
-  document.getElementById('arxivSearchClear').classList.remove('visible');
-  document.getElementById('arxivSearchCount').textContent = '';
-  renderArxivList();
-}
-
-// ── Talent Search
-function onTalentSearch() {
-  var input = document.getElementById('talentSearchInput');
-  talentSearchQuery = input.value.trim();
-  var clearBtn = document.getElementById('talentSearchClear');
-  clearBtn.classList.toggle('visible', talentSearchQuery.length > 0);
-  filterTalentDisplay();
-}
-function clearTalentSearch() {
-  document.getElementById('talentSearchInput').value = '';
-  talentSearchQuery = '';
-  document.getElementById('talentSearchClear').classList.remove('visible');
-  document.getElementById('talentSearchCount').textContent = '';
-  filterTalentDisplay();
-}
-function filterTalentDisplay() {
-  var q = talentSearchQuery.toLowerCase();
-  var terms = q ? q.split(/\s+/).filter(function(t) { return t.length > 0; }) : [];
-  // Filter existing talent list items
-  var items = document.querySelectorAll('#talentExistingList .talent-existing-item');
-  var visibleCount = 0;
-  items.forEach(function(item) {
-    if (!terms.length) { item.style.display = ''; visibleCount++; return; }
-    var text = item.textContent.toLowerCase();
-    var match = terms.every(function(t) { return text.indexOf(t) >= 0; });
-    item.style.display = match ? '' : 'none';
-    if (match) visibleCount++;
-  });
-  // Filter talent table rows
-  var rows = document.querySelectorAll('#talentTable tbody tr');
-  rows.forEach(function(row) {
-    if (!terms.length) { row.style.display = ''; return; }
-    var text = row.textContent.toLowerCase();
-    var match = terms.every(function(t) { return text.indexOf(t) >= 0; });
-    row.style.display = match ? '' : 'none';
-  });
-  // Update search count
-  var countEl = document.getElementById('talentSearchCount');
-  if (terms.length) {
-    countEl.textContent = visibleCount + ' / ' + items.length + ' 人';
-  } else {
-    countEl.textContent = '';
-  }
 }
 
 // ══════════════════════════════════════
@@ -1606,41 +1482,14 @@ function deleteTalent(key) {
   var local = getLocalTalentNotes() || {};
   delete local[key];
   saveLocalTalentNotes(local);
-  // 删除时直接推送完整数据（不合并，否则会拉回被删的）
-  directPushToRemote();
   renderTalentExistingList();
-  renderTalent();
   renderArxivList();
+  syncToRemote();
   showEditorMsg('success', '已删除: ' + key);
-}
-
-async function directPushToRemote() {
-  try {
-    var payload = { generatedAt: new Date().toISOString(), notes: talentNotes };
-    await fetch(TALENT_API, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
-    });
-  } catch(e) {}
 }
 
 async function syncToRemote() {
   try {
-    // 先从服务器拉取最新数据，合并后再推送（避免覆盖）
-    var freshNotes = {};
-    try {
-      var getResp = await fetch(TALENT_API);
-      if (getResp.ok) {
-        var freshData = await getResp.json();
-        freshNotes = freshData.notes || {};
-      }
-    } catch(e) {}
-    // 合并：本地数据覆盖到最新服务端数据上（本地优先）
-    for (var key in talentNotes) {
-      freshNotes[key] = talentNotes[key];
-    }
-    talentNotes = freshNotes;
     var payload = { generatedAt: new Date().toISOString(), notes: talentNotes };
     var resp = await fetch(TALENT_API, {
       method: 'POST',
@@ -1649,10 +1498,12 @@ async function syncToRemote() {
     });
     if (resp.ok) {
       console.log('Synced to remote API');
+      // Also save locally as backup
+      saveLocalTalentNotes(talentNotes);
+    } else {
+      console.log('Remote sync failed, saved locally');
+      saveLocalTalentNotes(talentNotes);
     }
-    saveLocalTalentNotes(talentNotes);
-    renderTalentExistingList();
-    renderTalent();
   } catch(e) {
     console.log('Remote unavailable, saved locally only');
     saveLocalTalentNotes(talentNotes);

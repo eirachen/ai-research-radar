@@ -1021,9 +1021,27 @@ function renderStats() {
   const grid = document.getElementById('statsGrid');
   var tc = Object.keys(talentNotes).length;
   var urgent = Object.values(talentNotes).filter(function(t){ return t.gradYear === '2026'; }).length;
+  // Calculate data date range from arxivData
+  var dateRange = '加载中…';
+  var arxivTotal = 0;
+  if (arxivData) {
+    arxivTotal = arxivData.totalPapers || 0;
+    var allDates = [];
+    Object.values(arxivData.companies || {}).forEach(function(c) {
+      (c.papers || []).forEach(function(p) {
+        if (p.published) allDates.push(p.published.slice(0, 10));
+      });
+    });
+    if (allDates.length) {
+      allDates.sort();
+      dateRange = allDates[0] + ' ~ ' + allDates[allDates.length - 1];
+    } else {
+      dateRange = arxivData.since || '—';
+    }
+  }
   grid.innerHTML = `
+    <div class="stat-card"><div class="stat-label">数据覆盖</div><div class="stat-value" style="font-size:1.1rem;letter-spacing:0">${dateRange}</div><div class="stat-sub">${arxivTotal} 篇 arXiv 论文</div></div>
     <div class="stat-card"><div class="stat-label">监控平台</div><div class="stat-value">8/10</div><div class="stat-sub">平台在线</div></div>
-    <div class="stat-card"><div class="stat-label">追踪论文</div><div class="stat-value">${ALL_PAPERS.length}</div><div class="stat-sub">最近一期</div></div>
     <div class="stat-card"><div class="stat-label">人才追踪</div><div class="stat-value">${tc}</div><div class="stat-sub">已录入人才</div></div>
     <div class="stat-card"><div class="stat-label">高优先级</div><div class="stat-value">${urgent}</div><div class="stat-sub">2026年毕业</div></div>
   `;
@@ -2463,7 +2481,7 @@ async function loadReports() {
   if (talentCount) document.getElementById('talentBadge').textContent = talentCount + ' 位追踪中';
 }
 
-loadTalentNotes().then(function() { loadArxiv().then(function() { buildTalentPaperMap(); renderTalentExistingList(); renderTalent(); renderNetwork(); }); });
+loadTalentNotes().then(function() { loadArxiv().then(function() { buildTalentPaperMap(); renderTalentExistingList(); renderTalent(); renderStats(); renderNetwork(); }); });
 loadReports();
 loadFeeds();
 </script>

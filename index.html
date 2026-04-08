@@ -1812,9 +1812,9 @@ function filterTalentDisplay() {
     item.style.display = match ? '' : 'none';
     if (match) visibleCount++;
   });
-  // Filter talent table rows
-  var rows = document.querySelectorAll('#talentTable tbody tr');
-  rows.forEach(function(row) {
+  // Filter talent table rows (new div layout)
+  var tableRows = document.querySelectorAll('#talentTable [style*="border-bottom"]');
+  tableRows.forEach(function(row) {
     if (!terms.length) { row.style.display = ''; return; }
     var text = row.textContent.toLowerCase();
     var match = terms.every(function(t) { return text.indexOf(t) >= 0; });

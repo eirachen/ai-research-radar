@@ -602,6 +602,10 @@
   <!-- ═══ HOME: Navigation Hub ═══ -->
   <div class="page-view active" id="page-home">
     <div class="stats-grid" id="statsGrid"></div>
+    <div style="text-align:center;margin-bottom:1.5rem;font-size:0.78rem;color:var(--text2)">
+      📅 数据覆盖：<span id="dataDateRange" style="color:var(--accent2);font-weight:600">加载中…</span>
+      &nbsp;·&nbsp; 共 <span id="dataPaperCount" style="color:var(--accent2);font-weight:600">—</span> 篇 arXiv 论文
+    </div>
     <div class="section-head"><h2><span>🧭</span> 情报中心</h2></div>
     <div class="nav-hub">
       <div class="nav-card" onclick="navigateTo('arxiv')">
@@ -1575,6 +1579,18 @@ async function loadArxiv() {
       var badgeText = arxivData.totalPapers + ' 篇论文';
       if (arxivData.totalUniCollab) badgeText += ' · ' + arxivData.totalUniCollab + ' 校企合作';
       document.getElementById('arxivBadge').textContent = badgeText;
+      // Update home date range
+      var allDates = [];
+      Object.values(arxivData.companies || {}).forEach(function(c) {
+        (c.papers || []).forEach(function(p) {
+          if (p.published) allDates.push(p.published.slice(0, 10));
+        });
+      });
+      if (allDates.length) {
+        allDates.sort();
+        try { document.getElementById('dataDateRange').textContent = allDates[0] + ' ~ ' + allDates[allDates.length - 1]; } catch(e){}
+      }
+      try { document.getElementById('dataPaperCount').textContent = arxivData.totalPapers; } catch(e){}
     } else {
       document.getElementById('arxivList').innerHTML = '<div class="no-results">暂无 arXiv 数据</div>';
     }

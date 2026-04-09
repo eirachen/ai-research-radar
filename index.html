@@ -910,8 +910,8 @@ const PLATFORMS = [
   { name: 'OpenAI', icon: '🤖', status: 'updated', detail: 'GPT-5.2', companyId: 'openai' },
   { name: 'DeepMind', icon: '🧠', status: 'updated', detail: 'ICLR 2026', companyId: 'deepmind' },
   { name: 'Anthropic', icon: '🔬', status: 'updated', detail: 'Diff Tool', companyId: 'anthropic' },
-  { name: 'Meta AI', icon: '📘', status: 'offline', detail: '500 错误', companyId: 'meta' },
-  { name: 'NVIDIA', icon: '💚', status: 'offline', detail: '403 禁止', companyId: 'nvidia' },
+  { name: 'Meta AI', icon: '📘', status: 'updated', detail: 'Muse Spark / SAM 3.1 / DINOv3', companyId: 'meta' },
+  { name: 'NVIDIA', icon: '💚', status: 'updated', detail: 'Kaolin / CUDA-X / GTC 2026', companyId: 'nvidia' },
   { name: '百度', icon: '🔴', status: 'updated', detail: 'ERNIE / 千帆', companyId: 'baidu' },
   { name: '快手', icon: '📹', status: 'updated', detail: 'Kling视频生成', companyId: 'kuaishou' },
   { name: '滴滴', icon: '🚕', status: 'updated', detail: 'AI出行', companyId: 'didi' },
@@ -962,8 +962,8 @@ const RADARS = [
   { company: 'OpenAI', companyId: 'openai', direction: 'GPT-5系列 / Sora / 音频', trend: '多模态统一', url: 'https://openai.com/research' },
   { company: 'DeepMind', companyId: 'deepmind', direction: '视频理解 / AI意识哲学', trend: '基础研究 + 哲学反思', url: 'https://deepmind.google/research/publications/' },
   { company: 'Anthropic', companyId: 'anthropic', direction: '可解释性 / 模型安全 / 经济影响', trend: '安全审计工具化', url: 'https://www.anthropic.com/research' },
-  { company: 'Meta AI', companyId: 'meta', direction: 'Llama开源 / 视觉基础模型', trend: '开源大模型生态', url: 'https://ai.meta.com/research/publications/' },
-  { company: 'NVIDIA', companyId: 'nvidia', direction: 'GPU架构 / 推理加速 / 机器人', trend: '算力基建 + 具身智能', url: 'https://research.nvidia.com/publications' },
+  { company: 'Meta AI', companyId: 'meta', direction: 'Muse Spark / SAM 3.1 / DINOv3 / Motivo', trend: '超级智能实验室 + 开源视觉基础模型', url: 'https://ai.meta.com/research/' },
+  { company: 'NVIDIA', companyId: 'nvidia', direction: '3D深度学习 / 生成式AI / 机器人 / CUDA-X', trend: 'GTC 2026 + 空间智能 + 自动驾驶', url: 'https://www.nvidia.com/en-us/research/' },
   { company: '百度', companyId: 'baidu', direction: 'ERNIE / 千帆大模型 / 自动驾驶', trend: '产业AI落地', url: 'https://research.baidu.com/' },
   { company: '快手', companyId: 'kuaishou', direction: 'Kling视频生成 / 多模态 / 推荐', trend: '视频AI + AIGC创作', url: 'https://www.kuaishou.com/about/tech' },
   { company: '滴滴', companyId: 'didi', direction: '自动驾驶 / 出行优化 / 地图AI', trend: 'AI出行 + 自动驾驶', url: 'https://www.didiglobal.com/science/ailabs' },
@@ -1099,7 +1099,7 @@ function renderStats() {
   }
   grid.innerHTML = `
     <div class="stat-card"><div class="stat-label">数据覆盖</div><div class="stat-value" style="font-size:1.1rem;letter-spacing:0">${dateRange}</div><div class="stat-sub">${arxivTotal} 篇 arXiv 论文</div></div>
-    <div class="stat-card"><div class="stat-label">监控平台</div><div class="stat-value">15/17</div><div class="stat-sub">平台在线</div></div>
+    <div class="stat-card"><div class="stat-label">监控平台</div><div class="stat-value">17/17</div><div class="stat-sub">平台在线</div></div>
     <div class="stat-card"><div class="stat-label">人才追踪</div><div class="stat-value">${tc}</div><div class="stat-sub">已录入人才</div></div>
     <div class="stat-card"><div class="stat-label">高优先级</div><div class="stat-value">${urgent}</div><div class="stat-sub">2026年毕业</div></div>
   `;

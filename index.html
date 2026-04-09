@@ -1414,7 +1414,14 @@ function toggleTalentRow(id, headerEl) {
 function toggleCompactDetail(id) {
   var el = document.getElementById(id);
   if (!el) return;
-  el.style.display = el.style.display === 'none' ? 'block' : 'none';
+  var opening = el.style.display === 'none';
+  // 收起所有已展开的详情
+  document.querySelectorAll('[id^="trow_"]').forEach(function(d) {
+    if (d.id !== id && d.style.display !== 'none') {
+      d.style.display = 'none';
+    }
+  });
+  el.style.display = opening ? 'block' : 'none';
 }
 
 function toggleTalentSection(id, headerEl) {

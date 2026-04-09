@@ -293,11 +293,11 @@ COMPANY_QUERIES = {
     },
     "meta": {
         "name": "Meta AI", "icon": "📘",
-        "keywords": ['"Meta AI"', '"Meta FAIR"', '"Meta Platforms"']
+        "keywords": ['"Meta AI"', '"Meta FAIR"', '"Meta Platforms"', '"GenAI Meta"']
     },
     "nvidia": {
         "name": "NVIDIA", "icon": "💚",
-        "keywords": ['"NVIDIA Research"', '"NVIDIA Corporation"']
+        "keywords": ['"NVIDIA"', '"NVIDIA Research"']
     },
     "baidu": {
         "name": "百度", "icon": "🔴",

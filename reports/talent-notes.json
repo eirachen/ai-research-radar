@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-09T15:54:19.849892Z",
+  "generatedAt": "2026-04-09T16:14:42.928203Z",
   "notes": {
     "Ye Tian": {
       "name": "田野 (Ye Tian)",
@@ -4276,15 +4276,15 @@
       "name": "Yaqi Xie",
       "university": "ETH",
       "isHK": false,
-      "status": "待确认",
-      "advisor": "待确认",
-      "lab": "",
-      "homepage": "",
-      "scholar": "",
+      "status": "博士在读",
+      "advisor": "Linwei Xin",
+      "lab": "Booth School of Business, University of Chicago",
+      "homepage": "https://xieyaqi188.github.io/",
+      "scholar": "https://scholar.google.com/citations?user=_BRE4akAAAAJ",
       "direction": "强化学习 / RAG/检索",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（阿里通义）",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-09"
     },
     "Xinru Hao": {
       "name": "Xinru Hao",
@@ -9148,15 +9148,15 @@
       "name": "Matthew Flathers",
       "university": "MIT",
       "isHK": false,
-      "status": "待确认",
+      "status": "研究员",
       "advisor": "待确认",
-      "lab": "",
+      "lab": "Department of Psychiatry and Neuroscience, Charité Berlin",
       "homepage": "",
       "scholar": "",
       "direction": "LLM / 安全 / 语音",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（OpenAI）",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-09"
     },
     "Griffin Smith": {
       "name": "Griffin Smith",
@@ -12720,13 +12720,13 @@
       "isHK": false,
       "status": "待确认",
       "advisor": "待确认",
-      "lab": "",
+      "lab": "University of Electronic Science and Technology of China",
       "homepage": "",
       "scholar": "",
       "direction": "强化学习 / LLM / Infra",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（阿里淘天）",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-09"
     },
     "Jianyun Zou": {
       "name": "Jianyun Zou",

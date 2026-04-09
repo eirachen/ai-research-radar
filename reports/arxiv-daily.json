@@ -2,7 +2,7 @@
   "generatedAt": "2026-04-09T09:22:57.506279Z",
   "since": "2026-03-01",
   "totalPapers": 289,
-  "totalUniCollab": 60,
+  "totalUniCollab": 49,
   "totalHKCollab": 1,
   "companies": {
     "bytedance": {
@@ -3930,7 +3930,7 @@
             "UW"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -3948,7 +3948,14 @@
               "label": "数据",
               "color": "#78716c"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "alibaba"
+          ],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "company_only"
         },
         {
           "title": "How Trustworthy Are LLM-as-Judge Ratings for Interpretive Responses? Implications for Qualitative Research Workflows",
@@ -3975,7 +3982,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -3993,7 +4000,14 @@
               "label": "Agent",
               "color": "#f97316"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Florida State University, Tallahassee, FL 32306, USA"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Revealing Behavioral Plasticity in Large Language Models: A Token-Conditional Perspective",
@@ -4040,7 +4054,14 @@
               "label": "强化学习",
               "color": "#eab308"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "LiyuanMao12 LeYu1 JingZhou1 ChujieZheng1 BowenYu1† ChangGao1 ShixuanLiu1 AnYang1"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "MASQuant: Modality-Aware Smoothing Quantization for Multimodal Large Language Models",
@@ -4218,7 +4239,7 @@
         }
       ],
       "count": 76,
-      "uniCollabCount": 10,
+      "uniCollabCount": 8,
       "hkCollabCount": 0
     },
     "deepseek": {
@@ -11161,7 +11182,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -11179,7 +11200,14 @@
               "label": "RAG/检索",
               "color": "#64748b"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "HSE University, Moscow"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Decoupling Task and Behavior: A Two-Stage Reward Curriculum in Reinforcement Learning for Robotics",
@@ -11354,7 +11382,7 @@
         }
       ],
       "count": 12,
-      "uniCollabCount": 4,
+      "uniCollabCount": 3,
       "hkCollabCount": 0
     },
     "anthropic": {
@@ -12772,7 +12800,12 @@
               "label": "数据",
               "color": "#78716c"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "none"
         },
         {
           "title": "CLIOPATRA: Extracting Private Information from LLM Insights",
@@ -12798,7 +12831,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -12816,7 +12849,14 @@
               "label": "安全",
               "color": "#ef4444"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "1UniversityCollegeLondon"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Context Engineering: From Prompts to Corporate Multi-Agent Architecture",
@@ -12841,7 +12881,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -12859,7 +12899,14 @@
               "label": "RAG/检索",
               "color": "#64748b"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "HSE University, Moscow"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Automating Detection and Root-Cause Analysis of Flaky Tests in Quantum Software",
@@ -12891,7 +12938,7 @@
             "ANU"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -12909,7 +12956,15 @@
               "label": "安全",
               "color": "#ef4444"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Flaky Tests in Quantum Software",
+            "♠Department of Computer Science, Toronto Metropolitan University, Toronto, Canad"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Arbiter: Detecting Interference in LLM Agent System Prompts",
@@ -12933,7 +12988,7 @@
             "HIT"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -12951,7 +13006,15 @@
               "label": "数学推理",
               "color": "#06b6d4"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "the University of British Columbia",
+            "the Georgia Institute of Technology"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "FinSheet-Bench: From Simple Lookups to Complex Reasoning, Where LLMs Break on Financial Spreadsheets",
@@ -12979,7 +13042,7 @@
             "HIT"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -12997,7 +13060,14 @@
               "label": "多模态",
               "color": "#a855f7"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "2University of Zurich, Department of Informatics, Binzmühlestrasse 14, 8050 Züri"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Prompt Complexity Dilutes Structured Reasoning: A Follow-Up Study on the Car Wash Problem",
@@ -13020,7 +13090,7 @@
             "CAS"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -13028,7 +13098,12 @@
               "label": "LLM",
               "color": "#3b82f6"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "none"
         },
         {
           "title": "The Compression Paradox in LLM Inference: Provider-Dependent Energy Effects of Prompt Compression",
@@ -13195,7 +13270,7 @@
         }
       ],
       "count": 39,
-      "uniCollabCount": 13,
+      "uniCollabCount": 7,
       "hkCollabCount": 0
     },
     "baidu": {
@@ -13688,7 +13763,7 @@
             "HIT"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -13701,7 +13776,15 @@
               "label": "安全",
               "color": "#ef4444"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "𝑎InstituteofHighEnergyPhysics,ChineseAcademyofSciences,Beĳing,100049,China",
+            "𝑐UniversityofChineseAcademyofSciences,Beĳing100049,China"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Bulk OsO2 Single Crystals: Superior Catalysts for Water Oxidation",
@@ -13732,13 +13815,22 @@
             "Mila"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
-          "directions": []
+          "directions": [],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "School of Materials Science and Engineering, Beihang University, Beijing 100191,",
+            "Beijing National Laboratory for Condensed Matter Physics, Institute of Physics, ",
+            "Academy of Sciences, Beijing 100190, China."
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         }
       ],
       "count": 11,
-      "uniCollabCount": 3,
+      "uniCollabCount": 1,
       "hkCollabCount": 0
     },
     "xiaomi": {

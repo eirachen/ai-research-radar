@@ -2,7 +2,7 @@
   "generatedAt": "2026-04-09T09:22:57.506279Z",
   "since": "2026-03-01",
   "totalPapers": 289,
-  "totalUniCollab": 240,
+  "totalUniCollab": 171,
   "totalHKCollab": 1,
   "companies": {
     "bytedance": {
@@ -772,7 +772,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -790,7 +790,17 @@
               "label": "语音",
               "color": "#14b8a6"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "1EPICLab,ShanghaiJiaoTongUniversity 2XidianUniversity 3HKUST(GZ)"
+          ],
+          "pdfHKUnis": [
+            "HKU",
+            "HKUST"
+          ],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Does a Global Perspective Help Prune Sparse MoEs Elegantly?",
@@ -816,7 +826,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -834,7 +844,15 @@
               "label": "RAG/检索",
               "color": "#64748b"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "ZeliangZhang1 NikhilGhosh2 JianiLiu1 BinYu3 XiaodongLiu4",
+            "1UniversityofRochester 2FlatironInstitute 3UniversityofCalifornia,Berkeley"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Distributed Interpretability and Control for Large Language Models",
@@ -859,7 +877,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -877,7 +895,12 @@
               "label": "数据",
               "color": "#78716c"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "none"
         },
         {
           "title": "JUÁ -- A Benchmark for Information Retrieval in Brazilian Legal Text Collections",
@@ -920,7 +943,12 @@
               "label": "强化学习",
               "color": "#eab308"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "none"
         },
         {
           "title": "JUÁ - A Benchmark for Information Retrieval in Brazilian Legal Text Collections",
@@ -963,7 +991,12 @@
               "label": "强化学习",
               "color": "#eab308"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "none"
         },
         {
           "title": "Swiss-Bench 003: Evaluating LLM Reliability and Adversarial Security for Swiss Regulatory Contexts",
@@ -1003,7 +1036,14 @@
               "label": "安全",
               "color": "#ef4444"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Department of Computer Science, University of Colorado Boulder"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "T2T: Captioning Smartphone Activities Using Mobile Traffic",
@@ -1029,7 +1069,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -1047,7 +1087,15 @@
               "label": "数据",
               "color": "#78716c"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "§Department of Computer Science, Durham University, Durham, United Kingdom",
+            "†School of Cyber Science and Engineering, Zhengzhou University, Zhengzhou, China"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "CUE-R: Beyond the Final Answer in Retrieval-Augmented Generation",
@@ -1088,7 +1136,14 @@
               "label": "Infra",
               "color": "#22c55e"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Intuit Intuit"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "LatentAudit: Real-Time White-Box Faithfulness Monitoring for Retrieval-Augmented Generation with Verifiable Deployment",
@@ -1115,7 +1170,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -1133,7 +1188,14 @@
               "label": "强化学习",
               "color": "#eab308"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "BinjiangInstituteofZhejiangUniversity ZhejiangUniversity"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Improving Sparse Memory Finetuning",
@@ -1159,7 +1221,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -1172,7 +1234,14 @@
               "label": "Infra",
               "color": "#22c55e"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "UniversityofMichigan,AnnArbor"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Integration of Object Detection and Small VLMs for Construction Safety Hazard Identification",
@@ -1199,7 +1268,7 @@
             "MIT"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -1217,7 +1286,15 @@
               "label": "数据",
               "color": "#78716c"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Infrastructure Human Tech (IHT) Lab, Department of Civil and Environmental",
+            "Engineering, University of Alberta, Edmonton, Alberta, Canada"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "MIRAGE: Benchmarking and Aligning Multi-Instance Image Editing",
@@ -1241,7 +1318,7 @@
             "Mila"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -1259,7 +1336,12 @@
               "label": "多模态",
               "color": "#a855f7"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "none"
         },
         {
           "title": "Gradient-Controlled Decoding: A Safety Guardrail for LLMs with Dual-Anchor Steering",
@@ -1284,7 +1366,7 @@
             "USC"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -1302,7 +1384,12 @@
               "label": "Infra",
               "color": "#22c55e"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "none"
         },
         {
           "title": "StarVLA: A Lego-like Codebase for Vision-Language-Action Model Developing",
@@ -1328,7 +1415,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -1346,7 +1433,17 @@
               "label": "数据",
               "color": "#78716c"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "StarVLACommunity&VonNeumannInstitute,HKUST"
+          ],
+          "pdfHKUnis": [
+            "HKU",
+            "HKUST"
+          ],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Cog-DRIFT: Exploration on Adaptively Reformulated Instances Enables Learning from Hard Reasoning Problems",
@@ -1378,7 +1475,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -1396,7 +1493,12 @@
               "label": "数据",
               "color": "#78716c"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "none"
         },
         {
           "title": "Relative Density Ratio Optimization for Stable and Statistically Consistent Model Alignment",
@@ -1426,7 +1528,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -1439,7 +1541,12 @@
               "label": "安全",
               "color": "#ef4444"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "none"
         },
         {
           "title": "Solar-VLM: Multimodal Vision-Language Models for Augmented Solar Power Forecasting",
@@ -1467,7 +1574,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -1485,7 +1592,15 @@
               "label": "Infra",
               "color": "#22c55e"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Power Forecasting",
+            "aSchoolofEconomicandManagement,NorthChinaElectricPowerUniversity,102206,Beijing,"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Extracting and Steering Emotion Representations in Small Language Models: A Methodological Comparison",
@@ -1509,7 +1624,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -1527,7 +1642,16 @@
               "label": "强化学习",
               "color": "#eab308"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Department of Electrical Engineering and Computer Science",
+            "Daegu Gyeongbuk Institute of Science and Technology (DGIST)",
+            "Small Language Models: A Methodological Comparison"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Benchmarking and Evaluating VLMs for Software Architecture Diagram Understanding",
@@ -1556,7 +1680,7 @@
             "HIT"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -1574,7 +1698,14 @@
               "label": "代码",
               "color": "#8b5cf6"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "King’sCollegeLondon King’sCollegeLondon King’sCollegeLondon"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "AdaptFuse: Training-Free Sequential Preference Learning via Externalized Bayesian Inference",
@@ -1604,7 +1735,7 @@
             "MIT"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -1622,7 +1753,14 @@
               "label": "安全",
               "color": "#ef4444"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "aTexasA&MUniversity bWorcesterPolytechnicInstitute"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Squeez: Task-Conditioned Tool-Output Pruning for Coding Agents",
@@ -1645,7 +1783,7 @@
             "ANU"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -1663,7 +1801,12 @@
               "label": "Agent",
               "color": "#f97316"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "none"
         },
         {
           "title": "EDGE-Shield: Efficient Denoising-staGE Shield for Violative Content Filtering via Scalable Reference-Based Matching",
@@ -1692,7 +1835,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -1710,7 +1853,15 @@
               "label": "Infra",
               "color": "#22c55e"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Filtering via Scalable Reference-Based Similarity Matching",
+            "SB intuitions"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Entropy and Attention Dynamics in Small Language Models: A Trace-Level Structural Analysis on the TruthfulQA Benchmark",
@@ -1735,7 +1886,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -1753,7 +1904,15 @@
               "label": "Infra",
               "color": "#22c55e"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "3 Royal Institute of Technology, Stockholm, Sweden",
+            "2 University of Turku, Turku, Finland"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Improving Role Consistency in Multi-Agent Collaboration via Quantitative Role Clarity",
@@ -1781,7 +1940,7 @@
             "Mila"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -1799,7 +1958,14 @@
               "label": "安全",
               "color": "#ef4444"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "NortheastNormalUniversity NortheastNormalUniversity"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "DeltaLogic: Minimal Premise Edits Reveal Belief-Revision Failures in Logical Reasoning Models",
@@ -1822,7 +1988,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -1840,7 +2006,14 @@
               "label": "Infra",
               "color": "#22c55e"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "AmitDhanda∗"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Mitigating LLM biases toward spurious social contexts using direct preference optimization",
@@ -1866,7 +2039,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -1884,7 +2057,15 @@
               "label": "强化学习",
               "color": "#eab308"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "StanfordUniversity StanfordUniversity{ddemszky}@stanford.edu",
+            "Mitigating LLM biases toward spurious social contexts using"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Taming CATS: Controllable Automatic Text Simplification through Instruction Fine-Tuning with Control Tokens",
@@ -1909,7 +2090,7 @@
             "Mila"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -1927,7 +2108,14 @@
               "label": "安全",
               "color": "#ef4444"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "1DepartmentofComputationalLinguistics,UniversityofZurich,Switzerland"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Hidden Meanings in Plain Sight: RebusBench for Evaluating Cognitive Visual Reasoning",
@@ -1970,7 +2158,14 @@
               "label": "数据",
               "color": "#78716c"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "SharifUniversityofTechnology"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Can Heterogeneous Language Models Be Fused?",
@@ -1998,7 +2193,7 @@
             "HIT"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -2016,7 +2211,14 @@
               "label": "安全",
               "color": "#ef4444"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "1SchoolofComputerScienceandTechnology,EastChinaNormalUniversity,2ShanghaiAILabor"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Fragile Reasoning: A Mechanistic Analysis of LLM Sensitivity to Meaning-Preserving Perturbations",
@@ -2041,7 +2243,7 @@
             "HIT"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -2059,7 +2261,14 @@
               "label": "RAG/检索",
               "color": "#64748b"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "UniversityofSouthDakota"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "CogBias: Measuring and Mitigating Cognitive Bias in Large Language Models",
@@ -2087,7 +2296,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -2105,7 +2314,15 @@
               "label": "安全",
               "color": "#ef4444"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "IndianaUniversityBloomington SingaporeManagementUniversity",
+            "CogBias: Measuring and Mitigating Cognitive Bias in Large"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Efficient and Principled Scientific Discovery through Bayesian Optimization: A Tutorial",
@@ -2154,7 +2371,20 @@
               "label": "RAG/检索",
               "color": "#64748b"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "alibaba",
+            "huawei"
+          ],
+          "pdfUnis": [
+            "1TheHongKongUniversityofScienceandTechnology(Guangzhou) 2HuaweiNoah’sArkLab",
+            "7ShanghaiUniversity 8UniversityCollegeLondon",
+            "5TheUniversityofHongKong 6HaiheLaboratoryofSustainableChemicalTransformations",
+            "Figure 1: A four-panel comic illustrates the conceptual journey of translating h"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "confirmed"
         },
         {
           "title": "Embarrassingly Simple Self-Distillation Improves Code Generation",
@@ -2181,7 +2411,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -2199,7 +2429,15 @@
               "label": "代码",
               "color": "#8b5cf6"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "variants.Tounderstandwhysuchasimplemethodcanwork,wetracethesegainstoaprecision-e",
+            "Canalargelanguagemodel(LLM)improveatcodegenerationusingonlyitsownrawoutputs,with"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "From Early Encoding to Late Suppression: Interpreting LLMs on Character Counting Tasks",
@@ -2226,7 +2464,7 @@
             "HIT"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -2244,7 +2482,14 @@
               "label": "数学推理",
               "color": "#06b6d4"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "†IIITHyderabad ‡GoetheUniversity,FrankfurtamMain,Germany §UniversityofSheffield,"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "CircuitProbe: Predicting Reasoning Circuits in Transformers via Stability Zone Detection",
@@ -2269,7 +2514,7 @@
             "ANU"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -2282,7 +2527,12 @@
               "label": "Infra",
               "color": "#22c55e"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "none"
         },
         {
           "title": "ATP-Bench: Towards Agentic Tool Planning for MLLM Interleaved Generation",
@@ -3774,7 +4024,7 @@
         }
       ],
       "count": 76,
-      "uniCollabCount": 62,
+      "uniCollabCount": 33,
       "hkCollabCount": 0
     },
     "deepseek": {
@@ -3820,7 +4070,12 @@
               "label": "RAG/检索",
               "color": "#64748b"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "none"
         },
         {
           "title": "Yale-DM-Lab at ArchEHR-QA 2026: Deterministic Grounding and Multi-Pass Evidence Alignment for EHR Question Answering",
@@ -3843,7 +4098,7 @@
             "MIT"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -3861,7 +4116,15 @@
               "label": "RAG/检索",
               "color": "#64748b"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Yale-DM-Lab at ArchEHR-QA 2026:",
+            "YaleUniversity,DepartmentofEmergencyMedicine"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Strategic Persuasion with Trait-Conditioned Multi-Agent Systems for Iterative Legal Argumentation",
@@ -3886,7 +4149,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -3904,7 +4167,12 @@
               "label": "强化学习",
               "color": "#eab308"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "none"
         },
         {
           "title": "TRAPTI: Time-Resolved Analysis for SRAM Banking and Power Gating Optimization in Embedded Transformer Inference",
@@ -3930,7 +4198,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -3948,7 +4216,16 @@
               "label": "强化学习",
               "color": "#eab308"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "To appear at the International Joint Conference on Neural Networks – IJCNN 2026.",
+            "†eBRAIN Lab, Division of Engineering, New York University (NYU) Abu Dhabi, Abu D",
+            "∗Brno University of Technology, Brno, Czechia"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Are LLMs Ready for Computer Science Education? A Cross-Domain, Cross-Lingual and Cognitive-Level Evaluation Using Professional Certification Exams",
@@ -3977,7 +4254,7 @@
             "MIT"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -3995,7 +4272,12 @@
               "label": "安全",
               "color": "#ef4444"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "none"
         },
         {
           "title": "Does a Global Perspective Help Prune Sparse MoEs Elegantly?",
@@ -4021,7 +4303,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -4039,7 +4321,15 @@
               "label": "RAG/检索",
               "color": "#64748b"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "ZeliangZhang1 NikhilGhosh2 JianiLiu1 BinYu3 XiaodongLiu4",
+            "1UniversityofRochester 2FlatironInstitute 3UniversityofCalifornia,Berkeley"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "State-of-the-Art Arabic Language Modeling with Sparse MoE Fine-Tuning and Chain-of-Thought Distillation",
@@ -4071,7 +4361,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -4089,7 +4379,12 @@
               "label": "数据",
               "color": "#78716c"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "none"
         },
         {
           "title": "Understanding Performance Gap Between Parallel and Sequential Sampling in Large Reasoning Models",
@@ -4128,7 +4423,16 @@
               "label": "代码",
               "color": "#8b5cf6"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "deepmind"
+          ],
+          "pdfUnis": [
+            "1GoogleDeepMind 2NationalUniversityofSingapore"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "confirmed"
         },
         {
           "title": "ETR: Entropy Trend Reward for Efficient Chain-of-Thought Reasoning",
@@ -4158,7 +4462,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -4176,7 +4480,14 @@
               "label": "RAG/检索",
               "color": "#64748b"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "1UniversityofToronto 2McMasterUniversity 3ConcordiaUniversity 4UniversityofOttaw"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "EffiPair: Improving the Efficiency of LLM-generated Code with Relative Contrastive Feedback",
@@ -4201,7 +4512,7 @@
             "Mila"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -4219,7 +4530,14 @@
               "label": "数据",
               "color": "#78716c"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "ColumbiaUniversity ColumbiaUniversity"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "QED-Nano: Teaching a Tiny Model to Prove Hard Theorems",
@@ -4266,7 +4584,15 @@
               "label": "数学推理",
               "color": "#06b6d4"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "3ETHZurich: JasperDekoninck",
+            "1CMU:YuxiaoQu,AmrithSetlur,IanWu,AviralKumar"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Mapping the Exploitation Surface: A 10,000-Trial Taxonomy of What Makes LLM Agents Exploit Vulnerabilities",
@@ -4306,7 +4632,14 @@
               "label": "Agent",
               "color": "#f97316"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "OPIT–OpenInstituteofTechnology,andCohorteAI,Paris,France."
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Talk2AI: A Longitudinal Dataset of Human--AI Persuasive Conversations",
@@ -4350,7 +4683,15 @@
               "label": "RAG/检索",
               "color": "#64748b"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "3Centre for Behavioural and Implementation Sciences in Medicine (BISI), Yong Loo",
+            "1CogNosco Lab, Department of Psychology and Cognitive Science, University of Tre"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Comparative reversal learning reveals rigid adaptation in LLMs under non-stationary uncertainty",
@@ -4385,7 +4726,14 @@
               "label": "Agent",
               "color": "#f97316"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "2 School of Computing, Dublin City University, Ireland"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Entropy and Attention Dynamics in Small Language Models: A Trace-Level Structural Analysis on the TruthfulQA Benchmark",
@@ -4410,7 +4758,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -4428,7 +4776,15 @@
               "label": "Infra",
               "color": "#22c55e"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "3 Royal Institute of Technology, Stockholm, Sweden",
+            "2 University of Turku, Turku, Finland"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Fine-tuning DeepSeek-OCR-2 for Molecular Structure Recognition",
@@ -4470,7 +4826,14 @@
               "label": "安全",
               "color": "#ef4444"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "deepseek"
+          ],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "company_only"
         },
         {
           "title": "PAFT: Preservation Aware Fine-Tuning for Minimal-Edit Program Repair",
@@ -4495,7 +4858,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -4513,7 +4876,14 @@
               "label": "Infra",
               "color": "#22c55e"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "YanshanUniversity YanshanUniversity"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Querying Structured Data Through Natural Language Using Language Models",
@@ -4540,7 +4910,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -4558,7 +4928,16 @@
               "label": "RAG/检索",
               "color": "#64748b"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "2 Institute of Communication and Computer Systems (ICCS), Athens, Greece",
+            "Valentin-Micu Hontan1, Andrei-Alexandru Bunea1, Nikolaos Dimitrios",
+            "1 National University of Science and Technology POLITEHNICA Bucharest"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "FoE: Forest of Errors Makes the First Solution the Best in Large Reasoning Models",
@@ -4601,7 +4980,15 @@
               "label": "数据",
               "color": "#78716c"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "2StateKeyLaboratoryofGeneralArtificialIntelligence,",
+            "1SchoolofSoftwareandMicroelectronics,PekingUniversity"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "AgentHazard: A Benchmark for Evaluating Harmful Behavior in Computer-Use Agents",
@@ -4648,7 +5035,17 @@
               "label": "安全",
               "color": "#ef4444"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "alibaba"
+          ],
+          "pdfUnis": [
+            "4DeakinUniversity,5SingaporeManagementUniversity",
+            "1AlibabaGroup,2FudanUniversity,3HunanInstituteofAdvancedTechnology"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "confirmed"
         },
         {
           "title": "Single-Agent LLMs Outperform Multi-Agent Systems on Multi-Hop Reasoning Under Equal Thinking Token Budgets",
@@ -4674,7 +5071,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -4692,7 +5089,14 @@
               "label": "数据",
               "color": "#78716c"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "StanfordUniversity"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Blinded Radiologist and LLM-Based Evaluation of LLM-Generated Japanese Translations of Chest CT Reports: Comparative Study",
@@ -4722,7 +5126,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -4740,7 +5144,16 @@
               "label": "数据",
               "color": "#78716c"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "2 Department of Radiology, The University of Tokyo Hospital, Tokyo, Japan",
+            "1 Division of Radiology and Biomedical Engineering, Graduate School of Medicine,",
+            "The University of Tokyo, Tokyo, Japan"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "FlatAttention: Dataflow and Fabric Collectives Co-Optimization for Large Attention-Based Model Inference on Tile-Based Accelerators",
@@ -4766,7 +5179,7 @@
             "HIT"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -4784,7 +5197,12 @@
               "label": "LLM",
               "color": "#3b82f6"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "none"
         },
         {
           "title": "On the Role of Reasoning Patterns in the Generalization Discrepancy of Long Chain-of-Thought Supervised Fine-Tuning",
@@ -4829,7 +5247,17 @@
               "label": "数据",
               "color": "#78716c"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "3CityUniversityofHongKong,4ZhejiangUniversity",
+            "1UniversityofScienceandTechnologyofChina,2MeituanLongCatTeam,"
+          ],
+          "pdfHKUnis": [
+            "CityU"
+          ],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "DWDP: Distributed Weight Data Parallelism for High-Performance LLM Inference on NVL72",
@@ -4872,7 +5300,17 @@
               "label": "LLM",
               "color": "#3b82f6"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "nvidia",
+            "xiaomi"
+          ],
+          "pdfUnis": [
+            "WanqianLi JintaoPeng ZongfeiJing TianyuZhang ZeLong XianjieQiao"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "confirmed"
         },
         {
           "title": "True (VIS) Lies: Analyzing How Generative AI Recognizes Intentionality, Rhetoric, and Misleadingness in Visualization Lies",
@@ -4899,7 +5337,7 @@
             "Mila"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -4917,7 +5355,15 @@
               "label": "多模态",
               "color": "#a855f7"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "toargueaboutlockdownpolicy,oftenfeaturingSweden,withargumentativecaptionsthatfra",
+            "projectionformsasingledenselypackedcloud,confirmingthatmodelsproducesemantically"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Adversarial Moral Stress Testing of Large Language Models",
@@ -4945,7 +5391,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -4963,7 +5409,12 @@
               "label": "数据",
               "color": "#78716c"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "none"
         },
         {
           "title": "STAR: Mitigating Cascading Errors in Spatial Reasoning via Turn-point Alignment and Segment-level DPO",
@@ -4991,7 +5442,7 @@
             "CAS"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -5009,7 +5460,19 @@
               "label": "强化学习",
               "color": "#eab308"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "1Guangdong University of Finance and Economics",
+            "STAR: Mitigating Cascading Errors in Spatial",
+            "lirunze@westlake.edu.cn, haojianhuang@connect.hku.hk"
+          ],
+          "pdfHKUnis": [
+            "HKU",
+            "Hong Kong"
+          ],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Structured Intent as a Protocol-Like Communication Layer: Cross-Model Robustness, Framework Comparison, and the Weak-Model Compensation Effect",
@@ -6296,7 +6759,7 @@
         }
       ],
       "count": 57,
-      "uniCollabCount": 48,
+      "uniCollabCount": 31,
       "hkCollabCount": 1
     },
     "moonshot": {
@@ -6330,7 +6793,7 @@
             "MIT"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -6348,7 +6811,15 @@
               "label": "多模态",
               "color": "#a855f7"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "1ShanghaiInnovationInstitute,2UniversityofScienceandTechnologyofChina,3EastChina",
+            "sa22916003@mail.ustc.edu.cn,{51284102005, lizhuoxuan, wmumu}@stu.ecnu.edu.cn,kql"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "An Independent Safety Evaluation of Kimi K2.5",
@@ -6398,7 +6869,19 @@
               "label": "Agent",
               "color": "#f97316"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "anthropic"
+          ],
+          "pdfUnis": [
+            "Ida Caspary1,5 Yernat Yestekov2 Zora Che1,6",
+            "6University of Maryland, College Park 7Georgia Institute of Technology",
+            "1Constellation 2Anthropic Fellows Program 3Brown University",
+            "4University of Wisconsin-Madison 5Imperial College London"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "confirmed"
         },
         {
           "title": "AgentHazard: A Benchmark for Evaluating Harmful Behavior in Computer-Use Agents",
@@ -6445,7 +6928,17 @@
               "label": "安全",
               "color": "#ef4444"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "alibaba"
+          ],
+          "pdfUnis": [
+            "4DeakinUniversity,5SingaporeManagementUniversity",
+            "1AlibabaGroup,2FudanUniversity,3HunanInstituteofAdvancedTechnology"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "confirmed"
         },
         {
           "title": "True (VIS) Lies: Analyzing How Generative AI Recognizes Intentionality, Rhetoric, and Misleadingness in Visualization Lies",
@@ -6472,7 +6965,7 @@
             "Mila"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -6490,7 +6983,15 @@
               "label": "多模态",
               "color": "#a855f7"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "toargueaboutlockdownpolicy,oftenfeaturingSweden,withargumentativecaptionsthatfra",
+            "projectionformsasingledenselypackedcloud,confirmingthatmodelsproducesemantically"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "EvA: An Evidence-First Audio Understanding Paradigm for LALMs",
@@ -7056,7 +7557,7 @@
         }
       ],
       "count": 17,
-      "uniCollabCount": 14,
+      "uniCollabCount": 12,
       "hkCollabCount": 0
     },
     "openai": {
@@ -7083,7 +7584,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -7091,7 +7592,12 @@
               "label": "数学推理",
               "color": "#06b6d4"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "none"
         },
         {
           "title": "Short proofs in combinatorics, probability and number theory II",
@@ -7125,7 +7631,14 @@
               "label": "数学推理",
               "color": "#06b6d4"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "openai"
+          ],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "company_only"
         },
         {
           "title": "Evolution of Video Generative Foundations",
@@ -7155,7 +7668,7 @@
             "NYU"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -7173,7 +7686,12 @@
               "label": "Agent",
               "color": "#f97316"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "none"
         },
         {
           "title": "CritBench: A Framework for Evaluating Cybersecurity Capabilities of Large Language Models in IEC 61850 Digital Substation Environments",
@@ -7198,7 +7716,7 @@
             "MIT"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -7216,7 +7734,14 @@
               "label": "数据",
               "color": "#78716c"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Karlsruhe Institute of Technology (KIT)"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "AI-Driven Modular Services for Accessible Multilingual Education in Immersive Extended Reality Settings: Integrating Speech Processing, Translation, and Sign Language Rendering",
@@ -7244,7 +7769,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -7262,7 +7787,16 @@
               "label": "Infra",
               "color": "#22c55e"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "4Exeter Small-Scale Robotics Laboratory, Engineering Department, University of",
+            "3National Technical University of Athens, Leof. Alimou, Katechaki, Zografou 1577",
+            "1Institute of Communications and Computer Systems (ICCS), Iroon Polytechneiou 9,"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "PRISM-MCTS: Learning from Reasoning Trajectories with Metacognitive Reflection",
@@ -7290,7 +7824,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -7308,7 +7842,12 @@
               "label": "强化学习",
               "color": "#eab308"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "none"
         },
         {
           "title": "Document Optimization for Black-Box Retrieval via Reinforcement Learning",
@@ -7336,7 +7875,7 @@
             "UW"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -7354,7 +7893,14 @@
               "label": "强化学习",
               "color": "#eab308"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "1StanfordUniversity,2ContextualAI"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Mapping the Exploitation Surface: A 10,000-Trial Taxonomy of What Makes LLM Agents Exploit Vulnerabilities",
@@ -7394,7 +7940,14 @@
               "label": "Agent",
               "color": "#f97316"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "OPIT–OpenInstituteofTechnology,andCohorteAI,Paris,France."
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "FermiLink: A Unified Agent Framework for Multidomain Autonomous Scientific Simulations",
@@ -7422,7 +7975,7 @@
           "comment": "Simulation data available at https://www.taoeli.org/publications; source code available at Github https://github.com/TaoELi/FermiLink",
           "universities": [],
           "hkUniversities": [],
-          "hasUniCollab": false,
+          "hasUniCollab": true,
           "hasHKCollab": false,
           "directions": [
             {
@@ -7440,7 +7993,17 @@
               "label": "强化学习",
               "color": "#eab308"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "openai"
+          ],
+          "pdfUnis": [
+            "Pacific Northwest National Laboratory, Richland WA 99352, USA",
+            "1Department of Physics and Astronomy, University of Delaware, Newark, Delaware 1"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "confirmed"
         },
         {
           "title": "FermiLink: A Unified Agent Framework for Multidomain Autonomous Scientific Simulations",
@@ -7468,7 +8031,7 @@
           "comment": "Simulation data available at https://www.taoeli.org/publications; source code available at Github https://github.com/TaoELi/FermiLink",
           "universities": [],
           "hkUniversities": [],
-          "hasUniCollab": false,
+          "hasUniCollab": true,
           "hasHKCollab": false,
           "directions": [
             {
@@ -7486,7 +8049,17 @@
               "label": "强化学习",
               "color": "#eab308"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "openai"
+          ],
+          "pdfUnis": [
+            "Pacific Northwest National Laboratory, Richland WA 99352, USA",
+            "1Department of Physics and Astronomy, University of Delaware, Newark, Delaware 1"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "confirmed"
         },
         {
           "title": "ABTest: Behavior-Driven Testing for AI Coding Agents",
@@ -7514,7 +8087,7 @@
             "ANU"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -7532,7 +8105,14 @@
               "label": "代码",
               "color": "#8b5cf6"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "YorkUniversity PolytechniqueMontreal YorkUniversity"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "From Industry Claims to Empirical Reality: An Empirical Study of Code Review Agents in Pull Requests",
@@ -7558,7 +8138,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -7576,7 +8156,14 @@
               "label": "代码",
               "color": "#8b5cf6"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "KennesawStateUniversity QuantaTechnology"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Generative AI for Video Trailer Synthesis: From Extractive Heuristics to Autoregressive Creativity",
@@ -7606,7 +8193,7 @@
             "ANU"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -7619,7 +8206,14 @@
               "label": "多模态",
               "color": "#a855f7"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "DebanshuDas AnushreeSinha"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Generalization Limits of Reinforcement Learning Alignment",
@@ -7644,7 +8238,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -7662,7 +8256,14 @@
               "label": "强化学习",
               "color": "#eab308"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Generalization Limits of Reinforcement Learning Alignment:"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Open-Domain Safety Policy Construction",
@@ -7706,7 +8307,15 @@
               "label": "数据",
               "color": "#78716c"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "1UniversityofCalifornia,LosAngeles 2Taboola",
+            "{diwu, kwchang}@cs.ucla.edu"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "True (VIS) Lies: Analyzing How Generative AI Recognizes Intentionality, Rhetoric, and Misleadingness in Visualization Lies",
@@ -7733,7 +8342,7 @@
             "Mila"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -7751,7 +8360,15 @@
               "label": "多模态",
               "color": "#a855f7"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "toargueaboutlockdownpolicy,oftenfeaturingSweden,withargumentativecaptionsthatfra",
+            "projectionformsasingledenselypackedcloud,confirmingthatmodelsproducesemantically"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Investigating Autonomous Agent Contributions in the Wild: Activity Patterns and Code Change over Time",
@@ -7780,7 +8397,7 @@
             "MIT"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -7798,7 +8415,15 @@
               "label": "LLM",
               "color": "#3b82f6"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "DelftUniversityofTechnology UniversityofCalifornia,Davis DelftUniversityofTechno",
+            "Delft,TheNetherlands Davis,USA Delft,TheNetherlands"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Cost-Penalized Fitness in FMA-Orchestrated Mixture of Experts: Experimental Evidence for Molecular Memory in Domain Adaptation",
@@ -7831,7 +8456,14 @@
               "label": "Infra",
               "color": "#22c55e"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Department of Electricity and Electronics, University of Valladolid, Spain"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "In harmony with gpt-oss",
@@ -7854,7 +8486,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -7867,7 +8499,12 @@
               "label": "Agent",
               "color": "#f97316"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "none"
         },
         {
           "title": "Can Commercial LLMs Be Parliamentary Political Companions? Comparing LLM Reasoning Against Romanian Legislative Expuneri de Motive",
@@ -9400,7 +10037,7 @@
         }
       ],
       "count": 54,
-      "uniCollabCount": 46,
+      "uniCollabCount": 35,
       "hkCollabCount": 0
     },
     "deepmind": {
@@ -9436,7 +10073,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -9449,7 +10086,14 @@
               "label": "Agent",
               "color": "#f97316"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "deepmind"
+          ],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "company_only"
         },
         {
           "title": "The Rank and Gradient Lost in Non-stationarity: Sample Weight Decay for Mitigating Plasticity Loss in Reinforcement Learning",
@@ -9478,7 +10122,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -9496,7 +10140,16 @@
               "label": "数学推理",
               "color": "#06b6d4"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "2InternationalJointInstituteofTianjinUniversity,Fuzhou",
+            "STATIONARITY: SAMPLE WEIGHT DECAY FOR MIT-",
+            "1SchoolofComputerSoftware,TianjinUniversity"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "SkyNet: Belief-Aware Planning for Partially-Observable Stochastic Games",
@@ -9922,7 +10575,7 @@
         }
       ],
       "count": 12,
-      "uniCollabCount": 11,
+      "uniCollabCount": 9,
       "hkCollabCount": 0
     },
     "anthropic": {
@@ -9953,7 +10606,7 @@
             "Mila"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -9966,7 +10619,15 @@
               "label": "数据",
               "color": "#78716c"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Savitribai Phule Pune University Savitribai Phule Pune University",
+            "Department of Computer Science Department of Computer Science"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "A Formal Security Framework for MCP-Based AI Agents: Threat Taxonomy, Verification Models, and Defense Mechanisms",
@@ -9991,7 +10652,7 @@
             "HIT"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -10009,7 +10670,14 @@
               "label": "LLM",
               "color": "#3b82f6"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Nirajan Acharya1, Gaurav Kumar Gupta2 1University of the Cumberlands"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Instruction-Tuned LLMs for Parsing and Mining Unstructured Logs on Leadership HPC Systems",
@@ -10034,7 +10702,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -10052,7 +10720,15 @@
               "label": "数据",
               "color": "#78716c"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Oak Ridge National Laboratory Oak Ridge National Laboratory",
+            "University of Tennessee Oak Ridge National Laboratory"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Measuring the Permission Gate: A Stress-Test Evaluation of Claude Code's Auto Mode",
@@ -10081,7 +10757,7 @@
             "NYU"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -10099,7 +10775,15 @@
               "label": "Agent",
               "color": "#f97316"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "ZimoJi1 ZongjieLi1 WenyuanJiang2 YudongGao1 ShuaiWang1∗",
+            "1HongKongUniversityofScienceandTechnology 2ETHZurich"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Corporations Constitute Intelligence",
@@ -10136,7 +10820,16 @@
               "label": "安全",
               "color": "#ef4444"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "anthropic"
+          ],
+          "pdfUnis": [
+            "In January 2026, Anthropic published something unprecedented: a 79-page"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "confirmed"
         },
         {
           "title": "An Empirical Study of Sustainability in Prompt-driven Test Script Generation Using Small Language Models",
@@ -10175,7 +10868,14 @@
               "label": "RAG/检索",
               "color": "#64748b"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "UniversityOfCalgary UniversityOfCalgary"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "EvoSkills: Self-Evolving Agent Skills via Co-Evolutionary Verification",
@@ -10205,7 +10905,7 @@
             "ANU"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -10223,7 +10923,14 @@
               "label": "安全",
               "color": "#ef4444"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "1UniversityofIllinoisChicago 2MBZUAI 3McGillUniversity"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "CORAL: Towards Autonomous Multi-Agent Evolution for Open-Ended Discovery",
@@ -10271,7 +10978,17 @@
               "label": "Infra",
               "color": "#22c55e"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "anthropic"
+          ],
+          "pdfUnis": [
+            "∗Equalcontribution(alphabeticalorder) †Jointadvising ‡Workdoneoutsidetheauthors’",
+            "1MIT 2NUS 3MiniMax 4McGill 5Stanford 6SambaNova 7Meta"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "confirmed"
         },
         {
           "title": "Preference learning in shades of gray: Interpretable and bias-aware reward modeling for human preferences",
@@ -10296,7 +11013,7 @@
             "Mila"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -10314,7 +11031,14 @@
               "label": "强化学习",
               "color": "#eab308"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Department of Economic Informatics and Cybernetics, Bucharest University of Econ"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "VibeGuard: A Security Gate Framework for AI-Generated Code",
@@ -10337,7 +11061,7 @@
             "ANU"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -10355,7 +11079,14 @@
               "label": "数学推理",
               "color": "#06b6d4"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "1Kennesaw State University, yxie2@kennesaw.edu"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Can Commercial LLMs Be Parliamentary Political Companions? Comparing LLM Reasoning Against Romanian Legislative Expuneri de Motive",
@@ -11567,7 +12298,7 @@
         }
       ],
       "count": 39,
-      "uniCollabCount": 35,
+      "uniCollabCount": 28,
       "hkCollabCount": 0
     },
     "baidu": {
@@ -11621,7 +12352,16 @@
               "label": "安全",
               "color": "#ef4444"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "meta"
+          ],
+          "pdfUnis": [
+            "reuse. Asaninitialstep,westudywhetherearlyNCprimitivescanbelearnedsolelyfromcoll"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "confirmed"
         },
         {
           "title": "Short Data, Long Context: Distilling Positional Knowledge in Transformers",
@@ -11666,7 +12406,12 @@
               "label": "Infra",
               "color": "#22c55e"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "none"
         },
         {
           "title": "Scaling Reasoning Tokens via RL and Parallel Thinking: Evidence From Competitive Programming",
@@ -11713,7 +12458,17 @@
               "label": "RAG/检索",
               "color": "#64748b"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "bytedance"
+          ],
+          "pdfUnis": [
+            "Qianfan Zhang2,†, Tianyu Guo3,†, Xuandi Ren3,†, Jiale Chen4,†, Ming Ding1,",
+            "1ByteDanceSeed, 2PrincetonUniversity, 3UCBerkeley, 4StanfordUniversity"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "confirmed"
         },
         {
           "title": "True (VIS) Lies: Analyzing How Generative AI Recognizes Intentionality, Rhetoric, and Misleadingness in Visualization Lies",
@@ -11740,7 +12495,7 @@
             "Mila"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -11758,7 +12513,15 @@
               "label": "多模态",
               "color": "#a855f7"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "projectionformsasingledenselypackedcloud,confirmingthatmodelsproducesemantically",
+            "toargueaboutlockdownpolicy,oftenfeaturingSweden,withargumentativecaptionsthatfra"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Multimodal-NF: A Wireless Dataset for Near-Field Low-Altitude Sensing and Communications",
@@ -12100,7 +12863,7 @@
         }
       ],
       "count": 12,
-      "uniCollabCount": 9,
+      "uniCollabCount": 8,
       "hkCollabCount": 0
     },
     "xiaomi": {
@@ -12157,7 +12920,20 @@
               "label": "Agent",
               "color": "#f97316"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "xiaomi"
+          ],
+          "pdfUnis": [
+            "1Huazhong University of Science and Technology 2Xiaomi EV 3SKL-IOTSC, University",
+            "Long Chen2, Hongwei Xie2, Bing Wang2, Guang Chen2, Hangjun Ye2, Wenyu Liu1,",
+            "nuScenes and closed-loop evaluation on Bench2Drive. Moreover, it demonstrates st",
+            "directly adopting 2D Vision-Language Models yields limited spatial perception, w",
+            "mapping, motion forecasting, and driving-oriented VQA, highlighting its broad ap"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "confirmed"
         },
         {
           "title": "DreamLite: A Lightweight On-Device Unified Model for Image Generation and Editing",

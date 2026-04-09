@@ -459,7 +459,7 @@ def main():
 
         for keyword in company_info["keywords"]:
             entries = search_arxiv(keyword, max_results=20)
-            time.sleep(3)
+            time.sleep(8)
             entries = filter_by_date(entries, since)
             company_papers.extend(entries)
             print(f"  {keyword}: {len(entries)} papers")

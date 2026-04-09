@@ -1,14 +1,62 @@
 {
-  "generatedAt": "2026-04-08T20:16:51.094139Z",
+  "generatedAt": "2026-04-09T09:22:57.506279Z",
   "since": "2026-03-01",
-  "totalPapers": 264,
-  "totalUniCollab": 227,
+  "totalPapers": 289,
+  "totalUniCollab": 247,
   "totalHKCollab": 1,
   "companies": {
     "bytedance": {
       "company": "字节Seed",
       "icon": "🌱",
       "papers": [
+        {
+          "title": "Evolution of Video Generative Foundations",
+          "summary": "The rapid advancement of Artificial Intelligence Generated Content (AIGC) has revolutionized video generation, enabling systems ranging from proprietary pioneers like OpenAI's Sora, Google's Veo3, and Bytedance's Seedance to powerful open-source contenders like Wan and HunyuanVideo to synthesize tem",
+          "published": "2026-04-07T18:17:05Z",
+          "arxivId": "2604.06339v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.06339v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.06339v1",
+          "authors": [
+            "Teng Hu",
+            "Jiangning Zhang",
+            "Hongrui Huang",
+            "Ran Yi",
+            "Zihan Su",
+            "Jieyu Weng",
+            "Zhucun Xue",
+            "Lizhuang Ma"
+          ],
+          "authorCount": 10,
+          "affiliations": [],
+          "categories": [
+            "cs.CV"
+          ],
+          "comment": "",
+          "universities": [
+            "MIT",
+            "NYU"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Vision",
+              "label": "视觉",
+              "color": "#ec4899"
+            },
+            {
+              "id": "Multimodal",
+              "label": "多模态",
+              "color": "#a855f7"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            }
+          ]
+        },
         {
           "title": "In-Place Test-Time Training",
           "summary": "The static ``train then deploy\" paradigm fundamentally limits Large Language Models (LLMs) from dynamically adapting their weights in response to continuous streams of new information inherent in real-world tasks. Test-Time Training (TTT) offers a compelling alternative by updating a subset of model",
@@ -275,14 +323,503 @@
           ]
         }
       ],
-      "count": 7,
-      "uniCollabCount": 5,
+      "count": 8,
+      "uniCollabCount": 6,
       "hkCollabCount": 0
     },
     "alibaba": {
       "company": "阿里通义",
       "icon": "☁️",
       "papers": [
+        {
+          "title": "The ATOM Report: Measuring the Open Language Model Ecosystem",
+          "summary": "We present a comprehensive adoption snapshot of the leading open language models and who is building them, focusing on the ~1.5K mainline open models from the likes of Alibaba's Qwen, DeepSeek, Meta's Llama, that are the foundation of an ecosystem crucial to researchers, entrepreneurs, and policy ad",
+          "published": "2026-04-08T15:15:50Z",
+          "arxivId": "2604.07190v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.07190v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.07190v1",
+          "authors": [
+            "Nathan Lambert",
+            "Florian Brand"
+          ],
+          "authorCount": 2,
+          "affiliations": [],
+          "categories": [
+            "cs.CY",
+            "cs.AI",
+            "cs.LG"
+          ],
+          "comment": "23 pages, 17 figures",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            }
+          ]
+        },
+        {
+          "title": "Identifying Topological Invariants of Non-Hermitian Systems via Domain-Adaptive Multimodal Model for Mathematics",
+          "summary": "The emergence of the non-Hermitian skin effect, distinguished by the exponential localization of bulk states onto boundaries in open systems, has redefined the conventional band theory. It can be established through the generalized Brillouin zone framework, the amoeba formulation or generalized Ferm",
+          "published": "2026-04-08T12:15:19Z",
+          "arxivId": "2604.06998v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.06998v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.06998v1",
+          "authors": [
+            "Jiuchun Meng",
+            "Lichao Sun",
+            "Xiumei Wang",
+            "Dandan Zhu",
+            "Xingping Zhou"
+          ],
+          "authorCount": 5,
+          "affiliations": [],
+          "categories": [
+            "cond-mat.other"
+          ],
+          "comment": "",
+          "universities": [
+            "CAS",
+            "NTU",
+            "MIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Multimodal",
+              "label": "多模态",
+              "color": "#a855f7"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            }
+          ]
+        },
+        {
+          "title": "TRAPTI: Time-Resolved Analysis for SRAM Banking and Power Gating Optimization in Embedded Transformer Inference",
+          "summary": "Transformer neural networks achieve state-of-the-art accuracy across language and vision tasks, but their deployment on embedded hardware is hindered by stringent area, latency, and energy constraints. During inference, performance and efficiency are increasingly dominated by the Key--Value (KV) cac",
+          "published": "2026-04-08T11:15:52Z",
+          "arxivId": "2604.06955v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.06955v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.06955v1",
+          "authors": [
+            "Jan Klhufek",
+            "Alberto Marchisio",
+            "Vojtech Mrazek",
+            "Lukas Sekanina",
+            "Muhammad Shafique"
+          ],
+          "authorCount": 5,
+          "affiliations": [],
+          "categories": [
+            "cs.AR"
+          ],
+          "comment": "To appear at the International Joint Conference on Neural Networks - IJCNN 2026. Maastricht, Netherlands",
+          "universities": [
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            }
+          ]
+        },
+        {
+          "title": "The AI Skills Shift: Mapping Skill Obsolescence, Emergence, and Transition Pathways in the LLM Era",
+          "summary": "As Large Language Models reshape the global labor market, policymakers and workers need empirical data on which occupational skills may be most susceptible to automation. We present the Skill Automation Feasibility Index (SAFI), benchmarking four frontier LLMs -- LLaMA 3.3 70B, Mistral Large, Qwen 2",
+          "published": "2026-04-08T10:05:08Z",
+          "arxivId": "2604.06906v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.06906v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.06906v1",
+          "authors": [
+            "Rudra Jadhav",
+            "Janhavi Danve"
+          ],
+          "authorCount": 2,
+          "affiliations": [],
+          "categories": [
+            "cs.CL",
+            "cs.AI",
+            "cs.CY"
+          ],
+          "comment": "11 pages, 12 figures, 2 tables, 17 references. Code and data available at",
+          "universities": [
+            "USC",
+            "Mila"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            }
+          ]
+        },
+        {
+          "title": "Are LLMs Ready for Computer Science Education? A Cross-Domain, Cross-Lingual and Cognitive-Level Evaluation Using Professional Certification Exams",
+          "summary": "Large language models (LLMs) are increasingly applied in computer science education for tasks such as tutoring, content generation, and code assessment. However, systematic evaluations aligned with formal curricula and certification standards remain limited. This study benchmarked four recent models",
+          "published": "2026-04-08T09:56:31Z",
+          "arxivId": "2604.06898v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.06898v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.06898v1",
+          "authors": [
+            "Chen Gao",
+            "Chi Liu",
+            "Zhengquan Luo",
+            "Dongfu Xiao",
+            "Maiying Sui",
+            "Sheng Shen",
+            "Congcong Zhu",
+            "Huajie Chen"
+          ],
+          "authorCount": 13,
+          "affiliations": [],
+          "categories": [
+            "cs.CY"
+          ],
+          "comment": "40 pages including Appendix",
+          "universities": [
+            "MIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            },
+            {
+              "id": "Safety",
+              "label": "安全",
+              "color": "#ef4444"
+            }
+          ]
+        },
+        {
+          "title": "Digital Skin, Digital Bias: Uncovering Tone-Based Biases in LLMs and Emoji Embeddings",
+          "summary": "Skin-toned emojis are crucial for fostering personal identity and social inclusion in online communication. As AI models, particularly Large Language Models (LLMs), increasingly mediate interactions on web platforms, the risk that these systems perpetuate societal biases through their representation",
+          "published": "2026-04-08T09:24:56Z",
+          "arxivId": "2604.06863v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.06863v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.06863v1",
+          "authors": [
+            "Mingchen Li",
+            "Wajdi Aljedaani",
+            "Yingjie Liu",
+            "Navyasri Meka",
+            "Xuan Lu",
+            "Xinyue Ye",
+            "Junhua Ding",
+            "Yunhe Feng"
+          ],
+          "authorCount": 8,
+          "affiliations": [],
+          "categories": [
+            "cs.SI",
+            "cs.AI",
+            "cs.CL"
+          ],
+          "comment": "Accepted at WWW'26",
+          "universities": [
+            "MIT",
+            "Mila",
+            "NYU"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            },
+            {
+              "id": "Safety",
+              "label": "安全",
+              "color": "#ef4444"
+            }
+          ]
+        },
+        {
+          "title": "HingeMem: Boundary Guided Long-Term Memory with Query Adaptive Retrieval for Scalable Dialogues",
+          "summary": "Long-term memory is critical for dialogue systems that support continuous, sustainable, and personalized interactions. However, existing methods rely on continuous summarization or OpenIE-based graph construction paired with fixed Top-\\textit{k} retrieval, leading to limited adaptability across quer",
+          "published": "2026-04-08T09:07:07Z",
+          "arxivId": "2604.06845v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.06845v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.06845v1",
+          "authors": [
+            "Yijie Zhong",
+            "Yunfan Gao",
+            "Haofen Wang"
+          ],
+          "authorCount": 3,
+          "affiliations": [],
+          "categories": [
+            "cs.CL",
+            "cs.AI"
+          ],
+          "comment": "Accepted by TheWebConf 2026",
+          "universities": [
+            "MIT",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            }
+          ]
+        },
+        {
+          "title": "AudioKV: KV Cache Eviction in Efficient Large Audio Language Models",
+          "summary": "Large Audio-Language Models (LALMs) have set new benchmarks in speech processing, yet their deployment is hindered by the memory footprint of the Key-Value (KV) cache during long-context inference. While general KV cache compression techniques excel in LLMs, they often fail in the audio domain by ov",
+          "published": "2026-04-08T05:20:39Z",
+          "arxivId": "2604.06694v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.06694v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.06694v1",
+          "authors": [
+            "Yuxuan Wang",
+            "Peize He",
+            "Xiyan Gui",
+            "Xiaoqian Liu",
+            "Junhao He",
+            "Xuyang Liu",
+            "Zichen Wen",
+            "Xuming Hu"
+          ],
+          "authorCount": 9,
+          "affiliations": [],
+          "categories": [
+            "cs.SD"
+          ],
+          "comment": "",
+          "universities": [
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "Speech",
+              "label": "语音",
+              "color": "#14b8a6"
+            }
+          ]
+        },
+        {
+          "title": "Does a Global Perspective Help Prune Sparse MoEs Elegantly?",
+          "summary": "Empirical scaling laws for language models have encouraged the development of ever-larger LLMs, despite their growing computational and memory costs. Sparse Mixture-of-Experts (MoEs) offer a promising alternative by activating only a subset of experts per forward pass, improving efficiency without s",
+          "published": "2026-04-08T00:41:11Z",
+          "arxivId": "2604.06542v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.06542v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.06542v1",
+          "authors": [
+            "Zeliang Zhang",
+            "Nikhil Ghosh",
+            "Jiani Liu",
+            "Bin Yu",
+            "Xiaodong Liu"
+          ],
+          "authorCount": 5,
+          "affiliations": [],
+          "categories": [
+            "cs.CL"
+          ],
+          "comment": "",
+          "universities": [
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            }
+          ]
+        },
+        {
+          "title": "Distributed Interpretability and Control for Large Language Models",
+          "summary": "Large language models that require multiple GPU cards to host are usually the most capable models. It is necessary to understand and steer these models, but the current technologies do not support the interpretability and steering of these models in the multi-GPU setting as well as the single-GPU se",
+          "published": "2026-04-07T21:35:08Z",
+          "arxivId": "2604.06483v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.06483v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.06483v1",
+          "authors": [
+            "Dev Arpan Desai",
+            "Shaoyi Huang",
+            "Zining Zhu"
+          ],
+          "authorCount": 3,
+          "affiliations": [],
+          "categories": [
+            "cs.LG",
+            "cs.AI"
+          ],
+          "comment": "",
+          "universities": [
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            }
+          ]
+        },
+        {
+          "title": "JUÁ -- A Benchmark for Information Retrieval in Brazilian Legal Text Collections",
+          "summary": "Legal information retrieval in Portuguese remains difficult to evaluate systematically because available datasets differ widely in document type, query style, and relevance definition. We present JUÁ, a public benchmark for Brazilian legal retrieval designed to support more reproducible and comparab",
+          "published": "2026-04-07T17:10:54Z",
+          "arxivId": "2604.06098v2",
+          "arxivUrl": "http://arxiv.org/abs/2604.06098v2",
+          "pdfUrl": "https://arxiv.org/pdf/2604.06098v2",
+          "authors": [
+            "Jayr Pereira",
+            "Leandro Fernandes",
+            "Erick de Brito",
+            "Roberto Lotufo",
+            "Luiz Bonifacio"
+          ],
+          "authorCount": 5,
+          "affiliations": [],
+          "categories": [
+            "cs.IR",
+            "cs.CL"
+          ],
+          "comment": "",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            },
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            }
+          ]
+        },
         {
           "title": "JUÁ - A Benchmark for Information Retrieval in Brazilian Legal Text Collections",
           "summary": "Legal information retrieval in Portuguese remains difficult to evaluate systematically because available datasets differ widely in document type, query style, and relevance definition. We present \\textsc{JUÁ}, a public benchmark for Brazilian legal retrieval designed to support more reproducible and",
@@ -3134,14 +3671,324 @@
           ]
         }
       ],
-      "count": 65,
-      "uniCollabCount": 58,
+      "count": 76,
+      "uniCollabCount": 67,
       "hkCollabCount": 0
     },
     "deepseek": {
       "company": "DeepSeek",
       "icon": "🔍",
       "papers": [
+        {
+          "title": "The ATOM Report: Measuring the Open Language Model Ecosystem",
+          "summary": "We present a comprehensive adoption snapshot of the leading open language models and who is building them, focusing on the ~1.5K mainline open models from the likes of Alibaba's Qwen, DeepSeek, Meta's Llama, that are the foundation of an ecosystem crucial to researchers, entrepreneurs, and policy ad",
+          "published": "2026-04-08T15:15:50Z",
+          "arxivId": "2604.07190v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.07190v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.07190v1",
+          "authors": [
+            "Nathan Lambert",
+            "Florian Brand"
+          ],
+          "authorCount": 2,
+          "affiliations": [],
+          "categories": [
+            "cs.CY",
+            "cs.AI",
+            "cs.LG"
+          ],
+          "comment": "23 pages, 17 figures",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            }
+          ]
+        },
+        {
+          "title": "Yale-DM-Lab at ArchEHR-QA 2026: Deterministic Grounding and Multi-Pass Evidence Alignment for EHR Question Answering",
+          "summary": "We describe the Yale-DM-Lab system for the ArchEHR-QA 2026 shared task. The task studies patient-authored questions about hospitalization records and contains four subtasks (ST): clinician-interpreted question reformulation, evidence sentence identification, answer generation, and evidence-answer al",
+          "published": "2026-04-08T14:09:25Z",
+          "arxivId": "2604.07116v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.07116v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.07116v1",
+          "authors": [
+            "Elyas Irankhah",
+            "Samah Fodeh"
+          ],
+          "authorCount": 2,
+          "affiliations": [],
+          "categories": [
+            "cs.CL"
+          ],
+          "comment": "9 pages, 2 figures. System description for ArchEHR-QA 2026 shared task",
+          "universities": [
+            "MIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Safety",
+              "label": "安全",
+              "color": "#ef4444"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            }
+          ]
+        },
+        {
+          "title": "Strategic Persuasion with Trait-Conditioned Multi-Agent Systems for Iterative Legal Argumentation",
+          "summary": "Strategic interaction in adversarial domains such as law, diplomacy, and negotiation is mediated by language, yet most game-theoretic models abstract away the mechanisms of persuasion that operate through discourse. We present the Strategic Courtroom Framework, a multi-agent simulation environment i",
+          "published": "2026-04-08T12:46:03Z",
+          "arxivId": "2604.07028v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.07028v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.07028v1",
+          "authors": [
+            "Philipp D. Siedler"
+          ],
+          "authorCount": 1,
+          "affiliations": [],
+          "categories": [
+            "cs.MA",
+            "cs.AI",
+            "cs.CL"
+          ],
+          "comment": "",
+          "universities": [
+            "CAS",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            }
+          ]
+        },
+        {
+          "title": "TRAPTI: Time-Resolved Analysis for SRAM Banking and Power Gating Optimization in Embedded Transformer Inference",
+          "summary": "Transformer neural networks achieve state-of-the-art accuracy across language and vision tasks, but their deployment on embedded hardware is hindered by stringent area, latency, and energy constraints. During inference, performance and efficiency are increasingly dominated by the Key--Value (KV) cac",
+          "published": "2026-04-08T11:15:52Z",
+          "arxivId": "2604.06955v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.06955v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.06955v1",
+          "authors": [
+            "Jan Klhufek",
+            "Alberto Marchisio",
+            "Vojtech Mrazek",
+            "Lukas Sekanina",
+            "Muhammad Shafique"
+          ],
+          "authorCount": 5,
+          "affiliations": [],
+          "categories": [
+            "cs.AR"
+          ],
+          "comment": "To appear at the International Joint Conference on Neural Networks - IJCNN 2026. Maastricht, Netherlands",
+          "universities": [
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            }
+          ]
+        },
+        {
+          "title": "Are LLMs Ready for Computer Science Education? A Cross-Domain, Cross-Lingual and Cognitive-Level Evaluation Using Professional Certification Exams",
+          "summary": "Large language models (LLMs) are increasingly applied in computer science education for tasks such as tutoring, content generation, and code assessment. However, systematic evaluations aligned with formal curricula and certification standards remain limited. This study benchmarked four recent models",
+          "published": "2026-04-08T09:56:31Z",
+          "arxivId": "2604.06898v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.06898v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.06898v1",
+          "authors": [
+            "Chen Gao",
+            "Chi Liu",
+            "Zhengquan Luo",
+            "Dongfu Xiao",
+            "Maiying Sui",
+            "Sheng Shen",
+            "Congcong Zhu",
+            "Huajie Chen"
+          ],
+          "authorCount": 13,
+          "affiliations": [],
+          "categories": [
+            "cs.CY"
+          ],
+          "comment": "40 pages including Appendix",
+          "universities": [
+            "MIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            },
+            {
+              "id": "Safety",
+              "label": "安全",
+              "color": "#ef4444"
+            }
+          ]
+        },
+        {
+          "title": "Does a Global Perspective Help Prune Sparse MoEs Elegantly?",
+          "summary": "Empirical scaling laws for language models have encouraged the development of ever-larger LLMs, despite their growing computational and memory costs. Sparse Mixture-of-Experts (MoEs) offer a promising alternative by activating only a subset of experts per forward pass, improving efficiency without s",
+          "published": "2026-04-08T00:41:11Z",
+          "arxivId": "2604.06542v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.06542v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.06542v1",
+          "authors": [
+            "Zeliang Zhang",
+            "Nikhil Ghosh",
+            "Jiani Liu",
+            "Bin Yu",
+            "Xiaodong Liu"
+          ],
+          "authorCount": 5,
+          "affiliations": [],
+          "categories": [
+            "cs.CL"
+          ],
+          "comment": "",
+          "universities": [
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            }
+          ]
+        },
+        {
+          "title": "State-of-the-Art Arabic Language Modeling with Sparse MoE Fine-Tuning and Chain-of-Thought Distillation",
+          "summary": "This paper introduces Arabic-DeepSeek-R1, an application-driven open-source Arabic LLM that leverages a sparse MoE backbone to address the digital equity gap for under-represented languages, and establishes a new SOTA across the entire Open Arabic LLM Leaderboard (OALL). Our four-phase CoT distillat",
+          "published": "2026-04-07T19:58:26Z",
+          "arxivId": "2604.06421v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.06421v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.06421v1",
+          "authors": [
+            "Navan Preet Singh",
+            "Anurag Garikipati",
+            "Ahmed Abulkhair",
+            "Jyani Akshay Jagdishbhai",
+            "Atul Yaduvanshi",
+            "Amarendra Chaudhary",
+            "Madalina Ciobanu",
+            "Qingqing Mao"
+          ],
+          "authorCount": 9,
+          "affiliations": [],
+          "categories": [
+            "cs.CL"
+          ],
+          "comment": "",
+          "universities": [
+            "MIT",
+            "HIT",
+            "ANU",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            }
+          ]
+        },
         {
           "title": "Understanding Performance Gap Between Parallel and Sequential Sampling in Large Reasoning Models",
           "summary": "Large Reasoning Models (LRMs) have shown remarkable performance on challenging questions, such as math and coding. However, to obtain a high quality solution, one may need to sample more than once. In principal, there are two sampling strategies that can be composed to form more complex processes: s",
@@ -5346,8 +6193,8 @@
           ]
         }
       ],
-      "count": 50,
-      "uniCollabCount": 42,
+      "count": 57,
+      "uniCollabCount": 48,
       "hkCollabCount": 1
     },
     "moonshot": {
@@ -6115,6 +6962,118 @@
       "icon": "🤖",
       "papers": [
         {
+          "title": "Nesterov Flow May Travel Infinitely Long to Converge to a Minimizer",
+          "summary": "Recent work has established that the trajectory of the Nesterov ODE, a the continuous-time model of Nesterov's accelerated gradient method, exhibits point convergence towards a minimizer of a convex potential. A natural next question is whether this point convergence can be upgraded to rectifiabilit",
+          "published": "2026-04-08T03:53:04Z",
+          "arxivId": "2604.06651v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.06651v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.06651v1",
+          "authors": [
+            "Ernest K. Ryu"
+          ],
+          "authorCount": 1,
+          "affiliations": [],
+          "categories": [
+            "math.OC"
+          ],
+          "comment": "",
+          "universities": [
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Math",
+              "label": "数学推理",
+              "color": "#06b6d4"
+            }
+          ]
+        },
+        {
+          "title": "Short proofs in combinatorics, probability and number theory II",
+          "summary": "We give a quintet of proofs resulting from questions posed by Erdős. These questions concern ordinary lines in planar point sets, sequences with uniformly small exponential sums, $K_4$-free $4$-critical graphs with few chords in any cycle, a counterexample to a \"fewnomial\" version of the Erdős--Turá",
+          "published": "2026-04-08T02:42:30Z",
+          "arxivId": "2604.06609v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.06609v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.06609v1",
+          "authors": [
+            "Boris Alexeev",
+            "Moe Putterman",
+            "Mehtaab Sawhney",
+            "Mark Sellke",
+            "Gregory Valiant"
+          ],
+          "authorCount": 5,
+          "affiliations": [],
+          "categories": [
+            "math.CO",
+            "math.NT",
+            "math.PR"
+          ],
+          "comment": "28 pages",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Math",
+              "label": "数学推理",
+              "color": "#06b6d4"
+            }
+          ]
+        },
+        {
+          "title": "Evolution of Video Generative Foundations",
+          "summary": "The rapid advancement of Artificial Intelligence Generated Content (AIGC) has revolutionized video generation, enabling systems ranging from proprietary pioneers like OpenAI's Sora, Google's Veo3, and Bytedance's Seedance to powerful open-source contenders like Wan and HunyuanVideo to synthesize tem",
+          "published": "2026-04-07T18:17:05Z",
+          "arxivId": "2604.06339v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.06339v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.06339v1",
+          "authors": [
+            "Teng Hu",
+            "Jiangning Zhang",
+            "Hongrui Huang",
+            "Ran Yi",
+            "Zihan Su",
+            "Jieyu Weng",
+            "Zhucun Xue",
+            "Lizhuang Ma"
+          ],
+          "authorCount": 10,
+          "affiliations": [],
+          "categories": [
+            "cs.CV"
+          ],
+          "comment": "",
+          "universities": [
+            "MIT",
+            "NYU"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Vision",
+              "label": "视觉",
+              "color": "#ec4899"
+            },
+            {
+              "id": "Multimodal",
+              "label": "多模态",
+              "color": "#a855f7"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            }
+          ]
+        },
+        {
           "title": "CritBench: A Framework for Evaluating Cybersecurity Capabilities of Large Language Models in IEC 61850 Digital Substation Environments",
           "summary": "The advancement of Large Language Models (LLMs) has raised concerns regarding their dual-use potential in cybersecurity. Existing evaluation frameworks overwhelmingly focus on Information Technology (IT) environments, failing to capture the constraints, and specialized protocols of Operational Techn",
           "published": "2026-04-07T16:16:59Z",
@@ -6225,8 +7184,8 @@
           "comment": "",
           "universities": [
             "MIT",
-            "ETH",
-            "NTU"
+            "NTU",
+            "ETH"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -6271,8 +7230,8 @@
           "comment": "",
           "universities": [
             "CAS",
-            "UW",
-            "USC"
+            "USC",
+            "UW"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -6332,6 +7291,52 @@
               "id": "Agent",
               "label": "Agent",
               "color": "#f97316"
+            }
+          ]
+        },
+        {
+          "title": "FermiLink: A Unified Agent Framework for Multidomain Autonomous Scientific Simulations",
+          "summary": "Artificial-intelligence (AI) agent frameworks have been developed for autonomous scientific simulations, but most current agent frameworks are tailored to a single or a small set of software packages. Herein, FermiLink, a unified and extensible open-source agent framework is introduced for multidoma",
+          "published": "2026-04-03T21:09:19Z",
+          "arxivId": "2604.03460v2",
+          "arxivUrl": "http://arxiv.org/abs/2604.03460v2",
+          "pdfUrl": "https://arxiv.org/pdf/2604.03460v2",
+          "authors": [
+            "Gang Meng",
+            "Andres Felipe Bocanegra Vargas",
+            "Xinwei Ji",
+            "Federico Garcia-Gaitan",
+            "Felipe Reyes-Osorio",
+            "Jalil Varela-Manjarres",
+            "Yafei Ren",
+            "Mohammadhasan Dinpajooh"
+          ],
+          "authorCount": 10,
+          "affiliations": [],
+          "categories": [
+            "physics.chem-ph",
+            "physics.comp-ph"
+          ],
+          "comment": "Simulation data available at https://www.taoeli.org/publications; source code available at Github https://github.com/TaoELi/FermiLink",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            },
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
             }
           ]
         },
@@ -6493,10 +7498,10 @@
           ],
           "comment": "7 pages, 3 figures, accepted in WSDM 2026",
           "universities": [
-            "HIT",
-            "ANU",
+            "ETH",
             "NUS",
-            "ETH"
+            "HIT",
+            "ANU"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -8292,8 +9297,8 @@
           ]
         }
       ],
-      "count": 50,
-      "uniCollabCount": 44,
+      "count": 54,
+      "uniCollabCount": 46,
       "hkCollabCount": 0
     },
     "deepmind": {
@@ -8823,6 +9828,45 @@
       "icon": "🔬",
       "papers": [
         {
+          "title": "The AI Skills Shift: Mapping Skill Obsolescence, Emergence, and Transition Pathways in the LLM Era",
+          "summary": "As Large Language Models reshape the global labor market, policymakers and workers need empirical data on which occupational skills may be most susceptible to automation. We present the Skill Automation Feasibility Index (SAFI), benchmarking four frontier LLMs -- LLaMA 3.3 70B, Mistral Large, Qwen 2",
+          "published": "2026-04-08T10:05:08Z",
+          "arxivId": "2604.06906v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.06906v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.06906v1",
+          "authors": [
+            "Rudra Jadhav",
+            "Janhavi Danve"
+          ],
+          "authorCount": 2,
+          "affiliations": [],
+          "categories": [
+            "cs.CL",
+            "cs.AI",
+            "cs.CY"
+          ],
+          "comment": "11 pages, 12 figures, 2 tables, 17 references. Code and data available at",
+          "universities": [
+            "USC",
+            "Mila"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            }
+          ]
+        },
+        {
           "title": "A Formal Security Framework for MCP-Based AI Agents: Threat Taxonomy, Verification Models, and Defense Mechanisms",
           "summary": "The Model Context Protocol (MCP), introduced by Anthropic in November 2024 and now governed by the Linux Foundation's Agentic AI Foundation, has rapidly become the de facto standard for connecting large language model (LLM)-based agents to external tools and data sources, with over 97 million monthl",
           "published": "2026-04-07T15:02:47Z",
@@ -8931,8 +9975,8 @@
           ],
           "comment": "",
           "universities": [
-            "NYU",
-            "ANU"
+            "ANU",
+            "NYU"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -10420,35 +11464,38 @@
           ]
         }
       ],
-      "count": 38,
-      "uniCollabCount": 34,
+      "count": 39,
+      "uniCollabCount": 35,
       "hkCollabCount": 0
     },
-    "meta": {
-      "company": "Meta AI",
-      "icon": "📘",
+    "baidu": {
+      "company": "百度",
+      "icon": "🔴",
       "papers": [
         {
-          "title": "Breaking the Winner's Curse with Bayesian Hybrid Shrinkage",
-          "summary": "The widespread adoption of randomized controlled trials (A/B Tests) for decision-making has introduced a pervasive \"Winner's Curse\": experiments selected for launch often exhibit upwardly biased effect estimates and invalid confidence intervals. This selection bias leads to over-optimistic impact pr",
-          "published": "2026-03-13T10:13:38Z",
-          "arxivId": "2603.12867v1",
-          "arxivUrl": "http://arxiv.org/abs/2603.12867v1",
-          "pdfUrl": "https://arxiv.org/pdf/2603.12867v1",
+          "title": "Neural Computers",
+          "summary": "We propose a new frontier: Neural Computers (NCs) -- an emerging machine form that unifies computation, memory, and I/O in a learned runtime state. Unlike conventional computers, which execute explicit programs, agents, which act over external execution environments, and world models, which learn en",
+          "published": "2026-04-07T20:01:05Z",
+          "arxivId": "2604.06425v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.06425v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.06425v1",
           "authors": [
-            "Richard Mudd",
-            "Abbas Zaidi",
-            "Rina Friedberg",
-            "Ilya Gorbachev",
-            "Anchal Choubey",
-            "Houssam Nassif"
+            "Mingchen Zhuge",
+            "Changsheng Zhao",
+            "Haozhe Liu",
+            "Zijian Zhou",
+            "Shuming Liu",
+            "Wenyi Wang",
+            "Ernie Chang",
+            "Gael Le Lan"
           ],
-          "authorCount": 6,
+          "authorCount": 19,
           "affiliations": [],
           "categories": [
-            "stat.ME"
+            "cs.LG",
+            "cs.AI"
           ],
-          "comment": "",
+          "comment": "Github (data pipeline): https://github.com/metauto-ai/NeuralComputer; Blogpost: https://metauto.ai/neuralcomputer/index_eng.html",
           "universities": [
             "MIT",
             "ETH"
@@ -10458,112 +11505,22 @@
           "hasHKCollab": false,
           "directions": [
             {
-              "id": "Infra",
-              "label": "Infra",
-              "color": "#22c55e"
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
             },
             {
               "id": "Safety",
               "label": "安全",
               "color": "#ef4444"
-            },
-            {
-              "id": "RAG",
-              "label": "RAG/检索",
-              "color": "#64748b"
             }
           ]
         },
-        {
-          "title": "When Denoising Hinders: Revisiting Zero-Shot ASR with SAM-Audio and Whisper",
-          "summary": "Recent advances in automatic speech recognition (ASR) and speech enhancement have led to a widespread assumption that improving perceptual audio quality should directly benefit recognition accuracy. In this work, we rigorously examine whether this assumption holds for modern zero-shot ASR systems. W",
-          "published": "2026-03-05T01:20:11Z",
-          "arxivId": "2603.04710v1",
-          "arxivUrl": "http://arxiv.org/abs/2603.04710v1",
-          "pdfUrl": "https://arxiv.org/pdf/2603.04710v1",
-          "authors": [
-            "Akif Islam",
-            "Raufun Nahar",
-            "Md. Ekramul Hamid"
-          ],
-          "authorCount": 3,
-          "affiliations": [],
-          "categories": [
-            "cs.SD",
-            "cs.AI",
-            "cs.LG"
-          ],
-          "comment": "6 pages, 4 figures, 5 tables. IEEE Conference Paper",
-          "universities": [
-            "ETH",
-            "NTU"
-          ],
-          "hkUniversities": [],
-          "hasUniCollab": true,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "Speech",
-              "label": "语音",
-              "color": "#14b8a6"
-            },
-            {
-              "id": "Math",
-              "label": "数学推理",
-              "color": "#06b6d4"
-            },
-            {
-              "id": "Data",
-              "label": "数据",
-              "color": "#78716c"
-            }
-          ]
-        },
-        {
-          "title": "Unix Tools and the FITO Category Mistake: Crash Consistency and the Protocol Nature of Persistence",
-          "summary": "Unix tools such as ls, cp, mv, and rename expose a filesystem abstraction that appears to present a single, authoritative state evolving through atomic transitions. This abstraction is false.   We present a systematic Forward-In-Time-Only (FITO) analysis demonstrating that the assumption of instanta",
-          "published": "2026-03-02T02:26:24Z",
-          "arxivId": "2603.01384v1",
-          "arxivUrl": "http://arxiv.org/abs/2603.01384v1",
-          "pdfUrl": "https://arxiv.org/pdf/2603.01384v1",
-          "authors": [
-            "Paul Borrill"
-          ],
-          "authorCount": 1,
-          "affiliations": [],
-          "categories": [
-            "cs.DC"
-          ],
-          "comment": "20 pages, 40 references",
-          "universities": [
-            "MIT",
-            "CAS"
-          ],
-          "hkUniversities": [],
-          "hasUniCollab": true,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "Math",
-              "label": "数学推理",
-              "color": "#06b6d4"
-            },
-            {
-              "id": "RAG",
-              "label": "RAG/检索",
-              "color": "#64748b"
-            }
-          ]
-        }
-      ],
-      "count": 3,
-      "uniCollabCount": 3,
-      "hkCollabCount": 0
-    },
-    "baidu": {
-      "company": "百度",
-      "icon": "🔴",
-      "papers": [
         {
           "title": "Short Data, Long Context: Distilling Positional Knowledge in Transformers",
           "summary": "Extending the context window of language models typically requires expensive long-context pre-training, posing significant challenges for both training efficiency and data collection. In this paper, we present evidence that long-context retrieval capabilities can be transferred to student models thr",
@@ -11040,8 +11997,299 @@
           "directions": []
         }
       ],
-      "count": 11,
-      "uniCollabCount": 8,
+      "count": 12,
+      "uniCollabCount": 9,
+      "hkCollabCount": 0
+    },
+    "xiaomi": {
+      "company": "小米",
+      "icon": "📱",
+      "papers": [
+        {
+          "title": "UniDriveVLA: Unifying Understanding, Perception, and Action Planning for Autonomous Driving",
+          "summary": "Vision-Language-Action (VLA) models have recently emerged in autonomous driving, with the promise of leveraging rich world knowledge to improve the cognitive capabilities of driving systems. However, adapting such models for driving tasks currently faces a critical dilemma between spatial perception",
+          "published": "2026-04-02T15:48:45Z",
+          "arxivId": "2604.02190v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.02190v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.02190v1",
+          "authors": [
+            "Yongkang Li",
+            "Lijun Zhou",
+            "Sixu Yan",
+            "Bencheng Liao",
+            "Tianyi Yan",
+            "Kaixin Xiong",
+            "Long Chen",
+            "Hongwei Xie"
+          ],
+          "authorCount": 14,
+          "affiliations": [],
+          "categories": [
+            "cs.CV",
+            "cs.RO"
+          ],
+          "comment": "code has been released at https://github.com/xiaomi-research/unidrivevla",
+          "universities": [
+            "NUS",
+            "USC",
+            "MIT",
+            "NYU",
+            "CAS"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Multimodal",
+              "label": "多模态",
+              "color": "#a855f7"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            }
+          ]
+        },
+        {
+          "title": "DreamLite: A Lightweight On-Device Unified Model for Image Generation and Editing",
+          "summary": "Diffusion models have made significant progress in both text-to-image (T2I) generation and text-guided image editing. However, these models are typically built with billions of parameters, leading to high latency and increased deployment challenges. While on-device diffusion models improve efficienc",
+          "published": "2026-03-30T17:30:25Z",
+          "arxivId": "2603.28713v1",
+          "arxivUrl": "http://arxiv.org/abs/2603.28713v1",
+          "pdfUrl": "https://arxiv.org/pdf/2603.28713v1",
+          "authors": [
+            "Kailai Feng",
+            "Yuxiang Wei",
+            "Bo Chen",
+            "Yang Pan",
+            "Hu Ye",
+            "Songwei Liu",
+            "Chenqian Yan",
+            "Yuan Gao"
+          ],
+          "authorCount": 8,
+          "affiliations": [],
+          "categories": [
+            "cs.CV"
+          ],
+          "comment": "https://carlofkl.github.io/dreamlite/",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Vision",
+              "label": "视觉",
+              "color": "#ec4899"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            }
+          ]
+        },
+        {
+          "title": "ACAVCaps: Enabling large-scale training for fine-grained and diverse audio understanding",
+          "summary": "General audio understanding is a fundamental goal for large audio-language models, with audio captioning serving as a cornerstone task for their development. However, progress in this domain is hindered by existing datasets, which lack the scale and descriptive granularity required to train truly ve",
+          "published": "2026-03-25T07:49:39Z",
+          "arxivId": "2603.24038v1",
+          "arxivUrl": "http://arxiv.org/abs/2603.24038v1",
+          "pdfUrl": "https://arxiv.org/pdf/2603.24038v1",
+          "authors": [
+            "Yadong Niu",
+            "Tianzi Wang",
+            "Heinrich Dinkel",
+            "Xingwei Sun",
+            "Jiahao Zhou",
+            "Gang Li",
+            "Jizhong Liu",
+            "Junbo Zhang"
+          ],
+          "authorCount": 9,
+          "affiliations": [],
+          "categories": [
+            "eess.AS",
+            "cs.SD"
+          ],
+          "comment": "accepted by ICASSP 2026",
+          "universities": [
+            "CAS",
+            "ANU"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Speech",
+              "label": "语音",
+              "color": "#14b8a6"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            }
+          ]
+        }
+      ],
+      "count": 3,
+      "uniCollabCount": 2,
+      "hkCollabCount": 0
+    },
+    "meta": {
+      "company": "Meta AI",
+      "icon": "📘",
+      "papers": [
+        {
+          "title": "Breaking the Winner's Curse with Bayesian Hybrid Shrinkage",
+          "summary": "The widespread adoption of randomized controlled trials (A/B Tests) for decision-making has introduced a pervasive \"Winner's Curse\": experiments selected for launch often exhibit upwardly biased effect estimates and invalid confidence intervals. This selection bias leads to over-optimistic impact pr",
+          "published": "2026-03-13T10:13:38Z",
+          "arxivId": "2603.12867v1",
+          "arxivUrl": "http://arxiv.org/abs/2603.12867v1",
+          "pdfUrl": "https://arxiv.org/pdf/2603.12867v1",
+          "authors": [
+            "Richard Mudd",
+            "Abbas Zaidi",
+            "Rina Friedberg",
+            "Ilya Gorbachev",
+            "Anchal Choubey",
+            "Houssam Nassif"
+          ],
+          "authorCount": 6,
+          "affiliations": [],
+          "categories": [
+            "stat.ME"
+          ],
+          "comment": "",
+          "universities": [
+            "MIT",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "Safety",
+              "label": "安全",
+              "color": "#ef4444"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            }
+          ]
+        },
+        {
+          "title": "When Denoising Hinders: Revisiting Zero-Shot ASR with SAM-Audio and Whisper",
+          "summary": "Recent advances in automatic speech recognition (ASR) and speech enhancement have led to a widespread assumption that improving perceptual audio quality should directly benefit recognition accuracy. In this work, we rigorously examine whether this assumption holds for modern zero-shot ASR systems. W",
+          "published": "2026-03-05T01:20:11Z",
+          "arxivId": "2603.04710v1",
+          "arxivUrl": "http://arxiv.org/abs/2603.04710v1",
+          "pdfUrl": "https://arxiv.org/pdf/2603.04710v1",
+          "authors": [
+            "Akif Islam",
+            "Raufun Nahar",
+            "Md. Ekramul Hamid"
+          ],
+          "authorCount": 3,
+          "affiliations": [],
+          "categories": [
+            "cs.SD",
+            "cs.AI",
+            "cs.LG"
+          ],
+          "comment": "6 pages, 4 figures, 5 tables. IEEE Conference Paper",
+          "universities": [
+            "ETH",
+            "NTU"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Speech",
+              "label": "语音",
+              "color": "#14b8a6"
+            },
+            {
+              "id": "Math",
+              "label": "数学推理",
+              "color": "#06b6d4"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            }
+          ]
+        },
+        {
+          "title": "Unix Tools and the FITO Category Mistake: Crash Consistency and the Protocol Nature of Persistence",
+          "summary": "Unix tools such as ls, cp, mv, and rename expose a filesystem abstraction that appears to present a single, authoritative state evolving through atomic transitions. This abstraction is false.   We present a systematic Forward-In-Time-Only (FITO) analysis demonstrating that the assumption of instanta",
+          "published": "2026-03-02T02:26:24Z",
+          "arxivId": "2603.01384v1",
+          "arxivUrl": "http://arxiv.org/abs/2603.01384v1",
+          "pdfUrl": "https://arxiv.org/pdf/2603.01384v1",
+          "authors": [
+            "Paul Borrill"
+          ],
+          "authorCount": 1,
+          "affiliations": [],
+          "categories": [
+            "cs.DC"
+          ],
+          "comment": "20 pages, 40 references",
+          "universities": [
+            "MIT",
+            "CAS"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Math",
+              "label": "数学推理",
+              "color": "#06b6d4"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            }
+          ]
+        }
+      ],
+      "count": 3,
+      "uniCollabCount": 3,
       "hkCollabCount": 0
     },
     "kuaishou": {
@@ -11290,161 +12538,6 @@
       ],
       "count": 5,
       "uniCollabCount": 4,
-      "hkCollabCount": 0
-    },
-    "xiaomi": {
-      "company": "小米",
-      "icon": "📱",
-      "papers": [
-        {
-          "title": "UniDriveVLA: Unifying Understanding, Perception, and Action Planning for Autonomous Driving",
-          "summary": "Vision-Language-Action (VLA) models have recently emerged in autonomous driving, with the promise of leveraging rich world knowledge to improve the cognitive capabilities of driving systems. However, adapting such models for driving tasks currently faces a critical dilemma between spatial perception",
-          "published": "2026-04-02T15:48:45Z",
-          "arxivId": "2604.02190v1",
-          "arxivUrl": "http://arxiv.org/abs/2604.02190v1",
-          "pdfUrl": "https://arxiv.org/pdf/2604.02190v1",
-          "authors": [
-            "Yongkang Li",
-            "Lijun Zhou",
-            "Sixu Yan",
-            "Bencheng Liao",
-            "Tianyi Yan",
-            "Kaixin Xiong",
-            "Long Chen",
-            "Hongwei Xie"
-          ],
-          "authorCount": 14,
-          "affiliations": [],
-          "categories": [
-            "cs.CV",
-            "cs.RO"
-          ],
-          "comment": "code has been released at https://github.com/xiaomi-research/unidrivevla",
-          "universities": [
-            "NYU",
-            "NUS",
-            "CAS",
-            "USC",
-            "MIT"
-          ],
-          "hkUniversities": [],
-          "hasUniCollab": true,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "Multimodal",
-              "label": "多模态",
-              "color": "#a855f7"
-            },
-            {
-              "id": "LLM",
-              "label": "LLM",
-              "color": "#3b82f6"
-            },
-            {
-              "id": "Agent",
-              "label": "Agent",
-              "color": "#f97316"
-            }
-          ]
-        },
-        {
-          "title": "DreamLite: A Lightweight On-Device Unified Model for Image Generation and Editing",
-          "summary": "Diffusion models have made significant progress in both text-to-image (T2I) generation and text-guided image editing. However, these models are typically built with billions of parameters, leading to high latency and increased deployment challenges. While on-device diffusion models improve efficienc",
-          "published": "2026-03-30T17:30:25Z",
-          "arxivId": "2603.28713v1",
-          "arxivUrl": "http://arxiv.org/abs/2603.28713v1",
-          "pdfUrl": "https://arxiv.org/pdf/2603.28713v1",
-          "authors": [
-            "Kailai Feng",
-            "Yuxiang Wei",
-            "Bo Chen",
-            "Yang Pan",
-            "Hu Ye",
-            "Songwei Liu",
-            "Chenqian Yan",
-            "Yuan Gao"
-          ],
-          "authorCount": 8,
-          "affiliations": [],
-          "categories": [
-            "cs.CV"
-          ],
-          "comment": "https://carlofkl.github.io/dreamlite/",
-          "universities": [],
-          "hkUniversities": [],
-          "hasUniCollab": false,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "Vision",
-              "label": "视觉",
-              "color": "#ec4899"
-            },
-            {
-              "id": "Infra",
-              "label": "Infra",
-              "color": "#22c55e"
-            },
-            {
-              "id": "RL",
-              "label": "强化学习",
-              "color": "#eab308"
-            }
-          ]
-        },
-        {
-          "title": "ACAVCaps: Enabling large-scale training for fine-grained and diverse audio understanding",
-          "summary": "General audio understanding is a fundamental goal for large audio-language models, with audio captioning serving as a cornerstone task for their development. However, progress in this domain is hindered by existing datasets, which lack the scale and descriptive granularity required to train truly ve",
-          "published": "2026-03-25T07:49:39Z",
-          "arxivId": "2603.24038v1",
-          "arxivUrl": "http://arxiv.org/abs/2603.24038v1",
-          "pdfUrl": "https://arxiv.org/pdf/2603.24038v1",
-          "authors": [
-            "Yadong Niu",
-            "Tianzi Wang",
-            "Heinrich Dinkel",
-            "Xingwei Sun",
-            "Jiahao Zhou",
-            "Gang Li",
-            "Jizhong Liu",
-            "Junbo Zhang"
-          ],
-          "authorCount": 9,
-          "affiliations": [],
-          "categories": [
-            "eess.AS",
-            "cs.SD"
-          ],
-          "comment": "accepted by ICASSP 2026",
-          "universities": [
-            "CAS",
-            "ANU"
-          ],
-          "hkUniversities": [],
-          "hasUniCollab": true,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "Speech",
-              "label": "语音",
-              "color": "#14b8a6"
-            },
-            {
-              "id": "LLM",
-              "label": "LLM",
-              "color": "#3b82f6"
-            },
-            {
-              "id": "Infra",
-              "label": "Infra",
-              "color": "#22c55e"
-            }
-          ]
-        }
-      ],
-      "count": 3,
-      "uniCollabCount": 2,
       "hkCollabCount": 0
     },
     "taotian": {

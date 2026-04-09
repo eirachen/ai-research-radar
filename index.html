@@ -1212,7 +1212,7 @@ function renderRadar() {
 
 // 分页状态
 var talentPage = { student: 1, pro: 1, unknown: 1 };
-var TALENT_PAGE_SIZE = 20;
+var TALENT_PAGE_SIZE = 10;
 
 function setTalentPage(group, page) {
   talentPage[group] = page;
@@ -1306,22 +1306,25 @@ function renderTalent() {
 
   function renderCompactRow(t) {
     var rid = 'trow_' + t.key.replace(/[^a-zA-Z0-9]/g, '_');
+    var nid = 'tname_' + t.key.replace(/[^a-zA-Z0-9]/g, '_');
     var hkFlag = t.isHK ? ' 🇭🇰' : '';
     var ci = talentNotes[t.key] ? talentNotes[t.key].contactInfo : null;
     var contactBadge = (ci && ci.hasContact) ? ' <span title="已提取到联系方式" style="font-size:0.6rem">📇</span>' : '';
     var escapedKey = t.key.replace(/'/g,"\\'");
-    return '<div style="border-bottom:1px solid var(--border);border-right:1px solid var(--border)">' +
-      '<div style="display:flex;align-items:center;gap:0.4rem;padding:0.4rem 0.5rem;cursor:pointer;font-size:0.78rem" onclick="toggleCompactDetail(\'' + rid + '\')">' +
+    return '<div style="border-bottom:1px solid var(--border)">' +
+      '<div style="display:flex;align-items:center;gap:0.5rem;padding:0.5rem 0.7rem;cursor:pointer;font-size:0.8rem" onclick="toggleCompactDetail(\'' + rid + '\',\'' + nid + '\')">' +
         '<span class="urgency ' + t.urgency + '" style="flex-shrink:0"></span>' +
-        '<a class="talent-link" href="' + t.url + '" target="_blank" onclick="event.stopPropagation()" style="font-weight:600;font-size:0.78rem">' + t.name + hkFlag + '</a>' + contactBadge +
-        '<span style="font-size:0.65rem;color:var(--text2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;text-align:right">' + t.school + '</span>' +
-        '<span style="display:flex;gap:0.15rem;flex-shrink:0" onclick="event.stopPropagation()">' +
-          '<button class="te-btn" onclick="editTalent(\'' + escapedKey + '\')" style="font-size:0.58rem;padding:0.1rem 0.25rem">✏️</button>' +
-          '<button class="te-btn te-btn-del" onclick="deleteTalent(\'' + escapedKey + '\')" style="font-size:0.58rem;padding:0.1rem 0.25rem">🗑️</button>' +
+        '<span id="' + nid + '" style="font-weight:600;font-size:0.8rem;transition:color 0.2s">' +
+          '<a class="talent-link" href="' + t.url + '" target="_blank" onclick="event.stopPropagation()" style="font-weight:600">' + t.name + hkFlag + '</a>' +
+        '</span>' + contactBadge +
+        '<span style="font-size:0.68rem;color:var(--text2);margin-left:0.3rem">' + t.school + '</span>' +
+        '<span style="margin-left:auto;display:flex;gap:0.2rem;flex-shrink:0" onclick="event.stopPropagation()">' +
+          '<button class="te-btn" onclick="editTalent(\'' + escapedKey + '\')" style="font-size:0.6rem;padding:0.12rem 0.3rem">✏️</button>' +
+          '<button class="te-btn te-btn-del" onclick="deleteTalent(\'' + escapedKey + '\')" style="font-size:0.6rem;padding:0.12rem 0.3rem">🗑️</button>' +
         '</span>' +
       '</div>' +
-    '</div>' +
-    '<div id="' + rid + '" style="display:none;grid-column:1/-1;padding:0.5rem 0.8rem;background:var(--surface2);border-bottom:1px solid var(--border)">' + buildDetailHTML(t) + '</div>';
+      '<div id="' + rid + '" style="display:none;padding:0.5rem 0.8rem 0.6rem 2rem;background:var(--surface2);border-bottom:1px solid var(--border)">' + buildDetailHTML(t) + '</div>' +
+    '</div>';
   }
 
   function renderRow(t, defaultOpen) {
@@ -1369,7 +1372,7 @@ function renderTalent() {
   var studentSlice = slicePage(studentList, 'student');
   html += '<div style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden">' +
     '<div style="padding:0.7rem 1rem;background:rgba(34,197,94,0.08);border-bottom:1px solid var(--border);font-weight:700;font-size:0.85rem;color:var(--green)">🎓 在校学生 (' + studentList.length + '人)</div>' +
-    (studentList.length ? '<div style="display:grid;grid-template-columns:1fr 1fr;gap:0">' + studentSlice.map(function(t) { return renderCompactRow(t); }).join('') + '</div>' + renderPager('student', studentList) : '<div style="padding:1rem;color:var(--text2);font-size:0.8rem">暂无在校学生</div>') +
+    (studentList.length ? '<div>' + studentSlice.map(function(t) { return renderCompactRow(t); }).join('') + '</div>' + renderPager('student', studentList) : '<div style="padding:1rem;color:var(--text2);font-size:0.8rem">暂无在校学生</div>') +
   '</div>';
   // Professionals - collapsed
   var proSlice = slicePage(proList, 'pro');
@@ -1379,7 +1382,7 @@ function renderTalent() {
       '👔 教授 / 研究员 / 业界 (' + proList.length + '人)' +
     '</div>' +
     '<div id="proSection" style="display:none">' +
-      (proList.length ? '<div style="display:grid;grid-template-columns:1fr 1fr;gap:0">' + proSlice.map(function(t) { return renderCompactRow(t); }).join('') + '</div>' + renderPager('pro', proList) : '<div style="padding:1rem;color:var(--text2);font-size:0.8rem">暂无</div>') +
+      (proList.length ? '<div>' + proSlice.map(function(t) { return renderCompactRow(t); }).join('') + '</div>' + renderPager('pro', proList) : '<div style="padding:1rem;color:var(--text2);font-size:0.8rem">暂无</div>') +
     '</div>' +
   '</div>';
   // Unknown - collapsed
@@ -1390,7 +1393,7 @@ function renderTalent() {
       '❓ 未确认 (' + unknownList.length + '人) <span style="font-size:0.65rem;font-weight:400;margin-left:0.3rem">编辑后可移动到其他分组</span>' +
     '</div>' +
     '<div id="unknownSection" style="display:none">' +
-      (unknownList.length ? '<div style="display:grid;grid-template-columns:1fr 1fr;gap:0">' + unknownSlice.map(function(t) { return renderCompactRow(t); }).join('') + '</div>' + renderPager('unknown', unknownList) : '<div style="padding:1rem;color:var(--text2);font-size:0.8rem">暂无</div>') +
+      (unknownList.length ? '<div>' + unknownSlice.map(function(t) { return renderCompactRow(t); }).join('') + '</div>' + renderPager('unknown', unknownList) : '<div style="padding:1rem;color:var(--text2);font-size:0.8rem">暂无</div>') +
     '</div>' +
   '</div>';
   '</div>';
@@ -1411,17 +1414,33 @@ function toggleTalentRow(id, headerEl) {
   }
 }
 
-function toggleCompactDetail(id) {
+function toggleCompactDetail(id, nameId) {
   var el = document.getElementById(id);
   if (!el) return;
   var opening = el.style.display === 'none';
-  // 收起所有已展开的详情
+  // 收起所有已展开的详情，并恢复名字颜色
   document.querySelectorAll('[id^="trow_"]').forEach(function(d) {
     if (d.id !== id && d.style.display !== 'none') {
       d.style.display = 'none';
     }
   });
+  document.querySelectorAll('[id^="tname_"]').forEach(function(n) {
+    n.style.background = '';
+    var link = n.querySelector('.talent-link');
+    if (link) link.style.color = '';
+  });
   el.style.display = opening ? 'block' : 'none';
+  // 高亮当前展开的名字
+  if (opening && nameId) {
+    var nameEl = document.getElementById(nameId);
+    if (nameEl) {
+      nameEl.style.background = 'rgba(59,130,246,0.12)';
+      nameEl.style.borderRadius = '4px';
+      nameEl.style.padding = '0.05rem 0.3rem';
+      var link = nameEl.querySelector('.talent-link');
+      if (link) link.style.color = '#60a5fa';
+    }
+  }
 }
 
 function toggleTalentSection(id, headerEl) {

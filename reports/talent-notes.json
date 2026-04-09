@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-09T16:14:42.928203Z",
+  "generatedAt": "2026-04-09T16:25:28.841273Z",
   "notes": {
     "Ye Tian": {
       "name": "田野 (Ye Tian)",
@@ -9470,15 +9470,15 @@
       "name": "Yi Su",
       "university": "ETH",
       "isHK": false,
-      "status": "待确认",
-      "advisor": "待确认",
-      "lab": "",
+      "status": "在读博士/研究生",
+      "advisor": "Juntao Li / Min Zhang",
+      "lab": "School of Computer Science and Technology, Soochow University",
       "homepage": "",
       "scholar": "",
       "direction": "Infra / LLM / 数学推理",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（OpenAI）",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-09"
     },
     "Zhenxu Tian": {
       "name": "Zhenxu Tian",
@@ -9526,29 +9526,29 @@
       "name": "Juntao Li",
       "university": "ETH",
       "isHK": false,
-      "status": "待确认",
+      "status": "教授/博导",
       "advisor": "待确认",
-      "lab": "",
+      "lab": "School of Computer Science and Technology, Soochow University",
       "homepage": "",
       "scholar": "",
       "direction": "Infra / LLM / 数学推理",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（OpenAI）",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-09"
     },
     "Min Zhang": {
       "name": "Min Zhang",
       "university": "ETH",
       "isHK": false,
-      "status": "待确认",
+      "status": "教授/博导",
       "advisor": "待确认",
-      "lab": "",
+      "lab": "School of Computer Science and Technology, Soochow University",
       "homepage": "",
       "scholar": "",
       "direction": "Infra / LLM / 数学推理",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（OpenAI）",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-09"
     },
     "Kunfeng Chen": {
       "name": "Kunfeng Chen",

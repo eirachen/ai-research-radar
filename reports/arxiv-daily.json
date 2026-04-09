@@ -2,7 +2,7 @@
   "generatedAt": "2026-04-09T09:22:57.506279Z",
   "since": "2026-03-01",
   "totalPapers": 289,
-  "totalUniCollab": 76,
+  "totalUniCollab": 60,
   "totalHKCollab": 1,
   "companies": {
     "bytedance": {
@@ -3875,7 +3875,7 @@
             "USC"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -3893,7 +3893,15 @@
               "label": "数据",
               "color": "#78716c"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "YuwenDu1,*,RuiYe1,*,#,†,ShuoTang1,XinyuZhu1,YijunLu1,YuzhuCai1,SihengChen1,†",
+            "1ShanghaiJiaoTongUniversity,*EqualCoreContributions,#ProjectLead"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Logics-Parsing-Omni Technical Report",
@@ -4210,7 +4218,7 @@
         }
       ],
       "count": 76,
-      "uniCollabCount": 11,
+      "uniCollabCount": 10,
       "hkCollabCount": 0
     },
     "deepseek": {
@@ -7828,7 +7836,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -7846,7 +7854,15 @@
               "label": "Agent",
               "color": "#f97316"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Peng Xia1∗, Jianwen Chen1∗, Xinyu Yang2∗, Haoqin Tu3∗, Jiaqi Liu1∗, Kaiwen Xiong",
+            "1 UNC-Chapel Hill, 2 Carnegie Mellon University, 3 UC Santa Cruz, 4 UC Berkeley,"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Improving Code Comprehension through Cognitive-Load Aware Automated Refactoring for Novice Programmers",
@@ -7871,7 +7887,7 @@
             "Mila"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -7889,7 +7905,14 @@
               "label": "Infra",
               "color": "#22c55e"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "JahangirnagarUniversity CaseWesternReserveUniversity"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Attention Residuals",
@@ -7933,7 +7956,16 @@
               "label": "Infra",
               "color": "#22c55e"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "moonshot"
+          ],
+          "pdfUnis": [
+            "KimiTeam"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "confirmed"
         },
         {
           "title": "Beyond Task Completion: Revealing Corrupt Success in LLM Agents through Procedure-Aware Evaluation",
@@ -8018,7 +8050,7 @@
         }
       ],
       "count": 17,
-      "uniCollabCount": 7,
+      "uniCollabCount": 5,
       "hkCollabCount": 0
     },
     "openai": {
@@ -10228,7 +10260,7 @@
             "ANU"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -10246,7 +10278,12 @@
               "label": "Infra",
               "color": "#22c55e"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "none"
         },
         {
           "title": "Language Models Don't Know What You Want: Evaluating Personalization in Deep Research Needs Real Users",
@@ -10291,7 +10328,14 @@
               "label": "数据",
               "color": "#78716c"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "1UniversityofMaryland 2AllenInstituteforArtificialIntelligence(Ai2) 3NewYorkUniv"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "From Passive Observer to Active Critic: Reinforcement Learning Elicits Process Reasoning for Robotic Manipulation",
@@ -10322,7 +10366,7 @@
             "HIT"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -10340,7 +10384,16 @@
               "label": "数据",
               "color": "#78716c"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "1 Shanghai Jiao Tong University 2 Northeastern University"
+          ],
+          "pdfHKUnis": [
+            "Hong Kong"
+          ],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "AEX: Non-Intrusive Multi-Hop Attestation and Provenance for LLM APIs",
@@ -10363,7 +10416,7 @@
             "MIT"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -10381,7 +10434,14 @@
               "label": "Infra",
               "color": "#22c55e"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Zhejiang University of Technology"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Understanding LLM Behavior When Encountering User-Supplied Harmful Content in Harmless Tasks",
@@ -10411,7 +10471,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -10429,7 +10489,14 @@
               "label": "RAG/检索",
               "color": "#64748b"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "1CISPAHelmholtzCenterforInformationSecurity 2Flexera 3DelftUniversityofTechnolog"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "LongFlow: Efficient KV Cache Compression for Reasoning M",
@@ -10475,7 +10542,16 @@
               "label": "数学推理",
               "color": "#06b6d4"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "bytedance"
+          ],
+          "pdfUnis": [
+            "1SchoolofComputerScienceandTechnology,SoochowUniversity,China"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "confirmed"
         },
         {
           "title": "Try, Check and Retry: A Divide-and-Conquer Framework for Boosting Long-context Tool-Calling Performance of LLMs",
@@ -10502,7 +10578,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -10520,7 +10596,15 @@
               "label": "RAG/检索",
               "color": "#64748b"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "andHubeiKeyLaboratoryofMultimediaandNetworkCommunicationEngineering,WuhanUnivers",
+            "1SchoolofComputerScience,NationalEngineeringResearchCenterforMultimediaSoftware,"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "MaterialFigBENCH: benchmark dataset with figures for evaluating college-level materials science problem-solving abilities of multimodal large language models",
@@ -10548,7 +10632,7 @@
             "HIT"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -10566,7 +10650,15 @@
               "label": "多模态",
               "color": "#a855f7"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "aOMRON SINIC X, Tokyo, Japan; bDepartment of Applied Physics, Osaka Univ, Suita,",
+            "college-level materials science problem-solving abilities of multimodal"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Re-Evaluating EVMBench: Are AI Agents Ready for Smart Contract Security?",
@@ -10609,7 +10701,18 @@
               "label": "安全",
               "color": "#ef4444"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "openai"
+          ],
+          "pdfUnis": [
+            "automatedAIauditingiswithinreach.WeidentifytwolimitationsofEVMbench’sexperimenta",
+            "everymodel’sreleasethatmodelsmayhaveseenduringtraining.Toaddressthese,weexpandto",
+            "CHAOYUANPENG ,ZhejiangUniversity"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "confirmed"
         },
         {
           "title": "IH-Challenge: A Training Dataset to Improve Instruction Hierarchy on Frontier LLMs",
@@ -10667,11 +10770,20 @@
               "label": "数据",
               "color": "#78716c"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "openai"
+          ],
+          "pdfUnis": [
+            "Steph Lin Nikhil Kandpal Milad Nasr Rai (Michael Pokorny) Sam Toyer"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "confirmed"
         }
       ],
       "count": 54,
-      "uniCollabCount": 13,
+      "uniCollabCount": 7,
       "hkCollabCount": 0
     },
     "deepmind": {
@@ -10999,7 +11111,7 @@
             "MIT"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -11017,7 +11129,14 @@
               "label": "RAG/检索",
               "color": "#64748b"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "UniversityofCalifornia,SanDiego TexasA&MUniversity-Commerce"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Context Engineering: From Prompts to Corporate Multi-Agent Architecture",
@@ -11235,7 +11354,7 @@
         }
       ],
       "count": 12,
-      "uniCollabCount": 5,
+      "uniCollabCount": 4,
       "hkCollabCount": 0
     },
     "anthropic": {
@@ -12538,7 +12657,7 @@
             "MIT"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -12556,7 +12675,14 @@
               "label": "Infra",
               "color": "#22c55e"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "2RWTH Aachen University, Aachen, Germany"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Literary Narrative as Moral Probe : A Cross-System Framework for Evaluating AI Ethical Reasoning and Refusal Behavior",
@@ -12580,7 +12706,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -12598,7 +12724,14 @@
               "label": "数据",
               "color": "#78716c"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "A Cross-System Framework for Evaluating AI Ethical Reasoning and Refusal Behavio"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Benchmarking Political Persuasion Risks Across Frontier Large Language Models",
@@ -13062,7 +13195,7 @@
         }
       ],
       "count": 39,
-      "uniCollabCount": 15,
+      "uniCollabCount": 13,
       "hkCollabCount": 0
     },
     "baidu": {
@@ -13377,7 +13510,12 @@
               "label": "视觉",
               "color": "#ec4899"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "none"
         },
         {
           "title": "Face-to-Face: A Video Dataset for Multi-Person Interaction Modeling",
@@ -13402,7 +13540,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -13420,7 +13558,14 @@
               "label": "Infra",
               "color": "#22c55e"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Johns Hopkins University, Baltimore MD 21218, USA"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Hilbert cubes in sets with arithmetic properties",
@@ -13445,7 +13590,7 @@
             "CAS"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -13453,7 +13598,12 @@
               "label": "数学推理",
               "color": "#06b6d4"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "none"
         },
         {
           "title": "Qianfan-OCR: A Unified End-to-End Model for Document Intelligence",
@@ -13483,7 +13633,7 @@
             "HIT"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -13501,7 +13651,14 @@
               "label": "强化学习",
               "color": "#eab308"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "baidu"
+          ],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "company_only"
         },
         {
           "title": "CTPX1: A Highly Integrated and High-Throughput Data-Driven Camera Based on Timepix4",
@@ -13581,7 +13738,7 @@
         }
       ],
       "count": 11,
-      "uniCollabCount": 6,
+      "uniCollabCount": 3,
       "hkCollabCount": 0
     },
     "xiaomi": {
@@ -13856,7 +14013,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -13874,7 +14031,14 @@
               "label": "RAG/检索",
               "color": "#64748b"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "meta"
+          ],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "company_only"
         },
         {
           "title": "When Denoising Hinders: Revisiting Zero-Shot ASR with SAM-Audio and Whisper",
@@ -13959,7 +14123,7 @@
         }
       ],
       "count": 4,
-      "uniCollabCount": 4,
+      "uniCollabCount": 3,
       "hkCollabCount": 0
     },
     "kuaishou": {

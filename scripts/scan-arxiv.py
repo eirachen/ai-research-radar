@@ -301,7 +301,7 @@ COMPANY_QUERIES = {
     },
     "baidu": {
         "name": "百度", "icon": "🔴",
-        "keywords": ['"Baidu Research"', '"Baidu Inc"', '"ERNIE"', '"Qianfan"']
+        "keywords": ['"Baidu Research"', '"Baidu Inc"', '"ERNIE Bot"', '"Qianfan"', '"Baidu"']
     },
     "kuaishou": {
         "name": "快手", "icon": "📹",

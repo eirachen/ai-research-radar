@@ -12306,64 +12306,6 @@
       "icon": "🔴",
       "papers": [
         {
-          "title": "Neural Computers",
-          "summary": "We propose a new frontier: Neural Computers (NCs) -- an emerging machine form that unifies computation, memory, and I/O in a learned runtime state. Unlike conventional computers, which execute explicit programs, agents, which act over external execution environments, and world models, which learn en",
-          "published": "2026-04-07T20:01:05Z",
-          "arxivId": "2604.06425v1",
-          "arxivUrl": "http://arxiv.org/abs/2604.06425v1",
-          "pdfUrl": "https://arxiv.org/pdf/2604.06425v1",
-          "authors": [
-            "Mingchen Zhuge",
-            "Changsheng Zhao",
-            "Haozhe Liu",
-            "Zijian Zhou",
-            "Shuming Liu",
-            "Wenyi Wang",
-            "Ernie Chang",
-            "Gael Le Lan"
-          ],
-          "authorCount": 19,
-          "affiliations": [],
-          "categories": [
-            "cs.LG",
-            "cs.AI"
-          ],
-          "comment": "Github (data pipeline): https://github.com/metauto-ai/NeuralComputer; Blogpost: https://metauto.ai/neuralcomputer/index_eng.html",
-          "universities": [
-            "MIT",
-            "ETH"
-          ],
-          "hkUniversities": [],
-          "hasUniCollab": true,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "LLM",
-              "label": "LLM",
-              "color": "#3b82f6"
-            },
-            {
-              "id": "Agent",
-              "label": "Agent",
-              "color": "#f97316"
-            },
-            {
-              "id": "Safety",
-              "label": "安全",
-              "color": "#ef4444"
-            }
-          ],
-          "pdfVerified": true,
-          "pdfCompanies": [
-            "meta"
-          ],
-          "pdfUnis": [
-            "reuse. Asaninitialstep,westudywhetherearlyNCprimitivescanbelearnedsolelyfromcoll"
-          ],
-          "pdfHKUnis": [],
-          "collabConfidence": "confirmed"
-        },
-        {
           "title": "Short Data, Long Context: Distilling Positional Knowledge in Transformers",
           "summary": "Extending the context window of language models typically requires expensive long-context pre-training, posing significant challenges for both training efficiency and data collection. In this paper, we present evidence that long-context retrieval capabilities can be transferred to student models thr",
           "published": "2026-04-07T16:50:43Z",
@@ -12862,8 +12804,8 @@
           "directions": []
         }
       ],
-      "count": 12,
-      "uniCollabCount": 8,
+      "count": 11,
+      "uniCollabCount": 7,
       "hkCollabCount": 0
     },
     "xiaomi": {
@@ -13039,6 +12981,64 @@
       "icon": "📘",
       "papers": [
         {
+          "title": "Neural Computers",
+          "summary": "We propose a new frontier: Neural Computers (NCs) -- an emerging machine form that unifies computation, memory, and I/O in a learned runtime state. Unlike conventional computers, which execute explicit programs, agents, which act over external execution environments, and world models, which learn en",
+          "published": "2026-04-07T20:01:05Z",
+          "arxivId": "2604.06425v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.06425v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.06425v1",
+          "authors": [
+            "Mingchen Zhuge",
+            "Changsheng Zhao",
+            "Haozhe Liu",
+            "Zijian Zhou",
+            "Shuming Liu",
+            "Wenyi Wang",
+            "Ernie Chang",
+            "Gael Le Lan"
+          ],
+          "authorCount": 19,
+          "affiliations": [],
+          "categories": [
+            "cs.LG",
+            "cs.AI"
+          ],
+          "comment": "Github (data pipeline): https://github.com/metauto-ai/NeuralComputer; Blogpost: https://metauto.ai/neuralcomputer/index_eng.html",
+          "universities": [
+            "MIT",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "Safety",
+              "label": "安全",
+              "color": "#ef4444"
+            }
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "meta"
+          ],
+          "pdfUnis": [
+            "reuse. Asaninitialstep,westudywhetherearlyNCprimitivescanbelearnedsolelyfromcoll"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "confirmed"
+        },
+        {
           "title": "Breaking the Winner's Curse with Bayesian Hybrid Shrinkage",
           "summary": "The widespread adoption of randomized controlled trials (A/B Tests) for decision-making has introduced a pervasive \"Winner's Curse\": experiments selected for launch often exhibit upwardly biased effect estimates and invalid confidence intervals. This selection bias leads to over-optimistic impact pr",
           "published": "2026-03-13T10:13:38Z",
@@ -13166,8 +13166,8 @@
           ]
         }
       ],
-      "count": 3,
-      "uniCollabCount": 3,
+      "count": 4,
+      "uniCollabCount": 4,
       "hkCollabCount": 0
     },
     "kuaishou": {

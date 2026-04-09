@@ -630,6 +630,7 @@
     <div style="text-align:center;margin-bottom:1.5rem;font-size:0.78rem;color:var(--text2)">
       📅 数据覆盖：<span id="dataDateRange" style="color:var(--accent2);font-weight:600">加载中…</span>
       &nbsp;·&nbsp; 共 <span id="dataPaperCount" style="color:var(--accent2);font-weight:600">—</span> 篇 arXiv 论文
+      &nbsp;·&nbsp; 最后更新：<span id="dataLastUpdate" style="color:var(--green);font-weight:600">—</span>
     </div>
     <div class="section-head"><h2><span>🧭</span> 情报中心</h2></div>
     <div class="nav-hub">
@@ -1735,6 +1736,14 @@ async function loadArxiv() {
         try { document.getElementById('dataDateRange').textContent = allDates[0] + ' ~ ' + allDates[allDates.length - 1]; } catch(e){}
       }
       try { document.getElementById('dataPaperCount').textContent = arxivData.totalPapers; } catch(e){}
+      // Show last update time from generatedAt
+      try {
+        var gen = arxivData.generatedAt || '';
+        if (gen) {
+          var d = new Date(gen);
+          document.getElementById('dataLastUpdate').textContent = d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0') + ' ' + String(d.getHours()).padStart(2,'0') + ':' + String(d.getMinutes()).padStart(2,'0');
+        }
+      } catch(e){}
     } else {
       document.getElementById('arxivList').innerHTML = '<div class="no-results">暂无 arXiv 数据</div>';
     }

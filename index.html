@@ -1762,10 +1762,17 @@ function renderTalentNoteHTML(notes, hasHK) {
   var detailHtml = '';
   for (var i = 0; i < notes.length; i++) {
     var t = notes[i];
+    // 找到该人才在 talentNotes 中的 key
+    var talentKey = '';
+    for (var k in talentNotes) {
+      if (talentNotes[k] === t || talentNotes[k].name === t.name) { talentKey = k; break; }
+    }
+    var escapedKey = talentKey.replace(/'/g, "\\'");
     detailHtml += '<div class="talent-person"><div class="talent-person-info">';
     detailHtml += '<div class="talent-person-name">';
-    if (t.homepage) { detailHtml += '<a href="' + t.homepage + '" target="_blank">' + t.name + ' ↗</a>'; }
-    else { detailHtml += t.name; }
+    // 名字链接：点击跳转到人才库并搜索该人
+    detailHtml += '<a href="javascript:void(0)" onclick="event.stopPropagation();goToTalent(\'' + escapedKey + '\')" style="color:var(--accent2);text-decoration:none;cursor:pointer">' + t.name + '</a>';
+    if (t.homepage) detailHtml += ' <a href="' + t.homepage + '" target="_blank" style="font-size:0.6rem;color:var(--text2)">↗</a>';
     detailHtml += '</div>';
     detailHtml += '<div class="talent-person-meta">' + t.university + ' · ' + t.status;
     if (t.advisor && t.advisor !== '待确认') detailHtml += ' · 导师: ' + t.advisor;
@@ -1774,7 +1781,7 @@ function renderTalentNoteHTML(notes, hasHK) {
     detailHtml += '<div class="talent-person-links">';
     if (t.homepage) detailHtml += '<a href="' + t.homepage + '" target="_blank">🏠 主页</a>';
     if (t.scholar) detailHtml += '<a href="' + t.scholar + '" target="_blank">📚 Scholar</a>';
-    if (t.lab) detailHtml += '<span style="font-size:0.6rem;color:var(--text2)">🔬 ' + t.lab + '</span>';
+    detailHtml += '<a href="javascript:void(0)" onclick="event.stopPropagation();goToTalent(\'' + escapedKey + '\')" style="background:rgba(168,85,247,0.15);color:#c084fc">📋 人才库</a>';
     detailHtml += '</div></div></div>';
   }
 
@@ -1783,6 +1790,19 @@ function renderTalentNoteHTML(notes, hasHK) {
     '<div id="' + tid + '" style="display:none">' + detailHtml + '</div>' +
   '</div>';
   return html;
+}
+
+// 跳转到人才库并定位到指定人才
+function goToTalent(key) {
+  navigateTo('talent');
+  // 填入搜索框
+  setTimeout(function() {
+    var input = document.getElementById('talentSearchInput');
+    if (input) {
+      input.value = key;
+      input.dispatchEvent(new Event('input'));
+    }
+  }, 100);
 }
 
 async function loadArxiv() {

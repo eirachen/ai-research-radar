@@ -1344,16 +1344,18 @@ function renderTalent() {
     var total = list.length;
     var totalPages = Math.ceil(total / TALENT_PAGE_SIZE);
     var page = talentPage[group] || 1;
+    if (page > totalPages) page = totalPages;
+    if (page < 1) page = 1;
     if (totalPages <= 1) return '';
     var start = (page - 1) * TALENT_PAGE_SIZE + 1;
     var end = Math.min(page * TALENT_PAGE_SIZE, total);
-    var btns = '';
-    btns += '<button onclick="setTalentPage(\'' + group + '\',' + 1 + ')" ' + (page===1?'disabled':'') + ' style="font-size:0.65rem;padding:0.15rem 0.4rem;border:1px solid var(--border);border-radius:4px;background:var(--surface2);color:var(--text2);cursor:pointer">⏮</button>';
-    btns += '<button onclick="setTalentPage(\'' + group + '\',' + (page-1) + ')" ' + (page<=1?'disabled':'') + ' style="font-size:0.65rem;padding:0.15rem 0.4rem;border:1px solid var(--border);border-radius:4px;background:var(--surface2);color:var(--text2);cursor:pointer">◀ 上一页</button>';
-    btns += '<span style="font-size:0.7rem;color:var(--text2);padding:0 0.4rem">' + start + '-' + end + ' / ' + total + '人（第' + page + '/' + totalPages + '页）</span>';
-    btns += '<button onclick="setTalentPage(\'' + group + '\',' + (page+1) + ')" ' + (page>=totalPages?'disabled':'') + ' style="font-size:0.65rem;padding:0.15rem 0.4rem;border:1px solid var(--border);border-radius:4px;background:var(--surface2);color:var(--text2);cursor:pointer">下一页 ▶</button>';
-    btns += '<button onclick="setTalentPage(\'' + group + '\',' + totalPages + ')" ' + (page>=totalPages?'disabled':'') + ' style="font-size:0.65rem;padding:0.15rem 0.4rem;border:1px solid var(--border);border-radius:4px;background:var(--surface2);color:var(--text2);cursor:pointer">⏭</button>';
-    return '<div style="display:flex;align-items:center;justify-content:center;gap:0.3rem;padding:0.5rem 0.8rem;border-top:1px solid var(--border)">' + btns + '</div>';
+    return '<div style="display:flex;align-items:center;justify-content:center;gap:0.4rem;padding:0.6rem 1rem;background:var(--surface2);border-top:1px solid var(--border)">' +
+      '<button onclick="setTalentPage(\'' + group + '\',1)" style="padding:0.2rem 0.5rem;border:1px solid var(--border);border-radius:6px;background:var(--surface);color:var(--text);cursor:pointer;font-size:0.72rem"' + (page<=1?' disabled':'') + '>⏮ 首页</button>' +
+      '<button onclick="setTalentPage(\'' + group + '\',' + (page-1) + ')" style="padding:0.2rem 0.5rem;border:1px solid var(--border);border-radius:6px;background:var(--surface);color:var(--text);cursor:pointer;font-size:0.72rem"' + (page<=1?' disabled':'') + '>◀ 上页</button>' +
+      '<span style="font-size:0.75rem;color:var(--accent2);font-weight:600;padding:0 0.5rem">' + start + '-' + end + ' / ' + total + '人  (第' + page + '/' + totalPages + '页)</span>' +
+      '<button onclick="setTalentPage(\'' + group + '\',' + (page+1) + ')" style="padding:0.2rem 0.5rem;border:1px solid var(--border);border-radius:6px;background:var(--surface);color:var(--text);cursor:pointer;font-size:0.72rem"' + (page>=totalPages?' disabled':'') + '>下页 ▶</button>' +
+      '<button onclick="setTalentPage(\'' + group + '\',' + totalPages + ')" style="padding:0.2rem 0.5rem;border:1px solid var(--border);border-radius:6px;background:var(--surface);color:var(--text);cursor:pointer;font-size:0.72rem"' + (page>=totalPages?' disabled':'') + '>末页 ⏭</button>' +
+    '</div>';
   }
 
   function slicePage(list, group) {

@@ -1799,17 +1799,32 @@ function renderTalentNoteHTML(notes, hasHK) {
   return html;
 }
 
-// 跳转到人才库并定位到指定人才
+// 跳转到人才库并直接展开指定人才的详情
 function goToTalent(key) {
   navigateTo('talent');
-  // 填入搜索框
   setTimeout(function() {
-    var input = document.getElementById('talentSearchInput');
-    if (input) {
-      input.value = key;
-      input.dispatchEvent(new Event('input'));
+    // 先展开所有折叠的分组（学生/教授/未确认）
+    ['proSection', 'unknownSection'].forEach(function(sid) {
+      var sec = document.getElementById(sid);
+      if (sec && sec.style.display === 'none') sec.style.display = 'block';
+    });
+    // 找到目标行的 ID
+    var rowId = 'trow_' + key.replace(/[^a-zA-Z0-9]/g, '_');
+    var el = document.getElementById(rowId);
+    if (el) {
+      // 收起其他已展开的
+      document.querySelectorAll('[id^="trow_"]').forEach(function(d) {
+        if (d.id !== rowId) d.style.display = 'none';
+      });
+      // 展开目标
+      el.style.display = 'block';
+      // 滚动到可见位置
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      // 高亮闪烁
+      el.style.background = 'rgba(59,130,246,0.15)';
+      setTimeout(function() { el.style.background = ''; }, 2000);
     }
-  }, 100);
+  }, 200);
 }
 
 async function loadArxiv() {

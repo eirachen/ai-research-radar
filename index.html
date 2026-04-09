@@ -1676,7 +1676,6 @@ function buildTalentPaperMap() {
   Object.entries(arxivData.companies).forEach(function(e) {
     var companyId = e[0], companyData = e[1];
     companyData.papers.forEach(function(p) {
-      if (!p.hasUniCollab) return;
       var authorStr = p.authors.join(' ').toLowerCase();
       talentKeys.forEach(function(key) {
         // Match by key (English name) in author list

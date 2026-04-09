@@ -2,7 +2,7 @@
   "generatedAt": "2026-04-09T09:22:57.506279Z",
   "since": "2026-03-01",
   "totalPapers": 289,
-  "totalUniCollab": 247,
+  "totalUniCollab": 240,
   "totalHKCollab": 1,
   "companies": {
     "bytedance": {
@@ -55,7 +55,12 @@
               "label": "Agent",
               "color": "#f97316"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "mentioned"
         },
         {
           "title": "In-Place Test-Time Training",
@@ -99,7 +104,16 @@
               "label": "Infra",
               "color": "#22c55e"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "bytedance"
+          ],
+          "pdfUnis": [
+            "1ByteDanceSeed, 2PekingUniversity"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "confirmed"
         },
         {
           "title": "Convex cocompact groups with three-dimensional limit sets",
@@ -125,7 +139,7 @@
             "MIT"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -133,7 +147,14 @@
               "label": "数学推理",
               "color": "#06b6d4"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "CONVEX COCOMPACT GROUPS WITH THREE-DIMENSIONAL LIMIT SETS"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Matrix entries, unipotents, and linearity of amalgams",
@@ -157,7 +178,12 @@
           "hkUniversities": [],
           "hasUniCollab": false,
           "hasHKCollab": false,
-          "directions": []
+          "directions": [],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "mentioned"
         },
         {
           "title": "Seed1.8 Model Card: Towards Generalized Real-World Agency",
@@ -179,7 +205,7 @@
             "CAS"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -197,7 +223,14 @@
               "label": "Infra",
               "color": "#22c55e"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "bytedance"
+          ],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "company_only"
         },
         {
           "title": "Box Maze: A Process-Control Architecture for Reliable LLM Reasoning",
@@ -238,7 +271,12 @@
               "label": "安全",
               "color": "#ef4444"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "mentioned"
         },
         {
           "title": "FireRedASR2S: A State-of-the-Art Industrial-Grade All-in-One Automatic Speech Recognition System",
@@ -284,7 +322,12 @@
               "label": "RAG/检索",
               "color": "#64748b"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "mentioned"
         },
         {
           "title": "The Ghost in the Datacenter: Link Flapping, Topology Knowledge Failures, and the FITO Category Mistake",
@@ -320,11 +363,16 @@
               "label": "Infra",
               "color": "#22c55e"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "mentioned"
         }
       ],
       "count": 8,
-      "uniCollabCount": 6,
+      "uniCollabCount": 4,
       "hkCollabCount": 0
     },
     "alibaba": {
@@ -370,7 +418,12 @@
               "label": "RAG/检索",
               "color": "#64748b"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "mentioned"
         },
         {
           "title": "Identifying Topological Invariants of Non-Hermitian Systems via Domain-Adaptive Multimodal Model for Mathematics",
@@ -398,7 +451,7 @@
             "MIT"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -416,7 +469,17 @@
               "label": "Infra",
               "color": "#22c55e"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Identifying Topological Invariants of Non-Hermitian Systems via",
+            "2CollegeofElectronicandOpticalEngineering,NanjingUniversityofPostsandTelecommuni",
+            "4InstituteofQuantumInformationandTechnology,NanjingUniversityofPostsandTelecommu",
+            "1PortlandInstitute,NanjingUniversityofPostsandTelecommunications,Nanjing210003,C"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "TRAPTI: Time-Resolved Analysis for SRAM Banking and Power Gating Optimization in Embedded Transformer Inference",
@@ -442,7 +505,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -460,7 +523,16 @@
               "label": "强化学习",
               "color": "#eab308"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "To appear at the International Joint Conference on Neural Networks – IJCNN 2026.",
+            "†eBRAIN Lab, Division of Engineering, New York University (NYU) Abu Dhabi, Abu D",
+            "∗Brno University of Technology, Brno, Czechia"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "The AI Skills Shift: Mapping Skill Obsolescence, Emergence, and Transition Pathways in the LLM Era",
@@ -486,7 +558,7 @@
             "Mila"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -499,7 +571,15 @@
               "label": "数据",
               "color": "#78716c"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Department of Computer Science Department of Computer Science",
+            "Savitribai Phule Pune University Savitribai Phule Pune University"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Are LLMs Ready for Computer Science Education? A Cross-Domain, Cross-Lingual and Cognitive-Level Evaluation Using Professional Certification Exams",
@@ -546,7 +626,12 @@
               "label": "安全",
               "color": "#ef4444"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "mentioned"
         },
         {
           "title": "Digital Skin, Digital Bias: Uncovering Tone-Based Biases in LLMs and Emoji Embeddings",
@@ -579,7 +664,7 @@
             "NYU"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -597,7 +682,16 @@
               "label": "安全",
               "color": "#ef4444"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "UniversityofNorthTexas InternationalCenterforArtificial SouthernMethodistUnivers",
+            "NavyasriMeka XuanLu XinyueYe",
+            "Denton,TX,UnitedStates Tucson,AZ,UnitedStates Tuscaloosa,AL,UnitedStates"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "HingeMem: Boundary Guided Long-Term Memory with Query Adaptive Retrieval for Scalable Dialogues",
@@ -623,7 +717,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -641,7 +735,15 @@
               "label": "Infra",
               "color": "#22c55e"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "TongjiUniversity IntelligentAutonomousSystems, TongjiUniversity",
+            "CollegeofDesignandInnovation, ShanghaiResearchInstitutefor CollegeofDesignandInn"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "AudioKV: KV Cache Eviction in Efficient Large Audio Language Models",
@@ -3672,7 +3774,7 @@
         }
       ],
       "count": 76,
-      "uniCollabCount": 67,
+      "uniCollabCount": 62,
       "hkCollabCount": 0
     },
     "deepseek": {

@@ -389,6 +389,8 @@
   .arxiv-paper.has-uni { border-left: 3px solid var(--green); }
   .arxiv-paper.has-hk { border-left: 3px solid #f59e0b; box-shadow: 0 0 12px rgba(245,158,11,0.15); background: linear-gradient(135deg, var(--surface) 0%, rgba(245,158,11,0.03) 100%); }
   .uni-badge { font-size: 0.62rem; padding: 0.12rem 0.4rem; border-radius: 4px; background: rgba(34,197,94,0.15); color: #4ade80; font-weight: 600; }
+  .uni-badge.confirmed { background: rgba(34,197,94,0.25); border: 1px solid rgba(34,197,94,0.4); }
+  .uni-badge.mentioned { background: rgba(148,163,184,0.12); color: var(--text2); font-weight: 400; font-style: italic; border: 1px dashed rgba(148,163,184,0.3); }
   .hk-badge { background: linear-gradient(135deg, rgba(245,158,11,0.25), rgba(239,68,68,0.15)); color: #fbbf24; font-weight: 700; animation: hkGlow 2s ease-in-out infinite alternate; }
   @keyframes hkGlow { from { box-shadow: 0 0 4px rgba(245,158,11,0.2); } to { box-shadow: 0 0 10px rgba(245,158,11,0.5); } }
   .uni-list { font-size: 0.65rem; color: var(--green); margin-top: 0.2rem; }
@@ -1826,18 +1828,23 @@ function renderArxivList() {
     var uniBadge = '';
     var uniDetail = '';
     var cardClass = 'arxiv-paper';
-    if (p.hasHKCollab) {
+    var confidence = p.collabConfidence || 'mentioned';
+    if (p.hasHKCollab && confidence === 'confirmed') {
       cardClass += ' has-hk';
-      uniBadge = '<span class="uni-badge hk-badge">🇭🇰 港校合作</span>';
+      uniBadge = '<span class="uni-badge hk-badge">🇭🇰 港校合作 ✓</span>';
       uniDetail = '<div class="uni-list hk-uni-list">🏫 ' + p.hkUniversities.join(', ') + '</div>';
       if (p.universities && p.universities.length > p.hkUniversities.length) {
         var others = p.universities.filter(function(u) { return p.hkUniversities.indexOf(u) === -1; });
         if (others.length) uniDetail += '<div class="uni-list">+ ' + others.join(', ') + '</div>';
       }
-    } else if (p.hasUniCollab) {
+    } else if (p.hasUniCollab && confidence === 'confirmed') {
       cardClass += ' has-uni';
-      uniBadge = '<span class="uni-badge">🎓 高校合作</span>';
+      uniBadge = '<span class="uni-badge confirmed">🎓 校企合作 ✓</span>';
       uniDetail = '<div class="uni-list">🏫 ' + (p.universities || []).join(', ') + '</div>';
+    } else if (p.hasUniCollab) {
+      // mentioned only
+      uniBadge = '<span class="uni-badge mentioned">🔍 识别到高校关键词</span>';
+      uniDetail = '<div class="uni-list" style="color:var(--text2);font-style:italic">识别到: ' + (p.universities || []).join(', ') + ' (待PDF验证)</div>';
     }
     // Talent notes for this paper
     var talentHTML = '';

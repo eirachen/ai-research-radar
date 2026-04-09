@@ -395,12 +395,13 @@ def search_arxiv(query, max_results=30):
                 "affiliations": affiliations[:10],
                 "categories": categories[:3],
                 "comment": comment[:200],
-                # New fields
                 "universities": all_unis,
                 "hkUniversities": hk_unis,
                 "hasUniCollab": len(all_unis) > 0,
                 "hasHKCollab": len(hk_unis) > 0,
                 "directions": directions,
+                "collabConfidence": "confirmed" if affiliations else ("mentioned" if all_unis else "none"),
+                "pdfVerified": False,
             })
         return entries
     except Exception as e:

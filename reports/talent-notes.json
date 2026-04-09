@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-09T09:39:26.532672Z",
+  "generatedAt": "2026-04-09T10:39:08Z",
   "notes": {
     "Ye Tian": {
       "name": "田野 (Ye Tian)",
@@ -13,7 +13,24 @@
       "direction": "AIGC / 多模态 / 扩散模型",
       "gradYear": "~2029",
       "statusNote": "",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-08",
+      "contactInfo": {
+        "emails": [
+          "tyfeld@gmail.com"
+        ],
+        "wechat": [
+          "[QR: /assets/img/wechat1.jpeg]",
+          "[QR: /assets/js/wechat.js?9f2dc256d1094f6f7ffeade26e50cb50]"
+        ],
+        "phone": [],
+        "cv": [],
+        "social": {
+          "github": "github.com/tyfeld"
+        },
+        "scannedAt": "2026-04-09",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Chengcheng Wang": {
       "name": "王程程 (Chengcheng Wang)",
@@ -41,7 +58,21 @@
       "direction": "多模态 / Physical AI",
       "gradYear": "2026",
       "statusNote": "即将毕业，与字节Seed深度合作",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-08",
+      "contactInfo": {
+        "emails": [],
+        "wechat": [],
+        "phone": [],
+        "cv": [
+          "https://jameshujy.github.io/data/Resume.pdf"
+        ],
+        "social": {
+          "github": "github.com/JamesHujy"
+        },
+        "scannedAt": "2026-04-09",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Tyler Zhu": {
       "name": "Tyler Zhu",
@@ -55,7 +86,22 @@
       "direction": "计算机视觉 / 视频理解",
       "gradYear": "~2027",
       "statusNote": "",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-08",
+      "contactInfo": {
+        "emails": [],
+        "wechat": [],
+        "phone": [],
+        "cv": [
+          "https://tylerzhu.com/data/Tyler_Zhu_CV.pdf"
+        ],
+        "social": {
+          "twitter": "@tyleryzhu",
+          "github": "github.com/tyleryzhu"
+        },
+        "scannedAt": "2026-04-09",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Thomas Jiralerspong": {
       "name": "Thomas Jiralerspong",
@@ -69,7 +115,23 @@
       "direction": "可解释性 / RL / 生成模型",
       "gradYear": "待确认",
       "statusNote": "Anthropic Fellow",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-08",
+      "contactInfo": {
+        "emails": [],
+        "wechat": [],
+        "phone": [],
+        "cv": [
+          "https://superkaiba.github.io/assets/docs/cv.pdf",
+          "https://superkaiba.github.io/assets/docs/resume.pdf"
+        ],
+        "social": {
+          "github": "github.com/superkaiba",
+          "linkedin": "linkedin.com/in/thomas-jiralerspong"
+        },
+        "scannedAt": "2026-04-09",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Guhao Feng": {
       "name": "Guhao Feng (冯谷浩)",
@@ -97,7 +159,21 @@
       "direction": "Machine Learning / Transformer",
       "gradYear": "2025",
       "statusNote": "2025起在ByteDance Seed工作",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-08",
+      "contactInfo": {
+        "emails": [],
+        "wechat": [],
+        "phone": [],
+        "cv": [],
+        "social": {
+          "twitter": "@Roger98079446",
+          "github": "github.com/lsj2408",
+          "linkedin": "linkedin.com/in/shengjie-luo-ba6137193"
+        },
+        "scannedAt": "2026-04-09",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Tianle Cai": {
       "name": "蔡天乐 (Tianle Cai)",
@@ -111,7 +187,23 @@
       "direction": "Machine Learning / LLM效率",
       "gradYear": "待确认",
       "statusNote": "h-index 20, 3.6k+ citations，本科北大",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-08",
+      "contactInfo": {
+        "emails": [],
+        "wechat": [],
+        "phone": [],
+        "cv": [
+          "https://ctlllll.github.io/cv/"
+        ],
+        "social": {
+          "twitter": "@tianle_cai",
+          "github": "github.com/ctlllll",
+          "linkedin": "linkedin.com/in/tianle-cai-bb7135138"
+        },
+        "scannedAt": "2026-04-09",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Di He": {
       "name": "贺笛 (Di He)",
@@ -125,7 +217,20 @@
       "direction": "生成模型 / LLM / AI4Science",
       "gradYear": "",
       "statusNote": "15,297 citations，前MSRA高级研究员",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-08",
+      "contactInfo": {
+        "emails": [],
+        "wechat": [],
+        "phone": [],
+        "cv": [],
+        "social": {
+          "github": "github.com/DiHe-PKU",
+          "linkedin": "linkedin.com/in/di-he-8a5633ab"
+        },
+        "scannedAt": "2026-04-09",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Douwe Kiela": {
       "name": "Douwe Kiela",
@@ -139,7 +244,19 @@
       "direction": "NLP / 多模态",
       "gradYear": "",
       "statusNote": "Contextual AI CEO, 前HuggingFace研究负责人",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-08",
+      "contactInfo": {
+        "emails": [],
+        "wechat": [],
+        "phone": [],
+        "cv": [],
+        "social": {
+          "linkedin": "linkedin.com/in/douwekiela"
+        },
+        "scannedAt": "2026-04-09",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Xingjun Ma": {
       "name": "马兴军 (Xingjun Ma)",
@@ -153,7 +270,17 @@
       "direction": "可信AI / 对抗鲁棒性 / 安全",
       "gradYear": "",
       "statusNote": "国家级青年人才计划入选者，博导",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-08",
+      "contactInfo": {
+        "emails": [],
+        "wechat": [],
+        "phone": [],
+        "cv": [],
+        "social": {},
+        "scannedAt": "2026-04-09",
+        "hasContactKeywords": false,
+        "hasContact": false
+      }
     },
     "Zimo Ji": {
       "name": "Zimo Ji",
@@ -181,7 +308,17 @@
       "direction": "Language Agent / 多智能体 / 社会计算",
       "gradYear": "待确认",
       "statusNote": "CORAL多智能体论文一作",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-08",
+      "contactInfo": {
+        "emails": [],
+        "wechat": [],
+        "phone": [],
+        "cv": [],
+        "social": {},
+        "scannedAt": "2026-04-09",
+        "hasContactKeywords": false,
+        "hasContact": false
+      }
     },
     "Hanrong Zhang": {
       "name": "张涵容 (Hanrong Zhang)",
@@ -195,7 +332,23 @@
       "direction": "LLM Agent / AI Safety / 数据挖掘",
       "gradYear": "~2029",
       "statusNote": "2026暑期Google Student Researcher，浙大硕士",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-08",
+      "contactInfo": {
+        "emails": [],
+        "wechat": [],
+        "phone": [],
+        "cv": [
+          "https://zhang-henry.github.io/assets/pdf/CV_Hanrong_Zhang.pdf"
+        ],
+        "social": {
+          "twitter": "@zhanghr0709",
+          "github": "github.com/Zhang-Henry",
+          "linkedin": "linkedin.com/in/hanrong-zhang-08a693193"
+        },
+        "scannedAt": "2026-04-09",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Wenhao Huang": {
       "name": "Wenhao Huang (黄文昊)",
@@ -251,7 +404,19 @@
       "direction": "Visual Analytics / XAI",
       "gradYear": "待确认",
       "statusNote": "来自4篇企业合作论文（DeepSeek, 月之暗面, OpenAI）",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-08",
+      "contactInfo": {
+        "emails": [
+          "marco.angelini@uniroma1.it"
+        ],
+        "wechat": [],
+        "phone": [],
+        "cv": [],
+        "social": {},
+        "scannedAt": "2026-04-09",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Paul Borrill": {
       "name": "Paul Borrill",
@@ -377,7 +542,24 @@
       "direction": "NLP / Data Analytics",
       "gradYear": "待确认",
       "statusNote": "来自2篇企业合作论文（Anthropic, 阿里通义）",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-08",
+      "contactInfo": {
+        "emails": [
+          "mengyu.chou@gmail.com"
+        ],
+        "wechat": [],
+        "phone": [],
+        "cv": [
+          "http://zmy.io/index-zh.html/files/Mengyu Zhou - Resume ZH.pdf"
+        ],
+        "social": {
+          "github": "github.com/zmy",
+          "linkedin": "linkedin.com/in/zmoony"
+        },
+        "scannedAt": "2026-04-09",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Erchao Zhao": {
       "name": "Erchao Zhao",
@@ -531,7 +713,19 @@
       "direction": "Agent Security / Backdoor / LLM Safety",
       "gradYear": "待确认",
       "statusNote": "来自2篇企业合作论文（DeepSeek, 月之暗面）",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-08",
+      "contactInfo": {
+        "emails": [],
+        "wechat": [],
+        "phone": [],
+        "cv": [],
+        "social": {
+          "github": "github.com/github"
+        },
+        "scannedAt": "2026-04-09",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Yifan Ding": {
       "name": "Yifan Ding",
@@ -713,7 +907,24 @@
       "direction": "Agentic AI / LLM Reasoning / Security",
       "gradYear": "待确认",
       "statusNote": "来自2篇企业合作论文（月之暗面, OpenAI）",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-08",
+      "contactInfo": {
+        "emails": [],
+        "wechat": [
+          "StephenQSqiuqiu"
+        ],
+        "phone": [],
+        "cv": [
+          "https://github.com/StephenQSstarThomas/backup_personal_files/blob/main/qs_cv.pdf"
+        ],
+        "social": {
+          "twitter": "@StephenQS0710",
+          "github": "github.com/StephenQSstarThomas"
+        },
+        "scannedAt": "2026-04-09",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Iulian Lucău": {
       "name": "Iulian Lucău",
@@ -12585,7 +12796,20 @@
       "direction": "NLP / 大语言模型 / 语音",
       "gradYear": "",
       "statusNote": "2024年入职HKUST-GZ，清华博士，AudioKV论文通讯作者",
-      "editedAt": "2026-04-09"
+      "editedAt": "2026-04-09",
+      "contactInfo": {
+        "emails": [],
+        "wechat": [],
+        "phone": [],
+        "cv": [],
+        "social": {
+          "twitter": "@RexYing0923",
+          "linkedin": "linkedin.com/in/rex-ying-92770148"
+        },
+        "scannedAt": "2026-04-09",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Yunfan Gao": {
       "name": "Yunfan Gao",
@@ -12599,7 +12823,20 @@
       "direction": "RAG / LLM / 知识图谱",
       "gradYear": "~2028",
       "statusNote": "RAG Survey高引论文一作(6600+引用)，与阿里通义合作HingeMem",
-      "editedAt": "2026-04-09"
+      "editedAt": "2026-04-09",
+      "contactInfo": {
+        "emails": [
+          "haofen.wang@tongji.edu.cn",
+          "gaoyunfan1602@gmail.com"
+        ],
+        "wechat": [],
+        "phone": [],
+        "cv": [],
+        "social": {},
+        "scannedAt": "2026-04-09",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Haofen Wang": {
       "name": "王昊奋 (Haofen Wang)",
@@ -12613,7 +12850,21 @@
       "direction": "知识图谱 / NLP / RAG",
       "gradYear": "",
       "statusNote": "同济大学设计创意学院长聘教授，知识图谱专家，OpenSPG开源项目",
-      "editedAt": "2026-04-09"
+      "editedAt": "2026-04-09",
+      "contactInfo": {
+        "emails": [
+          "haofen.wang@tongji.edu.cn"
+        ],
+        "wechat": [],
+        "phone": [],
+        "cv": [],
+        "social": {
+          "github": "github.com/OpenSPG"
+        },
+        "scannedAt": "2026-04-09",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Zeliang Zhang": {
       "name": "Zeliang Zhang",
@@ -12627,7 +12878,19 @@
       "direction": "对抗鲁棒性 / 张量学习 / MoE",
       "gradYear": "待确认",
       "statusNote": "本科HUST，曾在Microsoft Research实习，MoE剪枝论文与Bin Yu合作",
-      "editedAt": "2026-04-09"
+      "editedAt": "2026-04-09",
+      "contactInfo": {
+        "emails": [],
+        "wechat": [],
+        "phone": [],
+        "cv": [],
+        "social": {
+          "github": "github.com/ZhangAIPI"
+        },
+        "scannedAt": "2026-04-09",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Nikhil Ghosh": {
       "name": "Nikhil Ghosh",
@@ -12641,7 +12904,20 @@
       "direction": "深度学习理论 / MoE",
       "gradYear": "",
       "statusNote": "2024年Berkeley博士毕业，现Flatiron Institute博后(2024-2027)",
-      "editedAt": "2026-04-09"
+      "editedAt": "2026-04-09",
+      "contactInfo": {
+        "emails": [],
+        "wechat": [],
+        "phone": [],
+        "cv": [],
+        "social": {
+          "github": "github.com/bogoli",
+          "linkedin": "linkedin.com/in/rina-panigrahy-7ba2242"
+        },
+        "scannedAt": "2026-04-09",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Mingchen Zhuge": {
       "name": "Mingchen Zhuge",
@@ -12655,7 +12931,24 @@
       "direction": "多模态Agent / 代码生成 / 递归自改进",
       "gradYear": "~2026",
       "statusNote": "Neural Computers论文一作，5700+引用，METAUTO项目主导者",
-      "editedAt": "2026-04-09"
+      "editedAt": "2026-04-09",
+      "contactInfo": {
+        "emails": [],
+        "wechat": [],
+        "phone": [],
+        "cv": [
+          "https://mp.weixin.qq.com/s/s5teEWlbcfHCVFjy6Nb3AQ",
+          "https://cvpr2023.thecvf.com/Conferences/2023/OutstandingReviewers"
+        ],
+        "social": {
+          "twitter": "@MingchenZhuge",
+          "github": "github.com/mczhuge",
+          "linkedin": "linkedin.com/in/mingchen-zhuge-7599a1272"
+        },
+        "scannedAt": "2026-04-09",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Haozhe Liu": {
       "name": "Haozhe Liu",
@@ -12669,7 +12962,22 @@
       "direction": "多模态生成 / 视频生成 / 强化学习",
       "gradYear": "",
       "statusNote": "KAUST博士毕业，现NVIDIA研究员，与百度合作Neural Computers",
-      "editedAt": "2026-04-09"
+      "editedAt": "2026-04-09",
+      "contactInfo": {
+        "emails": [],
+        "wechat": [],
+        "phone": [],
+        "cv": [
+          "https://haozheliu-st.github.io/static/files/Haozhe_Liu_CV.pdf"
+        ],
+        "social": {
+          "github": "github.com/HaozheLiu-ST",
+          "linkedin": "linkedin.com/in/haozhe-liu-b8150b2b3"
+        },
+        "scannedAt": "2026-04-09",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Ernest K. Ryu": {
       "name": "Ernest K. Ryu",
@@ -12683,7 +12991,22 @@
       "direction": "凸优化 / 深度学习理论",
       "gradYear": "",
       "statusNote": "2020-2024首尔国立大学助理教授，2024起UCLA，数学优化理论专家",
-      "editedAt": "2026-04-09"
+      "editedAt": "2026-04-09",
+      "contactInfo": {
+        "emails": [],
+        "wechat": [],
+        "phone": [],
+        "cv": [
+          "https://ernestryu.com/css/resume.min.css",
+          "https://ernestryu.com/bio.html"
+        ],
+        "social": {
+          "github": "github.com/BlackrockDigital"
+        },
+        "scannedAt": "2026-04-09",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Jiangning Zhang": {
       "name": "张江宁 (Jiangning Zhang)",
@@ -12697,7 +13020,23 @@
       "direction": "视频生成 / Embodied AI / 基础模型",
       "gradYear": "",
       "statusNote": "2026年4月入职浙大百人计划助理教授，现腾讯优图首席研究员，6700+引用",
-      "editedAt": "2026-04-09"
+      "editedAt": "2026-04-09",
+      "contactInfo": {
+        "emails": [],
+        "wechat": [],
+        "phone": [],
+        "cv": [
+          "https://papercopilot.com/paper-list/eccv-paper-list/eccv-2024-paper-list/",
+          "https://papercopilot.com/paper-list/cvpr-paper-list/cvpr-2025-paper-list/",
+          "https://sites.google.com/view/vand-cvpr23/home"
+        ],
+        "social": {
+          "github": "github.com/zhangzjn"
+        },
+        "scannedAt": "2026-04-09",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Teng Hu": {
       "name": "Teng Hu",
@@ -12725,7 +13064,52 @@
       "direction": "计算机视觉 / 计算机图形学",
       "gradYear": "",
       "statusNote": "SJTU计算机科学与工程系副教授，4100+引用",
-      "editedAt": "2026-04-09"
+      "editedAt": "2026-04-09",
+      "contactInfo": {
+        "emails": [
+          "ranyi@sjtu.edu.cn",
+          "foxie_arctic@sjtu.edu.cn"
+        ],
+        "wechat": [],
+        "phone": [],
+        "cv": [
+          "https://openaccess.thecvf.com/content/CVPR2023/papers/Zhou_Instance-Aware_Domain_Generalization_for_Face_Anti-Spoofing_CVPR_2023_paper.pdf",
+          "https://openaccess.thecvf.com/content/CVPR2025/html/Peng_MOS_Modeling_Object-Scene_Associations_in_Generalized_Category_Discovery_CVPR_2025_paper.html",
+          "https://openaccess.thecvf.com/content/CVPR2025/html/Hu_Improving_Autoregressive_Visual_Generation_with_Cluster-Oriented_Token_Prediction_CVPR_2025_paper.html",
+          "https://openaccess.thecvf.com/content/CVPR2025/html/Xia_Rectified_Diffusion_Guidance_for_Conditional_Generation_CVPR_2025_paper.html",
+          "https://openaccess.thecvf.com/content/CVPR2023/papers/Wang_Multimodal_Industrial_Anomaly_Detection_via_Hybrid_Fusion_CVPR_2023_paper.pdf",
+          "https://openaccess.thecvf.com/content/CVPR2022/html/Guo_ISDNet_Integrating_Shallow_and_Deep_Networks_for_Efficient_Ultra-High_Resolution_CVPR_2022_paper.html",
+          "https://openaccess.thecvf.com/content/CVPR2024/html/Hu_SuperSVG_Superpixel-based_Scalable_Vector_Graphics_Synthesis_CVPR_2024_paper.html",
+          "https://openaccess.thecvf.com/content/ICCV2025/html/Lu_Pinco_Position-induced_Consistent_Adapter_for_Diffusion_Transformer_in_Foreground-conditioned_Inpainting_ICCV_2025_paper.html",
+          "https://openaccess.thecvf.com/content/ICCV2025/html/Hong_SuperMat_Physically_Consistent_PBR_Material_Estimation_at_Interactive_Rates_ICCV_2025_paper.html",
+          "https://openaccess.thecvf.com/content/ICCV2023/html/Sun_Contrastive_Pseudo_Learning_for_Open-World_DeepFake_Attribution_ICCV_2023_paper.html",
+          "https://openaccess.thecvf.com/content/CVPR2025/html/Wang_3D_Gaussian_Head_Avatars_with_Expressive_Dynamic_Appearances_by_Compact_CVPR_2025_paper.html",
+          "https://openaccess.thecvf.com/content/ICCV2023/html/Zhang_LiDAR-Camera_Panoptic_Segmentation_via_Geometry-Consistent_and_Semantic-Aware_Alignment_ICCV_2023_paper.html",
+          "http://openaccess.thecvf.com/content_CVPR_2019/html/Yi_APDrawingGAN_Generating_Artistic_Portrait_Drawings_From_Face_Photos_With_Hierarchical_CVPR_2019_paper.html",
+          "https://openaccess.thecvf.com/content/CVPR2024/html/Xia_Towards_More_Accurate_Diffusion_Model_Acceleration_with_A_Timestep_Tuner_CVPR_2024_paper.html",
+          "https://openaccess.thecvf.com/content_CVPR_2020/papers/Yi_Unpaired_Portrait_Drawing_Generation_via_Asymmetric_Cycle_Mapping_CVPR_2020_paper.pdf",
+          "https://openaccess.thecvf.com/content/CVPR2022/html/Tang_LAKe-Net_Topology-Aware_Point_Cloud_Completion_by_Localizing_Aligned_Keypoints_CVPR_2022_paper.html",
+          "https://openaccess.thecvf.com/content/CVPR2024/html/Chen_SDPose_Tokenized_Pose_Estimation_via_Circulation-Guide_Self-Distillation_CVPR_2024_paper.html",
+          "https://openaccess.thecvf.com/content/ICCV2025/html/Yang_SIGMAN_Scaling_3D_Human_Gaussian_Generation_with_Millions_of_Assets_ICCV_2025_paper.html",
+          "https://openaccess.thecvf.com/content_cvpr_2018/papers/Yi_Content-Sensitive_Supervoxels_via_CVPR_2018_paper.pdf",
+          "https://openaccess.thecvf.com/content/ICCV2023/html/Gu_Remembering_Normality_Memory-guided_Knowledge_Distillation_for_Unsupervised_Anomaly_Detection_ICCV_2023_paper.html",
+          "http://openaccess.thecvf.com/content_ICCV_2019/papers/Ye_Fast_Computation_of_Content-Sensitive_Superpixels_and_Supervoxels_Using_Q-Distances_ICCV_2019_paper.pdf",
+          "https://openaccess.thecvf.com/content/ICCV2023/html/Hu_Phasic_Content_Fusing_Diffusion_Model_with_Directional_Distribution_Consistency_for_ICCV_2023_paper.html",
+          "https://openaccess.thecvf.com/content/ICCV2023/html/Tang_Make-It-3D_High-fidelity_3D_Creation_from_A_Single_Image_with_Diffusion_ICCV_2023_paper.html",
+          "https://github.com/DMCV-SJTU/Make-it-3D-Jittor",
+          "https://openaccess.thecvf.com/content/CVPR2025/html/Tang_ATA_Adaptive_Transformation_Agent_for_Text-Guided_Subject-Position_Variable_Background_Inpainting_CVPR_2025_paper.html",
+          "https://openaccess.thecvf.com/content/CVPR2024/html/Fang_Re-thinking_Data_Availability_Attacks_Against_Deep_Neural_Networks_CVPR_2024_paper.html",
+          "https://dmcv.sjtu.edu.cn/people/",
+          "https://openaccess.thecvf.com/content/ICCV2025/html/Huang_MV-Adapter_Multi-View_Consistent_Image_Generation_Made_Easy_ICCV_2025_paper.html",
+          "https://openaccess.thecvf.com/content/CVPR2023/papers/Yi_Towards_Artistic_Image_Aesthetics_Assessment_A_Large-Scale_Dataset_and_a_CVPR_2023_paper.pdf"
+        ],
+        "social": {
+          "github": "github.com/sjtuplayer"
+        },
+        "scannedAt": "2026-04-09",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Alberto Marchisio": {
       "name": "Alberto Marchisio",
@@ -12739,7 +13123,21 @@
       "direction": "机器学习 / 硬件架构 / 神经形态计算",
       "gradYear": "",
       "statusNote": "TU Wien博士，现NYUAD研究组长，Transformer嵌入式推理优化",
-      "editedAt": "2026-04-09"
+      "editedAt": "2026-04-09",
+      "contactInfo": {
+        "emails": [
+          "alberto.marchisio@nyu.edu"
+        ],
+        "wechat": [],
+        "phone": [],
+        "cv": [],
+        "social": {
+          "linkedin": "linkedin.com/in/alberto-marchisio-06b847158"
+        },
+        "scannedAt": "2026-04-09",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Muhammad Shafique": {
       "name": "Muhammad Shafique",
@@ -12753,7 +13151,19 @@
       "direction": "高效AI / 硬件设计 / 神经形态计算",
       "gradYear": "",
       "statusNote": "NYUAD工程部教授，eBRAIN实验室主任，TRAPTI论文通讯作者",
-      "editedAt": "2026-04-09"
+      "editedAt": "2026-04-09",
+      "contactInfo": {
+        "emails": [],
+        "wechat": [],
+        "phone": [],
+        "cv": [],
+        "social": {
+          "linkedin": "linkedin.com/in/mshafiquewahlah"
+        },
+        "scannedAt": "2026-04-09",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Zining Zhu": {
       "name": "Zining Zhu",
@@ -12767,7 +13177,19 @@
       "direction": "NLP / 可解释AI / 可信AI",
       "gradYear": "",
       "statusNote": "多伦多大学博士(Vector Institute)，LLM可解释性与控制，与阿里通义合作",
-      "editedAt": "2026-04-09"
+      "editedAt": "2026-04-09",
+      "contactInfo": {
+        "emails": [],
+        "wechat": [],
+        "phone": [],
+        "cv": [],
+        "social": {
+          "twitter": "@followstevens"
+        },
+        "scannedAt": "2026-04-09",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Xuyang Liu": {
       "name": "刘旭洋 (Xuyang Liu)",
@@ -12781,7 +13203,26 @@
       "direction": "多模态大语言模型 / 高效LLM",
       "gradYear": "待确认",
       "statusNote": "四川大学硕士在读，2026秋入读PolyU博士，AudioKV论文作者，阿里通义实习",
-      "editedAt": "2026-04-09"
+      "editedAt": "2026-04-09",
+      "contactInfo": {
+        "emails": [
+          "liuxuyang@stu.scu.edu.cn"
+        ],
+        "wechat": [],
+        "phone": [],
+        "cv": [
+          "https://www.sciencedirect.com/journal/computer-vision-and-image-understanding",
+          "https://mp.weixin.qq.com/s/rMKnBVWCwl6lq9eRdpjvdw",
+          "https://mp.weixin.qq.com/s/C2BO_lamuQcLQW5JedfvFg"
+        ],
+        "social": {
+          "twitter": "@xuyang_liu16",
+          "github": "github.com/xuyang-liu16"
+        },
+        "scannedAt": "2026-04-09",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     }
   }
 }

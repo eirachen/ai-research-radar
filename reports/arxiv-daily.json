@@ -2,7 +2,7 @@
   "generatedAt": "2026-04-09T09:22:57.506279Z",
   "since": "2026-03-01",
   "totalPapers": 289,
-  "totalUniCollab": 103,
+  "totalUniCollab": 76,
   "totalHKCollab": 1,
   "companies": {
     "bytedance": {
@@ -3734,7 +3734,15 @@
               "label": "RAG/检索",
               "color": "#64748b"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "xiaomi",
+            "alibaba"
+          ],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "company_only"
         },
         {
           "title": "DeepStock: Reinforcement Learning with Policy Regularizations for Inventory Management",
@@ -3776,7 +3784,18 @@
               "label": "RAG/检索",
               "color": "#64748b"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "taotian",
+            "alibaba"
+          ],
+          "pdfUnis": [
+            "DeepReinforcementLearning(DRL)providesageneral-purposemethodologyfortraininginve",
+            "1BoothSchoolofBusiness,UniversityofChicago,Chicago,USA.yaqi.xie@chicagobooth.edu"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "confirmed"
         },
         {
           "title": "Implicit Grading Bias in Large Language Models: How Writing Style Affects Automated Assessment Across Math, Programming, and Essay Tasks",
@@ -3800,7 +3819,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -3818,7 +3837,14 @@
               "label": "数据",
               "color": "#78716c"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "SavitribaiPhulePuneUniversity SavitribaiPhulePuneUniversity Dr.D.Y.PatilSchoolof"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "OpenSeeker: Democratizing Frontier Search Agents by Fully Open-Sourcing Training Data",
@@ -4184,7 +4210,7 @@
         }
       ],
       "count": 76,
-      "uniCollabCount": 12,
+      "uniCollabCount": 11,
       "hkCollabCount": 0
     },
     "deepseek": {
@@ -6804,7 +6830,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -6822,7 +6848,16 @@
               "label": "Infra",
               "color": "#22c55e"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            ",TianyunYang",
+            "1NationalKeyLaboratoryforNovelSoftwareTechnology&SchoolofArtificialIntelligence,",
+            "University,China,2TheChineseUniversityofHongKong,Shenzhen,3ShenzhenResearchInsti"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Is AI Catching Up to Human Expression? Exploring Emotion, Personality, Authorship, and Linguistic Style in English and Arabic with Six Large Language Models",
@@ -6845,7 +6880,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -6863,7 +6898,14 @@
               "label": "数据",
               "color": "#78716c"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "College of Computer and Information Sciences, King Saud University, Riyadh, Saud"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "The illusion of reasoning: step-level evaluation reveals decorative chain-of-thought in frontier language models",
@@ -6888,7 +6930,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -6901,7 +6943,14 @@
               "label": "数据",
               "color": "#78716c"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "1IndianInstituteofInformationTechnologyAllahabad(IIITA)"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Lie to Me: How Faithful Is Chain-of-Thought Reasoning in Reasoning Models?",
@@ -6925,7 +6974,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -6943,7 +6992,14 @@
               "label": "安全",
               "color": "#ef4444"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "1UniversityofNevada,LasVegas,DepartmentofManagement,"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Computational Arbitrage in AI Model Markets",
@@ -6969,7 +7025,7 @@
             "CAS"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -6987,7 +7043,14 @@
               "label": "视觉",
               "color": "#ec4899"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Max Planck Institute for Intelligent Systems, Tübingen"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "GSEM: Graph-based Self-Evolving Memory for Experience Augmented Clinical Reasoning",
@@ -7014,7 +7077,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -7032,7 +7095,14 @@
               "label": "Agent",
               "color": "#f97316"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "HarbinInstituteofTechnology,China"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "TIDE: Token-Informed Depth Execution for Per-Token Early Exit in LLM Inference",
@@ -7056,7 +7126,7 @@
             "HIT"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -7074,11 +7144,16 @@
               "label": "强化学习",
               "color": "#eab308"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "none"
         }
       ],
       "count": 57,
-      "uniCollabCount": 11,
+      "uniCollabCount": 4,
       "hkCollabCount": 1
     },
     "moonshot": {
@@ -7450,7 +7525,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -7463,7 +7538,14 @@
               "label": "数据",
               "color": "#78716c"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "1IndianInstituteofInformationTechnologyAllahabad(IIITA)"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Multi-Method Validation of Large Language Model Medical Translation Across High- and Low-Resource Languages",
@@ -7498,7 +7580,14 @@
               "label": "LLM",
               "color": "#3b82f6"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Multi-Method Validation of Large Language Model Medical Translation"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Using LLM-as-a-Judge/Jury to Advance Scalable, Clinically-Validated Safety Evaluations of Model Responses to Users Demonstrating Psychosis",
@@ -7527,7 +7616,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -7545,7 +7634,15 @@
               "label": "强化学习",
               "color": "#eab308"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "ApartResearch ApartResearch,OdysseanInstitute",
+            "ElizabethStade"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Evaluating 5W3H Structured Prompting for Intent Alignment in Human-AI Interaction",
@@ -7569,7 +7666,7 @@
             "ANU"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -7587,7 +7684,14 @@
               "label": "安全",
               "color": "#ef4444"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "University, Huizhou, China Email: penggangjp@gmail.com"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "VeriGrey: Greybox Agent Validation",
@@ -7614,7 +7718,7 @@
             "NTU"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -7632,7 +7736,17 @@
               "label": "代码",
               "color": "#8b5cf6"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "eventuallyleadtoanagentassuranceframework.",
+            "Wealsoconductreal-worldcasestudieswiththewidelyusedcodingagentGeminiCLI,andthewe",
+            "NationalUniversityofSingapore,",
+            "LLMagents.OurapproachVeriGreyusesthesequenceoftoolsinvokedasafeedbackfunctiontod"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Neuron-Level Emotion Control in Speech-Generative Large Audio-Language Models",
@@ -7675,7 +7789,15 @@
               "label": "Infra",
               "color": "#22c55e"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "1 CenterforLanguageandSpeechProcessing(CLSP),JohnsHopkinsUniversity,USA",
+            "2 GrouponLanguage,Audio&Music(GLAM),ImperialCollegeLondon,UK"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "MetaClaw: Just Talk -- An Agent That Meta-Learns and Evolves in the Wild",
@@ -7896,7 +8018,7 @@
         }
       ],
       "count": 17,
-      "uniCollabCount": 11,
+      "uniCollabCount": 7,
       "hkCollabCount": 0
     },
     "openai": {
@@ -9602,7 +9724,7 @@
             "CAS"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -9620,7 +9742,14 @@
               "label": "LLM",
               "color": "#3b82f6"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "1Xiamen University 2University of Rochester 3The Ohio State University"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "ReqFusion: A Multi-Provider Framework for Automated PEGS Analysis Across Software Domains",
@@ -9647,7 +9776,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -9665,7 +9794,14 @@
               "label": "数据",
               "color": "#78716c"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Constructor University Bremen, 28759 Bremen, Germany"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "How Utilitarian Are OpenAI's Models Really? Replicating and Reinterpreting Pfeffer, Krügel, and Uhl (2025)",
@@ -9688,7 +9824,7 @@
             "MIT"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -9706,7 +9842,14 @@
               "label": "数据",
               "color": "#78716c"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "openai"
+          ],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "company_only"
         },
         {
           "title": "Bitboard version of Tetris AI",
@@ -9736,7 +9879,7 @@
             "NYU"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -9754,7 +9897,14 @@
               "label": "数据",
               "color": "#78716c"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Xingguo Chen, Pingshou Xiong, Zhenyu Luo, Mengfei Hu, Xinwen Li, Yongzhou Lu¨, G"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "The FERMIACC: Agents for Particle Theory",
@@ -9790,7 +9940,15 @@
               "label": "LLM",
               "color": "#3b82f6"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "bKavli Institute for Theoretical Physics, University of California, Santa Barbar",
+            "aDepartment of Physics, University of California, Santa Barbara, CA 93106, USA"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "GraphRAG for Engineering Diagrams: ChatP&ID Enables LLM Interaction with P&IDs",
@@ -9814,7 +9972,7 @@
             "NTU"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -9832,7 +9990,14 @@
               "label": "Agent",
               "color": "#f97316"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "DelftUniversityofTechnology DelftUniversityofTechnology"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "CatRAG: Functor-Guided Structural Debiasing with Retrieval Augmentation for Fair LLMs",
@@ -9878,7 +10043,17 @@
               "label": "安全",
               "color": "#ef4444"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "xiaomi",
+            "meta"
+          ],
+          "pdfUnis": [
+            "Florida International University University of South Florida Florida Internation"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "confirmed"
         },
         {
           "title": "Revenue-Sharing as Infrastructure: A Distributed Business Model for Generative AI Platforms",
@@ -9903,7 +10078,7 @@
             "HIT"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -9911,7 +10086,14 @@
               "label": "Infra",
               "color": "#22c55e"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "UniversityofYaoundéI,Yaoundé,Cameroon"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Depictions of Depression in Generative AI Video Models: A Preliminary Study of OpenAI's Sora 2",
@@ -9959,7 +10141,19 @@
               "label": "语音",
               "color": "#14b8a6"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "openai"
+          ],
+          "pdfUnis": [
+            "Matthew Flathers1, Griffin Smith2, Julian Herpertz1,3, Zhitong Zhou1,4, John",
+            "3Department of Psychiatry and Neuroscience, Charité Berlin University Medicine,",
+            "2Rhode Island School of Design, Providence, RI, USA",
+            "1Division of Digital Psychiatry, Beth Israel Deaconess Medical Center, Boston, M"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "confirmed"
         },
         {
           "title": "A Contextual Help Browser Extension to Assist Digital Illiterate Internet Users",
@@ -9984,7 +10178,7 @@
             "ANU"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -10002,7 +10196,15 @@
               "label": "数据",
               "color": "#78716c"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "South East Technological University",
+            "School of Science and Computing"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "MemX: A Local-First Long-Term Memory System for AI Assistants",
@@ -10469,7 +10671,7 @@
         }
       ],
       "count": 54,
-      "uniCollabCount": 20,
+      "uniCollabCount": 13,
       "hkCollabCount": 0
     },
     "deepmind": {
@@ -10701,7 +10903,7 @@
             "ANU"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -10709,7 +10911,14 @@
               "label": "RAG/检索",
               "color": "#64748b"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Department of Electrical Engineering, Faculty of Engineering, Fukuoka Institute "
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "R2-Dreamer: Redundancy-Reduced World Models without Decoders or Augmentation",
@@ -10739,7 +10948,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -10757,7 +10966,14 @@
               "label": "RAG/检索",
               "color": "#64748b"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "1HondaR&DCo.,Ltd. 2TheUniversityofTokyo 3RIKENAIP"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "ResWM: Residual-Action World Model for Visual RL",
@@ -11019,7 +11235,7 @@
         }
       ],
       "count": 12,
-      "uniCollabCount": 7,
+      "uniCollabCount": 5,
       "hkCollabCount": 0
     },
     "anthropic": {
@@ -12090,7 +12306,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -12108,7 +12324,14 @@
               "label": "数据",
               "color": "#78716c"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Constructor University Bremen, 28759 Bremen, Germany"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "DBAutoDoc: Automated Discovery and Documentation of Undocumented Database Schemas via Statistical Analysis and Iterative LLM Refinement",
@@ -12132,7 +12355,7 @@
             "MIT"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -12145,7 +12368,14 @@
               "label": "数据",
               "color": "#78716c"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "AmithNagarajan ThomasAltman"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Privacy-Preserving Reinforcement Learning from Human Feedback via Decoupled Reward Modeling",
@@ -12169,7 +12399,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -12187,7 +12417,14 @@
               "label": "安全",
               "color": "#ef4444"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Purdue University Purdue University"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "GraphRAG for Engineering Diagrams: ChatP&ID Enables LLM Interaction with P&IDs",
@@ -12211,7 +12448,7 @@
             "NTU"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -12229,7 +12466,14 @@
               "label": "Agent",
               "color": "#f97316"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "DelftUniversityofTechnology DelftUniversityofTechnology"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Revenue-Sharing as Infrastructure: A Distributed Business Model for Generative AI Platforms",
@@ -12254,7 +12498,7 @@
             "HIT"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -12262,7 +12506,14 @@
               "label": "Infra",
               "color": "#22c55e"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "UniversityofYaoundéI,Yaoundé,Cameroon"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Context is all you need: Towards autonomous model-based process design using agentic AI in flowsheet simulations",
@@ -12811,7 +13062,7 @@
         }
       ],
       "count": 39,
-      "uniCollabCount": 20,
+      "uniCollabCount": 15,
       "hkCollabCount": 0
     },
     "baidu": {
@@ -13073,7 +13324,14 @@
               "label": "强化学习",
               "color": "#eab308"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "meta"
+          ],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "company_only"
         },
         {
           "title": "Structure-Aware Multimodal LLM Framework for Trustworthy Near-Field Beam Prediction",
@@ -13843,7 +14101,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -13861,7 +14119,14 @@
               "label": "数据",
               "color": "#78716c"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "kuaishou"
+          ],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "company_only"
         },
         {
           "title": "FlashEvaluator: Expanding Search Space with Parallel Evaluation",
@@ -13965,7 +14230,7 @@
         }
       ],
       "count": 5,
-      "uniCollabCount": 4,
+      "uniCollabCount": 3,
       "hkCollabCount": 0
     },
     "taotian": {
@@ -14064,7 +14329,17 @@
               "label": "Infra",
               "color": "#22c55e"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "taotian",
+            "alibaba"
+          ],
+          "pdfUnis": [
+            "LirenYu ZhixuanZhang DanOu"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "confirmed"
         },
         {
           "title": "AIGQ: An End-to-End Hybrid Generative Architecture for E-commerce Query Recommendation",
@@ -14112,7 +14387,18 @@
               "label": "Infra",
               "color": "#22c55e"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "taotian",
+            "alibaba"
+          ],
+          "pdfUnis": [
+            "UniversityofElectronicScienceand Taobao&TmallGroupofAlibaba Taobao&TmallGroupofA",
+            "JingcaoXu∗† JianyunZou∗ RenkaiYang∗"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "confirmed"
         }
       ],
       "count": 3,

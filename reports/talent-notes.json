@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-09T10:39:08Z",
+  "generatedAt": "2026-04-09T15:54:19.849892Z",
   "notes": {
     "Ye Tian": {
       "name": "田野 (Ye Tian)",
@@ -141,11 +141,11 @@
       "advisor": "Di He (贺笛)",
       "lab": "北京大学智能学院",
       "homepage": "",
-      "scholar": "",
+      "scholar": "https://scholar.google.com/citations?user=wmDqYvUAAAAJ",
       "direction": "LLM / 推理优化 / 数值精度",
       "gradYear": "待确认",
       "statusNote": "In-Place TTT (ICLR 2026 Oral) 一作",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-09"
     },
     "Shengjie Luo": {
       "name": "罗胜杰 (Shengjie Luo)",
@@ -1280,15 +1280,15 @@
       "name": "Kai Hua",
       "university": "MIT",
       "isHK": false,
-      "status": "待确认",
+      "status": "在读博士/研究员",
       "advisor": "待确认",
-      "lab": "",
+      "lab": "北京大学",
       "homepage": "",
-      "scholar": "",
+      "scholar": "https://scholar.google.com/citations?user=bTRtpnIAAAAJ",
       "direction": "LLM / Infra",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（字节Seed）",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-09"
     },
     "Sami Douba": {
       "name": "Sami Douba",
@@ -2694,15 +2694,15 @@
       "name": "Rasul Tutunov",
       "university": "CAS",
       "isHK": false,
-      "status": "待确认",
+      "status": "高级研究员",
       "advisor": "待确认",
-      "lab": "",
+      "lab": "Huawei Noah's Ark Lab",
       "homepage": "",
       "scholar": "",
       "direction": "Agent / 数学推理 / RAG/检索",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（阿里通义）",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-09"
     },
     "Alexandre Max Maraval": {
       "name": "Alexandre Max Maraval",
@@ -7202,7 +7202,7 @@
       "name": "Ida Caspary",
       "university": "CAS",
       "isHK": false,
-      "status": "待确认",
+      "status": "研究者",
       "advisor": "待确认",
       "lab": "",
       "homepage": "",
@@ -7210,7 +7210,7 @@
       "direction": "安全 / LLM / Agent",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（月之暗面）",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-09"
     },
     "Yernat Yestekov": {
       "name": "Yernat Yestekov",
@@ -12285,28 +12285,28 @@
       "university": "ETH",
       "isHK": false,
       "status": "待确认",
-      "advisor": "待确认",
-      "lab": "",
+      "advisor": "Yunjun Gao",
+      "lab": "College of Computer Science, Zhejiang University",
       "homepage": "",
       "scholar": "",
       "direction": "LLM / Infra / 多模态",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（快手）",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-09"
     },
     "Yunjun Gao": {
       "name": "Yunjun Gao",
       "university": "ETH",
       "isHK": false,
-      "status": "待确认",
+      "status": "教授/博导",
       "advisor": "待确认",
-      "lab": "",
-      "homepage": "",
-      "scholar": "",
+      "lab": "College of Computer Science, Zhejiang University",
+      "homepage": "http://dbl.zju.edu.cn/~yjgao/index.html",
+      "scholar": "https://scholar.google.com/citations?user=Ac_6kDwAAAAJ",
       "direction": "LLM / Infra / 多模态",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（快手）",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-09"
     },
     "Yi Zhang": {
       "name": "Yi Zhang",
@@ -12521,16 +12521,16 @@
     "Yadong Niu": {
       "name": "Yadong Niu",
       "university": "CAS",
-      "isHK": false,
+      "isHK": true,
       "status": "待确认",
       "advisor": "待确认",
-      "lab": "",
+      "lab": "CUHK",
       "homepage": "",
       "scholar": "",
       "direction": "语音 / LLM / Infra",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（小米）",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-09"
     },
     "Tianzi Wang": {
       "name": "Tianzi Wang",
@@ -13223,6 +13223,48 @@
         "hasContactKeywords": true,
         "hasContact": true
       }
+    },
+    "Branislav K. Nikolić": {
+      "name": "Branislav K. Nikolić",
+      "university": "University of Delaware",
+      "isHK": false,
+      "status": "教授",
+      "advisor": "",
+      "lab": "Department of Physics and Astronomy, University of Delaware",
+      "homepage": "",
+      "scholar": "",
+      "direction": "凝聚态物理 / 计算物理",
+      "gradYear": "",
+      "statusNote": "FermiLink论文合作者，University of Delaware物理系教授",
+      "editedAt": "2026-04-09"
+    },
+    "Tao E. Li": {
+      "name": "Tao E. Li",
+      "university": "University of Delaware / PNNL",
+      "isHK": false,
+      "status": "研究员/通讯作者",
+      "advisor": "",
+      "lab": "Pacific Northwest National Laboratory / University of Delaware",
+      "homepage": "",
+      "scholar": "",
+      "direction": "计算化学 / AI for Science",
+      "gradYear": "",
+      "statusNote": "FermiLink通讯作者，PNNL+University of Delaware，与OpenAI合作",
+      "editedAt": "2026-04-09"
+    },
+    "Wenyu Liu": {
+      "name": "Wenyu Liu",
+      "university": "华中科技大学",
+      "isHK": false,
+      "status": "教授/博导",
+      "advisor": "",
+      "lab": "华中科技大学电信学院",
+      "homepage": "",
+      "scholar": "",
+      "direction": "计算机视觉 / 目标检测",
+      "gradYear": "",
+      "statusNote": "UniDriveVLA论文通讯作者之一，HUST教授，与小米EV合作自动驾驶",
+      "editedAt": "2026-04-09"
     }
   }
 }

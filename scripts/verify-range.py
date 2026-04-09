@@ -11,8 +11,8 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 ARXIV_JSON = os.path.join(SCRIPT_DIR, '..', 'reports', 'arxiv-daily.json')
 
 # 日期范围参数
-DATE_FROM = '2026-03-25'
-DATE_TO = '2026-03-31'
+DATE_FROM = '2026-03-18'
+DATE_TO = '2026-03-24'
 
 def main():
     with open(ARXIV_JSON, 'r', encoding='utf-8') as f:

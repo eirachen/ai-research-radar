@@ -1820,29 +1820,72 @@ function renderTalentNoteHTML(notes, hasHK) {
 // 跳转到人才库并直接展开指定人才的详情
 function goToTalent(key) {
   navigateTo('talent');
+  // 找到这个人在哪个分组、第几页
+  var allTalents = getTalentsForTable();
+  var studentList = allTalents.filter(function(t) { return getTalentGroup(t) === 'student'; });
+  var proList = allTalents.filter(function(t) { return getTalentGroup(t) === 'professional'; });
+  var unknownList = allTalents.filter(function(t) { return getTalentGroup(t) === 'unknown'; });
+
+  var targetGroup = '';
+  var targetPage = 1;
+  var lists = { student: studentList, pro: proList, unknown: unknownList };
+  for (var g in lists) {
+    var list = lists[g];
+    for (var i = 0; i < list.length; i++) {
+      if (list[i].key === key) {
+        targetGroup = g;
+        targetPage = Math.floor(i / TALENT_PAGE_SIZE) + 1;
+        break;
+      }
+    }
+    if (targetGroup) break;
+  }
+
+  if (!targetGroup) return; // 找不到
+
+  // 切到对应页码并重新渲染
+  talentPage[targetGroup] = targetPage;
+  renderTalent();
+
   setTimeout(function() {
-    // 先展开所有折叠的分组（学生/教授/未确认）
-    ['proSection', 'unknownSection'].forEach(function(sid) {
-      var sec = document.getElementById(sid);
-      if (sec && sec.style.display === 'none') sec.style.display = 'block';
-    });
-    // 找到目标行的 ID
+    // 展开折叠的分组
+    if (targetGroup === 'pro') {
+      var sec = document.getElementById('proSection');
+      if (sec) sec.style.display = 'block';
+    } else if (targetGroup === 'unknown') {
+      var sec = document.getElementById('unknownSection');
+      if (sec) sec.style.display = 'block';
+    }
+
+    // 找到目标行并展开
     var rowId = 'trow_' + key.replace(/[^a-zA-Z0-9]/g, '_');
+    var nameId = 'tname_' + key.replace(/[^a-zA-Z0-9]/g, '_');
     var el = document.getElementById(rowId);
     if (el) {
-      // 收起其他已展开的
+      // 收起其他
       document.querySelectorAll('[id^="trow_"]').forEach(function(d) {
         if (d.id !== rowId) d.style.display = 'none';
       });
+      document.querySelectorAll('[id^="tname_"]').forEach(function(n) {
+        n.style.background = '';
+        var link = n.querySelector('.talent-link');
+        if (link) link.style.color = '';
+      });
       // 展开目标
       el.style.display = 'block';
-      // 滚动到可见位置
+      // 高亮名字
+      var nameEl = document.getElementById(nameId);
+      if (nameEl) {
+        nameEl.style.background = 'rgba(59,130,246,0.15)';
+        nameEl.style.borderRadius = '4px';
+        nameEl.style.padding = '0.05rem 0.3rem';
+        var link = nameEl.querySelector('.talent-link');
+        if (link) link.style.color = '#60a5fa';
+      }
+      // 滚动到可见
       el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      // 高亮闪烁
-      el.style.background = 'rgba(59,130,246,0.15)';
-      setTimeout(function() { el.style.background = ''; }, 2000);
     }
-  }, 200);
+  }, 300);
 }
 
 async function loadArxiv() {

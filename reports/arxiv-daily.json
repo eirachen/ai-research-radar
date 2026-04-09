@@ -2,7 +2,7 @@
   "generatedAt": "2026-04-09T09:22:57.506279Z",
   "since": "2026-03-01",
   "totalPapers": 289,
-  "totalUniCollab": 49,
+  "totalUniCollab": 35,
   "totalHKCollab": 1,
   "companies": {
     "bytedance": {
@@ -4090,7 +4090,7 @@
             "HIT"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -4108,7 +4108,14 @@
               "label": "Infra",
               "color": "#22c55e"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "alibaba"
+          ],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "company_only"
         },
         {
           "title": "AgentIR: Reasoning-Aware Retrieval for Deep Research Agents",
@@ -4135,7 +4142,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -4153,7 +4160,14 @@
               "label": "Agent",
               "color": "#f97316"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "1UniversityofWaterloo, 2UniversityofQueensland, 3CarnegieMellonUniversity"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "The Ghost in the Datacenter: Link Flapping, Topology Knowledge Failures, and the FITO Category Mistake",
@@ -4176,7 +4190,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -4189,7 +4203,12 @@
               "label": "Infra",
               "color": "#22c55e"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "none"
         },
         {
           "title": "DeepResearch-9K: A Challenging Benchmark Dataset of Deep-Research Agent",
@@ -4235,11 +4254,23 @@
               "label": "RAG/检索",
               "color": "#64748b"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "baidu"
+          ],
+          "pdfUnis": [
+            "CityUniversityofHongKong CityUniversityofHongKong BaiduInc.",
+            "TongzhouWu YuhaoWang XinyuMa"
+          ],
+          "pdfHKUnis": [
+            "CityU"
+          ],
+          "collabConfidence": "confirmed"
         }
       ],
       "count": 76,
-      "uniCollabCount": 8,
+      "uniCollabCount": 5,
       "hkCollabCount": 0
     },
     "deepseek": {
@@ -8011,7 +8042,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -8029,7 +8060,12 @@
               "label": "Agent",
               "color": "#f97316"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "none"
         },
         {
           "title": "Think, But Don't Overthink: Reproducing Recursive Language Models",
@@ -8067,11 +8103,21 @@
               "label": "RAG/检索",
               "color": "#64748b"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "darenwang@link.cuhk.edu.hk",
+            "TheChineseUniversityofHongKong"
+          ],
+          "pdfHKUnis": [
+            "CUHK"
+          ],
+          "collabConfidence": "uni_only"
         }
       ],
       "count": 17,
-      "uniCollabCount": 5,
+      "uniCollabCount": 4,
       "hkCollabCount": 0
     },
     "openai": {
@@ -11232,7 +11278,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -11250,7 +11296,14 @@
               "label": "安全",
               "color": "#ef4444"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "1ChalmersUniversityofTechnology"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Contextual Latent World Models for Offline Meta Reinforcement Learning",
@@ -11275,7 +11328,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -11288,7 +11341,12 @@
               "label": "强化学习",
               "color": "#eab308"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "none"
         },
         {
           "title": "Next Embedding Prediction Makes World Models Stronger",
@@ -11330,7 +11388,12 @@
               "label": "Agent",
               "color": "#f97316"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "none"
         },
         {
           "title": "Real-Time Generative Policy via Langevin-Guided Flow Matching for Autonomous Driving",
@@ -11360,7 +11423,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -11378,11 +11441,16 @@
               "label": "强化学习",
               "color": "#eab308"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "none"
         }
       ],
       "count": 12,
-      "uniCollabCount": 3,
+      "uniCollabCount": 0,
       "hkCollabCount": 0
     },
     "anthropic": {
@@ -13125,7 +13193,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -13143,7 +13211,12 @@
               "label": "数据",
               "color": "#78716c"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "none"
         },
         {
           "title": "Agentic AI -- Physicist Collaboration in Experimental Particle Physics: A Proof-of-Concept Measurement with LEP Open Data",
@@ -13187,7 +13260,16 @@
               "label": "RAG/检索",
               "color": "#64748b"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "dLaboratory for Nuclear Science, Massachusetts Institute of Technology, Cambridg",
+            "cIstituto Nazionale di Fisica Nucleare, Bari Division, BA 70126, Italy",
+            "aUniversity of Chicago, Enrico Fermi Institute, 60637 IL, USA"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "The Arrival of AGI? When Expert Personas Exceed Expert Benchmarks",
@@ -13213,7 +13295,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -13231,7 +13313,14 @@
               "label": "RAG/检索",
               "color": "#64748b"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Tarleton State University University of Texas at Tyler"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Implications of the Pessimistic Lower Limit on the Drake Equation",
@@ -13258,7 +13347,7 @@
             "Mila"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -13266,11 +13355,20 @@
               "label": "数学推理",
               "color": "#06b6d4"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Unaffiliated UniversityofAmsterdam",
+            "IMPLICATIONS OF THE PESSIMISTIC LOWER LIMIT ON THE",
+            "TheNetherlands Amsterdam"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         }
       ],
       "count": 39,
-      "uniCollabCount": 7,
+      "uniCollabCount": 4,
       "hkCollabCount": 0
     },
     "baidu": {
@@ -14157,7 +14255,7 @@
             "NTU"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -14175,7 +14273,15 @@
               "label": "数据",
               "color": "#78716c"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "∗Department of Computer Science and Engineering, University of Rajshahi, Rajshah",
+            "†Anan National College of Technology, Tokushima, Japan"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only"
         },
         {
           "title": "Unix Tools and the FITO Category Mistake: Crash Consistency and the Protocol Nature of Persistence",
@@ -14198,7 +14304,7 @@
             "CAS"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -14211,11 +14317,16 @@
               "label": "RAG/检索",
               "color": "#64748b"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "none"
         }
       ],
       "count": 4,
-      "uniCollabCount": 3,
+      "uniCollabCount": 1,
       "hkCollabCount": 0
     },
     "kuaishou": {
@@ -14414,7 +14525,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -14432,7 +14543,12 @@
               "label": "强化学习",
               "color": "#eab308"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "none"
         },
         {
           "title": "SOLAR: SVD-Optimized Lifelong Attention for Recommendation",
@@ -14464,7 +14580,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -14482,11 +14598,16 @@
               "label": "强化学习",
               "color": "#eab308"
             }
-          ]
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "none"
         }
       ],
       "count": 5,
-      "uniCollabCount": 3,
+      "uniCollabCount": 1,
       "hkCollabCount": 0
     },
     "taotian": {

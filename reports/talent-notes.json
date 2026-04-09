@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-09T16:25:28.841273Z",
+  "generatedAt": "2026-04-09T16:37:33.268025Z",
   "notes": {
     "Ye Tian": {
       "name": "田野 (Ye Tian)",
@@ -4877,16 +4877,16 @@
     "Tongzhou Wu": {
       "name": "Tongzhou Wu",
       "university": "NYU",
-      "isHK": false,
-      "status": "待确认",
-      "advisor": "待确认",
-      "lab": "",
+      "isHK": true,
+      "status": "在读博士/研究生",
+      "advisor": "Xiangyu Zhao",
+      "lab": "AML Lab, City University of Hong Kong",
       "homepage": "",
       "scholar": "",
       "direction": "强化学习 / Agent / RAG/检索",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（阿里通义）",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-09"
     },
     "Yuhao Wang": {
       "name": "Yuhao Wang",
@@ -4961,16 +4961,16 @@
     "Xiangyu Zhao": {
       "name": "Xiangyu Zhao",
       "university": "NYU",
-      "isHK": false,
-      "status": "待确认",
+      "isHK": true,
+      "status": "助理教授",
       "advisor": "待确认",
-      "lab": "",
-      "homepage": "",
+      "lab": "AML Lab, City University of Hong Kong",
+      "homepage": "https://aml-cityu.github.io/",
       "scholar": "",
       "direction": "强化学习 / Agent / RAG/检索",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（阿里通义）",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-09"
     },
     "Xiangming Gu": {
       "name": "Xiangming Gu",

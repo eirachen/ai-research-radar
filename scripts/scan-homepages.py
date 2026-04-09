@@ -62,18 +62,13 @@ def fetch_page(url, timeout=15):
 
 def extract_emails(text):
     """提取 email 地址"""
-    # 匹配常见 email 格式，排除图片链接等误匹配
-    pattern = r'[a-zA-Z0-9._%+\-]+\s*(?:@|(?:\[at\])|(?:\(at\))|(?:\{at\}))\s*[a-zA-Z0-9.\-]+\s*(?:\.|(?:\[dot\])|(?:\(dot\))|(?:\{dot\}))\s*[a-zA-Z]{2,}'
-    raw_matches = re.findall(pattern, text, re.IGNORECASE)
-    
-    # 也匹配标准 email
-    standard = re.findall(r'[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}', text)
-    
     emails = set()
+    
+    # 标准 email
+    standard = re.findall(r'[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}', text)
     for m in standard:
         m = m.strip().lower()
-        # 排除常见误匹配
-        if any(x in m for x in ['example.com', 'email.com', '.png', '.jpg', '.gif', '.svg', 'webpack', 'babel']):
+        if any(x in m for x in ['example.com', 'email.com', '.png', '.jpg', '.gif', '.svg', 'webpack', 'babel', 'sentry', 'github']):
             continue
         emails.add(m)
     
@@ -94,16 +89,30 @@ def extract_wechat(text, html):
         matches = re.findall(pat, text, re.IGNORECASE)
         results.extend(matches)
     
-    # HTML 中查找带 wechat 的图片（二维码）
+    # HTML 中查找带 wechat 的图片（二维码）— 多种匹配模式
     qr_patterns = [
         r'<img[^>]*(?:wechat|weixin|微信)[^>]*src=["\']([^"\']+)["\']',
-        r'src=["\']([^"\']*(?:wechat|weixin)[^"\']*)["\']',
+        r'<img[^>]*src=["\']([^"\']*(?:wechat|weixin|微信)[^"\']*)["\']',
+        r'src=["\']([^"\']*(?:wechat|weixin)[^"\']*\.(?:png|jpg|jpeg|gif|webp|svg))["\']',
+        r'href=["\']([^"\']*(?:wechat|weixin)[^"\']*\.(?:png|jpg|jpeg|gif|webp|svg))["\']',
+        r'href=["\']([^"\']*(?:wechat|weixin)[^"\']*)["\']',
     ]
     for pat in qr_patterns:
         matches = re.findall(pat, html, re.IGNORECASE)
         for m in matches:
-            if m not in results:
-                results.append(f"[QR: {m}]")
+            # 排除 CSS/JS 文件
+            if any(m.endswith(ext) for ext in ['.css', '.js', '.min.js', '.min.css']):
+                continue
+            qr_tag = f"[QR: {m}]"
+            if qr_tag not in results and m not in results:
+                results.append(qr_tag)
+    
+    # 也检查文本中是否提到 "wechat" 或 "微信" 附近有图片文件名
+    img_near_wechat = re.findall(r'(?:wechat|weixin|微信)[^"\'<>]{0,30}([\w\-/]+\.(?:png|jpg|jpeg|gif))', text, re.IGNORECASE)
+    for m in img_near_wechat:
+        qr_tag = f"[QR: {m}]"
+        if qr_tag not in results:
+            results.append(qr_tag)
     
     return list(set(results))
 
@@ -232,6 +241,13 @@ def scan_homepage(url):
         'scannedAt': time.strftime('%Y-%m-%d'),
         'hasContactKeywords': has_contact_keywords(text_clean),
     }
+    
+    # 补充：从 mailto 链接提取 email
+    mailto_emails = re.findall(r'mailto:([a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,})', html, re.IGNORECASE)
+    for e in mailto_emails:
+        e = e.lower()
+        if e not in info['emails']:
+            info['emails'].append(e)
     
     # 判断是否找到了有用的联系方式
     has_any = bool(info['emails'] or info['wechat'] or info['phone'] or info['cv'] or info['social'])

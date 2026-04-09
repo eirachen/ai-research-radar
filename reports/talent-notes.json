@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-09T17:17:05.771450Z",
+  "generatedAt": "2026-04-09T17:31:14Z",
   "notes": {
     "Ye Tian": {
       "name": "田野 (Ye Tian)",
@@ -19,8 +19,7 @@
           "tyfeld@gmail.com"
         ],
         "wechat": [
-          "[QR: /assets/img/wechat1.jpeg]",
-          "[QR: /assets/js/wechat.js?9f2dc256d1094f6f7ffeade26e50cb50]"
+          "[QR: /assets/img/wechat1.jpeg]"
         ],
         "phone": [],
         "cv": [],
@@ -60,7 +59,9 @@
       "statusNote": "即将毕业，与字节Seed深度合作",
       "editedAt": "2026-04-08",
       "contactInfo": {
-        "emails": [],
+        "emails": [
+          "hujy369@gmail.com"
+        ],
         "wechat": [],
         "phone": [],
         "cv": [
@@ -117,7 +118,9 @@
       "statusNote": "Anthropic Fellow",
       "editedAt": "2026-04-08",
       "contactInfo": {
-        "emails": [],
+        "emails": [
+          "thomasjiralerspong@gmail.com"
+        ],
         "wechat": [],
         "phone": [],
         "cv": [
@@ -161,8 +164,14 @@
       "statusNote": "2025起在ByteDance Seed工作",
       "editedAt": "2026-04-08",
       "contactInfo": {
-        "emails": [],
-        "wechat": [],
+        "emails": [
+          "luosj@stu.pku.edu.cn"
+        ],
+        "wechat": [
+          "[QR: https://mp.weixin.qq.com/s/K14ASCTPrVpenPo95Ti3LA]",
+          "[QR: images/wechat.png]",
+          "[QR: https://mp.weixin.qq.com/s/EjPEwcvbl0xWAmjeVbPpNg]"
+        ],
         "phone": [],
         "cv": [],
         "social": {
@@ -189,8 +198,12 @@
       "statusNote": "h-index 20, 3.6k+ citations，本科北大",
       "editedAt": "2026-04-08",
       "contactInfo": {
-        "emails": [],
-        "wechat": [],
+        "emails": [
+          "tianle.cai@princeton.edu"
+        ],
+        "wechat": [
+          "[QR: /images/wechat.jpg]"
+        ],
         "phone": [],
         "cv": [
           "https://ctlllll.github.io/cv/"
@@ -219,7 +232,9 @@
       "statusNote": "15,297 citations，前MSRA高级研究员",
       "editedAt": "2026-04-08",
       "contactInfo": {
-        "emails": [],
+        "emails": [
+          "di_he@pku.edu.cn"
+        ],
         "wechat": [],
         "phone": [],
         "cv": [],
@@ -246,7 +261,9 @@
       "statusNote": "Contextual AI CEO, 前HuggingFace研究负责人",
       "editedAt": "2026-04-08",
       "contactInfo": {
-        "emails": [],
+        "emails": [
+          "douwekiela@gmail.com"
+        ],
         "wechat": [],
         "phone": [],
         "cv": [],
@@ -272,13 +289,8 @@
       "statusNote": "国家级青年人才计划入选者，博导",
       "editedAt": "2026-04-08",
       "contactInfo": {
-        "emails": [],
-        "wechat": [],
-        "phone": [],
-        "cv": [],
-        "social": {},
         "scannedAt": "2026-04-09",
-        "hasContactKeywords": false,
+        "error": "页面无法访问",
         "hasContact": false
       }
     },
@@ -334,7 +346,9 @@
       "statusNote": "2026暑期Google Student Researcher，浙大硕士",
       "editedAt": "2026-04-08",
       "contactInfo": {
-        "emails": [],
+        "emails": [
+          "zhanghr0709@gmail.com"
+        ],
         "wechat": [],
         "phone": [],
         "cv": [
@@ -909,7 +923,9 @@
       "statusNote": "来自2篇企业合作论文（月之暗面, OpenAI）",
       "editedAt": "2026-04-08",
       "contactInfo": {
-        "emails": [],
+        "emails": [
+          "stephenqius@gmail.com"
+        ],
         "wechat": [
           "StephenQSqiuqiu"
         ],
@@ -4284,7 +4300,21 @@
       "direction": "强化学习 / RAG/检索",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（阿里通义）",
-      "editedAt": "2026-04-09"
+      "editedAt": "2026-04-09",
+      "contactInfo": {
+        "emails": [
+          "yaqi.xie@chicagobooth.edu"
+        ],
+        "wechat": [],
+        "phone": [],
+        "cv": [
+          "https://xieyaqi188.github.io/Resources/yaqixie_CV.pdf"
+        ],
+        "social": {},
+        "scannedAt": "2026-04-09",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Xinru Hao": {
       "name": "Xinru Hao",
@@ -4970,7 +5000,17 @@
       "direction": "强化学习 / Agent / RAG/检索",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（阿里通义）",
-      "editedAt": "2026-04-09"
+      "editedAt": "2026-04-09",
+      "contactInfo": {
+        "emails": [],
+        "wechat": [],
+        "phone": [],
+        "cv": [],
+        "social": {},
+        "scannedAt": "2026-04-09",
+        "hasContactKeywords": true,
+        "hasContact": false
+      }
     },
     "Xiangming Gu": {
       "name": "Xiangming Gu",
@@ -12306,7 +12346,20 @@
       "direction": "LLM / Infra / 多模态",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（快手）",
-      "editedAt": "2026-04-09"
+      "editedAt": "2026-04-09",
+      "contactInfo": {
+        "emails": [
+          "raygaoyj@gmail.com",
+          "gaoyj@zju.edu.cn"
+        ],
+        "wechat": [],
+        "phone": [],
+        "cv": [],
+        "social": {},
+        "scannedAt": "2026-04-09",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Yi Zhang": {
       "name": "Yi Zhang",
@@ -12826,8 +12879,8 @@
       "editedAt": "2026-04-09",
       "contactInfo": {
         "emails": [
-          "haofen.wang@tongji.edu.cn",
-          "gaoyunfan1602@gmail.com"
+          "gaoyunfan1602@gmail.com",
+          "haofen.wang@tongji.edu.cn"
         ],
         "wechat": [],
         "phone": [],

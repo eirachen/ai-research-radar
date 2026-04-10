@@ -42,16 +42,16 @@ def main():
             added += 1
             print(f'  + NEW: {key}')
         else:
-            # 已存在：只补充服务器上为空的字段
+            # 已存在：用本地的验证数据覆盖服务器（本地是权威来源）
             server_entry = merged[key]
             changed = False
-            for field in ['scholar', 'homepage', 'advisor', 'lab', 'direction', 'statusNote', 'status', 'gradYear']:
-                server_val = server_entry.get(field, '')
+            for field in ['scholar', 'homepage', 'advisor', 'lab', 'direction', 'statusNote', 'status', 'gradYear', 'name']:
                 local_val = local_entry.get(field, '')
-                if (not server_val or server_val == '待确认') and local_val and local_val != '待确认':
+                server_val = server_entry.get(field, '')
+                if local_val and local_val != server_val:
                     server_entry[field] = local_val
                     changed = True
-            # university：如果本地有值且和服务器不同，用本地的覆盖（本地经过验证修正）
+            # university：本地有值且不同就覆盖
             local_uni = local_entry.get('university', '')
             server_uni = server_entry.get('university', '')
             if local_uni and local_uni != server_uni:
@@ -60,10 +60,13 @@ def main():
             # isHK：同步
             if 'isHK' in local_entry:
                 server_entry['isHK'] = local_entry['isHK']
-            # 合并 contactInfo（如果服务器没有）
-            if not server_entry.get('contactInfo') and local_entry.get('contactInfo'):
+            # contactInfo：本地有就覆盖
+            if local_entry.get('contactInfo'):
                 server_entry['contactInfo'] = local_entry['contactInfo']
                 changed = True
+            # editedAt：同步
+            if local_entry.get('editedAt'):
+                server_entry['editedAt'] = local_entry['editedAt']
             if changed:
                 updated += 1
                 print(f'  ~ FILL: {key}')

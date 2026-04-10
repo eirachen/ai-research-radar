@@ -485,10 +485,32 @@ def main():
             print(f"  -> {len(company_papers)} unique, {uni_count} uni-collab, {hk_count} HK-collab")
 
     # Merge with existing data (keep old papers, add new ones)
+    # CRITICAL: preserve PDF verification fields from old data
     if existing_data.get("companies"):
         for company_id, existing_company in existing_data["companies"].items():
             if company_id in all_papers:
-                # Merge: add old papers that aren't in new scan
+                # Build lookup of old papers by arxivId
+                old_papers_map = {p["arxivId"]: p for p in existing_company.get("papers", [])}
+                # For new papers that also exist in old data, preserve PDF verification fields
+                for new_paper in all_papers[company_id]["papers"]:
+                    old_paper = old_papers_map.get(new_paper["arxivId"])
+                    if old_paper:
+                        # Preserve all PDF verification data from old paper
+                        for field in ["pdfVerified", "pdfCompanies", "pdfUnis", "pdfHKUnis", "collabConfidence"]:
+                            if old_paper.get(field) is not None and field in old_paper:
+                                # Only preserve if old data had real verification
+                                if field == "pdfVerified" and old_paper[field]:
+                                    new_paper[field] = old_paper[field]
+                                elif field == "collabConfidence" and old_paper.get("pdfVerified"):
+                                    new_paper[field] = old_paper[field]
+                                elif field not in ("pdfVerified", "collabConfidence") and old_paper.get("pdfVerified"):
+                                    new_paper[field] = old_paper[field]
+                        # Also preserve corrected university fields from fix-unis
+                        if old_paper.get("pdfVerified"):
+                            for field in ["universities", "hkUniversities", "hasUniCollab", "hasHKCollab"]:
+                                if field in old_paper:
+                                    new_paper[field] = old_paper[field]
+                # Add old papers that aren't in new scan
                 new_ids = {p["arxivId"] for p in all_papers[company_id]["papers"]}
                 for old_paper in existing_company.get("papers", []):
                     if old_paper["arxivId"] not in new_ids:

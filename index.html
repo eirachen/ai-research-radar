@@ -108,7 +108,7 @@
   }
 
   .header { transition: none; }
-  .main { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem; }
+  .main { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem 3.5rem; }
   body.sidebar-collapsed .header { }
   body.sidebar-collapsed .main { }
   @media (max-width: 768px) {
@@ -773,20 +773,6 @@
           <button onclick="postBulletin()" style="padding:0.35rem 0.8rem;border:none;border-radius:5px;background:var(--accent);color:#fff;cursor:pointer;font-size:0.75rem;font-weight:600;flex-shrink:0">发送</button>
         </div>
       </div>
-
-      <!-- 留言区 -->
-      <div id="guestbookSection" style="display:none;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:0.8rem 1rem">
-        <div style="display:flex;align-items:center;gap:0.4rem;margin-bottom:0.5rem">
-          <span style="font-size:0.9rem">💬</span>
-          <span style="font-size:0.78rem;font-weight:600;color:var(--text)">留言板</span>
-          <span id="guestbookCount" style="font-size:0.65rem;color:var(--text2);margin-left:0.3rem"></span>
-          <span style="flex:1"></span>
-          <button onclick="guestbookPrev()" id="gbPrev" style="font-size:0.65rem;padding:0.15rem 0.35rem;border:1px solid var(--border);border-radius:4px;background:var(--surface2);color:var(--text2);cursor:pointer">◀</button>
-          <span id="gbPageInfo" style="font-size:0.65rem;color:var(--text2)"></span>
-          <button onclick="guestbookNext()" id="gbNext" style="font-size:0.65rem;padding:0.15rem 0.35rem;border:1px solid var(--border);border-radius:4px;background:var(--surface2);color:var(--text2);cursor:pointer">▶</button>
-        </div>
-        <div id="guestbookList"></div>
-      </div>
     </div>
 
     <div class="section-head"><h2><span>🧭</span> 情报中心</h2></div>
@@ -1097,6 +1083,29 @@
   <div class="detail-view" id="detailView">
     <button class="back-btn" id="detailBackBtn" onclick="backToDashboard()">← 返回</button>
     <div class="detail-content" id="detailContent"></div>
+  </div>
+</div>
+
+<!-- ═══ 页面底部留言板（固定底栏） ═══ -->
+<div id="guestbookBar" style="position:fixed;bottom:0;left:0;right:0;z-index:900;background:var(--surface);border-top:1px solid var(--border);transition:all 0.3s">
+  <!-- 收起状态：只显示一行提示 -->
+  <div id="gbBarHeader" onclick="toggleGuestbook()" style="display:flex;align-items:center;gap:0.5rem;padding:0.5rem 1.2rem;cursor:pointer">
+    <span style="font-size:0.85rem">💬</span>
+    <span style="font-size:0.78rem;font-weight:600;color:var(--text)">留言板</span>
+    <span id="guestbookCount" style="font-size:0.65rem;color:var(--text2)"></span>
+    <span id="gbNewBadge" style="display:none;font-size:0.58rem;padding:0.05rem 0.3rem;border-radius:8px;background:rgba(239,68,68,0.2);color:#f87171;font-weight:600">新留言</span>
+    <span style="flex:1"></span>
+    <span id="gbToggleIcon" style="font-size:0.7rem;color:var(--text2);transition:transform 0.3s">▲</span>
+  </div>
+  <!-- 展开状态：留言列表 -->
+  <div id="gbExpanded" style="display:none;max-height:260px;overflow:hidden;border-top:1px solid var(--border)">
+    <div style="display:flex;align-items:center;gap:0.4rem;padding:0.4rem 1.2rem;background:var(--surface2)">
+      <span style="flex:1"></span>
+      <button onclick="guestbookPrev()" id="gbPrev" style="font-size:0.62rem;padding:0.12rem 0.3rem;border:1px solid var(--border);border-radius:4px;background:var(--surface);color:var(--text2);cursor:pointer">◀</button>
+      <span id="gbPageInfo" style="font-size:0.62rem;color:var(--text2)"></span>
+      <button onclick="guestbookNext()" id="gbNext" style="font-size:0.62rem;padding:0.12rem 0.3rem;border:1px solid var(--border);border-radius:4px;background:var(--surface);color:var(--text2);cursor:pointer">▶</button>
+    </div>
+    <div id="guestbookList" style="padding:0.3rem 1.2rem 0.5rem"></div>
   </div>
 </div>
 
@@ -2833,9 +2842,22 @@ function renderBulletins() {
 
 function renderGuestbook() {
   var guestbook = getGuestbook();
-  var section = document.getElementById('guestbookSection');
-  if (!guestbook.length) { section.style.display = 'none'; return; }
-  section.style.display = 'block';
+  var bar = document.getElementById('guestbookBar');
+  if (!bar) return;
+
+  // 更新计数
+  var countEl = document.getElementById('guestbookCount');
+  if (countEl) countEl.textContent = guestbook.length ? guestbook.length + ' 条' : '';
+
+  // 新留言提示（有留言且未展开时显示）
+  var badge = document.getElementById('gbNewBadge');
+  var expanded = document.getElementById('gbExpanded');
+  if (badge) badge.style.display = (guestbook.length > 0 && expanded.style.display === 'none') ? 'inline' : 'none';
+
+  // 无留言时隐藏整个栏
+  bar.style.display = guestbook.length > 0 ? '' : 'none';
+
+  if (!guestbook.length) return;
 
   var totalPages = Math.ceil(guestbook.length / GB_PAGE_SIZE);
   if (gbCurrentPage >= totalPages) gbCurrentPage = totalPages - 1;
@@ -2845,20 +2867,38 @@ function renderGuestbook() {
   var pageItems = guestbook.slice(start, start + GB_PAGE_SIZE);
 
   var html = '';
-  pageItems.forEach(function(g) {
-    html += '<div style="padding:0.3rem 0;border-bottom:1px solid rgba(255,255,255,0.04);display:flex;gap:0.4rem;align-items:baseline">';
-    html += '<span style="font-size:0.62rem;color:var(--text2);flex-shrink:0">' + g.time + '</span>';
-    html += '<span style="font-size:0.72rem;font-weight:600;color:var(--accent2);flex-shrink:0">' + (g.name||'匿名').replace(/</g,'&lt;') + '</span>';
-    html += '<span style="font-size:0.75rem;color:var(--text)">' + g.content.replace(/</g,'&lt;') + '</span>';
+  pageItems.forEach(function(g, i) {
+    var globalIdx = start + i;
+    html += '<div style="padding:0.25rem 0;border-bottom:1px solid rgba(255,255,255,0.04);display:flex;gap:0.4rem;align-items:center">';
+    html += '<span style="font-size:0.6rem;color:var(--text2);flex-shrink:0">' + g.time + '</span>';
+    html += '<span style="font-size:0.7rem;font-weight:600;color:var(--accent2);flex-shrink:0">' + (g.name||'匿名').replace(/</g,'&lt;') + '</span>';
+    html += '<span style="font-size:0.73rem;color:var(--text);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">' + g.content.replace(/</g,'&lt;') + '</span>';
+    html += '<button onclick="event.stopPropagation();deleteGuestbookMsg(' + globalIdx + ')" style="font-size:0.55rem;padding:0.1rem 0.2rem;border:1px solid rgba(239,68,68,0.2);border-radius:3px;background:transparent;color:#f8717180;cursor:pointer;flex-shrink:0" title="删除">✕</button>';
     html += '</div>';
   });
   document.getElementById('guestbookList').innerHTML = html;
-  document.getElementById('guestbookCount').textContent = guestbook.length + ' 条留言';
   document.getElementById('gbPageInfo').textContent = (gbCurrentPage + 1) + '/' + totalPages;
-  document.getElementById('gbPrev').disabled = gbCurrentPage <= 0;
-  document.getElementById('gbNext').disabled = gbCurrentPage >= totalPages - 1;
   document.getElementById('gbPrev').style.opacity = gbCurrentPage <= 0 ? '0.3' : '1';
   document.getElementById('gbNext').style.opacity = gbCurrentPage >= totalPages - 1 ? '0.3' : '1';
+}
+
+function toggleGuestbook() {
+  var expanded = document.getElementById('gbExpanded');
+  var icon = document.getElementById('gbToggleIcon');
+  var badge = document.getElementById('gbNewBadge');
+  var isOpen = expanded.style.display !== 'none';
+  expanded.style.display = isOpen ? 'none' : 'block';
+  icon.textContent = isOpen ? '▲' : '▼';
+  if (badge) badge.style.display = 'none';
+  if (!isOpen) renderGuestbook();
+}
+
+function deleteGuestbookMsg(idx) {
+  if (!confirm('删除这条留言？')) return;
+  var guestbook = getGuestbook();
+  guestbook.splice(idx, 1);
+  saveGuestbook(guestbook);
+  renderGuestbook();
 }
 
 function guestbookPrev() { if (gbCurrentPage > 0) { gbCurrentPage--; renderGuestbook(); } }

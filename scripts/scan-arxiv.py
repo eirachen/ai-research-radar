@@ -265,7 +265,7 @@ COMPANY_QUERIES = {
     },
     "bytedance": {
         "name": "字节Seed", "icon": "🌱",
-        "keywords": ['"ByteDance"', '"Seed Team"', '"Doubao"']
+        "keywords": ['"ByteDance"', '"Seed Team"', '"Doubao"', '"Seeduplex"', '"Seed-TTS"']
     },
     "alibaba": {
         "name": "阿里通义", "icon": "☁️",

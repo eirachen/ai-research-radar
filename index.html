@@ -1200,7 +1200,7 @@ function getTalentsForTable() {
 
 const RADARS = [
   { company: '华为诺亚', companyId: 'huawei', direction: '模型压缩 / 因果推理 / 扩散语言模型', trend: '端侧部署 + Agent 加速', url: 'https://www.noahlab.com.hk/' },
-  { company: '字节Seed', companyId: 'bytedance', direction: '数学推理 / 多模态生成 / 基础模型', trend: '全模态 + Agentic 能力', url: 'https://seed.bytedance.com/zh/blog' },
+  { company: '字节Seed', companyId: 'bytedance', direction: '数学推理 / 多模态生成 / 基础模型 / 🔥 Seeduplex全双工语音', trend: '全模态 + 语音交互突破', url: 'https://seed.bytedance.com/zh/blog' },
   { company: '阿里Qwen', companyId: 'alibaba', direction: 'Agent编码 / 百万上下文 / 多模态', trend: '强调 Agent 落地', url: 'https://qwenlm.github.io/' },
   { company: 'DeepSeek', companyId: 'deepseek', direction: '训练基础设施 / 开源生态', trend: '开源基建战略', url: 'https://github.com/deepseek-ai' },
   { company: '月之暗面', companyId: 'moonshot', direction: '多智能体 / 推理模型', trend: '从单Agent到Agent组织', url: 'https://kimi.com/blog' },
@@ -2975,6 +2975,24 @@ var DOMAIN_CONFIG = {
   'speech':     { id: 'Speech',      label: '语音 (Speech)',       icon: '🎙️', color: '#f59e0b', badgeId: 'domainBadgeSpeech' },
 };
 
+// 各领域重点关注网站/模型
+var DOMAIN_FOCUS = {
+  'speech': [
+    {
+      icon: '🎙️', name: 'Seeduplex — 字节Seed全双工语音大模型',
+      url: 'https://seed.bytedance.com/seeduplex',
+      desc: '2026.04.09 发布。基于"边听边说"全新框架，实现原生全双工语音交互。已在豆包App全量上线。核心突破：抗干扰能力(误打断率降50%)、动态停顿技术(延迟降250ms)、推测性采样加速。',
+      papers: [
+        { name: 'Seed-TTS (2024)', url: 'https://arxiv.org/abs/2406.02430' },
+      ],
+      note: '⚠️ 重点关注校企合作动态——Seeduplex 尚未发布对应 arXiv 论文，Seed-TTS 是同团队前作。后续论文发布后需立刻纳入监控。'
+    }
+  ],
+  'llm': [],
+  'multimodal': [],
+  'infra': [],
+};
+
 // 领域校企合作数据存储在 localStorage
 function getDomainCollabs(domainKey) {
   try { return JSON.parse(localStorage.getItem('domain-collabs-' + domainKey) || '[]'); } catch(e) { return []; }
@@ -3019,6 +3037,30 @@ function renderDomainPage(domainKey) {
   // 标题
   html += '<div class="section-head"><h2><span>' + cfg.icon + '</span> ' + cfg.label + '</h2>' +
     '<span style="font-size:0.72rem;color:var(--text2)">' + papers.length + ' 篇论文 · ' + confirmedPapers.length + ' 篇校企合作</span></div>';
+
+  // ═══ 重点关注（领域专属） ═══
+  var focusSites = DOMAIN_FOCUS[domainKey] || [];
+  if (focusSites.length) {
+    html += '<div style="margin-top:1rem;margin-bottom:1.5rem">';
+    html += '<h3 style="font-size:0.95rem;font-weight:700;color:var(--text);margin-bottom:0.6rem">⭐ 重点关注</h3>';
+    focusSites.forEach(function(site) {
+      html += '<div style="display:flex;align-items:flex-start;gap:0.8rem;padding:0.7rem 0.9rem;margin-bottom:0.4rem;background:linear-gradient(135deg,rgba(245,158,11,0.06),rgba(59,130,246,0.06));border:1px solid rgba(245,158,11,0.2);border-radius:10px">';
+      html += '<div style="font-size:1.5rem;flex-shrink:0">' + site.icon + '</div>';
+      html += '<div style="flex:1;min-width:0">';
+      html += '<div style="font-size:0.85rem;font-weight:700;color:var(--text)">' + site.name + ' <a href="' + site.url + '" target="_blank" style="font-size:0.65rem;color:var(--accent2);text-decoration:none;font-weight:400">↗ 官网</a></div>';
+      html += '<div style="font-size:0.7rem;color:var(--text2);margin-top:0.15rem;line-height:1.5">' + site.desc + '</div>';
+      if (site.papers) {
+        html += '<div style="margin-top:0.3rem;display:flex;flex-wrap:wrap;gap:0.3rem">';
+        site.papers.forEach(function(p) {
+          html += '<a href="' + p.url + '" target="_blank" style="font-size:0.62rem;padding:0.12rem 0.4rem;border-radius:4px;background:rgba(59,130,246,0.1);color:var(--accent2);text-decoration:none">📄 ' + p.name + '</a>';
+        });
+        html += '</div>';
+      }
+      if (site.note) html += '<div style="font-size:0.62rem;color:var(--green);margin-top:0.2rem">💡 ' + site.note + '</div>';
+      html += '</div></div>';
+    });
+    html += '</div>';
+  }
 
   // ═══ 模块1: 校企合作监控 ═══
   html += '<div style="margin-top:1rem;margin-bottom:2rem">';

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-09T17:31:14Z",
+  "generatedAt": "2026-04-10T11:14:10Z",
   "notes": {
     "Ye Tian": {
       "name": "田野 (Ye Tian)",
@@ -26,7 +26,7 @@
         "social": {
           "github": "github.com/tyfeld"
         },
-        "scannedAt": "2026-04-09",
+        "scannedAt": "2026-04-10",
         "hasContactKeywords": true,
         "hasContact": true
       }
@@ -70,7 +70,7 @@
         "social": {
           "github": "github.com/JamesHujy"
         },
-        "scannedAt": "2026-04-09",
+        "scannedAt": "2026-04-10",
         "hasContactKeywords": true,
         "hasContact": true
       }
@@ -99,7 +99,7 @@
           "twitter": "@tyleryzhu",
           "github": "github.com/tyleryzhu"
         },
-        "scannedAt": "2026-04-09",
+        "scannedAt": "2026-04-10",
         "hasContactKeywords": true,
         "hasContact": true
       }
@@ -124,14 +124,14 @@
         "wechat": [],
         "phone": [],
         "cv": [
-          "https://superkaiba.github.io/assets/docs/cv.pdf",
-          "https://superkaiba.github.io/assets/docs/resume.pdf"
+          "https://superkaiba.github.io/assets/docs/resume.pdf",
+          "https://superkaiba.github.io/assets/docs/cv.pdf"
         ],
         "social": {
           "github": "github.com/superkaiba",
           "linkedin": "linkedin.com/in/thomas-jiralerspong"
         },
-        "scannedAt": "2026-04-09",
+        "scannedAt": "2026-04-10",
         "hasContactKeywords": true,
         "hasContact": true
       }
@@ -169,8 +169,8 @@
         ],
         "wechat": [
           "[QR: https://mp.weixin.qq.com/s/K14ASCTPrVpenPo95Ti3LA]",
-          "[QR: images/wechat.png]",
-          "[QR: https://mp.weixin.qq.com/s/EjPEwcvbl0xWAmjeVbPpNg]"
+          "[QR: https://mp.weixin.qq.com/s/EjPEwcvbl0xWAmjeVbPpNg]",
+          "[QR: images/wechat.png]"
         ],
         "phone": [],
         "cv": [],
@@ -179,7 +179,7 @@
           "github": "github.com/lsj2408",
           "linkedin": "linkedin.com/in/shengjie-luo-ba6137193"
         },
-        "scannedAt": "2026-04-09",
+        "scannedAt": "2026-04-10",
         "hasContactKeywords": true,
         "hasContact": true
       }
@@ -213,7 +213,7 @@
           "github": "github.com/ctlllll",
           "linkedin": "linkedin.com/in/tianle-cai-bb7135138"
         },
-        "scannedAt": "2026-04-09",
+        "scannedAt": "2026-04-10",
         "hasContactKeywords": true,
         "hasContact": true
       }
@@ -242,7 +242,7 @@
           "github": "github.com/DiHe-PKU",
           "linkedin": "linkedin.com/in/di-he-8a5633ab"
         },
-        "scannedAt": "2026-04-09",
+        "scannedAt": "2026-04-10",
         "hasContactKeywords": true,
         "hasContact": true
       }
@@ -270,7 +270,7 @@
         "social": {
           "linkedin": "linkedin.com/in/douwekiela"
         },
-        "scannedAt": "2026-04-09",
+        "scannedAt": "2026-04-10",
         "hasContactKeywords": true,
         "hasContact": true
       }
@@ -289,8 +289,13 @@
       "statusNote": "国家级青年人才计划入选者，博导",
       "editedAt": "2026-04-08",
       "contactInfo": {
-        "scannedAt": "2026-04-09",
-        "error": "页面无法访问",
+        "emails": [],
+        "wechat": [],
+        "phone": [],
+        "cv": [],
+        "social": {},
+        "scannedAt": "2026-04-10",
+        "hasContactKeywords": false,
         "hasContact": false
       }
     },
@@ -327,7 +332,7 @@
         "phone": [],
         "cv": [],
         "social": {},
-        "scannedAt": "2026-04-09",
+        "scannedAt": "2026-04-10",
         "hasContactKeywords": false,
         "hasContact": false
       }
@@ -359,7 +364,7 @@
           "github": "github.com/Zhang-Henry",
           "linkedin": "linkedin.com/in/hanrong-zhang-08a693193"
         },
-        "scannedAt": "2026-04-09",
+        "scannedAt": "2026-04-10",
         "hasContactKeywords": true,
         "hasContact": true
       }
@@ -427,7 +432,7 @@
         "phone": [],
         "cv": [],
         "social": {},
-        "scannedAt": "2026-04-09",
+        "scannedAt": "2026-04-10",
         "hasContactKeywords": true,
         "hasContact": true
       }
@@ -570,7 +575,7 @@
           "github": "github.com/zmy",
           "linkedin": "linkedin.com/in/zmoony"
         },
-        "scannedAt": "2026-04-09",
+        "scannedAt": "2026-04-10",
         "hasContactKeywords": true,
         "hasContact": true
       }
@@ -736,7 +741,7 @@
         "social": {
           "github": "github.com/github"
         },
-        "scannedAt": "2026-04-09",
+        "scannedAt": "2026-04-10",
         "hasContactKeywords": true,
         "hasContact": true
       }
@@ -937,7 +942,7 @@
           "twitter": "@StephenQS0710",
           "github": "github.com/StephenQSstarThomas"
         },
-        "scannedAt": "2026-04-09",
+        "scannedAt": "2026-04-10",
         "hasContactKeywords": true,
         "hasContact": true
       }
@@ -3292,7 +3297,22 @@
       "direction": "多模态LLM / 机器学习",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（阿里通义）",
-      "editedAt": "2026-04-10"
+      "editedAt": "2026-04-10",
+      "contactInfo": {
+        "emails": [
+          "kaituofeng@gmail.com"
+        ],
+        "wechat": [],
+        "phone": [],
+        "cv": [],
+        "social": {
+          "twitter": "@KaituoFeng",
+          "github": "github.com/mmistakes"
+        },
+        "scannedAt": "2026-04-10",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Manyuan Zhang": {
       "name": "Manyuan Zhang",
@@ -3390,7 +3410,32 @@
       "direction": "Agent / 强化学习 / 数据",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（阿里通义）",
-      "editedAt": "2026-04-10"
+      "editedAt": "2026-04-10",
+      "contactInfo": {
+        "emails": [
+          "zd1423606603@gmail.com"
+        ],
+        "wechat": [
+          "[QR: https://mp.weixin.qq.com/s/qKxKXCn_DkqZRkQDqiZ8_g]",
+          "[QR: https://mp.weixin.qq.com/s/rA283D8ntr1DBiPnzOnVFA]",
+          "[QR: images/wechat_QRCode.jpg]",
+          "zd1423606603",
+          "[QR: https://mp.weixin.qq.com/s/8_k-Clf9JK9RRpQQbZ6pcQ]",
+          "[QR: https://mp.weixin.qq.com/s/cfkLqkwZdQeo9wH2R3ZNAA]",
+          "[QR: https://mp.weixin.qq.com/s/WpJtXOgNV6QEYKaPUH4FAQ]",
+          "[QR: https://mp.weixin.qq.com/s/IzzNLPI9L2tSRvOXniOJ2Q]",
+          "[QR: https://mp.weixin.qq.com/s/9BPatTiv4e5n_y7lfYCssQ]"
+        ],
+        "phone": [],
+        "cv": [],
+        "social": {
+          "twitter": "@Mike_Dian_Zheng",
+          "github": "github.com/zhengdian1"
+        },
+        "scannedAt": "2026-04-10",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Iman Sharifi": {
       "name": "Iman Sharifi",
@@ -3628,7 +3673,12 @@
       "direction": "网络经济 / 博弈论 / 优化",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（阿里通义）",
-      "editedAt": "2026-04-10"
+      "editedAt": "2026-04-10",
+      "contactInfo": {
+        "scannedAt": "2026-04-10",
+        "error": "页面无法访问",
+        "hasContact": false
+      }
     },
     "Aymen Lassoued": {
       "name": "Aymen Lassoued",
@@ -4311,7 +4361,7 @@
           "https://xieyaqi188.github.io/Resources/yaqixie_CV.pdf"
         ],
         "social": {},
-        "scannedAt": "2026-04-09",
+        "scannedAt": "2026-04-10",
         "hasContactKeywords": true,
         "hasContact": true
       }
@@ -5007,7 +5057,7 @@
         "phone": [],
         "cv": [],
         "social": {},
-        "scannedAt": "2026-04-09",
+        "scannedAt": "2026-04-10",
         "hasContactKeywords": true,
         "hasContact": false
       }
@@ -5892,7 +5942,20 @@
       "direction": "数据科学 / 数据库",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（DeepSeek）",
-      "editedAt": "2026-04-10"
+      "editedAt": "2026-04-10",
+      "contactInfo": {
+        "emails": [],
+        "wechat": [],
+        "phone": [],
+        "cv": [],
+        "social": {
+          "github": "github.com/HKUSTDial",
+          "linkedin": "linkedin.com/in/nan-tang-0695135"
+        },
+        "scannedAt": "2026-04-10",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Martin Legrand": {
       "name": "Martin Legrand",
@@ -7404,7 +7467,21 @@
       "direction": "NLP / LLM / 医疗AI",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（月之暗面）",
-      "editedAt": "2026-04-10"
+      "editedAt": "2026-04-10",
+      "contactInfo": {
+        "emails": [
+          "wabyking@gmail.com"
+        ],
+        "wechat": [],
+        "phone": [],
+        "cv": [],
+        "social": {
+          "github": "github.com/iclr-complex-order"
+        },
+        "scannedAt": "2026-04-10",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Juan Gabriel Kostelec": {
       "name": "Juan Gabriel Kostelec",
@@ -13544,7 +13621,21 @@
       "editedAt": "2026-04-10",
       "papers": [
         "http://arxiv.org/abs/2604.08064v1"
-      ]
+      ],
+      "contactInfo": {
+        "emails": [
+          "lingpenk@google.com"
+        ],
+        "wechat": [],
+        "phone": [],
+        "cv": [
+          "https://ikekonglp.github.io/lingpenk_cv.pdf"
+        ],
+        "social": {},
+        "scannedAt": "2026-04-10",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Xiachong Feng": {
       "name": "Xiachong Feng (冯夏冲)",
@@ -13561,7 +13652,24 @@
       "editedAt": "2026-04-10",
       "papers": [
         "http://arxiv.org/abs/2604.08064v1"
-      ]
+      ],
+      "contactInfo": {
+        "emails": [
+          "xiachongfeng1996@gmail.com"
+        ],
+        "wechat": [],
+        "phone": [],
+        "cv": [
+          "http://xcfeng.net/data/cv_for_xcfeng.pdf"
+        ],
+        "social": {
+          "twitter": "@xc_feng",
+          "github": "github.com/xcfcode"
+        },
+        "scannedAt": "2026-04-10",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Chonghan Qin": {
       "name": "Chonghan Qin",
@@ -13629,7 +13737,17 @@
       "editedAt": "2026-04-10",
       "papers": [
         "http://arxiv.org/abs/2604.07888v1"
-      ]
+      ],
+      "contactInfo": {
+        "emails": [],
+        "wechat": [],
+        "phone": [],
+        "cv": [],
+        "social": {},
+        "scannedAt": "2026-04-10",
+        "hasContactKeywords": true,
+        "hasContact": false
+      }
     },
     "Hao Gu": {
       "name": "Hao Gu",
@@ -13783,7 +13901,17 @@
       "homepage": "https://www.cityu.edu.hk/stfprofile/songlinqi.htm",
       "scholar": "https://scholar.google.com/citations?user=UcGN3MoAAAAJ",
       "direction": "信息论 / 联邦学习 / NLP",
-      "lab": "Department of Computer Science, CityU"
+      "lab": "Department of Computer Science, CityU",
+      "contactInfo": {
+        "emails": [],
+        "wechat": [],
+        "phone": [],
+        "cv": [],
+        "social": {},
+        "scannedAt": "2026-04-10",
+        "hasContactKeywords": false,
+        "hasContact": false
+      }
     }
   },
   "lastUpdated": "2026-04-10T09:30:32Z"

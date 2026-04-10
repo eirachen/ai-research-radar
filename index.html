@@ -2806,11 +2806,13 @@ function selectMapProvince(prov) {
     if (uni.talents.length) {
       html += '<div style="margin-top:0.3rem;font-size:0.62rem;color:var(--text2)">👤 关联人才：</div>';
       uni.talents.slice(0, 5).forEach(function(t) {
+        var escapedName = (t.name || '').replace(/'/g, "\\'");
         html += '<div style="font-size:0.62rem;padding:0.1rem 0">' +
-          '<span style="font-weight:600">' + t.name + '</span>' +
+          '<a href="javascript:void(0)" onclick="event.stopPropagation();goToTalent(\'' + escapedName + '\')" style="font-weight:600;color:var(--accent2);text-decoration:none;cursor:pointer">' + t.name + '</a>' +
           (t.status ? ' · ' + t.status : '') +
           (t.direction ? ' · ' + t.direction : '') +
-          (t.homepage ? ' <a href="' + t.homepage + '" target="_blank" style="color:var(--accent2);font-size:0.58rem">↗</a>' : '') +
+          (t.homepage ? ' <a href="' + t.homepage + '" target="_blank" style="color:var(--text2);font-size:0.58rem">🏠</a>' : '') +
+          ' <a href="javascript:void(0)" onclick="event.stopPropagation();goToTalent(\'' + escapedName + '\')" style="background:rgba(168,85,247,0.15);color:#c084fc;font-size:0.55rem;padding:0.05rem 0.2rem;border-radius:3px;text-decoration:none">📋 人才库</a>' +
           '</div>';
       });
     }

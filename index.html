@@ -737,12 +737,6 @@
 <div class="main">
   <!-- ═══ HOME: Navigation Hub ═══ -->
   <div class="page-view active" id="page-home">
-    <div class="stats-grid" id="statsGrid"></div>
-    <div style="text-align:center;margin-bottom:1.5rem;font-size:0.78rem;color:var(--text2)">
-      📅 数据覆盖：<span id="dataDateRange" style="color:var(--accent2);font-weight:600">加载中…</span>
-      &nbsp;·&nbsp; 共 <span id="dataPaperCount" style="color:var(--accent2);font-weight:600">—</span> 篇 arXiv 论文
-      &nbsp;·&nbsp; 最后更新：<span id="dataLastUpdate" style="color:var(--green);font-weight:600">—</span>
-    </div>
 
     <!-- ═══ 广播公告栏 + 留言区 ═══ -->
     <div style="margin-bottom:1.5rem">
@@ -776,6 +770,19 @@
     </div>
 
     <div class="section-head"><h2><span>🧭</span> 情报中心</h2></div>
+
+    <!-- 情报滚动播报条 -->
+    <div style="margin-bottom:1rem;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:0.5rem 0.8rem;display:flex;align-items:center;gap:0.6rem;overflow:hidden">
+      <span style="font-size:0.75rem;font-weight:700;color:var(--accent2);flex-shrink:0;white-space:nowrap">📡 情报速递</span>
+      <div style="width:1px;height:16px;background:var(--border);flex-shrink:0"></div>
+      <div style="flex:1;overflow:hidden;position:relative;height:1.4em">
+        <div id="tickerContent" style="font-size:0.75rem;color:var(--text);position:absolute;white-space:nowrap;transition:opacity 0.5s;line-height:1.4em"></div>
+      </div>
+      <div style="flex-shrink:0;font-size:0.62rem;color:var(--text2);white-space:nowrap">
+        <span id="dataDateRange" style="color:var(--accent2)">—</span> · <span id="dataPaperCount" style="color:var(--accent2)">—</span>篇 · 更新 <span id="dataLastUpdate" style="color:var(--green)">—</span>
+      </div>
+    </div>
+
     <div class="nav-hub">
       <div class="nav-card" onclick="navigateTo('arxiv')">
         <div class="nav-card-icon">📄</div>
@@ -1321,11 +1328,9 @@ function parseMd(md) {
 // ══════════════════════════════════════
 
 function renderStats() {
-  const grid = document.getElementById('statsGrid');
   var tc = Object.keys(talentNotes).length;
-  var urgent = Object.values(talentNotes).filter(function(t){ return t.gradYear === '2026'; }).length;
-  // Calculate data date range from arxivData
-  var dateRange = '加载中…';
+  // Calculate data date range
+  var dateRange = '—';
   var arxivTotal = 0;
   if (arxivData) {
     arxivTotal = arxivData.totalPapers || 0;
@@ -1338,16 +1343,81 @@ function renderStats() {
     if (allDates.length) {
       allDates.sort();
       dateRange = allDates[0] + ' ~ ' + allDates[allDates.length - 1];
-    } else {
-      dateRange = arxivData.since || '—';
     }
   }
-  grid.innerHTML = `
-    <div class="stat-card"><div class="stat-label">数据覆盖</div><div class="stat-value" style="font-size:1.1rem;letter-spacing:0">${dateRange}</div><div class="stat-sub">${arxivTotal} 篇 arXiv 论文</div></div>
-    <div class="stat-card"><div class="stat-label">监控平台</div><div class="stat-value">17/17</div><div class="stat-sub">平台在线</div></div>
-    <div class="stat-card"><div class="stat-label">人才追踪</div><div class="stat-value">${tc}</div><div class="stat-sub">已录入人才</div></div>
-    <div class="stat-card"><div class="stat-label">高优先级</div><div class="stat-value">${urgent}</div><div class="stat-sub">2026年毕业</div></div>
-  `;
+  // 更新播报条右侧数据
+  try {
+    document.getElementById('dataDateRange').textContent = dateRange;
+    document.getElementById('dataPaperCount').textContent = arxivTotal;
+  } catch(e) {}
+  // 启动情报滚动播报
+  startTicker();
+}
+
+// ── 情报滚动播报（跑马灯）──
+var tickerItems = [];
+var tickerIndex = 0;
+var tickerTimer = null;
+
+function buildTickerItems() {
+  tickerItems = [];
+  // 从深度情报（ALL_PAPERS）和 confirmed 论文中提取
+  if (window.arxivData && arxivData.companies) {
+    Object.values(arxivData.companies).forEach(function(c) {
+      c.papers.forEach(function(p) {
+        if (p.collabConfidence === 'confirmed') {
+          var unis = (p.universities || []).join(', ');
+          tickerItems.push({
+            text: '🤝 ' + (c.icon||'') + ' ' + c.company + ' × ' + unis + '：' + (p.title || '').substring(0, 50),
+            date: (p.published || '').substring(0, 10),
+            url: p.arxivUrl
+          });
+        }
+      });
+    });
+  }
+  // 从 ALL_PAPERS（深度情报）提取
+  if (window.ALL_PAPERS && ALL_PAPERS.length) {
+    ALL_PAPERS.slice(0, 20).forEach(function(p) {
+      if (p.title && tickerItems.length < 30) {
+        tickerItems.push({
+          text: '🔬 ' + (p.company || '') + '：' + (p.title || '').substring(0, 55),
+          date: p.date || '',
+          url: p.url || ''
+        });
+      }
+    });
+  }
+  // 加一些系统信息
+  var tc = Object.keys(talentNotes).length;
+  tickerItems.push({ text: '🎓 人才库已收录 ' + tc + ' 人，其中港校人才重点追踪中', date: '', url: '' });
+  tickerItems.push({ text: '📊 监控 17 家 AI 公司动向，覆盖 12 个研究方向', date: '', url: '' });
+  if (tickerItems.length === 2) {
+    tickerItems.unshift({ text: '📄 暂无深度情报，等待 arXiv 数据加载…', date: '', url: '' });
+  }
+}
+
+function startTicker() {
+  buildTickerItems();
+  if (tickerTimer) clearInterval(tickerTimer);
+  tickerIndex = 0;
+  showTickerItem();
+  tickerTimer = setInterval(function() {
+    tickerIndex = (tickerIndex + 1) % tickerItems.length;
+    showTickerItem();
+  }, 5000);
+}
+
+function showTickerItem() {
+  var el = document.getElementById('tickerContent');
+  if (!el || !tickerItems.length) return;
+  var item = tickerItems[tickerIndex];
+  el.style.opacity = '0';
+  setTimeout(function() {
+    var dateTag = item.date ? '<span style="color:var(--text2);font-size:0.62rem;margin-right:0.3rem">[' + item.date + ']</span>' : '';
+    el.innerHTML = dateTag + (item.url ? '<a href="' + item.url + '" target="_blank" style="color:var(--text);text-decoration:none">' + item.text + '</a>' : item.text);
+    el.style.opacity = '1';
+  }, 300);
 }
 
 function renderPlatforms() {

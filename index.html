@@ -552,6 +552,9 @@
   .nav-card:nth-child(4)::before { background: linear-gradient(90deg, #f97316, #fb923c); }
   .nav-card:nth-child(5)::before { background: linear-gradient(90deg, #ec4899, #f472b6); }
   .nav-card:nth-child(6)::before { background: linear-gradient(90deg, #eab308, #fbbf24); }
+  .nav-card:nth-child(7)::before { background: linear-gradient(90deg, #06b6d4, #22d3ee); }
+  .nav-card:nth-child(8)::before { background: linear-gradient(90deg, #14b8a6, #2dd4bf); }
+  .nav-card:nth-child(9)::before { background: linear-gradient(90deg, #8b5cf6, #a78bfa); }
   .nav-card-icon { font-size: 2.5rem; margin-bottom: 0.75rem; }
   .nav-card-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.3rem; }
   .nav-card-desc { font-size: 0.78rem; color: var(--text2); line-height: 1.5; }
@@ -709,6 +712,10 @@
     <div class="sidebar-item" data-page="chinamap" onclick="navigateTo('chinamap')">
       <span class="sidebar-item-icon">🗺️</span><span class="sidebar-item-text">校企合作地图</span>
     </div>
+    <div class="sidebar-divider"></div>
+    <div class="sidebar-item" data-page="domains" onclick="navigateTo('domains')">
+      <span class="sidebar-item-icon">🧩</span><span class="sidebar-item-text">领域专区</span>
+    </div>
   </div>
 </nav>
 
@@ -785,6 +792,12 @@
         <div class="nav-card-title">校企合作地图</div>
         <div class="nav-card-desc">按中国行政区划展示校企合作分布，点击省份查看该地区合作高校与论文详情</div>
         <div class="nav-card-badge" id="chinamapBadge">加载中…</div>
+      </div>
+      <div class="nav-card" onclick="navigateTo('domains')">
+        <div class="nav-card-icon">🧩</div>
+        <div class="nav-card-title">领域专区</div>
+        <div class="nav-card-desc">按 LLM、多模态、Infra、语音四大方向深入追踪行业论文与校企合作动态</div>
+        <div class="nav-card-badge">4 大领域</div>
       </div>
     </div>
     <!-- Platform Status on home -->
@@ -990,6 +1003,49 @@
     <div class="section-head" style="margin-top:1.5rem"><h2><span>📊</span> 各省合作总览</h2></div>
     <div id="chinaMapSummary" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0.5rem"></div>
   </div>
+
+  <!-- ═══ PAGE: Domains Hub ═══ -->
+  <div class="page-view" id="page-domains">
+    <button class="back-btn" onclick="navigateTo('home')">← 返回主页</button>
+    <div class="section-head"><h2><span>🧩</span> 领域专区</h2></div>
+    <p style="color:var(--text2);font-size:0.82rem;margin-bottom:1.5rem">按技术领域深入追踪行业论文与校企合作动态，点击进入各领域详情页</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem" id="domainsGrid">
+      <div class="domain-card" onclick="navigateTo('domain-llm')" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.5rem;cursor:pointer;transition:all 0.2s;position:relative;overflow:hidden" onmouseover="this.style.borderColor='#3b82f6';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform=''">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#3b82f6,#60a5fa)"></div>
+        <div style="font-size:2.5rem;margin-bottom:0.6rem">🤖</div>
+        <div style="font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:0.3rem">大语言模型 (LLM)</div>
+        <div style="font-size:0.75rem;color:var(--text2);line-height:1.5;margin-bottom:0.6rem">预训练、微调、对齐、推理优化、Scaling Law、上下文窗口</div>
+        <div id="domainBadgeLLM" style="display:inline-block;font-size:0.68rem;padding:0.15rem 0.5rem;border-radius:5px;background:rgba(59,130,246,0.15);color:#60a5fa;font-weight:600">加载中…</div>
+      </div>
+      <div class="domain-card" onclick="navigateTo('domain-multimodal')" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.5rem;cursor:pointer;transition:all 0.2s;position:relative;overflow:hidden" onmouseover="this.style.borderColor='#a855f7';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform=''">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#a855f7,#c084fc)"></div>
+        <div style="font-size:2.5rem;margin-bottom:0.6rem">👁️</div>
+        <div style="font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:0.3rem">多模态 (Multimodal)</div>
+        <div style="font-size:0.75rem;color:var(--text2);line-height:1.5;margin-bottom:0.6rem">视觉语言模型、图文理解、视频生成、跨模态检索与对齐</div>
+        <div id="domainBadgeMultimodal" style="display:inline-block;font-size:0.68rem;padding:0.15rem 0.5rem;border-radius:5px;background:rgba(168,85,247,0.15);color:#c084fc;font-weight:600">加载中…</div>
+      </div>
+      <div class="domain-card" onclick="navigateTo('domain-infra')" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.5rem;cursor:pointer;transition:all 0.2s;position:relative;overflow:hidden" onmouseover="this.style.borderColor='#22c55e';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform=''">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#22c55e,#4ade80)"></div>
+        <div style="font-size:2.5rem;margin-bottom:0.6rem">⚡</div>
+        <div style="font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:0.3rem">AI 基础设施 (Infra)</div>
+        <div style="font-size:0.75rem;color:var(--text2);line-height:1.5;margin-bottom:0.6rem">训练框架、推理加速、量化压缩、分布式系统、芯片架构</div>
+        <div id="domainBadgeInfra" style="display:inline-block;font-size:0.68rem;padding:0.15rem 0.5rem;border-radius:5px;background:rgba(34,197,94,0.15);color:#4ade80;font-weight:600">加载中…</div>
+      </div>
+      <div class="domain-card" onclick="navigateTo('domain-speech')" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.5rem;cursor:pointer;transition:all 0.2s;position:relative;overflow:hidden" onmouseover="this.style.borderColor='#f59e0b';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform=''">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#f59e0b,#fbbf24)"></div>
+        <div style="font-size:2.5rem;margin-bottom:0.6rem">🎙️</div>
+        <div style="font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:0.3rem">语音 (Speech)</div>
+        <div style="font-size:0.75rem;color:var(--text2);line-height:1.5;margin-bottom:0.6rem">语音识别、语音合成、TTS、音频理解、声音克隆</div>
+        <div id="domainBadgeSpeech" style="display:inline-block;font-size:0.68rem;padding:0.15rem 0.5rem;border-radius:5px;background:rgba(245,158,11,0.15);color:#fbbf24;font-weight:600">加载中…</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ PAGE: Domain Detail (shared template, rendered by JS) ═══ -->
+  <div class="page-view" id="page-domain-llm"></div>
+  <div class="page-view" id="page-domain-multimodal"></div>
+  <div class="page-view" id="page-domain-infra"></div>
+  <div class="page-view" id="page-domain-speech"></div>
 
   <!-- ═══ DETAIL VIEW (report/paper detail) ═══ -->
   <div class="detail-view" id="detailView">
@@ -1607,9 +1663,13 @@ function navigateTo(page) {
   // Render network canvas when entering the page (needs visible container)
   if (page === 'network') { setTimeout(renderNetwork, 50); }
   if (page === 'chinamap') { setTimeout(renderChinaMap, 50); }
+  // 领域详情页面渲染
+  if (page.indexOf('domain-') === 0) { var dk = page.replace('domain-',''); setTimeout(function(){ renderDomainPage(dk); }, 50); }
+  if (page === 'domains') { setTimeout(updateDomainBadges, 50); }
   // Update sidebar active state
+  var sidebarPage = page.indexOf('domain-') === 0 ? 'domains' : page;
   document.querySelectorAll('.sidebar-item').forEach(function(el) {
-    el.classList.toggle('active', el.dataset.page === page);
+    el.classList.toggle('active', el.dataset.page === sidebarPage);
   });
   // Mobile: close sidebar after navigation
   if (window.innerWidth <= 768) {
@@ -2656,6 +2716,217 @@ function toggleWechat(key, checked) {
 }
 
 // ══════════════════════════════════════
+// Domain Pages (领域专区)
+// ══════════════════════════════════════
+
+var DOMAIN_CONFIG = {
+  'llm':        { id: 'LLM',        label: '大语言模型 (LLM)',   icon: '🤖', color: '#3b82f6', badgeId: 'domainBadgeLLM' },
+  'multimodal': { id: 'Multimodal',  label: '多模态 (Multimodal)', icon: '👁️', color: '#a855f7', badgeId: 'domainBadgeMultimodal' },
+  'infra':      { id: 'Infra',       label: 'AI 基础设施 (Infra)', icon: '⚡', color: '#22c55e', badgeId: 'domainBadgeInfra' },
+  'speech':     { id: 'Speech',      label: '语音 (Speech)',       icon: '🎙️', color: '#f59e0b', badgeId: 'domainBadgeSpeech' },
+};
+
+// 领域校企合作数据存储在 localStorage
+function getDomainCollabs(domainKey) {
+  try { return JSON.parse(localStorage.getItem('domain-collabs-' + domainKey) || '[]'); } catch(e) { return []; }
+}
+function saveDomainCollabs(domainKey, data) {
+  try { localStorage.setItem('domain-collabs-' + domainKey, JSON.stringify(data)); } catch(e) {}
+}
+
+function renderDomainPage(domainKey) {
+  var cfg = DOMAIN_CONFIG[domainKey];
+  if (!cfg) return;
+  var container = document.getElementById('page-domain-' + domainKey);
+  if (!container) return;
+
+  // 收集该领域的论文
+  var papers = [];
+  if (window.arxivData && arxivData.companies) {
+    Object.keys(arxivData.companies).forEach(function(cid) {
+      var c = arxivData.companies[cid];
+      c.papers.forEach(function(p) {
+        var dirs = (p.directions || []).map(function(d) { return d.id; });
+        if (dirs.indexOf(cfg.id) >= 0) {
+          papers.push({ paper: p, company: c.company, companyIcon: c.icon || '', companyId: cid });
+        }
+      });
+    });
+  }
+
+  // 按日期排序（最新在前）
+  papers.sort(function(a, b) { return (b.paper.published || '').localeCompare(a.paper.published || ''); });
+
+  // confirmed 校企合作论文
+  var confirmedPapers = papers.filter(function(p) { return p.paper.collabConfidence === 'confirmed'; });
+
+  // 读取自定义校企合作列表
+  var collabs = getDomainCollabs(domainKey);
+
+  var html = '';
+  // 返回按钮
+  html += '<button class="back-btn" onclick="navigateTo(\'domains\')">← 返回领域专区</button>';
+
+  // 标题
+  html += '<div class="section-head"><h2><span>' + cfg.icon + '</span> ' + cfg.label + '</h2>' +
+    '<span style="font-size:0.72rem;color:var(--text2)">' + papers.length + ' 篇论文 · ' + confirmedPapers.length + ' 篇校企合作</span></div>';
+
+  // ═══ 模块1: 校企合作监控 ═══
+  html += '<div style="margin-top:1rem;margin-bottom:2rem">';
+  html += '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.8rem">';
+  html += '<h3 style="font-size:0.95rem;font-weight:700;color:var(--text)">🤝 校企合作监控</h3>';
+  html += '<button onclick="addDomainCollab(\'' + domainKey + '\')" style="font-size:0.72rem;padding:0.3rem 0.7rem;border:1px solid var(--border);border-radius:6px;background:var(--surface2);color:var(--accent2);cursor:pointer">+ 新增合作</button>';
+  html += '</div>';
+
+  // 自动检测到的 confirmed 校企合作
+  if (confirmedPapers.length > 0) {
+    html += '<div style="font-size:0.72rem;color:var(--text2);margin-bottom:0.5rem">📄 自动识别（PDF 验证 confirmed）：</div>';
+    confirmedPapers.forEach(function(item) {
+      var p = item.paper;
+      var unis = (p.universities || []).join(', ');
+      html += '<div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.5rem 0.7rem;margin-bottom:0.3rem;background:var(--surface);border:1px solid var(--border);border-radius:8px">';
+      html += '<div style="flex:1;min-width:0">';
+      html += '<div style="font-size:0.78rem;font-weight:600;color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap">' +
+        '<a href="' + p.arxivUrl + '" target="_blank" style="color:var(--accent2);text-decoration:none">' + (p.title || '').substring(0, 65) + (p.title && p.title.length > 65 ? '…' : '') + ' ↗</a></div>';
+      html += '<div style="font-size:0.65rem;color:var(--text2);margin-top:0.15rem">' +
+        '<span style="color:' + cfg.color + '">' + item.companyIcon + ' ' + item.company + '</span>' +
+        (unis ? ' × <span style="color:#4ade80">' + unis + '</span>' : '') +
+        ' · ' + (p.published || '').substring(0, 10) + '</div>';
+      html += '</div></div>';
+    });
+  }
+
+  // 手动添加的合作记录
+  if (collabs.length > 0) {
+    html += '<div style="font-size:0.72rem;color:var(--text2);margin:0.8rem 0 0.5rem">✏️ 手动添加：</div>';
+    collabs.forEach(function(c, idx) {
+      html += '<div style="display:flex;align-items:center;gap:0.5rem;padding:0.4rem 0.7rem;margin-bottom:0.3rem;background:var(--surface);border:1px solid var(--border);border-radius:8px">';
+      html += '<div style="flex:1;min-width:0">';
+      html += '<div style="font-size:0.78rem;font-weight:600;color:var(--text)">' + (c.title || '未命名') + '</div>';
+      html += '<div style="font-size:0.65rem;color:var(--text2)">' + (c.company || '') + (c.university ? ' × ' + c.university : '') + (c.note ? ' · ' + c.note : '') + '</div>';
+      html += '</div>';
+      html += '<button onclick="editDomainCollab(\'' + domainKey + '\',' + idx + ')" style="font-size:0.6rem;padding:0.15rem 0.3rem;border:1px solid var(--border);border-radius:4px;background:var(--surface2);color:var(--text2);cursor:pointer" title="编辑">✏️</button>';
+      html += '<button onclick="removeDomainCollab(\'' + domainKey + '\',' + idx + ')" style="font-size:0.6rem;padding:0.15rem 0.3rem;border:1px solid var(--border);border-radius:4px;background:rgba(239,68,68,0.1);color:#f87171;cursor:pointer" title="删除">🗑️</button>';
+      html += '</div>';
+    });
+  }
+
+  if (confirmedPapers.length === 0 && collabs.length === 0) {
+    html += '<div style="text-align:center;padding:1.5rem;color:var(--text2);font-size:0.78rem">暂无校企合作记录，点击右上角「+ 新增合作」手动添加</div>';
+  }
+  html += '</div>';
+
+  // ═══ 模块2: 行业论文 ═══
+  html += '<div class="section-head" style="margin-top:1.5rem"><h2><span>📄</span> 行业论文</h2>' +
+    '<span style="font-size:0.72rem;color:var(--text2)">' + papers.length + ' 篇</span></div>';
+
+  if (papers.length > 0) {
+    // 按公司分组统计
+    var companyCount = {};
+    papers.forEach(function(item) {
+      var key = item.companyIcon + ' ' + item.company;
+      companyCount[key] = (companyCount[key] || 0) + 1;
+    });
+    html += '<div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1rem">';
+    Object.keys(companyCount).sort(function(a,b){ return companyCount[b]-companyCount[a]; }).forEach(function(k) {
+      html += '<span style="font-size:0.65rem;padding:0.15rem 0.5rem;border-radius:12px;background:var(--surface2);color:var(--text2);border:1px solid var(--border)">' + k + ' (' + companyCount[k] + ')</span>';
+    });
+    html += '</div>';
+
+    // 论文列表
+    papers.forEach(function(item, idx) {
+      var p = item.paper;
+      var isConfirmed = p.collabConfidence === 'confirmed';
+      var borderColor = isConfirmed ? 'rgba(34,197,94,0.3)' : 'var(--border)';
+      html += '<div style="padding:0.6rem 0.8rem;margin-bottom:0.4rem;background:var(--surface);border:1px solid ' + borderColor + ';border-radius:8px">';
+      html += '<div style="display:flex;align-items:flex-start;gap:0.5rem">';
+      html += '<div style="flex:1;min-width:0">';
+      html += '<div style="font-size:0.8rem;font-weight:600;color:var(--text)">' +
+        '<a href="' + p.arxivUrl + '" target="_blank" style="color:var(--text);text-decoration:none">' + (p.title || '') + '</a></div>';
+      html += '<div style="font-size:0.65rem;color:var(--text2);margin-top:0.2rem">';
+      html += '<span style="color:' + cfg.color + '">' + item.companyIcon + ' ' + item.company + '</span>';
+      if (isConfirmed) html += ' <span style="color:#4ade80;font-weight:600">✅ 校企合作</span>';
+      var unis = (p.universities || []).join(', ');
+      if (unis) html += ' · 🏫 ' + unis;
+      html += ' · 📅 ' + (p.published || '').substring(0, 10);
+      // 其他方向标签
+      (p.directions || []).forEach(function(d) {
+        if (d.id !== cfg.id) {
+          html += ' <span style="font-size:0.58rem;padding:0.05rem 0.25rem;border-radius:3px;background:' + d.color + '22;color:' + d.color + '">' + d.label + '</span>';
+        }
+      });
+      html += '</div>';
+      // 摘要（前150字）
+      if (p.summary) {
+        html += '<div style="font-size:0.65rem;color:var(--text2);margin-top:0.3rem;line-height:1.5;max-height:2.4em;overflow:hidden">' + (p.summary || '').substring(0, 150) + '…</div>';
+      }
+      html += '</div>';
+      html += '<a href="' + (p.pdfUrl || p.arxivUrl) + '" target="_blank" style="flex-shrink:0;font-size:0.65rem;padding:0.2rem 0.4rem;border:1px solid var(--border);border-radius:5px;color:var(--text2);text-decoration:none">PDF ↗</a>';
+      html += '</div></div>';
+    });
+  } else {
+    html += '<div style="text-align:center;padding:2rem;color:var(--text2);font-size:0.8rem">暂无该领域的论文</div>';
+  }
+
+  container.innerHTML = html;
+}
+
+// 新增校企合作记录
+function addDomainCollab(domainKey) {
+  var title = prompt('合作项目/论文名称：');
+  if (!title) return;
+  var company = prompt('企业名称：') || '';
+  var university = prompt('高校名称：') || '';
+  var note = prompt('备注（可留空）：') || '';
+  var collabs = getDomainCollabs(domainKey);
+  collabs.push({ title: title, company: company, university: university, note: note, addedAt: new Date().toISOString().slice(0,10) });
+  saveDomainCollabs(domainKey, collabs);
+  renderDomainPage(domainKey);
+}
+
+// 编辑校企合作记录
+function editDomainCollab(domainKey, idx) {
+  var collabs = getDomainCollabs(domainKey);
+  var c = collabs[idx];
+  if (!c) return;
+  var title = prompt('合作项目/论文名称：', c.title);
+  if (title === null) return;
+  c.title = title;
+  c.company = prompt('企业名称：', c.company) || c.company;
+  c.university = prompt('高校名称：', c.university) || c.university;
+  c.note = prompt('备注：', c.note) || '';
+  collabs[idx] = c;
+  saveDomainCollabs(domainKey, collabs);
+  renderDomainPage(domainKey);
+}
+
+// 删除校企合作记录
+function removeDomainCollab(domainKey, idx) {
+  if (!confirm('确认删除这条合作记录？')) return;
+  var collabs = getDomainCollabs(domainKey);
+  collabs.splice(idx, 1);
+  saveDomainCollabs(domainKey, collabs);
+  renderDomainPage(domainKey);
+}
+
+// 更新领域专区入口页面的 badge 统计
+function updateDomainBadges() {
+  if (!window.arxivData || !arxivData.companies) return;
+  Object.keys(DOMAIN_CONFIG).forEach(function(domainKey) {
+    var cfg = DOMAIN_CONFIG[domainKey];
+    var count = 0;
+    Object.values(arxivData.companies).forEach(function(c) {
+      c.papers.forEach(function(p) {
+        var dirs = (p.directions || []).map(function(d) { return d.id; });
+        if (dirs.indexOf(cfg.id) >= 0) count++;
+      });
+    });
+    var badge = document.getElementById(cfg.badgeId);
+    if (badge) badge.textContent = count + ' 篇论文';
+  });
+}
+
+// ══════════════════════════════════════
 // China Collaboration Map
 // ══════════════════════════════════════
 
@@ -3475,7 +3746,7 @@ async function loadReports() {
   if (talentCount) document.getElementById('talentBadge').textContent = talentCount + ' 位追踪中';
 }
 
-loadTalentNotes().then(function() { loadArxiv().then(function() { buildTalentPaperMap(); renderTalentExistingList(); renderTalent(); renderStats(); renderArxivDatePicker(); renderNetwork(); }); });
+loadTalentNotes().then(function() { loadArxiv().then(function() { buildTalentPaperMap(); renderTalentExistingList(); renderTalent(); renderStats(); renderArxivDatePicker(); renderNetwork(); updateDomainBadges(); }); });
 loadReports();
 loadFeeds();
 </script>

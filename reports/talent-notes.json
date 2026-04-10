@@ -380,7 +380,7 @@
     },
     "Ge Zhang": {
       "name": "Ge Zhang (张歌)",
-      "university": "滑铁卢大学 (University of Waterloo) / M-A-P",
+      "university": "滑铁卢大学 (University of Waterloo)",
       "isHK": false,
       "status": "研究员",
       "advisor": "",
@@ -757,7 +757,7 @@
     },
     "Yingshui Tan": {
       "name": "Yingshui Tan",
-      "university": "阿里巴巴集团",
+      "university": "复旦大学 (Fudan)",
       "isHK": false,
       "status": "Staff Research Scientist",
       "advisor": "待确认",
@@ -1280,7 +1280,7 @@
     },
     "Haihong Tang": {
       "name": "Haihong Tang",
-      "university": "麻省理工学院 (MIT)",
+      "university": "NYU",
       "isHK": false,
       "status": "待确认",
       "advisor": "待确认",
@@ -1294,7 +1294,7 @@
     },
     "Kai Hua": {
       "name": "Kai Hua",
-      "university": "麻省理工学院 (MIT)",
+      "university": "北京大学 (PKU)",
       "isHK": false,
       "status": "在读博士/研究员",
       "advisor": "待确认",
@@ -2708,7 +2708,7 @@
     },
     "Rasul Tutunov": {
       "name": "Rasul Tutunov",
-      "university": "中国科学院 (CAS)",
+      "university": "华为诺亚方舟实验室 / UCL",
       "isHK": false,
       "status": "高级研究员",
       "advisor": "待确认",
@@ -9186,7 +9186,7 @@
     },
     "Matthew Flathers": {
       "name": "Matthew Flathers",
-      "university": "麻省理工学院 (MIT)",
+      "university": "柏林夏里特医学院 (Charite Berlin)",
       "isHK": false,
       "status": "研究员",
       "advisor": "待确认",
@@ -9508,7 +9508,7 @@
     },
     "Yi Su": {
       "name": "Yi Su",
-      "university": "苏黎世联邦理工学院 (ETH Zurich)",
+      "university": "苏州大学 (Soochow University)",
       "isHK": false,
       "status": "在读博士/研究生",
       "advisor": "Juntao Li / Min Zhang",
@@ -9522,7 +9522,7 @@
     },
     "Zhenxu Tian": {
       "name": "Zhenxu Tian",
-      "university": "苏州大学 (Soochow)",
+      "university": "苏州大学 (Soochow University)",
       "isHK": false,
       "status": "待确认",
       "advisor": "待确认",
@@ -9536,7 +9536,7 @@
     },
     "Dan Qiao": {
       "name": "Dan Qiao",
-      "university": "苏州大学 (Soochow)",
+      "university": "苏州大学 (Soochow University)",
       "isHK": false,
       "status": "待确认",
       "advisor": "待确认",
@@ -9550,7 +9550,7 @@
     },
     "Yuechi Zhou": {
       "name": "Yuechi Zhou",
-      "university": "苏州大学 (Soochow)",
+      "university": "苏州大学 (Soochow University)",
       "isHK": false,
       "status": "待确认",
       "advisor": "待确认",
@@ -9564,7 +9564,7 @@
     },
     "Juntao Li": {
       "name": "Juntao Li",
-      "university": "苏黎世联邦理工学院 (ETH Zurich)",
+      "university": "苏州大学 (Soochow University)",
       "isHK": false,
       "status": "教授/博导",
       "advisor": "待确认",
@@ -9578,7 +9578,7 @@
     },
     "Min Zhang": {
       "name": "Min Zhang",
-      "university": "苏黎世联邦理工学院 (ETH Zurich)",
+      "university": "苏州大学 (Soochow University)",
       "isHK": false,
       "status": "教授/博导",
       "advisor": "待确认",
@@ -10796,7 +10796,7 @@
     },
     "Zijian Zhou": {
       "name": "Zijian Zhou",
-      "university": "麻省理工学院 (MIT)",
+      "university": "苏黎世联邦理工学院 (ETH Zurich)",
       "isHK": false,
       "status": "待确认",
       "advisor": "待确认",
@@ -12336,7 +12336,7 @@
     },
     "Yunjun Gao": {
       "name": "Yunjun Gao",
-      "university": "苏黎世联邦理工学院 (ETH Zurich)",
+      "university": "浙江大学 (Zhejiang University)",
       "isHK": false,
       "status": "教授/博导",
       "advisor": "待确认",
@@ -13005,7 +13005,7 @@
     },
     "Haozhe Liu": {
       "name": "Haozhe Liu",
-      "university": "阿卜杜拉国王科技大学 (KAUST) / NVIDIA Research",
+      "university": "阿卜杜拉国王科技大学 (KAUST)",
       "isHK": false,
       "status": "NVIDIA Research Scientist",
       "advisor": "Juergen Schmidhuber (PhD)",

@@ -2701,7 +2701,7 @@ function renderChinaMap() {
       'onclick="selectMapProvince(\'' + prov.replace(/'/g, "\\'") + '\')" />';
   }
 
-  // 画省份标签
+  // 画省份标签 + 可点击热区
   for (var prov in PROVINCE_CENTERS) {
     var c = PROVINCE_CENTERS[prov];
     var data = provinceData[prov];
@@ -2710,10 +2710,18 @@ function renderChinaMap() {
     var fontSize = data ? 9 : 7;
     var fontWeight = data ? 700 : 400;
     var color = data ? (data.isHK ? '#fbbf24' : '#4ade80') : 'var(--text2)';
+    // 先画一个透明的大圆形作为点击热区（半径25，覆盖文字）
+    if (data) {
+      svgHTML += '<circle cx="' + c[0] + '" cy="' + c[1] + '" r="25" fill="transparent" ' +
+        'style="cursor:pointer" ' +
+        'onclick="selectMapProvince(\'' + prov.replace(/'/g, "\\'") + '\')" ' +
+        'onmouseover="this.nextElementSibling.style.fontSize=\'11px\'" ' +
+        'onmouseout="this.nextElementSibling.style.fontSize=\'' + fontSize + 'px\'" />';
+    }
     svgHTML += '<text x="' + c[0] + '" y="' + c[1] + '" text-anchor="middle" dominant-baseline="central" ' +
       'font-size="' + fontSize + '" font-weight="' + fontWeight + '" fill="' + color + '" ' +
-      'style="cursor:' + (data ? 'pointer' : 'default') + ';text-shadow:0 0 3px var(--bg)" ' +
-      'onclick="selectMapProvince(\'' + prov.replace(/'/g, "\\'") + '\')">' + label + '</text>';
+      'style="cursor:' + (data ? 'pointer' : 'default') + ';text-shadow:0 0 4px var(--bg),0 0 8px var(--bg);pointer-events:' + (data ? 'auto' : 'none') + '" ' +
+      (data ? 'onclick="selectMapProvince(\'' + prov.replace(/'/g, "\\'") + '\')"' : '') + '>' + label + '</text>';
   }
 
   svg.innerHTML = svgHTML;

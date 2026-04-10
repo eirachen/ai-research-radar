@@ -2906,7 +2906,8 @@ function buildNetworkData() {
     Object.entries(arxivData.companies).forEach(function(e) {
       var companyId = e[0], companyData = e[1];
       companyData.papers.forEach(function(p) {
-        if (!p.hasUniCollab) return;
+        // 只用 confirmed 的论文（PDF验证确认的校企合作），mentioned 仅是关键词匹配不算合作
+        if ((p.collabConfidence || '') !== 'confirmed') return;
         var dirs = (p.directions || []).map(function(d) { return d.label; });
         (p.universities || []).forEach(function(uni) {
           var isHK = (p.hkUniversities || []).indexOf(uni) >= 0;

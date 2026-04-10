@@ -2,7 +2,7 @@
   "generatedAt": "2026-04-10T09:22:37.611841Z",
   "since": "2026-03-01",
   "totalPapers": 319,
-  "totalUniCollab": 54,
+  "totalUniCollab": 52,
   "totalHKCollab": 10,
   "companies": {
     "bytedance": {
@@ -4720,7 +4720,7 @@
           "comment": "",
           "universities": [],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -4739,7 +4739,7 @@
               "color": "#eab308"
             }
           ],
-          "collabConfidence": "confirmed",
+          "collabConfidence": "none",
           "pdfVerified": true,
           "pdfCompanies": [
             "deepseek"
@@ -7529,7 +7529,7 @@
         }
       ],
       "count": 58,
-      "uniCollabCount": 6,
+      "uniCollabCount": 5,
       "hkCollabCount": 2
     },
     "moonshot": {
@@ -15869,13 +15869,9 @@
             "cs.CV"
           ],
           "comment": "8 pages, 6 figures. Accepted to CVPR 2024 Workshop. Project page: https://github.com/injun-baek/VDPP",
-          "universities": [
-            "ETH",
-            "MIT",
-            "HIT"
-          ],
+          "universities": [],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -15889,11 +15885,9 @@
               "color": "#ec4899"
             }
           ],
-          "collabConfidence": "confirmed",
+          "collabConfidence": "none",
           "pdfVerified": true,
-          "pdfCompanies": [
-            "meta"
-          ],
+          "pdfCompanies": [],
           "pdfUnis": [
             "1 SeoulNationalUniversity 2 SamsungElectronics",
             "Figure 1. VDPPachieves superior speed, spatialaccuracy and temporalconsistency a"
@@ -16106,7 +16100,7 @@
         }
       ],
       "count": 5,
-      "uniCollabCount": 2,
+      "uniCollabCount": 1,
       "hkCollabCount": 0
     },
     "taotian": {

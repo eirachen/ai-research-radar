@@ -678,6 +678,12 @@
         <div class="nav-card-desc">以公司为圆心，自动构建与高校实验室的合作关系图谱，连线标注合作方向</div>
         <div class="nav-card-badge" id="networkBadge">构建中…</div>
       </div>
+      <div class="nav-card" onclick="navigateTo('chinamap')">
+        <div class="nav-card-icon">🗺️</div>
+        <div class="nav-card-title">校企合作地图</div>
+        <div class="nav-card-desc">按中国行政区划展示校企合作分布，点击省份查看该地区合作高校与论文详情</div>
+        <div class="nav-card-badge" id="chinamapBadge">加载中…</div>
+      </div>
     </div>
     <!-- Platform Status on home -->
     <div class="section-head">
@@ -857,6 +863,30 @@
     </div>
     <div class="section-head" style="margin-top:1.5rem"><h2><span>📋</span> 合作关系明细</h2></div>
     <div id="networkDetailList" class="network-detail-list"></div>
+  </div>
+
+  <!-- ═══ PAGE: China Collaboration Map ═══ -->
+  <div class="page-view" id="page-chinamap">
+    <button class="back-btn" onclick="navigateTo('home')">← 返回主页</button>
+    <div class="section-head">
+      <h2><span>🗺️</span> 校企合作中国地图</h2>
+      <span style="font-size:0.72rem;color:var(--text2)" id="chinamapMeta"></span>
+    </div>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:0.5rem">
+      <div id="chinaMapContainer" style="flex:1;min-width:320px;position:relative;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1rem;overflow:hidden">
+        <svg id="chinaMapSvg" viewBox="0 0 800 700" style="width:100%;height:auto"></svg>
+        <div class="china-map-legend" style="position:absolute;bottom:1rem;left:1rem;font-size:0.65rem;color:var(--text2);background:var(--surface);padding:0.4rem 0.6rem;border-radius:8px;border:1px solid var(--border)">
+          <span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#22c55e;vertical-align:middle;margin-right:3px"></span> 有合作高校
+          <span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#f59e0b;vertical-align:middle;margin-right:3px;margin-left:8px"></span> 港校合作
+          <span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:var(--surface2);vertical-align:middle;margin-right:3px;margin-left:8px;border:1px solid var(--border)"></span> 暂无
+        </div>
+      </div>
+      <div id="chinaMapDetail" style="width:340px;flex-shrink:0;max-height:680px;overflow-y:auto">
+        <div style="font-size:0.8rem;color:var(--text2);padding:1rem;text-align:center">👈 点击地图上的省份查看合作详情</div>
+      </div>
+    </div>
+    <div class="section-head" style="margin-top:1.5rem"><h2><span>📊</span> 各省合作总览</h2></div>
+    <div id="chinaMapSummary" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0.5rem"></div>
   </div>
 
   <!-- ═══ DETAIL VIEW (report/paper detail) ═══ -->
@@ -1474,6 +1504,7 @@ function navigateTo(page) {
   if (target) target.classList.add('active');
   // Render network canvas when entering the page (needs visible container)
   if (page === 'network') { setTimeout(renderNetwork, 50); }
+  if (page === 'chinamap') { setTimeout(renderChinaMap, 50); }
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -2485,6 +2516,305 @@ function toggleWechat(key, checked) {
   local[key] = talentNotes[key];
   saveLocalTalentNotes(local);
   syncToRemote();
+}
+
+// ══════════════════════════════════════
+// China Collaboration Map
+// ══════════════════════════════════════
+
+// 中国大学 → 省份/地区 映射
+var UNI_PROVINCE_MAP = {
+  // 北京
+  '北京大学': '北京', 'Peking University': '北京', 'PKU': '北京',
+  '清华大学': '北京', 'Tsinghua': '北京', 'THU': '北京',
+  '中国人民大学': '北京', 'RUC': '北京',
+  '北京航空航天大学': '北京', 'BUAA': '北京',
+  '中国科学院': '北京', 'CAS': '北京',
+  '北京理工大学': '北京', 'BIT': '北京',
+  '北京师范大学': '北京',
+  // 上海
+  '上海交通大学': '上海', 'SJTU': '上海',
+  '复旦大学': '上海', 'Fudan': '上海',
+  '上海大学': '上海',
+  '上海人工智能实验室': '上海', 'Shanghai AI Laboratory': '上海',
+  // 浙江
+  '浙江大学': '浙江', 'ZJU': '浙江', 'Zhejiang University': '浙江',
+  // 江苏
+  '南京大学': '江苏', 'NJU': '江苏',
+  '苏州大学': '江苏', 'Soochow University': '江苏',
+  '东南大学': '江苏',
+  // 安徽
+  '中国科学技术大学': '安徽', 'USTC': '安徽',
+  // 湖北
+  '华中科技大学': '湖北', 'HUST': '湖北',
+  '武汉大学': '湖北',
+  // 湖南
+  '湖南高等技术研究院': '湖南', 'Hunan Institute': '湖南',
+  '中南大学': '湖南',
+  // 四川
+  '电子科技大学': '四川', 'UESTC': '四川',
+  '四川大学': '四川',
+  // 广东
+  '中山大学': '广东', '南方科技大学': '广东',
+  '香港中文大学(深圳)': '广东', 'CUHK-SZ': '广东', 'CUHK(SZ)': '广东',
+  // 黑龙江
+  '哈尔滨工业大学': '黑龙江', 'HIT': '黑龙江',
+  // 吉林
+  '吉林大学': '吉林',
+  // 辽宁
+  '大连理工大学': '辽宁',
+  // 天津
+  '南开大学': '天津', '天津大学': '天津',
+  // 山东
+  '山东大学': '山东',
+  // 陕西
+  '西安交通大学': '陕西', '西北工业大学': '陕西',
+  // 香港
+  '香港科技大学': '香港', 'HKUST': '香港',
+  '香港大学': '香港', 'HKU': '香港',
+  '香港中文大学': '香港', 'CUHK': '香港',
+  '香港理工大学': '香港', 'PolyU': '香港',
+  '香港城市大学': '香港', 'CityU': '香港',
+  '香港浸会大学': '香港', 'HKBU': '香港',
+  // 台湾
+  '台湾大学': '台湾', 'NTU Taiwan': '台湾',
+  // 澳门
+  '澳门大学': '澳门',
+};
+
+// 通过中文名或含中文名的字符串匹配省份
+function getProvinceForUni(uniName) {
+  if (!uniName) return null;
+  // 直接匹配
+  if (UNI_PROVINCE_MAP[uniName]) return UNI_PROVINCE_MAP[uniName];
+  // 模糊匹配：遍历map看uniName是否包含key
+  for (var key in UNI_PROVINCE_MAP) {
+    if (uniName.indexOf(key) >= 0 || key.indexOf(uniName) >= 0) return UNI_PROVINCE_MAP[key];
+  }
+  // 从括号中提取缩写匹配
+  var m = uniName.match(/\(([^)]+)\)/);
+  if (m && UNI_PROVINCE_MAP[m[1]]) return UNI_PROVINCE_MAP[m[1]];
+  return null;
+}
+
+// 省份中心坐标（基于 viewBox 0 0 800 700）
+var PROVINCE_CENTERS = {
+  '北京': [530, 195], '天津': [545, 210], '河北': [515, 230],
+  '山西': [475, 250], '内蒙古': [440, 135], '辽宁': [590, 165],
+  '吉林': [610, 120], '黑龙江': [615, 70], '上海': [590, 345],
+  '江苏': [560, 320], '浙江': [570, 370], '安徽': [530, 340],
+  '福建': [555, 430], '江西': [520, 410], '山东': [545, 260],
+  '河南': [490, 300], '湖北': [480, 345], '湖南': [465, 400],
+  '广东': [485, 475], '广西': [415, 475], '海南': [430, 540],
+  '重庆': [405, 365], '四川': [340, 370], '贵州': [395, 425],
+  '云南': [330, 460], '西藏': [165, 360], '陕西': [435, 290],
+  '甘肃': [340, 245], '青海': [260, 290], '宁夏': [415, 240],
+  '新疆': [165, 190], '香港': [500, 492], '澳门': [478, 498],
+  '台湾': [585, 455],
+};
+
+// 省份 SVG 简化路径（简化版中国地图）
+var PROVINCE_PATHS = {
+  '北京': 'M523,186 L530,182 L540,186 L538,196 L527,198 Z',
+  '天津': 'M540,198 L550,195 L555,205 L548,215 L538,208 Z',
+  '河北': 'M505,175 L523,170 L555,175 L560,195 L555,225 L540,250 L518,260 L498,250 L495,225 L505,200 Z',
+  '山西': 'M468,225 L495,220 L498,250 L490,280 L472,280 L460,260 Z',
+  '内蒙古': 'M370,100 L410,80 L470,85 L540,100 L580,130 L560,165 L530,170 L470,175 L430,175 L400,165 L380,140 Z',
+  '辽宁': 'M560,130 L595,125 L620,145 L615,175 L595,190 L570,185 L555,170 Z',
+  '吉林': 'M580,90 L620,85 L645,105 L635,135 L610,140 L585,125 Z',
+  '黑龙江': 'M570,30 L620,25 L660,50 L665,90 L640,100 L610,85 L575,85 L565,60 Z',
+  '上海': 'M580,335 L595,332 L600,345 L595,355 L582,350 Z',
+  '江苏': 'M540,285 L575,280 L590,295 L585,330 L570,340 L550,335 L535,315 Z',
+  '浙江': 'M555,345 L580,340 L590,360 L580,390 L555,395 L545,375 Z',
+  '安徽': 'M515,300 L540,295 L550,335 L540,360 L520,365 L508,340 Z',
+  '福建': 'M545,400 L570,395 L580,420 L565,455 L540,450 L535,425 Z',
+  '江西': 'M505,375 L530,370 L540,400 L530,435 L510,440 L498,415 Z',
+  '山东': 'M530,240 L565,235 L585,250 L580,275 L545,285 L525,270 Z',
+  '河南': 'M470,280 L510,275 L525,295 L520,325 L495,330 L475,320 L465,300 Z',
+  '湖北': 'M455,330 L500,325 L515,345 L510,370 L480,375 L455,365 L448,345 Z',
+  '湖南': 'M450,375 L480,370 L500,395 L495,430 L470,440 L448,425 L440,400 Z',
+  '广东': 'M450,445 L500,440 L530,455 L525,485 L490,500 L460,495 L445,475 Z',
+  '广西': 'M380,455 L420,445 L450,460 L448,490 L425,500 L395,495 L378,478 Z',
+  '海南': 'M415,515 L440,512 L448,530 L435,548 L418,545 L410,530 Z',
+  '重庆': 'M385,345 L415,340 L425,358 L418,380 L395,385 L382,368 Z',
+  '四川': 'M290,330 L350,320 L385,335 L390,370 L365,400 L320,410 L285,390 L280,355 Z',
+  '贵州': 'M370,400 L405,395 L420,420 L410,445 L385,450 L365,435 L362,415 Z',
+  '云南': 'M290,415 L340,405 L365,435 L360,470 L335,500 L300,505 L275,480 L270,445 Z',
+  '西藏': 'M80,300 L180,280 L260,290 L275,330 L250,370 L180,390 L100,380 L70,345 Z',
+  '陕西': 'M420,235 L450,230 L465,260 L470,300 L455,335 L435,340 L420,310 L415,270 Z',
+  '甘肃': 'M280,195 L350,180 L400,195 L420,230 L405,265 L370,270 L335,260 L300,250 L280,230 Z',
+  '青海': 'M195,255 L270,240 L290,270 L285,320 L240,335 L195,320 L180,290 Z',
+  '宁夏': 'M408,220 L425,215 L432,240 L422,255 L408,250 Z',
+  '新疆': 'M65,110 L200,90 L270,120 L280,195 L255,240 L185,260 L100,250 L55,200 L50,150 Z',
+  '香港': 'M494,486 L508,484 L512,494 L504,500 L494,496 Z',
+  '澳门': 'M472,492 L480,490 L483,497 L477,502 L472,498 Z',
+  '台湾': 'M575,430 L590,425 L598,448 L592,475 L578,478 L572,458 Z',
+};
+
+function renderChinaMap() {
+  var svg = document.getElementById('chinaMapSvg');
+  if (!svg) return;
+
+  // 构建合作数据：province -> { unis: [{name, companies, papers, edges}], isHK: bool }
+  var provinceData = {};
+  var fullData = buildNetworkData();
+
+  fullData.edges.forEach(function(edge) {
+    var uniNode = fullData.nodes.find(function(n) { return n.id === edge.target; });
+    if (!uniNode) return;
+    var uniName = uniNode.shortName || uniNode.label;
+    var province = getProvinceForUni(uniName);
+    if (!province) return; // 国外大学忽略
+
+    if (!provinceData[province]) provinceData[province] = { unis: {}, isHK: false, totalPapers: 0 };
+    var companyNode = fullData.nodes.find(function(n) { return n.id === edge.source; });
+    var companyName = companyNode ? (companyNode.icon + ' ' + companyNode.label) : edge.source;
+
+    if (!provinceData[province].unis[uniName]) {
+      provinceData[province].unis[uniName] = { name: uniNode.label, companies: [], papers: 0, paperList: [], talents: [], directions: [] };
+    }
+    var uniData = provinceData[province].unis[uniName];
+    if (uniData.companies.indexOf(companyName) < 0) uniData.companies.push(companyName);
+    uniData.papers += edge.papers;
+    uniData.paperList = uniData.paperList.concat(edge.paperList);
+    uniData.talents = uniData.talents.concat(edge.talents);
+    edge.directions.forEach(function(d) { if (uniData.directions.indexOf(d) < 0) uniData.directions.push(d); });
+    provinceData[province].totalPapers += edge.papers;
+    if (uniNode.type === 'hk_uni') provinceData[province].isHK = true;
+  });
+
+  // 渲染 SVG
+  var svgHTML = '';
+  // 先画所有省份
+  for (var prov in PROVINCE_PATHS) {
+    var d = PROVINCE_PATHS[prov];
+    var data = provinceData[prov];
+    var fill = data ? (data.isHK ? 'rgba(245,158,11,0.35)' : 'rgba(34,197,94,0.25)') : 'var(--surface2)';
+    var stroke = data ? (data.isHK ? '#f59e0b' : '#22c55e') : 'var(--border)';
+    var strokeW = data ? 1.5 : 0.8;
+    var cursor = data ? 'pointer' : 'default';
+    var opacity = data ? 1 : 0.6;
+    svgHTML += '<path d="' + d + '" fill="' + fill + '" stroke="' + stroke + '" stroke-width="' + strokeW + '" ' +
+      'style="cursor:' + cursor + ';opacity:' + opacity + ';transition:all 0.2s" ' +
+      'data-province="' + prov + '" ' +
+      (data ? 'onmouseover="this.style.opacity=1;this.style.filter=\'brightness(1.3)\'" onmouseout="this.style.opacity=' + opacity + ';this.style.filter=\'\'" ' : '') +
+      'onclick="selectMapProvince(\'' + prov.replace(/'/g, "\\'") + '\')" />';
+  }
+
+  // 画省份标签
+  for (var prov in PROVINCE_CENTERS) {
+    var c = PROVINCE_CENTERS[prov];
+    var data = provinceData[prov];
+    var label = prov;
+    if (data) label += ' (' + data.totalPapers + ')';
+    var fontSize = data ? 9 : 7;
+    var fontWeight = data ? 700 : 400;
+    var color = data ? (data.isHK ? '#fbbf24' : '#4ade80') : 'var(--text2)';
+    svgHTML += '<text x="' + c[0] + '" y="' + c[1] + '" text-anchor="middle" dominant-baseline="central" ' +
+      'font-size="' + fontSize + '" font-weight="' + fontWeight + '" fill="' + color + '" ' +
+      'style="pointer-events:none;text-shadow:0 0 3px var(--bg)">' + label + '</text>';
+  }
+
+  svg.innerHTML = svgHTML;
+
+  // 更新统计
+  var provCount = Object.keys(provinceData).length;
+  var totalUnis = 0;
+  for (var p in provinceData) totalUnis += Object.keys(provinceData[p].unis).length;
+  document.getElementById('chinamapMeta').textContent = provCount + ' 个省份有合作 · ' + totalUnis + ' 所高校';
+  try { document.getElementById('chinamapBadge').textContent = provCount + ' 省 · ' + totalUnis + ' 校'; } catch(e) {}
+
+  // 渲染底部各省总览
+  var summaryHTML = '';
+  var sorted = Object.entries(provinceData).sort(function(a,b) { return b[1].totalPapers - a[1].totalPapers; });
+  sorted.forEach(function(e) {
+    var prov = e[0], d = e[1];
+    var uniNames = Object.values(d.unis).map(function(u) { return u.name; }).join(', ');
+    var bg = d.isHK ? 'rgba(245,158,11,0.08)' : 'rgba(34,197,94,0.06)';
+    var border = d.isHK ? 'rgba(245,158,11,0.3)' : 'rgba(34,197,94,0.2)';
+    var color = d.isHK ? '#fbbf24' : '#4ade80';
+    summaryHTML += '<div onclick="selectMapProvince(\'' + prov.replace(/'/g, "\\'") + '\')" ' +
+      'style="padding:0.6rem 0.8rem;background:' + bg + ';border:1px solid ' + border + ';border-radius:10px;cursor:pointer;transition:transform 0.15s" ' +
+      'onmouseover="this.style.transform=\'scale(1.02)\'" onmouseout="this.style.transform=\'\'">' +
+      '<div style="font-weight:700;font-size:0.82rem;color:' + color + '">' + prov + (d.isHK ? ' 🇭🇰' : '') + '</div>' +
+      '<div style="font-size:0.68rem;color:var(--text2)">' + Object.keys(d.unis).length + '所高校 · ' + d.totalPapers + '篇论文</div>' +
+      '<div style="font-size:0.62rem;color:var(--text2);margin-top:0.2rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">' + uniNames + '</div>' +
+    '</div>';
+  });
+  document.getElementById('chinaMapSummary').innerHTML = summaryHTML;
+
+  // 存储数据供点击使用
+  window._chinaMapProvinceData = provinceData;
+}
+
+function selectMapProvince(prov) {
+  var provinceData = window._chinaMapProvinceData;
+  if (!provinceData || !provinceData[prov]) {
+    document.getElementById('chinaMapDetail').innerHTML = '<div style="padding:1rem;font-size:0.8rem;color:var(--text2)">该省份暂无校企合作数据</div>';
+    return;
+  }
+
+  // 高亮选中省份
+  document.querySelectorAll('#chinaMapSvg path').forEach(function(p) {
+    if (p.dataset.province === prov) {
+      p.style.filter = 'brightness(1.5) drop-shadow(0 0 6px rgba(59,130,246,0.5))';
+      p.style.strokeWidth = '3';
+    } else {
+      p.style.filter = '';
+      p.style.strokeWidth = '';
+    }
+  });
+
+  var data = provinceData[prov];
+  var html = '<div style="padding:0.5rem">';
+  html += '<div style="font-size:1rem;font-weight:700;color:' + (data.isHK ? '#fbbf24' : '#4ade80') + ';margin-bottom:0.5rem">' +
+    '📍 ' + prov + (data.isHK ? ' 🇭🇰' : '') + '</div>';
+  html += '<div style="font-size:0.7rem;color:var(--text2);margin-bottom:0.8rem">' +
+    Object.keys(data.unis).length + ' 所高校 · ' + data.totalPapers + ' 篇合作论文</div>';
+
+  Object.values(data.unis).forEach(function(uni) {
+    html += '<div style="margin-bottom:0.8rem;padding:0.5rem;background:var(--surface);border:1px solid var(--border);border-radius:8px">';
+    html += '<div style="font-weight:700;font-size:0.8rem;color:var(--text)">' + uni.name + '</div>';
+    html += '<div style="font-size:0.65rem;color:var(--text2);margin:0.2rem 0">合作企业：' + uni.companies.join(' · ') + '</div>';
+    if (uni.directions.length) {
+      html += '<div style="font-size:0.62rem;color:var(--accent2);margin-bottom:0.3rem">方向：' + uni.directions.join(', ') + '</div>';
+    }
+
+    // 论文列表
+    if (uni.paperList.length) {
+      html += '<div style="margin-top:0.3rem;font-size:0.62rem;color:var(--text2)">📄 合作论文：</div>';
+      uni.paperList.slice(0, 5).forEach(function(p) {
+        html += '<div style="font-size:0.62rem;padding:0.15rem 0;border-bottom:1px solid var(--border)">' +
+          '<a href="' + p.url + '" target="_blank" style="color:var(--accent2);text-decoration:none">' + (p.title || '').substring(0, 60) + (p.title && p.title.length > 60 ? '…' : '') + ' ↗</a>' +
+          '<span style="color:var(--text2);margin-left:0.3rem">' + (p.date || '') + '</span></div>';
+      });
+      if (uni.paperList.length > 5) {
+        html += '<div style="font-size:0.6rem;color:var(--text2);font-style:italic">… 共 ' + uni.paperList.length + ' 篇</div>';
+      }
+    }
+
+    // 人才
+    if (uni.talents.length) {
+      html += '<div style="margin-top:0.3rem;font-size:0.62rem;color:var(--text2)">👤 关联人才：</div>';
+      uni.talents.slice(0, 5).forEach(function(t) {
+        html += '<div style="font-size:0.62rem;padding:0.1rem 0">' +
+          '<span style="font-weight:600">' + t.name + '</span>' +
+          (t.status ? ' · ' + t.status : '') +
+          (t.direction ? ' · ' + t.direction : '') +
+          (t.homepage ? ' <a href="' + t.homepage + '" target="_blank" style="color:var(--accent2);font-size:0.58rem">↗</a>' : '') +
+          '</div>';
+      });
+    }
+
+    html += '</div>';
+  });
+
+  html += '<div style="margin-top:0.5rem;text-align:center"><button onclick="navigateTo(\'network\')" style="font-size:0.7rem;padding:0.3rem 0.8rem;border:1px solid var(--border);border-radius:6px;background:var(--surface2);color:var(--text);cursor:pointer">🕸️ 在合作网络中查看</button></div>';
+  html += '</div>';
+  document.getElementById('chinaMapDetail').innerHTML = html;
+
+  // 滚动详情面板到顶部
+  document.getElementById('chinaMapDetail').scrollTop = 0;
 }
 
 // ══════════════════════════════════════

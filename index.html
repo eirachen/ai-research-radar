@@ -2833,13 +2833,36 @@ function renderBulletins() {
   var html = '';
   bulletins.forEach(function(b, i) {
     var isLatest = i === 0;
-    html += '<div style="padding:0.3rem 0;' + (i > 0 ? 'border-top:1px solid rgba(255,255,255,0.05);' : '') + (isLatest ? 'font-weight:600;' : 'opacity:0.7;') + '">';
-    html += '<span style="font-size:0.62rem;color:var(--text2);margin-right:0.4rem">' + b.time + '</span>';
-    if (isLatest) html += '<span style="font-size:0.58rem;padding:0.05rem 0.25rem;border-radius:3px;background:rgba(239,68,68,0.15);color:#f87171;margin-right:0.3rem">NEW</span>';
-    html += '<span>' + b.content.replace(/</g,'&lt;') + '</span>';
+    html += '<div style="padding:0.3rem 0;display:flex;align-items:center;gap:0.3rem;' + (i > 0 ? 'border-top:1px solid rgba(255,255,255,0.05);' : '') + (isLatest ? 'font-weight:600;' : 'opacity:0.7;') + '">';
+    html += '<span style="font-size:0.62rem;color:var(--text2);flex-shrink:0">' + b.time + '</span>';
+    if (isLatest) html += '<span style="font-size:0.58rem;padding:0.05rem 0.25rem;border-radius:3px;background:rgba(239,68,68,0.15);color:#f87171;flex-shrink:0">NEW</span>';
+    html += '<span style="flex:1">' + b.content.replace(/</g,'&lt;') + (b.edited ? ' <span style="font-size:0.55rem;color:var(--text2);font-style:italic">(已编辑)</span>' : '') + '</span>';
+    html += '<button onclick="editBulletin(' + i + ')" style="font-size:0.55rem;padding:0.1rem 0.2rem;border:1px solid rgba(59,130,246,0.2);border-radius:3px;background:transparent;color:rgba(96,165,250,0.5);cursor:pointer;flex-shrink:0" title="编辑">✏️</button>';
+    html += '<button onclick="deleteBulletin(' + i + ')" style="font-size:0.55rem;padding:0.1rem 0.2rem;border:1px solid rgba(239,68,68,0.2);border-radius:3px;background:transparent;color:#f8717180;cursor:pointer;flex-shrink:0" title="删除">✕</button>';
     html += '</div>';
   });
   el.innerHTML = html;
+}
+
+function editBulletin(idx) {
+  var bulletins = getBulletins();
+  var b = bulletins[idx];
+  if (!b) return;
+  var newContent = prompt('修改公告内容：', b.content);
+  if (newContent === null || !newContent.trim()) return;
+  b.content = newContent.trim();
+  b.edited = true;
+  bulletins[idx] = b;
+  saveBulletins(bulletins);
+  renderBulletins();
+}
+
+function deleteBulletin(idx) {
+  if (!confirm('确认删除这条公告？')) return;
+  var bulletins = getBulletins();
+  bulletins.splice(idx, 1);
+  saveBulletins(bulletins);
+  renderBulletins();
 }
 
 function renderGuestbook() {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-10T11:14:10Z",
+  "generatedAt": "2026-04-10T12:11:49Z",
   "notes": {
     "Ye Tian": {
       "name": "田野 (Ye Tian)",
@@ -4966,7 +4966,19 @@
       "direction": "推荐系统 / Agent / RAG",
       "gradYear": "待确认",
       "statusNote": "DeepResearch-9K被SIGIR 2026接收",
-      "editedAt": "2026-04-10"
+      "editedAt": "2026-04-10",
+      "contactInfo": {
+        "emails": [],
+        "wechat": [],
+        "phone": [],
+        "cv": [],
+        "social": {
+          "github": "github.com/github"
+        },
+        "scannedAt": "2026-04-10",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Yuhao Wang": {
       "name": "Yuhao Wang",
@@ -4980,7 +4992,21 @@
       "direction": "推荐系统 / LLM",
       "gradYear": "待确认",
       "statusNote": "本科西安交大统计学，DeepResearch-9K被SIGIR26接收",
-      "editedAt": "2026-04-10"
+      "editedAt": "2026-04-10",
+      "contactInfo": {
+        "emails": [],
+        "wechat": [],
+        "phone": [],
+        "cv": [
+          "https://wyhwhy.github.io/cv/"
+        ],
+        "social": {
+          "github": "github.com/wyhwhy"
+        },
+        "scannedAt": "2026-04-10",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Xinyu Ma": {
       "name": "Xinyu Ma",
@@ -5022,7 +5048,22 @@
       "direction": "LLM / 信息检索 / 搜索排序",
       "gradYear": "待确认",
       "statusNote": "百度搜索策略部，非高校人员",
-      "editedAt": "2026-04-10"
+      "editedAt": "2026-04-10",
+      "contactInfo": {
+        "emails": [],
+        "wechat": [],
+        "phone": [],
+        "cv": [
+          "http://wangshuaiqiang.net/cv.html",
+          "http://wangshuaiqiang.net/zeinalipour.pdf"
+        ],
+        "social": {
+          "github": "github.com/dmsl"
+        },
+        "scannedAt": "2026-04-10",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Dawei Yin": {
       "name": "Dawei Yin",
@@ -5036,7 +5077,22 @@
       "direction": "搜索科学 / Web Mining / 数据挖掘",
       "gradYear": "待确认",
       "statusNote": "百度搜索策略负责人，非高校人员",
-      "editedAt": "2026-04-10"
+      "editedAt": "2026-04-10",
+      "contactInfo": {
+        "emails": [],
+        "wechat": [],
+        "phone": [],
+        "cv": [
+          "https://www.yindawei.com/curriculum-vitae/"
+        ],
+        "social": {
+          "twitter": "@yindawei",
+          "linkedin": "linkedin.com/in/dwyin"
+        },
+        "scannedAt": "2026-04-10",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Xiangyu Zhao": {
       "name": "Xiangyu Zhao",
@@ -9584,88 +9640,160 @@
       "editedAt": "2026-04-08"
     },
     "Yi Su": {
-      "name": "Yi Su",
+      "name": "苏仪",
       "university": "苏州大学 (Soochow University)",
       "isHK": false,
-      "status": "在读博士/研究生",
-      "advisor": "Juntao Li / Min Zhang",
-      "lab": "School of Computer Science and Technology, Soochow University",
-      "homepage": "",
-      "scholar": "",
-      "direction": "Infra / LLM / 数学推理",
+      "status": "研究生三年级",
+      "advisor": "Juntao Li (李俊涛) + Min Zhang (张民)",
+      "lab": "苏州大学 NLP 实验室",
+      "homepage": "https://yisunlp.github.io/",
+      "scholar": "https://scholar.google.com/citations?user=YAvMAQwAAAAJ",
+      "direction": "NLP / LLM / 文本生成",
       "gradYear": "待确认",
-      "statusNote": "来自1篇企业合作论文（OpenAI）",
-      "editedAt": "2026-04-09"
+      "statusNote": "本科哈工大(威海)2019-2023，Scholar 272次引用",
+      "editedAt": "2026-04-10",
+      "contactInfo": {
+        "emails": [
+          "yisunlp@outlook.com"
+        ],
+        "wechat": [],
+        "phone": [],
+        "cv": [],
+        "social": {
+          "github": "github.com/yisunlp"
+        },
+        "scannedAt": "2026-04-10",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Zhenxu Tian": {
       "name": "Zhenxu Tian",
-      "university": "待确认",
+      "university": "苏州大学 (Soochow University)",
       "isHK": false,
-      "status": "待确认",
-      "advisor": "待确认",
-      "lab": "",
+      "status": "硕士研究生 (2024入学)",
+      "advisor": "Juntao Li (李俊涛)",
+      "lab": "苏州大学 NLP 实验室",
       "homepage": "",
       "scholar": "",
-      "direction": "Infra / LLM / 数学推理",
+      "direction": "NLP / LLM",
       "gradYear": "待确认",
-      "statusNote": "来自1篇企业合作论文（OpenAI）",
-      "editedAt": "2026-04-08"
+      "statusNote": "OpenReview确认苏大CS硕士2024.09入学",
+      "editedAt": "2026-04-10"
     },
     "Dan Qiao": {
-      "name": "Dan Qiao",
-      "university": "待确认",
+      "name": "乔丹",
+      "university": "苏州大学 (Soochow University)",
       "isHK": false,
-      "status": "待确认",
-      "advisor": "待确认",
-      "lab": "",
-      "homepage": "",
+      "status": "研究生/研究员",
+      "advisor": "Juntao Li (李俊涛)",
+      "lab": "苏州大学 NLP 实验室",
+      "homepage": "https://jordddan.github.io/jordan.github.io/",
       "scholar": "",
-      "direction": "Infra / LLM / 数学推理",
+      "direction": "NLP / 文本生成",
       "gradYear": "待确认",
-      "statusNote": "来自1篇企业合作论文（OpenAI）",
-      "editedAt": "2026-04-08"
+      "statusNote": "曾和Microsoft Research合作(OpenBA项目)",
+      "editedAt": "2026-04-10",
+      "contactInfo": {
+        "emails": [
+          "danqiao.jordan@gmail.com"
+        ],
+        "wechat": [],
+        "phone": [],
+        "cv": [],
+        "social": {
+          "github": "github.com/jordddan"
+        },
+        "scannedAt": "2026-04-10",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Yuechi Zhou": {
-      "name": "Yuechi Zhou",
-      "university": "待确认",
+      "name": "周月驰",
+      "university": "苏州大学 (Soochow University)",
       "isHK": false,
-      "status": "待确认",
-      "advisor": "待确认",
-      "lab": "",
-      "homepage": "",
-      "scholar": "",
-      "direction": "Infra / LLM / 数学推理",
+      "status": "研究生二年级 → 2025.09起读博",
+      "advisor": "Juntao Li (李俊涛) → 李正华",
+      "lab": "苏州大学 NLP 实验室",
+      "homepage": "https://yczhounlp.github.io/",
+      "scholar": "https://scholar.google.com/citations?user=NoHP41cAAAAJ",
+      "direction": "NLP / LLM / 文本生成",
       "gradYear": "待确认",
-      "statusNote": "来自1篇企业合作论文（OpenAI）",
-      "editedAt": "2026-04-08"
+      "statusNote": "2025.09起在李正华教授下读博",
+      "editedAt": "2026-04-10",
+      "contactInfo": {
+        "emails": [
+          "20234227018@stu.suda.edu.cn"
+        ],
+        "wechat": [],
+        "phone": [],
+        "cv": [],
+        "social": {
+          "github": "github.com/yczhounlp"
+        },
+        "scannedAt": "2026-04-10",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Juntao Li": {
-      "name": "Juntao Li",
+      "name": "李俊涛",
       "university": "苏州大学 (Soochow University)",
       "isHK": false,
-      "status": "教授/博导",
+      "status": "副教授/青年特聘教授",
       "advisor": "待确认",
-      "lab": "School of Computer Science and Technology, Soochow University",
-      "homepage": "",
-      "scholar": "",
-      "direction": "Infra / LLM / 数学推理",
+      "lab": "苏州大学 NLP 实验室",
+      "homepage": "https://lijuntaopku.github.io/",
+      "scholar": "https://scholar.google.com/citations?user=sZSygsYAAAAJ",
+      "direction": "NLP / 文本生成 / 预训练模型",
       "gradYear": "待确认",
-      "statusNote": "来自1篇企业合作论文（OpenAI）",
-      "editedAt": "2026-04-09"
+      "statusNote": "毕业于北京大学王选计算机所，Scholar 3285次引用",
+      "editedAt": "2026-04-10",
+      "contactInfo": {
+        "emails": [
+          "ljt@suda.edu.cn"
+        ],
+        "wechat": [],
+        "phone": [],
+        "cv": [],
+        "social": {
+          "github": "github.com/OpenNLG"
+        },
+        "scannedAt": "2026-04-10",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Min Zhang": {
-      "name": "Min Zhang",
-      "university": "苏州大学 (Soochow University)",
+      "name": "张民",
+      "university": "苏州大学 (Soochow University) / 哈工大(深圳)",
       "isHK": false,
-      "status": "教授/博导",
+      "status": "教授/博导/国家杰青",
       "advisor": "待确认",
-      "lab": "School of Computer Science and Technology, Soochow University",
-      "homepage": "",
+      "lab": "苏州大学 NLP 实验室",
+      "homepage": "https://zhangmin-nlp-ai.github.io/cn_homepage/",
       "scholar": "",
-      "direction": "Infra / LLM / 数学推理",
+      "direction": "NLP / 机器翻译 / 中文信息处理",
       "gradYear": "待确认",
-      "statusNote": "来自1篇企业合作论文（OpenAI）",
-      "editedAt": "2026-04-09"
+      "statusNote": "苏大计算机学院院长，现兼任哈工大(深圳)计算与智能研究院院长",
+      "editedAt": "2026-04-10",
+      "contactInfo": {
+        "emails": [
+          "zhangmin2021@hit.edu.cn",
+          "minzhang@suda.edu.cn",
+          "zhangminmt@hotmail.com"
+        ],
+        "wechat": [],
+        "phone": [],
+        "cv": [],
+        "social": {
+          "github": "github.com/iissnan"
+        },
+        "scannedAt": "2026-04-10",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Kunfeng Chen": {
       "name": "Kunfeng Chen",
@@ -11755,101 +11883,139 @@
     },
     "Qianfan Zhang": {
       "name": "Qianfan Zhang",
-      "university": "待确认",
+      "university": "普林斯顿大学 (Princeton)",
       "isHK": false,
-      "status": "待确认",
-      "advisor": "待确认",
-      "lab": "",
-      "homepage": "",
-      "scholar": "",
-      "direction": "LLM / 强化学习 / RAG/检索",
+      "status": "博士三年级",
+      "advisor": "Matt Weinberg",
+      "lab": "Princeton CS Theory",
+      "homepage": "https://zhangqian.fan/",
+      "scholar": "https://scholar.google.com/citations?user=A1GeP5QAAAAJ",
+      "direction": "理论CS / 算法博弈论",
       "gradYear": "待确认",
-      "statusNote": "来自1篇企业合作论文（百度）",
-      "editedAt": "2026-04-08"
+      "statusNote": "LinkedIn显示也和ByteDance有关联(可能实习)",
+      "editedAt": "2026-04-10",
+      "contactInfo": {
+        "emails": [],
+        "wechat": [],
+        "phone": [],
+        "cv": [],
+        "social": {
+          "github": "github.com/vincentdoerig"
+        },
+        "scannedAt": "2026-04-10",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Tianyu Guo": {
       "name": "Tianyu Guo",
-      "university": "待确认",
+      "university": "加州大学伯克利分校 (UC Berkeley)",
       "isHK": false,
-      "status": "待确认",
+      "status": "博士生",
       "advisor": "待确认",
-      "lab": "",
+      "lab": "UC Berkeley",
       "homepage": "",
-      "scholar": "",
-      "direction": "LLM / 强化学习 / RAG/检索",
+      "scholar": "https://scholar.google.com/citations?user=nCFeUqYAAAAJ",
+      "direction": "机器学习 / 因果推断",
       "gradYear": "待确认",
-      "statusNote": "来自1篇企业合作论文（百度）",
-      "editedAt": "2026-04-08"
+      "statusNote": "Scholar确认berkeley.edu邮箱",
+      "editedAt": "2026-04-10"
     },
     "Xuandi Ren": {
-      "name": "Xuandi Ren",
-      "university": "待确认",
+      "name": "任轩笛",
+      "university": "加州大学伯克利分校 (UC Berkeley)",
       "isHK": false,
-      "status": "待确认",
-      "advisor": "待确认",
-      "lab": "",
-      "homepage": "",
+      "status": "博士四年级",
+      "advisor": "Venkatesan Guruswami",
+      "lab": "UC Berkeley Theory Group",
+      "homepage": "https://rxdoi.github.io/",
       "scholar": "",
-      "direction": "LLM / 强化学习 / RAG/检索",
+      "direction": "理论CS / 编码理论",
       "gradYear": "待确认",
-      "statusNote": "来自1篇企业合作论文（百度）",
-      "editedAt": "2026-04-08"
+      "statusNote": "STOC 2024最佳论文奖获得者，本科北京大学",
+      "editedAt": "2026-04-10",
+      "contactInfo": {
+        "emails": [
+          "xuandi_ren@berkeley.edu"
+        ],
+        "wechat": [],
+        "phone": [],
+        "cv": [],
+        "social": {
+          "github": "github.com/skowalak"
+        },
+        "scannedAt": "2026-04-10",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Jiale Chen": {
-      "name": "Jiale Chen",
-      "university": "待确认",
+      "name": "陈嘉乐",
+      "university": "斯坦福大学 (Stanford)",
       "isHK": false,
-      "status": "待确认",
-      "advisor": "待确认",
-      "lab": "",
-      "homepage": "",
-      "scholar": "",
-      "direction": "LLM / 强化学习 / RAG/检索",
+      "status": "博士四年级",
+      "advisor": "Aaron Sidford",
+      "lab": "Stanford Theory",
+      "homepage": "https://jialec00.github.io/",
+      "scholar": "https://scholar.google.com/citations?user=EpNMAaMAAAAJ",
+      "direction": "图算法 / 动态算法",
       "gradYear": "待确认",
-      "statusNote": "来自1篇企业合作论文（百度）",
-      "editedAt": "2026-04-08"
+      "statusNote": "FORC 2023最佳学生论文奖，近期关注AI推理能力",
+      "editedAt": "2026-04-10",
+      "contactInfo": {
+        "emails": [],
+        "wechat": [],
+        "phone": [],
+        "cv": [
+          "https://jialec00.github.io/assets/pdf/Curriculum_Vitae.pdf"
+        ],
+        "social": {},
+        "scannedAt": "2026-04-10",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Ming Ding": {
       "name": "Ming Ding",
-      "university": "待确认",
+      "university": "字节跳动 Seed (企业端)",
       "isHK": false,
-      "status": "待确认",
+      "status": "研究员",
       "advisor": "待确认",
       "lab": "",
       "homepage": "",
       "scholar": "",
       "direction": "LLM / 强化学习 / RAG/检索",
       "gradYear": "待确认",
-      "statusNote": "来自1篇企业合作论文（百度）",
-      "editedAt": "2026-04-08"
+      "statusNote": "ByteDance Seed，Scaling Reasoning Tokens论文",
+      "editedAt": "2026-04-10"
     },
     "Ran Xin": {
       "name": "Ran Xin",
-      "university": "待确认",
+      "university": "字节跳动 Seed (企业端)",
       "isHK": false,
-      "status": "待确认",
+      "status": "研究员",
       "advisor": "待确认",
       "lab": "",
       "homepage": "",
       "scholar": "",
       "direction": "LLM / 强化学习 / RAG/检索",
       "gradYear": "待确认",
-      "statusNote": "来自1篇企业合作论文（百度）",
-      "editedAt": "2026-04-08"
+      "statusNote": "ByteDance Seed，Scaling Reasoning Tokens论文",
+      "editedAt": "2026-04-10"
     },
     "Xia Xiao": {
       "name": "Xia Xiao",
-      "university": "待确认",
+      "university": "字节跳动 Seed (企业端)",
       "isHK": false,
-      "status": "待确认",
+      "status": "研究员",
       "advisor": "待确认",
       "lab": "",
       "homepage": "",
       "scholar": "",
       "direction": "LLM / 强化学习 / RAG/检索",
       "gradYear": "待确认",
-      "statusNote": "来自1篇企业合作论文（百度）",
-      "editedAt": "2026-04-08"
+      "statusNote": "ByteDance Seed，Scaling Reasoning Tokens论文提交者",
+      "editedAt": "2026-04-10"
     },
     "Mengyuan Li": {
       "name": "Mengyuan Li",

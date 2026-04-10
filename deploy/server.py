@@ -22,6 +22,18 @@ class Handler(SimpleHTTPRequestHandler):
         self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
         self.send_header("Access-Control-Allow-Headers", "Content-Type")
 
+    def _no_cache(self):
+        """禁止浏览器缓存，每次都拿最新文件"""
+        self.send_header("Cache-Control", "no-cache, no-store, must-revalidate")
+        self.send_header("Pragma", "no-cache")
+        self.send_header("Expires", "0")
+
+    def do_GET(self):
+        # 去掉查询参数（前端可能加了 ?_t=xxx 防缓存）
+        if '?' in self.path:
+            self.path = self.path.split('?')[0]
+        super().do_GET()
+
     def do_OPTIONS(self):
         self.send_response(200)
         self._cors()
@@ -90,6 +102,10 @@ class Handler(SimpleHTTPRequestHandler):
         self.wfile.write(json.dumps({"error": msg}).encode("utf-8"))
 
     def end_headers(self):
+        # 对 HTML/JSON 请求禁止缓存
+        path = getattr(self, 'path', '').split('?')[0]
+        if path.endswith(('.html', '.json')) or path == '/':
+            self._no_cache()
         self._cors()
         super().end_headers()
 

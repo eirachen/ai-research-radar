@@ -1726,7 +1726,7 @@ async function loadTalentNotes() {
   // Try remote API first (real-time data) - skip if no remote API configured
   if (TALENT_API) {
     try {
-      var resp = await fetch(TALENT_API);
+      var resp = await fetch(TALENT_API + '?_t=' + Date.now());
       if (resp.ok) {
         var d = await resp.json();
         talentNotes = d.notes || {};
@@ -1740,7 +1740,7 @@ async function loadTalentNotes() {
   }
   // Fallback: load from static JSON file
   try {
-    var resp = await fetch('reports/talent-notes.json');
+    var resp = await fetch('reports/talent-notes.json?_t=' + Date.now());
     if (resp.ok) { var d = await resp.json(); talentNotes = d.notes || {}; }
   } catch(e) {}
   // Merge local edits
@@ -1890,7 +1890,7 @@ function goToTalent(key) {
 
 async function loadArxiv() {
   try {
-    const resp = await fetch('reports/arxiv-daily.json');
+    const resp = await fetch('reports/arxiv-daily.json?_t=' + Date.now());
     if (resp.ok) {
       arxivData = await resp.json();
       // 计算 confirmed vs mentioned 数量
@@ -2950,7 +2950,7 @@ function toggleNetDetail(id, headerEl) {
 // ══════════════════════════════════════
 async function loadReports() {
   try {
-    const indexResp = await fetch('reports/index.json');
+    const indexResp = await fetch('reports/index.json?_t=' + Date.now());
     if (indexResp.ok) REPORT_FILES = await indexResp.json();
   } catch(e) { REPORT_FILES = ['reports/2026-04-07-report.md']; }
 

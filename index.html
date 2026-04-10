@@ -35,9 +35,7 @@
     padding: 2rem 0;
     position: sticky; top: 0; z-index: 100;
     backdrop-filter: blur(20px);
-    margin-left: 56px;
   }
-  @media (max-width: 768px) { .header { margin-left: 0; } }
   .header-inner {
     max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;
     display: flex; align-items: center; justify-content: space-between;
@@ -64,17 +62,18 @@
   .sidebar {
     position: fixed; top: 0; left: 0; bottom: 0; width: 56px; z-index: 999;
     background: var(--surface); border-right: 1px solid var(--border);
-    display: flex; flex-direction: column; transition: width 0.25s cubic-bezier(.4,0,.2,1);
+    display: flex; flex-direction: column; transition: all 0.25s cubic-bezier(.4,0,.2,1);
     overflow: hidden;
   }
-  .sidebar:hover, .sidebar.expanded { width: 200px; }
+  .sidebar:hover:not(.collapsed) { width: 200px; }
+  .sidebar.collapsed { width: 0; border-right: none; }
   .sidebar-logo {
     display: flex; align-items: center; gap: 0.6rem; padding: 0.8rem 0.9rem; cursor: pointer;
     border-bottom: 1px solid var(--border); min-height: 56px; flex-shrink: 0;
   }
   .sidebar-logo span { font-size: 1.5rem; flex-shrink: 0; }
   .sidebar-logo b { font-size: 0.82rem; color: var(--text); white-space: nowrap; opacity: 0; transition: opacity 0.2s; }
-  .sidebar:hover .sidebar-logo b, .sidebar.expanded .sidebar-logo b { opacity: 1; }
+  .sidebar:hover:not(.collapsed) .sidebar-logo b { opacity: 1; }
   .sidebar-nav { flex: 1; overflow-y: auto; padding: 0.4rem 0; }
   .sidebar-nav::-webkit-scrollbar { width: 0; }
   .sidebar-item {
@@ -91,28 +90,37 @@
   .sidebar-item-text {
     font-size: 0.78rem; color: var(--text2); font-weight: 500; opacity: 0; transition: opacity 0.2s;
   }
-  .sidebar:hover .sidebar-item-text, .sidebar.expanded .sidebar-item-text { opacity: 1; }
+  .sidebar:hover:not(.collapsed) .sidebar-item-text { opacity: 1; }
   .sidebar-item.active .sidebar-item-text { color: var(--accent2); font-weight: 600; }
   .sidebar-divider { height: 1px; background: var(--border); margin: 0.4rem 0.7rem; }
-  .sidebar-toggle {
-    display: none; position: fixed; top: 0.6rem; left: 0.6rem; z-index: 1001;
-    width: 36px; height: 36px; border-radius: 8px; border: 1px solid var(--border);
-    background: var(--surface); color: var(--text); font-size: 1.2rem; cursor: pointer;
+  /* 收起/展开按钮 */
+  .sidebar-collapse-btn {
+    position: fixed; top: 12px; left: 44px; z-index: 1001;
+    width: 24px; height: 24px; border-radius: 50%; border: 1px solid var(--border);
+    background: var(--surface); color: var(--text2); font-size: 0.7rem; cursor: pointer;
     display: flex; align-items: center; justify-content: center;
+    transition: all 0.25s; box-shadow: 0 1px 4px rgba(0,0,0,0.3);
   }
-  @media (min-width: 769px) { .sidebar-toggle { display: none; } }
-  @media (max-width: 768px) {
-    .sidebar { width: 0; border-right: none; }
-    .sidebar.expanded { width: 220px; box-shadow: 4px 0 20px rgba(0,0,0,0.5); }
-    .sidebar-toggle { display: flex; }
-    body.sidebar-open .sidebar-overlay { display: block; }
-  }
+  .sidebar-collapse-btn:hover { background: var(--surface2); color: var(--accent2); border-color: var(--accent); }
+  body.sidebar-collapsed .sidebar-collapse-btn { left: 8px; }
   .sidebar-overlay {
     display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 998;
   }
 
-  .main { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem; margin-left: 56px; }
-  @media (max-width: 768px) { .main { margin-left: 0; } }
+  .header { margin-left: 56px; transition: margin-left 0.25s; }
+  .main { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem; margin-left: 56px; transition: margin-left 0.25s; }
+  body.sidebar-collapsed .header { margin-left: 0; }
+  body.sidebar-collapsed .main { margin-left: 0; }
+  @media (max-width: 768px) {
+    .sidebar { width: 0; border-right: none; }
+    .sidebar.mobile-open { width: 220px; box-shadow: 4px 0 20px rgba(0,0,0,0.5); }
+    .sidebar.mobile-open .sidebar-item-text { opacity: 1; }
+    .sidebar.mobile-open .sidebar-logo b { opacity: 1; }
+    body.sidebar-open .sidebar-overlay { display: block; }
+    .sidebar-collapse-btn { display: none; }
+    .header { margin-left: 0; }
+    .main { margin-left: 0; }
+  }
   .stats-grid {
     display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;
     margin-bottom: 2rem;
@@ -667,7 +675,7 @@
 
 <!-- Sidebar Navigation -->
 <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
-<button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
+<button class="sidebar-collapse-btn" id="sidebarCollapseBtn" onclick="collapseSidebar()" title="收起/展开导航">◀</button>
 <nav class="sidebar" id="sidebar">
   <div class="sidebar-logo" onclick="navigateTo('home')">
     <span>🔭</span><b>AI Research Radar</b>
@@ -1614,10 +1622,30 @@ function navigateTo(page) {
 }
 
 function toggleSidebar() {
+  // Mobile: close overlay
   var sb = document.getElementById('sidebar');
-  sb.classList.toggle('expanded');
-  document.body.classList.toggle('sidebar-open');
+  sb.classList.remove('mobile-open');
+  document.body.classList.remove('sidebar-open');
 }
+
+function collapseSidebar() {
+  var sb = document.getElementById('sidebar');
+  var btn = document.getElementById('sidebarCollapseBtn');
+  var isCollapsed = sb.classList.toggle('collapsed');
+  document.body.classList.toggle('sidebar-collapsed', isCollapsed);
+  btn.textContent = isCollapsed ? '▶' : '◀';
+  btn.title = isCollapsed ? '展开导航' : '收起导航';
+  try { localStorage.setItem('sidebar-collapsed', isCollapsed ? '1' : ''); } catch(e) {}
+}
+
+// 恢复上次的收起状态
+try {
+  if (localStorage.getItem('sidebar-collapsed') === '1') {
+    document.getElementById('sidebar').classList.add('collapsed');
+    document.body.classList.add('sidebar-collapsed');
+    document.getElementById('sidebarCollapseBtn').textContent = '▶';
+  }
+} catch(e) {}
 
 function openPaperDetail(idx) {
   var paper = ALL_PAPERS[idx];

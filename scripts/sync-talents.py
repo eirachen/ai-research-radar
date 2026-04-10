@@ -51,12 +51,15 @@ def main():
                 if (not server_val or server_val == '待确认') and local_val and local_val != '待确认':
                     server_entry[field] = local_val
                     changed = True
-            # university：如果本地的更完整（更长），用本地的覆盖
+            # university：如果本地有值且和服务器不同，用本地的覆盖（本地经过验证修正）
             local_uni = local_entry.get('university', '')
             server_uni = server_entry.get('university', '')
-            if local_uni and len(local_uni) > len(server_uni) and server_uni != local_uni:
+            if local_uni and local_uni != server_uni:
                 server_entry['university'] = local_uni
                 changed = True
+            # isHK：同步
+            if 'isHK' in local_entry:
+                server_entry['isHK'] = local_entry['isHK']
             # 合并 contactInfo（如果服务器没有）
             if not server_entry.get('contactInfo') and local_entry.get('contactInfo'):
                 server_entry['contactInfo'] = local_entry['contactInfo']

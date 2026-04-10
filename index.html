@@ -743,6 +743,52 @@
       &nbsp;·&nbsp; 共 <span id="dataPaperCount" style="color:var(--accent2);font-weight:600">—</span> 篇 arXiv 论文
       &nbsp;·&nbsp; 最后更新：<span id="dataLastUpdate" style="color:var(--green);font-weight:600">—</span>
     </div>
+
+    <!-- ═══ 广播公告栏 + 留言区 ═══ -->
+    <div style="margin-bottom:1.5rem">
+      <!-- 公告区 -->
+      <div id="bulletinBoard" style="background:linear-gradient(135deg,rgba(59,130,246,0.08),rgba(168,85,247,0.08));border:1px solid rgba(59,130,246,0.25);border-radius:12px;padding:0.8rem 1rem;margin-bottom:0.6rem">
+        <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem">
+          <span style="font-size:1rem">📢</span>
+          <span style="font-size:0.82rem;font-weight:700;color:var(--accent2)">公告栏</span>
+          <span style="flex:1"></span>
+          <button onclick="toggleBulletinInput()" style="font-size:0.65rem;padding:0.2rem 0.5rem;border:1px solid var(--border);border-radius:5px;background:var(--surface2);color:var(--text2);cursor:pointer">✏️ 发布</button>
+        </div>
+        <div id="bulletinList" style="font-size:0.78rem;color:var(--text)">
+          <div style="color:var(--text2);font-style:italic;font-size:0.72rem">暂无公告</div>
+        </div>
+      </div>
+
+      <!-- 发布输入框（默认隐藏） -->
+      <div id="bulletinInput" style="display:none;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:0.8rem;margin-bottom:0.6rem">
+        <div style="display:flex;gap:0.5rem;align-items:flex-end;flex-wrap:wrap">
+          <div style="flex-shrink:0">
+            <label style="font-size:0.65rem;color:var(--text2)">姓名</label>
+            <input id="bulletinName" placeholder="eira = 公告" style="display:block;width:90px;padding:0.35rem 0.5rem;background:var(--surface2);border:1px solid var(--border);border-radius:5px;color:var(--text);font-size:0.75rem">
+          </div>
+          <div style="flex:1;min-width:180px">
+            <label style="font-size:0.65rem;color:var(--text2)">内容</label>
+            <input id="bulletinContent" placeholder="输入公告或留言…" style="display:block;width:100%;padding:0.35rem 0.5rem;background:var(--surface2);border:1px solid var(--border);border-radius:5px;color:var(--text);font-size:0.75rem;box-sizing:border-box" onkeydown="if(event.key==='Enter')postBulletin()">
+          </div>
+          <button onclick="postBulletin()" style="padding:0.35rem 0.8rem;border:none;border-radius:5px;background:var(--accent);color:#fff;cursor:pointer;font-size:0.75rem;font-weight:600;flex-shrink:0">发送</button>
+        </div>
+      </div>
+
+      <!-- 留言区 -->
+      <div id="guestbookSection" style="display:none;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:0.8rem 1rem">
+        <div style="display:flex;align-items:center;gap:0.4rem;margin-bottom:0.5rem">
+          <span style="font-size:0.9rem">💬</span>
+          <span style="font-size:0.78rem;font-weight:600;color:var(--text)">留言板</span>
+          <span id="guestbookCount" style="font-size:0.65rem;color:var(--text2);margin-left:0.3rem"></span>
+          <span style="flex:1"></span>
+          <button onclick="guestbookPrev()" id="gbPrev" style="font-size:0.65rem;padding:0.15rem 0.35rem;border:1px solid var(--border);border-radius:4px;background:var(--surface2);color:var(--text2);cursor:pointer">◀</button>
+          <span id="gbPageInfo" style="font-size:0.65rem;color:var(--text2)"></span>
+          <button onclick="guestbookNext()" id="gbNext" style="font-size:0.65rem;padding:0.15rem 0.35rem;border:1px solid var(--border);border-radius:4px;background:var(--surface2);color:var(--text2);cursor:pointer">▶</button>
+        </div>
+        <div id="guestbookList"></div>
+      </div>
+    </div>
+
     <div class="section-head"><h2><span>🧭</span> 情报中心</h2></div>
     <div class="nav-hub">
       <div class="nav-card" onclick="navigateTo('arxiv')">
@@ -2714,6 +2760,116 @@ function toggleWechat(key, checked) {
   saveLocalTalentNotes(local);
   syncToRemote();
 }
+
+// ══════════════════════════════════════
+// Bulletin Board (广播公告栏 + 留言区)
+// ══════════════════════════════════════
+
+var BULLETIN_STORAGE = 'ai-radar-bulletins';
+var GUESTBOOK_STORAGE = 'ai-radar-guestbook';
+var GB_PAGE_SIZE = 5;
+var gbCurrentPage = 0;
+
+function getBulletins() { try { return JSON.parse(localStorage.getItem(BULLETIN_STORAGE) || '[]'); } catch(e) { return []; } }
+function saveBulletins(d) { try { localStorage.setItem(BULLETIN_STORAGE, JSON.stringify(d)); } catch(e) {} }
+function getGuestbook() { try { return JSON.parse(localStorage.getItem(GUESTBOOK_STORAGE) || '[]'); } catch(e) { return []; } }
+function saveGuestbook(d) { try { localStorage.setItem(GUESTBOOK_STORAGE, JSON.stringify(d)); } catch(e) {} }
+
+function toggleBulletinInput() {
+  var el = document.getElementById('bulletinInput');
+  el.style.display = el.style.display === 'none' ? 'block' : 'none';
+  if (el.style.display === 'block') setTimeout(function(){ document.getElementById('bulletinName').focus(); }, 50);
+}
+
+function postBulletin() {
+  var name = document.getElementById('bulletinName').value.trim();
+  var content = document.getElementById('bulletinContent').value.trim();
+  if (!content) { alert('请输入内容'); return; }
+  if (!name) { alert('请输入姓名'); return; }
+
+  var now = new Date();
+  var timeStr = now.getFullYear() + '-' + String(now.getMonth()+1).padStart(2,'0') + '-' + String(now.getDate()).padStart(2,'0') + ' ' + String(now.getHours()).padStart(2,'0') + ':' + String(now.getMinutes()).padStart(2,'0');
+
+  if (name.toLowerCase() === 'eira') {
+    // 公告
+    var bulletins = getBulletins();
+    bulletins.unshift({ content: content, time: timeStr });
+    if (bulletins.length > 20) bulletins = bulletins.slice(0, 20);
+    saveBulletins(bulletins);
+  } else {
+    // 留言
+    var guestbook = getGuestbook();
+    guestbook.unshift({ name: name, content: content, time: timeStr });
+    if (guestbook.length > 200) guestbook = guestbook.slice(0, 200);
+    saveGuestbook(guestbook);
+    gbCurrentPage = 0;
+  }
+
+  document.getElementById('bulletinName').value = '';
+  document.getElementById('bulletinContent').value = '';
+  document.getElementById('bulletinInput').style.display = 'none';
+  renderBulletins();
+  renderGuestbook();
+}
+
+function renderBulletins() {
+  var bulletins = getBulletins();
+  var el = document.getElementById('bulletinList');
+  if (!bulletins.length) {
+    el.innerHTML = '<div style="color:var(--text2);font-style:italic;font-size:0.72rem">暂无公告</div>';
+    return;
+  }
+  var html = '';
+  bulletins.forEach(function(b, i) {
+    var isLatest = i === 0;
+    html += '<div style="padding:0.3rem 0;' + (i > 0 ? 'border-top:1px solid rgba(255,255,255,0.05);' : '') + (isLatest ? 'font-weight:600;' : 'opacity:0.7;') + '">';
+    html += '<span style="font-size:0.62rem;color:var(--text2);margin-right:0.4rem">' + b.time + '</span>';
+    if (isLatest) html += '<span style="font-size:0.58rem;padding:0.05rem 0.25rem;border-radius:3px;background:rgba(239,68,68,0.15);color:#f87171;margin-right:0.3rem">NEW</span>';
+    html += '<span>' + b.content.replace(/</g,'&lt;') + '</span>';
+    html += '</div>';
+  });
+  el.innerHTML = html;
+}
+
+function renderGuestbook() {
+  var guestbook = getGuestbook();
+  var section = document.getElementById('guestbookSection');
+  if (!guestbook.length) { section.style.display = 'none'; return; }
+  section.style.display = 'block';
+
+  var totalPages = Math.ceil(guestbook.length / GB_PAGE_SIZE);
+  if (gbCurrentPage >= totalPages) gbCurrentPage = totalPages - 1;
+  if (gbCurrentPage < 0) gbCurrentPage = 0;
+
+  var start = gbCurrentPage * GB_PAGE_SIZE;
+  var pageItems = guestbook.slice(start, start + GB_PAGE_SIZE);
+
+  var html = '';
+  pageItems.forEach(function(g) {
+    html += '<div style="padding:0.3rem 0;border-bottom:1px solid rgba(255,255,255,0.04);display:flex;gap:0.4rem;align-items:baseline">';
+    html += '<span style="font-size:0.62rem;color:var(--text2);flex-shrink:0">' + g.time + '</span>';
+    html += '<span style="font-size:0.72rem;font-weight:600;color:var(--accent2);flex-shrink:0">' + (g.name||'匿名').replace(/</g,'&lt;') + '</span>';
+    html += '<span style="font-size:0.75rem;color:var(--text)">' + g.content.replace(/</g,'&lt;') + '</span>';
+    html += '</div>';
+  });
+  document.getElementById('guestbookList').innerHTML = html;
+  document.getElementById('guestbookCount').textContent = guestbook.length + ' 条留言';
+  document.getElementById('gbPageInfo').textContent = (gbCurrentPage + 1) + '/' + totalPages;
+  document.getElementById('gbPrev').disabled = gbCurrentPage <= 0;
+  document.getElementById('gbNext').disabled = gbCurrentPage >= totalPages - 1;
+  document.getElementById('gbPrev').style.opacity = gbCurrentPage <= 0 ? '0.3' : '1';
+  document.getElementById('gbNext').style.opacity = gbCurrentPage >= totalPages - 1 ? '0.3' : '1';
+}
+
+function guestbookPrev() { if (gbCurrentPage > 0) { gbCurrentPage--; renderGuestbook(); } }
+function guestbookNext() {
+  var totalPages = Math.ceil(getGuestbook().length / GB_PAGE_SIZE);
+  if (gbCurrentPage < totalPages - 1) { gbCurrentPage++; renderGuestbook(); }
+}
+
+// 初始化渲染
+renderBulletins();
+renderGuestbook();
 
 // ══════════════════════════════════════
 // Domain Pages (领域专区)

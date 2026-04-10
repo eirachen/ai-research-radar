@@ -3,7 +3,7 @@
   "since": "2026-03-01",
   "totalPapers": 320,
   "totalUniCollab": 98,
-  "totalHKCollab": 1,
+  "totalHKCollab": 8,
   "companies": {
     "bytedance": {
       "company": "字节Seed",
@@ -126,7 +126,7 @@
           ],
           "comment": "14 pages, 3 figures",
           "universities": [
-            "MIT"
+            "麻省理工学院 (MIT)"
           ],
           "hkUniversities": [],
           "hasUniCollab": false,
@@ -1447,13 +1447,13 @@
           ],
           "comment": "Open-source VLA infra, Technical Report",
           "universities": [
-            "CAS",
-            "HIT",
-            "ETH"
+            "香港科技大学 (HKUST)"
           ],
-          "hkUniversities": [],
+          "hkUniversities": [
+            "香港科技大学 (HKUST)"
+          ],
           "hasUniCollab": false,
-          "hasHKCollab": false,
+          "hasHKCollab": true,
           "directions": [
             {
               "id": "Multimodal",
@@ -1657,8 +1657,7 @@
           ],
           "comment": "14 pages, 4 figures, 7 tables. Paper #6 in the Model Medicine series",
           "universities": [
-            "HIT",
-            "ETH"
+            "苏黎世联邦理工学院 (ETH Zurich)"
           ],
           "hkUniversities": [],
           "hasUniCollab": false,
@@ -2071,9 +2070,7 @@
           ],
           "comment": "26 pages",
           "universities": [
-            "MIT",
-            "CAS",
-            "ETH"
+            "斯坦福大学 (Stanford)"
           ],
           "hkUniversities": [],
           "hasUniCollab": false,
@@ -2385,9 +2382,7 @@
           ],
           "comment": "",
           "universities": [
-            "CAS",
-            "ANU",
-            "NTU"
+            "上海大学"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -2445,7 +2440,8 @@
           ],
           "comment": "",
           "universities": [
-            "ETH"
+            "新加坡国立大学 (NUS)",
+            "苏黎世联邦理工学院 (ETH Zurich)"
           ],
           "hkUniversities": [],
           "hasUniCollab": false,
@@ -2497,8 +2493,7 @@
           ],
           "comment": "",
           "universities": [
-            "MIT",
-            "HIT"
+            "苏黎世联邦理工学院 (ETH Zurich)"
           ],
           "hkUniversities": [],
           "hasUniCollab": false,
@@ -2595,7 +2590,7 @@
           ],
           "comment": "",
           "universities": [
-            "NTU"
+            "苏黎世联邦理工学院 (ETH Zurich)"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -2694,7 +2689,7 @@
           ],
           "comment": "",
           "universities": [
-            "CAS"
+            "苏黎世联邦理工学院 (ETH Zurich)"
           ],
           "hkUniversities": [],
           "hasUniCollab": false,
@@ -2883,11 +2878,15 @@
           ],
           "comment": "Project page: https://gen-searcher.vercel.app Code: https://github.com/tulerfeng/Gen-Searcher",
           "universities": [
-            "NYU"
+            "香港中文大学 (CUHK)",
+            "加州大学伯克利分校 (UC Berkeley)",
+            "伦敦大学学院 (UCL)"
           ],
-          "hkUniversities": [],
+          "hkUniversities": [
+            "香港中文大学 (CUHK)"
+          ],
           "hasUniCollab": false,
-          "hasHKCollab": false,
+          "hasHKCollab": true,
           "directions": [
             {
               "id": "Agent",
@@ -3043,11 +3042,14 @@
           ],
           "comment": "18 pages, 7 figures, has already published in ICLR workshop \"Agentic AI in the Wild: From Hallucinations to Reliable Autonomy\"",
           "universities": [
-            "ETH"
+            "香港中文大学 (CUHK)",
+            "上海交通大学 (SJTU)"
           ],
-          "hkUniversities": [],
+          "hkUniversities": [
+            "香港中文大学 (CUHK)"
+          ],
           "hasUniCollab": false,
-          "hasHKCollab": false,
+          "hasHKCollab": true,
           "directions": [
             {
               "id": "Agent",
@@ -3341,9 +3343,7 @@
           ],
           "comment": "",
           "universities": [
-            "MIT",
-            "Mila",
-            "ANU"
+            "苏黎世联邦理工学院 (ETH Zurich)"
           ],
           "hkUniversities": [],
           "hasUniCollab": false,
@@ -3497,10 +3497,7 @@
           ],
           "comment": "10 pages, 4 figures,",
           "universities": [
-            "HIT",
-            "NUS",
-            "USC",
-            "ANU"
+            "新加坡国立大学 (NUS)"
           ],
           "hkUniversities": [],
           "hasUniCollab": false,
@@ -3805,7 +3802,7 @@
           ],
           "comment": "",
           "universities": [
-            "ETH"
+            "苏黎世联邦理工学院 (ETH Zurich)"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -3907,9 +3904,7 @@
           ],
           "comment": "15 pages, 6 figures",
           "universities": [
-            "NYU",
-            "UW",
-            "USC"
+            "上海交通大学 (SJTU)"
           ],
           "hkUniversities": [],
           "hasUniCollab": false,
@@ -4270,11 +4265,13 @@
           ],
           "comment": "6 pages, 4 figures",
           "universities": [
-            "NYU"
+            "香港城市大学 (CityU)"
           ],
-          "hkUniversities": [],
+          "hkUniversities": [
+            "香港城市大学 (CityU)"
+          ],
           "hasUniCollab": true,
-          "hasHKCollab": false,
+          "hasHKCollab": true,
           "directions": [
             {
               "id": "RL",
@@ -4308,7 +4305,7 @@
       ],
       "count": 79,
       "uniCollabCount": 19,
-      "hkCollabCount": 0
+      "hkCollabCount": 4
     },
     "deepseek": {
       "company": "DeepSeek",
@@ -5351,7 +5348,9 @@
             "cs.CL"
           ],
           "comment": "",
-          "universities": [],
+          "universities": [
+            "北京大学 (Peking University)"
+          ],
           "hkUniversities": [],
           "hasUniCollab": false,
           "hasHKCollab": false,
@@ -5405,7 +5404,8 @@
           ],
           "comment": "",
           "universities": [
-            "ETH"
+            "复旦大学 (Fudan University)",
+            "Deakin University"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -5457,9 +5457,7 @@
           ],
           "comment": "",
           "universities": [
-            "HIT",
-            "UW",
-            "ETH"
+            "斯坦福大学 (Stanford)"
           ],
           "hkUniversities": [],
           "hasUniCollab": false,
@@ -5513,8 +5511,7 @@
           ],
           "comment": "25 pages, 4 figures",
           "universities": [
-            "CAS",
-            "ETH"
+            "东京大学"
           ],
           "hkUniversities": [],
           "hasUniCollab": false,
@@ -5618,10 +5615,15 @@
             "cs.CL"
           ],
           "comment": "Under Review. version2: correct typos in Table 4 and add an ablation study (Table 5)",
-          "universities": [],
-          "hkUniversities": [],
+          "universities": [
+            "浙江大学 (Zhejiang University)",
+            "香港城市大学 (CityU)"
+          ],
+          "hkUniversities": [
+            "香港城市大学 (CityU)"
+          ],
           "hasUniCollab": false,
-          "hasHKCollab": false,
+          "hasHKCollab": true,
           "directions": [
             {
               "id": "LLM",
@@ -6153,9 +6155,7 @@
           ],
           "comment": "",
           "universities": [
-            "MIT",
-            "HIT",
-            "ETH"
+            "马里兰大学 (UMD)"
           ],
           "hkUniversities": [],
           "hasUniCollab": false,
@@ -6324,8 +6324,8 @@
           ],
           "comment": "",
           "universities": [
-            "MIT",
-            "ETH"
+            "复旦大学 (Fudan University)",
+            "苏黎世联邦理工学院 (ETH Zurich)"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -6379,7 +6379,7 @@
           ],
           "comment": "10 pages, 8 figures. Benchmark code and run logs released",
           "universities": [
-            "ETH"
+            "麻省理工学院 (MIT)"
           ],
           "hkUniversities": [],
           "hasUniCollab": false,
@@ -6574,8 +6574,8 @@
           ],
           "comment": "4 Figures and 2 Tables",
           "universities": [
-            "MIT",
-            "ETH"
+            "新加坡国立大学 (NUS)",
+            "苏黎世联邦理工学院 (ETH Zurich)"
           ],
           "hkUniversities": [],
           "hasUniCollab": false,
@@ -6682,8 +6682,7 @@
           ],
           "comment": "",
           "universities": [
-            "ETH",
-            "ANU"
+            "苏黎世联邦理工学院 (ETH Zurich)"
           ],
           "hkUniversities": [],
           "hasUniCollab": false,
@@ -6976,7 +6975,7 @@
           ],
           "comment": "13 pages, 8 tables, 3 figures",
           "universities": [
-            "ETH"
+            "斯坦福大学 (Stanford)"
           ],
           "hkUniversities": [],
           "hasUniCollab": false,
@@ -7359,7 +7358,7 @@
       ],
       "count": 61,
       "uniCollabCount": 16,
-      "hkCollabCount": 1
+      "hkCollabCount": 2
     },
     "moonshot": {
       "company": "月之暗面",
@@ -7642,13 +7641,13 @@
           ],
           "comment": "",
           "universities": [
-            "MIT",
-            "HIT",
-            "NYU"
+            "香港中文大学 (CUHK)"
           ],
-          "hkUniversities": [],
+          "hkUniversities": [
+            "香港中文大学 (CUHK)"
+          ],
           "hasUniCollab": true,
-          "hasHKCollab": false,
+          "hasHKCollab": true,
           "directions": [
             {
               "id": "LLM",
@@ -7801,7 +7800,9 @@
             "cs.CL"
           ],
           "comment": "32 references, 5 tables, 2 figures",
-          "universities": [],
+          "universities": [
+            "苏黎世联邦理工学院 (ETH Zurich)"
+          ],
           "hkUniversities": [],
           "hasUniCollab": false,
           "hasHKCollab": false,
@@ -7843,8 +7844,7 @@
           ],
           "comment": "published at IASEAI 2026, preliminary work presented at GenAI4Health workshop at NeurIPS 2025",
           "universities": [
-            "MIT",
-            "ETH"
+            "苏黎世联邦理工学院 (ETH Zurich)"
           ],
           "hkUniversities": [],
           "hasUniCollab": false,
@@ -7945,8 +7945,7 @@
           ],
           "comment": "",
           "universities": [
-            "CAS",
-            "NTU"
+            "新加坡国立大学 (NUS)"
           ],
           "hkUniversities": [],
           "hasUniCollab": false,
@@ -8054,9 +8053,7 @@
           ],
           "comment": "",
           "universities": [
-            "NYU",
-            "HIT",
-            "ETH"
+            "加州大学伯克利分校 (UC Berkeley)"
           ],
           "hkUniversities": [],
           "hasUniCollab": false,
@@ -8254,10 +8251,14 @@
             "cs.CL"
           ],
           "comment": "",
-          "universities": [],
-          "hkUniversities": [],
+          "universities": [
+            "香港中文大学 (CUHK)"
+          ],
+          "hkUniversities": [
+            "香港中文大学 (CUHK)"
+          ],
           "hasUniCollab": false,
-          "hasHKCollab": false,
+          "hasHKCollab": true,
           "directions": [
             {
               "id": "LLM",
@@ -8289,7 +8290,7 @@
       ],
       "count": 18,
       "uniCollabCount": 6,
-      "hkCollabCount": 0
+      "hkCollabCount": 2
     },
     "openai": {
       "company": "OpenAI",
@@ -8848,7 +8849,10 @@
             "physics.comp-ph"
           ],
           "comment": "Simulation data available at https://www.taoeli.org/publications; source code available at Github https://github.com/TaoELi/FermiLink",
-          "universities": [],
+          "universities": [
+            "特拉华大学 (University of Delaware)",
+            "Pacific Northwest National Laboratory"
+          ],
           "hkUniversities": [],
           "hasUniCollab": true,
           "hasHKCollab": false,
@@ -9086,7 +9090,9 @@
             "cs.CL"
           ],
           "comment": "EACL 2026 (Findings)",
-          "universities": [],
+          "universities": [
+            "伦敦大学学院 (UCL)"
+          ],
           "hkUniversities": [],
           "hasUniCollab": false,
           "hasHKCollab": false,
@@ -9193,7 +9199,7 @@
           ],
           "comment": "MSR 2026 Technical Track",
           "universities": [
-            "MIT"
+            "苏黎世联邦理工学院 (ETH Zurich)"
           ],
           "hkUniversities": [],
           "hasUniCollab": false,
@@ -9421,8 +9427,7 @@
           ],
           "comment": "40 pages",
           "universities": [
-            "CAS",
-            "ETH"
+            "苏黎世联邦理工学院 (ETH Zurich)"
           ],
           "hkUniversities": [],
           "hasUniCollab": false,
@@ -9630,8 +9635,7 @@
           ],
           "comment": "17 pages, 3 figures",
           "universities": [
-            "Peking University",
-            "ETH"
+            "北京大学 (Peking University)"
           ],
           "hkUniversities": [],
           "hasUniCollab": false,
@@ -9913,8 +9917,7 @@
           ],
           "comment": "",
           "universities": [
-            "MIT",
-            "ETH"
+            "苏黎世联邦理工学院 (ETH Zurich)"
           ],
           "hkUniversities": [],
           "hasUniCollab": false,
@@ -10359,8 +10362,8 @@
           ],
           "comment": "9 pages, 4 figures, and accepted in IJCNN 2026 (part of IEEE WCCI 2026)",
           "universities": [
-            "MIT",
-            "ETH"
+            "Florida International University",
+            "University of South Florida"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -10456,9 +10459,8 @@
           ],
           "comment": "42 pages, 6 figures, 1 table, 28 supplementary tables across 5 appendices. Submitted to JMIR",
           "universities": [
-            "MIT",
-            "HIT",
-            "ETH"
+            "苏黎世联邦理工学院 (ETH Zurich)",
+            "柏林夏里特医学院 (Charité Berlin)"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -10669,7 +10671,7 @@
           ],
           "comment": "31 pages",
           "universities": [
-            "HIT"
+            "上海交通大学 (SJTU)"
           ],
           "hkUniversities": [],
           "hasUniCollab": false,
@@ -10719,7 +10721,7 @@
           ],
           "comment": "29 pages total; 6 figures; 4 tables",
           "universities": [
-            "MIT"
+            "浙江大学 (Zhejiang University)"
           ],
           "hkUniversities": [],
           "hasUniCollab": false,
@@ -10827,7 +10829,7 @@
           ],
           "comment": "",
           "universities": [
-            "ETH"
+            "苏州大学 (Soochow University)"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -10986,7 +10988,8 @@
           ],
           "comment": "",
           "universities": [
-            "MIT"
+            "浙江大学 (Zhejiang University)",
+            "苏黎世联邦理工学院 (ETH Zurich)"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -11205,9 +11208,7 @@
           ],
           "comment": "ICLR",
           "universities": [
-            "MIT",
-            "HIT",
-            "ETH"
+            "麻省理工学院 (MIT)"
           ],
           "hkUniversities": [],
           "hasUniCollab": false,
@@ -12110,8 +12111,7 @@
           ],
           "comment": "Code will be released",
           "universities": [
-            "ETH",
-            "ANU"
+            "麦吉尔大学 (McGill)"
           ],
           "hkUniversities": [],
           "hasUniCollab": false,
@@ -12165,8 +12165,10 @@
           ],
           "comment": "",
           "universities": [
-            "MIT",
-            "ETH"
+            "麻省理工学院 (MIT)",
+            "新加坡国立大学 (NUS)",
+            "苏黎世联邦理工学院 (ETH Zurich)",
+            "麦吉尔大学 (McGill)"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -12218,8 +12220,7 @@
           ],
           "comment": "",
           "universities": [
-            "MIT",
-            "Mila"
+            "Bucharest University"
           ],
           "hkUniversities": [],
           "hasUniCollab": false,
@@ -12267,7 +12268,7 @@
           ],
           "comment": "",
           "universities": [
-            "ANU"
+            "Kennesaw State University"
           ],
           "hkUniversities": [],
           "hasUniCollab": false,
@@ -12362,7 +12363,7 @@
           ],
           "comment": "v2: typos fixed, references added",
           "universities": [
-            "NTU"
+            "斯坦福大学 (Stanford)"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -12752,7 +12753,7 @@
           ],
           "comment": "Work in Progress",
           "universities": [
-            "ANU"
+            "苏黎世联邦理工学院 (ETH Zurich)"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -13133,7 +13134,7 @@
           ],
           "comment": "27 pages, 6 tables. Target: Minds and Machines (Springer)",
           "universities": [
-            "ETH"
+            "苏黎世联邦理工学院 (ETH Zurich)"
           ],
           "hkUniversities": [],
           "hasUniCollab": false,
@@ -13387,7 +13388,7 @@
           ],
           "comment": "",
           "universities": [
-            "HIT"
+            "佐治亚理工学院 (Georgia Tech)"
           ],
           "hkUniversities": [],
           "hasUniCollab": false,
@@ -13574,7 +13575,11 @@
             "hep-ph"
           ],
           "comment": "",
-          "universities": [],
+          "universities": [
+            "芝加哥大学 (U of Chicago)",
+            "麻省理工学院 (MIT)",
+            "伦敦大学学院 (UCL)"
+          ],
           "hkUniversities": [],
           "hasUniCollab": false,
           "hasHKCollab": false,
@@ -13676,9 +13681,8 @@
           ],
           "comment": "8 pages, 2 figures",
           "universities": [
-            "MIT",
-            "HIT",
-            "Mila"
+            "麻省理工学院 (MIT)",
+            "苏黎世联邦理工学院 (ETH Zurich)"
           ],
           "hkUniversities": [],
           "hasUniCollab": false,
@@ -14594,7 +14598,7 @@
           ],
           "comment": "",
           "universities": [
-            "ETH"
+            "浙江大学 (Zhejiang University)"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -14871,8 +14875,9 @@
           ],
           "comment": "",
           "universities": [
-            "NYU",
-            "ETH"
+            "普林斯顿大学 (Princeton)",
+            "加州大学伯克利分校 (UC Berkeley)",
+            "斯坦福大学 (Stanford)"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -15132,8 +15137,7 @@
           ],
           "comment": "Project Page: https://face2face2026.github.io",
           "universities": [
-            "CAS",
-            "ETH"
+            "约翰霍普金斯大学 (JHU)"
           ],
           "hkUniversities": [],
           "hasUniCollab": false,
@@ -15383,11 +15387,8 @@
           ],
           "comment": "code has been released at https://github.com/xiaomi-research/unidrivevla",
           "universities": [
-            "NUS",
-            "USC",
-            "MIT",
-            "NYU",
-            "CAS"
+            "华中科技大学 (HUST)",
+            "新加坡国立大学 (NUS)"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -15567,8 +15568,7 @@
           ],
           "comment": "Github (data pipeline): https://github.com/metauto-ai/NeuralComputer; Blogpost: https://metauto.ai/neuralcomputer/index_eng.html",
           "universities": [
-            "MIT",
-            "ETH"
+            "苏黎世联邦理工学院 (ETH Zurich)"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,

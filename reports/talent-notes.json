@@ -3282,31 +3282,31 @@
     },
     "Kaituo Feng": {
       "name": "Kaituo Feng",
-      "university": "待确认",
-      "isHK": false,
-      "status": "待确认",
+      "university": "香港中文大学 (CUHK)",
+      "isHK": true,
+      "status": "博士一年级",
       "advisor": "待确认",
-      "lab": "",
-      "homepage": "",
-      "scholar": "",
-      "direction": "Agent / 强化学习 / 数据",
+      "lab": "MMLab, CUHK",
+      "homepage": "https://tulerfeng.github.io/",
+      "scholar": "https://scholar.google.com/citations?user=m1iCh00AAAAJ",
+      "direction": "多模态LLM / 机器学习",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（阿里通义）",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-10"
     },
     "Manyuan Zhang": {
       "name": "Manyuan Zhang",
-      "university": "待确认",
-      "isHK": false,
-      "status": "待确认",
+      "university": "香港中文大学 (CUHK)",
+      "isHK": true,
+      "status": "待确认（论文标注MMLab CUHK编号1）",
       "advisor": "待确认",
-      "lab": "",
+      "lab": "MMLab, CUHK (论文标注)",
       "homepage": "",
       "scholar": "",
       "direction": "Agent / 强化学习 / 数据",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（阿里通义）",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-10"
     },
     "Shuang Chen": {
       "name": "Shuang Chen",
@@ -3324,9 +3324,9 @@
     },
     "Yunlong Lin": {
       "name": "Yunlong Lin",
-      "university": "待确认",
-      "isHK": false,
-      "status": "待确认",
+      "university": "香港中文大学 (CUHK)",
+      "isHK": true,
+      "status": "待确认（论文标注MMLab CUHK编号1）",
       "advisor": "待确认",
       "lab": "",
       "homepage": "",
@@ -3334,13 +3334,13 @@
       "direction": "Agent / 强化学习 / 数据",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（阿里通义）",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-10"
     },
     "Kaixuan Fan": {
       "name": "Kaixuan Fan",
-      "university": "待确认",
-      "isHK": false,
-      "status": "待确认",
+      "university": "香港中文大学 (CUHK)",
+      "isHK": true,
+      "status": "待确认（论文标注MMLab CUHK编号1）",
       "advisor": "待确认",
       "lab": "",
       "homepage": "",
@@ -3348,7 +3348,7 @@
       "direction": "Agent / 强化学习 / 数据",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（阿里通义）",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-10"
     },
     "Yilei Jiang": {
       "name": "Yilei Jiang",
@@ -3380,17 +3380,17 @@
     },
     "Dian Zheng": {
       "name": "Dian Zheng",
-      "university": "待确认",
-      "isHK": false,
-      "status": "待确认",
+      "university": "香港中文大学 (CUHK)",
+      "isHK": true,
+      "status": "incoming博士生",
       "advisor": "待确认",
-      "lab": "",
-      "homepage": "",
+      "lab": "MMLab, CUHK (导师: Hongsheng Li)",
+      "homepage": "https://zhengdian1.github.io/",
       "scholar": "",
       "direction": "Agent / 强化学习 / 数据",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（阿里通义）",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-10"
     },
     "Iman Sharifi": {
       "name": "Iman Sharifi",
@@ -3618,17 +3618,17 @@
     },
     "Jianwei Huang": {
       "name": "Jianwei Huang",
-      "university": "待确认",
-      "isHK": false,
-      "status": "待确认",
+      "university": "香港中文大学（深圳）(CUHK-SZ)",
+      "isHK": true,
+      "status": "校长讲座教授/副校长",
       "advisor": "待确认",
-      "lab": "",
-      "homepage": "",
-      "scholar": "",
-      "direction": "Agent / LLM",
+      "lab": "NCEL, CUHK-SZ",
+      "homepage": "https://jianwei.cuhk.edu.cn/",
+      "scholar": "https://scholar.google.com/citations?user=QQq52JcAAAAJ",
+      "direction": "网络经济 / 博弈论 / 优化",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（阿里通义）",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-10"
     },
     "Aymen Lassoued": {
       "name": "Aymen Lassoued",
@@ -5882,17 +5882,17 @@
     },
     "Nan Tang": {
       "name": "Nan Tang",
-      "university": "待确认",
+      "university": "香港科技大学（广州）(HKUST-GZ)",
       "isHK": true,
-      "status": "待确认",
+      "status": "副教授",
       "advisor": "待确认",
-      "lab": "",
-      "homepage": "",
+      "lab": "DSA Thrust, HKUST-GZ",
+      "homepage": "https://nantang.github.io/",
       "scholar": "",
-      "direction": "LLM / 强化学习 / Infra",
+      "direction": "数据科学 / 数据库",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（DeepSeek）",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-10"
     },
     "Martin Legrand": {
       "name": "Martin Legrand",
@@ -7310,9 +7310,9 @@
     },
     "Xinyuan Xie": {
       "name": "Xinyuan Xie",
-      "university": "待确认",
+      "university": "香港中文大学（深圳）(CUHK-SZ) / 滴滴",
       "isHK": true,
-      "status": "待确认",
+      "status": "待确认（PDF标注同时属于CUHK-SZ和滴滴）",
       "advisor": "待确认",
       "lab": "",
       "homepage": "",
@@ -7320,13 +7320,13 @@
       "direction": "LLM / Infra / 强化学习",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（月之暗面）",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-10"
     },
     "Shunian Chen": {
       "name": "Shunian Chen",
-      "university": "待确认",
+      "university": "香港中文大学（深圳）(CUHK-SZ)",
       "isHK": true,
-      "status": "待确认",
+      "status": "博士生",
       "advisor": "待确认",
       "lab": "",
       "homepage": "",
@@ -7334,7 +7334,7 @@
       "direction": "LLM / Infra / 强化学习",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（月之暗面）",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-10"
     },
     "Zhiheng Liu": {
       "name": "Zhiheng Liu",
@@ -7394,17 +7394,17 @@
     },
     "Benyou Wang": {
       "name": "Benyou Wang",
-      "university": "待确认",
+      "university": "香港中文大学（深圳）(CUHK-SZ)",
       "isHK": true,
-      "status": "待确认",
+      "status": "助理教授/博导",
       "advisor": "待确认",
-      "lab": "",
-      "homepage": "",
-      "scholar": "",
-      "direction": "LLM / Infra / 强化学习",
+      "lab": "School of Data Science, CUHK-SZ",
+      "homepage": "https://wabyking.github.io/old.html",
+      "scholar": "https://scholar.google.com/citations?user=Jk4vJU8AAAAJ",
+      "direction": "NLP / LLM / 医疗AI",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（月之暗面）",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-10"
     },
     "Juan Gabriel Kostelec": {
       "name": "Juan Gabriel Kostelec",
@@ -13766,6 +13766,24 @@
       "papers": [
         "http://arxiv.org/abs/2604.08213v1"
       ]
+    },
+    "Daren Wang": {
+      "name": "Daren Wang",
+      "editedAt": "2026-04-10",
+      "university": "香港中文大学 (CUHK)",
+      "isHK": true,
+      "status": "待确认（email: darenwang@link.cuhk.edu.hk）"
+    },
+    "Linqi Song": {
+      "name": "Linqi Song",
+      "editedAt": "2026-04-10",
+      "university": "香港城市大学 (CityU)",
+      "isHK": true,
+      "status": "副教授",
+      "homepage": "https://www.cityu.edu.hk/stfprofile/songlinqi.htm",
+      "scholar": "https://scholar.google.com/citations?user=UcGN3MoAAAAJ",
+      "direction": "信息论 / 联邦学习 / NLP",
+      "lab": "Department of Computer Science, CityU"
     }
   },
   "lastUpdated": "2026-04-10T09:30:32Z"

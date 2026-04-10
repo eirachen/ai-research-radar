@@ -1,8 +1,8 @@
 {
   "generatedAt": "2026-04-10T09:22:37.611841Z",
   "since": "2026-03-01",
-  "totalPapers": 320,
-  "totalUniCollab": 55,
+  "totalPapers": 319,
+  "totalUniCollab": 54,
   "totalHKCollab": 10,
   "companies": {
     "bytedance": {
@@ -113,6 +113,64 @@
             "1ByteDanceSeed, 2PekingUniversity"
           ],
           "pdfHKUnis": []
+        },
+        {
+          "title": "Scaling Reasoning Tokens via RL and Parallel Thinking: Evidence From Competitive Programming",
+          "summary": "We study how to scale reasoning token budgets for competitive programming through two complementary approaches: training-time reinforcement learning (RL) and test-time parallel thinking. During RL training, we observe an approximately log-linear relationship between validation accuracy and the avera",
+          "published": "2026-04-01T18:05:49Z",
+          "arxivId": "2604.01302v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.01302v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.01302v1",
+          "authors": [
+            "Qianfan Zhang",
+            "Tianyu Guo",
+            "Xuandi Ren",
+            "Jiale Chen",
+            "Ming Ding",
+            "Ran Xin",
+            "Xia Xiao"
+          ],
+          "authorCount": 7,
+          "affiliations": [],
+          "categories": [
+            "cs.CL"
+          ],
+          "comment": "",
+          "universities": [
+            "普林斯顿大学 (Princeton)",
+            "斯坦福大学 (Stanford)",
+            "加州大学伯克利分校 (UC Berkeley)"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            }
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "bytedance"
+          ],
+          "pdfUnis": [
+            "1ByteDanceSeed, 2PrincetonUniversity, 3UCBerkeley, 4StanfordUniversity",
+            "Qianfan Zhang2,†, Tianyu Guo3,†, Xuandi Ren3,†, Jiale Chen4,†, Ming Ding1,"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "confirmed"
         },
         {
           "title": "Convex cocompact groups with three-dimensional limit sets",
@@ -278,6 +336,61 @@
           "collabConfidence": "mentioned"
         },
         {
+          "title": "LongFlow: Efficient KV Cache Compression for Reasoning M",
+          "summary": "Recent reasoning models such as OpenAI-o1 and DeepSeek-R1 have shown strong performance on complex tasks including mathematical reasoning and code generation. However, this performance gain comes with substantially longer output sequences, leading to significantly increased deployment costs. In part",
+          "published": "2026-03-12T03:46:35Z",
+          "arxivId": "2603.11504v1",
+          "arxivUrl": "http://arxiv.org/abs/2603.11504v1",
+          "pdfUrl": "https://arxiv.org/pdf/2603.11504v1",
+          "authors": [
+            "Yi Su",
+            "Zhenxu Tian",
+            "Dan Qiao",
+            "Yuechi Zhou",
+            "Juntao Li",
+            "Min Zhang"
+          ],
+          "authorCount": 6,
+          "affiliations": [],
+          "categories": [
+            "cs.LG",
+            "cs.CL"
+          ],
+          "comment": "",
+          "universities": [
+            "苏州大学 (Soochow)"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Math",
+              "label": "数学推理",
+              "color": "#06b6d4"
+            }
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "bytedance"
+          ],
+          "pdfUnis": [
+            "1SchoolofComputerScienceandTechnology,SoochowUniversity,China"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "confirmed"
+        },
+        {
           "title": "FireRedASR2S: A State-of-the-Art Industrial-Grade All-in-One Automatic Speech Recognition System",
           "summary": "We present FireRedASR2S, a state-of-the-art industrial-grade all-in-one automatic speech recognition (ASR) system. It integrates four modules in a unified pipeline: ASR, Voice Activity Detection (VAD), Spoken Language Identification (LID), and Punctuation Prediction (Punc). All modules achieve SOTA ",
           "published": "2026-03-11T05:11:06Z",
@@ -370,8 +483,8 @@
           "collabConfidence": "mentioned"
         }
       ],
-      "count": 8,
-      "uniCollabCount": 3,
+      "count": 10,
+      "uniCollabCount": 5,
       "hkCollabCount": 0
     },
     "alibaba": {
@@ -2062,6 +2175,64 @@
           ],
           "pdfHKUnis": [],
           "collabConfidence": "uni_only"
+        },
+        {
+          "title": "AgentHazard: A Benchmark for Evaluating Harmful Behavior in Computer-Use Agents",
+          "summary": "Computer-use agents extend language models from text generation to persistent action over tools, files, and execution environments. Unlike chat systems, they maintain state across interactions and translate intermediate outputs into concrete actions. This creates a distinct safety challenge in that ",
+          "published": "2026-04-03T10:29:31Z",
+          "arxivId": "2604.02947v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.02947v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.02947v1",
+          "authors": [
+            "Yunhao Feng",
+            "Yifan Ding",
+            "Yingshui Tan",
+            "Xingjun Ma",
+            "Yige Li",
+            "Yutao Wu",
+            "Yifeng Gao",
+            "Kun Zhai"
+          ],
+          "authorCount": 9,
+          "affiliations": [],
+          "categories": [
+            "cs.AI"
+          ],
+          "comment": "",
+          "universities": [
+            "复旦大学 (Fudan)",
+            "Deakin University"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "Safety",
+              "label": "安全",
+              "color": "#ef4444"
+            }
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "alibaba"
+          ],
+          "pdfUnis": [
+            "4DeakinUniversity,5SingaporeManagementUniversity",
+            "1AlibabaGroup,2FudanUniversity,3HunanInstituteofAdvancedTechnology"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "confirmed"
         },
         {
           "title": "Improving Role Consistency in Multi-Agent Collaboration via Quantitative Role Clarity",
@@ -4353,71 +4524,11 @@
           "pdfUnis": [],
           "pdfHKUnis": [],
           "collabConfidence": "none"
-        },
-        {
-          "title": "DeepResearch-9K: A Challenging Benchmark Dataset of Deep-Research Agent",
-          "summary": "Deep-research agents are capable of executing multi-step web exploration, targeted retrieval, and sophisticated question answering. Despite their powerful capabilities, deep-research agents face two critical bottlenecks: (1) the lack of large-scale, challenging datasets with real-world difficulty, a",
-          "published": "2026-03-01T15:36:10Z",
-          "arxivId": "2603.01152v1",
-          "arxivUrl": "http://arxiv.org/abs/2603.01152v1",
-          "pdfUrl": "https://arxiv.org/pdf/2603.01152v1",
-          "authors": [
-            "Tongzhou Wu",
-            "Yuhao Wang",
-            "Xinyu Ma",
-            "Xiuqiang He",
-            "Shuaiqiang Wang",
-            "Dawei Yin",
-            "Xiangyu Zhao"
-          ],
-          "authorCount": 7,
-          "affiliations": [],
-          "categories": [
-            "cs.AI"
-          ],
-          "comment": "6 pages, 4 figures",
-          "universities": [
-            "香港城市大学 (CityU)"
-          ],
-          "hkUniversities": [
-            "香港城市大学 (CityU)"
-          ],
-          "hasUniCollab": true,
-          "hasHKCollab": true,
-          "directions": [
-            {
-              "id": "RL",
-              "label": "强化学习",
-              "color": "#eab308"
-            },
-            {
-              "id": "Agent",
-              "label": "Agent",
-              "color": "#f97316"
-            },
-            {
-              "id": "RAG",
-              "label": "RAG/检索",
-              "color": "#64748b"
-            }
-          ],
-          "pdfVerified": true,
-          "pdfCompanies": [
-            "baidu"
-          ],
-          "pdfUnis": [
-            "CityUniversityofHongKong CityUniversityofHongKong BaiduInc.",
-            "TongzhouWu YuhaoWang XinyuMa"
-          ],
-          "pdfHKUnis": [
-            "CityU"
-          ],
-          "collabConfidence": "confirmed"
         }
       ],
       "count": 79,
       "uniCollabCount": 10,
-      "hkCollabCount": 5
+      "hkCollabCount": 4
     },
     "deepseek": {
       "company": "DeepSeek",
@@ -4994,54 +5105,6 @@
           "pdfHKUnis": []
         },
         {
-          "title": "Understanding Performance Gap Between Parallel and Sequential Sampling in Large Reasoning Models",
-          "summary": "Large Reasoning Models (LRMs) have shown remarkable performance on challenging questions, such as math and coding. However, to obtain a high quality solution, one may need to sample more than once. In principal, there are two sampling strategies that can be composed to form more complex processes: s",
-          "published": "2026-04-07T13:28:09Z",
-          "arxivId": "2604.05868v1",
-          "arxivUrl": "http://arxiv.org/abs/2604.05868v1",
-          "pdfUrl": "https://arxiv.org/pdf/2604.05868v1",
-          "authors": [
-            "Xiangming Gu",
-            "Soham De",
-            "Larisa Markeeva",
-            "Petar Veličković",
-            "Razvan Pascanu"
-          ],
-          "authorCount": 5,
-          "affiliations": [],
-          "categories": [
-            "cs.CL"
-          ],
-          "comment": "Under review",
-          "universities": [
-            "ANU"
-          ],
-          "hkUniversities": [],
-          "hasUniCollab": true,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "LLM",
-              "label": "LLM",
-              "color": "#3b82f6"
-            },
-            {
-              "id": "Code",
-              "label": "代码",
-              "color": "#8b5cf6"
-            }
-          ],
-          "collabConfidence": "confirmed",
-          "pdfVerified": true,
-          "pdfCompanies": [
-            "deepmind"
-          ],
-          "pdfUnis": [
-            "1GoogleDeepMind 2NationalUniversityofSingapore"
-          ],
-          "pdfHKUnis": []
-        },
-        {
           "title": "ETR: Entropy Trend Reward for Efficient Chain-of-Thought Reasoning",
           "summary": "Chain-of-thought (CoT) reasoning improves large language model performance on complex tasks, but often produces excessively long and inefficient reasoning traces. Existing methods shorten CoTs using length penalties or global entropy reduction, implicitly assuming that low uncertainty is desirable t",
           "published": "2026-04-07T02:53:36Z",
@@ -5602,64 +5665,6 @@
           "collabConfidence": "uni_only"
         },
         {
-          "title": "AgentHazard: A Benchmark for Evaluating Harmful Behavior in Computer-Use Agents",
-          "summary": "Computer-use agents extend language models from text generation to persistent action over tools, files, and execution environments. Unlike chat systems, they maintain state across interactions and translate intermediate outputs into concrete actions. This creates a distinct safety challenge in that ",
-          "published": "2026-04-03T10:29:31Z",
-          "arxivId": "2604.02947v1",
-          "arxivUrl": "http://arxiv.org/abs/2604.02947v1",
-          "pdfUrl": "https://arxiv.org/pdf/2604.02947v1",
-          "authors": [
-            "Yunhao Feng",
-            "Yifan Ding",
-            "Yingshui Tan",
-            "Xingjun Ma",
-            "Yige Li",
-            "Yutao Wu",
-            "Yifeng Gao",
-            "Kun Zhai"
-          ],
-          "authorCount": 9,
-          "affiliations": [],
-          "categories": [
-            "cs.AI"
-          ],
-          "comment": "",
-          "universities": [
-            "复旦大学 (Fudan)",
-            "Deakin University"
-          ],
-          "hkUniversities": [],
-          "hasUniCollab": true,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "LLM",
-              "label": "LLM",
-              "color": "#3b82f6"
-            },
-            {
-              "id": "Agent",
-              "label": "Agent",
-              "color": "#f97316"
-            },
-            {
-              "id": "Safety",
-              "label": "安全",
-              "color": "#ef4444"
-            }
-          ],
-          "pdfVerified": true,
-          "pdfCompanies": [
-            "alibaba"
-          ],
-          "pdfUnis": [
-            "4DeakinUniversity,5SingaporeManagementUniversity",
-            "1AlibabaGroup,2FudanUniversity,3HunanInstituteofAdvancedTechnology"
-          ],
-          "pdfHKUnis": [],
-          "collabConfidence": "confirmed"
-        },
-        {
           "title": "Single-Agent LLMs Outperform Multi-Agent Systems on Multi-Hop Reasoning Under Equal Thinking Token Budgets",
           "summary": "Recent work reports strong performance from multi-agent LLM systems (MAS), but these gains are often confounded by increased test-time computation. When computation is normalized, single-agent systems (SAS) can match or outperform MAS, yet the theoretical basis and evaluation methodology behind this",
           "published": "2026-04-02T18:47:48Z",
@@ -5872,59 +5877,6 @@
             "CityU"
           ],
           "collabConfidence": "uni_only"
-        },
-        {
-          "title": "DWDP: Distributed Weight Data Parallelism for High-Performance LLM Inference on NVL72",
-          "summary": "Large language model (LLM) inference increasingly depends on multi-GPU execution, yet existing inference parallelization strategies require layer-wise inter-rank synchronization, making end-to-end performance sensitive to workload imbalance. We present DWDP (Distributed Weight Data Parallelism), an ",
-          "published": "2026-04-02T05:00:08Z",
-          "arxivId": "2604.01621v1",
-          "arxivUrl": "http://arxiv.org/abs/2604.01621v1",
-          "pdfUrl": "https://arxiv.org/pdf/2604.01621v1",
-          "authors": [
-            "Wanqian Li",
-            "Jintao Peng",
-            "Zongfei Jing",
-            "Tianyu Zhang",
-            "Ze Long",
-            "Xianjie Qiao",
-            "Xiaoming Chen",
-            "Dongxu Yang"
-          ],
-          "authorCount": 10,
-          "affiliations": [],
-          "categories": [
-            "cs.DC",
-            "cs.AI"
-          ],
-          "comment": "Technical Report. 17 pages. 8 figures",
-          "universities": [
-            "NYU"
-          ],
-          "hkUniversities": [],
-          "hasUniCollab": true,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "Infra",
-              "label": "Infra",
-              "color": "#22c55e"
-            },
-            {
-              "id": "LLM",
-              "label": "LLM",
-              "color": "#3b82f6"
-            }
-          ],
-          "pdfVerified": true,
-          "pdfCompanies": [
-            "xiaomi",
-            "nvidia"
-          ],
-          "pdfUnis": [
-            "WanqianLi JintaoPeng ZongfeiJing TianyuZhang ZeLong XianjieQiao"
-          ],
-          "pdfHKUnis": [],
-          "collabConfidence": "confirmed"
         },
         {
           "title": "True (VIS) Lies: Analyzing How Generative AI Recognizes Intentionality, Rhetoric, and Misleadingness in Visualization Lies",
@@ -7576,8 +7528,8 @@
           "collabConfidence": "none"
         }
       ],
-      "count": 61,
-      "uniCollabCount": 9,
+      "count": 58,
+      "uniCollabCount": 6,
       "hkCollabCount": 2
     },
     "moonshot": {
@@ -7696,126 +7648,6 @@
           "pdfHKUnis": []
         },
         {
-          "title": "An Independent Safety Evaluation of Kimi K2.5",
-          "summary": "Kimi K2.5 is an open-weight LLM that rivals closed models across coding, multimodal, and agentic benchmarks, but was released without an accompanying safety evaluation. In this work, we conduct a preliminary safety assessment of Kimi K2.5 focusing on risks likely to be exacerbated by powerful open-w",
-          "published": "2026-04-03T15:45:35Z",
-          "arxivId": "2604.03121v1",
-          "arxivUrl": "http://arxiv.org/abs/2604.03121v1",
-          "pdfUrl": "https://arxiv.org/pdf/2604.03121v1",
-          "authors": [
-            "Zheng-Xin Yong",
-            "Parv Mahajan",
-            "Andy Wang",
-            "Ida Caspary",
-            "Yernat Yestekov",
-            "Zora Che",
-            "Mosh Levy",
-            "Elle Najt"
-          ],
-          "authorCount": 15,
-          "affiliations": [],
-          "categories": [
-            "cs.CR",
-            "cs.AI",
-            "cs.CL"
-          ],
-          "comment": "",
-          "universities": [
-            "CAS",
-            "Mila"
-          ],
-          "hkUniversities": [],
-          "hasUniCollab": true,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "Safety",
-              "label": "安全",
-              "color": "#ef4444"
-            },
-            {
-              "id": "LLM",
-              "label": "LLM",
-              "color": "#3b82f6"
-            },
-            {
-              "id": "Agent",
-              "label": "Agent",
-              "color": "#f97316"
-            }
-          ],
-          "collabConfidence": "confirmed",
-          "pdfVerified": true,
-          "pdfCompanies": [
-            "anthropic"
-          ],
-          "pdfUnis": [
-            "6University of Maryland, College Park 7Georgia Institute of Technology",
-            "Ida Caspary1,5 Yernat Yestekov2 Zora Che1,6",
-            "1Constellation 2Anthropic Fellows Program 3Brown University",
-            "4University of Wisconsin-Madison 5Imperial College London"
-          ],
-          "pdfHKUnis": []
-        },
-        {
-          "title": "AgentHazard: A Benchmark for Evaluating Harmful Behavior in Computer-Use Agents",
-          "summary": "Computer-use agents extend language models from text generation to persistent action over tools, files, and execution environments. Unlike chat systems, they maintain state across interactions and translate intermediate outputs into concrete actions. This creates a distinct safety challenge in that ",
-          "published": "2026-04-03T10:29:31Z",
-          "arxivId": "2604.02947v1",
-          "arxivUrl": "http://arxiv.org/abs/2604.02947v1",
-          "pdfUrl": "https://arxiv.org/pdf/2604.02947v1",
-          "authors": [
-            "Yunhao Feng",
-            "Yifan Ding",
-            "Yingshui Tan",
-            "Xingjun Ma",
-            "Yige Li",
-            "Yutao Wu",
-            "Yifeng Gao",
-            "Kun Zhai"
-          ],
-          "authorCount": 9,
-          "affiliations": [],
-          "categories": [
-            "cs.AI"
-          ],
-          "comment": "",
-          "universities": [
-            "复旦大学 (Fudan)",
-            "Deakin University"
-          ],
-          "hkUniversities": [],
-          "hasUniCollab": true,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "LLM",
-              "label": "LLM",
-              "color": "#3b82f6"
-            },
-            {
-              "id": "Agent",
-              "label": "Agent",
-              "color": "#f97316"
-            },
-            {
-              "id": "Safety",
-              "label": "安全",
-              "color": "#ef4444"
-            }
-          ],
-          "collabConfidence": "confirmed",
-          "pdfVerified": true,
-          "pdfCompanies": [
-            "alibaba"
-          ],
-          "pdfUnis": [
-            "4DeakinUniversity,5SingaporeManagementUniversity",
-            "1AlibabaGroup,2FudanUniversity,3HunanInstituteofAdvancedTechnology"
-          ],
-          "pdfHKUnis": []
-        },
-        {
           "title": "True (VIS) Lies: Analyzing How Generative AI Recognizes Intentionality, Rhetoric, and Misleadingness in Visualization Lies",
           "summary": "This study investigates the ability of multimodal Large Language Models (LLMs) to identify and interpret misleading visualizations, and recognize these observations along with their underlying causes and potential intentionality. Our analysis leverages concepts from visualization rhetoric and a newl",
           "published": "2026-04-01T17:33:10Z",
@@ -7867,68 +7699,6 @@
           ],
           "pdfHKUnis": [],
           "collabConfidence": "uni_only"
-        },
-        {
-          "title": "EvA: An Evidence-First Audio Understanding Paradigm for LALMs",
-          "summary": "Large Audio Language Models (LALMs) still struggle in complex acoustic scenes because they often fail to preserve task-relevant acoustic evidence before reasoning begins. We call this failure the evidence bottleneck: state-of-the-art systems show larger deficits in evidence extraction than in downst",
-          "published": "2026-03-29T12:32:04Z",
-          "arxivId": "2603.27667v1",
-          "arxivUrl": "http://arxiv.org/abs/2603.27667v1",
-          "pdfUrl": "https://arxiv.org/pdf/2603.27667v1",
-          "authors": [
-            "Xinyuan Xie",
-            "Shunian Chen",
-            "Zhiheng Liu",
-            "Yuhao Zhang",
-            "Zhiqiang Lv",
-            "Liyin Liang",
-            "Benyou Wang"
-          ],
-          "authorCount": 7,
-          "affiliations": [],
-          "categories": [
-            "cs.SD",
-            "cs.AI"
-          ],
-          "comment": "",
-          "universities": [
-            "香港中文大学 (CUHK)"
-          ],
-          "hkUniversities": [
-            "香港中文大学 (CUHK)"
-          ],
-          "hasUniCollab": true,
-          "hasHKCollab": true,
-          "directions": [
-            {
-              "id": "LLM",
-              "label": "LLM",
-              "color": "#3b82f6"
-            },
-            {
-              "id": "Infra",
-              "label": "Infra",
-              "color": "#22c55e"
-            },
-            {
-              "id": "RL",
-              "label": "强化学习",
-              "color": "#eab308"
-            }
-          ],
-          "pdfVerified": true,
-          "pdfCompanies": [
-            "didi"
-          ],
-          "pdfUnis": [
-            "TheChineseUniversityofHongKong,Shenzhen1,DidiChuxing2",
-            "wangbenyou@cuhk.edu.cn",
-            "XinyuanXie1,2* , ShunianChen1* , ZhihengLiu1, YuhaoZhang1"
-          ],
-          "pdfHKUnis": [
-            "CUHK"
-          ],
-          "collabConfidence": "confirmed"
         },
         {
           "title": "When Perplexity Lies: Generation-Focused Distillation of Hybrid Sequence Models",
@@ -8539,9 +8309,9 @@
           "collabConfidence": "uni_only"
         }
       ],
-      "count": 18,
-      "uniCollabCount": 5,
-      "hkCollabCount": 2
+      "count": 15,
+      "uniCollabCount": 2,
+      "hkCollabCount": 1
     },
     "openai": {
       "company": "OpenAI",
@@ -10671,62 +10441,6 @@
           "collabConfidence": "uni_only"
         },
         {
-          "title": "CatRAG: Functor-Guided Structural Debiasing with Retrieval Augmentation for Fair LLMs",
-          "summary": "Large Language Models (LLMs) are deployed in high-stakes settings but can show demographic, gender, and geographic biases that undermine fairness and trust. Prior debiasing methods, including embedding-space projections, prompt-based steering, and causal interventions, often act at a single stage of",
-          "published": "2026-03-23T03:33:13Z",
-          "arxivId": "2603.21524v1",
-          "arxivUrl": "http://arxiv.org/abs/2603.21524v1",
-          "pdfUrl": "https://arxiv.org/pdf/2603.21524v1",
-          "authors": [
-            "Ravi Ranjan",
-            "Utkarsh Grover",
-            "Mayur Akewar",
-            "Xiaomin Lin",
-            "Agoritsa Polyzou"
-          ],
-          "authorCount": 5,
-          "affiliations": [],
-          "categories": [
-            "cs.CL",
-            "cs.AI"
-          ],
-          "comment": "9 pages, 4 figures, and accepted in IJCNN 2026 (part of IEEE WCCI 2026)",
-          "universities": [
-            "Florida International University",
-            "University of South Florida"
-          ],
-          "hkUniversities": [],
-          "hasUniCollab": true,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "LLM",
-              "label": "LLM",
-              "color": "#3b82f6"
-            },
-            {
-              "id": "RAG",
-              "label": "RAG/检索",
-              "color": "#64748b"
-            },
-            {
-              "id": "Safety",
-              "label": "安全",
-              "color": "#ef4444"
-            }
-          ],
-          "pdfVerified": true,
-          "pdfCompanies": [
-            "xiaomi",
-            "meta"
-          ],
-          "pdfUnis": [
-            "Florida International University University of South Florida Florida Internation"
-          ],
-          "pdfHKUnis": [],
-          "collabConfidence": "confirmed"
-        },
-        {
           "title": "Revenue-Sharing as Infrastructure: A Distributed Business Model for Generative AI Platforms",
           "summary": "Generative AI platforms (Google AI Studio, OpenAI, Anthropic) provide infrastructures (APIs, models) that are transforming the application development ecosystem. Recent literature distinguishes three generations of business models: a first generation modeled on cloud computing (pay-per-use), a secon",
           "published": "2026-03-20T22:02:51Z",
@@ -11136,61 +10850,6 @@
           "collabConfidence": "uni_only"
         },
         {
-          "title": "LongFlow: Efficient KV Cache Compression for Reasoning M",
-          "summary": "Recent reasoning models such as OpenAI-o1 and DeepSeek-R1 have shown strong performance on complex tasks including mathematical reasoning and code generation. However, this performance gain comes with substantially longer output sequences, leading to significantly increased deployment costs. In part",
-          "published": "2026-03-12T03:46:35Z",
-          "arxivId": "2603.11504v1",
-          "arxivUrl": "http://arxiv.org/abs/2603.11504v1",
-          "pdfUrl": "https://arxiv.org/pdf/2603.11504v1",
-          "authors": [
-            "Yi Su",
-            "Zhenxu Tian",
-            "Dan Qiao",
-            "Yuechi Zhou",
-            "Juntao Li",
-            "Min Zhang"
-          ],
-          "authorCount": 6,
-          "affiliations": [],
-          "categories": [
-            "cs.LG",
-            "cs.CL"
-          ],
-          "comment": "",
-          "universities": [
-            "苏州大学 (Soochow)"
-          ],
-          "hkUniversities": [],
-          "hasUniCollab": true,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "Infra",
-              "label": "Infra",
-              "color": "#22c55e"
-            },
-            {
-              "id": "LLM",
-              "label": "LLM",
-              "color": "#3b82f6"
-            },
-            {
-              "id": "Math",
-              "label": "数学推理",
-              "color": "#06b6d4"
-            }
-          ],
-          "pdfVerified": true,
-          "pdfCompanies": [
-            "bytedance"
-          ],
-          "pdfUnis": [
-            "1SchoolofComputerScienceandTechnology,SoochowUniversity,China"
-          ],
-          "pdfHKUnis": [],
-          "collabConfidence": "confirmed"
-        },
-        {
           "title": "Try, Check and Retry: A Divide-and-Conquer Framework for Boosting Long-context Tool-Calling Performance of LLMs",
           "summary": "Tool-calling empowers Large Language Models (LLMs) to interact with external environments. However, current methods often struggle to handle massive and noisy candidate tools in long-context tool-calling tasks, limiting their real-world application. To this end, we propose Tool-DC, a Divide-and-Conq",
           "published": "2026-03-12T03:30:01Z",
@@ -11419,8 +11078,8 @@
           "collabConfidence": "confirmed"
         }
       ],
-      "count": 57,
-      "uniCollabCount": 11,
+      "count": 55,
+      "uniCollabCount": 9,
       "hkCollabCount": 0
     },
     "deepmind": {
@@ -11471,6 +11130,54 @@
           "pdfUnis": [
             "Visvesvaraya Technological University (VTU), Belagavi, India",
             "Department of Computer Science and Engineering,"
+          ],
+          "pdfHKUnis": []
+        },
+        {
+          "title": "Understanding Performance Gap Between Parallel and Sequential Sampling in Large Reasoning Models",
+          "summary": "Large Reasoning Models (LRMs) have shown remarkable performance on challenging questions, such as math and coding. However, to obtain a high quality solution, one may need to sample more than once. In principal, there are two sampling strategies that can be composed to form more complex processes: s",
+          "published": "2026-04-07T13:28:09Z",
+          "arxivId": "2604.05868v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.05868v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.05868v1",
+          "authors": [
+            "Xiangming Gu",
+            "Soham De",
+            "Larisa Markeeva",
+            "Petar Veličković",
+            "Razvan Pascanu"
+          ],
+          "authorCount": 5,
+          "affiliations": [],
+          "categories": [
+            "cs.CL"
+          ],
+          "comment": "Under review",
+          "universities": [
+            "ANU"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Code",
+              "label": "代码",
+              "color": "#8b5cf6"
+            }
+          ],
+          "collabConfidence": "confirmed",
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "deepmind"
+          ],
+          "pdfUnis": [
+            "1GoogleDeepMind 2NationalUniversityofSingapore"
           ],
           "pdfHKUnis": []
         },
@@ -12064,8 +11771,8 @@
           "collabConfidence": "none"
         }
       ],
-      "count": 13,
-      "uniCollabCount": 0,
+      "count": 14,
+      "uniCollabCount": 1,
       "hkCollabCount": 0
     },
     "anthropic": {
@@ -12374,6 +12081,68 @@
           "pdfUnis": [
             "ZimoJi1 ZongjieLi1 WenyuanJiang2 YudongGao1 ShuaiWang1∗",
             "1HongKongUniversityofScienceandTechnology 2ETHZurich"
+          ],
+          "pdfHKUnis": []
+        },
+        {
+          "title": "An Independent Safety Evaluation of Kimi K2.5",
+          "summary": "Kimi K2.5 is an open-weight LLM that rivals closed models across coding, multimodal, and agentic benchmarks, but was released without an accompanying safety evaluation. In this work, we conduct a preliminary safety assessment of Kimi K2.5 focusing on risks likely to be exacerbated by powerful open-w",
+          "published": "2026-04-03T15:45:35Z",
+          "arxivId": "2604.03121v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.03121v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.03121v1",
+          "authors": [
+            "Zheng-Xin Yong",
+            "Parv Mahajan",
+            "Andy Wang",
+            "Ida Caspary",
+            "Yernat Yestekov",
+            "Zora Che",
+            "Mosh Levy",
+            "Elle Najt"
+          ],
+          "authorCount": 15,
+          "affiliations": [],
+          "categories": [
+            "cs.CR",
+            "cs.AI",
+            "cs.CL"
+          ],
+          "comment": "",
+          "universities": [
+            "CAS",
+            "Mila"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Safety",
+              "label": "安全",
+              "color": "#ef4444"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            }
+          ],
+          "collabConfidence": "confirmed",
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "anthropic"
+          ],
+          "pdfUnis": [
+            "6University of Maryland, College Park 7Georgia Institute of Technology",
+            "Ida Caspary1,5 Yernat Yestekov2 Zora Che1,6",
+            "1Constellation 2Anthropic Fellows Program 3Brown University",
+            "4University of Wisconsin-Madison 5Imperial College London"
           ],
           "pdfHKUnis": []
         },
@@ -14086,8 +13855,8 @@
           "collabConfidence": "uni_only"
         }
       ],
-      "count": 41,
-      "uniCollabCount": 6,
+      "count": 42,
+      "uniCollabCount": 7,
       "hkCollabCount": 0
     },
     "nvidia": {
@@ -14369,57 +14138,6 @@
           "pdfCompanies": [],
           "pdfUnis": [
             "*KTH Royal Institute of Technology, Stockholm, Sweden"
-          ],
-          "pdfHKUnis": []
-        },
-        {
-          "title": "VDPP: Video Depth Post-Processing for Speed and Scalability",
-          "summary": "Video depth estimation is essential for providing 3D scene structure in applications ranging from autonomous driving to mixed reality. Current end-to-end video depth models have established state-of-the-art performance. Although current end-to-end (E2E) models have achieved state-of-the-art performa",
-          "published": "2026-04-08T04:33:29Z",
-          "arxivId": "2604.06665v1",
-          "arxivUrl": "http://arxiv.org/abs/2604.06665v1",
-          "pdfUrl": "https://arxiv.org/pdf/2604.06665v1",
-          "authors": [
-            "Daewon Yoon",
-            "Injun Baek",
-            "Sangyu Han",
-            "Yearim Kim",
-            "Nojun Kwak"
-          ],
-          "authorCount": 5,
-          "affiliations": [],
-          "categories": [
-            "cs.CV"
-          ],
-          "comment": "8 pages, 6 figures. Accepted to CVPR 2024 Workshop. Project page: https://github.com/injun-baek/VDPP",
-          "universities": [
-            "ETH",
-            "MIT",
-            "HIT"
-          ],
-          "hkUniversities": [],
-          "hasUniCollab": true,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "Agent",
-              "label": "Agent",
-              "color": "#f97316"
-            },
-            {
-              "id": "Vision",
-              "label": "视觉",
-              "color": "#ec4899"
-            }
-          ],
-          "collabConfidence": "confirmed",
-          "pdfVerified": true,
-          "pdfCompanies": [
-            "meta"
-          ],
-          "pdfUnis": [
-            "1 SeoulNationalUniversity 2 SamsungElectronics",
-            "Figure 1. VDPPachieves superior speed, spatialaccuracy and temporalconsistency a"
           ],
           "pdfHKUnis": []
         },
@@ -14936,8 +14654,8 @@
           "pdfHKUnis": []
         }
       ],
-      "count": 16,
-      "uniCollabCount": 4,
+      "count": 15,
+      "uniCollabCount": 3,
       "hkCollabCount": 1
     },
     "kuaishou": {
@@ -15329,64 +15047,6 @@
           "pdfUnis": [],
           "pdfHKUnis": [],
           "collabConfidence": "none"
-        },
-        {
-          "title": "Scaling Reasoning Tokens via RL and Parallel Thinking: Evidence From Competitive Programming",
-          "summary": "We study how to scale reasoning token budgets for competitive programming through two complementary approaches: training-time reinforcement learning (RL) and test-time parallel thinking. During RL training, we observe an approximately log-linear relationship between validation accuracy and the avera",
-          "published": "2026-04-01T18:05:49Z",
-          "arxivId": "2604.01302v1",
-          "arxivUrl": "http://arxiv.org/abs/2604.01302v1",
-          "pdfUrl": "https://arxiv.org/pdf/2604.01302v1",
-          "authors": [
-            "Qianfan Zhang",
-            "Tianyu Guo",
-            "Xuandi Ren",
-            "Jiale Chen",
-            "Ming Ding",
-            "Ran Xin",
-            "Xia Xiao"
-          ],
-          "authorCount": 7,
-          "affiliations": [],
-          "categories": [
-            "cs.CL"
-          ],
-          "comment": "",
-          "universities": [
-            "普林斯顿大学 (Princeton)",
-            "斯坦福大学 (Stanford)",
-            "加州大学伯克利分校 (UC Berkeley)"
-          ],
-          "hkUniversities": [],
-          "hasUniCollab": true,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "LLM",
-              "label": "LLM",
-              "color": "#3b82f6"
-            },
-            {
-              "id": "RL",
-              "label": "强化学习",
-              "color": "#eab308"
-            },
-            {
-              "id": "RAG",
-              "label": "RAG/检索",
-              "color": "#64748b"
-            }
-          ],
-          "pdfVerified": true,
-          "pdfCompanies": [
-            "bytedance"
-          ],
-          "pdfUnis": [
-            "1ByteDanceSeed, 2PrincetonUniversity, 3UCBerkeley, 4StanfordUniversity",
-            "Qianfan Zhang2,†, Tianyu Guo3,†, Xuandi Ren3,†, Jiale Chen4,†, Ming Ding1,"
-          ],
-          "pdfHKUnis": [],
-          "collabConfidence": "confirmed"
         },
         {
           "title": "True (VIS) Lies: Analyzing How Generative AI Recognizes Intentionality, Rhetoric, and Misleadingness in Visualization Lies",
@@ -15830,11 +15490,71 @@
           ],
           "pdfHKUnis": [],
           "collabConfidence": "uni_only"
+        },
+        {
+          "title": "DeepResearch-9K: A Challenging Benchmark Dataset of Deep-Research Agent",
+          "summary": "Deep-research agents are capable of executing multi-step web exploration, targeted retrieval, and sophisticated question answering. Despite their powerful capabilities, deep-research agents face two critical bottlenecks: (1) the lack of large-scale, challenging datasets with real-world difficulty, a",
+          "published": "2026-03-01T15:36:10Z",
+          "arxivId": "2603.01152v1",
+          "arxivUrl": "http://arxiv.org/abs/2603.01152v1",
+          "pdfUrl": "https://arxiv.org/pdf/2603.01152v1",
+          "authors": [
+            "Tongzhou Wu",
+            "Yuhao Wang",
+            "Xinyu Ma",
+            "Xiuqiang He",
+            "Shuaiqiang Wang",
+            "Dawei Yin",
+            "Xiangyu Zhao"
+          ],
+          "authorCount": 7,
+          "affiliations": [],
+          "categories": [
+            "cs.AI"
+          ],
+          "comment": "6 pages, 4 figures",
+          "universities": [
+            "香港城市大学 (CityU)"
+          ],
+          "hkUniversities": [
+            "香港城市大学 (CityU)"
+          ],
+          "hasUniCollab": true,
+          "hasHKCollab": true,
+          "directions": [
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            }
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "baidu"
+          ],
+          "pdfUnis": [
+            "CityUniversityofHongKong CityUniversityofHongKong BaiduInc.",
+            "TongzhouWu YuhaoWang XinyuMa"
+          ],
+          "pdfHKUnis": [
+            "CityU"
+          ],
+          "collabConfidence": "confirmed"
         }
       ],
       "count": 11,
       "uniCollabCount": 1,
-      "hkCollabCount": 0
+      "hkCollabCount": 1
     },
     "xiaomi": {
       "company": "小米",
@@ -15897,6 +15617,59 @@
             "Long Chen2, Hongwei Xie2, Bing Wang2, Guang Chen2, Hangjun Ye2, Wenyu Liu1,",
             "nuScenes and closed-loop evaluation on Bench2Drive. Moreover, it demonstrates st",
             "1Huazhong University of Science and Technology 2Xiaomi EV 3SKL-IOTSC, University"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "confirmed"
+        },
+        {
+          "title": "DWDP: Distributed Weight Data Parallelism for High-Performance LLM Inference on NVL72",
+          "summary": "Large language model (LLM) inference increasingly depends on multi-GPU execution, yet existing inference parallelization strategies require layer-wise inter-rank synchronization, making end-to-end performance sensitive to workload imbalance. We present DWDP (Distributed Weight Data Parallelism), an ",
+          "published": "2026-04-02T05:00:08Z",
+          "arxivId": "2604.01621v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.01621v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.01621v1",
+          "authors": [
+            "Wanqian Li",
+            "Jintao Peng",
+            "Zongfei Jing",
+            "Tianyu Zhang",
+            "Ze Long",
+            "Xianjie Qiao",
+            "Xiaoming Chen",
+            "Dongxu Yang"
+          ],
+          "authorCount": 10,
+          "affiliations": [],
+          "categories": [
+            "cs.DC",
+            "cs.AI"
+          ],
+          "comment": "Technical Report. 17 pages. 8 figures",
+          "universities": [
+            "NYU"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            }
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "xiaomi",
+            "nvidia"
+          ],
+          "pdfUnis": [
+            "WanqianLi JintaoPeng ZongfeiJing TianyuZhang ZeLong XianjieQiao"
           ],
           "pdfHKUnis": [],
           "collabConfidence": "confirmed"
@@ -16010,16 +15783,123 @@
           ],
           "pdfHKUnis": [],
           "collabConfidence": "confirmed"
+        },
+        {
+          "title": "CatRAG: Functor-Guided Structural Debiasing with Retrieval Augmentation for Fair LLMs",
+          "summary": "Large Language Models (LLMs) are deployed in high-stakes settings but can show demographic, gender, and geographic biases that undermine fairness and trust. Prior debiasing methods, including embedding-space projections, prompt-based steering, and causal interventions, often act at a single stage of",
+          "published": "2026-03-23T03:33:13Z",
+          "arxivId": "2603.21524v1",
+          "arxivUrl": "http://arxiv.org/abs/2603.21524v1",
+          "pdfUrl": "https://arxiv.org/pdf/2603.21524v1",
+          "authors": [
+            "Ravi Ranjan",
+            "Utkarsh Grover",
+            "Mayur Akewar",
+            "Xiaomin Lin",
+            "Agoritsa Polyzou"
+          ],
+          "authorCount": 5,
+          "affiliations": [],
+          "categories": [
+            "cs.CL",
+            "cs.AI"
+          ],
+          "comment": "9 pages, 4 figures, and accepted in IJCNN 2026 (part of IEEE WCCI 2026)",
+          "universities": [
+            "Florida International University",
+            "University of South Florida"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            },
+            {
+              "id": "Safety",
+              "label": "安全",
+              "color": "#ef4444"
+            }
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "xiaomi",
+            "meta"
+          ],
+          "pdfUnis": [
+            "Florida International University University of South Florida Florida Internation"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "confirmed"
         }
       ],
-      "count": 3,
-      "uniCollabCount": 2,
+      "count": 5,
+      "uniCollabCount": 4,
       "hkCollabCount": 0
     },
     "meta": {
       "company": "Meta AI",
       "icon": "📘",
       "papers": [
+        {
+          "title": "VDPP: Video Depth Post-Processing for Speed and Scalability",
+          "summary": "Video depth estimation is essential for providing 3D scene structure in applications ranging from autonomous driving to mixed reality. Current end-to-end video depth models have established state-of-the-art performance. Although current end-to-end (E2E) models have achieved state-of-the-art performa",
+          "published": "2026-04-08T04:33:29Z",
+          "arxivId": "2604.06665v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.06665v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.06665v1",
+          "authors": [
+            "Daewon Yoon",
+            "Injun Baek",
+            "Sangyu Han",
+            "Yearim Kim",
+            "Nojun Kwak"
+          ],
+          "authorCount": 5,
+          "affiliations": [],
+          "categories": [
+            "cs.CV"
+          ],
+          "comment": "8 pages, 6 figures. Accepted to CVPR 2024 Workshop. Project page: https://github.com/injun-baek/VDPP",
+          "universities": [
+            "ETH",
+            "MIT",
+            "HIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "Vision",
+              "label": "视觉",
+              "color": "#ec4899"
+            }
+          ],
+          "collabConfidence": "confirmed",
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "meta"
+          ],
+          "pdfUnis": [
+            "1 SeoulNationalUniversity 2 SamsungElectronics",
+            "Figure 1. VDPPachieves superior speed, spatialaccuracy and temporalconsistency a"
+          ],
+          "pdfHKUnis": []
+        },
         {
           "title": "Neural Computers",
           "summary": "We propose a new frontier: Neural Computers (NCs) -- an emerging machine form that unifies computation, memory, and I/O in a learned runtime state. Unlike conventional computers, which execute explicit programs, agents, which act over external execution environments, and world models, which learn en",
@@ -16225,8 +16105,8 @@
           "collabConfidence": "none"
         }
       ],
-      "count": 4,
-      "uniCollabCount": 1,
+      "count": 5,
+      "uniCollabCount": 2,
       "hkCollabCount": 0
     },
     "taotian": {
@@ -16400,6 +16280,77 @@
       "count": 3,
       "uniCollabCount": 2,
       "hkCollabCount": 0
+    },
+    "didi": {
+      "company": "滴滴",
+      "icon": "🚕",
+      "papers": [
+        {
+          "title": "EvA: An Evidence-First Audio Understanding Paradigm for LALMs",
+          "summary": "Large Audio Language Models (LALMs) still struggle in complex acoustic scenes because they often fail to preserve task-relevant acoustic evidence before reasoning begins. We call this failure the evidence bottleneck: state-of-the-art systems show larger deficits in evidence extraction than in downst",
+          "published": "2026-03-29T12:32:04Z",
+          "arxivId": "2603.27667v1",
+          "arxivUrl": "http://arxiv.org/abs/2603.27667v1",
+          "pdfUrl": "https://arxiv.org/pdf/2603.27667v1",
+          "authors": [
+            "Xinyuan Xie",
+            "Shunian Chen",
+            "Zhiheng Liu",
+            "Yuhao Zhang",
+            "Zhiqiang Lv",
+            "Liyin Liang",
+            "Benyou Wang"
+          ],
+          "authorCount": 7,
+          "affiliations": [],
+          "categories": [
+            "cs.SD",
+            "cs.AI"
+          ],
+          "comment": "",
+          "universities": [
+            "香港中文大学 (CUHK)"
+          ],
+          "hkUniversities": [
+            "香港中文大学 (CUHK)"
+          ],
+          "hasUniCollab": true,
+          "hasHKCollab": true,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            }
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "didi"
+          ],
+          "pdfUnis": [
+            "wangbenyou@cuhk.edu.cn",
+            "XinyuanXie1,2* , ShunianChen1* , ZhihengLiu1, YuhaoZhang1",
+            "TheChineseUniversityofHongKong,Shenzhen1,DidiChuxing2"
+          ],
+          "pdfHKUnis": [
+            "CUHK"
+          ],
+          "collabConfidence": "confirmed"
+        }
+      ],
+      "count": 1,
+      "uniCollabCount": 1,
+      "hkCollabCount": 1
     }
   }
 }

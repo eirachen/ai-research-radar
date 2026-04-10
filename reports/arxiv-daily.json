@@ -2,7 +2,7 @@
   "generatedAt": "2026-04-10T09:22:37.611841Z",
   "since": "2026-03-01",
   "totalPapers": 320,
-  "totalUniCollab": 98,
+  "totalUniCollab": 85,
   "totalHKCollab": 8,
   "companies": {
     "bytedance": {
@@ -388,11 +388,10 @@
           ],
           "comment": "9 pages (+ references and appendix). Under review at ACL Rolling Review",
           "universities": [
-            "ETH",
-            "HIT"
+            "Sheffield"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -411,8 +410,13 @@
               "color": "#06b6d4"
             }
           ],
-          "collabConfidence": "mentioned",
-          "pdfVerified": false
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "UniversityofSheffield UniversityofSheffield"
+          ],
+          "pdfHKUnis": []
         },
         {
           "title": "TSUBASA: Improving Long-Horizon Personalization via Evolving Memory and Self-Learning with Context Distillation",
@@ -432,7 +436,9 @@
             "cs.AI"
           ],
           "comment": "",
-          "universities": [],
+          "universities": [
+            "UMich"
+          ],
           "hkUniversities": [],
           "hasUniCollab": false,
           "hasHKCollab": false,
@@ -453,8 +459,13 @@
               "color": "#78716c"
             }
           ],
-          "collabConfidence": "none",
-          "pdfVerified": false
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "ComputerScienceandEngineering,UniversityofMichigan,AnnArbor,MI"
+          ],
+          "pdfHKUnis": []
         },
         {
           "title": "From Debate to Decision: Conformal Social Choice for Safe Multi-Agent Deliberation",
@@ -486,7 +497,7 @@
             "MIT"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -505,8 +516,11 @@
               "color": "#ef4444"
             }
           ],
-          "collabConfidence": "mentioned",
-          "pdfVerified": false
+          "collabConfidence": "none",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": []
         },
         {
           "title": "The ATOM Report: Measuring the Open Language Model Ecosystem",
@@ -4304,7 +4318,7 @@
         }
       ],
       "count": 79,
-      "uniCollabCount": 19,
+      "uniCollabCount": 17,
       "hkCollabCount": 4
     },
     "deepseek": {
@@ -4338,7 +4352,7 @@
             "HIT"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -4357,8 +4371,15 @@
               "color": "#64748b"
             }
           ],
-          "collabConfidence": "mentioned",
-          "pdfVerified": false
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "NationalUniversityofDefenseTechnology",
+            "CollegeofComputerScienceandTechnology,",
+            "NationalKeyLaboratoryofParallelandDistributedComputing,"
+          ],
+          "pdfHKUnis": []
         },
         {
           "title": "ImplicitMemBench: Measuring Unconscious Behavioral Adaptation in Large Language Models",
@@ -4385,7 +4406,7 @@
             "HIT"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -4404,8 +4425,17 @@
               "color": "#f97316"
             }
           ],
-          "collabConfidence": "mentioned",
-          "pdfVerified": false
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "2HarbinInstituteofTechnology",
+            "qinch@connect.hku.hk, fengxc@hku.hk",
+            "1TheUniversityofHongKong"
+          ],
+          "pdfHKUnis": [
+            "HKU"
+          ]
         },
         {
           "title": "From Debate to Decision: Conformal Social Choice for Safe Multi-Agent Deliberation",
@@ -4437,7 +4467,7 @@
             "MIT"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -4456,8 +4486,11 @@
               "color": "#ef4444"
             }
           ],
-          "collabConfidence": "mentioned",
-          "pdfVerified": false
+          "collabConfidence": "none",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": []
         },
         {
           "title": "Have LLM-associated terms increased in article full texts in all fields?",
@@ -7357,7 +7390,7 @@
         }
       ],
       "count": 61,
-      "uniCollabCount": 16,
+      "uniCollabCount": 13,
       "hkCollabCount": 2
     },
     "moonshot": {
@@ -7389,10 +7422,11 @@
           ],
           "comment": "",
           "universities": [
-            "NUS"
+            "PKU",
+            "THU"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -7411,8 +7445,13 @@
               "color": "#a855f7"
             }
           ],
-          "collabConfidence": "mentioned",
-          "pdfVerified": false
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "1PekingUniversity 2TheChineseUniversityofHongKong,Shenzhen 3TsinghuaUniversity 4"
+          ],
+          "pdfHKUnis": []
         },
         {
           "title": "EduIllustrate: Towards Scalable Automated Generation Of Multimodal Educational Content",
@@ -8289,7 +8328,7 @@
         }
       ],
       "count": 18,
-      "uniCollabCount": 6,
+      "uniCollabCount": 5,
       "hkCollabCount": 2
     },
     "openai": {
@@ -8319,7 +8358,7 @@
             "MIT"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -8338,8 +8377,11 @@
               "color": "#eab308"
             }
           ],
-          "collabConfidence": "mentioned",
-          "pdfVerified": false
+          "collabConfidence": "none",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": []
         },
         {
           "title": "Clickbait detection: quick inference with maximum impact",
@@ -8362,10 +8404,10 @@
           ],
           "comment": "Accepted Student competition ICCS 2026",
           "universities": [
-            "NTU"
+            "Warsaw"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -8384,8 +8426,15 @@
               "color": "#64748b"
             }
           ],
-          "collabConfidence": "mentioned",
-          "pdfVerified": false
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "1 FacultyofMathematicsandInformationScience,WarsawUniversityofTechnology,",
+            "3 Systems Research Institute, Polish Academy of Sciences, Newelska 6, 01-447",
+            "Soveatin Kuntur1[0000−0001−6029−941X], Panggih Kusuma"
+          ],
+          "pdfHKUnis": []
         },
         {
           "title": "More Capable, Less Cooperative? When LLMs Fail At Zero-Cost Collaboration",
@@ -8411,7 +8460,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -8425,8 +8474,13 @@
               "color": "#f97316"
             }
           ],
-          "collabConfidence": "mentioned",
-          "pdfVerified": false
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "UniversityofIllinoisUrbana-Champaign UKAISecurityInstitute"
+          ],
+          "pdfHKUnis": []
         },
         {
           "title": "Nesterov Flow May Travel Infinitely Long to Converge to a Minimizer",
@@ -11092,7 +11146,7 @@
         }
       ],
       "count": 57,
-      "uniCollabCount": 19,
+      "uniCollabCount": 16,
       "hkCollabCount": 0
     },
     "deepmind": {
@@ -11756,7 +11810,7 @@
             "MIT"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -11775,8 +11829,11 @@
               "color": "#eab308"
             }
           ],
-          "collabConfidence": "mentioned",
-          "pdfVerified": false
+          "collabConfidence": "none",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": []
         },
         {
           "title": "EigentSearch-Q+: Enhancing Deep Research Agents with Structured Reasoning Tools",
@@ -11802,10 +11859,11 @@
           ],
           "comment": "",
           "universities": [
-            "CAS"
+            "NEU",
+            "Oslo"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -11824,8 +11882,13 @@
               "color": "#3b82f6"
             }
           ],
-          "collabConfidence": "mentioned",
-          "pdfVerified": false
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "1Meta,2NortheasternUniversity,China,3UniversityofOslo,4BoschCenterofAI,5Universi"
+          ],
+          "pdfHKUnis": []
         },
         {
           "title": "The AI Skills Shift: Mapping Skill Obsolescence, Emergence, and Transition Pathways in the LLM Era",
@@ -13706,7 +13769,7 @@
         }
       ],
       "count": 41,
-      "uniCollabCount": 10,
+      "uniCollabCount": 8,
       "hkCollabCount": 0
     },
     "nvidia": {
@@ -13739,7 +13802,7 @@
             "MIT"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -13758,8 +13821,13 @@
               "color": "#06b6d4"
             }
           ],
-          "collabConfidence": "mentioned",
-          "pdfVerified": false
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Mohsen Amiri1,†, Mohsen Amiri2,†, Ali Beikmohammadi1, Sindri Magnus´son1,"
+          ],
+          "pdfHKUnis": []
         },
         {
           "title": "Bit-by-Bit: Progressive QAT Strategy with Outlier Channel Splitting for Stable Low-Bit LLMs",
@@ -13785,11 +13853,14 @@
           ],
           "comment": "",
           "universities": [
-            "MIT"
+            "ZJU",
+            "CityU"
           ],
-          "hkUniversities": [],
-          "hasUniCollab": true,
-          "hasHKCollab": false,
+          "hkUniversities": [
+            "CityU"
+          ],
+          "hasUniCollab": false,
+          "hasHKCollab": true,
           "directions": [
             {
               "id": "LLM",
@@ -13807,8 +13878,16 @@
               "color": "#eab308"
             }
           ],
-          "collabConfidence": "mentioned",
-          "pdfVerified": false
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "3CityUniversityofHongKong",
+            "1ZhejiangUniversity 2HongKongUniversityofScienceandTechnology"
+          ],
+          "pdfHKUnis": [
+            "CityU"
+          ]
         },
         {
           "title": "Measurement of Generative AI Workload Power Profiles for Whole-Facility Data Center Infrastructure Planning",
@@ -14464,7 +14543,7 @@
         }
       ],
       "count": 16,
-      "uniCollabCount": 15,
+      "uniCollabCount": 13,
       "hkCollabCount": 0
     },
     "kuaishou": {

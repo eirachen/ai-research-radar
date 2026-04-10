@@ -1088,8 +1088,9 @@
 
 <!-- ═══ 页面底部留言板（固定底栏） ═══ -->
 <div id="guestbookBar" style="position:fixed;bottom:0;left:0;right:0;z-index:900;background:var(--surface);border-top:1px solid var(--border);transition:all 0.3s">
+ <div style="max-width:1200px;margin:0 auto;padding:0 1.5rem">
   <!-- 收起状态：只显示一行提示 -->
-  <div id="gbBarHeader" onclick="toggleGuestbook()" style="display:flex;align-items:center;gap:0.5rem;padding:0.5rem 1.2rem;cursor:pointer">
+  <div id="gbBarHeader" onclick="toggleGuestbook()" style="display:flex;align-items:center;gap:0.5rem;padding:0.5rem 0;cursor:pointer">
     <span style="font-size:0.85rem">💬</span>
     <span style="font-size:0.78rem;font-weight:600;color:var(--text)">留言板</span>
     <span id="guestbookCount" style="font-size:0.65rem;color:var(--text2)"></span>
@@ -1099,14 +1100,15 @@
   </div>
   <!-- 展开状态：留言列表 -->
   <div id="gbExpanded" style="display:none;max-height:260px;overflow:hidden;border-top:1px solid var(--border)">
-    <div style="display:flex;align-items:center;gap:0.4rem;padding:0.4rem 1.2rem;background:var(--surface2)">
+    <div style="display:flex;align-items:center;gap:0.4rem;padding:0.4rem 0;background:var(--surface2)">
       <span style="flex:1"></span>
       <button onclick="guestbookPrev()" id="gbPrev" style="font-size:0.62rem;padding:0.12rem 0.3rem;border:1px solid var(--border);border-radius:4px;background:var(--surface);color:var(--text2);cursor:pointer">◀</button>
       <span id="gbPageInfo" style="font-size:0.62rem;color:var(--text2)"></span>
       <button onclick="guestbookNext()" id="gbNext" style="font-size:0.62rem;padding:0.12rem 0.3rem;border:1px solid var(--border);border-radius:4px;background:var(--surface);color:var(--text2);cursor:pointer">▶</button>
     </div>
-    <div id="guestbookList" style="padding:0.3rem 1.2rem 0.5rem"></div>
+    <div id="guestbookList" style="padding:0.3rem 0 0.5rem"></div>
   </div>
+ </div>
 </div>
 
 <script>

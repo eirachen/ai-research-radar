@@ -2872,7 +2872,8 @@ function renderGuestbook() {
     html += '<div style="padding:0.25rem 0;border-bottom:1px solid rgba(255,255,255,0.04);display:flex;gap:0.4rem;align-items:center">';
     html += '<span style="font-size:0.6rem;color:var(--text2);flex-shrink:0">' + g.time + '</span>';
     html += '<span style="font-size:0.7rem;font-weight:600;color:var(--accent2);flex-shrink:0">' + (g.name||'匿名').replace(/</g,'&lt;') + '</span>';
-    html += '<span style="font-size:0.73rem;color:var(--text);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">' + g.content.replace(/</g,'&lt;') + '</span>';
+    html += '<span style="font-size:0.73rem;color:var(--text);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">' + g.content.replace(/</g,'&lt;') + (g.editedAt ? ' <span style="font-size:0.55rem;color:var(--text2);font-style:italic">(已编辑)</span>' : '') + '</span>';
+    html += '<button onclick="event.stopPropagation();editGuestbookMsg(' + globalIdx + ')" style="font-size:0.55rem;padding:0.1rem 0.2rem;border:1px solid rgba(59,130,246,0.2);border-radius:3px;background:transparent;color:rgba(96,165,250,0.5);cursor:pointer;flex-shrink:0" title="编辑">✏️</button>';
     html += '<button onclick="event.stopPropagation();deleteGuestbookMsg(' + globalIdx + ')" style="font-size:0.55rem;padding:0.1rem 0.2rem;border:1px solid rgba(239,68,68,0.2);border-radius:3px;background:transparent;color:#f8717180;cursor:pointer;flex-shrink:0" title="删除">✕</button>';
     html += '</div>';
   });
@@ -2894,9 +2895,36 @@ function toggleGuestbook() {
 }
 
 function deleteGuestbookMsg(idx) {
-  if (!confirm('删除这条留言？')) return;
   var guestbook = getGuestbook();
+  var g = guestbook[idx];
+  if (!g) return;
+  var name = prompt('请输入你的姓名以确认删除（只能删除自己的留言）：');
+  if (!name) return;
+  if (name.trim().toLowerCase() !== (g.name||'').trim().toLowerCase()) {
+    alert('姓名不匹配，只能删除自己的留言哦');
+    return;
+  }
   guestbook.splice(idx, 1);
+  saveGuestbook(guestbook);
+  renderGuestbook();
+}
+
+function editGuestbookMsg(idx) {
+  var guestbook = getGuestbook();
+  var g = guestbook[idx];
+  if (!g) return;
+  var name = prompt('请输入你的姓名以确认编辑（只能修改自己的留言）：');
+  if (!name) return;
+  if (name.trim().toLowerCase() !== (g.name||'').trim().toLowerCase()) {
+    alert('姓名不匹配，只能编辑自己的留言哦');
+    return;
+  }
+  var newContent = prompt('修改留言内容：', g.content);
+  if (newContent === null) return;
+  if (!newContent.trim()) { alert('内容不能为空'); return; }
+  g.content = newContent.trim();
+  g.editedAt = new Date().getFullYear() + '-' + String(new Date().getMonth()+1).padStart(2,'0') + '-' + String(new Date().getDate()).padStart(2,'0') + ' ' + String(new Date().getHours()).padStart(2,'0') + ':' + String(new Date().getMinutes()).padStart(2,'0');
+  guestbook[idx] = g;
   saveGuestbook(guestbook);
   renderGuestbook();
 }

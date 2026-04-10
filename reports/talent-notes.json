@@ -13528,6 +13528,245 @@
       "gradYear": "待确认",
       "statusNote": "来自Meta AI校企合作论文: Neural Computers",
       "editedAt": "2026-04-09"
+    },
+    "Lingpeng Kong": {
+      "name": "Lingpeng Kong (孔令鹏)",
+      "university": "The University of Hong Kong (HKU)",
+      "isHK": true,
+      "status": "助理教授 (Assistant Professor)",
+      "advisor": "",
+      "lab": "HKU NLP Lab",
+      "homepage": "https://ikekonglp.github.io/",
+      "scholar": "https://scholar.google.com/citations?user=cGMfSCkAAAAJ",
+      "direction": "NLP, 表示学习, 结构化预测, 生成模型",
+      "gradYear": "",
+      "statusNote": "HKU NLP Lab联合主任, CMU博士, 前DeepMind研究科学家",
+      "editedAt": "2026-04-10",
+      "papers": [
+        "http://arxiv.org/abs/2604.08064v1"
+      ]
+    },
+    "Xiachong Feng": {
+      "name": "Xiachong Feng (冯夏冲)",
+      "university": "The University of Hong Kong (HKU)",
+      "isHK": true,
+      "status": "博士后 (Postdoc)",
+      "advisor": "Lingpeng Kong (孔令鹏)",
+      "lab": "HKU NLP Lab",
+      "homepage": "http://xcfeng.net/",
+      "scholar": "https://scholar.google.com.hk/citations?user=Wifx6goAAAAJ",
+      "direction": "LLM社会智能, 对话摘要, 跨语言摘要, 博弈论与LLM",
+      "gradYear": "",
+      "statusNote": "HIT-SCIR博士毕业, 导师秦兵&冯骁骋, 现HKU博后",
+      "editedAt": "2026-04-10",
+      "papers": [
+        "http://arxiv.org/abs/2604.08064v1"
+      ]
+    },
+    "Chonghan Qin": {
+      "name": "Chonghan Qin",
+      "university": "The University of Hong Kong (HKU)",
+      "isHK": true,
+      "status": "待确认 (可能博士生)",
+      "advisor": "Lingpeng Kong (待确认)",
+      "lab": "HKU NLP Lab (待确认)",
+      "homepage": "",
+      "scholar": "",
+      "direction": "NLP, LLM行为评估",
+      "gradYear": "",
+      "statusNote": "ImplicitMemBench第一作者, HKU NLP People页面未列出, 可能为新生",
+      "editedAt": "2026-04-10",
+      "papers": [
+        "http://arxiv.org/abs/2604.08064v1"
+      ]
+    },
+    "Weitao Ma": {
+      "name": "Weitao Ma",
+      "university": "Harbin Institute of Technology (HIT)",
+      "isHK": false,
+      "status": "待确认",
+      "advisor": "Xiaocheng Feng (待确认)",
+      "lab": "HIT-SCIR",
+      "homepage": "",
+      "scholar": "",
+      "direction": "NLP, LLM评估",
+      "gradYear": "",
+      "statusNote": "ImplicitMemBench合著者, HIT",
+      "editedAt": "2026-04-10",
+      "papers": [
+        "http://arxiv.org/abs/2604.08064v1"
+      ]
+    },
+    "Xiaocheng Feng": {
+      "name": "Xiaocheng Feng (冯骁骋)",
+      "university": "Harbin Institute of Technology (HIT)",
+      "isHK": false,
+      "status": "教授/副教授",
+      "advisor": "",
+      "lab": "HIT-SCIR",
+      "homepage": "",
+      "scholar": "",
+      "direction": "NLP, 文本生成",
+      "gradYear": "",
+      "statusNote": "HIT-SCIR实验室, 冯夏冲博士导师之一",
+      "editedAt": "2026-04-10",
+      "papers": [
+        "http://arxiv.org/abs/2604.08064v1"
+      ]
+    },
+    "Yike Guo": {
+      "name": "Yike Guo (郭毅可)",
+      "university": "Hong Kong University of Science and Technology (HKUST)",
+      "isHK": true,
+      "status": "校长 (President)",
+      "advisor": "",
+      "lab": "",
+      "homepage": "https://president.hkust.edu.hk/",
+      "scholar": "",
+      "direction": "数据科学, 机器学习, AI, 生物信息学",
+      "gradYear": "",
+      "statusNote": "HKUST第五任校长, 前帝国理工教授, 数据科学研究所创始人",
+      "editedAt": "2026-04-10",
+      "papers": [
+        "http://arxiv.org/abs/2604.07888v1"
+      ]
+    },
+    "Hao Gu": {
+      "name": "Hao Gu",
+      "university": "Hong Kong University of Science and Technology (HKUST)",
+      "isHK": true,
+      "status": "博士生 (待确认)",
+      "advisor": "待确认",
+      "lab": "",
+      "homepage": "",
+      "scholar": "",
+      "direction": "LLM量化, 模型压缩",
+      "gradYear": "",
+      "statusNote": "Bit-by-Bit共同第一作者, HKUST, ACL等顶会发表",
+      "editedAt": "2026-04-10",
+      "papers": [
+        "http://arxiv.org/abs/2604.07888v1"
+      ]
+    },
+    "Lujun Li": {
+      "name": "Lujun Li",
+      "university": "Hong Kong University of Science and Technology (HKUST)",
+      "isHK": true,
+      "status": "博士生",
+      "advisor": "待确认",
+      "lab": "",
+      "homepage": "",
+      "scholar": "",
+      "direction": "模型量化, 神经网络压缩, 高效深度学习",
+      "gradYear": "",
+      "statusNote": "Bit-by-Bit合著者, HKUST",
+      "editedAt": "2026-04-10",
+      "papers": [
+        "http://arxiv.org/abs/2604.07888v1"
+      ]
+    },
+    "Bei Liu": {
+      "name": "Bei Liu",
+      "university": "Hong Kong University of Science and Technology (HKUST)",
+      "isHK": true,
+      "status": "待确认",
+      "advisor": "",
+      "lab": "",
+      "homepage": "",
+      "scholar": "",
+      "direction": "LLM量化",
+      "gradYear": "",
+      "statusNote": "Bit-by-Bit合著者, HKUST",
+      "editedAt": "2026-04-10",
+      "papers": [
+        "http://arxiv.org/abs/2604.07888v1"
+      ]
+    },
+    "Sirui Han": {
+      "name": "Sirui Han",
+      "university": "Hong Kong University of Science and Technology (HKUST)",
+      "isHK": true,
+      "status": "待确认",
+      "advisor": "",
+      "lab": "",
+      "homepage": "",
+      "scholar": "",
+      "direction": "LLM量化",
+      "gradYear": "",
+      "statusNote": "Bit-by-Bit通讯作者之一, HKUST",
+      "editedAt": "2026-04-10",
+      "papers": [
+        "http://arxiv.org/abs/2604.07888v1"
+      ]
+    },
+    "Binxing Xu": {
+      "name": "Binxing Xu",
+      "university": "Zhejiang University (ZJU)",
+      "isHK": false,
+      "status": "待确认",
+      "advisor": "Chao Li (待确认)",
+      "lab": "",
+      "homepage": "",
+      "scholar": "",
+      "direction": "LLM量化",
+      "gradYear": "",
+      "statusNote": "Bit-by-Bit共同第一作者, 浙大",
+      "editedAt": "2026-04-10",
+      "papers": [
+        "http://arxiv.org/abs/2604.07888v1"
+      ]
+    },
+    "Hao Wang": {
+      "name": "Hao Wang",
+      "university": "City University of Hong Kong (CityU)",
+      "isHK": true,
+      "status": "待确认",
+      "advisor": "",
+      "lab": "",
+      "homepage": "",
+      "scholar": "",
+      "direction": "LLM量化, 模型压缩",
+      "gradYear": "",
+      "statusNote": "Bit-by-Bit合著者, 香港城市大学",
+      "editedAt": "2026-04-10",
+      "papers": [
+        "http://arxiv.org/abs/2604.07888v1"
+      ]
+    },
+    "Honghao Cai": {
+      "name": "Honghao Cai",
+      "university": "Chinese University of Hong Kong, Shenzhen (CUHK-SZ)",
+      "isHK": true,
+      "status": "待确认 (可能研究生)",
+      "advisor": "",
+      "lab": "",
+      "homepage": "",
+      "scholar": "",
+      "direction": "图像编辑, 计算机视觉, 生成模型",
+      "gradYear": "",
+      "statusNote": "EditCaption共同第一作者, CUHK-SZ + 小红书实习",
+      "editedAt": "2026-04-10",
+      "papers": [
+        "http://arxiv.org/abs/2604.08213v1"
+      ]
+    },
+    "Xiangyuan Wang": {
+      "name": "Xiangyuan Wang",
+      "university": "Peking University (PKU)",
+      "isHK": false,
+      "status": "待确认 (可能研究生)",
+      "advisor": "",
+      "lab": "",
+      "homepage": "",
+      "scholar": "",
+      "direction": "图像编辑, 计算机视觉",
+      "gradYear": "",
+      "statusNote": "EditCaption共同第一作者, 北大 + 小红书实习",
+      "editedAt": "2026-04-10",
+      "papers": [
+        "http://arxiv.org/abs/2604.08213v1"
+      ]
     }
-  }
+  },
+  "lastUpdated": "2026-04-10T09:30:32Z"
 }

@@ -2800,13 +2800,18 @@ function renderDomainPage(domainKey) {
   if (collabs.length > 0) {
     html += '<div style="font-size:0.72rem;color:var(--text2);margin:0.8rem 0 0.5rem">✏️ 手动添加：</div>';
     collabs.forEach(function(c, idx) {
-      html += '<div style="display:flex;align-items:center;gap:0.5rem;padding:0.4rem 0.7rem;margin-bottom:0.3rem;background:var(--surface);border:1px solid var(--border);border-radius:8px">';
+      html += '<div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.5rem 0.7rem;margin-bottom:0.3rem;background:var(--surface);border:1px solid var(--border);border-radius:8px">';
       html += '<div style="flex:1;min-width:0">';
-      html += '<div style="font-size:0.78rem;font-weight:600;color:var(--text)">' + (c.title || '未命名') + '</div>';
-      html += '<div style="font-size:0.65rem;color:var(--text2)">' + (c.company || '') + (c.university ? ' × ' + c.university : '') + (c.note ? ' · ' + c.note : '') + '</div>';
+      html += '<div style="font-size:0.78rem;font-weight:600;color:var(--text)">' + (c.project || c.title || '未命名项目') + '</div>';
+      html += '<div style="font-size:0.65rem;color:var(--text2);margin-top:0.15rem">';
+      if (c.company) html += '🏢 ' + c.company;
+      if (c.lab) html += (c.company ? ' × ' : '') + '🏫 ' + c.lab;
+      if (c.addedAt) html += ' · 📅 ' + c.addedAt;
       html += '</div>';
-      html += '<button onclick="editDomainCollab(\'' + domainKey + '\',' + idx + ')" style="font-size:0.6rem;padding:0.15rem 0.3rem;border:1px solid var(--border);border-radius:4px;background:var(--surface2);color:var(--text2);cursor:pointer" title="编辑">✏️</button>';
-      html += '<button onclick="removeDomainCollab(\'' + domainKey + '\',' + idx + ')" style="font-size:0.6rem;padding:0.15rem 0.3rem;border:1px solid var(--border);border-radius:4px;background:rgba(239,68,68,0.1);color:#f87171;cursor:pointer" title="删除">🗑️</button>';
+      if (c.detail) html += '<div style="font-size:0.65rem;color:var(--text2);margin-top:0.2rem;line-height:1.4;white-space:pre-wrap">' + c.detail.replace(/</g,'&lt;') + '</div>';
+      html += '</div>';
+      html += '<button onclick="editDomainCollab(\'' + domainKey + '\',' + idx + ')" style="font-size:0.6rem;padding:0.15rem 0.3rem;border:1px solid var(--border);border-radius:4px;background:var(--surface2);color:var(--text2);cursor:pointer;flex-shrink:0" title="编辑">✏️</button>';
+      html += '<button onclick="removeDomainCollab(\'' + domainKey + '\',' + idx + ')" style="font-size:0.6rem;padding:0.15rem 0.3rem;border:1px solid var(--border);border-radius:4px;background:rgba(239,68,68,0.1);color:#f87171;cursor:pointer;flex-shrink:0" title="删除">🗑️</button>';
       html += '</div>';
     });
   }
@@ -2873,15 +2878,7 @@ function renderDomainPage(domainKey) {
 
 // 新增校企合作记录
 function addDomainCollab(domainKey) {
-  var title = prompt('合作项目/论文名称：');
-  if (!title) return;
-  var company = prompt('企业名称：') || '';
-  var university = prompt('高校名称：') || '';
-  var note = prompt('备注（可留空）：') || '';
-  var collabs = getDomainCollabs(domainKey);
-  collabs.push({ title: title, company: company, university: university, note: note, addedAt: new Date().toISOString().slice(0,10) });
-  saveDomainCollabs(domainKey, collabs);
-  renderDomainPage(domainKey);
+  showCollabForm(domainKey, -1, { company: '', lab: '', project: '', detail: '' });
 }
 
 // 编辑校企合作记录
@@ -2889,15 +2886,53 @@ function editDomainCollab(domainKey, idx) {
   var collabs = getDomainCollabs(domainKey);
   var c = collabs[idx];
   if (!c) return;
-  var title = prompt('合作项目/论文名称：', c.title);
-  if (title === null) return;
-  c.title = title;
-  c.company = prompt('企业名称：', c.company) || c.company;
-  c.university = prompt('高校名称：', c.university) || c.university;
-  c.note = prompt('备注：', c.note) || '';
-  collabs[idx] = c;
-  saveDomainCollabs(domainKey, collabs);
-  renderDomainPage(domainKey);
+  showCollabForm(domainKey, idx, c);
+}
+
+// 弹窗表单
+function showCollabForm(domainKey, idx, data) {
+  var isEdit = idx >= 0;
+  var overlay = document.createElement('div');
+  overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:2000;display:flex;align-items:center;justify-content:center';
+  overlay.onclick = function(e) { if (e.target === overlay) overlay.remove(); };
+
+  var form = document.createElement('div');
+  form.style.cssText = 'background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.5rem;width:420px;max-width:90vw;max-height:85vh;overflow-y:auto';
+  form.innerHTML =
+    '<div style="font-size:1rem;font-weight:700;color:var(--text);margin-bottom:1rem">' + (isEdit ? '✏️ 编辑合作记录' : '➕ 新增校企合作') + '</div>' +
+    '<label style="font-size:0.75rem;color:var(--text2);display:block;margin-bottom:0.2rem">企业 *</label>' +
+    '<input id="cf-company" value="' + (data.company||'').replace(/"/g,'&quot;') + '" placeholder="如：字节Seed、华为诺亚" style="width:100%;padding:0.45rem 0.6rem;margin-bottom:0.7rem;background:var(--surface2);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:0.8rem;box-sizing:border-box">' +
+    '<label style="font-size:0.75rem;color:var(--text2);display:block;margin-bottom:0.2rem">高校方（实验室） *</label>' +
+    '<input id="cf-lab" value="' + (data.lab||'').replace(/"/g,'&quot;') + '" placeholder="如：CityU AML Lab / 苏大NLP实验室" style="width:100%;padding:0.45rem 0.6rem;margin-bottom:0.7rem;background:var(--surface2);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:0.8rem;box-sizing:border-box">' +
+    '<label style="font-size:0.75rem;color:var(--text2);display:block;margin-bottom:0.2rem">合作项目 *</label>' +
+    '<input id="cf-project" value="' + (data.project||data.title||'').replace(/"/g,'&quot;') + '" placeholder="如：DeepResearch-9K / LLM推理优化" style="width:100%;padding:0.45rem 0.6rem;margin-bottom:0.7rem;background:var(--surface2);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:0.8rem;box-sizing:border-box">' +
+    '<label style="font-size:0.75rem;color:var(--text2);display:block;margin-bottom:0.2rem">合作细节（补充）</label>' +
+    '<textarea id="cf-detail" rows="3" placeholder="论文链接、合作方式、关键人物、备注等" style="width:100%;padding:0.45rem 0.6rem;margin-bottom:1rem;background:var(--surface2);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:0.78rem;resize:vertical;box-sizing:border-box;font-family:inherit">' + (data.detail||data.note||'').replace(/</g,'&lt;') + '</textarea>' +
+    '<div style="display:flex;gap:0.6rem;justify-content:flex-end">' +
+    '<button onclick="this.closest(\'div[style*=fixed]\').remove()" style="padding:0.4rem 1rem;border:1px solid var(--border);border-radius:6px;background:var(--surface2);color:var(--text2);cursor:pointer;font-size:0.78rem">取消</button>' +
+    '<button id="cf-save" style="padding:0.4rem 1rem;border:none;border-radius:6px;background:var(--accent);color:#fff;cursor:pointer;font-size:0.78rem;font-weight:600">保存</button>' +
+    '</div>';
+
+  overlay.appendChild(form);
+  document.body.appendChild(overlay);
+
+  // 自动聚焦
+  setTimeout(function(){ document.getElementById('cf-company').focus(); }, 100);
+
+  // 保存
+  document.getElementById('cf-save').onclick = function() {
+    var company = document.getElementById('cf-company').value.trim();
+    var lab = document.getElementById('cf-lab').value.trim();
+    var project = document.getElementById('cf-project').value.trim();
+    var detail = document.getElementById('cf-detail').value.trim();
+    if (!company && !lab && !project) { alert('请至少填写一项'); return; }
+    var collabs = getDomainCollabs(domainKey);
+    var record = { company: company, lab: lab, project: project, detail: detail, addedAt: new Date().toISOString().slice(0,10) };
+    if (isEdit) { collabs[idx] = record; } else { collabs.push(record); }
+    saveDomainCollabs(domainKey, collabs);
+    overlay.remove();
+    renderDomainPage(domainKey);
+  };
 }
 
 // 删除校企合作记录

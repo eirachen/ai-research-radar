@@ -1961,7 +1961,7 @@ async function loadArxiv() {
       try { document.getElementById('dataPaperCount').textContent = arxivData.totalPapers; } catch(e){}
       // Show last update time from generatedAt
       try {
-        var gen = arxivData.generatedAt || '';
+        var gen = (arxivData.generatedAt || '').replace(/Z$/, '');
         if (gen) {
           var d = new Date(gen);
           document.getElementById('dataLastUpdate').textContent = d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0') + ' ' + String(d.getHours()).padStart(2,'0') + ':' + String(d.getMinutes()).padStart(2,'0');

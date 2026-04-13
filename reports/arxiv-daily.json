@@ -33,9 +33,7 @@
             "cs.CL"
           ],
           "comment": "",
-          "universities": [
-            "HIT"
-          ],
+          "universities": [],
           "hkUniversities": [],
           "hasUniCollab": true,
           "hasHKCollab": false,
@@ -51,14 +49,14 @@
               "color": "#f97316"
             }
           ],
-          "collabConfidence": "confirmed",
+          "collabConfidence": "mentioned",
           "pdfVerified": true,
           "pdfCompanies": [
-            "deepseek",
-            "bytedance"
+            "yonyou"
           ],
           "pdfUnis": [
-            "largeontologymodel unrestrictedknowledgespacewithoutfirstsimulatinghowactivebusi"
+            "Yonyou AI Lab",
+            "Yonyou Network Technology Co., Ltd."
           ],
           "pdfHKUnis": [],
           "deepxivEnhanced": true
@@ -151,7 +149,7 @@
           ],
           "comment": "ICLR 2026 Oral Presentation; Code is released at https://github.com/ByteDance-Seed/In-Place-TTT",
           "universities": [
-            "北京大学 (PKU)"
+            "Peking University (PKU)"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -174,7 +172,7 @@
             "bytedance"
           ],
           "pdfUnis": [
-            "1ByteDanceSeed, 2PekingUniversity"
+            "Peking University"
           ],
           "pdfHKUnis": [],
           "tldr": "[research paper] In-Place Test-Time Training (In-Place TTT) introduces a drop-in framework that enables Large Language Models (LLMs) to dynamically adapt via in-place updates of MLP block projection matrices during inference, eliminating the need for specialized layers or costly retraining. It replaces generic reconstruction objectives with a theoretically grounded, Next-Token Prediction-aligned objective and employs chunk-wise updates for scalability, achieving superior performance on long-context tasks (up to 128k tokens) and outperforming existing TTT methods even when pretrained from scratch.",
@@ -6414,9 +6412,7 @@
             "cs.CL"
           ],
           "comment": "",
-          "universities": [
-            "HIT"
-          ],
+          "universities": [],
           "hkUniversities": [],
           "hasUniCollab": true,
           "hasHKCollab": false,
@@ -6432,14 +6428,14 @@
               "color": "#f97316"
             }
           ],
-          "collabConfidence": "confirmed",
+          "collabConfidence": "mentioned",
           "pdfVerified": true,
           "pdfCompanies": [
-            "deepseek",
-            "bytedance"
+            "yonyou"
           ],
           "pdfUnis": [
-            "largeontologymodel unrestrictedknowledgespacewithoutfirstsimulatinghowactivebusi"
+            "Yonyou AI Lab",
+            "Yonyou Network Technology Co., Ltd."
           ],
           "pdfHKUnis": [],
           "deepxivEnhanced": true
@@ -17385,7 +17381,8 @@
           ],
           "comment": "Under review",
           "universities": [
-            "HIT"
+            "Universidad Politecnica de Madrid",
+            "Zurich University of Applied Sciences"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -17407,14 +17404,12 @@
               "color": "#78716c"
             }
           ],
-          "collabConfidence": "confirmed",
+          "collabConfidence": "mentioned",
           "pdfVerified": true,
-          "pdfCompanies": [
-            "nvidia"
-          ],
+          "pdfCompanies": [],
           "pdfUnis": [
-            "bZurichUniversityofAppliedSciences,Switzerland,Gertrudstrasse15,Winterthur,8400,",
-            "negligibleimpactonuserexperience,andbyupto20%inbatchscenarios."
+            "Universidad Politecnica de Madrid, Spain",
+            "Zurich University of Applied Sciences, Switzerland"
           ],
           "pdfHKUnis": []
         },
@@ -18729,8 +18724,8 @@
           ],
           "comment": "",
           "universities": [
-            "MIT",
-            "ETH"
+            "New York University (NYU)",
+            "Purdue University"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -18742,15 +18737,12 @@
               "color": "#78716c"
             }
           ],
-          "collabConfidence": "confirmed",
+          "collabConfidence": "mentioned",
           "pdfVerified": true,
-          "pdfCompanies": [
-            "taotian"
-          ],
+          "pdfCompanies": [],
           "pdfUnis": [
-            "SternSchoolofBusiness,NewYorkUniversity,NewYork,NY10012,xin.wen@stern.nyu.edu",
-            "interventions grows combinatorially, while available traffic remains limited. Ov",
-            "method substantially outperforms one-shot tensor completion and unstructured bes"
+            "Stern School of Business, New York University",
+            "Daniels School of Business, Purdue University"
           ],
           "pdfHKUnis": []
         },
@@ -19984,7 +19976,7 @@
           ],
           "comment": "Github (data pipeline): https://github.com/metauto-ai/NeuralComputer; Blogpost: https://metauto.ai/neuralcomputer/index_eng.html",
           "universities": [
-            "苏黎世联邦理工学院 (ETH Zurich)"
+            "KAUST (King Abdullah University of Science and Technology)"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -20011,7 +20003,7 @@
             "meta"
           ],
           "pdfUnis": [
-            "reuse. Asaninitialstep,westudywhetherearlyNCprimitivescanbelearnedsolelyfromcoll"
+            "KAUST AI Initiative"
           ],
           "pdfHKUnis": [],
           "collabConfidence": "confirmed",

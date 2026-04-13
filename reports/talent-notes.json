@@ -245,7 +245,10 @@
         "scannedAt": "2026-04-10",
         "hasContactKeywords": true,
         "hasContact": true
-      }
+      },
+      "email": "dihe@pku.edu.cn",
+      "notes": "北京大学智能学院助理教授、博士生导师。前微软亚研高级研究员。CMU博士(导师Liwei Wang), UC Berkeley博士后(导师Michael Jordan)。Google Scholar 15k+ citations。研究方向：机器学习/大语言模型/生成模型。",
+      "role": "Assistant Professor"
     },
     "Douwe Kiela": {
       "name": "Douwe Kiela",
@@ -11429,17 +11432,20 @@
     },
     "Will Wei Sun": {
       "name": "Will Wei Sun",
-      "university": "待确认",
+      "university": "Purdue University",
       "isHK": false,
       "status": "待确认",
       "advisor": "待确认",
       "lab": "",
-      "homepage": "",
-      "scholar": "",
+      "homepage": "https://web.ics.purdue.edu/~sun244/",
+      "scholar": "https://scholar.google.com/citations?user=a-RGvm4AAAAJ",
       "direction": "LLM / 强化学习 / 安全",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（Anthropic）",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-08",
+      "linkedin": "https://www.linkedin.com/in/will-wei-sun-a8643724",
+      "notes": "Purdue Daniels商学院副教授 & 统计系兼职。研究方向: 可信强化学习/统计机器学习/定价/双边市场。",
+      "role": "Associate Professor"
     },
     "Pascal Schäfer": {
       "name": "Pascal Schäfer",
@@ -13273,7 +13279,11 @@
         "scannedAt": "2026-04-09",
         "hasContactKeywords": true,
         "hasContact": true
-      }
+      },
+      "github": "https://github.com/mczhuge",
+      "linkedin": "https://www.linkedin.com/in/mingchen-zhuge-7599a1272",
+      "notes": "KAUST AI Initiative PhD (2022-)，导师 Jürgen Schmidhuber。研究方向: AI Agents / Multimodal / Code Generation / Neural Computer。同时在 Meta 实习。",
+      "role": "PhD Student (Schmidhuber组)"
     },
     "Haozhe Liu": {
       "name": "Haozhe Liu",
@@ -14302,6 +14312,62 @@
       "gradYear": "",
       "statusNote": "AudioKV论文作者, SJTU EPIC Lab",
       "editedAt": "2026-04-13"
+    },
+    "Jurgen Schmidhuber": {
+      "university": "KAUST",
+      "isHK": false,
+      "homepage": "https://people.idsia.ch/~juergen/",
+      "scholar": "https://scholar.google.com/citations?user=gLnCTgIAAAAJ",
+      "email": "",
+      "github": "",
+      "linkedin": "",
+      "notes": "LSTM 共同发明人，KAUST AI Initiative 负责人，IDSIA 前主任。",
+      "role": "Professor",
+      "papers": [],
+      "contactInfo": {},
+      "manualEdit": false
+    },
+    "Xi Chen": {
+      "university": "New York University (NYU)",
+      "isHK": false,
+      "homepage": "https://pages.stern.nyu.edu/~xchen3/",
+      "scholar": "https://scholar.google.com/citations?user=placeholder_xi_chen",
+      "email": "xc13@stern.nyu.edu",
+      "github": "",
+      "linkedin": "",
+      "notes": "NYU Stern 教授, Andre Meyer Faculty Fellow。Forbes 30 Under 30 (2017), ASA Fellow (2025), IMS Fellow (2024)。前 Amazon Ads 首席科学家 (2021-2023)。CMU PhD, UC Berkeley 博士后 (导师 Michael Jordan)。研究方向: LLM/RLHF/在线学习/统计推断。",
+      "role": "Full Professor",
+      "papers": [],
+      "contactInfo": {},
+      "manualEdit": false
+    },
+    "Xin Wen": {
+      "university": "New York University (NYU)",
+      "isHK": false,
+      "homepage": "",
+      "scholar": "",
+      "email": "",
+      "github": "",
+      "linkedin": "https://www.linkedin.com/in/xin-wen-12a493352",
+      "notes": "NYU Stern PhD (预计2030毕业), 导师 Xi Chen。研究方向: 在线实验/因子设计/统计推断。",
+      "role": "PhD Student (Xi Chen组)",
+      "papers": [],
+      "contactInfo": {},
+      "manualEdit": false
+    },
+    "Yichen Zhang": {
+      "university": "Purdue University",
+      "isHK": false,
+      "homepage": "https://web.ics.purdue.edu/~yichen/",
+      "scholar": "https://scholar.google.com/citations?user=RveRRXAAAAAJ",
+      "email": "",
+      "github": "",
+      "linkedin": "",
+      "notes": "Purdue Daniels商学院助理教授。Xi Chen 毕业生。研究方向: 在线统计推断/分布式学习/供应链时序分析。",
+      "role": "Assistant Professor",
+      "papers": [],
+      "contactInfo": {},
+      "manualEdit": false
     }
   },
   "lastUpdated": "2026-04-13T14:43:10"

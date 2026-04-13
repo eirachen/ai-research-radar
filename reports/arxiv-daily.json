@@ -481,9 +481,61 @@
           "pdfUnis": [],
           "pdfHKUnis": [],
           "collabConfidence": "mentioned"
+        },
+        {
+          "title": "DreamLite: A Lightweight On-Device Unified Model for Image Generation and Editing",
+          "summary": "Diffusion models have made significant progress in both text-to-image (T2I) generation and text-guided image editing. However, these models are typically built with billions of parameters, leading to high latency and increased deployment challenges. While on-device diffusion models improve efficienc",
+          "published": "2026-03-30T17:30:25Z",
+          "arxivId": "2603.28713v1",
+          "arxivUrl": "http://arxiv.org/abs/2603.28713v1",
+          "pdfUrl": "https://arxiv.org/pdf/2603.28713v1",
+          "authors": [
+            "Kailai Feng",
+            "Yuxiang Wei",
+            "Bo Chen",
+            "Yang Pan",
+            "Hu Ye",
+            "Songwei Liu",
+            "Chenqian Yan",
+            "Yuan Gao"
+          ],
+          "authorCount": 8,
+          "affiliations": [],
+          "categories": [
+            "cs.CV"
+          ],
+          "comment": "https://carlofkl.github.io/dreamlite/",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Vision",
+              "label": "视觉",
+              "color": "#ec4899"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            }
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "bytedance"
+          ],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "company_only"
         }
       ],
-      "count": 10,
+      "count": 11,
       "uniCollabCount": 5,
       "hkCollabCount": 0
     },
@@ -7701,59 +7753,6 @@
           "collabConfidence": "uni_only"
         },
         {
-          "title": "When Perplexity Lies: Generation-Focused Distillation of Hybrid Sequence Models",
-          "summary": "Converting a pretrained Transformer into a more efficient hybrid model through distillation offers a promising approach to reducing inference costs. However, achieving high-quality generation in distilled models requires careful joint design of both the student architecture and the distillation proc",
-          "published": "2026-03-27T16:16:23Z",
-          "arxivId": "2603.26556v1",
-          "arxivUrl": "http://arxiv.org/abs/2603.26556v1",
-          "pdfUrl": "https://arxiv.org/pdf/2603.26556v1",
-          "authors": [
-            "Juan Gabriel Kostelec",
-            "Xiang Wang",
-            "Axel Laborieux",
-            "Christos Sourmpis",
-            "Qinghai Guo"
-          ],
-          "authorCount": 5,
-          "affiliations": [],
-          "categories": [
-            "cs.CL",
-            "cs.AI"
-          ],
-          "comment": "",
-          "universities": [
-            "CAS",
-            "HIT"
-          ],
-          "hkUniversities": [],
-          "hasUniCollab": false,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "Infra",
-              "label": "Infra",
-              "color": "#22c55e"
-            },
-            {
-              "id": "Data",
-              "label": "数据",
-              "color": "#78716c"
-            },
-            {
-              "id": "LLM",
-              "label": "LLM",
-              "color": "#3b82f6"
-            }
-          ],
-          "pdfVerified": true,
-          "pdfCompanies": [
-            "huawei"
-          ],
-          "pdfUnis": [],
-          "pdfHKUnis": [],
-          "collabConfidence": "company_only"
-        },
-        {
           "title": "The illusion of reasoning: step-level evaluation reveals decorative chain-of-thought in frontier language models",
           "summary": "Language models increasingly \"show their work\" by writing step-by-step reasoning before answering. But are these reasoning steps genuinely used, or decorative narratives generated after the model has already decided? We introduce step-level faithfulness evaluation - removing one reasoning sentence a",
           "published": "2026-03-24T05:38:13Z",
@@ -8309,7 +8308,7 @@
           "collabConfidence": "uni_only"
         }
       ],
-      "count": 15,
+      "count": 14,
       "uniCollabCount": 2,
       "hkCollabCount": 1
     },
@@ -15157,58 +15156,6 @@
           "collabConfidence": "none"
         },
         {
-          "title": "dTRPO: Trajectory Reduction in Policy Optimization of Diffusion Large Language Models",
-          "summary": "Diffusion Large Language Models (dLLMs) introduce a new paradigm for language generation, which in turn presents new challenges for aligning them with human preferences. In this work, we aim to improve the policy optimization for dLLMs by reducing the cost of the trajectory probability calculation, ",
-          "published": "2026-03-19T11:55:52Z",
-          "arxivId": "2603.18806v1",
-          "arxivUrl": "http://arxiv.org/abs/2603.18806v1",
-          "pdfUrl": "https://arxiv.org/pdf/2603.18806v1",
-          "authors": [
-            "Wenxuan Zhang",
-            "Lemeng Wu",
-            "Changsheng Zhao",
-            "Ernie Chang",
-            "Mingchen Zhuge",
-            "Zechun Liu",
-            "Andy Su",
-            "Hanxian Huang"
-          ],
-          "authorCount": 14,
-          "affiliations": [],
-          "categories": [
-            "cs.AI"
-          ],
-          "comment": "",
-          "universities": [],
-          "hkUniversities": [],
-          "hasUniCollab": false,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "LLM",
-              "label": "LLM",
-              "color": "#3b82f6"
-            },
-            {
-              "id": "Infra",
-              "label": "Infra",
-              "color": "#22c55e"
-            },
-            {
-              "id": "RL",
-              "label": "强化学习",
-              "color": "#eab308"
-            }
-          ],
-          "pdfVerified": true,
-          "pdfCompanies": [
-            "meta"
-          ],
-          "pdfUnis": [],
-          "pdfHKUnis": [],
-          "collabConfidence": "company_only"
-        },
-        {
           "title": "Structure-Aware Multimodal LLM Framework for Trustworthy Near-Field Beam Prediction",
           "summary": "In near-field extremely large-scale multiple-input multiple-output (XL-MIMO) systems, spherical wavefront propagation expands the traditional beam codebook into the joint angular-distance domain, rendering conventional beam training prohibitively inefficient, especially in complex 3-dimensional (3D)",
           "published": "2026-03-17T05:52:13Z",
@@ -15555,7 +15502,7 @@
           "collabConfidence": "confirmed"
         }
       ],
-      "count": 11,
+      "count": 10,
       "uniCollabCount": 1,
       "hkCollabCount": 1
     },
@@ -15678,58 +15625,6 @@
           "collabConfidence": "confirmed"
         },
         {
-          "title": "DreamLite: A Lightweight On-Device Unified Model for Image Generation and Editing",
-          "summary": "Diffusion models have made significant progress in both text-to-image (T2I) generation and text-guided image editing. However, these models are typically built with billions of parameters, leading to high latency and increased deployment challenges. While on-device diffusion models improve efficienc",
-          "published": "2026-03-30T17:30:25Z",
-          "arxivId": "2603.28713v1",
-          "arxivUrl": "http://arxiv.org/abs/2603.28713v1",
-          "pdfUrl": "https://arxiv.org/pdf/2603.28713v1",
-          "authors": [
-            "Kailai Feng",
-            "Yuxiang Wei",
-            "Bo Chen",
-            "Yang Pan",
-            "Hu Ye",
-            "Songwei Liu",
-            "Chenqian Yan",
-            "Yuan Gao"
-          ],
-          "authorCount": 8,
-          "affiliations": [],
-          "categories": [
-            "cs.CV"
-          ],
-          "comment": "https://carlofkl.github.io/dreamlite/",
-          "universities": [],
-          "hkUniversities": [],
-          "hasUniCollab": false,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "Vision",
-              "label": "视觉",
-              "color": "#ec4899"
-            },
-            {
-              "id": "Infra",
-              "label": "Infra",
-              "color": "#22c55e"
-            },
-            {
-              "id": "RL",
-              "label": "强化学习",
-              "color": "#eab308"
-            }
-          ],
-          "pdfVerified": true,
-          "pdfCompanies": [
-            "bytedance"
-          ],
-          "pdfUnis": [],
-          "pdfHKUnis": [],
-          "collabConfidence": "company_only"
-        },
-        {
           "title": "ACAVCaps: Enabling large-scale training for fine-grained and diverse audio understanding",
           "summary": "General audio understanding is a fundamental goal for large audio-language models, with audio captioning serving as a cornerstone task for their development. However, progress in this domain is hindered by existing datasets, which lack the scale and descriptive granularity required to train truly ve",
           "published": "2026-03-25T07:49:39Z",
@@ -15844,7 +15739,7 @@
           "collabConfidence": "confirmed"
         }
       ],
-      "count": 5,
+      "count": 4,
       "uniCollabCount": 4,
       "hkCollabCount": 0
     },
@@ -16100,9 +15995,61 @@
           "pdfUnis": [],
           "pdfHKUnis": [],
           "collabConfidence": "none"
+        },
+        {
+          "title": "dTRPO: Trajectory Reduction in Policy Optimization of Diffusion Large Language Models",
+          "summary": "Diffusion Large Language Models (dLLMs) introduce a new paradigm for language generation, which in turn presents new challenges for aligning them with human preferences. In this work, we aim to improve the policy optimization for dLLMs by reducing the cost of the trajectory probability calculation, ",
+          "published": "2026-03-19T11:55:52Z",
+          "arxivId": "2603.18806v1",
+          "arxivUrl": "http://arxiv.org/abs/2603.18806v1",
+          "pdfUrl": "https://arxiv.org/pdf/2603.18806v1",
+          "authors": [
+            "Wenxuan Zhang",
+            "Lemeng Wu",
+            "Changsheng Zhao",
+            "Ernie Chang",
+            "Mingchen Zhuge",
+            "Zechun Liu",
+            "Andy Su",
+            "Hanxian Huang"
+          ],
+          "authorCount": 14,
+          "affiliations": [],
+          "categories": [
+            "cs.AI"
+          ],
+          "comment": "",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            }
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "meta"
+          ],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "company_only"
         }
       ],
-      "count": 5,
+      "count": 6,
       "uniCollabCount": 1,
       "hkCollabCount": 0
     },
@@ -16348,6 +16295,68 @@
       "count": 1,
       "uniCollabCount": 1,
       "hkCollabCount": 1
+    },
+    "huawei": {
+      "company": "华为诺亚",
+      "icon": "🏢",
+      "papers": [
+        {
+          "title": "When Perplexity Lies: Generation-Focused Distillation of Hybrid Sequence Models",
+          "summary": "Converting a pretrained Transformer into a more efficient hybrid model through distillation offers a promising approach to reducing inference costs. However, achieving high-quality generation in distilled models requires careful joint design of both the student architecture and the distillation proc",
+          "published": "2026-03-27T16:16:23Z",
+          "arxivId": "2603.26556v1",
+          "arxivUrl": "http://arxiv.org/abs/2603.26556v1",
+          "pdfUrl": "https://arxiv.org/pdf/2603.26556v1",
+          "authors": [
+            "Juan Gabriel Kostelec",
+            "Xiang Wang",
+            "Axel Laborieux",
+            "Christos Sourmpis",
+            "Qinghai Guo"
+          ],
+          "authorCount": 5,
+          "affiliations": [],
+          "categories": [
+            "cs.CL",
+            "cs.AI"
+          ],
+          "comment": "",
+          "universities": [
+            "CAS",
+            "HIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            }
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "huawei"
+          ],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "company_only"
+        }
+      ],
+      "count": 1,
+      "uniCollabCount": 0,
+      "hkCollabCount": 0
     }
   }
 }

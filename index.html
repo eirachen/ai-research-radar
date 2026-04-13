@@ -1369,6 +1369,7 @@ var tickerTimer = null;
 
 function buildTickerItems() {
   tickerItems = [];
+  // 来源1: confirmed 校企合作论文（最高优先级）
   if (window.arxivData && arxivData.companies) {
     Object.values(arxivData.companies).forEach(function(c) {
       c.papers.forEach(function(p) {
@@ -1386,6 +1387,7 @@ function buildTickerItems() {
       });
     });
   }
+  // 来源2: 日报中提取的论文
   if (window.ALL_PAPERS && ALL_PAPERS.length) {
     ALL_PAPERS.slice(0, 15).forEach(function(p) {
       if (p.title) {
@@ -1399,8 +1401,31 @@ function buildTickerItems() {
       }
     });
   }
+  // 来源3 (fallback): 如果上面都没数据，用最新的 arXiv 论文填充
+  if (!tickerItems.length && window.arxivData && arxivData.companies) {
+    var fallbackPapers = [];
+    Object.values(arxivData.companies).forEach(function(c) {
+      c.papers.forEach(function(p) {
+        fallbackPapers.push({ paper: p, company: c });
+      });
+    });
+    fallbackPapers.sort(function(a, b) { return (b.paper.published || '').localeCompare(a.paper.published || ''); });
+    fallbackPapers.slice(0, 20).forEach(function(item) {
+      var p = item.paper, c = item.company;
+      var dirs = (p.directions || []).map(function(d) { return d.label; }).join(' · ');
+      tickerItems.push({
+        icon: c.icon || '📄', company: c.company,
+        title: (p.title || '').substring(0, 65),
+        desc: (p.tldr || p.summary || '').substring(0, 130) + '…',
+        date: (p.published || '').substring(0, 10),
+        meta: dirs ? '🏷️ ' + dirs : '',
+        url: p.arxivUrl, borderColor: 'rgba(59,130,246,0.2)'
+      });
+    });
+  }
+  // 最终兜底
   if (!tickerItems.length) {
-    tickerItems.push({ icon: '📡', company: 'AI Research Radar', title: '情报加载中…', desc: '正在加载最新公司研究动态', date: '', meta: '', url: '', borderColor: 'var(--border)' });
+    tickerItems.push({ icon: '📡', company: 'AI Research Radar', title: '暂无数据', desc: '等待下次扫描更新…', date: '', meta: '', url: '', borderColor: 'var(--border)' });
   }
 }
 

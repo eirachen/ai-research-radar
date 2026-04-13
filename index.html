@@ -738,23 +738,45 @@
   <!-- ═══ HOME: Navigation Hub ═══ -->
   <div class="page-view active" id="page-home">
 
-    <!-- ═══ 公司情报滚动播报 ═══ -->
-    <div id="tickerCard" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1rem 1.2rem;margin-bottom:1.2rem;cursor:pointer;transition:border-color 0.2s;min-height:70px" onclick="if(tickerItems[tickerIndex] && tickerItems[tickerIndex].url) window.open(tickerItems[tickerIndex].url,'_blank')">
-      <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem">
-        <span id="tickerCompanyIcon" style="font-size:1.1rem"></span>
-        <span id="tickerTitle" style="font-size:0.95rem;font-weight:700;color:var(--text)"></span>
-        <span style="flex:1"></span>
-        <span id="tickerCompanyBadge" style="font-size:0.62rem;padding:0.12rem 0.45rem;border-radius:5px;background:rgba(59,130,246,0.12);color:var(--accent2);font-weight:600"></span>
-      </div>
-      <div id="tickerDesc" style="font-size:0.78rem;color:var(--text2);line-height:1.6;max-height:2.6em;overflow:hidden;transition:opacity 0.5s"></div>
-      <div style="display:flex;align-items:center;gap:0.6rem;margin-top:0.4rem">
-        <span id="tickerDate" style="font-size:0.62rem;color:var(--text2)"></span>
-        <span id="tickerMeta" style="font-size:0.62rem;color:var(--text2)"></span>
-        <span style="flex:1"></span>
+    <!-- ═══ 领域快速入口 + 数据概览 ═══ -->
+    <div style="margin-bottom:1.2rem">
+      <!-- 数据概览条 -->
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.7rem;padding:0 0.2rem">
+        <span style="font-size:0.82rem;font-weight:700;color:var(--text)">🧩 领域专区</span>
         <span style="font-size:0.58rem;color:var(--text2)">
           <span id="dataDateRange" style="color:var(--accent2)">—</span> · <span id="dataPaperCount" style="color:var(--accent2)">—</span>篇 · 更新 <span id="dataLastUpdate" style="color:var(--green)">—</span>
         </span>
-        <span id="tickerDots" style="font-size:0.5rem;color:var(--text2);letter-spacing:2px"></span>
+      </div>
+      <!-- 4 个领域入口卡片 -->
+      <div id="domainQuickNav" style="display:grid;grid-template-columns:repeat(4,1fr);gap:0.6rem">
+        <div onclick="navigateTo('domain-speech')" style="background:var(--surface);border:1px solid rgba(245,158,11,0.25);border-radius:12px;padding:0.7rem 0.6rem;cursor:pointer;transition:all 0.2s;position:relative;overflow:hidden;text-align:center" onmouseover="this.style.borderColor='#f59e0b';this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 12px rgba(245,158,11,0.15)'" onmouseout="this.style.borderColor='rgba(245,158,11,0.25)';this.style.transform='';this.style.boxShadow=''">
+          <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#f59e0b,#fbbf24)"></div>
+          <div style="font-size:1.6rem;margin-bottom:0.2rem">🎙️</div>
+          <div style="font-size:0.78rem;font-weight:700;color:var(--text)">语音</div>
+          <div style="font-size:0.6rem;color:var(--text2);margin-top:0.15rem">Speech</div>
+          <div id="domainQuickSpeech" style="font-size:0.58rem;margin-top:0.3rem;padding:0.1rem 0.35rem;border-radius:4px;background:rgba(245,158,11,0.12);color:#fbbf24;font-weight:600;display:inline-block">—</div>
+        </div>
+        <div onclick="navigateTo('domain-llm')" style="background:var(--surface);border:1px solid rgba(59,130,246,0.25);border-radius:12px;padding:0.7rem 0.6rem;cursor:pointer;transition:all 0.2s;position:relative;overflow:hidden;text-align:center" onmouseover="this.style.borderColor='#3b82f6';this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 12px rgba(59,130,246,0.15)'" onmouseout="this.style.borderColor='rgba(59,130,246,0.25)';this.style.transform='';this.style.boxShadow=''">
+          <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#3b82f6,#60a5fa)"></div>
+          <div style="font-size:1.6rem;margin-bottom:0.2rem">🤖</div>
+          <div style="font-size:0.78rem;font-weight:700;color:var(--text)">LLM</div>
+          <div style="font-size:0.6rem;color:var(--text2);margin-top:0.15rem">大语言模型</div>
+          <div id="domainQuickLLM" style="font-size:0.58rem;margin-top:0.3rem;padding:0.1rem 0.35rem;border-radius:4px;background:rgba(59,130,246,0.12);color:#60a5fa;font-weight:600;display:inline-block">—</div>
+        </div>
+        <div onclick="navigateTo('domain-multimodal')" style="background:var(--surface);border:1px solid rgba(168,85,247,0.25);border-radius:12px;padding:0.7rem 0.6rem;cursor:pointer;transition:all 0.2s;position:relative;overflow:hidden;text-align:center" onmouseover="this.style.borderColor='#a855f7';this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 12px rgba(168,85,247,0.15)'" onmouseout="this.style.borderColor='rgba(168,85,247,0.25)';this.style.transform='';this.style.boxShadow=''">
+          <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#a855f7,#c084fc)"></div>
+          <div style="font-size:1.6rem;margin-bottom:0.2rem">👁️</div>
+          <div style="font-size:0.78rem;font-weight:700;color:var(--text)">多模态</div>
+          <div style="font-size:0.6rem;color:var(--text2);margin-top:0.15rem">Multimodal</div>
+          <div id="domainQuickMultimodal" style="font-size:0.58rem;margin-top:0.3rem;padding:0.1rem 0.35rem;border-radius:4px;background:rgba(168,85,247,0.12);color:#c084fc;font-weight:600;display:inline-block">—</div>
+        </div>
+        <div onclick="navigateTo('domain-infra')" style="background:var(--surface);border:1px solid rgba(34,197,94,0.25);border-radius:12px;padding:0.7rem 0.6rem;cursor:pointer;transition:all 0.2s;position:relative;overflow:hidden;text-align:center" onmouseover="this.style.borderColor='#22c55e';this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 12px rgba(34,197,94,0.15)'" onmouseout="this.style.borderColor='rgba(34,197,94,0.25)';this.style.transform='';this.style.boxShadow=''">
+          <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#22c55e,#4ade80)"></div>
+          <div style="font-size:1.6rem;margin-bottom:0.2rem">⚡</div>
+          <div style="font-size:0.78rem;font-weight:700;color:var(--text)">Infra</div>
+          <div style="font-size:0.6rem;color:var(--text2);margin-top:0.15rem">基础设施</div>
+          <div id="domainQuickInfra" style="font-size:0.58rem;margin-top:0.3rem;padding:0.1rem 0.35rem;border-radius:4px;background:rgba(34,197,94,0.12);color:#4ade80;font-weight:600;display:inline-block">—</div>
+        </div>
       </div>
     </div>
 
@@ -1358,107 +1380,26 @@ function renderStats() {
     document.getElementById('dataDateRange').textContent = dateRange;
     document.getElementById('dataPaperCount').textContent = arxivTotal;
   } catch(e) {}
-  // 启动情报滚动播报
-  startTicker();
+  // 更新领域快速入口论文数
+  updateDomainQuickNav();
 }
 
-// ── 情报滚动播报（跑马灯）──
-var tickerItems = [];
-var tickerIndex = 0;
-var tickerTimer = null;
-
-function buildTickerItems() {
-  tickerItems = [];
-  // 来源1: confirmed 校企合作论文（最高优先级）
-  if (window.arxivData && arxivData.companies) {
-    Object.values(arxivData.companies).forEach(function(c) {
-      c.papers.forEach(function(p) {
-        if (p.collabConfidence === 'confirmed') {
-          var unis = (p.universities || []).join(', ');
-          tickerItems.push({
-            icon: c.icon || '📄', company: c.company,
-            title: (p.title || '').substring(0, 65),
-            desc: (p.summary || '').substring(0, 130) + '…',
-            date: (p.published || '').substring(0, 10),
-            meta: unis ? '🏫 ' + unis : '',
-            url: p.arxivUrl, borderColor: 'rgba(34,197,94,0.3)'
-          });
-        }
+// ── 领域快速入口数据更新 ──
+function updateDomainQuickNav() {
+  if (!window.arxivData || !arxivData.companies) return;
+  var counts = { 'LLM': 0, 'Multimodal': 0, 'Infra': 0, 'Speech': 0 };
+  Object.values(arxivData.companies).forEach(function(c) {
+    c.papers.forEach(function(p) {
+      (p.directions || []).forEach(function(d) {
+        if (counts.hasOwnProperty(d.id)) counts[d.id]++;
       });
     });
-  }
-  // 来源2: 日报中提取的论文
-  if (window.ALL_PAPERS && ALL_PAPERS.length) {
-    ALL_PAPERS.slice(0, 15).forEach(function(p) {
-      if (p.title) {
-        tickerItems.push({
-          icon: '🔬', company: p.company || '',
-          title: (p.title || '').substring(0, 65),
-          desc: (p.summary || p.rawSection || '').replace(/<[^>]+>/g,'').substring(0, 130) + '…',
-          date: p.date || '', meta: p.direction ? '🏷️ ' + p.direction : '',
-          url: p.url || '', borderColor: 'rgba(59,130,246,0.3)'
-        });
-      }
-    });
-  }
-  // 来源3 (fallback): 如果上面都没数据，用最新的 arXiv 论文填充
-  if (!tickerItems.length && window.arxivData && arxivData.companies) {
-    var fallbackPapers = [];
-    Object.values(arxivData.companies).forEach(function(c) {
-      c.papers.forEach(function(p) {
-        fallbackPapers.push({ paper: p, company: c });
-      });
-    });
-    fallbackPapers.sort(function(a, b) { return (b.paper.published || '').localeCompare(a.paper.published || ''); });
-    fallbackPapers.slice(0, 20).forEach(function(item) {
-      var p = item.paper, c = item.company;
-      var dirs = (p.directions || []).map(function(d) { return d.label; }).join(' · ');
-      tickerItems.push({
-        icon: c.icon || '📄', company: c.company,
-        title: (p.title || '').substring(0, 65),
-        desc: (p.tldr || p.summary || '').substring(0, 130) + '…',
-        date: (p.published || '').substring(0, 10),
-        meta: dirs ? '🏷️ ' + dirs : '',
-        url: p.arxivUrl, borderColor: 'rgba(59,130,246,0.2)'
-      });
-    });
-  }
-  // 最终兜底
-  if (!tickerItems.length) {
-    tickerItems.push({ icon: '📡', company: 'AI Research Radar', title: '暂无数据', desc: '等待下次扫描更新…', date: '', meta: '', url: '', borderColor: 'var(--border)' });
-  }
-}
-
-function startTicker() {
-  buildTickerItems();
-  if (tickerTimer) clearInterval(tickerTimer);
-  tickerIndex = 0;
-  showTickerItem();
-  tickerTimer = setInterval(function() {
-    tickerIndex = (tickerIndex + 1) % tickerItems.length;
-    showTickerItem();
-  }, 5000);
-}
-
-function showTickerItem() {
-  var card = document.getElementById('tickerCard');
-  var item = tickerItems[tickerIndex];
-  if (!card || !item) return;
-  card.style.opacity = '0.3';
-  setTimeout(function() {
-    document.getElementById('tickerCompanyIcon').textContent = item.icon;
-    document.getElementById('tickerTitle').textContent = item.title;
-    document.getElementById('tickerCompanyBadge').textContent = item.company;
-    document.getElementById('tickerDesc').textContent = item.desc;
-    document.getElementById('tickerDate').textContent = item.date ? '📅 ' + item.date : '';
-    document.getElementById('tickerMeta').textContent = item.meta;
-    card.style.borderColor = item.borderColor || 'var(--border)';
-    var dots = '';
-    for (var i = 0; i < tickerItems.length && i < 15; i++) dots += i === tickerIndex ? '●' : '○';
-    if (tickerItems.length > 15) dots += '…';
-    document.getElementById('tickerDots').textContent = dots;
-    card.style.opacity = '1';
-  }, 300);
+  });
+  var el;
+  el = document.getElementById('domainQuickSpeech'); if (el) el.textContent = counts['Speech'] + ' 篇';
+  el = document.getElementById('domainQuickLLM'); if (el) el.textContent = counts['LLM'] + ' 篇';
+  el = document.getElementById('domainQuickMultimodal'); if (el) el.textContent = counts['Multimodal'] + ' 篇';
+  el = document.getElementById('domainQuickInfra'); if (el) el.textContent = counts['Infra'] + ' 篇';
 }
 
 function renderPlatforms() {

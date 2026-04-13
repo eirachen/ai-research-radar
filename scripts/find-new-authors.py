@@ -1,73 +1,48 @@
-"""Find papers with new (untracked) authors for talent research"""
-import json
+"""Find new authors from HK collab papers that are NOT yet in talent-notes.json"""
+import json, os
 
-def main():
-    with open("reports/arxiv-daily.json", "r", encoding="utf-8") as f:
-        data = json.load(f)
-    
-    with open("reports/talent-notes.json", "r", encoding="utf-8") as f:
-        talent_data = json.load(f)
-    
-    existing_names = set(talent_data.get("notes", {}).keys())
-    
-    # Collect all recent uni-collab papers with new authors
-    new_author_papers = []
-    for company_id, company_data in data["companies"].items():
-        for paper in company_data.get("papers", []):
-            if not paper.get("hasUniCollab"):
-                continue
-            if paper["published"] < "2026-04-06":
-                continue
-            new_authors = [a for a in paper["authors"] if a not in existing_names]
-            if new_authors:
-                new_author_papers.append({
-                    "company": company_data["company"],
-                    "title": paper["title"],
-                    "arxivUrl": paper["arxivUrl"],
-                    "pdfUrl": paper.get("pdfUrl", ""),
-                    "published": paper["published"],
-                    "authors": paper["authors"],
-                    "new_authors": new_authors,
-                    "universities": paper.get("universities", []),
-                    "hkUniversities": paper.get("hkUniversities", []),
-                    "hasHKCollab": paper.get("hasHKCollab", False),
-                    "directions": [d["label"] for d in paper.get("directions", [])],
-                    "affiliations": paper.get("affiliations", []),
-                })
-    
-    # Sort: HK first, then newest first
-    new_author_papers.sort(key=lambda x: (not x["hasHKCollab"], x["published"]))
-    new_author_papers.reverse()
-    
-    print(f"Papers with new authors: {len(new_author_papers)}")
-    all_new = set()
-    for p in new_author_papers:
-        all_new.update(p["new_authors"])
-    print(f"Total unique new authors: {len(all_new)}")
-    
-    # Deduplicate by arxivUrl
-    seen_urls = set()
-    unique_papers = []
-    for p in new_author_papers:
-        if p["arxivUrl"] not in seen_urls:
-            seen_urls.add(p["arxivUrl"])
-            unique_papers.append(p)
-    
-    print(f"Unique papers: {len(unique_papers)}")
+base = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+with open(os.path.join(base, "reports", "arxiv-daily.json"), "r", encoding="utf-8") as f:
+    arxiv = json.load(f)
+with open(os.path.join(base, "reports", "talent-notes.json"), "r", encoding="utf-8") as f:
+    talents = json.load(f)
+
+existing = set(talents.get("notes", {}).keys())
+
+# Get all HK collab papers
+hk_papers = []
+for key, c in arxiv["companies"].items():
+    for p in c["papers"]:
+        if p.get("hasHKCollab"):
+            hk_papers.append((c["company"], p))
+
+print(f"HK collab papers: {len(hk_papers)}")
+print(f"Existing talents: {len(existing)}")
+print()
+
+for company, p in hk_papers:
+    print(f"=== [{p.get('published','')[:10]}] {p['title'][:70]} ===")
+    print(f"  Company: {company}")
+    print(f"  hkUnis: {p.get('hkUniversities', [])}")
+    print(f"  All authors: {p.get('authors', [])}")
+    new_authors = [a for a in p.get("authors", []) if a not in existing]
+    old_authors = [a for a in p.get("authors", []) if a in existing]
+    print(f"  Already in DB: {old_authors}")
+    print(f"  NEW (need research): {new_authors}")
+    print(f"  arXiv: {p.get('arxivUrl','')}")
+    print(f"  PDF: {p.get('pdfUrl','')}")
     print()
-    
-    for i, p in enumerate(unique_papers):
-        hk = " [HK!]" if p["hasHKCollab"] else ""
-        print(f"=== Paper {i+1}{hk}: {p['company']} ===")
-        print(f"Title: {p['title']}")
-        print(f"URL: {p['arxivUrl']}")
-        print(f"PDF: {p['pdfUrl']}")
-        print(f"Published: {p['published']}")
-        print(f"Universities: {p['universities']}")
-        print(f"Directions: {p['directions']}")
-        print(f"All authors: {p['authors']}")
-        print(f"NEW authors to track: {p['new_authors']}")
-        print()
 
-if __name__ == "__main__":
-    main()
+# Also get recent (>=2026-04-07) non-HK uni collab papers
+print("\n=== Recent non-HK UniCollab (>=2026-04-07) ===")
+for key, c in arxiv["companies"].items():
+    for p in c["papers"]:
+        if p.get("hasUniCollab") and not p.get("hasHKCollab") and p.get("published","") >= "2026-04-07":
+            new_authors = [a for a in p.get("authors", []) if a not in existing]
+            if new_authors:
+                print(f"  [{p.get('published','')[:10]}] {p['title'][:60]}")
+                print(f"    Company: {c['company']}")
+                print(f"    Unis: {p.get('universities', [])}")
+                print(f"    NEW authors: {new_authors[:5]}")
+                print(f"    arXiv: {p.get('arxivUrl','')}")
+                print()

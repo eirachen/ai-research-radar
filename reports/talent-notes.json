@@ -7458,7 +7458,7 @@
     "Zhiheng Liu": {
       "name": "Zhiheng Liu",
       "university": "待确认",
-      "isHK": true,
+      "isHK": false,
       "status": "待确认",
       "advisor": "待确认",
       "lab": "",
@@ -7472,7 +7472,7 @@
     "Yuhao Zhang": {
       "name": "Yuhao Zhang",
       "university": "待确认",
-      "isHK": true,
+      "isHK": false,
       "status": "待确认",
       "advisor": "待确认",
       "lab": "",
@@ -7486,7 +7486,7 @@
     "Zhiqiang Lv": {
       "name": "Zhiqiang Lv",
       "university": "待确认",
-      "isHK": true,
+      "isHK": false,
       "status": "待确认",
       "advisor": "待确认",
       "lab": "",
@@ -7500,7 +7500,7 @@
     "Liyin Liang": {
       "name": "Liyin Liang",
       "university": "待确认",
-      "isHK": true,
+      "isHK": false,
       "status": "待确认",
       "advisor": "待确认",
       "lab": "",

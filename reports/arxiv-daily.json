@@ -1584,12 +1584,11 @@
           ],
           "comment": "",
           "universities": [
-            "香港科技大学 (HKUST)",
-            "上海交通大学 (SJTU)",
-            "西安电子科技大学"
+            "1EPICLab,ShanghaiJiaoTongUniversity 2XidianUniversity 3HKUST(GZ)"
           ],
           "hkUniversities": [
-            "香港科技大学 (HKUST)"
+            "HKU",
+            "HKUST"
           ],
           "hasUniCollab": true,
           "hasHKCollab": true,
@@ -2363,12 +2362,13 @@
           ],
           "comment": "Open-source VLA infra, Technical Report",
           "universities": [
-            "香港科技大学 (HKUST)"
+            "StarVLACommunity&VonNeumannInstitute,HKUST"
           ],
           "hkUniversities": [
-            "香港科技大学 (HKUST)"
+            "HKU",
+            "HKUST"
           ],
-          "hasUniCollab": false,
+          "hasUniCollab": true,
           "hasHKCollab": true,
           "directions": [
             {
@@ -4096,11 +4096,11 @@
           ],
           "comment": "Project page: https://gen-searcher.vercel.app Code: https://github.com/tulerfeng/Gen-Searcher",
           "universities": [
-            "香港中文大学 (CUHK)",
-            "加州大学伯克利分校 (UC Berkeley)"
+            "1MMLab,CUHK 2UCLA 3UCBerkeley",
+            "KaituoFeng1 ManyuanZhang1† ShawnChen2 YunlongLin1 KaixuanFan1"
           ],
           "hkUniversities": [
-            "香港中文大学 (CUHK)"
+            "CUHK"
           ],
           "hasUniCollab": true,
           "hasHKCollab": true,
@@ -4307,13 +4307,14 @@
           ],
           "comment": "18 pages, 7 figures, has already published in ICLR workshop \"Agentic AI in the Wild: From Hallucinations to Reliable Autonomy\"",
           "universities": [
-            "香港中文大学 (CUHK)",
-            "上海交通大学 (SJTU)"
+            "{jianweihuang}@cuhk.edu.hk",
+            "ShanghaiJiaoTongUniversity",
+            "ShanghaiKeyLaboratoryofIntegratedAdministrationTechnologiesforInformationSecurit"
           ],
           "hkUniversities": [
-            "香港中文大学 (CUHK)"
+            "CUHK"
           ],
-          "hasUniCollab": false,
+          "hasUniCollab": true,
           "hasHKCollab": true,
           "directions": [
             {
@@ -5916,12 +5917,15 @@
           ],
           "comment": "Accepted to ACL 2026 Main Conference",
           "universities": [
-            "MIT",
-            "HIT"
+            "2HarbinInstituteofTechnology",
+            "qinch@connect.hku.hk, fengxc@hku.hk",
+            "1TheUniversityofHongKong"
           ],
-          "hkUniversities": [],
-          "hasUniCollab": false,
-          "hasHKCollab": false,
+          "hkUniversities": [
+            "HKU"
+          ],
+          "hasUniCollab": true,
+          "hasHKCollab": true,
           "directions": [
             {
               "id": "LLM",
@@ -7492,11 +7496,11 @@
           ],
           "comment": "Under Review. version2: correct typos in Table 4 and add an ablation study (Table 5)",
           "universities": [
-            "浙江大学 (ZJU)",
-            "香港城市大学 (CityU)"
+            "3CityUniversityofHongKong,4ZhejiangUniversity",
+            "1UniversityofScienceandTechnologyofChina,2MeituanLongCatTeam,"
           ],
           "hkUniversities": [
-            "香港城市大学 (CityU)"
+            "CityU"
           ],
           "hasUniCollab": true,
           "hasHKCollab": true,
@@ -7683,11 +7687,16 @@
           ],
           "comment": "9 pages, 6 figures, 4 tables, Accepted by ICME 2026",
           "universities": [
-            "CAS"
+            "1Guangdong University of Finance and Economics",
+            "STAR: Mitigating Cascading Errors in Spatial",
+            "lirunze@westlake.edu.cn, haojianhuang@connect.hku.hk"
           ],
-          "hkUniversities": [],
-          "hasUniCollab": false,
-          "hasHKCollab": false,
+          "hkUniversities": [
+            "HKU",
+            "Hong Kong"
+          ],
+          "hasUniCollab": true,
+          "hasHKCollab": true,
           "directions": [
             {
               "id": "LLM",
@@ -7858,16 +7867,10 @@
             "cs.LG"
           ],
           "comment": "26 pages, 17 figures, 10 tables. Accepted at ICLR 2026",
-          "universities": [
-            "香港科技大学 (HKUST)",
-            "香港大学 (HKU)"
-          ],
-          "hkUniversities": [
-            "香港科技大学 (HKUST)",
-            "香港大学 (HKU)"
-          ],
+          "universities": [],
+          "hkUniversities": [],
           "hasUniCollab": false,
-          "hasHKCollab": true,
+          "hasHKCollab": false,
           "directions": [
             {
               "id": "LLM",
@@ -10340,12 +10343,13 @@
           ],
           "comment": "",
           "universities": [
-            "香港中文大学 (CUHK)"
+            "darenwang@link.cuhk.edu.hk",
+            "TheChineseUniversityofHongKong"
           ],
           "hkUniversities": [
-            "香港中文大学 (CUHK)"
+            "CUHK"
           ],
-          "hasUniCollab": false,
+          "hasUniCollab": true,
           "hasHKCollab": true,
           "directions": [
             {
@@ -13379,11 +13383,13 @@
           ],
           "comment": "31 pages",
           "universities": [
-            "上海交通大学 (SJTU)"
+            "1 Shanghai Jiao Tong University 2 Northeastern University"
           ],
-          "hkUniversities": [],
-          "hasUniCollab": false,
-          "hasHKCollab": false,
+          "hkUniversities": [
+            "Hong Kong"
+          ],
+          "hasUniCollab": true,
+          "hasHKCollab": true,
           "directions": [
             {
               "id": "LLM",
@@ -17489,11 +17495,11 @@
           ],
           "comment": "",
           "universities": [
-            "浙江大学 (ZJU)",
-            "香港城市大学 (CityU)"
+            "3CityUniversityofHongKong",
+            "1ZhejiangUniversity 2HongKongUniversityofScienceandTechnology"
           ],
           "hkUniversities": [
-            "香港城市大学 (CityU)"
+            "CityU"
           ],
           "hasUniCollab": true,
           "hasHKCollab": true,
@@ -19555,10 +19561,11 @@
           ],
           "comment": "6 pages, 4 figures",
           "universities": [
-            "香港城市大学 (CityU)"
+            "CityUniversityofHongKong CityUniversityofHongKong BaiduInc.",
+            "TongzhouWu YuhaoWang XinyuMa"
           ],
           "hkUniversities": [
-            "香港城市大学 (CityU)"
+            "CityU"
           ],
           "hasUniCollab": true,
           "hasHKCollab": true,
@@ -19775,13 +19782,12 @@
           ],
           "comment": "accepted by ICASSP 2026",
           "universities": [
-            "香港中文大学 (CUHK)"
+            "CAS",
+            "ANU"
           ],
-          "hkUniversities": [
-            "香港中文大学 (CUHK)"
-          ],
+          "hkUniversities": [],
           "hasUniCollab": true,
-          "hasHKCollab": true,
+          "hasHKCollab": false,
           "directions": [
             {
               "id": "Speech",
@@ -20296,13 +20302,11 @@
           ],
           "comment": "",
           "universities": [
-            "香港中文大学 (CUHK)"
+            "香港中文大学（深圳）(CUHK-SZ)"
           ],
-          "hkUniversities": [
-            "香港中文大学 (CUHK)"
-          ],
+          "hkUniversities": [],
           "hasUniCollab": true,
-          "hasHKCollab": true,
+          "hasHKCollab": false,
           "directions": [
             {
               "id": "LLM",
@@ -20334,9 +20338,7 @@
             "TheChineseUniversityofHongKong,Shenzhen1,DidiChuxing2",
             "XinyuanXie1,2* , ShunianChen1* , ZhihengLiu1, YuhaoZhang1"
           ],
-          "pdfHKUnis": [
-            "CUHK"
-          ],
+          "pdfHKUnis": [],
           "collabConfidence": "confirmed",
           "tldr": "[research paper] EvA introduces a dual-path architecture that resolves the evidence bottleneck in LALMs by preserving acoustic evidence before reasoning through hierarchical aggregation in CED-Base and non-compressive, time-aligned fusion with Whisper. The architecture maintains full temporal resolution and multi-scale cues, enabling superior performance on perception-heavy benchmarks like MMAU, MMAR, and MMSU, with the largest gains in tasks requiring fine-grained audio understanding. EvA-Perception, a large-scale event-ordered audio QA dataset, enables training on fine-grained temporal cues, supporting the evidence-first hypothesis that upstream perception limits audio understanding more than downstream reasoning.",
           "deepxivKeywords": [

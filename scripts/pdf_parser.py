@@ -43,6 +43,8 @@ UNI_IDENTIFIERS = [
 ]
 
 HK_IDENTIFIERS = ['Hong Kong', 'HKUST', 'HKU', 'CUHK', 'CityU', 'PolyU', 'HKBU']
+# Mainland campuses that should NOT be flagged as HK
+NOT_HK_SUFFIXES = ['shenzhen', '深圳', '(sz)', 'guangzhou', '广州', '(gz)', '(guangzhou)']
 
 
 def download_pdf_page1(pdf_url, timeout=20):
@@ -120,8 +122,17 @@ def parse_affiliations(page1_text, known_authors=None):
                     break
     
     for ident in HK_IDENTIFIERS:
-        if ident.lower() in header_lower:
-            hk_unis.add(ident)
+        ident_lower = ident.lower()
+        pos = header_lower.find(ident_lower)
+        if pos >= 0:
+            # Check surrounding context for mainland campus indicators
+            context = header_lower[pos:pos + len(ident_lower) + 60]
+            is_mainland = any(suffix in context for suffix in NOT_HK_SUFFIXES)
+            if not is_mainland:
+                hk_unis.add(ident)
+            else:
+                # It's a mainland campus, don't flag as HK
+                pass
     
     is_confirmed = bool(companies_found) and bool(unis_found)
     

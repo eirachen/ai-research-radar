@@ -19775,12 +19775,13 @@
           ],
           "comment": "accepted by ICASSP 2026",
           "universities": [
-            "CAS",
-            "ANU"
+            "香港中文大学 (CUHK)"
           ],
-          "hkUniversities": [],
+          "hkUniversities": [
+            "香港中文大学 (CUHK)"
+          ],
           "hasUniCollab": true,
-          "hasHKCollab": false,
+          "hasHKCollab": true,
           "directions": [
             {
               "id": "Speech",

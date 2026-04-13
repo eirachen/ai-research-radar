@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-10T12:11:49Z",
+  "generatedAt": "2026-04-13T10:50:34Z",
   "notes": {
     "Ye Tian": {
       "name": "田野 (Ye Tian)",
@@ -14091,7 +14091,21 @@
       "direction": "LLM推理 / 组合泛化 / 可解释性",
       "gradYear": "~2027",
       "statusNote": "ICLR2026*2, 国家奖学金, 美团LongCat实习",
-      "editedAt": "2026-04-13"
+      "editedAt": "2026-04-13",
+      "contactInfo": {
+        "emails": [
+          "lizhaoyi777@mail.ustc.edu.cn"
+        ],
+        "wechat": [],
+        "phone": [],
+        "cv": [],
+        "social": {
+          "github": "github.com/Zhaoyi-Li21"
+        },
+        "scannedAt": "2026-04-13",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Gangwei Jiang": {
       "name": "Gangwei Jiang",
@@ -14105,7 +14119,23 @@
       "direction": "机器学习",
       "gradYear": "待确认",
       "statusNote": "Google Scholar 889次引用",
-      "editedAt": "2026-04-13"
+      "editedAt": "2026-04-13",
+      "contactInfo": {
+        "emails": [
+          "gwjiang@mail.ustc.edu.cb"
+        ],
+        "wechat": [],
+        "phone": [],
+        "cv": [
+          "https://gangwJiang.github.io/cv/"
+        ],
+        "social": {
+          "github": "github.com/gangwJiang"
+        },
+        "scannedAt": "2026-04-13",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Ranran Shen": {
       "name": "申冉冉 (Ranran Shen)",
@@ -14119,7 +14149,19 @@
       "direction": "算法 / 图论",
       "gradYear": "待确认",
       "statusNote": "NeurIPS2023",
-      "editedAt": "2026-04-13"
+      "editedAt": "2026-04-13",
+      "contactInfo": {
+        "emails": [
+          "ranranshen@mail.ustc.edu.cn"
+        ],
+        "wechat": [],
+        "phone": [],
+        "cv": [],
+        "social": {},
+        "scannedAt": "2026-04-13",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Ying Wei": {
       "name": "魏颖 (Ying Wei)",
@@ -14133,7 +14175,22 @@
       "direction": "迁移学习 / 持续学习 / AI for Science",
       "gradYear": "",
       "statusNote": "曾任CityU助理教授, Google Scholar 6569引用",
-      "editedAt": "2026-04-13"
+      "editedAt": "2026-04-13",
+      "contactInfo": {
+        "emails": [],
+        "wechat": [],
+        "phone": [],
+        "cv": [
+          "http://wei-ying.net/data/updated_CV_tex.pdf"
+        ],
+        "social": {
+          "github": "github.com/cbfinn",
+          "linkedin": "linkedin.com/in/ying-wei-81435159"
+        },
+        "scannedAt": "2026-04-13",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Defu Lian": {
       "name": "连德富 (Defu Lian)",
@@ -14147,7 +14204,19 @@
       "direction": "推荐系统 / 数据挖掘 / 深度学习",
       "gradYear": "",
       "statusNote": "国家优青",
-      "editedAt": "2026-04-13"
+      "editedAt": "2026-04-13",
+      "contactInfo": {
+        "emails": [
+          "liandefu@ustc.edu.cn"
+        ],
+        "wechat": [],
+        "phone": [],
+        "cv": [],
+        "social": {},
+        "scannedAt": "2026-04-13",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Jiacheng Liu": {
       "name": "Jiacheng Liu",

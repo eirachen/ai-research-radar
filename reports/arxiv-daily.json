@@ -10946,6 +10946,11 @@
               "id": "Vision",
               "label": "Vision",
               "color": "#6b7280"
+            },
+            {
+              "id": "Speech",
+              "label": "语音",
+              "color": "#14b8a6"
             }
           ],
           "collabConfidence": "uni_only",
@@ -13139,11 +13144,6 @@
               "id": "Safety",
               "label": "安全",
               "color": "#ef4444"
-            },
-            {
-              "id": "Speech",
-              "label": "语音",
-              "color": "#14b8a6"
             }
           ],
           "pdfVerified": true,
@@ -20320,8 +20320,8 @@
             },
             {
               "id": "Speech",
-              "label": "Speech",
-              "color": "#6b7280"
+              "label": "语音",
+              "color": "#14b8a6"
             }
           ],
           "pdfVerified": true,

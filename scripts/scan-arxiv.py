@@ -189,8 +189,15 @@ AI_DIRECTIONS = {
         "label": "语音",
         "color": "#14b8a6",
         "keywords": [
-            "speech", "ASR", "TTS", "text-to-speech",
+            "speech", "ASR", "TTS", "text-to-speech", "speech-to-text",
             "voice", "audio", "spoken language", "music",
+            "speech recognition", "speech synthesis", "speech generation",
+            "voice conversion", "voice cloning", "speech enhancement",
+            "acoustic model", "prosody", "phoneme", "vocoder",
+            "mel spectrogram", "audio codec", "neural codec",
+            "audio captioning", "audio understanding", "audio language model",
+            "singing", "speaker diarization", "full-duplex",
+            "streaming ASR", "speech token", "speech codec",
         ]
     },
     "RAG": {
@@ -326,6 +333,22 @@ COMPANY_QUERIES = {
     "antgroup": {
         "name": "蚂蚁集团", "icon": "🐜",
         "keywords": ['"Ant Group"', '"Ant Financial"', '"AntGroup"']
+    },
+    # ══ 语音专项监控公司（只关注语音方向）══
+    "kunlun": {
+        "name": "昆仑万维", "icon": "🏔️",
+        "keywords": ['"Kunlun Tech"', '"SkyMusic"', '"Kunlun"'],
+        "speech_only": True  # 标记：只保留语音相关论文
+    },
+    "suno": {
+        "name": "Suno", "icon": "🎵",
+        "keywords": ['"Suno"', '"Suno AI"'],
+        "speech_only": True
+    },
+    "minimax": {
+        "name": "MiniMax", "icon": "🔊",
+        "keywords": ['"MiniMax"', '"Hailuo"'],
+        "speech_only": True
     },
 }
 
@@ -467,6 +490,18 @@ def main():
 
         company_papers = deduplicate(company_papers)
         company_papers.sort(key=lambda x: x["published"], reverse=True)
+
+        # For speech_only companies, filter to keep only speech-related papers
+        if company_info.get("speech_only"):
+            speech_kws = AI_DIRECTIONS["Speech"]["keywords"]
+            before = len(company_papers)
+            company_papers = [
+                p for p in company_papers
+                if any(d["id"] == "Speech" for d in p.get("directions", []))
+                or any(kw.lower() in (p["title"] + " " + p["summary"]).lower() for kw in speech_kws)
+            ]
+            if before != len(company_papers):
+                print(f"  [speech_only] filtered {before} -> {len(company_papers)}")
 
         uni_count = sum(1 for p in company_papers if p["hasUniCollab"])
         hk_count = sum(1 for p in company_papers if p["hasHKCollab"])

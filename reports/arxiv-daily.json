@@ -19561,8 +19561,7 @@
           ],
           "comment": "6 pages, 4 figures",
           "universities": [
-            "CityUniversityofHongKong CityUniversityofHongKong BaiduInc.",
-            "TongzhouWu YuhaoWang XinyuMa"
+            "City University of Hong Kong (CityU)"
           ],
           "hkUniversities": [
             "CityU"
@@ -19782,12 +19781,12 @@
           ],
           "comment": "accepted by ICASSP 2026",
           "universities": [
-            "CAS",
-            "ANU"
+            "The Chinese University of Hong Kong (CUHK)",
+            "北京大学 (PKU)"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
-          "hasHKCollab": false,
+          "hasHKCollab": true,
           "directions": [
             {
               "id": "Speech",

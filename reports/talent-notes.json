@@ -4962,11 +4962,11 @@
       "advisor": "Xiangyu Zhao",
       "lab": "AML Lab, CityU",
       "homepage": "https://github.com/MessiahCorleone",
-      "scholar": "",
+      "scholar": "https://scholar.google.com/citations?user=cLUgV4YAAAAJ",
       "direction": "推荐系统 / Agent / RAG",
       "gradYear": "待确认",
       "statusNote": "DeepResearch-9K被SIGIR 2026接收",
-      "editedAt": "2026-04-10",
+      "editedAt": "2026-04-13T14:42:39",
       "contactInfo": {
         "emails": [],
         "wechat": [],
@@ -4978,7 +4978,9 @@
         "scannedAt": "2026-04-10",
         "hasContactKeywords": true,
         "hasContact": true
-      }
+      },
+      "verified": true,
+      "source": "AML Lab team page + CityU Scholars portal"
     },
     "Yuhao Wang": {
       "name": "Yuhao Wang",
@@ -4992,7 +4994,7 @@
       "direction": "推荐系统 / LLM",
       "gradYear": "待确认",
       "statusNote": "本科西安交大统计学，DeepResearch-9K被SIGIR26接收",
-      "editedAt": "2026-04-10",
+      "editedAt": "2026-04-13T14:42:39",
       "contactInfo": {
         "emails": [],
         "wechat": [],
@@ -5006,21 +5008,25 @@
         "scannedAt": "2026-04-10",
         "hasContactKeywords": true,
         "hasContact": true
-      }
+      },
+      "verified": true,
+      "source": "AML Lab team page + personal homepage CV"
     },
     "Xinyu Ma": {
       "name": "Xinyu Ma",
-      "university": "待确认（可能CityU或百度）",
+      "university": "City University of Hong Kong (CityU)",
       "isHK": true,
       "status": "待确认",
-      "advisor": "待确认",
-      "lab": "",
+      "advisor": "待确认 (可能是 Xiangyu Zhao 组)",
+      "lab": "AML Lab (推测)",
       "homepage": "",
       "scholar": "",
       "direction": "强化学习 / Agent / RAG/检索",
       "gradYear": "待确认",
       "statusNote": "DeepResearch-9K论文合作者，身份待确认",
-      "editedAt": "2026-04-10"
+      "editedAt": "2026-04-13T14:42:39",
+      "verified": false,
+      "source": "PDF affiliation: CityU (与 Xiangyu Zhao 同组)"
     },
     "Xiuqiang He": {
       "name": "Xiuqiang He",
@@ -5102,11 +5108,11 @@
       "advisor": "待确认",
       "lab": "AML Lab, City University of Hong Kong",
       "homepage": "https://aml-cityu.github.io/",
-      "scholar": "",
+      "scholar": "https://scholar.google.com/citations?user=Nkm9r2IAAAAJ",
       "direction": "强化学习 / Agent / RAG/检索",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（阿里通义）",
-      "editedAt": "2026-04-09",
+      "editedAt": "2026-04-13T14:42:39",
       "contactInfo": {
         "emails": [],
         "wechat": [],
@@ -5116,7 +5122,9 @@
         "scannedAt": "2026-04-10",
         "hasContactKeywords": true,
         "hasContact": false
-      }
+      },
+      "verified": true,
+      "source": "CityU staff profile + Google Scholar"
     },
     "Xiangming Gu": {
       "name": "Xiangming Gu",
@@ -7432,56 +7440,67 @@
       "university": "香港中文大学（深圳）(CUHK-SZ) / 滴滴",
       "isHK": false,
       "status": "待确认（PDF标注同时属于CUHK-SZ和滴滴）",
-      "advisor": "待确认",
-      "lab": "",
+      "advisor": "Benyou Wang (推测)",
+      "lab": "FreedomAI Lab (推测)",
       "homepage": "",
       "scholar": "",
       "direction": "LLM / Infra / 强化学习",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（月之暗面）",
-      "editedAt": "2026-04-10"
+      "editedAt": "2026-04-13T14:42:39",
+      "verified": false,
+      "source": "PDF affiliation: CUHK-Shenzhen (上标1) + Didi (上标2)"
     },
     "Shunian Chen": {
       "name": "Shunian Chen",
       "university": "香港中文大学（深圳）(CUHK-SZ)",
       "isHK": false,
       "status": "博士生",
-      "advisor": "待确认",
-      "lab": "",
-      "homepage": "",
-      "scholar": "",
+      "advisor": "Benyou Wang",
+      "lab": "FreedomAI Lab, School of Data Science",
+      "homepage": "https://personal-page-sigma-seven.vercel.app/",
+      "scholar": "https://scholar.google.com/citations?user=T0yyq-EAAAAJ",
       "direction": "LLM / Infra / 强化学习",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（月之暗面）",
-      "editedAt": "2026-04-10"
+      "editedAt": "2026-04-13T14:42:39",
+      "verified": true,
+      "source": "OpenReview (CUHK-SZ PhD) + CUHK-SZ student page + personal page",
+      "contactInfo": {
+        "github": "https://github.com/Shunian-Chen/"
+      }
     },
     "Zhiheng Liu": {
       "name": "Zhiheng Liu",
-      "university": "待确认",
+      "university": "香港中文大学（深圳）(CUHK-SZ)",
       "isHK": false,
       "status": "待确认",
-      "advisor": "待确认",
-      "lab": "",
+      "advisor": "Benyou Wang (推测)",
+      "lab": "FreedomAI Lab (推测)",
       "homepage": "",
       "scholar": "",
       "direction": "LLM / Infra / 强化学习",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（月之暗面）",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-13T14:42:39",
+      "verified": false,
+      "source": "PDF affiliation: CUHK-Shenzhen (上标1)"
     },
     "Yuhao Zhang": {
       "name": "Yuhao Zhang",
-      "university": "待确认",
+      "university": "香港中文大学（深圳）(CUHK-SZ)",
       "isHK": false,
       "status": "待确认",
-      "advisor": "待确认",
-      "lab": "",
+      "advisor": "Benyou Wang (推测)",
+      "lab": "FreedomAI Lab (推测)",
       "homepage": "",
       "scholar": "",
       "direction": "LLM / Infra / 强化学习",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（月之暗面）",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-13T14:42:39",
+      "verified": false,
+      "source": "PDF affiliation: CUHK-Shenzhen (上标1)"
     },
     "Zhiqiang Lv": {
       "name": "Zhiqiang Lv",
@@ -7523,7 +7542,7 @@
       "direction": "NLP / LLM / 医疗AI",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（月之暗面）",
-      "editedAt": "2026-04-10",
+      "editedAt": "2026-04-13T14:42:39",
       "contactInfo": {
         "emails": [
           "wabyking@gmail.com"
@@ -7536,8 +7555,11 @@
         },
         "scannedAt": "2026-04-10",
         "hasContactKeywords": true,
-        "hasContact": true
-      }
+        "hasContact": true,
+        "email": "wangbenyou@cuhk.edu.cn"
+      },
+      "verified": true,
+      "source": "CUHK-SZ faculty page (sds.cuhk.edu.cn) + Google Scholar"
     },
     "Juan Gabriel Kostelec": {
       "name": "Juan Gabriel Kostelec",
@@ -12816,31 +12838,38 @@
     },
     "Yadong Niu": {
       "name": "Yadong Niu",
-      "university": "待确认",
-      "isHK": true,
+      "university": "北京大学 (PKU)",
+      "isHK": false,
       "status": "待确认",
       "advisor": "待确认",
       "lab": "CUHK",
       "homepage": "",
-      "scholar": "",
+      "scholar": "https://scholar.google.com/citations?user=vNkB77QAAAAJ",
       "direction": "语音 / LLM / Infra",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（小米）",
-      "editedAt": "2026-04-09"
+      "editedAt": "2026-04-13T14:43:10",
+      "verified": true,
+      "source": "Google Scholar (Peking University) + IEEE Xplore (PKU)"
     },
     "Tianzi Wang": {
       "name": "Tianzi Wang",
-      "university": "待确认",
-      "isHK": false,
-      "status": "待确认",
-      "advisor": "待确认",
-      "lab": "",
+      "university": "The Chinese University of Hong Kong (CUHK)",
+      "isHK": true,
+      "status": "PhD",
+      "advisor": "待确认 (CUHK HCCL Lab)",
+      "lab": "HCCL Lab, Dept of Systems Engineering and Engineering Management",
       "homepage": "",
-      "scholar": "",
+      "scholar": "https://scholar.google.com/citations?user=tDVY69wAAAAJ",
       "direction": "语音 / LLM / Infra",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（小米）",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-13T14:42:39",
+      "verified": true,
+      "source": "Google Scholar (CUHK, email @se.cuhk.edu.hk) + OpenReview + LinkedIn",
+      "contactInfo": {
+        "linkedin": "https://cn.linkedin.com/in/tianzi-wang-3b7857154"
+      }
     },
     "Heinrich Dinkel": {
       "name": "Heinrich Dinkel",
@@ -14275,5 +14304,5 @@
       "editedAt": "2026-04-13"
     }
   },
-  "lastUpdated": "2026-04-13T09:19:00.410340Z"
+  "lastUpdated": "2026-04-13T14:43:10"
 }

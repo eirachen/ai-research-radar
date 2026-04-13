@@ -3097,6 +3097,13 @@ function renderDomainPage(domainKey) {
   var container = document.getElementById('page-domain-' + domainKey);
   if (!container) return;
 
+  // 如果 arxivData 还没加载完，显示 loading 并等待重试
+  if (!window.arxivData || !arxivData.companies) {
+    container.innerHTML = '<div style="text-align:center;padding:3rem;color:var(--text2)"><div style="font-size:2rem;margin-bottom:0.5rem">⏳</div>数据加载中，请稍候…</div>';
+    setTimeout(function() { renderDomainPage(domainKey); }, 500);
+    return;
+  }
+
   // 收集该领域的论文 — 同时检查 directions 数组中超过 top3 的方向
   var papers = [];
   var _totalScanned = 0;
@@ -4169,7 +4176,7 @@ async function loadReports() {
   if (talentCount) document.getElementById('talentBadge').textContent = talentCount + ' 位追踪中';
 }
 
-loadTalentNotes().then(function() { loadArxiv().then(function() { buildTalentPaperMap(); renderTalentExistingList(); renderTalent(); renderStats(); renderArxivDatePicker(); renderNetwork(); updateDomainBadges(); }); });
+loadTalentNotes().then(function() { loadArxiv().then(function() { buildTalentPaperMap(); renderTalentExistingList(); renderTalent(); renderStats(); renderArxivDatePicker(); renderNetwork(); updateDomainBadges(); /* 如果用户已经在某个 domain 页面，重新渲染 */ var cp = document.querySelector('.page.active'); if (cp && cp.id && cp.id.indexOf('page-domain-') === 0) { var dk = cp.id.replace('page-domain-',''); renderDomainPage(dk); } }); });
 loadReports();
 loadFeeds();
 </script>

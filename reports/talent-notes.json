@@ -3664,7 +3664,7 @@
     "Jianwei Huang": {
       "name": "Jianwei Huang",
       "university": "香港中文大学（深圳）(CUHK-SZ)",
-      "isHK": true,
+      "isHK": false,
       "status": "校长讲座教授/副校长",
       "advisor": "待确认",
       "lab": "NCEL, CUHK-SZ",
@@ -5989,7 +5989,7 @@
     "Nan Tang": {
       "name": "Nan Tang",
       "university": "香港科技大学（广州）(HKUST-GZ)",
-      "isHK": true,
+      "isHK": false,
       "status": "副教授",
       "advisor": "待确认",
       "lab": "DSA Thrust, HKUST-GZ",
@@ -7430,7 +7430,7 @@
     "Xinyuan Xie": {
       "name": "Xinyuan Xie",
       "university": "香港中文大学（深圳）(CUHK-SZ) / 滴滴",
-      "isHK": true,
+      "isHK": false,
       "status": "待确认（PDF标注同时属于CUHK-SZ和滴滴）",
       "advisor": "待确认",
       "lab": "",
@@ -7444,7 +7444,7 @@
     "Shunian Chen": {
       "name": "Shunian Chen",
       "university": "香港中文大学（深圳）(CUHK-SZ)",
-      "isHK": true,
+      "isHK": false,
       "status": "博士生",
       "advisor": "待确认",
       "lab": "",
@@ -7514,7 +7514,7 @@
     "Benyou Wang": {
       "name": "Benyou Wang",
       "university": "香港中文大学（深圳）(CUHK-SZ)",
-      "isHK": true,
+      "isHK": false,
       "status": "助理教授/博导",
       "advisor": "待确认",
       "lab": "School of Data Science, CUHK-SZ",
@@ -13083,7 +13083,7 @@
     "Xuming Hu": {
       "name": "胡旭明 (Xuming Hu)",
       "university": "香港科技大学广州 (HKUST-GZ)",
-      "isHK": true,
+      "isHK": false,
       "status": "助理教授",
       "advisor": "",
       "lab": "AI Thrust, HKUST (GZ)",
@@ -14020,7 +14020,7 @@
     "Honghao Cai": {
       "name": "Honghao Cai",
       "university": "Chinese University of Hong Kong, Shenzhen (CUHK-SZ)",
-      "isHK": true,
+      "isHK": false,
       "status": "待确认 (可能研究生)",
       "advisor": "",
       "lab": "",

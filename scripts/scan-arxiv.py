@@ -16,7 +16,7 @@ from datetime import datetime, timedelta
 # 高校关键词库
 # ══════════════════════════════════════
 
-# 香港高校（港校特别高亮）
+# 香港高校（港校特别高亮）— 仅限香港本部，不含内地分校
 HK_UNIVERSITIES = {
     "University of Hong Kong": "香港大学 (HKU)",
     "HKU": "香港大学 (HKU)",
@@ -31,8 +31,16 @@ HK_UNIVERSITIES = {
     "Hong Kong Baptist University": "香港浸会大学 (HKBU)",
     "HKBU": "香港浸会大学 (HKBU)",
     "Lingnan University": "岭南大学",
-    "Hong Kong": "香港高校",  # Fallback catch
 }
+
+# 内地分校 — 这些不算港校！匹配到这些时要排除港校标记
+NOT_HK_EXCLUSIONS = [
+    "shenzhen",      # CUHK-Shenzhen
+    "guangzhou",     # HKUST(GZ)
+    "(gz)",          # HKUST(GZ) 简写
+    "深圳",           # 中文
+    "广州",           # 中文
+]
 
 # 知名高校关键词（用于从 author affiliations / comment / summary 中匹配）
 UNIVERSITY_KEYWORDS = [
@@ -222,14 +230,40 @@ AI_DIRECTIONS = {
 
 
 def detect_universities(text):
-    """Detect university mentions in text, return (all_unis, hk_unis)"""
+    """Detect university mentions in text, return (all_unis, hk_unis).
+    CRITICAL: CUHK-Shenzhen and HKUST(GZ) are NOT HK universities."""
     text_lower = text.lower()
     found_unis = set()
     found_hk = set()
 
-    # Check HK universities first
+    # Check HK universities — but exclude mainland campuses
     for keyword, name in HK_UNIVERSITIES.items():
-        if keyword.lower() in text_lower:
+        kw_lower = keyword.lower()
+        pos = text_lower.find(kw_lower)
+        if pos < 0:
+            continue
+        # Found a match — now check if it's actually a mainland campus
+        # Look at surrounding context (50 chars after the match)
+        context_after = text_lower[pos:pos + len(kw_lower) + 50]
+        is_mainland = False
+        for excl in NOT_HK_EXCLUSIONS:
+            if excl in context_after:
+                is_mainland = True
+                break
+        if is_mainland:
+            # It's a mainland campus — add as regular university, NOT as HK
+            if "shenzhen" in context_after or "深圳" in context_after:
+                if "CUHK" in name:
+                    found_unis.add("香港中文大学（深圳）(CUHK-SZ)")
+                else:
+                    found_unis.add(name + " (Shenzhen)")
+            elif "guangzhou" in context_after or "广州" in context_after or "(gz)" in context_after:
+                if "HKUST" in name:
+                    found_unis.add("香港科技大学（广州）(HKUST-GZ)")
+                else:
+                    found_unis.add(name + " (Guangzhou)")
+        else:
+            # Genuine HK campus
             found_hk.add(name)
             found_unis.add(name)
 

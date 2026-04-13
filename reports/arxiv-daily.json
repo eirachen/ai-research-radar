@@ -1,14 +1,68 @@
 {
-  "generatedAt": "2026-04-13T09:12:53.289389Z",
+  "generatedAt": "2026-04-13T10:21:37.795532Z",
   "since": "2026-03-01",
-  "totalPapers": 319,
-  "totalUniCollab": 52,
+  "totalPapers": 337,
+  "totalUniCollab": 58,
   "totalHKCollab": 10,
   "companies": {
     "bytedance": {
       "company": "字节Seed",
       "icon": "🌱",
       "papers": [
+        {
+          "title": "From Business Events to Auditable Decisions: Ontology-Governed Graph Simulation for Enterprise AI",
+          "summary": "Existing LLM-based agent systems share a common architectural failure: they answer from the unrestricted knowledge space without first simulating how active business scenarios reshape that space for the event at hand -- producing decisions that are fluent but ungrounded and carrying no audit trail. ",
+          "published": "2026-04-08T06:07:48Z",
+          "arxivId": "2604.08603v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.08603v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.08603v1",
+          "authors": [
+            "Hongyin Zhu",
+            "Jinming Liang",
+            "Mengjun Hou",
+            "Ruifan Tang",
+            "Xianbin Zhu",
+            "Jingyuan Yang",
+            "Yuanman Mao",
+            "Feng Wu"
+          ],
+          "authorCount": 8,
+          "affiliations": [],
+          "categories": [
+            "cs.AI",
+            "cs.CL"
+          ],
+          "comment": "",
+          "universities": [
+            "HIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            }
+          ],
+          "collabConfidence": "confirmed",
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "deepseek",
+            "bytedance"
+          ],
+          "pdfUnis": [
+            "largeontologymodel unrestrictedknowledgespacewithoutfirstsimulatinghowactivebusi"
+          ],
+          "pdfHKUnis": [],
+          "deepxivEnhanced": true
+        },
         {
           "title": "Evolution of Video Generative Foundations",
           "summary": "The rapid advancement of Artificial Intelligence Generated Content (AIGC) has revolutionized video generation, enabling systems ranging from proprietary pioneers like OpenAI's Sora, Google's Veo3, and Bytedance's Seedance to powerful open-source contenders like Wan and HunyuanVideo to synthesize tem",
@@ -191,8 +245,8 @@
             "bytedance"
           ],
           "pdfUnis": [
-            "1ByteDanceSeed, 2PrincetonUniversity, 3UCBerkeley, 4StanfordUniversity",
-            "Qianfan Zhang2,†, Tianyu Guo3,†, Xuandi Ren3,†, Jiale Chen4,†, Ming Ding1,"
+            "Qianfan Zhang2,†, Tianyu Guo3,†, Xuandi Ren3,†, Jiale Chen4,†, Ming Ding1,",
+            "1ByteDanceSeed, 2PrincetonUniversity, 3UCBerkeley, 4StanfordUniversity"
           ],
           "pdfHKUnis": [],
           "collabConfidence": "confirmed",
@@ -246,6 +300,77 @@
           ],
           "pdfHKUnis": [],
           "collabConfidence": "uni_only",
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "DreamLite: A Lightweight On-Device Unified Model for Image Generation and Editing",
+          "summary": "Diffusion models have made significant progress in both text-to-image (T2I) generation and text-guided image editing. However, these models are typically built with billions of parameters, leading to high latency and increased deployment challenges. While on-device diffusion models improve efficienc",
+          "published": "2026-03-30T17:30:25Z",
+          "arxivId": "2603.28713v1",
+          "arxivUrl": "http://arxiv.org/abs/2603.28713v1",
+          "pdfUrl": "https://arxiv.org/pdf/2603.28713v1",
+          "authors": [
+            "Kailai Feng",
+            "Yuxiang Wei",
+            "Bo Chen",
+            "Yang Pan",
+            "Hu Ye",
+            "Songwei Liu",
+            "Chenqian Yan",
+            "Yuan Gao"
+          ],
+          "authorCount": 8,
+          "affiliations": [],
+          "categories": [
+            "cs.CV"
+          ],
+          "comment": "https://carlofkl.github.io/dreamlite/",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Vision",
+              "label": "视觉",
+              "color": "#ec4899"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            },
+            {
+              "id": "Multimodal",
+              "label": "Multimodal",
+              "color": "#6b7280"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#6b7280"
+            }
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "bytedance"
+          ],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "company_only",
+          "tldr": "[research paper] DreamLite introduces the first unified on-device diffusion model (0.39B parameters) that supports both text-to-image generation and text-guided image editing via in-context spatial concatenation in latent space. It employs a task-progressive joint pretraining strategy (T2I → Editing → Joint) to stabilize training, followed by supervised fine-tuning and reinforcement learning with task-specific reward models, achieving GenEval 0.72 and ImgEdit 4.11 while generating/editing 1024×1024 images in under 1s on a smartphone through step distillation to 4 denoising steps.",
+          "deepxivKeywords": [
+            "unified diffusion model",
+            "on-device image editing",
+            "task-progressive pretraining",
+            "in-context conditioning",
+            "step distillation"
+          ],
           "deepxivEnhanced": true
         },
         {
@@ -579,44 +704,98 @@
             "gray failures"
           ],
           "deepxivEnhanced": true
-        },
+        }
+      ],
+      "count": 12,
+      "uniCollabCount": 6,
+      "hkCollabCount": 0
+    },
+    "alibaba": {
+      "company": "阿里通义",
+      "icon": "☁️",
+      "papers": [
         {
-          "title": "DreamLite: A Lightweight On-Device Unified Model for Image Generation and Editing",
-          "summary": "Diffusion models have made significant progress in both text-to-image (T2I) generation and text-guided image editing. However, these models are typically built with billions of parameters, leading to high latency and increased deployment challenges. While on-device diffusion models improve efficienc",
-          "published": "2026-03-30T17:30:25Z",
-          "arxivId": "2603.28713v1",
-          "arxivUrl": "http://arxiv.org/abs/2603.28713v1",
-          "pdfUrl": "https://arxiv.org/pdf/2603.28713v1",
+          "title": "SPASM: Stable Persona-driven Agent Simulation for Multi-turn Dialogue Generation",
+          "summary": "Large language models are increasingly deployed in multi-turn settings such as tutoring, support, and counseling, where reliability depends on preserving consistent roles, personas, and goals across long horizons. This requirement becomes critical when LLMs are used to generate synthetic dialogues f",
+          "published": "2026-04-10T11:05:12Z",
+          "arxivId": "2604.09212v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.09212v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.09212v1",
           "authors": [
-            "Kailai Feng",
-            "Yuxiang Wei",
-            "Bo Chen",
-            "Yang Pan",
-            "Hu Ye",
-            "Songwei Liu",
-            "Chenqian Yan",
-            "Yuan Gao"
+            "Han Luo",
+            "Guy Laban"
           ],
-          "authorCount": 8,
+          "authorCount": 2,
           "affiliations": [],
           "categories": [
-            "cs.CV"
+            "cs.CL",
+            "cs.MA"
           ],
-          "comment": "https://carlofkl.github.io/dreamlite/",
+          "comment": "Accepted to Findings of the Association for Computational Linguistics (ACL 2026). Our code and data are available at https://github.com/lhannnn/SPASM",
           "universities": [],
           "hkUniversities": [],
           "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
-              "id": "Vision",
-              "label": "视觉",
-              "color": "#ec4899"
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
             },
             {
-              "id": "Infra",
-              "label": "Infra",
-              "color": "#22c55e"
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            }
+          ],
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "♠ UniversityofLeeds ■ SouthwestJiaotongUniversity ♦ Ben-GurionUniversityoftheNeg"
+          ],
+          "pdfHKUnis": [],
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "Ads in AI Chatbots? An Analysis of How Large Language Models Navigate Conflicts of Interest",
+          "summary": "Today's large language models (LLMs) are trained to align with user preferences through methods such as reinforcement learning. Yet models are beginning to be deployed not merely to satisfy users, but also to generate revenue for the companies that created them through advertisements. This creates t",
+          "published": "2026-04-09T17:57:50Z",
+          "arxivId": "2604.08525v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.08525v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.08525v1",
+          "authors": [
+            "Addison J. Wu",
+            "Ryan Liu",
+            "Shuyue Stella Li",
+            "Yulia Tsvetkov",
+            "Thomas L. Griffiths"
+          ],
+          "authorCount": 5,
+          "affiliations": [],
+          "categories": [
+            "cs.AI",
+            "cs.CL",
+            "cs.CY"
+          ],
+          "comment": "",
+          "universities": [
+            "CAS",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
             },
             {
               "id": "RL",
@@ -624,42 +803,143 @@
               "color": "#eab308"
             },
             {
-              "id": "Multimodal",
-              "label": "Multimodal",
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
               "color": "#6b7280"
+            }
+          ],
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "1PrincetonUniversity 2UniversityofWashington"
+          ],
+          "pdfHKUnis": [],
+          "tldr": "[research paper] The paper introduces a linguistically and regulatorily grounded framework to analyze how large language models (LLMs) deviate from user-centric behavior when incentivized by advertising revenue. Evaluations across seven conflict-of-interest scenarios reveal that most LLMs prioritize corporate profit over user welfare—such as recommending more expensive sponsored products (Grok 4.1: 83%), disrupting purchase flows (GPT 5.1: 94%), or concealing product flaws (Qwen 3 Next: 24%)—with behaviors varying by model reasoning depth and inferred user socio-economic status. Findings expose systemic risks in AI chatbot design where commercial incentives systematically undermine trust and user well-being.",
+          "deepxivKeywords": [
+            "conflict of interest",
+            "agentic communication",
+            "advertising bias",
+            "cooperative principle violations",
+            "user welfare tradeoffs"
+          ],
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "KV Cache Offloading for Context-Intensive Tasks",
+          "summary": "With the growing demand for long-context LLMs across a wide range of applications, the key-value (KV) cache has become a critical bottleneck for both latency and memory usage. Recently, KV-cache offloading has emerged as a promising approach to reduce memory footprint and inference latency while pre",
+          "published": "2026-04-09T16:30:44Z",
+          "arxivId": "2604.08426v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.08426v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.08426v1",
+          "authors": [
+            "Andrey Bocharnikov",
+            "Ivan Ermakov",
+            "Denis Kuznedelev",
+            "Vyacheslav Zhdanovskiy",
+            "Yegor Yershov"
+          ],
+          "authorCount": 5,
+          "affiliations": [],
+          "categories": [
+            "cs.LG",
+            "cs.AI",
+            "cs.CL"
+          ],
+          "comment": "Preprint, Work in progress",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
             },
             {
               "id": "LLM",
               "label": "LLM",
-              "color": "#6b7280"
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
             }
           ],
+          "collabConfidence": "none",
           "pdfVerified": true,
-          "pdfCompanies": [
-            "bytedance"
-          ],
+          "pdfCompanies": [],
           "pdfUnis": [],
           "pdfHKUnis": [],
-          "collabConfidence": "company_only",
-          "tldr": "[research paper] DreamLite introduces the first unified on-device diffusion model (0.39B parameters) that supports both text-to-image generation and text-guided image editing via in-context spatial concatenation in latent space. It employs a task-progressive joint pretraining strategy (T2I → Editing → Joint) to stabilize training, followed by supervised fine-tuning and reinforcement learning with task-specific reward models, achieving GenEval 0.72 and ImgEdit 4.11 while generating/editing 1024×1024 images in under 1s on a smartphone through step distillation to 4 denoising steps.",
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "Don't Overthink It: Inter-Rollout Action Agreement as a Free Adaptive-Compute Signal for LLM Agents",
+          "summary": "Inference-time compute scaling has emerged as a powerful technique for improving the reliability of large language model (LLM) agents, but existing methods apply compute uniformly: every decision step receives the same budget regardless of its difficulty. We introduce TrACE (Trajectorical Adaptive C",
+          "published": "2026-04-09T15:34:22Z",
+          "arxivId": "2604.08369v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.08369v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.08369v1",
+          "authors": [
+            "Khushal Sethi"
+          ],
+          "authorCount": 1,
+          "affiliations": [],
+          "categories": [
+            "cs.AI",
+            "cs.CL",
+            "cs.MA"
+          ],
+          "comment": "",
+          "universities": [
+            "MIT",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            }
+          ],
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Stanford University",
+            "Khushal Sethi"
+          ],
+          "pdfHKUnis": [],
+          "tldr": "[research paper] TrACE introduces a training-free, per-timestep adaptive-compute controller for LLM agents that uses inter-rollout action agreement—measuring consistency in model-generated next actions across sampled rollouts—as a signal of step difficulty. High agreement indicates easy decisions, triggering immediate commitment; low agreement triggers additional rollouts to resolve uncertainty, reducing total LLM calls by 33–65% compared to fixed-budget self-consistency on both single-step (GSM8K) and multi-step (MiniHouse) tasks without requiring training, verifiers, or human labels. The method leverages intrinsic behavioral consistency as a proxy for task difficulty, validating that model output alignment reflects step-level success more reliably than self-reported confidence.",
           "deepxivKeywords": [
-            "unified diffusion model",
-            "on-device image editing",
-            "task-progressive pretraining",
-            "in-context conditioning",
-            "step distillation"
+            "inter-rollout action agreement",
+            "adaptive-compute control",
+            "inference-time scaling",
+            "behavioral consistency",
+            "LLM agent decision-making"
           ],
           "deepxivEnhanced": true
-        }
-      ],
-      "count": 11,
-      "uniCollabCount": 5,
-      "hkCollabCount": 0
-    },
-    "alibaba": {
-      "company": "阿里通义",
-      "icon": "☁️",
-      "papers": [
+        },
         {
           "title": "Initialisation Determines the Basin: Efficient Codebook Optimisation for Extreme LLM Quantization",
           "summary": "Additive quantization enables extreme LLM compression with O(1) lookup-table dequantization, making it attractive for edge deployment. Yet at 2-bit precision, it often fails catastrophically, even with extensive search and finetuning. We show that the dominant bottleneck is codebook initialisation. ",
@@ -2745,8 +3025,8 @@
             "alibaba"
           ],
           "pdfUnis": [
-            "4DeakinUniversity,5SingaporeManagementUniversity",
-            "1AlibabaGroup,2FudanUniversity,3HunanInstituteofAdvancedTechnology"
+            "1AlibabaGroup,2FudanUniversity,3HunanInstituteofAdvancedTechnology",
+            "4DeakinUniversity,5SingaporeManagementUniversity"
           ],
           "pdfHKUnis": [],
           "collabConfidence": "confirmed",
@@ -3278,14 +3558,14 @@
           ],
           "pdfVerified": true,
           "pdfCompanies": [
-            "alibaba",
-            "huawei"
+            "huawei",
+            "alibaba"
           ],
           "pdfUnis": [
             "7ShanghaiUniversity 8UniversityCollegeLondon",
-            "1TheHongKongUniversityofScienceandTechnology(Guangzhou) 2HuaweiNoah’sArkLab",
             "5TheUniversityofHongKong 6HaiheLaboratoryofSustainableChemicalTransformations",
-            "Figure 1: A four-panel comic illustrates the conceptual journey of translating h"
+            "Figure 1: A four-panel comic illustrates the conceptual journey of translating h",
+            "1TheHongKongUniversityofScienceandTechnology(Guangzhou) 2HuaweiNoah’sArkLab"
           ],
           "pdfHKUnis": [],
           "collabConfidence": "confirmed",
@@ -3510,9 +3790,9 @@
             "alibaba"
           ],
           "pdfUnis": [
-            "1QwenLargeModelApplicationTeam,Alibaba,2HuazhongUniversityofScienceandTechnology",
             "exclusivepaths,failingtounifyfactualitywithcreativity. Wearguethatthenextmilesto",
-            "Models (MLLMs), offering a more intuitive way to convey complex information. Cur"
+            "Models (MLLMs), offering a more intuitive way to convey complex information. Cur",
+            "1QwenLargeModelApplicationTeam,Alibaba,2HuazhongUniversityofScienceandTechnology"
           ],
           "pdfHKUnis": [],
           "collabConfidence": "confirmed",
@@ -5489,7 +5769,7 @@
           "deepxivEnhanced": true
         }
       ],
-      "count": 79,
+      "count": 83,
       "uniCollabCount": 10,
       "hkCollabCount": 4
     },
@@ -5497,6 +5777,54 @@
       "company": "DeepSeek",
       "icon": "🔍",
       "papers": [
+        {
+          "title": "SPASM: Stable Persona-driven Agent Simulation for Multi-turn Dialogue Generation",
+          "summary": "Large language models are increasingly deployed in multi-turn settings such as tutoring, support, and counseling, where reliability depends on preserving consistent roles, personas, and goals across long horizons. This requirement becomes critical when LLMs are used to generate synthetic dialogues f",
+          "published": "2026-04-10T11:05:12Z",
+          "arxivId": "2604.09212v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.09212v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.09212v1",
+          "authors": [
+            "Han Luo",
+            "Guy Laban"
+          ],
+          "authorCount": 2,
+          "affiliations": [],
+          "categories": [
+            "cs.CL",
+            "cs.MA"
+          ],
+          "comment": "Accepted to Findings of the Association for Computational Linguistics (ACL 2026). Our code and data are available at https://github.com/lhannnn/SPASM",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            }
+          ],
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "♠ UniversityofLeeds ■ SouthwestJiaotongUniversity ♦ Ben-GurionUniversityoftheNeg"
+          ],
+          "pdfHKUnis": [],
+          "deepxivEnhanced": true
+        },
         {
           "title": "Alloc-MoE: Budget-Aware Expert Activation Allocation for Efficient Mixture-of-Experts Inference",
           "summary": "Mixture-of-Experts (MoE) has become a dominant architecture for scaling large language models due to their sparse activation mechanism. However, the substantial number of expert activations creates a critical latency bottleneck during inference, especially in resource-constrained deployment scenario",
@@ -6059,6 +6387,60 @@
           "deepxivEnhanced": true
         },
         {
+          "title": "From Business Events to Auditable Decisions: Ontology-Governed Graph Simulation for Enterprise AI",
+          "summary": "Existing LLM-based agent systems share a common architectural failure: they answer from the unrestricted knowledge space without first simulating how active business scenarios reshape that space for the event at hand -- producing decisions that are fluent but ungrounded and carrying no audit trail. ",
+          "published": "2026-04-08T06:07:48Z",
+          "arxivId": "2604.08603v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.08603v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.08603v1",
+          "authors": [
+            "Hongyin Zhu",
+            "Jinming Liang",
+            "Mengjun Hou",
+            "Ruifan Tang",
+            "Xianbin Zhu",
+            "Jingyuan Yang",
+            "Yuanman Mao",
+            "Feng Wu"
+          ],
+          "authorCount": 8,
+          "affiliations": [],
+          "categories": [
+            "cs.AI",
+            "cs.CL"
+          ],
+          "comment": "",
+          "universities": [
+            "HIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            }
+          ],
+          "collabConfidence": "confirmed",
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "deepseek",
+            "bytedance"
+          ],
+          "pdfUnis": [
+            "largeontologymodel unrestrictedknowledgespacewithoutfirstsimulatinghowactivebusi"
+          ],
+          "pdfHKUnis": [],
+          "deepxivEnhanced": true
+        },
+        {
           "title": "Does a Global Perspective Help Prune Sparse MoEs Elegantly?",
           "summary": "Empirical scaling laws for language models have encouraged the development of ever-larger LLMs, despite their growing computational and memory costs. Sparse Mixture-of-Experts (MoEs) offer a promising alternative by activating only a subset of experts per forward pass, improving efficiency without s",
           "published": "2026-04-08T00:41:11Z",
@@ -6190,6 +6572,61 @@
             "cultural alignment",
             "linguistic verification",
             "arabic language modeling"
+          ],
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "Understanding Performance Gap Between Parallel and Sequential Sampling in Large Reasoning Models",
+          "summary": "Large Reasoning Models (LRMs) have shown remarkable performance on challenging questions, such as math and coding. However, to obtain a high quality solution, one may need to sample more than once. In principal, there are two sampling strategies that can be composed to form more complex processes: s",
+          "published": "2026-04-07T13:28:09Z",
+          "arxivId": "2604.05868v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.05868v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.05868v1",
+          "authors": [
+            "Xiangming Gu",
+            "Soham De",
+            "Larisa Markeeva",
+            "Petar Veličković",
+            "Razvan Pascanu"
+          ],
+          "authorCount": 5,
+          "affiliations": [],
+          "categories": [
+            "cs.CL"
+          ],
+          "comment": "Under review",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Code",
+              "label": "代码",
+              "color": "#8b5cf6"
+            }
+          ],
+          "collabConfidence": "none",
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "deepmind"
+          ],
+          "pdfUnis": [
+            "1GoogleDeepMind 2NationalUniversityofSingapore"
+          ],
+          "pdfHKUnis": [],
+          "tldr": "[empirical research paper] The paper empirically demonstrates that parallel sampling outperforms sequential sampling in large reasoning models despite the latter's theoretical representation power, identifying insufficient exploration—caused by conditioning on prior answers—as the primary driver of the performance gap. Experiments across multiple models (Qwen3, DeepSeek-R1, Gemini 2.5) and domains (math, coding) show that aggregation and context length are not the root causes, but the sequential chain's dependency on previous outputs restricts diversity in generated solutions, leading to suboptimal final outputs.",
+          "deepxivKeywords": [
+            "exploration in reasoning models",
+            "sampling strategy comparison",
+            "sequential vs parallel generation",
+            "thinking trace diversity",
+            "reasoning model scalability"
           ],
           "deepxivEnhanced": true
         },
@@ -7844,13 +8281,13 @@
           ],
           "pdfVerified": true,
           "pdfCompanies": [
-            "nvidia",
-            "deepseek"
+            "deepseek",
+            "nvidia"
           ],
           "pdfUnis": [
+            "1ShanghaiAILaboratory,2MetaX,3FudanUniversity",
             "Kernel-Smith: A Unified Recipe for",
-            "diverseprogramstogetherwithstructuredexecutionfeedbackoncompilation,correctness,",
-            "1ShanghaiAILaboratory,2MetaX,3FudanUniversity"
+            "diverseprogramstogetherwithstructuredexecutionfeedbackoncompilation,correctness,"
           ],
           "pdfHKUnis": [],
           "collabConfidence": "confirmed",
@@ -9085,8 +9522,8 @@
           "deepxivEnhanced": true
         }
       ],
-      "count": 58,
-      "uniCollabCount": 5,
+      "count": 61,
+      "uniCollabCount": 7,
       "hkCollabCount": 2
     },
     "moonshot": {
@@ -9958,6 +10395,118 @@
       "icon": "🤖",
       "papers": [
         {
+          "title": "LLM-Rosetta: A Hub-and-Spoke Intermediate Representation for Cross-Provider LLM API Translation",
+          "summary": "The rapid proliferation of Large Language Model (LLM) providers--each exposing proprietary API formats--has created a fragmented ecosystem where applications become tightly coupled to individual vendors. Switching or bridging providers requires $O(N^2)$ bilateral adapters, impeding portability and m",
+          "published": "2026-04-10T14:31:32Z",
+          "arxivId": "2604.09360v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.09360v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.09360v1",
+          "authors": [
+            "Peng Ding"
+          ],
+          "authorCount": 1,
+          "affiliations": [],
+          "categories": [
+            "cs.SE",
+            "cs.AI"
+          ],
+          "comment": "",
+          "universities": [
+            "HIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            }
+          ],
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "UniversityofChicago"
+          ],
+          "pdfHKUnis": [],
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "Your Agent Is Mine: Measuring Malicious Intermediary Attacks on the LLM Supply Chain",
+          "summary": "Large language model (LLM) agents increasingly rely on third-party API routers to dispatch tool-calling requests across multiple upstream providers. These routers operate as application-layer proxies with full plaintext access to every in-flight JSON payload, yet no provider enforces cryptographic i",
+          "published": "2026-04-09T16:06:41Z",
+          "arxivId": "2604.08407v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.08407v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.08407v1",
+          "authors": [
+            "Hanzhi Liu",
+            "Chaofan Shou",
+            "Hongbo Wen",
+            "Yanju Chen",
+            "Ryan Jingyang Fang",
+            "Yu Feng"
+          ],
+          "authorCount": 6,
+          "affiliations": [],
+          "categories": [
+            "cs.CR"
+          ],
+          "comment": "",
+          "universities": [
+            "NYU",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "Math",
+              "label": "数学推理",
+              "color": "#06b6d4"
+            }
+          ],
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "UniversityofCalifornia,Santa Fuzzland UniversityofCalifornia,Santa"
+          ],
+          "pdfHKUnis": [],
+          "tldr": "[research paper] The paper presents the first systematic empirical study of malicious LLM API routers as a supply-chain vulnerability, identifying four attack classes—payload injection, secret exfiltration, and two adaptive evasion variants—across 28 paid and 400 free routers. It reveals that 9 free and 1 paid routers actively inject malicious code, with 17 exposing researcher-owned AWS credentials and 1 draining ETH from a private key; poisoning studies show benign routers can be compromised via leaked credentials and weak peer configurations, enabling 2.1B tokens processed and 99 credentials exposed. The authors build Mine, a research proxy to simulate attacks and evaluate three client-side defenses: fail-closed policies, response anomaly screening, and append-only logging.",
+          "deepxivKeywords": [
+            "adversarial router behaviors",
+            "tool-use attack",
+            "payload injection",
+            "supply chain security",
+            "adaptive evasion"
+          ],
+          "githubUrl": "https://github.com/QuantumNous/new-api",
+          "deepxivEnhanced": true
+        },
+        {
           "title": "Tokalator: A Context Engineering Toolkit for Artificial Intelligence Coding Assistants",
           "summary": "Artificial Intelligence (AI)-assisted coding environments operate within finite context windows of 128,000-1,000,000 tokens (as of early 2026), yet existing tools offer limited support for monitoring and optimizing token consumption. As developers open multiple files, model attention becomes diluted",
           "published": "2026-04-09T14:27:02Z",
@@ -10519,11 +11068,6 @@
               "id": "RL",
               "label": "强化学习",
               "color": "#eab308"
-            },
-            {
-              "id": "Data",
-              "label": "Data",
-              "color": "#6b7280"
             }
           ],
           "collabConfidence": "uni_only",
@@ -10532,17 +11076,7 @@
           "pdfUnis": [
             "1StanfordUniversity,2ContextualAI"
           ],
-          "pdfHKUnis": [],
-          "tldr": "[research paper] The paper redefines document expansion as a reinforcement learning optimization problem, where language models (LMs) or vision-language models (VLMs) learn to transform documents into retrieval-optimized surrogates via Group Relative Policy Optimization (GRPO). Rewards are derived from counterfactual nDCG@k improvements under a target retriever, enabling black-box performance gains without access to retriever internals. Document optimization outperforms naive expansions and zero-shot rewrites, enabling smaller models (e.g., text-embedding-3-small) to surpass larger, more expensive ones (e.g., text-embedding-3-large), and when combined with fine-tuning, achieves state-of-the-art results on both code and visual document retrieval tasks.",
-          "deepxivKeywords": [
-            "document optimization",
-            "reinforcement learning in retrieval",
-            "counterfactual evaluation",
-            "black-box retrieval",
-            "language model rewriting"
-          ],
-          "githubUrl": "https://github.com/omriuz/document-optimization",
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "Mapping the Exploitation Surface: A 10,000-Trial Taxonomy of What Makes LLM Agents Exploit Vulnerabilities",
@@ -10589,17 +11123,7 @@
           "pdfUnis": [
             "OPIT–OpenInstituteofTechnology,andCohorteAI,Paris,France."
           ],
-          "pdfHKUnis": [],
-          "tldr": "[research paper] A large-scale, controlled experiment across 10,000 trials reveals that only goal reframing—framing tasks as puzzles with hidden clues—reliably triggers exploitation in LLM agents, despite explicit rule enforcement. Nine other hypothesized prompt manipulation dimensions (e.g., moral licensing, identity priming, incentive framing) show no detectable effect, refuting common assumptions about agent vulnerability. GPT-4.1 exhibits complete immunity across all conditions, and a temporal trend across OpenAI models shows a monotonic decline in exploitation, suggesting improved safety training.",
-          "deepxivKeywords": [
-            "goal reframing",
-            "agentic exploitation",
-            "system prompt security",
-            "prompt manipulation",
-            "long-term safety training"
-          ],
-          "githubUrl": "https://github.com/Cmouzouni/exploitation-surface",
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "FermiLink: A Unified Agent Framework for Multidomain Autonomous Scientific Simulations",
@@ -10660,8 +11184,8 @@
             "openai"
           ],
           "pdfUnis": [
-            "1Department of Physics and Astronomy, University of Delaware, Newark, Delaware 1",
-            "Pacific Northwest National Laboratory, Richland WA 99352, USA"
+            "Pacific Northwest National Laboratory, Richland WA 99352, USA",
+            "1Department of Physics and Astronomy, University of Delaware, Newark, Delaware 1"
           ],
           "pdfHKUnis": [],
           "tldr": "[research paper] FermiLink introduces a unified AI agent framework that decouples simulation workflows from package-specific knowledge bases, enabling cross-domain scientific simulation via a four-layer progressive disclosure mechanism. It achieves 56.1% high-fidelity reproduction of 132 figure-level tasks across 44 scientific packages, with 30 achieving high-fidelity and 35 qualitative agreement; further demonstrates research-grade output on unpublished polariton physics problems through expert-guided objectives, highlighting scalability and adaptability to HPC environments.",
@@ -10733,8 +11257,8 @@
             "openai"
           ],
           "pdfUnis": [
-            "1Department of Physics and Astronomy, University of Delaware, Newark, Delaware 1",
-            "Pacific Northwest National Laboratory, Richland WA 99352, USA"
+            "Pacific Northwest National Laboratory, Richland WA 99352, USA",
+            "1Department of Physics and Astronomy, University of Delaware, Newark, Delaware 1"
           ],
           "pdfHKUnis": [],
           "collabConfidence": "confirmed",
@@ -12627,10 +13151,10 @@
             "openai"
           ],
           "pdfUnis": [
-            "3Department of Psychiatry and Neuroscience, Charité Berlin University Medicine,",
             "2Rhode Island School of Design, Providence, RI, USA",
-            "Matthew Flathers1, Griffin Smith2, Julian Herpertz1,3, Zhitong Zhou1,4, John",
-            "1Division of Digital Psychiatry, Beth Israel Deaconess Medical Center, Boston, M"
+            "3Department of Psychiatry and Neuroscience, Charité Berlin University Medicine,",
+            "1Division of Digital Psychiatry, Beth Israel Deaconess Medical Center, Boston, M",
+            "Matthew Flathers1, Griffin Smith2, Julian Herpertz1,3, Zhitong Zhou1,4, John"
           ],
           "pdfHKUnis": [],
           "collabConfidence": "confirmed",
@@ -13199,9 +13723,9 @@
             "openai"
           ],
           "pdfUnis": [
+            "everymodel’sreleasethatmodelsmayhaveseenduringtraining.Toaddressthese,weexpandto",
             "automatedAIauditingiswithinreach.WeidentifytwolimitationsofEVMbench’sexperimenta",
-            "CHAOYUANPENG ,ZhejiangUniversity",
-            "everymodel’sreleasethatmodelsmayhaveseenduringtraining.Toaddressthese,weexpandto"
+            "CHAOYUANPENG ,ZhejiangUniversity"
           ],
           "pdfHKUnis": [],
           "collabConfidence": "confirmed",
@@ -13303,7 +13827,7 @@
           "deepxivEnhanced": true
         }
       ],
-      "count": 55,
+      "count": 57,
       "uniCollabCount": 9,
       "hkCollabCount": 0
     },
@@ -13347,11 +13871,6 @@
               "id": "Agent",
               "label": "Agent",
               "color": "#f97316"
-            },
-            {
-              "id": "Safety",
-              "label": "Safety",
-              "color": "#6b7280"
             }
           ],
           "collabConfidence": "uni_only",
@@ -13361,16 +13880,7 @@
             "Visvesvaraya Technological University (VTU), Belagavi, India",
             "Department of Computer Science and Engineering,"
           ],
-          "pdfHKUnis": [],
-          "tldr": "[research paper] GIRL introduces a latent world-model framework that combats long-horizon imagination drift in model-based reinforcement learning through two key innovations: (1) a cross-modal grounding signal derived from a frozen DINOv2 foundation model that enforces semantic consistency in latent transitions, penalizing physics-defying hallucinations via a differentiable consistency loss; and (2) an uncertainty-adaptive trust-region bottleneck that re-formulates the KL regularizer as a Lagrange multiplier in a constrained optimization problem, dynamically calibrating the drift tolerance using Expected Information Gain and Relative Performance Loss. Theoretical analysis re-derives the value-gap bound using the Performance Difference Lemma and Integral Probability Metrics, yielding a finite, horizon-independent regret bound that directly links the I-ELBO objective to real-environment performance. Empirical results show 38–61% reduction in latent drift, 40–55% fewer environment steps for long-horizon tasks, and superior performance over TD-MPC2 in sparse-reward and high-contact settings, with robustness to visual distractors due to grounding.",
-          "deepxivKeywords": [
-            "cross-modal grounding",
-            "uncertainty-adaptive trust-region",
-            "latent world-model",
-            "physics-defying hallucinations",
-            "information-theoretic drift control"
-          ],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "Understanding Performance Gap Between Parallel and Sequential Sampling in Large Reasoning Models",
@@ -13392,11 +13902,9 @@
             "cs.CL"
           ],
           "comment": "Under review",
-          "universities": [
-            "ANU"
-          ],
+          "universities": [],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -13410,7 +13918,7 @@
               "color": "#8b5cf6"
             }
           ],
-          "collabConfidence": "confirmed",
+          "collabConfidence": "none",
           "pdfVerified": true,
           "pdfCompanies": [
             "deepmind"
@@ -14161,6 +14669,54 @@
       "icon": "🔬",
       "papers": [
         {
+          "title": "LLM-Rosetta: A Hub-and-Spoke Intermediate Representation for Cross-Provider LLM API Translation",
+          "summary": "The rapid proliferation of Large Language Model (LLM) providers--each exposing proprietary API formats--has created a fragmented ecosystem where applications become tightly coupled to individual vendors. Switching or bridging providers requires $O(N^2)$ bilateral adapters, impeding portability and m",
+          "published": "2026-04-10T14:31:32Z",
+          "arxivId": "2604.09360v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.09360v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.09360v1",
+          "authors": [
+            "Peng Ding"
+          ],
+          "authorCount": 1,
+          "affiliations": [],
+          "categories": [
+            "cs.SE",
+            "cs.AI"
+          ],
+          "comment": "",
+          "universities": [
+            "HIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            }
+          ],
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "UniversityofChicago"
+          ],
+          "pdfHKUnis": []
+        },
+        {
           "title": "Tokalator: A Context Engineering Toolkit for Artificial Intelligence Coding Assistants",
           "summary": "Artificial Intelligence (AI)-assisted coding environments operate within finite context windows of 128,000-1,000,000 tokens (as of early 2026), yet existing tools offer limited support for monitoring and optimizing token consumption. As developers open multiple files, model attention becomes diluted",
           "published": "2026-04-09T14:27:02Z",
@@ -14206,17 +14762,61 @@
           "pdfVerified": true,
           "pdfCompanies": [],
           "pdfUnis": [],
-          "pdfHKUnis": [],
-          "tldr": "[research paper] Tokalator introduces a real-time, in-IDE context engineering toolkit that identifies and quantifies token budget leaks in AI coding assistants. It employs a five-signal syntactic relevance scorer to detect distractor tabs, implements closed-form economic models (Cobb–Douglas, $O(T^2)$ cost growth, caching break-even at $n^*=2$) for cross-provider cost forecasting, and enables developers to monitor and optimize token consumption across 17 LLMs via a VS Code extension, CLI, and web calculators—addressing attention dilution, cost explosion, and context rot through visibility and actionable modeling.",
-          "deepxivKeywords": [
-            "context engineering",
-            "token budget monitoring",
-            "syntactic relevance scoring",
-            "Cobb–Douglas cost modeling",
-            "agentic workflow optimization"
+          "pdfHKUnis": []
+        },
+        {
+          "title": "EigentSearch-Q+: Enhancing Deep Research Agents with Structured Reasoning Tools",
+          "summary": "Deep research requires reasoning over web evidence to answer open-ended questions, and it is a core capability for AI agents. Yet many deep research agents still rely on implicit, unstructured search behavior that causes redundant exploration and brittle evidence aggregation. Motivated by Anthropic'",
+          "published": "2026-04-09T07:47:31Z",
+          "arxivId": "2604.07927v2",
+          "arxivUrl": "http://arxiv.org/abs/2604.07927v2",
+          "pdfUrl": "https://arxiv.org/pdf/2604.07927v2",
+          "authors": [
+            "Boer Zhang",
+            "Mingyan Wu",
+            "Dongzhuoran Zhou",
+            "Yuqicheng Zhu",
+            "Wendong Fan",
+            "Puzhen Zhang",
+            "Zifeng Ding",
+            "Guohao Li"
           ],
-          "githubUrl": "https://github.com/vfaraji89/tokalator",
-          "deepxivEnhanced": true
+          "authorCount": 9,
+          "affiliations": [],
+          "categories": [
+            "cs.AI"
+          ],
+          "comment": "",
+          "universities": [
+            "CAS"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            }
+          ],
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "1Meta,2NortheasternUniversity,China,3UniversityofOslo,4BoschCenterofAI,5Universi"
+          ],
+          "pdfHKUnis": []
         },
         {
           "title": "EigentSearch-Q+: Enhancing Deep Research Agents with Structured Reasoning Tools",
@@ -14328,17 +14928,7 @@
             "Department of Computer Science Department of Computer Science",
             "Savitribai Phule Pune University Savitribai Phule Pune University"
           ],
-          "pdfHKUnis": [],
-          "tldr": "[research paper] The paper introduces the Skill Automation Feasibility Index (SAFI), an empirically derived 0–100 score for 35 O*NET skills based on benchmarking four frontier LLMs across 263 purpose-designed tasks. It reveals a Capability-Demand Inversion: skills most in demand in AI-exposed occupations are those LLMs perform worst on, indicating AI is primarily augmenting—not automating—work. The AI Impact Matrix maps SAFI scores against Anthropic’s real-world AI adoption data, showing augmentation dominates automation (4:1) and highlighting critical gaps in text-based LLM capability relative to labor market needs.",
-          "deepxivKeywords": [
-            "skill automation feasibility",
-            "LLM capability benchmarking",
-            "capability-demand inversion",
-            "AI augmentation dominance",
-            "O*NET skill taxonomy"
-          ],
-          "githubUrl": "https://github.com/rudrajadhav/ai-skills-shift",
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "A Formal Security Framework for MCP-Based AI Agents: Threat Taxonomy, Verification Models, and Defense Mechanisms",
@@ -14380,11 +14970,6 @@
               "id": "LLM",
               "label": "LLM",
               "color": "#3b82f6"
-            },
-            {
-              "id": "Agent",
-              "label": "Agent",
-              "color": "#6b7280"
             }
           ],
           "collabConfidence": "uni_only",
@@ -14393,16 +14978,7 @@
           "pdfUnis": [
             "Nirajan Acharya1, Gaurav Kumar Gupta2 1University of the Cumberlands"
           ],
-          "pdfHKUnis": [],
-          "tldr": "[research paper] MCPShield introduces a formal security framework for Model Context Protocol (MCP)-based AI agents, establishing a hierarchical threat taxonomy of 7 categories and 23 attack vectors derived from 177,000+ tools, enabling systematic threat modeling. It formalizes MCP interactions via a labeled transition system with trust-boundary annotations, defining verifiable security properties (tool integrity, data confinement, privilege boundedness, context isolation) and proving their decidability. A comparative analysis reveals no existing defense covers more than 34% of threats, while MCPShield’s integrated defense-in-depth architecture achieves 91% theoretical coverage through capability-based access control, cryptographic attestation, information flow tracking, and runtime enforcement.",
-          "deepxivKeywords": [
-            "agentic security",
-            "threat taxonomy",
-            "labeled transition systems",
-            "tool attestation",
-            "information flow tracking"
-          ],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "Instruction-Tuned LLMs for Parsing and Mining Unstructured Logs on Leadership HPC Systems",
@@ -14453,16 +15029,7 @@
             "Oak Ridge National Laboratory Oak Ridge National Laboratory",
             "University of Tennessee Oak Ridge National Laboratory"
           ],
-          "pdfHKUnis": [],
-          "tldr": "[research paper] A domain-adapted instruction-tuned LLM framework leverages chain-of-thought reasoning and hybrid fine-tuning with domain-specific log templates and general instruction data to achieve high-fidelity parsing of heterogeneous HPC logs, matching the performance of large-scale proprietary models (e.g., LLaMA 70B, Claude) while enabling privacy-preserving, locally deployable, and energy-efficient analysis. Evaluated on 638M production logs from Frontier, the method uncovers failure dynamics including cascade propagation, topology-correlated faults, and science-domain correlations, demonstrating practical utility in real-world HPC operations.",
-          "deepxivKeywords": [
-            "instruction-tuned LLM",
-            "chain-of-thought reasoning",
-            "log parsing",
-            "HPC system logs",
-            "hybrid fine-tuning"
-          ],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "Measuring the Permission Gate: A Stress-Test Evaluation of Claude Code's Auto Mode",
@@ -14590,9 +15157,9 @@
             "anthropic"
           ],
           "pdfUnis": [
-            "6University of Maryland, College Park 7Georgia Institute of Technology",
             "Ida Caspary1,5 Yernat Yestekov2 Zora Che1,6",
             "1Constellation 2Anthropic Fellows Program 3Brown University",
+            "6University of Maryland, College Park 7Georgia Institute of Technology",
             "4University of Wisconsin-Madison 5Imperial College London"
           ],
           "pdfHKUnis": [],
@@ -14839,8 +15406,8 @@
             "anthropic"
           ],
           "pdfUnis": [
-            "1MIT 2NUS 3MiniMax 4McGill 5Stanford 6SambaNova 7Meta",
-            "∗Equalcontribution(alphabeticalorder) †Jointadvising ‡Workdoneoutsidetheauthors’"
+            "∗Equalcontribution(alphabeticalorder) †Jointadvising ‡Workdoneoutsidetheauthors’",
+            "1MIT 2NUS 3MiniMax 4McGill 5Stanford 6SambaNova 7Meta"
           ],
           "pdfHKUnis": [],
           "collabConfidence": "confirmed",
@@ -16696,7 +17263,7 @@
           "deepxivEnhanced": true
         }
       ],
-      "count": 42,
+      "count": 44,
       "uniCollabCount": 7,
       "hkCollabCount": 0
     },
@@ -16704,6 +17271,147 @@
       "company": "NVIDIA",
       "icon": "💚",
       "papers": [
+        {
+          "title": "BVH-Accelerated Ray Tracing for High-Frequency Electromagnetic Backscattering",
+          "summary": "As computational complexity in electromagnetics increases with frequency, full-wave solvers become computationally infeasible for electrically large problems. To address this limitation, we present a shooting and bouncing rays (SBR) method for efficiently modeling electromagnetic backscattering of m",
+          "published": "2026-04-10T11:57:00Z",
+          "arxivId": "2604.09243v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.09243v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.09243v1",
+          "authors": [
+            "Marco Pasquale",
+            "Andong Hu",
+            "Luca Pennati",
+            "Ivy Peng",
+            "Stefano Markidis"
+          ],
+          "authorCount": 5,
+          "affiliations": [],
+          "categories": [
+            "cs.CE"
+          ],
+          "comment": "14 pages, 8 figures, extended paper",
+          "universities": [
+            "MIT",
+            "HIT",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "Math",
+              "label": "数学推理",
+              "color": "#06b6d4"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            }
+          ],
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "1DepartmentofComputationalScienceandTechnology,KTHRoyalInstituteofTechnology"
+          ],
+          "pdfHKUnis": []
+        },
+        {
+          "title": "Statistical Properties of the King Wen Sequence: An Anti-Habituation Structure That Does Not Improve Neural Network Training",
+          "summary": "The King Wen sequence of the I-Ching (c. 1000 BC) orders 64 hexagrams -- states of a six-dimensional binary space -- in a pattern that has puzzled scholars for three millennia. We present a rigorous statistical characterization of this ordering using Monte Carlo permutation analysis against 100,000 ",
+          "published": "2026-04-10T11:44:09Z",
+          "arxivId": "2604.09234v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.09234v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.09234v1",
+          "authors": [
+            "Augustin Chan"
+          ],
+          "authorCount": 1,
+          "affiliations": [],
+          "categories": [
+            "cs.LG",
+            "cs.AI",
+            "cs.NE"
+          ],
+          "comment": "9 pages, 8 tables, negative results paper. Code and data: https://doi.org/10.5281/zenodo.14679537",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            }
+          ],
+          "collabConfidence": "none",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": []
+        },
+        {
+          "title": "Watt Counts: Energy-Aware Benchmark for Sustainable LLM Inference on Heterogeneous GPU Architectures",
+          "summary": "While the large energy consumption of Large Language Models (LLMs) is recognized by the community, system operators lack guidance for energy-efficient LLM inference deployments that leverage energy trade-offs of heterogeneous hardware due to a lack of energy-aware benchmarks and data. In this work w",
+          "published": "2026-04-10T07:15:58Z",
+          "arxivId": "2604.09048v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.09048v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.09048v1",
+          "authors": [
+            "Mauricio Fadel Argerich",
+            "Jonathan Fürst",
+            "Marta Patiño-Martínez"
+          ],
+          "authorCount": 3,
+          "affiliations": [],
+          "categories": [
+            "cs.DC",
+            "cs.AI"
+          ],
+          "comment": "Under review",
+          "universities": [
+            "HIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            }
+          ],
+          "collabConfidence": "confirmed",
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "nvidia"
+          ],
+          "pdfUnis": [
+            "bZurichUniversityofAppliedSciences,Switzerland,Gertrudstrasse15,Winterthur,8400,",
+            "negligibleimpactonuserexperience,andbyupto20%inbatchscenarios."
+          ],
+          "pdfHKUnis": []
+        },
         {
           "title": "PriPG-RL: Privileged Planner-Guided Reinforcement Learning for Partially Observable Systems with Anytime-Feasible MPC",
           "summary": "This paper addresses the problem of training a reinforcement learning (RL) policy under partial observability by exploiting a privileged, anytime-feasible planner agent available exclusively during training. We formalize this as a Partially Observable Markov Decision Process (POMDP) in which a plann",
@@ -16755,17 +17463,7 @@
           "pdfUnis": [
             "Mohsen Amiri1,†, Mohsen Amiri2,†, Ali Beikmohammadi1, Sindri Magnus´son1,"
           ],
-          "pdfHKUnis": [],
-          "tldr": "[research paper] PriPG-RL introduces a privileged planner-guided RL framework for partially observable systems, where an anytime-feasible MPC planner provides access to hidden state information during training, enabling a student agent to learn via Planner-to-Policy Soft Actor-Critic (P2P-SAC). The method distills planner-generated trajectories and feasible control actions into a policy that mitigates state aliasing and improves sample efficiency and convergence in continuous control tasks, validated in both simulation and real-world quadruped navigation under obstacle-rich conditions. Theoretical analysis confirms convergence to a feasible policy under partial observability, overcoming limitations of existing RLfD and regularization approaches that fail in POMDP settings due to state aliasing and vanishing gradients.",
-          "deepxivKeywords": [
-            "anytime-feasible MPC",
-            "planner-to-policy distillation",
-            "partial observability",
-            "state aliasing mitigation",
-            "model predictive control in robotics"
-          ],
-          "githubUrl": "https://github.com/mohsen1amiri/PriPG-RL_UnitreeGo2.git",
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "Bit-by-Bit: Progressive QAT Strategy with Outlier Channel Splitting for Stable Low-Bit LLMs",
@@ -16825,16 +17523,7 @@
           ],
           "pdfHKUnis": [
             "CityU"
-          ],
-          "tldr": "[research paper] Bit-by-Bit introduces a progressive quantization-aware training (QAT) framework that addresses instability in ultra-low-bit LLM training by combining block-wise precision reduction, nested integer quantization grids enabling 'train once, deploy any precision', and rounding-aware outlier channel splitting to suppress quantization error without altering output. The method achieves stable convergence with 3600× reduction in training tokens compared to prior art, outperforms state-of-the-art baselines (e.g., BitDistiller, EfficientQAT) on Llama2/3 with only 2.25x PPL degradation under W2A2 settings, and leverages custom W2A2/W2A16 kernels for up to 11× speedup over BF16 via microscaling groups aligned with OCP/NVIDIA standards.",
-          "deepxivKeywords": [
-            "progressive QAT",
-            "outlier channel splitting",
-            "nested quantization grids",
-            "low-bit stability",
-            "dynamic range preservation"
-          ],
-          "deepxivEnhanced": true
+          ]
         },
         {
           "title": "Measurement of Generative AI Workload Power Profiles for Whole-Facility Data Center Infrastructure Planning",
@@ -16889,11 +17578,6 @@
               "id": "Data",
               "label": "数据",
               "color": "#78716c"
-            },
-            {
-              "id": "Agent",
-              "label": "Agent",
-              "color": "#6b7280"
             }
           ],
           "collabConfidence": "uni_only",
@@ -16902,16 +17586,7 @@
           "pdfUnis": [
             "NationalLaboratoryoftheRockies(NLR),Golden,CO,USA"
           ],
-          "pdfHKUnis": [],
-          "tldr": "[research paper] This paper presents high-resolution (0.1-second) power consumption measurements of generative AI workloads—training, fine-tuning, and inference—on NVIDIA H100 GPUs in a real-world HPC data center, using standardized MLCommons and vLLM benchmarks for reproducibility. The resulting workload profiles are scaled to whole-facility energy demand via a bottom-up, event-driven energy model that captures temporal fluctuations from AI workloads and user behavior, enabling realistic, geographically resolved energy planning for grid integration, microgrids, and infrastructure siting.",
-          "deepxivKeywords": [
-            "agentic AI workloads",
-            "GPU power consumption profiling",
-            "event-driven energy modeling",
-            "whole-facility load forecasting",
-            "real-time power variability"
-          ],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "CADENCE: Context-Adaptive Depth Estimation for Navigation and Computational Efficiency",
@@ -16959,17 +17634,7 @@
           "pdfVerified": true,
           "pdfCompanies": [],
           "pdfUnis": [],
-          "pdfHKUnis": [],
-          "tldr": "[research paper] CADENCE introduces a context-adaptive monocular depth estimation (MDE) framework that dynamically scales computational complexity in real time using slimmable CNNs, jointly optimizing navigation actions and perception fidelity through a unified policy. Unlike static models or edge-based offloading, it closes the sensing-actuation loop by adjusting depth estimation resolution based on navigation needs and environmental context, reducing sensor acquisitions by 9.67%, inference latency by 74.8%, power consumption by 16.1%, and energy expenditure by 75.0% while improving navigation accuracy by 7.43% in a hardware-in-the-loop drone testbed.",
-          "deepxivKeywords": [
-            "slimmable neural networks",
-            "context-adaptive perception",
-            "dynamic depth estimation",
-            "navigation-actuation loop",
-            "edge-aware computational scaling"
-          ],
-          "githubUrl": "https://github.com/WreckItTim/OmniNaviPy.",
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "Making Room for AI: Multi-GPU Molecular Dynamics with Deep Potentials in GROMACS",
@@ -17023,16 +17688,54 @@
           "pdfUnis": [
             "*KTH Royal Institute of Technology, Stockholm, Sweden"
           ],
-          "pdfHKUnis": [],
-          "tldr": "[research paper] The paper presents a scalable integration of DeePMD-kit's deep neural network potentials into GROMACS, enabling multi-GPU, domain-decomposed molecular dynamics with near-*ab initio* accuracy. A decoupled domain decomposition layer allows concurrent neural network inference across distributed processes, achieving strong-scaling efficiency of 66% at 16 GPUs and 40% at 32, with over 90% of wall time consumed by DeePMD inference—highlighting ghost-atom communication and load imbalance as primary bottlenecks.",
-          "deepxivKeywords": [
-            "domain decomposition",
-            "neural network potentials",
-            "multi-GPU scaling",
-            "ghost-atom communication",
-            "ab initio molecular dynamics"
+          "pdfHKUnis": []
+        },
+        {
+          "title": "VDPP: Video Depth Post-Processing for Speed and Scalability",
+          "summary": "Video depth estimation is essential for providing 3D scene structure in applications ranging from autonomous driving to mixed reality. Current end-to-end video depth models have established state-of-the-art performance. Although current end-to-end (E2E) models have achieved state-of-the-art performa",
+          "published": "2026-04-08T04:33:29Z",
+          "arxivId": "2604.06665v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.06665v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.06665v1",
+          "authors": [
+            "Daewon Yoon",
+            "Injun Baek",
+            "Sangyu Han",
+            "Yearim Kim",
+            "Nojun Kwak"
           ],
-          "deepxivEnhanced": true
+          "authorCount": 5,
+          "affiliations": [],
+          "categories": [
+            "cs.CV"
+          ],
+          "comment": "8 pages, 6 figures. Accepted to CVPR 2024 Workshop. Project page: https://github.com/injun-baek/VDPP",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "Vision",
+              "label": "视觉",
+              "color": "#ec4899"
+            }
+          ],
+          "collabConfidence": "none",
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "meta"
+          ],
+          "pdfUnis": [
+            "1 SeoulNationalUniversity 2 SamsungElectronics",
+            "Figure 1. VDPPachieves superior speed, spatialaccuracy and temporalconsistency a"
+          ],
+          "pdfHKUnis": []
         },
         {
           "title": "The Theorems of Dr. David Blackwell and Their Contributions to Artificial Intelligence",
@@ -17082,16 +17785,7 @@
           "pdfUnis": [
             "School of Information, University of California, Berkeley"
           ],
-          "pdfHKUnis": [],
-          "tldr": "This survey establishes a unified theoretical framework for modern AI by tracing the enduring influence of Dr. David Blackwell’s three foundational theorems—Rao-Blackwell, Blackwell Approachability, and Informativeness—across key AI subfields. Rao-Blackwell enables variance reduction in MCMC inference, generative model training, and RLHF via sufficient statistics; Approachability underpins no-regret online learning, calibrated forecasting, and multi-objective RLHF through sequential decision-making under uncertainty; Informativeness provides a formal basis for information design, AI alignment, and active learning by comparing information sources. The paper identifies a novel, emerging application of Rao-Blackwellization in LLM RLHF pipelines and positions Blackwell’s work as a core information-theoretic foundation for AI’s core challenges.",
-          "deepxivKeywords": [
-            "Rao-Blackwellized variance reduction",
-            "Blackwell approachability",
-            "information design",
-            "sequential decision-making under uncertainty",
-            "comparison of experiments"
-          ],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "cuRAMSES: Scalable AMR Optimizations for Large-Scale Cosmological Simulations",
@@ -17141,17 +17835,7 @@
           "pdfUnis": [
             "1Center for Advanced Computation, Korea Institute for Advanced Study, 85 Hoegiro"
           ],
-          "pdfHKUnis": [],
-          "tldr": "[research paper] cuRAMSES introduces a recursive k-section domain decomposition that replaces Hilbert curve ordering with hierarchical spatial partitioning, reducing communication complexity from O(N_rank²) to O(1) per rank via neighbour-only point-to-point exchanges. It employs a Morton-key hash table for efficient octree neighbour lookup and on-demand array allocation to cut per-rank memory usage, while a spatial hash-binning algorithm accelerates feedback physics by 260×. On hybrid CPU-GPU architectures, the multigrid Poisson solver achieves 1.7× GPU speedup on H100/A100, with projected 2× gains on tightly coupled systems like GH200, and maintains energy conservation to 0.5% accuracy.",
-          "deepxivKeywords": [
-            "recursive k-section domain decomposition",
-            "hierarchical spatial partitioning",
-            "spatial hash-binning",
-            "on-demand array allocation",
-            "hybrid CPU-GPU mesh processing"
-          ],
-          "githubUrl": "https://github.com/kjhan0606/cuRAMSES",
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "MPM: Mutual Pair Merging for Efficient Vision Transformers",
@@ -17198,16 +17882,7 @@
           "pdfUnis": [
             "1LARISUniversityofAngers 2UMRINRAe-IRHS"
           ],
-          "pdfHKUnis": [],
-          "tldr": "[research paper] MPM introduces a training-free, reconstruction-aware token merging method for semantic segmentation that forms mutual nearest-neighbor pairs in cosine space, merges them via averaging, and uses a gather-based map to reconstruct the full token grid before the decoder—preserving compatibility with existing segmentation heads. Unlike prior methods, MPM avoids learned parameters and continuous compression knobs, relying instead on a discrete insertion schedule to control speed-accuracy trade-offs. End-to-end latency benchmarks on Raspberry Pi 5 and H100 GPUs show up to 60% latency reduction and 20% throughput gain with <3% mIoU drop, demonstrating that explicit overhead accounting and spatial locality preservation enable practical deployment in real-world hardware settings.",
-          "deepxivKeywords": [
-            "token merging",
-            "reconstruction-aware aggregation",
-            "dense prediction",
-            "mutual nearest-neighbor pairing",
-            "end-to-end latency"
-          ],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "LEAN-3D: Low-latency Hierarchical Point Cloud Codec for Mobile 3D Streaming",
@@ -17253,16 +17928,7 @@
           "pdfVerified": true,
           "pdfCompanies": [],
           "pdfUnis": [],
-          "pdfHKUnis": [],
-          "tldr": "[research paper] LEAN-3D introduces a dual-path, compute-aware hierarchical point cloud codec that decouples shallow and deep encoding in a sparse occupancy hierarchy: shallow levels use a lightweight student network with entropy coding to reduce neural inference latency, while deep levels employ deterministic Elias–Fano coding to eliminate floating-point numerical inconsistencies and ensure cross-platform decoding robustness. The design achieves 3–5× latency reduction and up to 5.1× lower edge energy consumption on Jetson Orin Nano, enabling real-time deployment on mobile devices under strict compute and energy constraints, while addressing a critical gap in cross-platform entropy decoding stability.",
-          "deepxivKeywords": [
-            "sparse occupancy hierarchy",
-            "compute-aware compression",
-            "deterministic entropy coding",
-            "cross-platform decoding robustness",
-            "low-latency mobile 3D streaming"
-          ],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "Adaptive Tensor Network Simulation via Entropy-Feedback PID Control and GPU-Accelerated SVD",
@@ -17554,10 +18220,10 @@
             "nvidia"
           ],
           "pdfUnis": [
-            "PRADEEPMANTHA,LudwigMaximilianUniversity,Germany",
             "Netherlands",
+            "Hybrid Quantum-HPC Middleware Systems for Adaptive",
             "SHANTENUJHA,RutgersUniversity-NewBrunswick,USA,PrincetonPlasmaPhysicsLaboratory,",
-            "Hybrid Quantum-HPC Middleware Systems for Adaptive"
+            "PRADEEPMANTHA,LudwigMaximilianUniversity,Germany"
           ],
           "pdfHKUnis": [],
           "tldr": "[research paper] The paper proposes a four-layer middleware architecture for adaptive resource and workload management in hybrid quantum-HPC systems, introducing execution motifs and quantum mini-apps to characterize application coupling patterns. Pilot-Quantum enables late-binding, application-aware scheduling across CPUs, GPUs, and QPUs via pilot abstraction, while Q-Dreamer provides analytical circuit-cutting optimization with up to 82% accuracy in predicting optimal partitioning strategies under dynamic resource conditions.",
@@ -17631,8 +18297,8 @@
           "deepxivEnhanced": true
         }
       ],
-      "count": 15,
-      "uniCollabCount": 3,
+      "count": 19,
+      "uniCollabCount": 5,
       "hkCollabCount": 1
     },
     "kuaishou": {
@@ -17692,16 +18358,7 @@
             "kuaishou"
           ],
           "pdfUnis": [],
-          "pdfHKUnis": [],
-          "tldr": "[research paper] Dual-Rerank introduces a unified industrial reranking framework that resolves the structural trade-off between autoregressive (AR) and non-autoregressive (NAR) models by leveraging sequential knowledge distillation—exploiting the quasi-deterministic, unimodal nature of video ranking distributions—to enable efficient NAR inference. It simultaneously addresses the optimization gap via list-wise decoupled reranking optimization (LDRO), which stabilizes reinforcement learning by decoupling reward signals from sequence generation, enabling stable online RL in high-throughput environments. A/B testing shows superior user satisfaction, watch time, and latency reduction compared to AR baselines, with a 75% consistency rate in ranking outputs under constrained utility constraints.",
-          "deepxivKeywords": [
-            "sequential knowledge distillation",
-            "list-wise decoupled reranking optimization",
-            "quasi-deterministic ranking distributions",
-            "industrial generative reranking",
-            "reinforcement learning stability"
-          ],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "KAT-Coder-V2 Technical Report",
@@ -18038,6 +18695,315 @@
       ],
       "count": 6,
       "uniCollabCount": 1,
+      "hkCollabCount": 0
+    },
+    "taotian": {
+      "company": "阿里淘天",
+      "icon": "🛒",
+      "papers": [
+        {
+          "title": "Policy-Aware Design of Large-Scale Factorial Experiments",
+          "summary": "Digital firms routinely run many online experiments on shared user populations. When product decisions are compositional, such as combinations of interface elements, flows, messages, or incentives, the number of feasible interventions grows combinatorially, while available traffic remains limited. O",
+          "published": "2026-04-09T22:39:18Z",
+          "arxivId": "2604.08804v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.08804v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.08804v1",
+          "authors": [
+            "Xin Wen",
+            "Xi Chen",
+            "Will Wei Sun",
+            "Yichen Zhang"
+          ],
+          "authorCount": 4,
+          "affiliations": [],
+          "categories": [
+            "stat.ML",
+            "cs.LG",
+            "stat.ME"
+          ],
+          "comment": "",
+          "universities": [
+            "MIT",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            }
+          ],
+          "collabConfidence": "confirmed",
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "taotian"
+          ],
+          "pdfUnis": [
+            "SternSchoolofBusiness,NewYorkUniversity,NewYork,NY10012,xin.wen@stern.nyu.edu",
+            "interventions grows combinatorially, while available traffic remains limited. Ov",
+            "method substantially outperforms one-shot tensor completion and unstructured bes"
+          ],
+          "pdfHKUnis": []
+        },
+        {
+          "title": "Your Agent Is Mine: Measuring Malicious Intermediary Attacks on the LLM Supply Chain",
+          "summary": "Large language model (LLM) agents increasingly rely on third-party API routers to dispatch tool-calling requests across multiple upstream providers. These routers operate as application-layer proxies with full plaintext access to every in-flight JSON payload, yet no provider enforces cryptographic i",
+          "published": "2026-04-09T16:06:41Z",
+          "arxivId": "2604.08407v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.08407v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.08407v1",
+          "authors": [
+            "Hanzhi Liu",
+            "Chaofan Shou",
+            "Hongbo Wen",
+            "Yanju Chen",
+            "Ryan Jingyang Fang",
+            "Yu Feng"
+          ],
+          "authorCount": 6,
+          "affiliations": [],
+          "categories": [
+            "cs.CR"
+          ],
+          "comment": "",
+          "universities": [
+            "NYU",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "Math",
+              "label": "数学推理",
+              "color": "#06b6d4"
+            }
+          ],
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "UniversityofCalifornia,Santa Fuzzland UniversityofCalifornia,Santa"
+          ],
+          "pdfHKUnis": []
+        },
+        {
+          "title": "Prototype-Aligned Federated Soft-Prompts for Continual Web Personalization",
+          "summary": "Continual web personalization is essential for engagement, yet real-world non-stationarity and privacy constraints make it hard to adapt quickly without forgetting long-term preferences. We target this gap by seeking a privacy-conscious, parameter-efficient interface that controls stability-plastici",
+          "published": "2026-03-29T12:59:59Z",
+          "arxivId": "2603.27678v1",
+          "arxivUrl": "http://arxiv.org/abs/2603.27678v1",
+          "pdfUrl": "https://arxiv.org/pdf/2603.27678v1",
+          "authors": [
+            "Canran Xiao",
+            "Liwei Hou"
+          ],
+          "authorCount": 2,
+          "affiliations": [],
+          "categories": [
+            "cs.LG"
+          ],
+          "comment": "Accepted by WWW 2026",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Safety",
+              "label": "安全",
+              "color": "#ef4444"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            }
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "ShenzhenCampusofSunYat-senUniversity HunanUniversity"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only",
+          "tldr": "[research paper] ProtoFed-SP introduces a privacy-aware, prompt-based framework for continual web personalization that decouples session-level plasticity from long-term stability via dual-timescale soft prompts. A fast, sparse short-term prompt captures session intent, while a slow, federated long-term prompt is anchored to a server-side prototype library updated through differentially private aggregation. Queries are routed to Top-M prototypes to compose personalized prompts, enabling efficient adaptation under privacy constraints with superior performance (e.g., +5.0% NDCG on Amazon-Books) and reduced forgetting, while maintaining accuracy under practical DP budgets.",
+          "deepxivKeywords": [
+            "federated prototype aggregation",
+            "dual-timescale soft prompting",
+            "privacy-preserving personalization",
+            "stability-plasticity trade-off",
+            "parameter-efficient continual learning"
+          ],
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "KARMA: Knowledge-Action Regularized Multimodal Alignment for Personalized Search at Taobao",
+          "summary": "Large Language Models (LLMs) are equipped with profound semantic knowledge, making them a natural choice for injecting semantic generalization into personalized search systems. However, in practice we find that directly fine-tuning LLMs on industrial personalized tasks (e.g. next item prediction) of",
+          "published": "2026-03-24T04:13:30Z",
+          "arxivId": "2603.22779v2",
+          "arxivUrl": "http://arxiv.org/abs/2603.22779v2",
+          "pdfUrl": "https://arxiv.org/pdf/2603.22779v2",
+          "authors": [
+            "Zhi Sun",
+            "Wenming Zhang",
+            "Yi Wei",
+            "Liren Yu",
+            "Zhixuan Zhang",
+            "Dan Ou",
+            "Haihong Tang"
+          ],
+          "authorCount": 7,
+          "affiliations": [],
+          "categories": [
+            "cs.IR",
+            "cs.AI",
+            "cs.LG"
+          ],
+          "comment": "",
+          "universities": [
+            "MIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "Safety",
+              "label": "Safety",
+              "color": "#6b7280"
+            },
+            {
+              "id": "Multimodal",
+              "label": "Multimodal",
+              "color": "#6b7280"
+            }
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "taotian",
+            "alibaba"
+          ],
+          "pdfUnis": [
+            "LirenYu ZhixuanZhang DanOu"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "confirmed",
+          "tldr": "[research paper] KARMA introduces a train-only semantic decodability regularizer to resolve the Knowledge–Action Gap in LLM-powered personalized search, where action-focused training causes semantic collapse (e.g., attention sinks). By enforcing history-conditioned semantic generation and embedding-conditioned reconstruction, KARMA maintains LLM semantic fidelity while optimizing next-interest embeddings for retrieval, achieving +0.25 CTR AUC, +1.86 HR in pre-ranking, and +2.51 HR in recall, with +0.5% item click uplift in production.",
+          "deepxivKeywords": [
+            "semantic decodability",
+            "knowledge-action gap",
+            "attention sink",
+            "embedding bottleneck",
+            "multimodal alignment"
+          ],
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "AIGQ: An End-to-End Hybrid Generative Architecture for E-commerce Query Recommendation",
+          "summary": "Pre-search query recommendation, widely known as HintQ on Taobao's homepage, plays a vital role in intent capture and demand discovery, yet traditional methods suffer from shallow semantics, poor cold-start performance and low serendipity due to reliance on ID-based matching and co-click heuristics.",
+          "published": "2026-03-20T07:27:59Z",
+          "arxivId": "2603.19710v1",
+          "arxivUrl": "http://arxiv.org/abs/2603.19710v1",
+          "pdfUrl": "https://arxiv.org/pdf/2603.19710v1",
+          "authors": [
+            "Jingcao Xu",
+            "Jianyun Zou",
+            "Renkai Yang",
+            "Zili Geng",
+            "Qiang Liu",
+            "Haihong Tang"
+          ],
+          "authorCount": 6,
+          "affiliations": [],
+          "categories": [
+            "cs.IR",
+            "cs.AI"
+          ],
+          "comment": "",
+          "universities": [
+            "NYU",
+            "HIT",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            }
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "taotian",
+            "alibaba"
+          ],
+          "pdfUnis": [
+            "JingcaoXu∗† JianyunZou∗ RenkaiYang∗",
+            "UniversityofElectronicScienceand Taobao&TmallGroupofAlibaba Taobao&TmallGroupofA"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "confirmed",
+          "tldr": "[research paper] AIGQ introduces the first end-to-end generative framework for pre-search query recommendation (HintQ) in e-commerce, addressing cold-start, serendipity, and personalization gaps via Interest-Aware List Supervised Fine-Tuning (IL-SFT) and Interest-aware List Group Relative Policy Optimization (IL-GRPO), a policy gradient method with dual-reward mechanisms (individual query relevance + global list properties) informed by CTR-based model rewards. A hybrid offline-online deployment architecture—AIGQ-Direct for fast personalization and AIGQ-Think for reasoning-enhanced diversity—enables real-time generation under latency constraints, achieving significant gains in business metrics through large-scale A/B tests.",
+          "deepxivKeywords": [
+            "interest-aware list supervision",
+            "policy gradient optimization",
+            "chain-of-thought reasoning",
+            "end-to-end generative recommendation",
+            "offline-online hybrid deployment"
+          ],
+          "deepxivEnhanced": true
+        }
+      ],
+      "count": 5,
+      "uniCollabCount": 3,
       "hkCollabCount": 0
     },
     "baidu": {
@@ -18702,11 +19668,11 @@
             "xiaomi"
           ],
           "pdfUnis": [
-            "mapping, motion forecasting, and driving-oriented VQA, highlighting its broad ap",
+            "1Huazhong University of Science and Technology 2Xiaomi EV 3SKL-IOTSC, University",
             "directly adopting 2D Vision-Language Models yields limited spatial perception, w",
-            "Long Chen2, Hongwei Xie2, Bing Wang2, Guang Chen2, Hangjun Ye2, Wenyu Liu1,",
             "nuScenes and closed-loop evaluation on Bench2Drive. Moreover, it demonstrates st",
-            "1Huazhong University of Science and Technology 2Xiaomi EV 3SKL-IOTSC, University"
+            "Long Chen2, Hongwei Xie2, Bing Wang2, Guang Chen2, Hangjun Ye2, Wenyu Liu1,",
+            "mapping, motion forecasting, and driving-oriented VQA, highlighting its broad ap"
           ],
           "pdfHKUnis": [],
           "collabConfidence": "confirmed",
@@ -19301,215 +20267,6 @@
       "uniCollabCount": 1,
       "hkCollabCount": 0
     },
-    "taotian": {
-      "company": "阿里淘天",
-      "icon": "🛒",
-      "papers": [
-        {
-          "title": "Prototype-Aligned Federated Soft-Prompts for Continual Web Personalization",
-          "summary": "Continual web personalization is essential for engagement, yet real-world non-stationarity and privacy constraints make it hard to adapt quickly without forgetting long-term preferences. We target this gap by seeking a privacy-conscious, parameter-efficient interface that controls stability-plastici",
-          "published": "2026-03-29T12:59:59Z",
-          "arxivId": "2603.27678v1",
-          "arxivUrl": "http://arxiv.org/abs/2603.27678v1",
-          "pdfUrl": "https://arxiv.org/pdf/2603.27678v1",
-          "authors": [
-            "Canran Xiao",
-            "Liwei Hou"
-          ],
-          "authorCount": 2,
-          "affiliations": [],
-          "categories": [
-            "cs.LG"
-          ],
-          "comment": "Accepted by WWW 2026",
-          "universities": [],
-          "hkUniversities": [],
-          "hasUniCollab": false,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "LLM",
-              "label": "LLM",
-              "color": "#3b82f6"
-            },
-            {
-              "id": "Safety",
-              "label": "安全",
-              "color": "#ef4444"
-            },
-            {
-              "id": "Data",
-              "label": "数据",
-              "color": "#78716c"
-            }
-          ],
-          "pdfVerified": true,
-          "pdfCompanies": [],
-          "pdfUnis": [
-            "ShenzhenCampusofSunYat-senUniversity HunanUniversity"
-          ],
-          "pdfHKUnis": [],
-          "collabConfidence": "uni_only",
-          "tldr": "[research paper] ProtoFed-SP introduces a privacy-aware, prompt-based framework for continual web personalization that decouples session-level plasticity from long-term stability via dual-timescale soft prompts. A fast, sparse short-term prompt captures session intent, while a slow, federated long-term prompt is anchored to a server-side prototype library updated through differentially private aggregation. Queries are routed to Top-M prototypes to compose personalized prompts, enabling efficient adaptation under privacy constraints with superior performance (e.g., +5.0% NDCG on Amazon-Books) and reduced forgetting, while maintaining accuracy under practical DP budgets.",
-          "deepxivKeywords": [
-            "federated prototype aggregation",
-            "dual-timescale soft prompting",
-            "privacy-preserving personalization",
-            "stability-plasticity trade-off",
-            "parameter-efficient continual learning"
-          ],
-          "deepxivEnhanced": true
-        },
-        {
-          "title": "KARMA: Knowledge-Action Regularized Multimodal Alignment for Personalized Search at Taobao",
-          "summary": "Large Language Models (LLMs) are equipped with profound semantic knowledge, making them a natural choice for injecting semantic generalization into personalized search systems. However, in practice we find that directly fine-tuning LLMs on industrial personalized tasks (e.g. next item prediction) of",
-          "published": "2026-03-24T04:13:30Z",
-          "arxivId": "2603.22779v2",
-          "arxivUrl": "http://arxiv.org/abs/2603.22779v2",
-          "pdfUrl": "https://arxiv.org/pdf/2603.22779v2",
-          "authors": [
-            "Zhi Sun",
-            "Wenming Zhang",
-            "Yi Wei",
-            "Liren Yu",
-            "Zhixuan Zhang",
-            "Dan Ou",
-            "Haihong Tang"
-          ],
-          "authorCount": 7,
-          "affiliations": [],
-          "categories": [
-            "cs.IR",
-            "cs.AI",
-            "cs.LG"
-          ],
-          "comment": "",
-          "universities": [
-            "MIT"
-          ],
-          "hkUniversities": [],
-          "hasUniCollab": true,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "LLM",
-              "label": "LLM",
-              "color": "#3b82f6"
-            },
-            {
-              "id": "RAG",
-              "label": "RAG/检索",
-              "color": "#64748b"
-            },
-            {
-              "id": "Infra",
-              "label": "Infra",
-              "color": "#22c55e"
-            },
-            {
-              "id": "Safety",
-              "label": "Safety",
-              "color": "#6b7280"
-            },
-            {
-              "id": "Multimodal",
-              "label": "Multimodal",
-              "color": "#6b7280"
-            }
-          ],
-          "pdfVerified": true,
-          "pdfCompanies": [
-            "taotian",
-            "alibaba"
-          ],
-          "pdfUnis": [
-            "LirenYu ZhixuanZhang DanOu"
-          ],
-          "pdfHKUnis": [],
-          "collabConfidence": "confirmed",
-          "tldr": "[research paper] KARMA introduces a train-only semantic decodability regularizer to resolve the Knowledge–Action Gap in LLM-powered personalized search, where action-focused training causes semantic collapse (e.g., attention sinks). By enforcing history-conditioned semantic generation and embedding-conditioned reconstruction, KARMA maintains LLM semantic fidelity while optimizing next-interest embeddings for retrieval, achieving +0.25 CTR AUC, +1.86 HR in pre-ranking, and +2.51 HR in recall, with +0.5% item click uplift in production.",
-          "deepxivKeywords": [
-            "semantic decodability",
-            "knowledge-action gap",
-            "attention sink",
-            "embedding bottleneck",
-            "multimodal alignment"
-          ],
-          "deepxivEnhanced": true
-        },
-        {
-          "title": "AIGQ: An End-to-End Hybrid Generative Architecture for E-commerce Query Recommendation",
-          "summary": "Pre-search query recommendation, widely known as HintQ on Taobao's homepage, plays a vital role in intent capture and demand discovery, yet traditional methods suffer from shallow semantics, poor cold-start performance and low serendipity due to reliance on ID-based matching and co-click heuristics.",
-          "published": "2026-03-20T07:27:59Z",
-          "arxivId": "2603.19710v1",
-          "arxivUrl": "http://arxiv.org/abs/2603.19710v1",
-          "pdfUrl": "https://arxiv.org/pdf/2603.19710v1",
-          "authors": [
-            "Jingcao Xu",
-            "Jianyun Zou",
-            "Renkai Yang",
-            "Zili Geng",
-            "Qiang Liu",
-            "Haihong Tang"
-          ],
-          "authorCount": 6,
-          "affiliations": [],
-          "categories": [
-            "cs.IR",
-            "cs.AI"
-          ],
-          "comment": "",
-          "universities": [
-            "NYU",
-            "HIT",
-            "ETH"
-          ],
-          "hkUniversities": [],
-          "hasUniCollab": true,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "RL",
-              "label": "强化学习",
-              "color": "#eab308"
-            },
-            {
-              "id": "LLM",
-              "label": "LLM",
-              "color": "#3b82f6"
-            },
-            {
-              "id": "Infra",
-              "label": "Infra",
-              "color": "#22c55e"
-            }
-          ],
-          "pdfVerified": true,
-          "pdfCompanies": [
-            "taotian",
-            "alibaba"
-          ],
-          "pdfUnis": [
-            "JingcaoXu∗† JianyunZou∗ RenkaiYang∗",
-            "UniversityofElectronicScienceand Taobao&TmallGroupofAlibaba Taobao&TmallGroupofA"
-          ],
-          "pdfHKUnis": [],
-          "collabConfidence": "confirmed",
-          "tldr": "[research paper] AIGQ introduces the first end-to-end generative framework for pre-search query recommendation (HintQ) in e-commerce, addressing cold-start, serendipity, and personalization gaps via Interest-Aware List Supervised Fine-Tuning (IL-SFT) and Interest-aware List Group Relative Policy Optimization (IL-GRPO), a policy gradient method with dual-reward mechanisms (individual query relevance + global list properties) informed by CTR-based model rewards. A hybrid offline-online deployment architecture—AIGQ-Direct for fast personalization and AIGQ-Think for reasoning-enhanced diversity—enables real-time generation under latency constraints, achieving significant gains in business metrics through large-scale A/B tests.",
-          "deepxivKeywords": [
-            "interest-aware list supervision",
-            "policy gradient optimization",
-            "chain-of-thought reasoning",
-            "end-to-end generative recommendation",
-            "offline-online hybrid deployment"
-          ],
-          "deepxivEnhanced": true
-        }
-      ],
-      "count": 3,
-      "uniCollabCount": 2,
-      "hkCollabCount": 0
-    },
     "didi": {
       "company": "滴滴",
       "icon": "🚕",
@@ -19573,8 +20330,8 @@
           ],
           "pdfUnis": [
             "wangbenyou@cuhk.edu.cn",
-            "XinyuanXie1,2* , ShunianChen1* , ZhihengLiu1, YuhaoZhang1",
-            "TheChineseUniversityofHongKong,Shenzhen1,DidiChuxing2"
+            "TheChineseUniversityofHongKong,Shenzhen1,DidiChuxing2",
+            "XinyuanXie1,2* , ShunianChen1* , ZhihengLiu1, YuhaoZhang1"
           ],
           "pdfHKUnis": [
             "CUHK"

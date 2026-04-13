@@ -3237,11 +3237,27 @@ function renderDomainPage(domainKey) {
       html += '<div style="font-size:0.8rem;font-weight:600;color:var(--text)">' +
         '<a href="' + p.arxivUrl + '" target="_blank" style="color:var(--text);text-decoration:none">' + (p.title || '') + '</a></div>';
       html += '<div style="font-size:0.65rem;color:var(--text2);margin-top:0.2rem">';
-      html += '<span style="color:' + cfg.color + '">' + item.companyIcon + ' ' + item.company + '</span>';
+      // 公司/机构标签 — 严格按 PDF affiliation 显示，未验证的标为关键词匹配
       if (isConfirmed) {
+        // PDF 验证的校企合作：显示公司 + 大学
+        html += '<span style="color:' + cfg.color + '">' + item.companyIcon + ' ' + item.company + '</span>';
         html += ' <span style="color:#4ade80;font-weight:600">✅ 校企合作</span>';
         var unis = (p.universities || []).join(', ');
         if (unis) html += ' · 🏫 ' + unis;
+      } else if (p.pdfVerified && p.pdfCompanies && p.pdfCompanies.length > 0) {
+        // PDF 验证过但不是校企合作（纯公司论文）：显示 PDF 确认的公司
+        html += '<span style="color:' + cfg.color + '">' + item.companyIcon + ' ' + item.company + '</span>';
+      } else if (p.pdfVerified && (!p.pdfCompanies || p.pdfCompanies.length === 0)) {
+        // PDF 验证过但没找到该公司（可能是纯高校论文或关键词误匹配）
+        var pdfUnis = (p.pdfUnis || p.universities || []).join(', ');
+        if (pdfUnis) {
+          html += '<span style="color:var(--text2)">🏫 ' + pdfUnis + '</span>';
+        } else {
+          html += '<span style="color:var(--text2)">' + item.companyIcon + ' ' + item.company + ' <span style="font-size:0.55rem;opacity:0.6">(关键词匹配)</span></span>';
+        }
+      } else {
+        // 未验证：显示公司名但标注为关键词匹配
+        html += '<span style="color:var(--text2)">' + item.companyIcon + ' ' + item.company + ' <span style="font-size:0.55rem;opacity:0.6">(关键词匹配·待验证)</span></span>';
       }
       html += ' · 📅 ' + (p.published || '').substring(0, 10);
       // 其他方向标签

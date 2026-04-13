@@ -3097,19 +3097,22 @@ function renderDomainPage(domainKey) {
   var container = document.getElementById('page-domain-' + domainKey);
   if (!container) return;
 
-  // 收集该领域的论文
+  // 收集该领域的论文 — 同时检查 directions 数组中超过 top3 的方向
   var papers = [];
+  var _totalScanned = 0;
   if (window.arxivData && arxivData.companies) {
     Object.keys(arxivData.companies).forEach(function(cid) {
       var c = arxivData.companies[cid];
-      c.papers.forEach(function(p) {
-        var dirs = (p.directions || []).map(function(d) { return d.id; });
+      (c.papers || []).forEach(function(p) {
+        _totalScanned++;
+        var dirs = (p.directions || []).map(function(d) { return d.id || d; });
         if (dirs.indexOf(cfg.id) >= 0) {
           papers.push({ paper: p, company: c.company, companyIcon: c.icon || '', companyId: cid });
         }
       });
     });
   }
+  console.log('[Domain ' + domainKey + '] scanned=' + _totalScanned + ' matched=' + papers.length + ' arxivData=' + (!!window.arxivData) + ' companies=' + Object.keys(arxivData && arxivData.companies || {}).length);
 
   // 按日期排序（最新在前）
   papers.sort(function(a, b) { return (b.paper.published || '').localeCompare(a.paper.published || ''); });
@@ -3332,13 +3335,17 @@ function updateDomainBadges() {
     var cfg = DOMAIN_CONFIG[domainKey];
     var count = 0;
     Object.values(arxivData.companies).forEach(function(c) {
-      c.papers.forEach(function(p) {
-        var dirs = (p.directions || []).map(function(d) { return d.id; });
+      (c.papers || []).forEach(function(p) {
+        var dirs = (p.directions || []).map(function(d) { return d.id || d; });
         if (dirs.indexOf(cfg.id) >= 0) count++;
       });
     });
+    // 更新领域专区大页面的 badge
     var badge = document.getElementById(cfg.badgeId);
     if (badge) badge.textContent = count + ' 篇论文';
+    // 更新首页快速入口小卡片的 badge
+    var quickBadge = document.getElementById('domainQuick' + cfg.id);
+    if (quickBadge) quickBadge.textContent = count + ' 篇';
   });
 }
 

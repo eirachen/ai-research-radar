@@ -3238,9 +3238,11 @@ function renderDomainPage(domainKey) {
         '<a href="' + p.arxivUrl + '" target="_blank" style="color:var(--text);text-decoration:none">' + (p.title || '') + '</a></div>';
       html += '<div style="font-size:0.65rem;color:var(--text2);margin-top:0.2rem">';
       html += '<span style="color:' + cfg.color + '">' + item.companyIcon + ' ' + item.company + '</span>';
-      if (isConfirmed) html += ' <span style="color:#4ade80;font-weight:600">✅ 校企合作</span>';
-      var unis = (p.universities || []).join(', ');
-      if (unis) html += ' · 🏫 ' + unis;
+      if (isConfirmed) {
+        html += ' <span style="color:#4ade80;font-weight:600">✅ 校企合作</span>';
+        var unis = (p.universities || []).join(', ');
+        if (unis) html += ' · 🏫 ' + unis;
+      }
       html += ' · 📅 ' + (p.published || '').substring(0, 10);
       // 其他方向标签
       (p.directions || []).forEach(function(d) {

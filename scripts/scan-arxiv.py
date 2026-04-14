@@ -61,6 +61,12 @@ UNIVERSITY_KEYWORDS = [
     "Institute of Computing Technology", "ICT CAS",
     "Chinese Academy of Sciences", "CAS",
     "Peng Cheng Laboratory",
+    # 语音方向重要高校和实验室（P3 增强）
+    "Northwestern Polytechnical University", "NWPU",  # 西北工大 ASLP
+    "Soochow University",  # 苏州大学
+    "X-LANCE",  # 上交语音实验室
+    "National Engineering Research Center for Speech",  # 中科大语音国重
+    "SpeechLab",  # 各校语音实验室通用名
     # 香港 (handled separately for special highlighting)
     # 北美
     "MIT", "Massachusetts Institute of Technology",
@@ -289,10 +295,87 @@ def classify_direction(title, summary):
 
     # Return top 3 directions sorted by score
     sorted_dirs = sorted(scores.items(), key=lambda x: -x[1])
-    return [
+    result = [
         {"id": d[0], "label": AI_DIRECTIONS[d[0]]["label"], "color": AI_DIRECTIONS[d[0]]["color"]}
         for d in sorted_dirs[:3]
     ]
+
+    # 如果是 Speech 方向，追加子方向 tag
+    if any(d["id"] == "Speech" for d in result):
+        sub_dirs = classify_speech_subdirection(title, summary)
+        for d in result:
+            if d["id"] == "Speech" and sub_dirs:
+                d["subTags"] = sub_dirs
+    return result
+
+
+# 语音子方向分类
+SPEECH_SUB_DIRECTIONS = {
+    "ASR": {
+        "label": "语音识别",
+        "keywords": ["speech recognition", "ASR", "automatic speech recognition",
+                     "streaming ASR", "end-to-end ASR", "Whisper", "CTC", "transducer",
+                     "speech-to-text", "dictation", "transcription"]
+    },
+    "TTS": {
+        "label": "语音合成",
+        "keywords": ["text-to-speech", "TTS", "speech synthesis", "speech generation",
+                     "neural TTS", "voice synthesis", "CosyVoice", "VITS",
+                     "prosody", "expressive speech", "emotional speech"]
+    },
+    "Speech-LLM": {
+        "label": "语音大模型",
+        "keywords": ["speech language model", "audio language model", "speech LLM",
+                     "spoken dialogue", "speech token", "speech codec",
+                     "Qwen-Audio", "full-duplex", "speech understanding",
+                     "audio understanding", "listen and speak"]
+    },
+    "VC": {
+        "label": "语音转换",
+        "keywords": ["voice conversion", "voice cloning", "speaker conversion",
+                     "voice style transfer", "Seed-TTS", "zero-shot TTS"]
+    },
+    "SE": {
+        "label": "语音增强",
+        "keywords": ["speech enhancement", "speech separation", "noise reduction",
+                     "beamforming", "dereverberation", "speech denoising"]
+    },
+    "SV": {
+        "label": "说话人验证",
+        "keywords": ["speaker verification", "speaker recognition", "speaker diarization",
+                     "speaker identification", "speaker embedding", "voiceprint"]
+    },
+    "Music": {
+        "label": "音乐生成",
+        "keywords": ["music generation", "music synthesis", "singing",
+                     "singing voice", "SkyMusic", "Suno", "music composition",
+                     "melody", "accompaniment"]
+    },
+    "Codec": {
+        "label": "音频编解码",
+        "keywords": ["audio codec", "neural codec", "SpeechTokenizer",
+                     "audio tokenizer", "sound codec", "audio compression",
+                     "mel spectrogram"]
+    },
+    "AudioCap": {
+        "label": "音频理解",
+        "keywords": ["audio captioning", "audio caption", "audio event",
+                     "sound event", "audio tagging", "audio-visual",
+                     "audio question answering"]
+    },
+}
+
+
+def classify_speech_subdirection(title, summary):
+    """对 Speech 方向论文进一步细分子方向"""
+    text = (title + " " + summary).lower()
+    found = []
+    for sub_id, info in SPEECH_SUB_DIRECTIONS.items():
+        for kw in info["keywords"]:
+            if kw.lower() in text:
+                found.append({"id": sub_id, "label": info["label"]})
+                break
+    return found
 
 
 # ══════════════════════════════════════

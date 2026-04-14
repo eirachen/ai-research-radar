@@ -3283,6 +3283,12 @@ function renderDomainPage(domainKey) {
         if (d.id !== cfg.id) {
           html += ' <span style="font-size:0.58rem;padding:0.05rem 0.25rem;border-radius:3px;background:' + d.color + '22;color:' + d.color + '">' + d.label + '</span>';
         }
+        // 子方向 tag（如语音的 ASR/TTS/Speech-LLM 等）
+        if (d.id === cfg.id && d.subTags && d.subTags.length > 0) {
+          d.subTags.forEach(function(sub) {
+            html += ' <span style="font-size:0.58rem;padding:0.05rem 0.25rem;border-radius:3px;background:' + cfg.color + '22;color:' + cfg.color + ';border:1px solid ' + cfg.color + '33">' + sub.label + '</span>';
+          });
+        }
       });
       html += '</div>';
       // 摘要（前150字）

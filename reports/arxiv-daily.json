@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-04-13T10:21:37.795532Z",
+  "generatedAt": "2026-04-14T10:02:41.309965Z",
   "since": "2026-03-01",
-  "totalPapers": 337,
-  "totalUniCollab": 58,
-  "totalHKCollab": 10,
+  "totalPapers": 352,
+  "totalUniCollab": 65,
+  "totalHKCollab": 12,
   "companies": {
     "bytedance": {
       "company": "字节Seed",
@@ -702,16 +702,251 @@
             "gray failures"
           ],
           "deepxivEnhanced": true
+        },
+        {
+          "title": "Long-Horizon Streaming Video Generation via Hybrid Attention with Decoupled Distribution",
+          "authors": "Ruibin Li, Tao Yang, Fangzhou Ai, Tianhe Wu, Shilei Wen, Bingyue Peng, Lei Zhang",
+          "summary": "We present StreamFlow, a novel streaming video generation framework that enables long-horizon video synthesis with consistent quality through hybrid attention mechanisms.",
+          "published": "2026-04-11T17:59:00Z",
+          "arxivUrl": "http://arxiv.org/abs/2604.10103v1",
+          "arxivId": "2604.10103v1",
+          "pdfVerified": true,
+          "collabConfidence": "confirmed",
+          "pdfCompanies": [
+            "bytedance"
+          ],
+          "pdfUnis": [
+            "The Hong Kong Polytechnic University"
+          ],
+          "universities": [
+            "The Hong Kong Polytechnic University (PolyU)"
+          ],
+          "hasHKCollab": true,
+          "directions": [],
+          "deepxivEnhanced": true
         }
       ],
       "count": 12,
       "uniCollabCount": 6,
-      "hkCollabCount": 0
+      "hkCollabCount": 0,
+      "paperCount": 13
     },
     "alibaba": {
       "company": "阿里通义",
       "icon": "☁️",
       "papers": [
+        {
+          "title": "Seeing No Evil: Blinding Large Vision-Language Models to Safety Instructions via Adversarial Attention Hijacking",
+          "summary": "Large Vision-Language Models (LVLMs) rely on attention-based retrieval of safety instructions to maintain alignment during generation. Existing attacks typically optimize image perturbations to maximize harmful output likelihood, but suffer from slow convergence due to gradient conflict between adve",
+          "published": "2026-04-11T17:33:47Z",
+          "arxivId": "2604.10299v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.10299v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.10299v1",
+          "authors": [
+            "Jingru Li",
+            "Wei Ren",
+            "Tianqing Zhu"
+          ],
+          "authorCount": 3,
+          "affiliations": [],
+          "categories": [
+            "cs.CV",
+            "cs.CL"
+          ],
+          "comment": "Accepted to ACL 2026. Code: https://github.com/Landsayy/AttentionJailbreak",
+          "universities": [
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Safety",
+              "label": "安全",
+              "color": "#ef4444"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Multimodal",
+              "label": "多模态",
+              "color": "#a855f7"
+            }
+          ],
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "CityUniversityofMacau",
+            "ChinaUniversityofGeosciences,Wuhan"
+          ],
+          "pdfHKUnis": [
+            "CityU"
+          ],
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "Why Supervised Fine-Tuning Fails to Learn: A Systematic Study of Incomplete Learning in Large Language Models",
+          "summary": "Supervised Fine-Tuning (SFT) is the standard approach for adapting large language models (LLMs) to downstream tasks. However, we observe a persistent failure mode: even after convergence, models often fail to correctly reproduce a subset of their own supervised training data. We refer to this behavi",
+          "published": "2026-04-11T07:55:32Z",
+          "arxivId": "2604.10079v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.10079v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.10079v1",
+          "authors": [
+            "Chao Xue",
+            "Yao Wang",
+            "Mengqiao Liu",
+            "Di Liang",
+            "Xingsheng Han",
+            "Peiyang Liu",
+            "Xianjie Wu",
+            "Chenyao Lu"
+          ],
+          "authorCount": 14,
+          "affiliations": [],
+          "categories": [
+            "cs.CL"
+          ],
+          "comment": "Accepted by ACL 2026 Oral",
+          "universities": [
+            "MIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "Math",
+              "label": "数学推理",
+              "color": "#06b6d4"
+            }
+          ],
+          "collabConfidence": "mentioned",
+          "pdfVerified": true,
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "FinTrace: Holistic Trajectory-Level Evaluation of LLM Tool Calling for Long-Horizon Financial Tasks",
+          "summary": "Recent studies demonstrate that tool-calling capability enables large language models (LLMs) to interact with external environments for long-horizon financial tasks. While existing benchmarks have begun evaluating financial tool calling, they focus on limited scenarios and rely on call-level metrics",
+          "published": "2026-04-11T03:58:39Z",
+          "arxivId": "2604.10015v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.10015v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.10015v1",
+          "authors": [
+            "Yupeng Cao",
+            "Haohang Li",
+            "Weijin Liu",
+            "Wenbo Cao",
+            "Anke Xu",
+            "Lingfei Qian",
+            "Xueqing Peng",
+            "Minxue Tang"
+          ],
+          "authorCount": 14,
+          "affiliations": [],
+          "categories": [
+            "cs.AI",
+            "cs.CE",
+            "cs.CL"
+          ],
+          "comment": "",
+          "universities": [
+            "MIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            },
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            }
+          ],
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "{yangyang.a.yu}@accenture.com",
+            "1StevensInstituteofTechnology,2IndependentResearcher,3TheFinAI,4DukeUniversity"
+          ],
+          "pdfHKUnis": [],
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "Rebooting Microreboot: Architectural Support for Safe, Parallel Recovery in Microservice Systems",
+          "summary": "Microreboot enables fast recovery by restarting only the failing component, but in modern microservices naive restarts are unsafe: dense dependencies mean rebooting one service can disrupt many callers. Autonomous remediation agents compound this by actuating raw infrastructure commands without safe",
+          "published": "2026-04-11T00:17:20Z",
+          "arxivId": "2604.09963v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.09963v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.09963v1",
+          "authors": [
+            "Laurent Bindschaedler"
+          ],
+          "authorCount": 1,
+          "affiliations": [],
+          "categories": [
+            "cs.DC",
+            "cs.AI",
+            "cs.SE"
+          ],
+          "comment": "18 pages, 1 figure, 4 tables. Published at ARCS 2026",
+          "universities": [
+            "HIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            }
+          ],
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Max Planck Institute for Software Systems (MPI-SWS), Saarbrücken, Germany"
+          ],
+          "pdfHKUnis": [],
+          "deepxivEnhanced": true
+        },
         {
           "title": "SPASM: Stable Persona-driven Agent Simulation for Multi-turn Dialogue Generation",
           "summary": "Large language models are increasingly deployed in multi-turn settings such as tutoring, support, and counseling, where reliability depends on preserving consistent roles, personas, and goals across long horizons. This requirement becomes critical when LLMs are used to generate synthetic dialogues f",
@@ -5768,14 +6003,279 @@
           "deepxivEnhanced": true
         }
       ],
-      "count": 83,
-      "uniCollabCount": 10,
-      "hkCollabCount": 4
+      "count": 87,
+      "uniCollabCount": 13,
+      "hkCollabCount": 4,
+      "paperCount": 87
     },
     "deepseek": {
       "company": "DeepSeek",
       "icon": "🔍",
       "papers": [
+        {
+          "title": "CARO: Chain-of-Analogy Reasoning Optimization for Robust Content Moderation",
+          "summary": "Current large language models (LLMs), even those explicitly trained for reasoning, often struggle with ambiguous content moderation cases due to misleading \"decision shortcuts\" embedded in context. Inspired by cognitive psychology insights into expert moderation, we introduce \\caro (Chain-of-Analogy",
+          "published": "2026-04-12T07:46:44Z",
+          "arxivId": "2604.10504v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.10504v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.10504v1",
+          "authors": [
+            "Bingzhe Wu",
+            "Haotian Lu",
+            "Yuchen Mou"
+          ],
+          "authorCount": 3,
+          "affiliations": [],
+          "categories": [
+            "cs.AI"
+          ],
+          "comment": "Accepted to ACL 2026 findings; under official publication process",
+          "universities": [
+            "ETH",
+            "MIT",
+            "CAS"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            }
+          ],
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "e1520377@u.nus.edu",
+            "1ShenzhenUniversity 2TsinghuaUniversity 3NationalUniversityofSingapore"
+          ],
+          "pdfHKUnis": [],
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "Leveraging Mathematical Reasoning of LLMs for Efficient GPU Thread Mapping",
+          "summary": "Mapping parallel threads onto non-box-shaped domains is a known challenge in GPU computing that, if done efficiently, can prevent severe performance penalties from allocating unnecessary computational resources. Currently, achieving this optimal efficiency requires significant analytical human time ",
+          "published": "2026-04-12T00:21:38Z",
+          "arxivId": "2604.10387v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.10387v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.10387v1",
+          "authors": [
+            "Jose Maureira",
+            "Cristóbal A. Navarro",
+            "Hector Ferrada",
+            "Luis Veas-Castillo"
+          ],
+          "authorCount": 4,
+          "affiliations": [],
+          "categories": [
+            "cs.DC"
+          ],
+          "comment": "11 pages, 8 figures, 8 tables. Submitted to IEEE Transactions on Parallel and Distributed Systems (TPDS)",
+          "universities": [
+            "ANU",
+            "HIT",
+            "ETH",
+            "MIT",
+            "CAS"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Math",
+              "label": "数学推理",
+              "color": "#06b6d4"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            }
+          ],
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Jose Maureira, Cristóbal A. Navarro, Hector Ferrada, and Luis Veas-Castillo"
+          ],
+          "pdfHKUnis": [],
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "Think in Sentences: Explicit Sentence Boundaries Enhance Language Model's Capabilities",
+          "summary": "Researchers have explored different ways to improve large language models (LLMs)' capabilities via dummy token insertion in contexts. However, existing works focus solely on the dummy tokens themselves, but fail to leverage the inherent sentence-level structure of natural language. This is a critica",
+          "published": "2026-04-11T10:00:52Z",
+          "arxivId": "2604.10135v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.10135v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.10135v1",
+          "authors": [
+            "Zhichen Liu",
+            "Yongyuan Li",
+            "Yang Xu"
+          ],
+          "authorCount": 3,
+          "affiliations": [],
+          "categories": [
+            "cs.CL",
+            "cs.AI"
+          ],
+          "comment": "Accepted to ACL 2026 main conference",
+          "universities": [
+            "ETH",
+            "MIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            }
+          ],
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "SouthernUniversityofScienceandTechnology"
+          ],
+          "pdfHKUnis": [],
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "Agentic Application in Power Grid Static Analysis: Automatic Code Generation and Error Correction",
+          "summary": "This paper introduces an LLM agent that automates power grid static analysis by converting natural language into MATPOWER scripts. The framework utilizes DeepSeek-OCR to build an enhanced vector database from MATPOWER manuals. To ensure reliability, it devises a three-tier error-correction system: a",
+          "published": "2026-04-11T02:56:26Z",
+          "arxivId": "2604.09995v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.09995v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.09995v1",
+          "authors": [
+            "Qinjuan Wang",
+            "Shan Yang",
+            "Yongli Zhu"
+          ],
+          "authorCount": 3,
+          "affiliations": [],
+          "categories": [
+            "eess.SY",
+            "cs.AI"
+          ],
+          "comment": "This paper has been accepted for presentation at the 9th International Conference on Energy, Electrical and Power Engineering (CEEPE 2026) in Nanjing, China, April 17-19, 2026",
+          "universities": [
+            "ANU"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "Code",
+              "label": "代码",
+              "color": "#8b5cf6"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            }
+          ],
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Sun Yat-sen University, Guangzhou, China (wangqj35@mail2.sysu.edu.cn, yzhu16@alu"
+          ],
+          "pdfHKUnis": [],
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "Conflicts Make Large Reasoning Models Vulnerable to Attacks",
+          "summary": "Large Reasoning Models (LRMs) have achieved remarkable performance across diverse domains, yet their decision-making under conflicting objectives remains insufficiently understood. This work investigates how LRMs respond to harmful queries when confronted with two categories of conflicts: internal c",
+          "published": "2026-04-10T11:44:57Z",
+          "arxivId": "2604.09750v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.09750v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.09750v1",
+          "authors": [
+            "Honghao Liu",
+            "Chengjin Xu",
+            "Xuhui Jiang",
+            "Cehao Yang",
+            "Shengming Yin",
+            "Zhengwu Ma",
+            "Lionel Ni",
+            "Jian Guo"
+          ],
+          "authorCount": 8,
+          "affiliations": [],
+          "categories": [
+            "cs.CR",
+            "cs.AI"
+          ],
+          "comment": "",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Safety",
+              "label": "安全",
+              "color": "#ef4444"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            }
+          ],
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "2TheHongKongUniversityofScienceandTechnology(Guangzhou)",
+            "3TheCityUniversityofHongKong",
+            "1InternationalDigitalEconomyAcademy"
+          ],
+          "pdfHKUnis": [
+            "CityU"
+          ],
+          "deepxivEnhanced": true
+        },
         {
           "title": "SPASM: Stable Persona-driven Agent Simulation for Multi-turn Dialogue Generation",
           "summary": "Large language models are increasingly deployed in multi-turn settings such as tutoring, support, and counseling, where reliability depends on preserving consistent roles, personas, and goals across long horizons. This requirement becomes critical when LLMs are used to generate synthetic dialogues f",
@@ -5820,6 +6320,58 @@
           "pdfCompanies": [],
           "pdfUnis": [
             "♠ UniversityofLeeds ■ SouthwestJiaotongUniversity ♦ Ben-GurionUniversityoftheNeg"
+          ],
+          "pdfHKUnis": [],
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "SMART: When is it Actually Worth Expanding a Speculative Tree?",
+          "summary": "Tree-based speculative decoding accelerates autoregressive generation by verifying a branching tree of draft tokens in a single target-model forward pass. However, existing methods prioritize maximizing token-level likelihood or the number of accepted tokens while ignoring a critical ``efficiency pa",
+          "published": "2026-04-09T13:17:56Z",
+          "arxivId": "2604.09731v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.09731v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.09731v1",
+          "authors": [
+            "Lifu Wang",
+            "Pan Zhou"
+          ],
+          "authorCount": 2,
+          "affiliations": [],
+          "categories": [
+            "cs.DC",
+            "cs.AI"
+          ],
+          "comment": "",
+          "universities": [
+            "ETH",
+            "MIT",
+            "HIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Code",
+              "label": "代码",
+              "color": "#8b5cf6"
+            }
+          ],
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Singapore Management University, Singapore"
           ],
           "pdfHKUnis": [],
           "deepxivEnhanced": true
@@ -6064,13 +6616,13 @@
               "color": "#eab308"
             },
             {
-              "id": "Multimodal",
-              "label": "Multimodal",
+              "id": "Agent",
+              "label": "Agent",
               "color": "#6b7280"
             },
             {
-              "id": "Agent",
-              "label": "Agent",
+              "id": "Multimodal",
+              "label": "Multimodal",
               "color": "#6b7280"
             }
           ],
@@ -9521,9 +10073,10 @@
           "deepxivEnhanced": true
         }
       ],
-      "count": 61,
-      "uniCollabCount": 7,
-      "hkCollabCount": 2
+      "count": 67,
+      "uniCollabCount": 8,
+      "hkCollabCount": 3,
+      "paperCount": 67
     },
     "moonshot": {
       "company": "月之暗面",
@@ -9583,16 +10136,7 @@
           "pdfUnis": [
             "1PekingUniversity 2TheChineseUniversityofHongKong,Shenzhen 3TsinghuaUniversity 4"
           ],
-          "pdfHKUnis": [],
-          "tldr": "[research paper] EditCaption introduces a two-stage post-training pipeline to fix systematic failure modes in VLM-generated image editing instructions—orientation inconsistency, viewpoint ambiguity, and lack of fine-grained attribute description—by constructing 100K human-refined supervised fine-tuning (SFT) data via GLM auto-annotation filtered with EditScore, followed by 10K human-annotated preference pairs for Direct Preference Optimization (DPO). The approach achieves state-of-the-art performance on Eval-400 (4.712), ByteMorph-Bench (4.588), and HQ-Edit, reducing critical error rates from 47.75% to 23% and correct rates from 41.75% to 66%, demonstrating that targeted data construction and preference alignment are essential for human-aligned instruction synthesis in image editing.",
-          "deepxivKeywords": [
-            "spatial reasoning",
-            "orientation consistency",
-            "viewpoint ambiguity",
-            "attribute-level description",
-            "direct preference optimization"
-          ],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "EduIllustrate: Towards Scalable Automated Generation Of Multimodal Educational Content",
@@ -10387,8 +10931,9 @@
         }
       ],
       "count": 14,
-      "uniCollabCount": 2,
-      "hkCollabCount": 1
+      "uniCollabCount": 3,
+      "hkCollabCount": 1,
+      "paperCount": 14
     },
     "openai": {
       "company": "OpenAI",
@@ -10440,8 +10985,7 @@
           "pdfUnis": [
             "UniversityofChicago"
           ],
-          "pdfHKUnis": [],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "Your Agent Is Mine: Measuring Malicious Intermediary Attacks on the LLM Supply Chain",
@@ -10494,17 +11038,7 @@
           "pdfUnis": [
             "UniversityofCalifornia,Santa Fuzzland UniversityofCalifornia,Santa"
           ],
-          "pdfHKUnis": [],
-          "tldr": "[research paper] The paper presents the first systematic empirical study of malicious LLM API routers as a supply-chain vulnerability, identifying four attack classes—payload injection, secret exfiltration, and two adaptive evasion variants—across 28 paid and 400 free routers. It reveals that 9 free and 1 paid routers actively inject malicious code, with 17 exposing researcher-owned AWS credentials and 1 draining ETH from a private key; poisoning studies show benign routers can be compromised via leaked credentials and weak peer configurations, enabling 2.1B tokens processed and 99 credentials exposed. The authors build Mine, a research proxy to simulate attacks and evaluate three client-side defenses: fail-closed policies, response anomaly screening, and append-only logging.",
-          "deepxivKeywords": [
-            "adversarial router behaviors",
-            "tool-use attack",
-            "payload injection",
-            "supply chain security",
-            "adaptive evasion"
-          ],
-          "githubUrl": "https://github.com/QuantumNous/new-api",
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "Tokalator: A Context Engineering Toolkit for Artificial Intelligence Coding Assistants",
@@ -10552,17 +11086,7 @@
           "pdfVerified": true,
           "pdfCompanies": [],
           "pdfUnis": [],
-          "pdfHKUnis": [],
-          "tldr": "[research paper] Tokalator introduces a real-time, in-IDE context engineering toolkit that identifies and quantifies token budget leaks in AI coding assistants. It employs a five-signal syntactic relevance scorer to detect distractor tabs, implements closed-form economic models (Cobb–Douglas, $O(T^2)$ cost growth, caching break-even at $n^*=2$) for cross-provider cost forecasting, and enables developers to monitor and optimize token consumption across 17 LLMs via a VS Code extension, CLI, and web calculators—addressing attention dilution, cost explosion, and context rot through visibility and actionable modeling.",
-          "deepxivKeywords": [
-            "context engineering",
-            "token budget monitoring",
-            "syntactic relevance scoring",
-            "Cobb–Douglas cost modeling",
-            "agentic workflow optimization"
-          ],
-          "githubUrl": "https://github.com/vfaraji89/tokalator",
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "Clickbait detection: quick inference with maximum impact",
@@ -10615,16 +11139,7 @@
             "3 Systems Research Institute, Polish Academy of Sciences, Newelska 6, 01-447",
             "Soveatin Kuntur1[0000−0001−6029−941X], Panggih Kusuma"
           ],
-          "pdfHKUnis": [],
-          "tldr": "[research paper] A lightweight hybrid clickbait detection model combines OpenAI semantic embeddings with six heuristic stylistic features (e.g., punctuation, capitalization, numerals) and applies PCA for dimensionality reduction. Graph-based models (XGBoost, GraphSAGE, GCN) outperform traditional methods in inference speed while maintaining strong discrimination (high ROC-AUC), enabling real-time detection on headline-only inputs with minimal latency.",
-          "deepxivKeywords": [
-            "heuristic feature engineering",
-            "graph neural networks",
-            "clickbait detection",
-            "dimensionality reduction",
-            "headlines-only classification"
-          ],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "More Capable, Less Cooperative? When LLMs Fail At Zero-Cost Collaboration",
@@ -10670,16 +11185,7 @@
           "pdfUnis": [
             "UniversityofIllinoisUrbana-Champaign UKAISecurityInstitute"
           ],
-          "pdfHKUnis": [],
-          "tldr": "[empirical research paper] LLM agents fail to cooperate even when helping incurs zero personal cost, revealing a fundamental 'instruction-utility gap' where explicit cooperative instructions are ignored despite optimal collective outcomes. Through causal decomposition, the study isolates cooperation failures (withholding information) from competence failures (inability to execute), showing that high-capability models actively sabotage coordination. Interventions like explicit protocols and small sharing incentives significantly improve performance, demonstrating that cooperative behavior must be engineered, not assumed from intelligence alone.",
-          "deepxivKeywords": [
-            "instruction-utility gap",
-            "cooperation failure",
-            "causal decomposition",
-            "multi-agent communication",
-            "zero-cost collaboration"
-          ],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "Nesterov Flow May Travel Infinitely Long to Converge to a Minimizer",
@@ -10714,16 +11220,7 @@
           "pdfVerified": true,
           "pdfCompanies": [],
           "pdfUnis": [],
-          "pdfHKUnis": [],
-          "tldr": "[research paper] The paper constructs a differentiable convex potential in ℝ² where the Nesterov flow converges pointwise to the minimizer but accumulates infinite path length, refuting the conjecture that such flows are rectifiable. This is achieved by designing a radial potential with a logarithmic gradient decay near the origin and a controlled angular momentum via a one-sided quadratic perturbation that remains active only until the trajectory enters a small radial region, leading to unbounded oscillatory behavior with infinite arc length despite convergence.",
-          "deepxivKeywords": [
-            "Nesterov flow",
-            "rectifiability",
-            "infinite path length",
-            "convex potential",
-            "angular momentum conservation"
-          ],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "Short proofs in combinatorics, probability and number theory II",
@@ -10764,16 +11261,7 @@
             "openai"
           ],
           "pdfUnis": [],
-          "pdfHKUnis": [],
-          "tldr": "[research paper] The paper presents five short, novel proofs addressing open problems posed by Erdős in combinatorics, probability, and number theory. Each proof leverages advanced constructions: a cyclic subgroup of an elliptic curve to achieve Ω(n²) ordinary lines in a triangle-free setting; a randomized dyadic sequence achieving A_k ≪ √(k log k) for exponential sums; explicit K₄-free 4-chromatic graphs with bounded cycle chords; a counterexample to a sparse Erdős–Turán discrepancy bound via a fewnomial family with high multiplicity roots; and a finiteness result for integers n such that n−ak² is prime for all k≤√(n/a) coprime to n, using Pollack’s result on quadratic residues. All proofs are generated by an internal AI model at OpenAI, with only two successfully verified by ChatGPT-5.4 Pro.",
-          "deepxivKeywords": [
-            "ordinary lines in point sets",
-            "exponential sums",
-            "4-chromatic graphs with bounded chords",
-            "fewnomial discrepancy",
-            "quadratic residue primality"
-          ],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "Evolution of Video Generative Foundations",
@@ -10826,17 +11314,7 @@
           "pdfVerified": true,
           "pdfCompanies": [],
           "pdfUnis": [],
-          "pdfHKUnis": [],
-          "tldr": "[survey paper] This survey provides a comprehensive, time-evolving analysis of video generation paradigms—from early GANs to diffusion models and emerging auto-regressive (AR) methods—offering a comparative assessment of their foundational principles, technical strengths, and limitations. It systematically bridges historical developments with current multimodal trends, highlighting how integration of diverse sensory inputs enhances contextual awareness and enables more sophisticated, temporally coherent video synthesis, while identifying gaps in AR-based and multimodal research that warrant future exploration.",
-          "deepxivKeywords": [
-            "auto-regressive models",
-            "multimodal generation",
-            "video generation evolution",
-            "diffusion models",
-            "temporal coherence"
-          ],
-          "githubUrl": "https://github.com/sjtuplayer/Awesome-Video-Foundations",
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "CritBench: A Framework for Evaluating Cybersecurity Capabilities of Large Language Models in IEC 61850 Digital Substation Environments",
@@ -10886,17 +11364,7 @@
           "pdfUnis": [
             "Karlsruhe Institute of Technology (KIT)"
           ],
-          "pdfHKUnis": [],
-          "tldr": "[research paper] CritBench introduces a domain-specific benchmark for evaluating LLM cybersecurity capabilities in IEC 61850 digital substations, featuring 81 tasks across static configuration analysis, network traffic inspection, and live machine interaction. Agents demonstrate strong performance in structured file parsing and protocol-level enumeration but fail at dynamic, state-dependent operations requiring persistent reasoning and real-time system manipulation. A protocol-aware agent scaffolding (CritLayer) enables reliable execution of live system interactions by bridging the semantic gap between web-trained LLMs and industrial control protocols.",
-          "deepxivKeywords": [
-            "agentic protocol interaction",
-            "IEC 61850 state tracking",
-            "dynamic industrial control reasoning",
-            "operational technology benchmarking",
-            "live IED interaction"
-          ],
-          "githubUrl": "https://github.com/GKeppler/CritBench",
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "AI-Driven Modular Services for Accessible Multilingual Education in Immersive Extended Reality Settings: Integrating Speech Processing, Translation, and Sign Language Rendering",
@@ -10928,6 +11396,11 @@
           "hasHKCollab": false,
           "directions": [
             {
+              "id": "Speech",
+              "label": "语音",
+              "color": "#14b8a6"
+            },
+            {
               "id": "Data",
               "label": "数据",
               "color": "#78716c"
@@ -10936,21 +11409,6 @@
               "id": "LLM",
               "label": "LLM",
               "color": "#3b82f6"
-            },
-            {
-              "id": "Infra",
-              "label": "Infra",
-              "color": "#22c55e"
-            },
-            {
-              "id": "Vision",
-              "label": "Vision",
-              "color": "#6b7280"
-            },
-            {
-              "id": "Speech",
-              "label": "语音",
-              "color": "#14b8a6"
             }
           ],
           "collabConfidence": "uni_only",
@@ -10961,16 +11419,7 @@
             "4Exeter Small-Scale Robotics Laboratory, Engineering Department, University of",
             "1Institute of Communications and Computer Systems (ICCS), Iroon Polytechneiou 9,"
           ],
-          "pdfHKUnis": [],
-          "tldr": "[research paper] A modular AI-driven XR platform integrates six cross-modal services—speech recognition (OpenAI Whisper), multilingual translation (Meta NLLB and EuroLLM 1.7B), speech synthesis (AWS Polly), emotion classification (RoBERTa), dialogue summarization (flan-t5-base-samsum), and International Sign (IS) rendering via MediaPipe hand landmarks—to enable real-time, accessible multilingual language learning in VR. Performance benchmarks show AWS Polly offers lowest latency in speech synthesis (50–100 ms), EuroLLM 1.7B achieves superior translation accuracy (BLEU 84.34 vs. NLLB’s 79.25), and IS avatar rendering maintains <300 ms latency under load, with scalable performance validated across 1,000 concurrent users.",
-          "deepxivKeywords": [
-            "cross-modal AI integration",
-            "International Sign Language rendering",
-            "real-time VR language education",
-            "multilingual translation in XR",
-            "3D avatar animation in immersive environments"
-          ],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "PRISM-MCTS: Learning from Reasoning Trajectories with Metacognitive Reflection",
@@ -11021,16 +11470,7 @@
           "pdfVerified": true,
           "pdfCompanies": [],
           "pdfUnis": [],
-          "pdfHKUnis": [],
-          "tldr": "[research paper] PRISM-MCTS introduces a metacognitive reasoning framework that replaces serial MCTS with a parallelized search using dynamic shared memory to capture heuristics and fallacies from reasoning trajectories. It employs a few-shot Process Reward Model (PRM) trained via step-wise DPO and multi-class classification to evaluate reasoning steps, enabling global pruning of error-prone paths and reuse of verified logic. The method reduces trajectory requirements by half on GPQA and outperforms MCTS-RAG and Search-o1 by achieving higher accuracy with fewer search steps through reflective memory and shared knowledge.",
-          "deepxivKeywords": [
-            "metacognitive reflection",
-            "dynamic shared memory",
-            "process reward model",
-            "reasoning trajectory pruning",
-            "parallelized tree search"
-          ],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "Document Optimization for Black-Box Retrieval via Reinforcement Learning",
@@ -13830,8 +14270,9 @@
         }
       ],
       "count": 57,
-      "uniCollabCount": 9,
-      "hkCollabCount": 0
+      "uniCollabCount": 10,
+      "hkCollabCount": 1,
+      "paperCount": 57
     },
     "deepmind": {
       "company": "Google DeepMind",
@@ -14663,13 +15104,60 @@
         }
       ],
       "count": 14,
-      "uniCollabCount": 1,
-      "hkCollabCount": 0
+      "uniCollabCount": 0,
+      "hkCollabCount": 0,
+      "paperCount": 14
     },
     "anthropic": {
       "company": "Anthropic",
       "icon": "🔬",
       "papers": [
+        {
+          "title": "Relational Preference Encoding in Looped Transformer Internal States",
+          "summary": "We investigate how looped transformers encode human preference in their internal iteration states. Using Ouro-2.6B-Thinking, a 2.6B-parameter looped transformer with iterative refinement, we extract hidden states from each loop iteration and train lightweight evaluator heads (~5M parameters) to pred",
+          "published": "2026-04-10T20:00:49Z",
+          "arxivId": "2604.09870v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.09870v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.09870v1",
+          "authors": [
+            "Jan Kirin"
+          ],
+          "authorCount": 1,
+          "affiliations": [],
+          "categories": [
+            "cs.LG",
+            "cs.AI"
+          ],
+          "comment": "",
+          "universities": [
+            "HIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            }
+          ],
+          "collabConfidence": "mentioned",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": []
+        },
         {
           "title": "LLM-Rosetta: A Hub-and-Spoke Intermediate Representation for Cross-Provider LLM API Translation",
           "summary": "The rapid proliferation of Large Language Model (LLM) providers--each exposing proprietary API formats--has created a fragmented ecosystem where applications become tightly coupled to individual vendors. Switching or bridging providers requires $O(N^2)$ bilateral adapters, impeding portability and m",
@@ -17265,14 +17753,117 @@
           "deepxivEnhanced": true
         }
       ],
-      "count": 44,
-      "uniCollabCount": 7,
-      "hkCollabCount": 0
+      "count": 45,
+      "uniCollabCount": 8,
+      "hkCollabCount": 0,
+      "paperCount": 45
     },
     "nvidia": {
       "company": "NVIDIA",
       "icon": "💚",
       "papers": [
+        {
+          "title": "CovAngelo: A hybrid quantum-classical computing platform for accurate and scalable drug discovery",
+          "summary": "We present a computational platform for modeling chemical reactions in complex molecular environments, focused on ligand-protein binding in drug discovery. The platform implements our new quantum-in-quantum-in-classical (QM/QM/MM) multiscale embedding model that integrates molecular dynamics with a ",
+          "published": "2026-04-12T06:42:33Z",
+          "arxivId": "2604.10487v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.10487v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.10487v1",
+          "authors": [
+            "Linn Evenseth",
+            "Kamil Galewski",
+            "Witold Jarnicki",
+            "Piero Lafiosca",
+            "Vyom N. Patel",
+            "Grzegorz Rajchel-Mieldzioć",
+            "Martin Šimka",
+            "Michał Szczepanik"
+          ],
+          "authorCount": 9,
+          "affiliations": [],
+          "categories": [
+            "physics.chem-ph",
+            "physics.comp-ph",
+            "quant-ph"
+          ],
+          "comment": "",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            }
+          ],
+          "collabConfidence": "confirmed",
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "nvidia"
+          ],
+          "pdfUnis": [],
+          "pdfHKUnis": []
+        },
+        {
+          "title": "SatReg: Regression-based Neural Architecture Search for Lightweight Satellite Image Segmentation",
+          "summary": "As Earth-observation workloads move toward onboard and edge processing, remote-sensing segmentation models must operate under tight latency and energy constraints. We present SatReg, a regression-based hardware-aware tuning framework for lightweight remote-sensing segmentation on edge platforms. Usi",
+          "published": "2026-04-11T18:13:55Z",
+          "arxivId": "2604.10306v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.10306v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.10306v1",
+          "authors": [
+            "Edward Humes",
+            "Tinoosh Mohsenin"
+          ],
+          "authorCount": 2,
+          "affiliations": [],
+          "categories": [
+            "cs.CV"
+          ],
+          "comment": "",
+          "universities": [
+            "HIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "Vision",
+              "label": "视觉",
+              "color": "#ec4899"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            }
+          ],
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "JohnsHopkinsUniversity JohnsHopkinsUniversity"
+          ],
+          "pdfHKUnis": []
+        },
         {
           "title": "BVH-Accelerated Ray Tracing for High-Frequency Electromagnetic Backscattering",
           "summary": "As computational complexity in electromagnetics increases with frequency, full-wave solvers become computationally infeasible for electrically large problems. To address this limitation, we present a shooting and bouncing rays (SBR) method for efficiently modeling electromagnetic backscattering of m",
@@ -18298,14 +18889,68 @@
           "deepxivEnhanced": true
         }
       ],
-      "count": 19,
-      "uniCollabCount": 5,
-      "hkCollabCount": 1
+      "count": 22,
+      "uniCollabCount": 6,
+      "hkCollabCount": 1,
+      "paperCount": 21
     },
     "kuaishou": {
       "company": "快手",
       "icon": "📹",
       "papers": [
+        {
+          "title": "NTIRE 2026 Challenge on Short-form UGC Video Restoration in the Wild with Generative Models: Datasets, Methods and Results",
+          "summary": "This paper presents an overview of the NTIRE 2026 Challenge on Short-form UGC Video Restoration in the Wild with Generative Models. This challenge utilizes a new short-form UGC (S-UGC) video restoration benchmark, termed KwaiVIR, which is contributed by USTC and Kuaishou Technology. It contains both",
+          "published": "2026-04-12T09:43:13Z",
+          "arxivId": "2604.10551v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.10551v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.10551v1",
+          "authors": [
+            "Xin Li",
+            "Jiachao Gong",
+            "Xijun Wang",
+            "Shiyao Xiong",
+            "Bingchen Li",
+            "Suhang Yao",
+            "Chao Zhou",
+            "Zhibo Chen"
+          ],
+          "authorCount": 78,
+          "affiliations": [],
+          "categories": [
+            "cs.CV"
+          ],
+          "comment": "Accepted by CVPR 2026 workshop; NTIRE 2026",
+          "universities": [
+            "ETH",
+            "USTC",
+            "MIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            }
+          ],
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "WeiZhou LinfengLi HangSong QiXu KunYuan YizhenShao YulinRen",
+            "Generative Models: Datasets, Methods and Results",
+            "JiachenTu GuoyiXu YaoxinJiang JiajiaLiu YaokunShi"
+          ],
+          "pdfHKUnis": []
+        },
         {
           "title": "Dual-Rerank: Fusing Causality and Utility for Industrial Generative Reranking",
           "summary": "Kuaishou serves over 400 million daily active users, processing hundreds of millions of search queries daily against a repository of tens of billions of short videos. As the final decision layer, the reranking stage determines user experience by optimizing whole-page utility. While traditional score",
@@ -18694,9 +19339,10 @@
           "deepxivEnhanced": true
         }
       ],
-      "count": 6,
+      "count": 7,
       "uniCollabCount": 1,
-      "hkCollabCount": 0
+      "hkCollabCount": 0,
+      "paperCount": 7
     },
     "taotian": {
       "company": "阿里淘天",
@@ -19002,7 +19648,8 @@
       ],
       "count": 5,
       "uniCollabCount": 3,
-      "hkCollabCount": 0
+      "hkCollabCount": 0,
+      "paperCount": 5
     },
     "baidu": {
       "company": "百度",
@@ -19608,7 +20255,8 @@
       ],
       "count": 10,
       "uniCollabCount": 1,
-      "hkCollabCount": 1
+      "hkCollabCount": 1,
+      "paperCount": 10
     },
     "xiaomi": {
       "company": "小米",
@@ -19889,7 +20537,8 @@
       ],
       "count": 4,
       "uniCollabCount": 4,
-      "hkCollabCount": 0
+      "hkCollabCount": 1,
+      "paperCount": 4
     },
     "meta": {
       "company": "Meta AI",
@@ -20262,7 +20911,8 @@
       ],
       "count": 6,
       "uniCollabCount": 1,
-      "hkCollabCount": 0
+      "hkCollabCount": 0,
+      "paperCount": 6
     },
     "didi": {
       "company": "滴滴",
@@ -20343,7 +20993,8 @@
       ],
       "count": 1,
       "uniCollabCount": 1,
-      "hkCollabCount": 1
+      "hkCollabCount": 0,
+      "paperCount": 1
     },
     "huawei": {
       "company": "华为诺亚",
@@ -20415,7 +21066,8 @@
       ],
       "count": 1,
       "uniCollabCount": 0,
-      "hkCollabCount": 0
+      "hkCollabCount": 0,
+      "paperCount": 1
     }
   }
 }

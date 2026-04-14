@@ -394,7 +394,7 @@ NS = {
 
 
 def search_arxiv(query, max_results=30):
-    """Search arXiv API and return parsed entries"""
+    """Search arXiv API and return parsed entries (with retry on 429)"""
     params = urllib.parse.urlencode({
         "search_query": f"all:{query}",
         "start": 0,
@@ -403,67 +403,82 @@ def search_arxiv(query, max_results=30):
         "sortOrder": "descending"
     })
     url = f"{ARXIV_API}?{params}"
-    try:
-        req = urllib.request.Request(url, headers={"User-Agent": "AI-Research-Radar/2.0"})
-        with urllib.request.urlopen(req, timeout=30) as resp:
-            xml_data = resp.read()
-        root = ET.fromstring(xml_data)
-        entries = []
-        for entry in root.findall("atom:entry", NS):
-            title = entry.find("atom:title", NS).text.strip().replace("\n", " ")
-            full_summary = entry.find("atom:summary", NS).text.strip().replace("\n", " ")
-            summary = full_summary[:300]
-            published = entry.find("atom:published", NS).text.strip()
-            arxiv_id = entry.find("atom:id", NS).text.strip()
-            authors = [a.find("atom:name", NS).text for a in entry.findall("atom:author", NS)]
+    max_retries = 3
+    for attempt in range(max_retries + 1):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "AI-Research-Radar/2.0"})
+            with urllib.request.urlopen(req, timeout=60) as resp:
+                xml_data = resp.read()
+            root = ET.fromstring(xml_data)
+            entries = []
+            for entry in root.findall("atom:entry", NS):
+                title = entry.find("atom:title", NS).text.strip().replace("\n", " ")
+                full_summary = entry.find("atom:summary", NS).text.strip().replace("\n", " ")
+                summary = full_summary[:300]
+                published = entry.find("atom:published", NS).text.strip()
+                arxiv_id = entry.find("atom:id", NS).text.strip()
+                authors = [a.find("atom:name", NS).text for a in entry.findall("atom:author", NS)]
 
-            # Get author affiliations (arxiv namespace)
-            affiliations = []
-            for a in entry.findall("atom:author", NS):
-                for aff in a.findall("arxiv:affiliation", NS):
-                    if aff.text:
-                        affiliations.append(aff.text.strip())
+                # Get author affiliations (arxiv namespace)
+                affiliations = []
+                for a in entry.findall("atom:author", NS):
+                    for aff in a.findall("arxiv:affiliation", NS):
+                        if aff.text:
+                            affiliations.append(aff.text.strip())
 
-            categories = [c.get("term") for c in entry.findall("atom:category", NS)]
-            comment_el = entry.find("arxiv:comment", NS)
-            comment = comment_el.text.strip() if comment_el is not None and comment_el.text else ""
-            pdf_link = ""
-            for link in entry.findall("atom:link", NS):
-                if link.get("title") == "pdf":
-                    pdf_link = link.get("href", "")
+                categories = [c.get("term") for c in entry.findall("atom:category", NS)]
+                comment_el = entry.find("arxiv:comment", NS)
+                comment = comment_el.text.strip() if comment_el is not None and comment_el.text else ""
+                pdf_link = ""
+                for link in entry.findall("atom:link", NS):
+                    if link.get("title") == "pdf":
+                        pdf_link = link.get("href", "")
 
-            # === NEW: Detect universities ===
-            # Combine all text sources for university detection
-            detect_text = " ".join(affiliations) + " " + comment + " " + full_summary + " " + " ".join(authors)
-            all_unis, hk_unis = detect_universities(detect_text)
+                # === NEW: Detect universities ===
+                detect_text = " ".join(affiliations) + " " + comment + " " + full_summary + " " + " ".join(authors)
+                all_unis, hk_unis = detect_universities(detect_text)
 
-            # === NEW: Classify AI direction ===
-            directions = classify_direction(title, full_summary)
+                # === NEW: Classify AI direction ===
+                directions = classify_direction(title, full_summary)
 
-            entries.append({
-                "title": title,
-                "summary": summary,
-                "published": published,
-                "arxivId": arxiv_id.split("/abs/")[-1] if "/abs/" in arxiv_id else arxiv_id,
-                "arxivUrl": arxiv_id,
-                "pdfUrl": pdf_link,
-                "authors": authors[:8],
-                "authorCount": len(authors),
-                "affiliations": affiliations[:10],
-                "categories": categories[:3],
-                "comment": comment[:200],
-                "universities": all_unis,
-                "hkUniversities": hk_unis,
-                "hasUniCollab": len(all_unis) > 0,
-                "hasHKCollab": len(hk_unis) > 0,
-                "directions": directions,
-                "collabConfidence": "confirmed" if affiliations else ("mentioned" if all_unis else "none"),
-                "pdfVerified": False,
-            })
-        return entries
-    except Exception as e:
-        print(f"  Error: {e}", file=sys.stderr)
-        return []
+                entries.append({
+                    "title": title,
+                    "summary": summary,
+                    "published": published,
+                    "arxivId": arxiv_id.split("/abs/")[-1] if "/abs/" in arxiv_id else arxiv_id,
+                    "arxivUrl": arxiv_id,
+                    "pdfUrl": pdf_link,
+                    "authors": authors[:8],
+                    "authorCount": len(authors),
+                    "affiliations": affiliations[:10],
+                    "categories": categories[:3],
+                    "comment": comment[:200],
+                    "universities": all_unis,
+                    "hkUniversities": hk_unis,
+                    "hasUniCollab": len(all_unis) > 0,
+                    "hasHKCollab": len(hk_unis) > 0,
+                    "directions": directions,
+                    "collabConfidence": "confirmed" if affiliations else ("mentioned" if all_unis else "none"),
+                    "pdfVerified": False,
+                })
+            return entries
+        except urllib.error.HTTPError as e:
+            if e.code == 429 and attempt < max_retries:
+                wait = 30 * (attempt + 1)
+                print(f"  429 rate-limited, waiting {wait}s (retry {attempt+1}/{max_retries})...", file=sys.stderr)
+                time.sleep(wait)
+                continue
+            print(f"  Error: {e}", file=sys.stderr)
+            return []
+        except Exception as e:
+            if attempt < max_retries:
+                wait = 15 * (attempt + 1)
+                print(f"  Error: {e}, waiting {wait}s (retry {attempt+1}/{max_retries})...", file=sys.stderr)
+                time.sleep(wait)
+                continue
+            print(f"  Error: {e}", file=sys.stderr)
+            return []
+    return []
 
 
 def filter_by_date(entries, since_date):
@@ -517,7 +532,7 @@ def main():
 
         for keyword in company_info["keywords"]:
             entries = search_arxiv(keyword, max_results=20)
-            time.sleep(8)
+            time.sleep(15)
             entries = filter_by_date(entries, since)
             company_papers.extend(entries)
             print(f"  {keyword}: {len(entries)} papers")

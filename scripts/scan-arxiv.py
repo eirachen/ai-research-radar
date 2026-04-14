@@ -384,6 +384,11 @@ COMPANY_QUERIES = {
         "keywords": ['"MiniMax"', '"Hailuo"'],
         "speech_only": True
     },
+    "iflytek": {
+        "name": "科大讯飞", "icon": "🗣️",
+        "keywords": ['"iFLYTEK"', '"IFLYTEK"', '"Xunfei"'],
+        "speech_only": True
+    },
 }
 
 ARXIV_API = "https://export.arxiv.org/api/query"

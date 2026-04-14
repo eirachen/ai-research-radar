@@ -2087,6 +2087,10 @@ async function loadTalentNotes() {
 
 function getTalentNotesForPaper(authorNames) {
   var matched = [];
+  // 防御性：确保 authorNames 是数组
+  if (!authorNames) return matched;
+  if (typeof authorNames === 'string') authorNames = authorNames.split(',').map(function(s){return s.trim()}).filter(Boolean);
+  if (!Array.isArray(authorNames)) return matched;
   for (var i = 0; i < authorNames.length; i++) {
     var name = authorNames[i];
     // Try exact match
@@ -2386,9 +2390,9 @@ function renderArxivList() {
     if (p.hasHKCollab && confidence === 'confirmed') {
       cardClass += ' has-hk';
       uniBadge = '<span class="uni-badge hk-badge">🇭🇰 港校合作 ✓</span>';
-      uniDetail = '<div class="uni-list hk-uni-list">🏫 ' + p.hkUniversities.join(', ') + '</div>';
-      if (p.universities && p.universities.length > p.hkUniversities.length) {
-        var others = p.universities.filter(function(u) { return p.hkUniversities.indexOf(u) === -1; });
+      uniDetail = '<div class="uni-list hk-uni-list">🏫 ' + (p.hkUniversities || []).join(', ') + '</div>';
+      if (p.universities && p.universities.length > (p.hkUniversities || []).length) {
+        var others = p.universities.filter(function(u) { return (p.hkUniversities || []).indexOf(u) === -1; });
         if (others.length) uniDetail += '<div class="uni-list">+ ' + others.join(', ') + '</div>';
       }
     } else if (p.hasUniCollab && confidence === 'confirmed') {

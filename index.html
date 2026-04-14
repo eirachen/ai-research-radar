@@ -2013,7 +2013,7 @@ function buildTalentPaperMap() {
   Object.entries(arxivData.companies).forEach(function(e) {
     var companyId = e[0], companyData = e[1];
     companyData.papers.forEach(function(p) {
-      var authorStr = p.authors.join(' ').toLowerCase();
+      var authorStr = (Array.isArray(p.authors) ? p.authors : (typeof p.authors === 'string' ? p.authors.split(',') : [])).join(' ').toLowerCase();
       talentKeys.forEach(function(key) {
         // Match by key (English name) in author list
         var keyLower = key.toLowerCase();
@@ -2353,11 +2353,11 @@ function renderArxivList() {
     papers = papers.filter(function(p) {
       var searchable = [
         p.title, p.summary, p._company,
-        p.authors.join(' '),
+        (Array.isArray(p.authors) ? p.authors : []).join(' '),
         (p.universities || []).join(' '),
         (p.hkUniversities || []).join(' '),
         (p.directions || []).map(function(d) { return d.label; }).join(' '),
-        p.categories.join(' '),
+        (Array.isArray(p.categories) ? p.categories : []).join(' '),
         p.comment || ''
       ].join(' ').toLowerCase();
       return terms.every(function(t) { return searchable.indexOf(t) >= 0; });
@@ -2373,9 +2373,9 @@ function renderArxivList() {
   if (!papers.length) { list.innerHTML = '<div class="no-results">该公司暂无论文</div>'; return; }
   list.innerHTML = papers.slice(0, 50).map(function(p) {
     var date = p.published ? new Date(p.published).toLocaleDateString('zh-CN') : '';
-    var authors = p.authors.join(', ') + (p.authorCount > 8 ? ' 等' + p.authorCount + '人' : '');
+    var authors = (Array.isArray(p.authors) ? p.authors : (typeof p.authors === 'string' ? p.authors.split(',') : [])).join(', ') + (p.authorCount > 8 ? ' 等' + p.authorCount + '人' : '');
     var venue = p.comment ? (p.comment.match(/(AAAI|ICLR|ICML|NeurIPS|CVPR|ICCV|ECCV|ACL|EMNLP)\s*\d{4}/i) || [null])[0] : null;
-    var cats = p.categories.map(function(c) { return '<span class="arxiv-tag">' + c + '</span>'; }).join('');
+    var cats = (Array.isArray(p.categories) ? p.categories : []).map(function(c) { return '<span class="arxiv-tag">' + c + '</span>'; }).join('');
     // Direction tags
     var dirTags = (p.directions || []).map(function(d) { return '<span class="arxiv-tag arxiv-dir-tag" style="background:' + d.color + '22;color:' + d.color + '">' + d.label + '</span>'; }).join('');
     // University collab badges

@@ -3793,7 +3793,7 @@ function buildNetworkData() {
             url: p.arxivUrl,
             pdfUrl: p.pdfUrl || '',
             date: p.published ? p.published.slice(0,10) : '',
-            authors: p.authors.slice(0,5).join(', ') + (p.authorCount > 5 ? ' 等' : '')
+            authors: (Array.isArray(p.authors) ? p.authors : (typeof p.authors === 'string' ? p.authors.split(',') : [])).slice(0,5).join(', ') + (p.authorCount > 5 ? ' 等' : '')
           });
           dirs.forEach(function(d) {
             if (edgeMap[edgeKey].directions.indexOf(d) === -1) edgeMap[edgeKey].directions.push(d);

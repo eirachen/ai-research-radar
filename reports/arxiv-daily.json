@@ -705,7 +705,15 @@
         },
         {
           "title": "Long-Horizon Streaming Video Generation via Hybrid Attention with Decoupled Distribution",
-          "authors": "Ruibin Li, Tao Yang, Fangzhou Ai, Tianhe Wu, Shilei Wen, Bingyue Peng, Lei Zhang",
+          "authors": [
+            "Ruibin Li",
+            "Tao Yang",
+            "Fangzhou Ai",
+            "Tianhe Wu",
+            "Shilei Wen",
+            "Bingyue Peng",
+            "Lei Zhang"
+          ],
           "summary": "We present StreamFlow, a novel streaming video generation framework that enables long-horizon video synthesis with consistent quality through hybrid attention mechanisms.",
           "published": "2026-04-11T17:59:00Z",
           "arxivUrl": "http://arxiv.org/abs/2604.10103v1",
@@ -723,7 +731,8 @@
           ],
           "hasHKCollab": true,
           "directions": [],
-          "deepxivEnhanced": true
+          "deepxivEnhanced": true,
+          "authorCount": 7
         }
       ],
       "count": 12,

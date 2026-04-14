@@ -842,7 +842,7 @@
         <div class="nav-card-icon">🎓</div>
         <div class="nav-card-title">人才追踪</div>
         <div class="nav-card-desc">在读博士生追踪：个人主页、导师、实验室、预计毕业时间</div>
-        <div class="nav-card-badge" id="talentBadge">5 位追踪中</div>
+        <div class="nav-card-badge" id="talentBadge">加载中…</div>
       </div>
       <div class="nav-card" onclick="navigateTo('radar')">
         <div class="nav-card-icon">📊</div>
@@ -1386,7 +1386,7 @@ function renderStats() {
 
 // ── 领域快速入口数据更新 ──
 function updateDomainQuickNav() {
-  if (!window.arxivData || !arxivData.companies) return;
+  if (!arxivData || !arxivData.companies) return;
   var counts = { 'LLM': 0, 'Multimodal': 0, 'Infra': 0, 'Speech': 0 };
   Object.values(arxivData.companies).forEach(function(c) {
     c.papers.forEach(function(p) {
@@ -4187,22 +4187,24 @@ async function loadReports() {
   }
 
   renderStats();
-  renderPlatforms();
-  renderFilterBar();
-  renderPapers();
-  renderReports();
-  renderRadar();
-  renderTalent();
-  renderIntelDatePicker();
-  renderReportDatePicker();
-  // Update home badges
-  var talentCount = Object.keys(talentNotes).length;
-  if (ALL_PAPERS.length) document.getElementById('intelBadge').textContent = ALL_PAPERS.length + ' 篇深度分析';
-  if (REPORTS_DATA.length) document.getElementById('reportBadge').textContent = REPORTS_DATA.length + ' 份日报';
-  if (talentCount) document.getElementById('talentBadge').textContent = talentCount + ' 位追踪中';
+  try { renderPlatforms(); } catch(e) { console.warn('renderPlatforms failed:', e); }
+  try { renderFilterBar(); } catch(e) { console.warn('renderFilterBar failed:', e); }
+  try { renderPapers(); } catch(e) { console.warn('renderPapers failed:', e); }
+  try { renderReports(); } catch(e) { console.warn('renderReports failed:', e); }
+  try { renderRadar(); } catch(e) { console.warn('renderRadar failed:', e); }
+  try { renderTalent(); } catch(e) { console.warn('renderTalent failed:', e); }
+  try { renderIntelDatePicker(); } catch(e) { console.warn('renderIntelDatePicker failed:', e); }
+  try { renderReportDatePicker(); } catch(e) { console.warn('renderReportDatePicker failed:', e); }
+  // Update home badges — 无论上面渲染是否成功都要执行
+  try {
+    var talentCount = Object.keys(talentNotes).length;
+    if (ALL_PAPERS.length) document.getElementById('intelBadge').textContent = ALL_PAPERS.length + ' 篇深度分析';
+    if (REPORTS_DATA.length) document.getElementById('reportBadge').textContent = REPORTS_DATA.length + ' 份日报';
+    if (talentCount) document.getElementById('talentBadge').textContent = talentCount + ' 位追踪中';
+  } catch(e) { console.warn('badge update failed:', e); }
 }
 
-loadTalentNotes().then(function() { loadArxiv().then(function() { buildTalentPaperMap(); renderTalentExistingList(); renderTalent(); renderStats(); renderArxivDatePicker(); try { renderNetwork(); } catch(e) { console.warn('renderNetwork failed:', e); } try { renderChinaMap(); } catch(e) { console.warn('renderChinaMap failed:', e); } updateDomainBadges(); /* 如果用户已经在某个 domain 页面，重新渲染 */ var cp = document.querySelector('.page.active'); if (cp && cp.id && cp.id.indexOf('page-domain-') === 0) { var dk = cp.id.replace('page-domain-',''); renderDomainPage(dk); } }); });
+loadTalentNotes().then(function() { loadArxiv().then(function() { buildTalentPaperMap(); renderTalentExistingList(); renderTalent(); renderStats(); renderArxivDatePicker(); try { renderNetwork(); } catch(e) { console.warn('renderNetwork failed:', e); } try { renderChinaMap(); } catch(e) { console.warn('renderChinaMap failed:', e); } updateDomainBadges(); try { var tc = Object.keys(talentNotes).length; if (tc) document.getElementById('talentBadge').textContent = tc + ' 位追踪中'; } catch(e){} /* 如果用户已经在某个 domain 页面，重新渲染 */ var cp = document.querySelector('.page.active'); if (cp && cp.id && cp.id.indexOf('page-domain-') === 0) { var dk = cp.id.replace('page-domain-',''); renderDomainPage(dk); } }); });
 loadReports();
 loadFeeds();
 </script>

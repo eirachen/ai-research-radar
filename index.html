@@ -2241,31 +2241,28 @@ async function loadArxiv() {
       });
       arxivData._confirmedCount = confirmedCount;
       arxivData._mentionedCount = mentionedCount;
-      var meta = arxivData.totalPapers + ' 篇';
-      if (confirmedCount) meta += ' · ✅' + confirmedCount + '篇校企合作';
-      if (mentionedCount) meta += ' · 🔍' + mentionedCount + '篇识别到高校';
-      if (arxivData.totalHKCollab) meta += ' · 🇭🇰' + arxivData.totalHKCollab + '篇港校合作';
-      document.getElementById('arxivMeta').textContent = meta;
-      renderArxivTabs();
-      renderArxivList();
-      // Update home badge
-      var badgeText = arxivData.totalPapers + ' 篇论文';
-      if (confirmedCount) badgeText += ' · ' + confirmedCount + ' 校企合作';
-      if (mentionedCount) badgeText += ' · ' + mentionedCount + ' 识别到高校';
-      document.getElementById('arxivBadge').textContent = badgeText;
-      // Update home date range
-      var allDates = [];
-      Object.values(arxivData.companies || {}).forEach(function(c) {
-        (c.papers || []).forEach(function(p) {
-          if (p.published) allDates.push(p.published.slice(0, 10));
+
+      // ── 先更新首页 badge（这些不会出错）──
+      try {
+        var badgeText = arxivData.totalPapers + ' 篇论文';
+        if (confirmedCount) badgeText += ' · ' + confirmedCount + ' 校企合作';
+        if (mentionedCount) badgeText += ' · ' + mentionedCount + ' 识别到高校';
+        document.getElementById('arxivBadge').textContent = badgeText;
+      } catch(e) { console.warn('arxivBadge update failed:', e); }
+
+      try {
+        var allDates = [];
+        Object.values(arxivData.companies || {}).forEach(function(c) {
+          (c.papers || []).forEach(function(p) {
+            if (p.published) allDates.push(p.published.slice(0, 10));
+          });
         });
-      });
-      if (allDates.length) {
-        allDates.sort();
-        try { document.getElementById('dataDateRange').textContent = allDates[0] + ' ~ ' + allDates[allDates.length - 1]; } catch(e){}
-      }
+        if (allDates.length) {
+          allDates.sort();
+          document.getElementById('dataDateRange').textContent = allDates[0] + ' ~ ' + allDates[allDates.length - 1];
+        }
+      } catch(e) {}
       try { document.getElementById('dataPaperCount').textContent = arxivData.totalPapers; } catch(e){}
-      // Show last update time from generatedAt
       try {
         var gen = (arxivData.generatedAt || '').replace(/Z$/, '');
         if (gen) {
@@ -2273,11 +2270,25 @@ async function loadArxiv() {
           document.getElementById('dataLastUpdate').textContent = d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0') + ' ' + String(d.getHours()).padStart(2,'0') + ':' + String(d.getMinutes()).padStart(2,'0');
         }
       } catch(e){}
+
+      // ── 再更新 arXiv 页面内容（单独 try/catch，不影响 badge） ──
+      try {
+        var meta = arxivData.totalPapers + ' 篇';
+        if (confirmedCount) meta += ' · ✅' + confirmedCount + '篇校企合作';
+        if (mentionedCount) meta += ' · 🔍' + mentionedCount + '篇识别到高校';
+        if (arxivData.totalHKCollab) meta += ' · 🇭🇰' + arxivData.totalHKCollab + '篇港校合作';
+        document.getElementById('arxivMeta').textContent = meta;
+        renderArxivTabs();
+        renderArxivList();
+      } catch(e) { console.warn('renderArxiv failed:', e); }
+
     } else {
       document.getElementById('arxivList').innerHTML = '<div class="no-results">暂无 arXiv 数据</div>';
     }
   } catch(e) {
-    document.getElementById('arxivList').innerHTML = '<div class="no-results">加载失败</div>';
+    console.error('loadArxiv failed:', e);
+    try { document.getElementById('arxivBadge').textContent = '加载失败'; } catch(e2) {}
+    document.getElementById('arxivList').innerHTML = '<div class="no-results">加载失败: ' + e.message + '</div>';
   }
 }
 
@@ -4191,7 +4202,7 @@ async function loadReports() {
   if (talentCount) document.getElementById('talentBadge').textContent = talentCount + ' 位追踪中';
 }
 
-loadTalentNotes().then(function() { loadArxiv().then(function() { buildTalentPaperMap(); renderTalentExistingList(); renderTalent(); renderStats(); renderArxivDatePicker(); renderNetwork(); updateDomainBadges(); /* 如果用户已经在某个 domain 页面，重新渲染 */ var cp = document.querySelector('.page.active'); if (cp && cp.id && cp.id.indexOf('page-domain-') === 0) { var dk = cp.id.replace('page-domain-',''); renderDomainPage(dk); } }); });
+loadTalentNotes().then(function() { loadArxiv().then(function() { buildTalentPaperMap(); renderTalentExistingList(); renderTalent(); renderStats(); renderArxivDatePicker(); try { renderNetwork(); } catch(e) { console.warn('renderNetwork failed:', e); } try { renderChinaMap(); } catch(e) { console.warn('renderChinaMap failed:', e); } updateDomainBadges(); /* 如果用户已经在某个 domain 页面，重新渲染 */ var cp = document.querySelector('.page.active'); if (cp && cp.id && cp.id.indexOf('page-domain-') === 0) { var dk = cp.id.replace('page-domain-',''); renderDomainPage(dk); } }); });
 loadReports();
 loadFeeds();
 </script>

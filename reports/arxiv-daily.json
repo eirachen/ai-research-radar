@@ -17808,7 +17808,7 @@
               "color": "#eab308"
             }
           ],
-          "collabConfidence": "confirmed",
+          "collabConfidence": "mentioned",
           "pdfVerified": true,
           "pdfCompanies": [
             "nvidia"

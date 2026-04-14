@@ -11603,17 +11603,35 @@
     },
     "Lei Zhang": {
       "name": "Lei Zhang",
-      "university": "待确认",
-      "isHK": false,
+      "university": "The Hong Kong Polytechnic University (PolyU)",
+      "isHK": true,
       "status": "待确认",
       "advisor": "待确认",
       "lab": "",
-      "homepage": "",
+      "homepage": "https://www4.comp.polyu.edu.hk/~cslzhang/",
       "scholar": "",
       "direction": "LLM / 强化学习 / 安全",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（Anthropic）",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-08",
+      "chineseName": "张磊",
+      "role": "Chair Professor of Computer Vision and Image Analysis",
+      "googleScholar": "https://scholar.google.com/citations?user=tAK5l1IAAAAJ",
+      "contactInfo": {
+        "email": "john.zhang@polyu.edu.hk",
+        "phone": "+852 2766 7355",
+        "office": "PQ816"
+      },
+      "orcid": "http://orcid.org/0000-0002-2078-4215",
+      "notes": "IEEE Fellow, 128k+ citations. PolyU Chair Professor。Long-Horizon Streaming Video (字节合作) 通讯作者。",
+      "source": "PolyU official page + Google Scholar",
+      "paperIds": [
+        "2604.10103v1"
+      ],
+      "relatedCompanies": [
+        "字节Seed"
+      ],
+      "verified": true
     },
     "Tony Mason": {
       "name": "Tony Mason",
@@ -14556,6 +14574,42 @@
       "gradYear": "待确认",
       "statusNote": "InsEdit论文作者，确认在Qifeng Chen实验室名单中。",
       "editedAt": "2026-04-14"
+    },
+    "Ruibin Li": {
+      "name": "Ruibin Li",
+      "chineseName": "",
+      "university": "The Hong Kong Polytechnic University (PolyU)",
+      "isHK": true,
+      "role": "PostDoc, Lei Zhang Group",
+      "homepage": "https://github.com/leeruibin",
+      "googleScholar": "https://scholar.google.com/citations?user=FMNs2K0AAAAJ",
+      "notes": "PolyU PostDoc, Lei Zhang 组。438 citations, h-11。生成模型/图像编辑/视频生成。CVPR 2025, ECCV 2024, ICLR 2026。Long-Horizon 第一作者。",
+      "source": "Google Scholar (verified connect.polyu.hk) + ResearchGate",
+      "paperIds": [
+        "2604.10103v1"
+      ],
+      "relatedCompanies": [
+        "字节Seed"
+      ],
+      "verified": true
+    },
+    "Tianhe Wu": {
+      "name": "Tianhe Wu",
+      "chineseName": "",
+      "university": "City University of Hong Kong (CityU)",
+      "isHK": true,
+      "role": "PhD student (2025-present, supervisor: Kede Ma). Also at Alibaba Qwen Team.",
+      "homepage": "https://tianhewu.github.io/tianhe-page/",
+      "googleScholar": "https://scholar.google.com/citations?user=QW1JtysAAAAJ",
+      "notes": "CityU PhD (Kede Ma 组), 同时在阿里 Qwen Team。1380 citations。前 PolyU (Lei Zhang 组)。MANIQA 832 citations (NTIRE Winner), NeurIPS 2023/2025 Spotlight。Long-Horizon 论文 PDF 写 PolyU。",
+      "source": "Google Scholar (verified my.cityu.edu.hk) + GitHub",
+      "paperIds": [
+        "2604.10103v1"
+      ],
+      "relatedCompanies": [
+        "字节Seed"
+      ],
+      "verified": true
     }
   },
   "lastUpdated": "2026-04-13T14:43:10"

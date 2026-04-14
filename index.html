@@ -3200,11 +3200,10 @@ function renderDomainPage(domainKey) {
       // 展示高校端人才（从 talentNotes 匹配）
       var pAuthors = Array.isArray(p.authors) ? p.authors : (typeof p.authors === 'string' ? p.authors.split(',').map(function(s){return s.trim()}) : []);
       var talentMatches = [];
-      if (talentNotes && talentNotes.notes) {
+      if (talentNotes && typeof talentNotes === 'object') {
         pAuthors.forEach(function(aName) {
-          var t = talentNotes.notes[aName];
+          var t = talentNotes[aName];
           if (t && t.university && t.university !== '待确认') {
-            // 只显示高校端（排除企业端标记的人）
             if (!(t.university || '').includes('企业端')) {
               talentMatches.push(t);
             }

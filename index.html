@@ -3190,15 +3190,49 @@ function renderDomainPage(domainKey) {
     confirmedPapers.forEach(function(item) {
       var p = item.paper;
       var unis = (p.universities || []).join(', ');
-      html += '<div style="display:flex;align-items:flex-start;gap:0.5rem;padding:0.5rem 0.7rem;margin-bottom:0.3rem;background:var(--surface);border:1px solid var(--border);border-radius:8px">';
-      html += '<div style="flex:1;min-width:0">';
+      html += '<div style="padding:0.5rem 0.7rem;margin-bottom:0.5rem;background:var(--surface);border:1px solid var(--border);border-radius:8px">';
       html += '<div style="font-size:0.78rem;font-weight:600;color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap">' +
         '<a href="' + p.arxivUrl + '" target="_blank" style="color:var(--accent2);text-decoration:none">' + (p.title || '').substring(0, 65) + (p.title && p.title.length > 65 ? '…' : '') + ' ↗</a></div>';
       html += '<div style="font-size:0.65rem;color:var(--text2);margin-top:0.15rem">' +
         '<span style="color:' + cfg.color + '">' + item.companyIcon + ' ' + item.company + '</span>' +
         (unis ? ' × <span style="color:#4ade80">' + unis + '</span>' : '') +
         ' · ' + (p.published || '').substring(0, 10) + '</div>';
-      html += '</div></div>';
+      // 展示高校端人才（从 talentNotes 匹配）
+      var pAuthors = Array.isArray(p.authors) ? p.authors : (typeof p.authors === 'string' ? p.authors.split(',').map(function(s){return s.trim()}) : []);
+      var talentMatches = [];
+      if (talentNotes && talentNotes.notes) {
+        pAuthors.forEach(function(aName) {
+          var t = talentNotes.notes[aName];
+          if (t && t.university && t.university !== '待确认') {
+            // 只显示高校端（排除企业端标记的人）
+            if (!(t.university || '').includes('企业端')) {
+              talentMatches.push(t);
+            }
+          }
+        });
+      }
+      if (talentMatches.length > 0) {
+        html += '<div style="margin-top:0.4rem;padding-top:0.35rem;border-top:1px dashed var(--border)">';
+        html += '<div style="font-size:0.6rem;color:var(--text2);margin-bottom:0.3rem">🎓 高校端作者：</div>';
+        html += '<div style="display:flex;flex-wrap:wrap;gap:0.3rem">';
+        talentMatches.forEach(function(t) {
+          var displayName = t.name || '';
+          var uni = (t.university || '').replace(/[（(].+?[）)]/, '').substring(0, 20);
+          var status = t.status || '';
+          var links = '';
+          if (t.homepage) links += '<a href="' + t.homepage + '" target="_blank" style="color:#60a5fa;text-decoration:none;margin-left:0.2rem" title="个人主页">🏠</a>';
+          if (t.scholar) links += '<a href="' + t.scholar + '" target="_blank" style="color:#34d399;text-decoration:none;margin-left:0.2rem" title="Google Scholar">📚</a>';
+          if (t.contactInfo && t.contactInfo.email) links += '<a href="mailto:' + t.contactInfo.email + '" style="color:#fbbf24;text-decoration:none;margin-left:0.2rem" title="' + t.contactInfo.email + '">✉️</a>';
+          html += '<span style="display:inline-flex;align-items:center;gap:0.15rem;padding:0.15rem 0.45rem;background:rgba(96,165,250,0.1);border:1px solid rgba(96,165,250,0.2);border-radius:12px;font-size:0.62rem;color:var(--text)">';
+          html += '<span style="font-weight:600">' + displayName + '</span>';
+          if (uni) html += '<span style="color:var(--text2);font-size:0.56rem">' + uni + '</span>';
+          if (status) html += '<span style="color:var(--text2);font-size:0.56rem">' + status + '</span>';
+          html += links;
+          html += '</span>';
+        });
+        html += '</div></div>';
+      }
+      html += '</div>';
     });
   }
 

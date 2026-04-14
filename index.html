@@ -3191,10 +3191,15 @@ function renderDomainPage(domainKey) {
   // 自动检测到的 confirmed 校企合作
   if (confirmedPapers.length > 0) {
     html += '<div style="font-size:0.72rem;color:var(--text2);margin-bottom:0.5rem">📄 自动识别（PDF 验证 confirmed）：</div>';
-    confirmedPapers.forEach(function(item) {
+    var collabPageSize = 5;
+    var collabTotalPages = Math.ceil(confirmedPapers.length / collabPageSize);
+    html += '<div id="domainCollabList-' + domainKey + '">';
+    confirmedPapers.forEach(function(item, idx) {
+      var pageIdx = Math.floor(idx / collabPageSize);
+      var display = pageIdx === 0 ? '' : 'display:none;';
       var p = item.paper;
       var unis = (p.universities || []).join(', ');
-      html += '<div style="padding:0.5rem 0.7rem;margin-bottom:0.5rem;background:var(--surface);border:1px solid var(--border);border-radius:8px">';
+      html += '<div class="domain-collab-item" data-page="' + pageIdx + '" style="' + display + 'padding:0.5rem 0.7rem;margin-bottom:0.5rem;background:var(--surface);border:1px solid var(--border);border-radius:8px">';
       html += '<div style="font-size:0.78rem;font-weight:600;color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap">' +
         '<a href="' + p.arxivUrl + '" target="_blank" style="color:var(--accent2);text-decoration:none">' + (p.title || '').substring(0, 65) + (p.title && p.title.length > 65 ? '…' : '') + ' ↗</a></div>';
       html += '<div style="font-size:0.65rem;color:var(--text2);margin-top:0.15rem">' +
@@ -3202,18 +3207,7 @@ function renderDomainPage(domainKey) {
         (unis ? ' × <span style="color:#4ade80">' + unis + '</span>' : '') +
         ' · ' + (p.published || '').substring(0, 10) + '</div>';
       // 展示高校端人才（从 talentNotes 匹配）
-      var pAuthors = Array.isArray(p.authors) ? p.authors : (typeof p.authors === 'string' ? p.authors.split(',').map(function(s){return s.trim()}) : []);
-      var talentMatches = [];
-      if (talentNotes && typeof talentNotes === 'object') {
-        pAuthors.forEach(function(aName) {
-          var t = talentNotes[aName];
-          if (t && t.university && t.university !== '待确认') {
-            if (!(t.university || '').includes('企业端')) {
-              talentMatches.push(t);
-            }
-          }
-        });
-      }
+      var talentMatches = getTalentNotesForPaper(p.authors);
       if (talentMatches.length > 0) {
         html += '<div style="margin-top:0.4rem;padding-top:0.35rem;border-top:1px dashed var(--border)">';
         html += '<div style="font-size:0.6rem;color:var(--text2);margin-bottom:0.3rem">🎓 高校端作者：</div>';
@@ -3237,6 +3231,15 @@ function renderDomainPage(domainKey) {
       }
       html += '</div>';
     });
+    html += '</div>';
+    // 翻页控件
+    if (collabTotalPages > 1) {
+      html += '<div style="display:flex;align-items:center;justify-content:center;gap:0.5rem;margin-top:0.5rem" id="domainCollabPager-' + domainKey + '">';
+      html += '<button onclick="domainPageNav(\'' + domainKey + '\',\'collab\',-1)" style="font-size:0.7rem;padding:0.25rem 0.6rem;border:1px solid var(--border);border-radius:5px;background:var(--surface2);color:var(--text2);cursor:pointer">‹ 上一页</button>';
+      html += '<span style="font-size:0.68rem;color:var(--text2)" id="domainCollabPageInfo-' + domainKey + '">1 / ' + collabTotalPages + '</span>';
+      html += '<button onclick="domainPageNav(\'' + domainKey + '\',\'collab\',1)" style="font-size:0.7rem;padding:0.25rem 0.6rem;border:1px solid var(--border);border-radius:5px;background:var(--surface2);color:var(--text2);cursor:pointer">下一页 ›</button>';
+      html += '</div>';
+    }
   }
 
   // 手动添加的合作记录
@@ -3281,12 +3284,17 @@ function renderDomainPage(domainKey) {
     });
     html += '</div>';
 
-    // 论文列表
+    // 论文列表（翻页，每页5篇）
+    var paperPageSize = 5;
+    var paperTotalPages = Math.ceil(papers.length / paperPageSize);
+    html += '<div id="domainPaperList-' + domainKey + '">';
     papers.forEach(function(item, idx) {
+      var pageIdx = Math.floor(idx / paperPageSize);
+      var display = pageIdx === 0 ? '' : 'display:none;';
       var p = item.paper;
       var isConfirmed = p.collabConfidence === 'confirmed';
       var borderColor = isConfirmed ? 'rgba(34,197,94,0.3)' : 'var(--border)';
-      html += '<div style="padding:0.6rem 0.8rem;margin-bottom:0.4rem;background:var(--surface);border:1px solid ' + borderColor + ';border-radius:8px">';
+      html += '<div class="domain-paper-item" data-page="' + pageIdx + '" style="' + display + 'padding:0.6rem 0.8rem;margin-bottom:0.4rem;background:var(--surface);border:1px solid ' + borderColor + ';border-radius:8px">';
       html += '<div style="display:flex;align-items:flex-start;gap:0.5rem">';
       html += '<div style="flex:1;min-width:0">';
       html += '<div style="font-size:0.8rem;font-weight:600;color:var(--text)">' +
@@ -3336,6 +3344,15 @@ function renderDomainPage(domainKey) {
       html += '<a href="' + (p.pdfUrl || p.arxivUrl) + '" target="_blank" style="flex-shrink:0;font-size:0.65rem;padding:0.2rem 0.4rem;border:1px solid var(--border);border-radius:5px;color:var(--text2);text-decoration:none">PDF ↗</a>';
       html += '</div></div>';
     });
+    html += '</div>';
+    // 行业论文翻页控件
+    if (paperTotalPages > 1) {
+      html += '<div style="display:flex;align-items:center;justify-content:center;gap:0.5rem;margin-top:0.5rem">';
+      html += '<button onclick="domainPageNav(\'' + domainKey + '\',\'paper\',-1)" style="font-size:0.7rem;padding:0.25rem 0.6rem;border:1px solid var(--border);border-radius:5px;background:var(--surface2);color:var(--text2);cursor:pointer">‹ 上一页</button>';
+      html += '<span style="font-size:0.68rem;color:var(--text2)" id="domainPaperPageInfo-' + domainKey + '">1 / ' + paperTotalPages + '</span>';
+      html += '<button onclick="domainPageNav(\'' + domainKey + '\',\'paper\',1)" style="font-size:0.7rem;padding:0.25rem 0.6rem;border:1px solid var(--border);border-radius:5px;background:var(--surface2);color:var(--text2);cursor:pointer">下一页 ›</button>';
+      html += '</div>';
+    }
   } else {
     html += '<div style="text-align:center;padding:2rem;color:var(--text2);font-size:0.8rem">暂无该领域的论文</div>';
   }
@@ -3344,6 +3361,30 @@ function renderDomainPage(domainKey) {
 }
 
 // 新增校企合作记录
+// 领域页翻页状态
+var domainPageState = {};
+function domainPageNav(domainKey, section, delta) {
+  var stateKey = domainKey + '-' + section;
+  if (!domainPageState[stateKey]) domainPageState[stateKey] = 0;
+  var listId = section === 'collab' ? 'domainCollabList-' + domainKey : 'domainPaperList-' + domainKey;
+  var infoId = section === 'collab' ? 'domainCollabPageInfo-' + domainKey : 'domainPaperPageInfo-' + domainKey;
+  var itemClass = section === 'collab' ? 'domain-collab-item' : 'domain-paper-item';
+  var container = document.getElementById(listId);
+  if (!container) return;
+  var items = container.querySelectorAll('.' + itemClass);
+  var pageSize = 5;
+  var totalPages = Math.ceil(items.length / pageSize);
+  var newPage = domainPageState[stateKey] + delta;
+  if (newPage < 0) newPage = 0;
+  if (newPage >= totalPages) newPage = totalPages - 1;
+  domainPageState[stateKey] = newPage;
+  items.forEach(function(el) {
+    el.style.display = parseInt(el.getAttribute('data-page')) === newPage ? '' : 'none';
+  });
+  var info = document.getElementById(infoId);
+  if (info) info.textContent = (newPage + 1) + ' / ' + totalPages;
+}
+
 function addDomainCollab(domainKey) {
   showCollabForm(domainKey, -1, { company: '', lab: '', project: '', detail: '' });
 }

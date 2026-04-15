@@ -7546,6 +7546,10 @@
       "direction": "NLP / LLM / 医疗AI",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（月之暗面）",
+      "wechatAdded": false,
+      "group": "professional",
+      "manuallyEdited": true,
+      "lastManualEdit": "2026-04-15",
       "editedAt": "2026-04-13T14:42:39",
       "contactInfo": {
         "emails": [
@@ -7561,9 +7565,7 @@
         "hasContactKeywords": true,
         "hasContact": true,
         "email": "wangbenyou@cuhk.edu.cn"
-      },
-      "verified": true,
-      "source": "CUHK-SZ faculty page (sds.cuhk.edu.cn) + Google Scholar"
+      }
     },
     "Juan Gabriel Kostelec": {
       "name": "Juan Gabriel Kostelec",
@@ -14811,15 +14813,22 @@
       "addedDate": "2026-04-14"
     },
     "Yanji He": {
-      "name": "Yanji He",
+      "name": "何言基",
       "university": "Hong Kong University of Science and Technology (Guangzhou)",
       "isHK": false,
       "status": "PhD student",
+      "advisor": "待确认",
+      "lab": "",
+      "homepage": "",
+      "scholar": "",
       "direction": "LLM / Decision Making / NLP",
-      "contactInfo": {
-        "email": "yhe720@connect.hkust-gz.edu.cn"
-      },
-      "paperSource": "IDEA (ACL 2026, arXiv:2604.12573)"
+      "gradYear": "待确认",
+      "statusNote": "邮箱：yhe720@connect.hkust-gz.edu.cn",
+      "wechatAdded": false,
+      "group": "student",
+      "manuallyEdited": true,
+      "lastManualEdit": "2026-04-15",
+      "editedAt": "2026-04-15"
     },
     "Yiwen Wu": {
       "name": "Yiwen Wu",

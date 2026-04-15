@@ -42,8 +42,14 @@ def main():
             added += 1
             print(f'  + NEW: {key}')
         else:
-            # 已存在：用本地的验证数据覆盖服务器（本地是权威来源）
             server_entry = merged[key]
+
+            # 🔴 如果服务器上用户手动编辑过，绝不覆盖！
+            if server_entry.get('manuallyEdited'):
+                print(f'  ⏭ SKIP (manually edited on server): {key}')
+                continue
+
+            # 未手动编辑：用本地的验证数据补充服务器空字段
             changed = False
             for field in ['scholar', 'homepage', 'advisor', 'lab', 'direction', 'statusNote', 'status', 'gradYear', 'name']:
                 local_val = local_entry.get(field, '')
@@ -63,6 +69,10 @@ def main():
             # contactInfo：本地有就覆盖
             if local_entry.get('contactInfo'):
                 server_entry['contactInfo'] = local_entry['contactInfo']
+                changed = True
+            # chineseName：同步
+            if local_entry.get('chineseName') and not server_entry.get('chineseName'):
+                server_entry['chineseName'] = local_entry['chineseName']
                 changed = True
             # editedAt：同步
             if local_entry.get('editedAt'):

@@ -14842,23 +14842,29 @@
       "name": "Jiaheng Wei",
       "university": "Hong Kong University of Science and Technology (Guangzhou)",
       "isHK": false,
-      "status": "Faculty (corresponding author)",
+      "status": "Assistant Professor, DSA Thrust",
       "direction": "LLM / Decision Making / NLP",
       "contactInfo": {
         "email": "jiahengwei@hkust-gz.edu.cn"
       },
-      "paperSource": "IDEA (ACL 2026, arXiv:2604.12573)"
+      "paperSource": "IDEA (ACL 2026, arXiv:2604.12573)",
+      "homepage": "https://sites.google.com/ucsc.edu/jiahengwei",
+      "scholar": "https://scholar.google.com/citations?user=gfB8UaIAAAAJ",
+      "chineseName": "魏嘉珩"
     },
     "Wei Wang": {
       "name": "Wei Wang",
       "university": "Hong Kong University of Science and Technology (Guangzhou) & HKUST",
       "isHK": false,
-      "status": "Faculty",
+      "status": "Professor, Associate Dean of Information Hub",
       "direction": "LLM / NLP",
       "contactInfo": {
         "email": "weiwcs@ust.hk"
       },
-      "paperSource": "IDEA (ACL 2026, arXiv:2604.12573)"
+      "paperSource": "IDEA (ACL 2026, arXiv:2604.12573)",
+      "homepage": "https://dbwangwei.github.io/",
+      "scholar": "https://scholar.google.com/citations?user=wLtu3FYAAAAJ",
+      "chineseName": "王威"
     },
     "Michael Hanna": {
       "name": "Michael Hanna",
@@ -14876,12 +14882,14 @@
       "name": "Zixiong Yu",
       "university": "Tsinghua University",
       "isHK": false,
-      "status": "PhD student (co-first author)",
+      "status": "PhD student, Dept of Mathematical Sciences",
       "direction": "Math Reasoning / LLM / Data Synthesis",
       "contactInfo": {
         "email": "yuzx19@tsinghua.org.cn"
       },
-      "paperSource": "MathAgent (arXiv:2604.11188)"
+      "paperSource": "MathAgent (arXiv:2604.11188)",
+      "chineseName": "於子雄",
+      "scholar": "https://scholar.google.com/citations?user=2VIYURwAAAAJ"
     },
     "Jun Rao": {
       "name": "Jun Rao",
@@ -14892,35 +14900,38 @@
       "contactInfo": {
         "email": "rao7jun@gmail.com"
       },
-      "paperSource": "MathAgent (arXiv:2604.11188)"
+      "paperSource": "MathAgent (arXiv:2604.11188)",
+      "scholar": "https://scholar.google.com/citations?user=gbhq6EoAAAAJ"
     },
     "Guhan Chen": {
       "name": "Guhan Chen",
       "university": "Tsinghua University",
       "isHK": false,
-      "status": "PhD student",
+      "status": "PhD student, Dept of Statistics and Data Science",
       "direction": "Math / LLM",
       "contactInfo": {
         "email": "chen-gh23@mails.tsinghua.edu.cn"
       },
-      "paperSource": "MathAgent (arXiv:2604.11188)"
+      "paperSource": "MathAgent (arXiv:2604.11188)",
+      "scholar": "https://scholar.google.com/citations?user=Vz3_454AAAAJ"
     },
     "Songtao Tian": {
       "name": "Songtao Tian",
       "university": "Tsinghua University",
       "isHK": false,
-      "status": "PhD student",
+      "status": "PhD student, Dept of Mathematical Sciences",
       "direction": "Math / LLM",
       "contactInfo": {
         "email": "tiansongtao.2020@tsinghua.org.cn"
       },
-      "paperSource": "MathAgent (arXiv:2604.11188)"
+      "paperSource": "MathAgent (arXiv:2604.11188)",
+      "scholar": "https://scholar.google.com/citations?user=SqdVztsAAAAJ"
     },
     "Bohan Li": {
       "name": "Bohan Li",
       "university": "Tsinghua University & Kyoto University",
       "isHK": false,
-      "status": "PhD student",
+      "status": "Postdoc (Kyoto University RIMS), PhD from Tsinghua",
       "direction": "Math / LLM",
       "contactInfo": {
         "email": "libh19@tsinghua.org.cn"

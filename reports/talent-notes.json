@@ -14804,6 +14804,128 @@
       "notes": "Man-Wai Mak 组在读博士",
       "addedBy": "speech-resources-p0",
       "addedDate": "2026-04-14"
+    },
+    "Yanji He": {
+      "name": "Yanji He",
+      "university": "Hong Kong University of Science and Technology (Guangzhou)",
+      "isHK": false,
+      "status": "PhD student",
+      "direction": "LLM / Decision Making / NLP",
+      "contactInfo": {
+        "email": "yhe720@connect.hkust-gz.edu.cn"
+      },
+      "paperSource": "IDEA (ACL 2026, arXiv:2604.12573)"
+    },
+    "Yiwen Wu": {
+      "name": "Yiwen Wu",
+      "university": "Hong Kong University of Science and Technology (Guangzhou)",
+      "isHK": false,
+      "status": "PhD student",
+      "direction": "LLM / NLP",
+      "contactInfo": {
+        "email": "ywu240@connect.hkust-gz.edu.cn"
+      },
+      "paperSource": "IDEA (ACL 2026, arXiv:2604.12573)"
+    },
+    "Bo Huang": {
+      "name": "Bo Huang",
+      "university": "Hong Kong University of Science and Technology",
+      "isHK": true,
+      "status": "PhD student",
+      "direction": "LLM / NLP",
+      "contactInfo": {
+        "email": "bhuangas@connect.ust.hk"
+      },
+      "paperSource": "IDEA (ACL 2026, arXiv:2604.12573)"
+    },
+    "Jiaheng Wei": {
+      "name": "Jiaheng Wei",
+      "university": "Hong Kong University of Science and Technology (Guangzhou)",
+      "isHK": false,
+      "status": "Faculty (corresponding author)",
+      "direction": "LLM / Decision Making / NLP",
+      "contactInfo": {
+        "email": "jiahengwei@hkust-gz.edu.cn"
+      },
+      "paperSource": "IDEA (ACL 2026, arXiv:2604.12573)"
+    },
+    "Wei Wang": {
+      "name": "Wei Wang",
+      "university": "Hong Kong University of Science and Technology (Guangzhou) & HKUST",
+      "isHK": false,
+      "status": "Faculty",
+      "direction": "LLM / NLP",
+      "contactInfo": {
+        "email": "weiwcs@ust.hk"
+      },
+      "paperSource": "IDEA (ACL 2026, arXiv:2604.12573)"
+    },
+    "Michael Hanna": {
+      "name": "Michael Hanna",
+      "university": "University of Amsterdam",
+      "isHK": false,
+      "status": "PhD student (ELLIS)",
+      "advisor": "Sandro Pezzelle & Yonatan Belinkov",
+      "lab": "ILLC, University of Amsterdam",
+      "homepage": "https://hannamw.github.io/",
+      "scholar": "https://scholar.google.com/citations?user=0wOdTeYAAAAJ",
+      "direction": "NLP / Mechanistic Interpretability / Computational Linguistics",
+      "paperSource": "Latent Planning (ICLR 2026, arXiv:2604.12493)"
+    },
+    "Zixiong Yu": {
+      "name": "Zixiong Yu",
+      "university": "Tsinghua University",
+      "isHK": false,
+      "status": "PhD student (co-first author)",
+      "direction": "Math Reasoning / LLM / Data Synthesis",
+      "contactInfo": {
+        "email": "yuzx19@tsinghua.org.cn"
+      },
+      "paperSource": "MathAgent (arXiv:2604.11188)"
+    },
+    "Jun Rao": {
+      "name": "Jun Rao",
+      "university": "Harbin Institute of Technology, Shenzhen",
+      "isHK": false,
+      "status": "PhD student (co-first author)",
+      "direction": "Math Reasoning / LLM",
+      "contactInfo": {
+        "email": "rao7jun@gmail.com"
+      },
+      "paperSource": "MathAgent (arXiv:2604.11188)"
+    },
+    "Guhan Chen": {
+      "name": "Guhan Chen",
+      "university": "Tsinghua University",
+      "isHK": false,
+      "status": "PhD student",
+      "direction": "Math / LLM",
+      "contactInfo": {
+        "email": "chen-gh23@mails.tsinghua.edu.cn"
+      },
+      "paperSource": "MathAgent (arXiv:2604.11188)"
+    },
+    "Songtao Tian": {
+      "name": "Songtao Tian",
+      "university": "Tsinghua University",
+      "isHK": false,
+      "status": "PhD student",
+      "direction": "Math / LLM",
+      "contactInfo": {
+        "email": "tiansongtao.2020@tsinghua.org.cn"
+      },
+      "paperSource": "MathAgent (arXiv:2604.11188)"
+    },
+    "Bohan Li": {
+      "name": "Bohan Li",
+      "university": "Tsinghua University & Kyoto University",
+      "isHK": false,
+      "status": "PhD student",
+      "direction": "Math / LLM",
+      "contactInfo": {
+        "email": "libh19@tsinghua.org.cn"
+      },
+      "paperSource": "MathAgent (arXiv:2604.11188)"
     }
   },
   "lastUpdated": "2026-04-13T14:43:10"

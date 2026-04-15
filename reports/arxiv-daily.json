@@ -4919,7 +4919,8 @@
           ],
           "comment": "",
           "universities": [
-            "苏黎世联邦理工学院 (ETH Zurich)"
+            "HUST",
+            "ZJU"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -22509,11 +22510,9 @@
             "cs.LG"
           ],
           "comment": "",
-          "universities": [
-            "MIT"
-          ],
+          "universities": [],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -22551,7 +22550,7 @@
             "LirenYu ZhixuanZhang DanOu"
           ],
           "pdfHKUnis": [],
-          "collabConfidence": "confirmed",
+          "collabConfidence": "mentioned",
           "tldr": "[research paper] KARMA introduces a train-only semantic decodability regularizer to resolve the Knowledge–Action Gap in LLM-powered personalized search, where action-focused training causes semantic collapse (e.g., attention sinks). By enforcing history-conditioned semantic generation and embedding-conditioned reconstruction, KARMA maintains LLM semantic fidelity while optimizing next-interest embeddings for retrieval, achieving +0.25 CTR AUC, +1.86 HR in pre-ranking, and +2.51 HR in recall, with +0.5% item click uplift in production.",
           "deepxivKeywords": [
             "semantic decodability",
@@ -23277,7 +23276,8 @@
           ],
           "comment": "code has been released at https://github.com/xiaomi-research/unidrivevla",
           "universities": [
-            "华中科技大学 (HUST)"
+            "HUST",
+            "University of Macau"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,

@@ -2983,17 +2983,18 @@
     },
     "Yinuo Liu": {
       "name": "Yinuo Liu",
-      "university": "待确认",
+      "university": "HUST",
       "isHK": false,
-      "status": "待确认",
+      "status": "PhD student (joint Alibaba Qwen)",
       "advisor": "待确认",
       "lab": "",
       "homepage": "",
-      "scholar": "",
+      "scholar": "https://scholar.google.com.hk/citations?user=MKPvCFIAAAAJ",
       "direction": "Agent / LLM / 多模态",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（阿里通义）",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-08",
+      "researchArea": "AI Security, Multimodal LLM, Agents"
     },
     "Zi Qian": {
       "name": "Zi Qian",
@@ -3011,9 +3012,9 @@
     },
     "Heng Zhou": {
       "name": "Heng Zhou",
-      "university": "待确认",
+      "university": "ZJU",
       "isHK": false,
-      "status": "待确认",
+      "status": "PhD student (joint Alibaba Qwen)",
       "advisor": "待确认",
       "lab": "",
       "homepage": "",
@@ -3021,7 +3022,8 @@
       "direction": "Agent / LLM / 多模态",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（阿里通义）",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-08",
+      "researchArea": "Multimodal LLM"
     },
     "Jiahao Zhang": {
       "name": "Jiahao Zhang",
@@ -12586,9 +12588,9 @@
     },
     "Wenyi Xu": {
       "name": "Wenyi Xu",
-      "university": "待确认",
+      "university": "ZJU",
       "isHK": false,
-      "status": "待确认",
+      "status": "PhD student (joint Kuaishou)",
       "advisor": "待确认",
       "lab": "",
       "homepage": "",
@@ -12596,7 +12598,9 @@
       "direction": "LLM / Infra / 多模态",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（快手）",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-08",
+      "chineseName": "徐文怡",
+      "researchArea": "Multimodal Search, Information Retrieval"
     },
     "Chao Zhang": {
       "name": "Chao Zhang",
@@ -12757,17 +12761,18 @@
     },
     "Yongkang Li": {
       "name": "Yongkang Li",
-      "university": "待确认",
+      "university": "HUST",
       "isHK": false,
-      "status": "待确认",
+      "status": "Master's student (Xinggang Wang & Wenyu Liu group)",
       "advisor": "待确认",
       "lab": "",
-      "homepage": "",
-      "scholar": "",
+      "homepage": "https://owl-10.github.io/yongkangli/",
+      "scholar": "https://scholar.google.com/citations?user=F7hPv1QAAAAJ",
       "direction": "多模态 / LLM / Agent",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（小米）",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-08",
+      "researchArea": "Computer Vision, Autonomous Driving, Object Segmentation"
     },
     "Lijun Zhou": {
       "name": "Lijun Zhou",
@@ -12799,9 +12804,9 @@
     },
     "Bencheng Liao": {
       "name": "Bencheng Liao",
-      "university": "待确认",
+      "university": "HUST",
       "isHK": false,
-      "status": "待确认",
+      "status": "PhD student (Xinggang Wang group)",
       "advisor": "待确认",
       "lab": "",
       "homepage": "",
@@ -12809,7 +12814,8 @@
       "direction": "多模态 / LLM / Agent",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（小米）",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-08",
+      "researchArea": "Autonomous Driving, Vision-Language Models"
     },
     "Tianyi Yan": {
       "name": "Tianyi Yan",
@@ -13619,12 +13625,14 @@
       "status": "教授/博导",
       "advisor": "",
       "lab": "华中科技大学电信学院",
-      "homepage": "",
-      "scholar": "",
+      "homepage": "https://eic.hust.edu.cn/professor/liuwenyu",
+      "scholar": "https://scholar.google.com/citations?user=D7jDk7gAAAAJ",
       "direction": "计算机视觉 / 目标检测",
       "gradYear": "",
       "statusNote": "UniDriveVLA论文通讯作者之一，HUST教授，与小米EV合作自动驾驶",
-      "editedAt": "2026-04-09"
+      "editedAt": "2026-04-09",
+      "chineseName": "刘文予",
+      "researchArea": "Computer Vision, Deep Learning"
     },
     " Kimi Team": {
       "name": " Kimi Team",
@@ -14951,6 +14959,26 @@
         "email": "libh19@tsinghua.org.cn"
       },
       "paperSource": "MathAgent (arXiv:2604.11188)"
+    },
+    "Xinggang Wang": {
+      "name": "Xinggang Wang",
+      "chineseName": "王兴刚",
+      "university": "HUST",
+      "isHK": false,
+      "status": "Full Professor, 国家万人计划青年拔尖",
+      "homepage": "https://xwcv.github.io/",
+      "scholar": "https://scholar.google.com.hk/citations?user=qNCTLV0AAAAJ",
+      "contactInfo": {
+        "email": "xgwang@hust.edu.cn"
+      },
+      "researchArea": "Computer Vision, Autonomous Driving, Object Detection"
+    },
+    "Bing Wang": {
+      "name": "Bing Wang",
+      "university": "University of Macau",
+      "isHK": false,
+      "status": "待确认",
+      "researchArea": "Computer Vision"
     }
   },
   "lastUpdated": "2026-04-13T14:43:10"

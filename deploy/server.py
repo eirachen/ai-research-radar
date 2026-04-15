@@ -54,21 +54,34 @@ class Handler(SimpleHTTPRequestHandler):
 
         elif self.path == "/deploy":
             # Deploy a file: {"file":"index.html", "content":"..."}
+            # Supports subdirectories: reports/arxiv-daily.json
             try:
                 data = json.loads(body)
-                fname = os.path.basename(data["file"])  # Security: only filename
+                raw_path = data["file"]
+                # Security: only allow known safe paths
+                ALLOWED_PREFIXES = ["reports/", ""]
+                safe = False
+                for prefix in ALLOWED_PREFIXES:
+                    if raw_path.startswith(prefix):
+                        # No .. traversal allowed
+                        if ".." not in raw_path:
+                            safe = True
+                            break
+                if not safe:
+                    raise ValueError(f"Path not allowed: {raw_path}")
                 content = data["content"]
-                filepath = os.path.join(SERVE_DIR, fname)
+                filepath = os.path.join(SERVE_DIR, raw_path)
+                os.makedirs(os.path.dirname(filepath), exist_ok=True)
                 with open(filepath, "w", encoding="utf-8") as f:
                     f.write(content)
-                self._ok(json.dumps({"ok": True, "file": fname, "size": len(content)}))
+                self._ok(json.dumps({"ok": True, "file": raw_path, "size": len(content)}))
             except Exception as e:
                 self._err(str(e))
 
         elif self.path == "/pull-github":
             # Pull latest files from GitHub raw
             try:
-                files = ["index.html"]
+                files = ["index.html", "reports/arxiv-daily.json", "reports/index.json"]
                 results = []
                 for fn in files:
                     url = GITHUB_RAW + fn
@@ -76,6 +89,7 @@ class Handler(SimpleHTTPRequestHandler):
                     resp = urllib.request.urlopen(req, timeout=30)
                     content = resp.read()
                     filepath = os.path.join(SERVE_DIR, fn)
+                    os.makedirs(os.path.dirname(filepath), exist_ok=True)
                     with open(filepath, "wb") as f:
                         f.write(content)
                     results.append({"file": fn, "size": len(content)})

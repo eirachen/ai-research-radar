@@ -80,12 +80,24 @@ def main():
     }, ensure_ascii=False).encode('utf-8')
 
     try:
+        # POST to root path (for TALENT_API)
         req = urllib.request.Request(API, data=payload, method='POST',
                                      headers={'Content-Type': 'application/json', 'User-Agent': 'sync/1.0'})
         with urllib.request.urlopen(req, timeout=15) as resp:
             result = resp.read().decode('utf-8')
-        print(f'POST result: {result}')
-        print('Done! Server data updated (merge, no overwrite).')
+        print(f'POST root: {result}')
+
+        # Also deploy to reports/ path (for static fallback)
+        deploy_payload = json.dumps({
+            'file': 'reports/talent-notes.json',
+            'content': payload.decode('utf-8')
+        }).encode('utf-8')
+        req2 = urllib.request.Request('http://43.167.194.82:8800/deploy', data=deploy_payload, method='POST',
+                                      headers={'Content-Type': 'application/json', 'User-Agent': 'sync/1.0'})
+        with urllib.request.urlopen(req2, timeout=60) as resp2:
+            result2 = resp2.read().decode('utf-8')
+        print(f'Deploy reports/: {result2}')
+        print('Done! Both paths updated.')
     except Exception as e:
         print(f'POST failed: {e}')
 

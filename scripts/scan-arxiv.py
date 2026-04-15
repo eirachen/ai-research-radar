@@ -620,7 +620,7 @@ def main():
 
         for keyword in company_info["keywords"]:
             entries = search_arxiv(keyword, max_results=20)
-            time.sleep(15)
+            time.sleep(3)
             entries = filter_by_date(entries, since)
             company_papers.extend(entries)
             print(f"  {keyword}: {len(entries)} papers")
@@ -690,8 +690,8 @@ def main():
                 # Re-sort and update counts
                 all_papers[company_id]["papers"].sort(key=lambda x: x["published"], reverse=True)
                 all_papers[company_id]["count"] = len(all_papers[company_id]["papers"])
-                all_papers[company_id]["uniCollabCount"] = sum(1 for p in all_papers[company_id]["papers"] if p["hasUniCollab"])
-                all_papers[company_id]["hkCollabCount"] = sum(1 for p in all_papers[company_id]["papers"] if p["hasHKCollab"])
+                all_papers[company_id]["uniCollabCount"] = sum(1 for p in all_papers[company_id]["papers"] if p.get("hasUniCollab"))
+                all_papers[company_id]["hkCollabCount"] = sum(1 for p in all_papers[company_id]["papers"] if p.get("hasHKCollab"))
             elif existing_company.get("papers"):
                 # Company not in new scan, keep old data entirely
                 all_papers[company_id] = existing_company

@@ -140,15 +140,16 @@
       "name": "Guhao Feng (冯谷浩)",
       "university": "北京大学 (Peking University)",
       "isHK": false,
-      "status": "在读博士生",
+      "status": "PhD student (Di He 组)",
       "advisor": "Di He (贺笛)",
       "lab": "北京大学智能学院",
-      "homepage": "",
+      "homepage": "https://guhfeng.github.io/",
       "scholar": "https://scholar.google.com/citations?user=wmDqYvUAAAAJ",
       "direction": "LLM / 推理优化 / 数值精度",
       "gradYear": "待确认",
       "statusNote": "In-Place TTT (ICLR 2026 Oral) 一作",
-      "editedAt": "2026-04-09"
+      "editedAt": "2026-04-09",
+      "chineseName": "冯谷豪"
     },
     "Shengjie Luo": {
       "name": "罗胜杰 (Shengjie Luo)",
@@ -9696,7 +9697,7 @@
       "name": "Zhenxu Tian",
       "university": "苏州大学 (Soochow University)",
       "isHK": false,
-      "status": "硕士研究生 (2024入学)",
+      "status": "PhD student",
       "advisor": "Juntao Li (李俊涛)",
       "lab": "苏州大学 NLP 实验室",
       "homepage": "",
@@ -12613,15 +12614,19 @@
       "name": "Yuren Mao",
       "university": "浙江大学 (ZJU)",
       "isHK": false,
-      "status": "待确认",
+      "status": "Assistant Professor (百人计划), School of Software Technology",
       "advisor": "Yunjun Gao",
       "lab": "College of Computer Science, Zhejiang University",
-      "homepage": "",
+      "homepage": "https://person.zju.edu.cn/maoyuren",
       "scholar": "",
       "direction": "LLM / Infra / 多模态",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（快手）",
-      "editedAt": "2026-04-09"
+      "editedAt": "2026-04-09",
+      "chineseName": "毛玉仁",
+      "contactInfo": {
+        "email": "yuren.mao@zju.edu.cn"
+      }
     },
     "Yunjun Gao": {
       "name": "Yunjun Gao",
@@ -12880,7 +12885,7 @@
       "name": "Tianzi Wang",
       "university": "The Chinese University of Hong Kong (CUHK)",
       "isHK": true,
-      "status": "PhD",
+      "status": "PhD student, HCCL Lab (Helen Meng 组)",
       "advisor": "待确认 (CUHK HCCL Lab)",
       "lab": "HCCL Lab, Dept of Systems Engineering and Engineering Management",
       "homepage": "",

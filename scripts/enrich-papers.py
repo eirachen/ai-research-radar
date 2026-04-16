@@ -207,6 +207,7 @@ def main():
     parser.add_argument("--new-only", action="store_true", help="只处理还没增强过的论文")
     parser.add_argument("--with-identity", action="store_true", help="同时搜索 Scholar/GitHub")
     parser.add_argument("--with-scholar", action="store_true", help="只搜索 Scholar（带 7 天缓存，更安全）")
+    parser.add_argument("--scholar-proxy", default="", help="Scholar 代理 URL（如 http://43.167.194.82:8800/scholar-proxy）")
     parser.add_argument("--scholar-max", type=int, default=20, help="Scholar 搜索最多处理人数（防封禁）")
     parser.add_argument("--max-authors", type=int, default=10, help="每篇论文最多处理作者数")
     parser.add_argument("--dry-run", action="store_true", help="只打印，不写文件")
@@ -254,13 +255,27 @@ def main():
     scholar_searcher = None
     identity_searchers = []
     use_scholar = args.with_scholar or args.with_identity
+    scholar_proxy_url = args.scholar_proxy
+    
     if use_scholar:
-        try:
-            scholar_searcher = ScholarSearcher(config)
-            identity_searchers.append(scholar_searcher)
-            logger.info("✅ Scholar 搜索器已就绪（带 7 天本地缓存）")
-        except Exception as e:
-            logger.warning(f"Scholar 搜索器初始化失败: {e}")
+        if scholar_proxy_url:
+            # 代理模式：通过 Lighthouse 服务器转发 Scholar 请求
+            logger.info(f"📡 Scholar 代理模式: {scholar_proxy_url}")
+            from _scholar_proxy_searcher import ProxyScholarSearcher
+            try:
+                scholar_searcher = ProxyScholarSearcher(scholar_proxy_url, config)
+                identity_searchers.append(scholar_searcher)
+                logger.info("✅ Scholar 代理搜索器已就绪（带 7 天本地缓存）")
+            except Exception as e:
+                logger.warning(f"Scholar 代理搜索器初始化失败: {e}")
+        else:
+            # 直连模式：直接用 scholarly 库
+            try:
+                scholar_searcher = ScholarSearcher(config)
+                identity_searchers.append(scholar_searcher)
+                logger.info("✅ Scholar 搜索器已就绪（带 7 天本地缓存）")
+            except Exception as e:
+                logger.warning(f"Scholar 搜索器初始化失败: {e}")
     if args.with_identity:
         try:
             identity_searchers.append(GitHubSearcher(config, http))

@@ -78,6 +78,36 @@ class Handler(SimpleHTTPRequestHandler):
             except Exception as e:
                 self._err(str(e))
 
+        elif self.path == "/scholar-proxy":
+            # Proxy a Google Scholar request from local machine
+            # Only allows scholar.google.com queries, rate-limited
+            try:
+                data = json.loads(body)
+                scholar_url = data.get("url", "")
+                # Security: only allow Google Scholar URLs
+                if not scholar_url.startswith("https://scholar.google.com/"):
+                    raise ValueError("Only scholar.google.com URLs allowed")
+                # Rate limit: simple in-memory counter
+                import time
+                now = time.time()
+                if not hasattr(Handler, '_scholar_reqs'):
+                    Handler._scholar_reqs = []
+                # Clean old entries (last 60 seconds)
+                Handler._scholar_reqs = [t for t in Handler._scholar_reqs if now - t < 60]
+                if len(Handler._scholar_reqs) >= 10:
+                    raise ValueError("Rate limit: max 10 Scholar requests per minute")
+                Handler._scholar_reqs.append(now)
+                # Forward request
+                req = urllib.request.Request(scholar_url, headers={
+                    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+                    "Accept-Language": "en-US,en;q=0.9",
+                })
+                resp = urllib.request.urlopen(req, timeout=20)
+                html = resp.read().decode("utf-8", errors="replace")
+                self._ok(json.dumps({"ok": True, "html": html, "status": resp.status}))
+            except Exception as e:
+                self._err(str(e))
+
         elif self.path == "/pull-github":
             # Pull latest files from GitHub raw
             try:

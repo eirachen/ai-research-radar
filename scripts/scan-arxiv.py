@@ -700,6 +700,33 @@ def main():
                 # Company not in new scan, keep old data entirely
                 all_papers[company_id] = existing_company
 
+    # ── 全局去重：同一篇论文只保留在最高优先级的公司下 ──
+    # 优先级：confirmed > mentioned > uni_only > company_only > none
+    _conf_rank = {"confirmed": 4, "mentioned": 3, "uni_only": 2, "company_only": 1, "none": 0}
+    seen_papers = {}  # arxivId → (company_id, confidence_rank)
+    for cid in list(all_papers.keys()):
+        kept = []
+        for p in all_papers[cid].get("papers", []):
+            aid = p.get("arxivId", "")
+            if not aid:
+                kept.append(p)
+                continue
+            rank = _conf_rank.get(p.get("collabConfidence", "none"), 0)
+            if aid in seen_papers:
+                old_cid, old_rank = seen_papers[aid]
+                if rank > old_rank:
+                    # 新的更重要，删旧的那条
+                    all_papers[old_cid]["papers"] = [pp for pp in all_papers[old_cid]["papers"] if pp.get("arxivId","") != aid]
+                    seen_papers[aid] = (cid, rank)
+                    kept.append(p)
+                # else: 旧的更重要，跳过新的
+            else:
+                seen_papers[aid] = (cid, rank)
+                kept.append(p)
+        all_papers[cid]["papers"] = kept
+        all_papers[cid]["count"] = len(kept)
+        all_papers[cid]["paperCount"] = len(kept)
+
     # Recalculate totals
     total_uni = sum(c.get("uniCollabCount", 0) for c in all_papers.values())
     total_hk = sum(c.get("hkCollabCount", 0) for c in all_papers.values())

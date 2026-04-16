@@ -47,6 +47,7 @@ class ParsedAuthorInfo:
     name: str
     affiliation: Optional[str] = None
     email: Optional[str] = None
+    _paper_institutions: Optional[list] = None  # 论文级别的机构列表（当无法映射到个人时）
 
 
 class HtmlParser:
@@ -167,6 +168,17 @@ class HtmlParser:
             self._supplement_emails_from_fulltext(full_soup, results)
             # 共享机构向前回填
             self._backfill_affiliations(results)
+            # 策略 1.5：当 affil_map 有数据但所有作者都没机构时，
+            # 用邮箱域名反推，或把 institutetext 列表标记到 _paper_institutions
+            n_with_aff = sum(1 for r in results if r.affiliation)
+            if n_with_aff == 0 and affil_map:
+                self._infer_affiliations_from_email(results, affil_map)
+                # 仍然没有的，把机构列表附到第一个 author 的 _paper_institutions
+                if not any(r.affiliation for r in results) and results:
+                    # 把所有 institutetext 列表放到一个特殊字段
+                    all_insts = list(affil_map.values())
+                    if all_insts:
+                        results[0]._paper_institutions = all_insts
 
         return results
 
@@ -196,15 +208,30 @@ class HtmlParser:
             )
             text = tag.get_text(separator=" ", strip=True)
 
-            for sup in sup_tags:
-                key = sup.get_text(strip=True)
-                if key and re.match(r"[\d*]+", key):
-                    # 去掉上标文字和类型标签（如 "institutetext:"），剩余为机构名
-                    cleaned = text.replace(sup.get_text(strip=True), "").strip()
-                    # 去掉 "institutetext:" 或 "footnotetext:" 前缀
-                    cleaned = re.sub(r"^(institutetext|footnotetext)\s*:\s*", "", cleaned).strip()
-                    if cleaned and len(cleaned) > 2:
-                        affil_map[key] = cleaned
+            if sup_tags:
+                for sup in sup_tags:
+                    key = sup.get_text(strip=True)
+                    if key and re.match(r"[\d*]+", key):
+                        # 去掉上标文字，剩余为机构名
+                        cleaned = text
+                        for s in sup_tags:
+                            cleaned = cleaned.replace(s.get_text(strip=True), "", 1)
+                        cleaned = cleaned.strip()
+                        # 去掉 "institutetext:" 或 "footnotetext:" 前缀
+                        cleaned = re.sub(r"^(institutetext|footnotetext)\s*:\s*", "", cleaned).strip()
+                        if cleaned and len(cleaned) > 2:
+                            affil_map[key] = cleaned
+                            break  # 只取第一个 sup 的 key
+            else:
+                # 没有 sup 标签，尝试用 ltx_note_content 的文本
+                content = tag.find(class_="ltx_note_content")
+                if content:
+                    ct = content.get_text(separator=" ", strip=True)
+                    ct = re.sub(r"^[\d*]+\s*", "", ct)
+                    ct = re.sub(r"^(institutetext|footnotetext)\s*:\s*", "", ct).strip()
+                    if ct and len(ct) > 2:
+                        # 用序号作 key
+                        affil_map[str(len(affil_map) + 1)] = ct
 
         return affil_map
 
@@ -269,11 +296,17 @@ class HtmlParser:
             return None
 
         # 优先从 mailto: href 提取（最可靠）
-        mailto = email_el.find("a", href=re.compile(r"^mailto:", re.I))
-        if mailto and mailto.get("href"):
-            email = mailto["href"].replace("mailto:", "").strip()
+        mailto = email_el.find("a", href=re.compile(r"mailto:", re.I))
+        if mailto:
+            href = mailto.get("href", "")
+            # 处理 arXiv 特殊格式：2604.14125v1/mailto:email@domain
+            email = re.sub(r"^.*mailto:", "", href).strip()
             if self._is_valid_email(email):
                 return email
+            # 降级：从链接文本提取
+            link_text = mailto.get_text(strip=True)
+            if link_text and self._is_valid_email(link_text):
+                return link_text
 
         # 降级：正则提取文本中的邮箱
         m = _EMAIL_RE.search(email_el.get_text())
@@ -329,8 +362,24 @@ class HtmlParser:
         2. 剩余未分配邮箱 -> 分配给第一个没有邮箱的作者（通讯作者）
         """
         all_emails = set(_EMAIL_RE.findall(soup.get_text()))
+        # 也从 mailto 链接文本中提取（处理 arXiv 特殊 href 格式）
+        for a_tag in soup.find_all("a", href=re.compile(r"mailto", re.I)):
+            link_text = a_tag.get_text(strip=True)
+            if link_text and _EMAIL_RE.match(link_text):
+                all_emails.add(link_text)
+            href = a_tag.get("href", "")
+            href_email = re.sub(r"^.*mailto:", "", href).strip()
+            if href_email and _EMAIL_RE.match(href_email):
+                all_emails.add(href_email)
         # 过滤无效邮箱
         all_emails = {e for e in all_emails if self._is_valid_email(e)}
+        # 去掉被截断的邮箱（如 x@cs.hku 是 x@cs.hku.hk 的子串）
+        to_remove = set()
+        for e1 in all_emails:
+            for e2 in all_emails:
+                if e1 != e2 and e2.startswith(e1) and len(e2) > len(e1):
+                    to_remove.add(e1)
+        all_emails -= to_remove
 
         already_assigned = {a.email for a in authors if a.email}
         unassigned = all_emails - already_assigned
@@ -361,6 +410,90 @@ class HtmlParser:
                     break
             else:
                 break  # 所有作者都有邮箱了
+
+    # ── 邮箱域名推断机构 ─────────────────────────────────────────────────
+
+    # 常见学术域名 -> 机构名映射
+    _EMAIL_DOMAIN_MAP = {
+        "hku.hk": "The University of Hong Kong",
+        "cs.hku.hk": "The University of Hong Kong",
+        "connect.hku.hk": "The University of Hong Kong",
+        "cuhk.edu.hk": "The Chinese University of Hong Kong",
+        "link.cuhk.edu.hk": "The Chinese University of Hong Kong",
+        "ust.hk": "Hong Kong University of Science and Technology",
+        "connect.ust.hk": "Hong Kong University of Science and Technology",
+        "polyu.edu.hk": "The Hong Kong Polytechnic University",
+        "cityu.edu.hk": "City University of Hong Kong",
+        "hkbu.edu.hk": "Hong Kong Baptist University",
+        "sjtu.edu.cn": "Shanghai Jiao Tong University",
+        "pku.edu.cn": "Peking University",
+        "tsinghua.edu.cn": "Tsinghua University",
+        "zju.edu.cn": "Zhejiang University",
+        "nju.edu.cn": "Nanjing University",
+        "fudan.edu.cn": "Fudan University",
+        "ustc.edu.cn": "University of Science and Technology of China",
+        "hit.edu.cn": "Harbin Institute of Technology",
+        "hust.edu.cn": "Huazhong University of Science and Technology",
+        "mit.edu": "MIT",
+        "stanford.edu": "Stanford University",
+        "berkeley.edu": "UC Berkeley",
+        "cmu.edu": "Carnegie Mellon University",
+        "princeton.edu": "Princeton University",
+        "nyu.edu": "New York University",
+        "ethz.ch": "ETH Zurich",
+        "cam.ac.uk": "University of Cambridge",
+        "ox.ac.uk": "University of Oxford",
+        "nus.edu.sg": "National University of Singapore",
+        "ntu.edu.sg": "Nanyang Technological University",
+        "kaist.ac.kr": "KAIST",
+        "u-tokyo.ac.jp": "University of Tokyo",
+        "kaust.edu.sa": "KAUST",
+    }
+
+    def _infer_affiliations_from_email(
+        self,
+        authors: list[ParsedAuthorInfo],
+        affil_map: dict[str, str],
+    ) -> None:
+        """
+        当作者有邮箱但没有机构时，用邮箱域名匹配 affil_map 中的机构名。
+        
+        策略：
+        1. 邮箱域名直接匹配 _EMAIL_DOMAIN_MAP
+        2. 邮箱域名模糊匹配 affil_map 中的机构名（如 sjtu.edu.cn → Shanghai Jiao Tong University）
+        """
+        # 构建 affil_map 值的关键词索引，用于模糊匹配
+        affil_keywords = {}
+        for key, inst in affil_map.items():
+            inst_lower = inst.lower()
+            affil_keywords[key] = inst_lower
+
+        for author in authors:
+            if author.affiliation or not author.email:
+                continue
+            
+            domain = author.email.split("@")[-1].lower()
+            
+            # 方式 1：直接域名映射
+            for dom_key, inst_name in self._EMAIL_DOMAIN_MAP.items():
+                if domain == dom_key or domain.endswith("." + dom_key):
+                    author.affiliation = inst_name
+                    break
+            
+            if author.affiliation:
+                continue
+            
+            # 方式 2：域名片段匹配 affil_map 中的机构名
+            # 如 sjtu.edu.cn 的 "sjtu" 匹配 "Shanghai Jiao Tong University"
+            domain_parts = domain.replace(".", " ").split()
+            for _key, inst in affil_map.items():
+                inst_lower = inst.lower()
+                for part in domain_parts:
+                    if len(part) >= 3 and part in inst_lower:
+                        author.affiliation = inst
+                        break
+                if author.affiliation:
+                    break
 
     # ── 工具方法 ──────────────────────────────────────────────────────────────
 

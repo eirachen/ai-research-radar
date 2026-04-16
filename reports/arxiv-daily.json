@@ -1,14 +1,126 @@
 {
-  "generatedAt": "2026-04-15T11:10:28.129371Z",
+  "generatedAt": "2026-04-16T10:00:54.000265Z",
   "since": "2026-03-01",
-  "totalPapers": 411,
-  "totalUniCollab": 108,
-  "totalHKCollab": 13,
+  "totalPapers": 434,
+  "totalUniCollab": 117,
+  "totalHKCollab": 16,
   "companies": {
     "bytedance": {
       "company": "字节Seed",
       "icon": "🌱",
       "papers": [
+        {
+          "title": "SparseBalance: Load-Balanced Long Context Training with Dynamic Sparse Attention",
+          "summary": "Sparse attention alleviates computational bottlenecks in long-context LLM training but exhibits extreme heterogeneity in distributed training. We propose SparseBalance, a novel algorithm-system co-design framework achieving up to 1.33x end-to-end training speedup.",
+          "published": "2026-04-15T13:18:07Z",
+          "arxivId": "2604.13847",
+          "arxivUrl": "https://arxiv.org/abs/2604.13847",
+          "pdfUrl": "https://arxiv.org/pdf/2604.13847",
+          "authors": [
+            "Hongtao Xu",
+            "Jianchao Tan",
+            "Yuxuan Hu",
+            "Pengju Lu",
+            "Hongyu Wang",
+            "Xunliang Cai",
+            "Mingzhen Li",
+            "Weile Jia"
+          ],
+          "authorCount": 11,
+          "affiliations": [
+            "ByteDance"
+          ],
+          "categories": [
+            "cs.LG",
+            "cs.AI"
+          ],
+          "comment": "",
+          "universities": [
+            "University of Chinese Academy of Sciences"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            }
+          ],
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "1School of Advanced Interdisciplinary Sciences, University of Chinese Academy of"
+          ],
+          "pdfHKUnis": [],
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "Seedance 2.0: Advancing Video Generation for World Complexity",
+          "summary": "Seedance 2.0 is a new native multimodal audio-video generation model. It adopts a unified, efficient, large-scale multimodal joint audio-video generation architecture supporting text, image, audio and video inputs with comprehensive multimodal content reference and editing capabilities.",
+          "published": "2026-04-15T17:59:40Z",
+          "arxivId": "2604.14148",
+          "arxivUrl": "https://arxiv.org/abs/2604.14148",
+          "pdfUrl": "https://arxiv.org/pdf/2604.14148",
+          "authors": [
+            "Team Seedance",
+            "De Chen",
+            "Liyang Chen",
+            "Xin Chen",
+            "Feng Cheng",
+            "Jie Wu"
+          ],
+          "authorCount": 171,
+          "affiliations": [
+            "ByteDance"
+          ],
+          "categories": [
+            "cs.CV"
+          ],
+          "comment": "",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Vision",
+              "label": "视觉",
+              "color": "#ec4899"
+            },
+            {
+              "id": "Multimodal",
+              "label": "多模态",
+              "color": "#a855f7"
+            },
+            {
+              "id": "Speech",
+              "label": "语音",
+              "color": "#14b8a6",
+              "subTags": [
+                {
+                  "id": "Codec",
+                  "label": "音频编解码"
+                }
+              ]
+            }
+          ],
+          "collabConfidence": "company_only",
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "bytedance"
+          ],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "deepxivEnhanced": true
+        },
         {
           "title": "X-VC: Zero-shot Streaming Voice Conversion in Codec Space",
           "summary": "Zero-shot voice conversion (VC) aims to convert a source utterance into the voice of an unseen target speaker while preserving its linguistic content. Although recent systems have improved conversion quality, building zero-shot VC systems for interactive scenarios remains challenging because high-fi",
@@ -809,14 +921,394 @@
           "deepxivEnhanced": true
         }
       ],
-      "count": 14,
-      "uniCollabCount": 6,
+      "count": 16,
+      "uniCollabCount": 7,
       "hkCollabCount": 1
     },
     "alibaba": {
       "company": "阿里通义",
       "icon": "☁️",
       "papers": [
+        {
+          "title": "Correct Prediction, Wrong Steps? Consensus Reasoning Knowledge Graph for Robust Chain-of-Thought Synthesis",
+          "summary": "We address the fundamental challenge of ensuring reasoning quality in chain-of-thought synthesis. We propose Consensus Reasoning Knowledge Graph (CRKG) that distills collective reasoning patterns from multiple expert models to generate robustly correct reasoning chains.",
+          "published": "2026-04-15T17:55:00Z",
+          "arxivId": "2604.14121",
+          "arxivUrl": "https://arxiv.org/abs/2604.14121",
+          "pdfUrl": "https://arxiv.org/pdf/2604.14121",
+          "authors": [
+            "Zipeng Ling",
+            "Shuliang Liu",
+            "Shenghong Fu",
+            "Yuehao Tang",
+            "Seonil Son",
+            "Yao Wan",
+            "Xuming Hu"
+          ],
+          "authorCount": 7,
+          "affiliations": [],
+          "categories": [
+            "cs.CL"
+          ],
+          "comment": "",
+          "universities": [
+            "香港科技大学（广州）(HKUST-GZ)",
+            "香港理工大学 (PolyU)"
+          ],
+          "hkUniversities": [
+            "香港理工大学 (PolyU)"
+          ],
+          "hasUniCollab": true,
+          "hasHKCollab": true,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            }
+          ],
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "4HongKongPolytechnicUniversity",
+            "1HongKongUniversityofScienceandTechnology(Guangzhou)"
+          ],
+          "pdfHKUnis": [],
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "YOCO++: Enhancing YOCO with KV Residual Connections for Efficient LLM Inference",
+          "summary": "Cross-layer key-value (KV) compression has proven effective for efficient LLM inference. We propose YOCO++, adding weighted residual connections to YOCO. At 50% KV cache compression, YOCO++ achieves state-of-the-art and surpasses standard Transformer.",
+          "published": "2026-04-15T07:05:14Z",
+          "arxivId": "2604.13556",
+          "arxivUrl": "https://arxiv.org/abs/2604.13556",
+          "pdfUrl": "https://arxiv.org/pdf/2604.13556",
+          "authors": [
+            "You Wu",
+            "Ziheng Chen",
+            "Yizhen Zhang",
+            "Haoyi Wu",
+            "Chengting Yu",
+            "Yuchi Xu",
+            "Wenbo Su",
+            "Bo Zheng",
+            "Kewei Tu"
+          ],
+          "authorCount": 9,
+          "affiliations": [
+            "Alibaba DAMO Academy",
+            "ShanghaiTech University"
+          ],
+          "categories": [
+            "cs.CL"
+          ],
+          "comment": "",
+          "universities": [
+            "ShanghaiTech University"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            }
+          ],
+          "collabConfidence": "mentioned",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "UI-Copilot: Advancing Long-Horizon GUI Automation via Tool-Integrated Policy Optimization",
+          "summary": "MLLM-based GUI agents have demonstrated strong capabilities in complex user interface interaction tasks. However, long-horizon scenarios remain challenging, as these agents are burdened with tasks beyond their intrinsic capabilities, suffering from memory degradation, progress confusion, and math ha",
+          "published": "2026-04-15T12:55:46Z",
+          "arxivId": "2604.13822v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.13822v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.13822v1",
+          "authors": [
+            "Zhengxi Lu",
+            "Fei Tang",
+            "Guangyi Liu",
+            "Kaitao Song",
+            "Xu Tan",
+            "Jin Ma",
+            "Wenqi Zhang",
+            "Weiming Lu"
+          ],
+          "authorCount": 11,
+          "affiliations": [],
+          "categories": [
+            "cs.LG"
+          ],
+          "comment": "",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            }
+          ],
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "1ZhejiangUniversity 2Apple 3Tencent"
+          ],
+          "pdfHKUnis": [],
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "The cognitive companion: a lightweight parallel monitoring architecture for detecting and recovering from reasoning degradation in LLM agents",
+          "summary": "Large language model (LLM) agents on multi-step tasks suffer reasoning degradation, looping, drift, stuck states, at rates up to 30% on hard tasks. Current solutions include hard step limits (abrupt) or LLM-as-judge monitoring (10-15% overhead per step). This paper introduces the Cognitive Companion",
+          "published": "2026-04-15T11:44:20Z",
+          "arxivId": "2604.13759v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.13759v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.13759v1",
+          "authors": [
+            "Rafflesia Khan",
+            "Nafiul Islam Khan"
+          ],
+          "authorCount": 2,
+          "affiliations": [],
+          "categories": [
+            "cs.AI",
+            "cs.LG"
+          ],
+          "comment": "",
+          "universities": [
+            "MIT",
+            "HIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            }
+          ],
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Dublin,Ireland CitiPolytechnicInstitute"
+          ],
+          "pdfHKUnis": [],
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "Syn-TurnTurk: A Synthetic Dataset for Turn-Taking Prediction in Turkish Dialogues",
+          "summary": "Managing natural dialogue timing is a significant challenge for voice-based chatbots. Most current systems usually rely on simple silence detection, which often fails because human speech patterns involve irregular pauses. This causes bots to interrupt users, breaking the conversational flow. This p",
+          "published": "2026-04-15T08:39:26Z",
+          "arxivId": "2604.13620v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.13620v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.13620v1",
+          "authors": [
+            "Ahmet Tuğrul Bayrak",
+            "Mustafa Sertaç Türkel",
+            "Fatma Nur Korkmaz"
+          ],
+          "authorCount": 3,
+          "affiliations": [],
+          "categories": [
+            "cs.CL",
+            "cs.AI"
+          ],
+          "comment": "Accepted for publication in IEEE ICASI 2026",
+          "universities": [
+            "NTU",
+            "ETH",
+            "CAS",
+            "HIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Speech",
+              "label": "语音",
+              "color": "#14b8a6"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            }
+          ],
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Syn-TurnTurk: A Synthetic Dataset for Turn-Taking",
+            "IEEE ICASI 2026. [4]. Understanding the underlying structure of speech is es-"
+          ],
+          "pdfHKUnis": [],
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "AVID: A Benchmark for Omni-Modal Audio-Visual Inconsistency Understanding via Agent-Driven Construction",
+          "summary": "We present AVID, the first large-scale benchmark for audio-visual inconsistency understanding in videos. While omni-modal large language models excel at temporally aligned tasks such as captioning and question answering, they struggle to perceive cross-modal conflicts, a fundamental human capability",
+          "published": "2026-04-15T07:57:04Z",
+          "arxivId": "2604.13593v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.13593v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.13593v1",
+          "authors": [
+            "Zixuan Chen",
+            "Depeng Wang",
+            "Hao Lin",
+            "Li Luo",
+            "Ke Xu",
+            "Ya Guo",
+            "Huijia Zhu",
+            "Tanfeng Sun"
+          ],
+          "authorCount": 9,
+          "affiliations": [],
+          "categories": [
+            "cs.MM"
+          ],
+          "comment": "",
+          "universities": [
+            "Shanghai Jiao Tong University",
+            "香港中文大学 (CUHK)"
+          ],
+          "hkUniversities": [
+            "香港中文大学 (CUHK)"
+          ],
+          "hasUniCollab": true,
+          "hasHKCollab": true,
+          "directions": [
+            {
+              "id": "Multimodal",
+              "label": "多模态",
+              "color": "#a855f7"
+            },
+            {
+              "id": "Speech",
+              "label": "语音",
+              "color": "#14b8a6",
+              "subTags": [
+                {
+                  "id": "AudioCap",
+                  "label": "音频理解"
+                }
+              ]
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            }
+          ],
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "ShanghaiJiaoTongUniversity AntGroup TheChineseUniversityofHongKong"
+          ],
+          "pdfHKUnis": [],
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "Peer-Predictive Self-Training for Language Model Reasoning",
+          "summary": "Mechanisms for continued self-improvement of language models without external supervision remain an open challenge. We propose Peer-Predictive Self-Training (PST), a label-free fine-tuning framework in which multiple language models improve collaboratively by leveraging a cross-model aggregated resp",
+          "published": "2026-04-14T23:29:44Z",
+          "arxivId": "2604.13356v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.13356v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.13356v1",
+          "authors": [
+            "Shi Feng",
+            "Hanlin Zhang",
+            "Fan Nie",
+            "Sham Kakade",
+            "Yiling Chen"
+          ],
+          "authorCount": 5,
+          "affiliations": [],
+          "categories": [
+            "cs.CL",
+            "cs.AI",
+            "cs.GT"
+          ],
+          "comment": "18 pages, 5 figures",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Math",
+              "label": "数学推理",
+              "color": "#06b6d4"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            }
+          ],
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "HarvardUniversity HarvardUniversity StanfordUniversity"
+          ],
+          "pdfHKUnis": [],
+          "deepxivEnhanced": true
+        },
         {
           "title": "See, Point, Refine: Multi-Turn Approach to GUI Grounding with Visual Feedback",
           "summary": "Computer Use Agents (CUAs) fundamentally rely on graphical user interface (GUI) grounding to translate language instructions into executable screen actions, but editing-level grounding in dense coding interfaces, where sub-pixel accuracy is required to interact with dense IDE elements, remains under",
@@ -922,6 +1414,107 @@
           "pdfUnis": [
             "1QwenApplicationsBusinessGroup,Alibaba,2ShanghaiJiaoTongUniversity",
             "Asagenticfoundationmodelscontinuetoevolve,howtofurtherimprovetheirperformanceinv"
+          ],
+          "pdfHKUnis": [],
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "IDEA: An Interpretable and Editable Decision-Making Framework for LLMs via Verbal-to-Numeric Calibration",
+          "summary": "Large Language Models are increasingly deployed for decision-making, yet their adoption in high-stakes domains remains limited by miscalibrated probabilities, unfaithful explanations, and inability to incorporate expert knowledge precisely. We propose IDEA, a framework that extracts LLM decision kno",
+          "published": "2026-04-14T10:50:49Z",
+          "arxivId": "2604.12573v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.12573v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.12573v1",
+          "authors": [
+            "Yanji He",
+            "Yuxin Jiang",
+            "Yiwen Wu",
+            "Bo Huang",
+            "Jiaheng Wei",
+            "Wei Wang"
+          ],
+          "authorCount": 6,
+          "affiliations": [],
+          "categories": [
+            "cs.AI"
+          ],
+          "comment": "Accepted to ACL 2026",
+          "universities": [
+            "MIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            }
+          ],
+          "collabConfidence": "confirmed",
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "huawei"
+          ],
+          "pdfUnis": [
+            "1TheHongKongUniversityofScienceandTechnology(Guangzhou)",
+            "{yhe720, ywu240}@connect.hkust-gz.edu.cn, jiang.yuxin2@huawei.com,"
+          ],
+          "pdfHKUnis": [
+            "HKUST",
+            "HKU"
+          ],
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "Latent Planning Emerges with Scale",
+          "summary": "LLMs can perform seemingly planning-intensive tasks, like writing coherent stories or functioning code, without explicitly verbalizing a plan; however, the extent to which they implicitly plan is unknown. In this paper, we define latent planning as occurring when LLMs possess internal planning repre",
+          "published": "2026-04-14T09:18:53Z",
+          "arxivId": "2604.12493v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.12493v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.12493v1",
+          "authors": [
+            "Michael Hanna",
+            "Emmanuel Ameisen"
+          ],
+          "authorCount": 2,
+          "affiliations": [],
+          "categories": [
+            "cs.CL",
+            "cs.AI"
+          ],
+          "comment": "ICLR 2026",
+          "universities": [
+            "ANU"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            }
+          ],
+          "collabConfidence": "confirmed",
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "anthropic"
+          ],
+          "pdfUnis": [
+            "ILLC,UniversityofAmsterdam Anthropic"
           ],
           "pdfHKUnis": [],
           "deepxivEnhanced": true
@@ -1232,6 +1825,11 @@
               "id": "Multimodal",
               "label": "多模态",
               "color": "#a855f7"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG",
+              "color": "#6b7280"
             }
           ],
           "collabConfidence": "uni_only",
@@ -1244,6 +1842,14 @@
             "infinitely,andenabledirecteditingofshapesandmotion.Thesecapabilitiesareimpossibl"
           ],
           "pdfHKUnis": [],
+          "tldr": "[research paper] LottieGPT introduces the first autoregressive framework for native vector animation generation by designing a novel Lottie Tokenizer that encodes hierarchical geometric primitives, transforms, keyframes, and temporal dynamics into a compact token stream, enabling scalable and semantically editable animation synthesis. The framework is powered by LottieAnimation-660K—the largest curated vector animation dataset—combined with a fine-tuned Qwen-VL model, achieving state-of-the-art performance on SVG generation and demonstrating strong generalization across diverse animation styles and input modalities.",
+          "deepxivKeywords": [
+            "vector animation tokenization",
+            "autoregressive structured generation",
+            "Lottie format encoding",
+            "temporal geometry modeling",
+            "hierarchical motion representation"
+          ],
           "deepxivEnhanced": true
         },
         {
@@ -1343,6 +1949,11 @@
               "id": "Data",
               "label": "数据",
               "color": "#78716c"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#6b7280"
             }
           ],
           "collabConfidence": "uni_only",
@@ -1351,6 +1962,75 @@
           "pdfUnis": [
             "2BeijingAcademyofArtificialIntelligence,Beijing,China",
             "1GaolingSchoolofArtificialIntelligence,RenminUniversityofChina,Beijing,China"
+          ],
+          "pdfHKUnis": [],
+          "tldr": "[research paper] PaperScope introduces a multi-modal, multi-document benchmark for agentic deep research in scientific papers, leveraging a knowledge graph of over 2,000 AI papers to enable structured, semantically dense, cross-document reasoning. It evaluates systems on four tasks—reasoning, topic induction, summarization, and problem solving—across heterogeneous sources (text, tables, figures, formulas), revealing significant performance gaps in multi-source retrieval, multimodal integration, and long-context synthesis, even among leading Deep Research agents like OpenAI and Tongyi.",
+          "deepxivKeywords": [
+            "agentic deep research",
+            "multi-document retrieval",
+            "knowledge graph grounding",
+            "multi-modal scientific reasoning",
+            "cross-source information synthesis"
+          ],
+          "githubUrl": "https://github.com/CherYou/PaperScope.",
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "MathAgent: Adversarial Evolution of Constraint Graphs for Mathematical Reasoning Data Synthesis",
+          "summary": "Synthesizing high-quality mathematical reasoning data without human priors remains a significant challenge. Current approaches typically rely on seed data mutation or simple prompt engineering, often suffering from mode collapse and limited logical complexity. This paper proposes a hierarchical synt",
+          "published": "2026-04-13T08:48:12Z",
+          "arxivId": "2604.11188v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.11188v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.11188v1",
+          "authors": [
+            "Zixiong Yu",
+            "Jun Rao",
+            "Guhan Chen",
+            "Songtao Tian",
+            "Bohan Li",
+            "Jiansheng Wei",
+            "Min Zhang",
+            "Xiaojun Meng"
+          ],
+          "authorCount": 8,
+          "affiliations": [],
+          "categories": [
+            "cs.CL",
+            "cs.AI"
+          ],
+          "comment": "Accepted by ACL 2026 findings",
+          "universities": [
+            "MIT",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            }
+          ],
+          "collabConfidence": "confirmed",
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "huawei"
+          ],
+          "pdfUnis": [
+            "1HuaweiLargeModelDataTechnologyLab 2TsinghuaUniversity",
+            "3HarbinInstituteofTechnology,Shenzhen 4KyotoUniversity"
           ],
           "pdfHKUnis": [],
           "deepxivEnhanced": true
@@ -1401,6 +2081,14 @@
             "1BirlaInstituteofTechnologyandScience,Pilani,India"
           ],
           "pdfHKUnis": [],
+          "tldr": "[research paper] A two-stage method for multilingual polarization detection in social media text combines structured supervised fine-tuning of Qwen 2.5-7B-Instruct via LoRA with a rigid JSON-like template (target, claim type, manifestation checklist, justification) to enforce interpretable, consistent outputs across languages and events. DPO refinement with automatically generated preference pairs reduces false negatives by discouraging conservative predictions, improving recall from 0.5085 to 0.7797 and macro-F1 by 5 points on the English development set without manual annotation.",
+          "deepxivKeywords": [
+            "structured output schema",
+            "direct preference optimization (DPO)",
+            "multilingual polarization detection",
+            "parameter-efficient fine-tuning (LoRA)",
+            "false negative reduction"
+          ],
           "deepxivEnhanced": true
         },
         {
@@ -1424,11 +2112,11 @@
           "comment": "",
           "universities": [
             "ETH",
-            "USC",
-            "HIT"
+            "HIT",
+            "USC"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -1453,8 +2141,15 @@
               ]
             }
           ],
-          "collabConfidence": "mentioned",
-          "pdfVerified": false,
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "1CarnegieMellonUniversity 2FujitsuResearchofAmericaInc.",
+            "Persona Non Grata: Single-Method Safety Evaluation Is Incom-",
+            "{wenkail}@cs.cmu.edu"
+          ],
+          "pdfHKUnis": [],
           "deepxivEnhanced": true
         },
         {
@@ -1475,13 +2170,13 @@
           ],
           "comment": "34 pages, 6 figures, 1 table in main text + appendix. Ongoing series on Model Medicine",
           "universities": [
-            "CAS",
-            "Mila",
             "ETH",
-            "HIT"
+            "CAS",
+            "HIT",
+            "Mila"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -1500,8 +2195,23 @@
               "color": "#ef4444"
             }
           ],
-          "collabConfidence": "mentioned",
-          "pdfVerified": false,
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "and Methodological Confounds",
+            "Daegu Gyeongbuk Institute of Science and Technology (DGIST)",
+            "Department of Electrical Engineering and Computer Science"
+          ],
+          "pdfHKUnis": [],
+          "tldr": "[research paper] Small language models across diverse architectures exhibit a shared, stable emotion vector geometry in activation space, independent of behavioral profiles or model size, with geometric maturity increasing with scale. RLHF only reshapes immature representations (e.g., Gemma-3 1B), while mature models show negligible changes; methodological artifacts—such as extraction mode, numerical precision, and backend differences—systematically distort cross-model comparisons, revealing four distinct layers of bias that must be controlled for valid inference.",
+          "deepxivKeywords": [
+            "emotion geometry",
+            "representation stability",
+            "residual stream anisotropy",
+            "cross-architecture generalization",
+            "methodological confounds"
+          ],
           "deepxivEnhanced": true
         },
         {
@@ -1526,11 +2236,11 @@
           ],
           "comment": "",
           "universities": [
-            "ETH",
-            "NTU"
+            "NTU",
+            "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -1549,8 +2259,13 @@
               "color": "#3b82f6"
             }
           ],
-          "collabConfidence": "mentioned",
-          "pdfVerified": false,
+          "collabConfidence": "company_only",
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "huawei"
+          ],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
           "deepxivEnhanced": true
         },
         {
@@ -1577,8 +2292,8 @@
           ],
           "comment": "",
           "universities": [
-            "ETH",
-            "MIT"
+            "MIT",
+            "ETH"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -1625,8 +2340,8 @@
           ],
           "comment": "8 pages, 2 figures, 2 tables. Accepted to Educational Data Mining 2026",
           "universities": [
-            "Mila",
-            "ETH"
+            "ETH",
+            "Mila"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -1650,6 +2365,15 @@
           ],
           "collabConfidence": "mentioned",
           "pdfVerified": false,
+          "tldr": "[research paper] The paper proposes a method to train open-weight language models to simulate authentic student debugging behavior by serializing real student log data into conversational dialogues, where code submissions and automated feedback form alternating turns. It introduces a training pipeline combining supervised fine-tuning with preference optimization (via Direct and Group Relative methods) to align models with iterative debugging processes, outperforming code-only and prompted LLM baselines in functional alignment and code similarity on real Python programming assignment data.",
+          "deepxivKeywords": [
+            "conversational serialization",
+            "student-environment interaction",
+            "debugging behavior simulation",
+            "preference optimization",
+            "process data modeling"
+          ],
+          "githubUrl": "https://github.com/KoutchemeCharles/edm-conv-ser",
           "deepxivEnhanced": true
         },
         {
@@ -1862,6 +2586,14 @@
             "Max Planck Institute for Software Systems (MPI-SWS), Saarbrücken, Germany"
           ],
           "pdfHKUnis": [],
+          "tldr": "[research paper] Introduces a three-agent architecture (diagnosis, planning, verification) with a typed instruction set architecture (ISA) and a transactional microkernel to enable safe, parallel recovery in dynamic microservice systems. Recovery boundaries are inferred online from distributed traces to account for runtime dependency shifts, reducing agent-caused harm by 95% in simulation and achieving 0% harm in live experiments through scoped, rollback-enabled actuation. The core innovation lies in separating planning from actuation with explicit side-effect semantics, ensuring safety via formal constraints rather than heuristic runbooks or untrusted LLM agents.",
+          "deepxivKeywords": [
+            "agentic memory",
+            "online recovery boundary inference",
+            "transactional actuation",
+            "dynamic dependency graphs",
+            "typed instruction set architecture"
+          ],
           "deepxivEnhanced": true
         },
         {
@@ -6933,14 +7665,62 @@
           "deepxivEnhanced": true
         }
       ],
-      "count": 103,
+      "count": 113,
       "uniCollabCount": 23,
-      "hkCollabCount": 4
+      "hkCollabCount": 6
     },
     "deepseek": {
       "company": "DeepSeek",
       "icon": "🔍",
       "papers": [
+        {
+          "title": "IndicDB -- Benchmarking Multilingual Text-to-SQL Capabilities in Indian Languages",
+          "summary": "While Large Language Models (LLMs) have significantly advanced Text-to-SQL performance, existing benchmarks predominantly focus on Western contexts and simplified schemas, leaving a gap in real-world, non-Western applications. We present IndicDB, a multilingual Text-to-SQL benchmark for evaluating c",
+          "published": "2026-04-15T10:07:37Z",
+          "arxivId": "2604.13686v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.13686v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.13686v1",
+          "authors": [
+            "Aviral Dawar",
+            "Roshan Karanth",
+            "Vikram Goyal",
+            "Dhruv Kumar"
+          ],
+          "authorCount": 4,
+          "affiliations": [],
+          "categories": [
+            "cs.CL",
+            "cs.AI",
+            "cs.DB"
+          ],
+          "comment": "Under Review",
+          "universities": [
+            "MIT",
+            "HIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            }
+          ],
+          "collabConfidence": "mentioned",
+          "pdfVerified": false
+        },
         {
           "title": "IDEA: An Interpretable and Editable Decision-Making Framework for LLMs via Verbal-to-Numeric Calibration",
           "summary": "Large Language Models are increasingly deployed for decision-making, yet their adoption in high-stakes domains remains limited by miscalibrated probabilities, unfaithful explanations, and inability to incorporate expert knowledge precisely. We propose IDEA, a framework that extracts LLM decision kno",
@@ -6981,8 +7761,7 @@
             }
           ],
           "collabConfidence": "mentioned",
-          "pdfVerified": false,
-          "deepxivEnhanced": true
+          "pdfVerified": false
         },
         {
           "title": "DeepSeek Robustness Against Semantic-Character Dual-Space Mutated Prompt Injection",
@@ -7005,10 +7784,10 @@
           "comment": "Preprint",
           "universities": [
             "USC",
+            "MIT",
             "CAS",
-            "ETH",
             "NYU",
-            "MIT"
+            "ETH"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -7031,8 +7810,7 @@
             }
           ],
           "collabConfidence": "mentioned",
-          "pdfVerified": false,
-          "deepxivEnhanced": true
+          "pdfVerified": false
         },
         {
           "title": "Beyond Single-Dimension Novelty: How Combinations of Theory, Method, and Results-based Novelty Shape Scientific Impact",
@@ -7076,8 +7854,7 @@
             }
           ],
           "collabConfidence": "mentioned",
-          "pdfVerified": false,
-          "deepxivEnhanced": true
+          "pdfVerified": false
         },
         {
           "title": "Cooperative Memory Paging with Keyword Bookmarks for Long-Horizon LLM Conversations",
@@ -7120,8 +7897,7 @@
             }
           ],
           "collabConfidence": "mentioned",
-          "pdfVerified": false,
-          "deepxivEnhanced": true
+          "pdfVerified": false
         },
         {
           "title": "Narrative over Numbers: The Identifiable Victim Effect and its Amplification Under Alignment and Reasoning in Large Language Models",
@@ -7165,8 +7941,7 @@
             }
           ],
           "collabConfidence": "mentioned",
-          "pdfVerified": false,
-          "deepxivEnhanced": true
+          "pdfVerified": false
         },
         {
           "title": "Solving Physics Olympiad via Reinforcement Learning on Physics Simulators",
@@ -7217,8 +7992,52 @@
             }
           ],
           "collabConfidence": "mentioned",
-          "pdfVerified": false,
-          "deepxivEnhanced": true
+          "pdfVerified": false
+        },
+        {
+          "title": "Three Roles, One Model: Role Orchestration at Inference Time to Close the Performance Gap Between Small and Large Agents",
+          "summary": "Large language model (LLM) agents show promise on realistic tool-use tasks, but deploying capable agents on modest hardware remains challenging. We study whether inference-time scaffolding alone, without any additional training compute, can improve the performance of a small model in complex multi-s",
+          "published": "2026-04-13T13:40:33Z",
+          "arxivId": "2604.11465v2",
+          "arxivUrl": "http://arxiv.org/abs/2604.11465v2",
+          "pdfUrl": "https://arxiv.org/pdf/2604.11465v2",
+          "authors": [
+            "S. Aaron McClendon",
+            "Jorge Gallego-Feliciano",
+            "Stavros Zervoudakis",
+            "Antonios Saravanos"
+          ],
+          "authorCount": 4,
+          "affiliations": [],
+          "categories": [
+            "cs.AI"
+          ],
+          "comment": "",
+          "universities": [
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            }
+          ],
+          "collabConfidence": "mentioned",
+          "pdfVerified": false
         },
         {
           "title": "Three Roles, One Model: Role Orchestration at Inference Time to Close the Performance Gap Between Small and Large Agents",
@@ -7287,8 +8106,8 @@
           "comment": "",
           "universities": [
             "ETH",
-            "USC",
-            "HIT"
+            "HIT",
+            "USC"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -7317,8 +8136,7 @@
             }
           ],
           "collabConfidence": "mentioned",
-          "pdfVerified": false,
-          "deepxivEnhanced": true
+          "pdfVerified": false
         },
         {
           "title": "AOP-Smart: A RAG-Enhanced Large Language Model Framework for Adverse Outcome Pathway Analysis",
@@ -7339,8 +8157,8 @@
           ],
           "comment": "",
           "universities": [
-            "ETH",
-            "MIT"
+            "MIT",
+            "ETH"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -7358,8 +8176,7 @@
             }
           ],
           "collabConfidence": "mentioned",
-          "pdfVerified": false,
-          "deepxivEnhanced": true
+          "pdfVerified": false
         },
         {
           "title": "Do LLMs Build Spatial World Models? Evidence from Grid-World Maze Tasks",
@@ -7404,8 +8221,7 @@
             }
           ],
           "collabConfidence": "mentioned",
-          "pdfVerified": false,
-          "deepxivEnhanced": true
+          "pdfVerified": false
         },
         {
           "title": "MoEITS: A Green AI approach for simplifying MoE-LLMs",
@@ -7452,8 +8268,7 @@
             }
           ],
           "collabConfidence": "mentioned",
-          "pdfVerified": false,
-          "deepxivEnhanced": true
+          "pdfVerified": false
         },
         {
           "title": "CARO: Chain-of-Analogy Reasoning Optimization for Robust Content Moderation",
@@ -7505,8 +8320,7 @@
             "e1520377@u.nus.edu",
             "1ShenzhenUniversity 2TsinghuaUniversity 3NationalUniversityofSingapore"
           ],
-          "pdfHKUnis": [],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "Leveraging Mathematical Reasoning of LLMs for Efficient GPU Thread Mapping",
@@ -7528,11 +8342,11 @@
           ],
           "comment": "11 pages, 5 figures, 8 tables. Submitted to IEEE Transactions on Parallel and Distributed Systems (TPDS)",
           "universities": [
-            "HIT",
-            "CAS",
-            "ETH",
             "ANU",
-            "MIT"
+            "MIT",
+            "CAS",
+            "HIT",
+            "ETH"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -7555,8 +8369,7 @@
             }
           ],
           "collabConfidence": "mentioned",
-          "pdfVerified": false,
-          "deepxivEnhanced": true
+          "pdfVerified": false
         },
         {
           "title": "Leveraging Mathematical Reasoning of LLMs for Efficient GPU Thread Mapping",
@@ -7612,6 +8425,47 @@
           ],
           "pdfHKUnis": [],
           "deepxivEnhanced": true
+        },
+        {
+          "title": "Think in Sentences: Explicit Sentence Boundaries Enhance Language Model's Capabilities",
+          "summary": "Researchers have explored different ways to improve large language models (LLMs)' capabilities via dummy token insertion in contexts. However, existing works focus solely on the dummy tokens themselves, but fail to leverage the inherent sentence-level structure of natural language. This is a critica",
+          "published": "2026-04-11T10:00:52Z",
+          "arxivId": "2604.10135v2",
+          "arxivUrl": "http://arxiv.org/abs/2604.10135v2",
+          "pdfUrl": "https://arxiv.org/pdf/2604.10135v2",
+          "authors": [
+            "Zhichen Liu",
+            "Yongyuan Li",
+            "Yang Xu"
+          ],
+          "authorCount": 3,
+          "affiliations": [],
+          "categories": [
+            "cs.CL",
+            "cs.AI"
+          ],
+          "comment": "Accepted to ACL 2026 main conference",
+          "universities": [
+            "MIT",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            }
+          ],
+          "collabConfidence": "mentioned",
+          "pdfVerified": false
         },
         {
           "title": "Think in Sentences: Explicit Sentence Boundaries Enhance Language Model's Capabilities",
@@ -7708,8 +8562,7 @@
           "pdfUnis": [
             "Sun Yat-sen University, Guangzhou, China (wangqj35@mail2.sysu.edu.cn, yzhu16@alu"
           ],
-          "pdfHKUnis": [],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "Conflicts Make Large Reasoning Models Vulnerable to Attacks",
@@ -7766,8 +8619,7 @@
           ],
           "pdfHKUnis": [
             "CityU"
-          ],
-          "deepxivEnhanced": true
+          ]
         },
         {
           "title": "SPASM: Stable Persona-driven Agent Simulation for Multi-turn Dialogue Generation",
@@ -7814,8 +8666,7 @@
           "pdfUnis": [
             "♠ UniversityofLeeds ■ SouthwestJiaotongUniversity ♦ Ben-GurionUniversityoftheNeg"
           ],
-          "pdfHKUnis": [],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "SMART: When is it Actually Worth Expanding a Speculative Tree?",
@@ -7866,8 +8717,7 @@
           "pdfUnis": [
             "Singapore Management University, Singapore"
           ],
-          "pdfHKUnis": [],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "Alloc-MoE: Budget-Aware Expert Activation Allocation for Efficient Mixture-of-Experts Inference",
@@ -7913,11 +8763,6 @@
               "id": "RAG",
               "label": "RAG/检索",
               "color": "#64748b"
-            },
-            {
-              "id": "Code",
-              "label": "Code",
-              "color": "#6b7280"
             }
           ],
           "collabConfidence": "uni_only",
@@ -7928,16 +8773,7 @@
             "CollegeofComputerScienceandTechnology,",
             "NationalKeyLaboratoryofParallelandDistributedComputing,"
           ],
-          "pdfHKUnis": [],
-          "tldr": "[research paper] Alloc-MoE introduces an activation budget constraint to balance inference speed and model performance in MoE models, proposing a unified framework with Alloc-L (layer-level) and Alloc-T (token-level) components. Alloc-L uses sensitivity profiling and dynamic programming to optimize expert activation distribution across layers, while Alloc-T dynamically redistributes activations per token based on routing scores, preserving performance under halved activation budgets—achieving 1.15× prefill and 1.34× decode speedups on DeepSeek-V2-Lite without latency overhead.",
-          "deepxivKeywords": [
-            "activation budget",
-            "layer-level allocation",
-            "token-level redistribution",
-            "sensitivity profiling",
-            "dynamic programming in MoE"
-          ],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "ImplicitMemBench: Measuring Unconscious Behavioral Adaptation in Large Language Models",
@@ -11566,8 +12402,8 @@
           "deepxivEnhanced": true
         }
       ],
-      "count": 79,
-      "uniCollabCount": 20,
+      "count": 82,
+      "uniCollabCount": 23,
       "hkCollabCount": 3
     },
     "moonshot": {
@@ -11628,16 +12464,7 @@
           "pdfUnis": [
             "1PekingUniversity 2TheChineseUniversityofHongKong,Shenzhen 3TsinghuaUniversity 4"
           ],
-          "pdfHKUnis": [],
-          "tldr": "[research paper] EditCaption introduces a two-stage post-training pipeline to fix systematic failure modes in VLM-generated image editing instructions—orientation inconsistency, viewpoint ambiguity, and lack of fine-grained attribute description—by constructing 100K human-refined supervised fine-tuning (SFT) data via GLM auto-annotation filtered with EditScore, followed by 10K human-annotated preference pairs for Direct Preference Optimization (DPO). The approach achieves state-of-the-art performance on Eval-400 (4.712), ByteMorph-Bench (4.588), and HQ-Edit, reducing critical error rates from 47.75% to 23% and correct rates from 41.75% to 66%, demonstrating that targeted data construction and preference alignment are essential for human-aligned instruction synthesis in image editing.",
-          "deepxivKeywords": [
-            "spatial reasoning",
-            "orientation consistency",
-            "viewpoint ambiguity",
-            "attribute-level description",
-            "direct preference optimization"
-          ],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "EduIllustrate: Towards Scalable Automated Generation Of Multimodal Educational Content",
@@ -12491,8 +13318,7 @@
             }
           ],
           "collabConfidence": "mentioned",
-          "pdfVerified": false,
-          "deepxivEnhanced": true
+          "pdfVerified": false
         },
         {
           "title": "Socially Fluent, Socially Awkward: Artificial Intelligence Relational Talk Backfires in Commercial Interactions",
@@ -12525,8 +13351,49 @@
             }
           ],
           "collabConfidence": "none",
-          "pdfVerified": false,
-          "deepxivEnhanced": true
+          "pdfVerified": false
+        },
+        {
+          "title": "Spatial Atlas: Compute-Grounded Reasoning for Spatial-Aware Research Agent Benchmarks",
+          "summary": "We introduce compute-grounded reasoning (CGR), a design paradigm for spatial-aware research agents in which every answerable sub-problem is resolved by deterministic computation before a language model is asked to generate. Spatial Atlas instantiates CGR as a single Agent-to-Agent (A2A) server that ",
+          "published": "2026-04-13T22:22:07Z",
+          "arxivId": "2604.12102v2",
+          "arxivUrl": "http://arxiv.org/abs/2604.12102v2",
+          "pdfUrl": "https://arxiv.org/pdf/2604.12102v2",
+          "authors": [
+            "Arun Sharma"
+          ],
+          "authorCount": 1,
+          "affiliations": [],
+          "categories": [
+            "cs.AI",
+            "cs.CV",
+            "cs.LG"
+          ],
+          "comment": "11 pages. Code: https://github.com/arunshar/spatial-atlas",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Safety",
+              "label": "安全",
+              "color": "#ef4444"
+            },
+            {
+              "id": "Multimodal",
+              "label": "多模态",
+              "color": "#a855f7"
+            }
+          ],
+          "collabConfidence": "none",
+          "pdfVerified": false
         },
         {
           "title": "Spatial Atlas: Compute-Grounded Reasoning for Spatial-Aware Research Agent Benchmarks",
@@ -12615,8 +13482,7 @@
             }
           ],
           "collabConfidence": "mentioned",
-          "pdfVerified": false,
-          "deepxivEnhanced": true
+          "pdfVerified": false
         },
         {
           "title": "LLM-Redactor: An Empirical Evaluation of Eight Techniques for Privacy-Preserving LLM Requests",
@@ -12663,8 +13529,7 @@
             }
           ],
           "collabConfidence": "mentioned",
-          "pdfVerified": false,
-          "deepxivEnhanced": true
+          "pdfVerified": false
         },
         {
           "title": "$λ_A$: A Typed Lambda Calculus for LLM Agent Composition",
@@ -12685,8 +13550,8 @@
           ],
           "comment": "",
           "universities": [
-            "ETH",
-            "MIT"
+            "MIT",
+            "ETH"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -12709,8 +13574,7 @@
             }
           ],
           "collabConfidence": "mentioned",
-          "pdfVerified": false,
-          "deepxivEnhanced": true
+          "pdfVerified": false
         },
         {
           "title": "$λ_A$: A Typed Lambda Calculus for LLM Agent Composition",
@@ -12777,8 +13641,8 @@
           ],
           "comment": "",
           "universities": [
-            "Mila",
-            "ETH"
+            "ETH",
+            "Mila"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -12801,8 +13665,7 @@
             }
           ],
           "collabConfidence": "mentioned",
-          "pdfVerified": false,
-          "deepxivEnhanced": true
+          "pdfVerified": false
         },
         {
           "title": "PaperScope: A Multi-Modal Multi-Document Benchmark for Agentic Deep Research Across Massive Scientific Papers",
@@ -12848,8 +13711,7 @@
             }
           ],
           "collabConfidence": "mentioned",
-          "pdfVerified": false,
-          "deepxivEnhanced": true
+          "pdfVerified": false
         },
         {
           "title": "Sanity Checks for Agentic Data Science",
@@ -12898,8 +13760,7 @@
             }
           ],
           "collabConfidence": "mentioned",
-          "pdfVerified": false,
-          "deepxivEnhanced": true
+          "pdfVerified": false
         },
         {
           "title": "When Reasoning Models Hurt Behavioral Simulation: A Solver-Sampler Mismatch in Multi-Agent LLM Negotiation",
@@ -12914,13 +13775,15 @@
           "authorCount": 1,
           "affiliations": [],
           "categories": [
-            "cs.LG"
+            "cs.LG",
+            "cs.AI",
+            "cs.CY"
           ],
           "comment": "12 pages, 5 figures, supplementary material included as ancillary file",
           "universities": [
-            "CAS",
             "ETH",
-            "MIT"
+            "MIT",
+            "CAS"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -12943,8 +13806,7 @@
             }
           ],
           "collabConfidence": "mentioned",
-          "pdfVerified": false,
-          "deepxivEnhanced": true
+          "pdfVerified": false
         },
         {
           "title": "LLM-Rosetta: A Hub-and-Spoke Intermediate Representation for Cross-Provider LLM API Translation",
@@ -12992,8 +13854,7 @@
           "pdfUnis": [
             "UniversityofChicago"
           ],
-          "pdfHKUnis": [],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "Your Agent Is Mine: Measuring Malicious Intermediary Attacks on the LLM Supply Chain",
@@ -13046,17 +13907,7 @@
           "pdfUnis": [
             "UniversityofCalifornia,Santa Fuzzland UniversityofCalifornia,Santa"
           ],
-          "pdfHKUnis": [],
-          "tldr": "[research paper] The paper presents the first systematic empirical study of malicious LLM API routers as a supply-chain vulnerability, identifying four attack classes—payload injection, secret exfiltration, and two adaptive evasion variants—across 28 paid and 400 free routers. It reveals that 9 free and 1 paid routers actively inject malicious code, with 17 exposing researcher-owned AWS credentials and 1 draining ETH from a private key; poisoning studies show benign routers can be compromised via leaked credentials and weak peer configurations, enabling 2.1B tokens processed and 99 credentials exposed. The authors build Mine, a research proxy to simulate attacks and evaluate three client-side defenses: fail-closed policies, response anomaly screening, and append-only logging.",
-          "deepxivKeywords": [
-            "adversarial router behaviors",
-            "tool-use attack",
-            "payload injection",
-            "supply chain security",
-            "adaptive evasion"
-          ],
-          "githubUrl": "https://github.com/QuantumNous/new-api",
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "Tokalator: A Context Engineering Toolkit for Artificial Intelligence Coding Assistants",
@@ -13104,17 +13955,7 @@
           "pdfVerified": true,
           "pdfCompanies": [],
           "pdfUnis": [],
-          "pdfHKUnis": [],
-          "tldr": "[research paper] Tokalator introduces a real-time, in-IDE context engineering toolkit that identifies and quantifies token budget leaks in AI coding assistants. It employs a five-signal syntactic relevance scorer to detect distractor tabs, implements closed-form economic models (Cobb–Douglas, $O(T^2)$ cost growth, caching break-even at $n^*=2$) for cross-provider cost forecasting, and enables developers to monitor and optimize token consumption across 17 LLMs via a VS Code extension, CLI, and web calculators—addressing attention dilution, cost explosion, and context rot through visibility and actionable modeling.",
-          "deepxivKeywords": [
-            "context engineering",
-            "token budget monitoring",
-            "syntactic relevance scoring",
-            "Cobb–Douglas cost modeling",
-            "agentic workflow optimization"
-          ],
-          "githubUrl": "https://github.com/vfaraji89/tokalator",
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "Clickbait detection: quick inference with maximum impact",
@@ -13167,16 +14008,7 @@
             "3 Systems Research Institute, Polish Academy of Sciences, Newelska 6, 01-447",
             "Soveatin Kuntur1[0000−0001−6029−941X], Panggih Kusuma"
           ],
-          "pdfHKUnis": [],
-          "tldr": "[research paper] A lightweight hybrid clickbait detection model combines OpenAI semantic embeddings with six heuristic stylistic features (e.g., punctuation, capitalization, numerals) and applies PCA for dimensionality reduction. Graph-based models (XGBoost, GraphSAGE, GCN) outperform traditional methods in inference speed while maintaining strong discrimination (high ROC-AUC), enabling real-time detection on headline-only inputs with minimal latency.",
-          "deepxivKeywords": [
-            "heuristic feature engineering",
-            "graph neural networks",
-            "clickbait detection",
-            "dimensionality reduction",
-            "headlines-only classification"
-          ],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "More Capable, Less Cooperative? When LLMs Fail At Zero-Cost Collaboration",
@@ -13222,16 +14054,7 @@
           "pdfUnis": [
             "UniversityofIllinoisUrbana-Champaign UKAISecurityInstitute"
           ],
-          "pdfHKUnis": [],
-          "tldr": "[empirical research paper] LLM agents fail to cooperate even when helping incurs zero personal cost, revealing a fundamental 'instruction-utility gap' where explicit cooperative instructions are ignored despite optimal collective outcomes. Through causal decomposition, the study isolates cooperation failures (withholding information) from competence failures (inability to execute), showing that high-capability models actively sabotage coordination. Interventions like explicit protocols and small sharing incentives significantly improve performance, demonstrating that cooperative behavior must be engineered, not assumed from intelligence alone.",
-          "deepxivKeywords": [
-            "instruction-utility gap",
-            "cooperation failure",
-            "causal decomposition",
-            "multi-agent communication",
-            "zero-cost collaboration"
-          ],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "Nesterov Flow May Travel Infinitely Long to Converge to a Minimizer",
@@ -16411,861 +17234,103 @@
           "deepxivEnhanced": true
         }
       ],
-      "count": 68,
+      "count": 69,
       "uniCollabCount": 20,
       "hkCollabCount": 1
-    },
-    "deepmind": {
-      "company": "Google DeepMind",
-      "icon": "🧠",
-      "papers": [
-        {
-          "title": "GIRL: Generative Imagination Reinforcement Learning via Information-Theoretic Hallucination Control",
-          "summary": "Model-based reinforcement learning (MBRL) improves sample efficiency by optimizing policies inside imagined rollouts, but long-horizon planning degrades when model errors compound and imagined trajectories drift off the training manifold. We introduce GIRL (Generative Imagination Reinforcement Learn",
-          "published": "2026-04-08T17:14:21Z",
-          "arxivId": "2604.07426v1",
-          "arxivUrl": "http://arxiv.org/abs/2604.07426v1",
-          "pdfUrl": "https://arxiv.org/pdf/2604.07426v1",
-          "authors": [
-            "Prakul Sunil Hiremath"
-          ],
-          "authorCount": 1,
-          "affiliations": [],
-          "categories": [
-            "cs.LG",
-            "cs.AI"
-          ],
-          "comment": "20 pages, 2 figures, 7 tables; reinforcement learning, world models",
-          "universities": [],
-          "hkUniversities": [],
-          "hasUniCollab": false,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "Data",
-              "label": "数据",
-              "color": "#78716c"
-            },
-            {
-              "id": "Multimodal",
-              "label": "多模态",
-              "color": "#a855f7"
-            },
-            {
-              "id": "Agent",
-              "label": "Agent",
-              "color": "#f97316"
-            },
-            {
-              "id": "Safety",
-              "label": "Safety",
-              "color": "#6b7280"
-            }
-          ],
-          "collabConfidence": "uni_only",
-          "pdfVerified": true,
-          "pdfCompanies": [],
-          "pdfUnis": [
-            "Visvesvaraya Technological University (VTU), Belagavi, India",
-            "Department of Computer Science and Engineering,"
-          ],
-          "pdfHKUnis": [],
-          "tldr": "[research paper] GIRL introduces a latent world-model framework that combats long-horizon imagination drift in model-based reinforcement learning through two key innovations: (1) a cross-modal grounding signal derived from a frozen DINOv2 foundation model that enforces semantic consistency in latent transitions, penalizing physics-defying hallucinations via a differentiable consistency loss; and (2) an uncertainty-adaptive trust-region bottleneck that re-formulates the KL regularizer as a Lagrange multiplier in a constrained optimization problem, dynamically calibrating the drift tolerance using Expected Information Gain and Relative Performance Loss. Theoretical analysis re-derives the value-gap bound using the Performance Difference Lemma and Integral Probability Metrics, yielding a finite, horizon-independent regret bound that directly links the I-ELBO objective to real-environment performance. Empirical results show 38–61% reduction in latent drift, 40–55% fewer environment steps for long-horizon tasks, and superior performance over TD-MPC2 in sparse-reward and high-contact settings, with robustness to visual distractors due to grounding.",
-          "deepxivKeywords": [
-            "cross-modal grounding",
-            "uncertainty-adaptive trust-region",
-            "latent world-model",
-            "physics-defying hallucinations",
-            "information-theoretic drift control"
-          ],
-          "deepxivEnhanced": true
-        },
-        {
-          "title": "Understanding Performance Gap Between Parallel and Sequential Sampling in Large Reasoning Models",
-          "summary": "Large Reasoning Models (LRMs) have shown remarkable performance on challenging questions, such as math and coding. However, to obtain a high quality solution, one may need to sample more than once. In principal, there are two sampling strategies that can be composed to form more complex processes: s",
-          "published": "2026-04-07T13:28:09Z",
-          "arxivId": "2604.05868v1",
-          "arxivUrl": "http://arxiv.org/abs/2604.05868v1",
-          "pdfUrl": "https://arxiv.org/pdf/2604.05868v1",
-          "authors": [
-            "Xiangming Gu",
-            "Soham De",
-            "Larisa Markeeva",
-            "Petar Veličković",
-            "Razvan Pascanu"
-          ],
-          "authorCount": 5,
-          "affiliations": [],
-          "categories": [
-            "cs.CL"
-          ],
-          "comment": "Under review",
-          "universities": [],
-          "hkUniversities": [],
-          "hasUniCollab": false,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "LLM",
-              "label": "LLM",
-              "color": "#3b82f6"
-            },
-            {
-              "id": "Code",
-              "label": "代码",
-              "color": "#8b5cf6"
-            }
-          ],
-          "collabConfidence": "none",
-          "pdfVerified": true,
-          "pdfCompanies": [
-            "deepmind"
-          ],
-          "pdfUnis": [
-            "1GoogleDeepMind 2NationalUniversityofSingapore"
-          ],
-          "pdfHKUnis": [],
-          "tldr": "[empirical research paper] The paper empirically demonstrates that parallel sampling outperforms sequential sampling in large reasoning models despite the latter's theoretical representation power, identifying insufficient exploration—caused by conditioning on prior answers—as the primary driver of the performance gap. Experiments across multiple models (Qwen3, DeepSeek-R1, Gemini 2.5) and domains (math, coding) show that aggregation and context length are not the root causes, but the sequential chain's dependency on previous outputs restricts diversity in generated solutions, leading to suboptimal final outputs.",
-          "deepxivKeywords": [
-            "exploration in reasoning models",
-            "sampling strategy comparison",
-            "sequential vs parallel generation",
-            "thinking trace diversity",
-            "reasoning model scalability"
-          ],
-          "deepxivEnhanced": true
-        },
-        {
-          "title": "An Improved Last-Iterate Convergence Rate for Anchored Gradient Descent Ascent",
-          "summary": "We analyze the last-iterate convergence of the Anchored Gradient Descent Ascent algorithm for smooth convex-concave min-max problems. While previous work established a last-iterate rate of $\\mathcal{O}(1/t^{2-2p})$ for the squared gradient norm, where $p \\in (1/2, 1)$, it remained an open problem wh",
-          "published": "2026-04-04T16:08:55Z",
-          "arxivId": "2604.03782v1",
-          "arxivUrl": "http://arxiv.org/abs/2604.03782v1",
-          "pdfUrl": "https://arxiv.org/pdf/2604.03782v1",
-          "authors": [
-            "Anja Surina",
-            "Arun Suggala",
-            "George Tsoukalas",
-            "Anton Kovsharov",
-            "Sergey Shirobokov",
-            "Francisco J. R. Ruiz",
-            "Pushmeet Kohli",
-            "Swarat Chaudhuri"
-          ],
-          "authorCount": 8,
-          "affiliations": [],
-          "categories": [
-            "math.OC",
-            "cs.AI"
-          ],
-          "comment": "",
-          "universities": [
-            "ETH",
-            "MIT"
-          ],
-          "hkUniversities": [],
-          "hasUniCollab": false,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "Math",
-              "label": "数学推理",
-              "color": "#06b6d4"
-            },
-            {
-              "id": "Agent",
-              "label": "Agent",
-              "color": "#f97316"
-            },
-            {
-              "id": "LLM",
-              "label": "LLM",
-              "color": "#6b7280"
-            }
-          ],
-          "collabConfidence": "company_only",
-          "pdfVerified": true,
-          "pdfCompanies": [
-            "deepmind"
-          ],
-          "pdfUnis": [],
-          "pdfHKUnis": [],
-          "tldr": "[research paper] Anchored Gradient Descent Ascent (GDA) achieves a last-iterate convergence rate of \\mathcal{O}(1/t) in the squared gradient norm for smooth convex-concave min-max problems, resolving an open question in the literature. This result is proven autonomously by an AI system using formal verification in Lean, demonstrating that the previously established \\mathcal{O}(1/t^{2-2p}) rate (for \\(p\\in(1/2,1)\\)) is not optimal and that \\mathcal{O}(1/t) is attainable under standard assumptions, with the proof leveraging ODE-based analysis and tight control over anchor dynamics.",
-          "deepxivKeywords": [
-            "last-iterate convergence",
-            "anchored gradient descent ascent",
-            "formal proof generation",
-            "AI-assisted mathematical reasoning",
-            "min-max optimization"
-          ],
-          "githubUrl": "https://github.com/google-deepmind/formal-conjectures",
-          "deepxivEnhanced": true
-        },
-        {
-          "title": "The Rank and Gradient Lost in Non-stationarity: Sample Weight Decay for Mitigating Plasticity Loss in Reinforcement Learning",
-          "summary": "Deep reinforcement learning (RL) suffers from plasticity loss severely due to the nature of non-stationarity, which impairs the ability to adapt to new data and learn continually. Unfortunately, our understanding of how plasticity loss arises, dissipates, and can be dissolved remains limited to empi",
-          "published": "2026-04-02T11:29:46Z",
-          "arxivId": "2604.01913v1",
-          "arxivUrl": "http://arxiv.org/abs/2604.01913v1",
-          "pdfUrl": "https://arxiv.org/pdf/2604.01913v1",
-          "authors": [
-            "Zihao Wu",
-            "Hongyao Tang",
-            "Yi Ma",
-            "Jiashun Liu",
-            "Yan Zheng",
-            "Jianye Hao"
-          ],
-          "authorCount": 6,
-          "affiliations": [],
-          "categories": [
-            "cs.LG"
-          ],
-          "comment": "ICLR",
-          "universities": [
-            "麻省理工学院 (MIT)"
-          ],
-          "hkUniversities": [],
-          "hasUniCollab": false,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "Infra",
-              "label": "Infra",
-              "color": "#22c55e"
-            },
-            {
-              "id": "RL",
-              "label": "强化学习",
-              "color": "#eab308"
-            },
-            {
-              "id": "Math",
-              "label": "数学推理",
-              "color": "#06b6d4"
-            }
-          ],
-          "pdfVerified": true,
-          "pdfCompanies": [],
-          "pdfUnis": [
-            "2InternationalJointInstituteofTianjinUniversity,Fuzhou",
-            "STATIONARITY: SAMPLE WEIGHT DECAY FOR MIT-",
-            "1SchoolofComputerSoftware,TianjinUniversity"
-          ],
-          "pdfHKUnis": [],
-          "collabConfidence": "uni_only",
-          "tldr": "[theoretical research paper] The paper identifies two theoretical mechanisms causing plasticity loss in deep reinforcement learning: (1) rank collapse of the Neural Tangent Kernel (NTK) Gram matrix and (2) $\\Theta(1/k)$ decay of gradient magnitude. While the first is empirically known, the second—gradient attenuation due to sequential optimization initialization—is underexplored. The authors propose Sample Weight Decay (SWD), a lightweight sampling strategy that assigns linearly decaying weights to experience replay samples based on their age, counteracting gradient decay and stabilizing learning dynamics. SWD improves performance across TD3, Double DQN, and SAC in MuJoCo, ALE, and DMC environments, achieving state-of-the-art results on challenging DMC Humanoid tasks without altering network architecture or training objectives.",
-          "deepxivKeywords": [
-            "gradient magnitude decay",
-            "neural tangent kernel",
-            "experience replay",
-            "plasticity loss",
-            "non-stationarity in RL"
-          ],
-          "githubUrl": "https://github.com/wzhhasadream/CleanRL-JAX",
-          "deepxivEnhanced": true
-        },
-        {
-          "title": "SkyNet: Belief-Aware Planning for Partially-Observable Stochastic Games",
-          "summary": "In 2019, Google DeepMind released MuZero, a model-based reinforcement learning method that achieves strong results in perfect-information games by combining learned dynamics models with Monte Carlo Tree Search (MCTS). However, comparatively little work has extended MuZero to partially observable, st",
-          "published": "2026-03-29T16:09:50Z",
-          "arxivId": "2603.27751v1",
-          "arxivUrl": "http://arxiv.org/abs/2603.27751v1",
-          "pdfUrl": "https://arxiv.org/pdf/2603.27751v1",
-          "authors": [
-            "Adam Haile"
-          ],
-          "authorCount": 1,
-          "affiliations": [],
-          "categories": [
-            "cs.AI"
-          ],
-          "comment": "",
-          "universities": [
-            "HIT",
-            "ANU",
-            "ETH"
-          ],
-          "hkUniversities": [],
-          "hasUniCollab": false,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "Agent",
-              "label": "Agent",
-              "color": "#f97316"
-            },
-            {
-              "id": "RL",
-              "label": "强化学习",
-              "color": "#eab308"
-            },
-            {
-              "id": "RAG",
-              "label": "RAG/检索",
-              "color": "#64748b"
-            }
-          ],
-          "pdfVerified": true,
-          "pdfCompanies": [],
-          "pdfUnis": [],
-          "pdfHKUnis": [],
-          "collabConfidence": "none",
-          "tldr": "[research paper] SkyNet introduces belief-aware auxiliary heads—ego-conditioned winner and rank prediction tasks—to MuZero, enabling latent state representations that implicitly encode uncertainty in partially observable, stochastic, multi-player environments like Skyjo. Unlike full belief-state methods, it avoids explicit belief tracking or search modifications, instead leveraging outcome-predictive supervision to improve representation learning under partial observability; empirical results show a 75.3% peak win rate against baseline (+194 Elo), with performance only emerging after sufficient training throughput, indicating that auxiliary supervision enhances representation quality under data saturation.",
-          "deepxivKeywords": [
-            "belief-aware representation learning",
-            "partially observable stochastic games",
-            "auxiliary prediction heads",
-            "latent state uncertainty modeling",
-            "multi-agent decision dynamics"
-          ],
-          "githubUrl": "https://github.com/DevArtech/skynet",
-          "deepxivEnhanced": true
-        },
-        {
-          "title": "FlowRL: A Taxonomy and Modular Framework for Reinforcement Learning with Diffusion Policies",
-          "summary": "Thanks to their remarkable flexibility, diffusion models and flow models have emerged as promising candidates for policy representation. However, efficient reinforcement learning (RL) upon these policies remains a challenge due to the lack of explicit log-probabilities for vanilla policy gradient es",
-          "published": "2026-03-29T00:02:50Z",
-          "arxivId": "2603.27450v1",
-          "arxivUrl": "http://arxiv.org/abs/2603.27450v1",
-          "pdfUrl": "https://arxiv.org/pdf/2603.27450v1",
-          "authors": [
-            "Chenxiao Gao",
-            "Edward Chen",
-            "Tianyi Chen",
-            "Bo Dai"
-          ],
-          "authorCount": 4,
-          "affiliations": [],
-          "categories": [
-            "cs.LG"
-          ],
-          "comment": "preprint",
-          "universities": [
-            "ETH"
-          ],
-          "hkUniversities": [],
-          "hasUniCollab": false,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "RL",
-              "label": "强化学习",
-              "color": "#eab308"
-            },
-            {
-              "id": "RAG",
-              "label": "RAG/检索",
-              "color": "#64748b"
-            },
-            {
-              "id": "Infra",
-              "label": "Infra",
-              "color": "#22c55e"
-            },
-            {
-              "id": "Multimodal",
-              "label": "Multimodal",
-              "color": "#6b7280"
-            }
-          ],
-          "pdfVerified": true,
-          "pdfCompanies": [],
-          "pdfUnis": [
-            "1GeorgiaInstituteofTechnology"
-          ],
-          "pdfHKUnis": [],
-          "collabConfidence": "uni_only",
-          "tldr": "[research paper] FlowRL introduces a unified taxonomy for reinforcement learning with diffusion and flow policies, classifying methods by guidance mechanism and reference policy choice, revealing underlying mathematical relationships. It presents a modular, JAX-based codebase enabling high-throughput training and easy component swapping, and conducts systematic benchmarks across three control suites, providing actionable insights for practitioners on algorithm selection based on task requirements and performance trade-offs in action distribution modeling.",
-          "deepxivKeywords": [
-            "diffusion policy",
-            "flow policy",
-            "guidance mechanism",
-            "reference policy",
-            "reinforcement learning taxonomy"
-          ],
-          "githubUrl": "https://github.com/typoverflow/flow-rl",
-          "deepxivEnhanced": true
-        },
-        {
-          "title": "Experimental investigation of magnetic properties of MnFeCo$_{4}$Si$_{2}$ discovered by GNoME",
-          "summary": "AI-driven inorganic materials research has garnered significant attention due to its ability to reduce the time, labor, and cost associated with experiments. An AI model known as GNoME, recently developed by Google DeepMind, is particularly fascinating because it is integrated with the Materials Pro",
-          "published": "2026-03-24T03:23:16Z",
-          "arxivId": "2603.22748v1",
-          "arxivUrl": "http://arxiv.org/abs/2603.22748v1",
-          "pdfUrl": "https://arxiv.org/pdf/2603.22748v1",
-          "authors": [
-            "Shuhei Naganuma",
-            "Jiro Kitagawa"
-          ],
-          "authorCount": 2,
-          "affiliations": [],
-          "categories": [
-            "cond-mat.mtrl-sci"
-          ],
-          "comment": "to appear in J. Magn. Magn, Mater",
-          "universities": [
-            "ANU"
-          ],
-          "hkUniversities": [],
-          "hasUniCollab": false,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "RAG",
-              "label": "RAG/检索",
-              "color": "#64748b"
-            },
-            {
-              "id": "Agent",
-              "label": "Agent",
-              "color": "#6b7280"
-            }
-          ],
-          "pdfVerified": true,
-          "pdfCompanies": [],
-          "pdfUnis": [
-            "Department of Electrical Engineering, Faculty of Engineering, Fukuoka Institute "
-          ],
-          "pdfHKUnis": [],
-          "collabConfidence": "uni_only",
-          "tldr": "[experimental research paper] The authors experimentally verify MnFeCo4Si2, a rare-earth-free magnetic compound predicted by GNoME, confirming its rhombohedral crystal structure and soft ferromagnetic behavior with a Curie temperature of 1039 K. Synthesis via arc melting with Mn excess compensation is validated by XRD and SEM, while magnetization measurements and KKR-based electronic structure calculations align on magnetic properties, supporting the reliability of AI-driven predictions in materials discovery.",
-          "deepxivKeywords": [
-            "agentic materials prediction",
-            "rare-earth-free magnetic compounds",
-            "crystal structure verification",
-            "soft ferromagnetism",
-            "AI-driven materials discovery"
-          ],
-          "deepxivEnhanced": true
-        },
-        {
-          "title": "R2-Dreamer: Redundancy-Reduced World Models without Decoders or Augmentation",
-          "summary": "A central challenge in image-based Model-Based Reinforcement Learning (MBRL) is to learn representations that distill essential information from irrelevant visual details. While promising, reconstruction-based methods often waste capacity on large task-irrelevant regions. Decoder-free methods instea",
-          "published": "2026-03-18T18:54:07Z",
-          "arxivId": "2603.18202v2",
-          "arxivUrl": "http://arxiv.org/abs/2603.18202v2",
-          "pdfUrl": "https://arxiv.org/pdf/2603.18202v2",
-          "authors": [
-            "Naoki Morihira",
-            "Amal Nahar",
-            "Kartik Bharadwaj",
-            "Yasuhiro Kato",
-            "Akinobu Hayashi",
-            "Tatsuya Harada"
-          ],
-          "authorCount": 6,
-          "affiliations": [],
-          "categories": [
-            "cs.LG",
-            "cs.AI",
-            "cs.RO"
-          ],
-          "comment": "20 pages, 12 figures, 2 tables",
-          "universities": [
-            "MIT",
-            "ETH"
-          ],
-          "hkUniversities": [],
-          "hasUniCollab": false,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "LLM",
-              "label": "LLM",
-              "color": "#3b82f6"
-            },
-            {
-              "id": "RL",
-              "label": "强化学习",
-              "color": "#eab308"
-            },
-            {
-              "id": "RAG",
-              "label": "RAG/检索",
-              "color": "#64748b"
-            }
-          ],
-          "pdfVerified": true,
-          "pdfCompanies": [],
-          "pdfUnis": [
-            "1HondaR&DCo.,Ltd. 2TheUniversityofTokyo 3RIKENAIP"
-          ],
-          "pdfHKUnis": [],
-          "collabConfidence": "uni_only",
-          "tldr": "[research paper] R2-Dreamer introduces a decoder-free, data-augmentation-free world model for image-based Model-Based Reinforcement Learning (MBRL) by replacing external data augmentation with an internal redundancy-reduction objective inspired by Barlow Twins. This objective minimizes information redundancy between image embeddings and latent states, enabling stable representation learning without overfitting to background details or task-irrelevant regions, resulting in competitive performance on DMC and Meta-World benchmarks and superior results on DMC-Subtle (with tiny task-relevant objects), while training 1.59× faster than DreamerV3 due to the absence of a decoder.",
-          "deepxivKeywords": [
-            "redundancy-reduction",
-            "decoder-free world models",
-            "self-supervised representation learning",
-            "information-theoretic regularization",
-            "RSSM-based MBRL"
-          ],
-          "githubUrl": "https://github.com/NM512/r2dreamer",
-          "deepxivEnhanced": true
-        },
-        {
-          "title": "ResWM: Residual-Action World Model for Visual RL",
-          "summary": "Learning predictive world models from raw visual observations is a central challenge in reinforcement learning (RL), especially for robotics and continuous control. Conventional model-based RL frameworks directly condition future predictions on absolute actions, which makes optimization unstable: th",
-          "published": "2026-03-11T11:27:08Z",
-          "arxivId": "2603.11110v1",
-          "arxivUrl": "http://arxiv.org/abs/2603.11110v1",
-          "pdfUrl": "https://arxiv.org/pdf/2603.11110v1",
-          "authors": [
-            "Jseen Zhang",
-            "Gabriel Adineera",
-            "Jinzhou Tan",
-            "Jinoh Kim"
-          ],
-          "authorCount": 4,
-          "affiliations": [],
-          "categories": [
-            "cs.RO",
-            "cs.AI"
-          ],
-          "comment": "Submit KDD2026",
-          "universities": [
-            "MIT"
-          ],
-          "hkUniversities": [],
-          "hasUniCollab": false,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "RL",
-              "label": "强化学习",
-              "color": "#eab308"
-            },
-            {
-              "id": "Agent",
-              "label": "Agent",
-              "color": "#f97316"
-            },
-            {
-              "id": "RAG",
-              "label": "RAG/检索",
-              "color": "#64748b"
-            }
-          ],
-          "pdfVerified": true,
-          "pdfCompanies": [],
-          "pdfUnis": [
-            "UniversityofCalifornia,SanDiego TexasA&MUniversity-Commerce"
-          ],
-          "pdfHKUnis": [],
-          "collabConfidence": "uni_only",
-          "tldr": "[research paper] ResWM introduces a residual-action reformulation in model-based reinforcement learning, replacing absolute actions with incremental residual adjustments to enforce temporal smoothness and reduce control variance. The framework integrates an Observation Difference Encoder that models frame-level changes to extract dynamics-aware latent representations, enabling more stable, energy-efficient, and physically plausible action trajectories. Empirical results on the DeepMind Control Suite show superior sample efficiency, asymptotic returns, and control smoothness over Dreamer and TD-MPC, with improved stability critical for real-world robotics deployment.",
-          "deepxivKeywords": [
-            "residual action",
-            "observation difference encoding",
-            "latent dynamics",
-            "continuous control",
-            "action smoothness"
-          ],
-          "deepxivEnhanced": true
-        },
-        {
-          "title": "Context Engineering: From Prompts to Corporate Multi-Agent Architecture",
-          "summary": "As artificial intelligence (AI) systems evolve from stateless chatbots to autonomous multi-step agents, prompt engineering (PE), the discipline of crafting individual queries, proves necessary but insufficient. This paper introduces context engineering (CE) as a standalone discipline concerned with ",
-          "published": "2026-03-10T12:58:31Z",
-          "arxivId": "2603.09619v2",
-          "arxivUrl": "http://arxiv.org/abs/2603.09619v2",
-          "pdfUrl": "https://arxiv.org/pdf/2603.09619v2",
-          "authors": [
-            "Vera V. Vishnyakova"
-          ],
-          "authorCount": 1,
-          "affiliations": [],
-          "categories": [
-            "cs.AI",
-            "cs.MA"
-          ],
-          "comment": "25 pages, 1 figure",
-          "universities": [
-            "CAS",
-            "HIT",
-            "ETH"
-          ],
-          "hkUniversities": [],
-          "hasUniCollab": false,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "Agent",
-              "label": "Agent",
-              "color": "#f97316"
-            },
-            {
-              "id": "LLM",
-              "label": "LLM",
-              "color": "#3b82f6"
-            },
-            {
-              "id": "RAG",
-              "label": "RAG/检索",
-              "color": "#64748b"
-            }
-          ],
-          "pdfVerified": true,
-          "pdfCompanies": [],
-          "pdfUnis": [
-            "HSE University, Moscow"
-          ],
-          "pdfHKUnis": [],
-          "collabConfidence": "uni_only",
-          "tldr": "[research paper] The paper introduces context engineering (CE) as a foundational discipline for multi-agent AI systems, proposing five production-grade context quality criteria—relevance, sufficiency, isolation, economy, and provenance—positioning context as the agent's operating system. It extends CE with intent engineering (IE) and specification engineering (SE) to address organizational goals and scalable policy enforcement, forming a cumulative four-level maturity pyramid where each layer builds upon the prior. The framework addresses real-world deployment gaps, citing enterprise data and the Klarna case to demonstrate that technical capability without intentional and structural alignment leads to strategic misalignment and operational failure.",
-          "deepxivKeywords": [
-            "context engineering",
-            "intent engineering",
-            "specification engineering",
-            "cumulative maturity pyramid",
-            "multi-agent systems"
-          ],
-          "deepxivEnhanced": true
-        },
-        {
-          "title": "Decoupling Task and Behavior: A Two-Stage Reward Curriculum in Reinforcement Learning for Robotics",
-          "summary": "Deep Reinforcement Learning is a promising tool for robotic control, yet practical application is often hindered by the difficulty of designing effective reward functions. Real-world tasks typically require optimizing multiple objectives simultaneously, necessitating precise tuning of their weights ",
-          "published": "2026-03-05T12:34:27Z",
-          "arxivId": "2603.05113v1",
-          "arxivUrl": "http://arxiv.org/abs/2603.05113v1",
-          "pdfUrl": "https://arxiv.org/pdf/2603.05113v1",
-          "authors": [
-            "Kilian Freitag",
-            "Knut Åkesson",
-            "Morteza Haghir Chehreghani"
-          ],
-          "authorCount": 3,
-          "affiliations": [],
-          "categories": [
-            "cs.LG",
-            "cs.RO"
-          ],
-          "comment": "",
-          "universities": [
-            "ETH"
-          ],
-          "hkUniversities": [],
-          "hasUniCollab": false,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "Agent",
-              "label": "Agent",
-              "color": "#f97316"
-            },
-            {
-              "id": "RL",
-              "label": "强化学习",
-              "color": "#eab308"
-            },
-            {
-              "id": "Safety",
-              "label": "安全",
-              "color": "#ef4444"
-            }
-          ],
-          "pdfVerified": true,
-          "pdfCompanies": [],
-          "pdfUnis": [
-            "1ChalmersUniversityofTechnology"
-          ],
-          "pdfHKUnis": [],
-          "collabConfidence": "uni_only",
-          "tldr": "[research paper] A two-stage reward curriculum decouples task and behavioral objectives in reinforcement learning for robotics, enabling agents to first master task-specific goals via simplified rewards before gradually incorporating auxiliary behavioral terms (e.g., energy efficiency, smoothness). The method introduces sample reuse across phases via a dual-reward replay buffer, improving stability and robustness to reward weightings; ablation studies show that phase transition strategies and sample reuse are critical, with superior performance and generalization on DM Control Suite, ManiSkill3, and a mobile robot environment compared to direct full-reward training.",
-          "deepxivKeywords": [
-            "reward curriculum",
-            "multi-objective reinforcement learning",
-            "behavioral objectives",
-            "sample reuse",
-            "curriculum learning in robotics"
-          ],
-          "deepxivEnhanced": true
-        },
-        {
-          "title": "Contextual Latent World Models for Offline Meta Reinforcement Learning",
-          "summary": "Offline meta-reinforcement learning seeks to learn policies that generalize across related tasks from fixed datasets. Context-based methods infer a task representation from transition histories, but learning effective task representations without supervision remains a challenge. In parallel, latent ",
-          "published": "2026-03-03T12:45:20Z",
-          "arxivId": "2603.02935v1",
-          "arxivUrl": "http://arxiv.org/abs/2603.02935v1",
-          "pdfUrl": "https://arxiv.org/pdf/2603.02935v1",
-          "authors": [
-            "Mohammadreza Nakheai",
-            "Aidan Scannell",
-            "Kevin Luck",
-            "Joni Pajarinen"
-          ],
-          "authorCount": 4,
-          "affiliations": [],
-          "categories": [
-            "cs.LG"
-          ],
-          "comment": "",
-          "universities": [
-            "ETH"
-          ],
-          "hkUniversities": [],
-          "hasUniCollab": false,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "Data",
-              "label": "数据",
-              "color": "#78716c"
-            },
-            {
-              "id": "RL",
-              "label": "强化学习",
-              "color": "#eab308"
-            },
-            {
-              "id": "Infra",
-              "label": "Infra",
-              "color": "#6b7280"
-            }
-          ],
-          "pdfVerified": true,
-          "pdfCompanies": [],
-          "pdfUnis": [],
-          "pdfHKUnis": [],
-          "collabConfidence": "none",
-          "tldr": "[research paper] The paper proposes Self-Predictive Contextual Offline Meta-RL (SPC), a method that conditions latent world models on task representations inferred from transition histories, enforcing task-conditioned temporal consistency during context encoding. By jointly training a context encoder and a latent world model via contrastive learning and self-predictive dynamics, SPC learns task representations that capture long-horizon, task-specific dynamics rather than just task discrimination, leading to significantly improved generalization across MuJoCo, Contextual-DeepMind Control, and Meta-World benchmarks.",
-          "deepxivKeywords": [
-            "contextual latent world models",
-            "task-conditioned temporal consistency",
-            "offline meta-reinforcement learning",
-            "self-supervised representation learning",
-            "latent dynamics inference"
-          ],
-          "deepxivEnhanced": true
-        },
-        {
-          "title": "Next Embedding Prediction Makes World Models Stronger",
-          "summary": "Capturing temporal dependencies is critical for model-based reinforcement learning (MBRL) in partially observable, high-dimensional domains. We introduce NE-Dreamer, a decoder-free MBRL agent that leverages a temporal transformer to predict next-step encoder embeddings from latent state sequences, d",
-          "published": "2026-03-03T09:04:28Z",
-          "arxivId": "2603.02765v1",
-          "arxivUrl": "http://arxiv.org/abs/2603.02765v1",
-          "pdfUrl": "https://arxiv.org/pdf/2603.02765v1",
-          "authors": [
-            "George Bredis",
-            "Nikita Balagansky",
-            "Daniil Gavrilov",
-            "Ruslan Rakhimov"
-          ],
-          "authorCount": 4,
-          "affiliations": [],
-          "categories": [
-            "cs.LG",
-            "cs.AI"
-          ],
-          "comment": "",
-          "universities": [],
-          "hkUniversities": [],
-          "hasUniCollab": false,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "LLM",
-              "label": "LLM",
-              "color": "#3b82f6"
-            },
-            {
-              "id": "RAG",
-              "label": "RAG/检索",
-              "color": "#64748b"
-            },
-            {
-              "id": "Agent",
-              "label": "Agent",
-              "color": "#f97316"
-            }
-          ],
-          "pdfVerified": true,
-          "pdfCompanies": [],
-          "pdfUnis": [],
-          "pdfHKUnis": [],
-          "collabConfidence": "none",
-          "tldr": "[research paper] NE-Dreamer introduces a decoder-free model-based reinforcement learning agent that replaces pixel reconstruction with next-embedding prediction using a causal temporal transformer, directly optimizing temporal predictive alignment in latent state sequences. By predicting the next encoder embedding from past embeddings and aligning it via redundancy-reduction (Barlow Twins), the method enforces long-horizon coherence without auxiliary supervision, achieving state-of-the-art performance on memory- and navigation-heavy DMLab tasks while matching or exceeding DreamerV3 on standard control benchmarks.",
-          "deepxivKeywords": [
-            "next-embedding prediction",
-            "temporal transformer",
-            "representation learning",
-            "latent dynamics",
-            "causal sequence modeling"
-          ],
-          "deepxivEnhanced": true
-        },
-        {
-          "title": "Real-Time Generative Policy via Langevin-Guided Flow Matching for Autonomous Driving",
-          "summary": "Reinforcement learning (RL) is a fundamental methodology in autonomous driving systems, where generative policies exhibit considerable potential by leveraging their ability to model complex distributions to enhance exploration. However, their inherent high inference latency severely impedes their de",
-          "published": "2026-03-03T05:35:53Z",
-          "arxivId": "2603.02613v1",
-          "arxivUrl": "http://arxiv.org/abs/2603.02613v1",
-          "pdfUrl": "https://arxiv.org/pdf/2603.02613v1",
-          "authors": [
-            "Tianze Zhu",
-            "Yinuo Wang",
-            "Wenjun Zou",
-            "Tianyi Zhang",
-            "Likun Wang",
-            "Letian Tao",
-            "Feihong Zhang",
-            "Yao Lyu"
-          ],
-          "authorCount": 9,
-          "affiliations": [],
-          "categories": [
-            "cs.LG",
-            "cs.RO"
-          ],
-          "comment": "",
-          "universities": [
-            "ETH"
-          ],
-          "hkUniversities": [],
-          "hasUniCollab": false,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "Infra",
-              "label": "Infra",
-              "color": "#22c55e"
-            },
-            {
-              "id": "Agent",
-              "label": "Agent",
-              "color": "#f97316"
-            },
-            {
-              "id": "RL",
-              "label": "强化学习",
-              "color": "#eab308"
-            }
-          ],
-          "pdfVerified": true,
-          "pdfCompanies": [],
-          "pdfUnis": [],
-          "pdfHKUnis": [],
-          "collabConfidence": "none",
-          "tldr": "[research paper] DACER-F introduces a dynamic target guidance mechanism using Langevin dynamics to sample action distributions from an energy-based Q-function target, enabling flow matching to learn real-time, low-latency policies in online reinforcement learning. The method generates exploratory yet high-Q-value actions without requiring a stationary target distribution, achieving 28–34% higher rewards than DACER and DSAC in driving simulations while reducing inference time by 84%, and outperforms prior methods on DMC benchmarks with strong scalability.",
-          "deepxivKeywords": [
-            "flow matching",
-            "dynamic target distribution",
-            "Langevin dynamics",
-            "real-time reinforcement learning",
-            "energy-based policy modeling"
-          ],
-          "deepxivEnhanced": true
-        }
-      ],
-      "count": 14,
-      "uniCollabCount": 0,
-      "hkCollabCount": 0
     },
     "anthropic": {
       "company": "Anthropic",
       "icon": "🔬",
       "papers": [
+        {
+          "title": "Latent Planning Emerges with Scale",
+          "summary": "LLMs can perform seemingly planning-intensive tasks, like writing coherent stories or functioning code, without explicitly verbalizing a plan; however, the extent to which they implicitly plan is unknown. In this paper, we define latent planning as occurring when LLMs possess internal planning repre",
+          "published": "2026-04-14T09:18:53Z",
+          "arxivId": "2604.12493v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.12493v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.12493v1",
+          "authors": [
+            "Michael Hanna",
+            "Emmanuel Ameisen"
+          ],
+          "authorCount": 2,
+          "affiliations": [],
+          "categories": [
+            "cs.CL",
+            "cs.AI"
+          ],
+          "comment": "ICLR 2026",
+          "universities": [
+            "University of Amsterdam"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            }
+          ],
+          "collabConfidence": "confirmed",
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "anthropic"
+          ],
+          "pdfUnis": [
+            "ILLC,UniversityofAmsterdam Anthropic"
+          ],
+          "pdfHKUnis": [],
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "Spatial Atlas: Compute-Grounded Reasoning for Spatial-Aware Research Agent Benchmarks",
+          "summary": "We introduce compute-grounded reasoning (CGR), a design paradigm for spatial-aware research agents in which every answerable sub-problem is resolved by deterministic computation before a language model is asked to generate. Spatial Atlas instantiates CGR as a single Agent-to-Agent (A2A) server that ",
+          "published": "2026-04-13T22:22:07Z",
+          "arxivId": "2604.12102v2",
+          "arxivUrl": "http://arxiv.org/abs/2604.12102v2",
+          "pdfUrl": "https://arxiv.org/pdf/2604.12102v2",
+          "authors": [
+            "Arun Sharma"
+          ],
+          "authorCount": 1,
+          "affiliations": [],
+          "categories": [
+            "cs.AI",
+            "cs.CV",
+            "cs.LG"
+          ],
+          "comment": "11 pages. Code: https://github.com/arunshar/spatial-atlas",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Safety",
+              "label": "安全",
+              "color": "#ef4444"
+            },
+            {
+              "id": "Multimodal",
+              "label": "多模态",
+              "color": "#a855f7"
+            }
+          ],
+          "collabConfidence": "none",
+          "pdfVerified": false
+        },
         {
           "title": "Spatial Atlas: Compute-Grounded Reasoning for Spatial-Aware Research Agent Benchmarks",
           "summary": "We introduce compute-grounded reasoning (CGR), a design paradigm for spatial-aware research agents in which every answerable sub-problem is resolved by deterministic computation before a language model is asked to generate. Spatial Atlas instantiates CGR as a single Agent-to-Agent (A2A) server that ",
@@ -17353,8 +17418,7 @@
             }
           ],
           "collabConfidence": "mentioned",
-          "pdfVerified": false,
-          "deepxivEnhanced": true
+          "pdfVerified": false
         },
         {
           "title": "Shape-dependence of electrophoretic mobility",
@@ -17375,10 +17439,10 @@
           ],
           "comment": "29 pages, 7 figures, appendix includes representative prompts made to Claude, supplementary info includes codes generated by Claude",
           "universities": [
-            "NUS",
-            "USC",
             "MIT",
-            "ANU"
+            "ANU",
+            "NUS",
+            "USC"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -17396,8 +17460,7 @@
             }
           ],
           "collabConfidence": "mentioned",
-          "pdfVerified": false,
-          "deepxivEnhanced": true
+          "pdfVerified": false
         },
         {
           "title": "Intersectional Sycophancy: How Perceived User Demographics Shape False Validation in Large Language Models",
@@ -17441,8 +17504,7 @@
             }
           ],
           "collabConfidence": "mentioned",
-          "pdfVerified": false,
-          "deepxivEnhanced": true
+          "pdfVerified": false
         },
         {
           "title": "Relational Preference Encoding in Looped Transformer Internal States",
@@ -17488,8 +17550,7 @@
           "pdfVerified": true,
           "pdfCompanies": [],
           "pdfUnis": [],
-          "pdfHKUnis": [],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "LLM-Rosetta: A Hub-and-Spoke Intermediate Representation for Cross-Provider LLM API Translation",
@@ -17537,8 +17598,7 @@
           "pdfUnis": [
             "UniversityofChicago"
           ],
-          "pdfHKUnis": [],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "Tokalator: A Context Engineering Toolkit for Artificial Intelligence Coding Assistants",
@@ -17586,17 +17646,7 @@
           "pdfVerified": true,
           "pdfCompanies": [],
           "pdfUnis": [],
-          "pdfHKUnis": [],
-          "tldr": "[research paper] Tokalator introduces a real-time, in-IDE context engineering toolkit that identifies and quantifies token budget leaks in AI coding assistants. It employs a five-signal syntactic relevance scorer to detect distractor tabs, implements closed-form economic models (Cobb–Douglas, $O(T^2)$ cost growth, caching break-even at $n^*=2$) for cross-provider cost forecasting, and enables developers to monitor and optimize token consumption across 17 LLMs via a VS Code extension, CLI, and web calculators—addressing attention dilution, cost explosion, and context rot through visibility and actionable modeling.",
-          "deepxivKeywords": [
-            "context engineering",
-            "token budget monitoring",
-            "syntactic relevance scoring",
-            "Cobb–Douglas cost modeling",
-            "agentic workflow optimization"
-          ],
-          "githubUrl": "https://github.com/vfaraji89/tokalator",
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "EigentSearch-Q+: Enhancing Deep Research Agents with Structured Reasoning Tools",
@@ -17650,17 +17700,7 @@
           "pdfUnis": [
             "1Meta,2NortheasternUniversity,China,3UniversityofOslo,4BoschCenterofAI,5Universi"
           ],
-          "pdfHKUnis": [],
-          "tldr": "[research paper] Q+ introduces a suite of structured reasoning tools that externalize query planning and evidence processing in deep research agents, replacing implicit, unstructured search with explicit, auditable cognitive steps. By requiring LLMs to record inputs and expected outputs of reasoning steps as tool arguments, Q+ enables deliberate query refinement, targeted evidence extraction, and progress reflection—without retrieving new data—resulting in 3.0–3.8 pp accuracy gains across benchmarks and more coherent, traceable agent trajectories in real-world deep research tasks.",
-          "deepxivKeywords": [
-            "structured reasoning",
-            "query planning",
-            "evidence extraction",
-            "tool-mediated cognition",
-            "long web snapshot processing"
-          ],
-          "githubUrl": "https://github.com/camel-ai/eigent_search",
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "EigentSearch-Q+: Enhancing Deep Research Agents with Structured Reasoning Tools",
@@ -20138,27 +20178,86 @@
             "Drake equation"
           ],
           "deepxivEnhanced": true
-        },
+        }
+      ],
+      "count": 51,
+      "uniCollabCount": 13,
+      "hkCollabCount": 0
+    },
+    "nvidia": {
+      "company": "NVIDIA",
+      "icon": "💚",
+      "papers": [
         {
-          "title": "Latent Planning Emerges with Scale",
-          "summary": "LLMs can perform seemingly planning-intensive tasks, like writing coherent stories or functioning code, without explicitly verbalizing a plan; however, the extent to which they implicitly plan is unknown. In this paper, we define latent planning as occurring when LLMs possess internal planning repre",
-          "published": "2026-04-14T09:18:53Z",
-          "arxivId": "2604.12493v1",
-          "arxivUrl": "http://arxiv.org/abs/2604.12493v1",
-          "pdfUrl": "https://arxiv.org/pdf/2604.12493v1",
+          "title": "SAKURAONE: An Open Ethernet-Based AI HPC System and Its Observed Workload Dynamics in a Single-Tenant LLM Development Environment",
+          "summary": "SAKURAONE is a managed high performance computing (HPC) cluster developed and operated by the SAKURA Internet Research Center. It builds on the KOKARYOKU PHY bare metal GPU platform and is optimized for advanced workloads, including large language model (LLM) training. In ISC 2025 TOP500, SAKURAONE ",
+          "published": "2026-04-15T08:09:15Z",
+          "arxivId": "2604.13600v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.13600v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.13600v1",
           "authors": [
-            "Michael Hanna",
-            "Emmanuel Ameisen"
+            "Fumikazu Konishi",
+            "Yuuki Tsubouchi",
+            "Hirofumi Tsuruta"
           ],
-          "authorCount": 2,
+          "authorCount": 3,
           "affiliations": [],
           "categories": [
-            "cs.CL",
-            "cs.AI"
+            "cs.DC",
+            "cs.NI"
           ],
-          "comment": "ICLR 2026",
+          "comment": "",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            }
+          ],
+          "collabConfidence": "none",
+          "pdfVerified": false
+        },
+        {
+          "title": "Efficient Multi-View 3D Object Detection by Dynamic Token Selection and Fine-Tuning",
+          "summary": "Existing multi-view three-dimensional (3D) object detection approaches widely adopt large-scale pre-trained vision transformer (ViT)-based foundation models as backbones, being computationally complex. To address this problem, current state-of-the-art (SOTA) \\texttt{ToC3D} for efficient multi-view V",
+          "published": "2026-04-15T07:44:01Z",
+          "arxivId": "2604.13586v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.13586v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.13586v1",
+          "authors": [
+            "Danish Nazir",
+            "Antoine Hanna-Asaad",
+            "Lucas Görnhardt",
+            "Jan Piewek",
+            "Thorsten Bagdonat",
+            "Tim Fingscheidt"
+          ],
+          "authorCount": 6,
+          "affiliations": [],
+          "categories": [
+            "cs.CV"
+          ],
+          "comment": "",
           "universities": [
-            "University of Amsterdam"
+            "USC",
+            "MIT",
+            "CAS",
+            "NUS",
+            "ETH"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -20170,31 +20269,106 @@
               "color": "#3b82f6"
             },
             {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "Vision",
+              "label": "视觉",
+              "color": "#ec4899"
+            }
+          ],
+          "collabConfidence": "mentioned",
+          "pdfVerified": false
+        },
+        {
+          "title": "SemiFA: An Agentic Multi-Modal Framework for Autonomous Semiconductor Failure Analysis Report Generation",
+          "summary": "Semiconductor failure analysis (FA) requires engineers to examine inspection images, correlate equipment telemetry, consult historical defect records, and write structured reports, a process that can consume several hours of expert time per case. We present SemiFA, an agentic multi-modal framework t",
+          "published": "2026-04-14T19:08:54Z",
+          "arxivId": "2604.13236v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.13236v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.13236v1",
+          "authors": [
+            "Shivam Chand Kaushik"
+          ],
+          "authorCount": 1,
+          "affiliations": [],
+          "categories": [
+            "cs.CV",
+            "cs.AI",
+            "eess.IV"
+          ],
+          "comment": "11 pages, 6 figures, 8 tables. Dataset available at https://huggingface.co/datasets/ShivamChand/SemiFA-930. Code available at https://github.com/Shivamckaushik/SemiFA",
+          "universities": [
+            "CAS",
+            "Mila"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
               "id": "Agent",
               "label": "Agent",
               "color": "#f97316"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Multimodal",
+              "label": "多模态",
+              "color": "#a855f7"
             }
           ],
-          "collabConfidence": "confirmed",
-          "pdfVerified": true,
-          "pdfCompanies": [
-            "anthropic"
+          "collabConfidence": "mentioned",
+          "pdfVerified": false
+        },
+        {
+          "title": "An Engineering Journey Training Large Language Models at Scale on Alps: The Apertus Experience",
+          "summary": "Large Language Models (LLMs) have surged as a transformative technology for science and society, prompting governments worldwide to pursue sovereign AI capabilities that ensure data compliance and cultural representation. However, the associated capital costs and engineering complexity required to t",
+          "published": "2026-04-14T17:04:51Z",
+          "arxivId": "2604.12973v2",
+          "arxivUrl": "http://arxiv.org/abs/2604.12973v2",
+          "pdfUrl": "https://arxiv.org/pdf/2604.12973v2",
+          "authors": [
+            "Jonathan Coles",
+            "Stefano Schuppli",
+            "Lukas Drescher",
+            "Fawzi Roberto Mohamed",
+            "Elia Palme",
+            "Henrique Mendonça",
+            "Miguel Gila",
+            "Mark Klein"
           ],
-          "pdfUnis": [
-            "ILLC,UniversityofAmsterdam Anthropic"
+          "authorCount": 23,
+          "affiliations": [],
+          "categories": [
+            "cs.DC"
           ],
-          "pdfHKUnis": [],
-          "deepxivEnhanced": true
-        }
-      ],
-      "count": 50,
-      "uniCollabCount": 12,
-      "hkCollabCount": 0
-    },
-    "nvidia": {
-      "company": "NVIDIA",
-      "icon": "💚",
-      "papers": [
+          "comment": "",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            }
+          ],
+          "collabConfidence": "none",
+          "pdfVerified": false
+        },
         {
           "title": "An Engineering Journey Training Large Language Models at Scale on Alps: The Apertus Experience",
           "summary": "Large Language Models (LLMs) have surged as a transformative technology for science and society, prompting governments worldwide to pursue sovereign AI capabilities that ensure data compliance and cultural representation. However, the associated capital costs and engineering complexity required to t",
@@ -20259,9 +20433,9 @@
           ],
           "comment": "36 pages, 22 figures, Comments welcome!",
           "universities": [
+            "NTU",
             "ETH",
-            "HIT",
-            "NTU"
+            "HIT"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -20284,8 +20458,7 @@
             }
           ],
           "collabConfidence": "mentioned",
-          "pdfVerified": false,
-          "deepxivEnhanced": true
+          "pdfVerified": false
         },
         {
           "title": "Nemotron 3 Super: Open, Efficient Mixture-of-Experts Hybrid Mamba-Transformer Model for Agentic Reasoning",
@@ -20313,13 +20486,13 @@
           ],
           "comment": "",
           "universities": [
-            "HIT",
-            "UW",
-            "NUS",
-            "CAS",
-            "ETH",
             "ANU",
-            "MIT"
+            "UW",
+            "MIT",
+            "CAS",
+            "HIT",
+            "NUS",
+            "ETH"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -20342,8 +20515,7 @@
             }
           ],
           "collabConfidence": "mentioned",
-          "pdfVerified": false,
-          "deepxivEnhanced": true
+          "pdfVerified": false
         },
         {
           "title": "Large-Scale Quantum Circuit Simulation on HPC Cluster via Cache Blocking, Boosting, and Gate Fusion Optimization",
@@ -20366,9 +20538,9 @@
           ],
           "comment": "11 pages",
           "universities": [
-            "ETH",
             "NTU",
-            "MIT"
+            "MIT",
+            "ETH"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -20391,8 +20563,7 @@
             }
           ],
           "collabConfidence": "mentioned",
-          "pdfVerified": false,
-          "deepxivEnhanced": true
+          "pdfVerified": false
         },
         {
           "title": "Is There an AI Bubble? Robust Date-Stamping for Periods of Exuberance",
@@ -20423,8 +20594,7 @@
             }
           ],
           "collabConfidence": "none",
-          "pdfVerified": false,
-          "deepxivEnhanced": true
+          "pdfVerified": false
         },
         {
           "title": "AffordSim: A Scalable Data Generator and Benchmark for Affordance-Aware Robotic Manipulation",
@@ -20451,8 +20621,8 @@
           ],
           "comment": "",
           "universities": [
-            "ETH",
-            "MIT"
+            "MIT",
+            "ETH"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -20475,8 +20645,7 @@
             }
           ],
           "collabConfidence": "mentioned",
-          "pdfVerified": false,
-          "deepxivEnhanced": true
+          "pdfVerified": false
         },
         {
           "title": "EdgeCIM: A Hardware-Software Co-Design for CIM-Based Acceleration of Small Language Models",
@@ -20523,8 +20692,7 @@
             }
           ],
           "collabConfidence": "mentioned",
-          "pdfVerified": false,
-          "deepxivEnhanced": true
+          "pdfVerified": false
         },
         {
           "title": "Architectural Trade-offs in the Energy-Efficient Era: A Comparative Study of power-capping NVIDIA H100 and H200",
@@ -20546,9 +20714,9 @@
           ],
           "comment": "",
           "universities": [
-            "Mila",
+            "MIT",
             "HIT",
-            "MIT"
+            "Mila"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -20566,8 +20734,7 @@
             }
           ],
           "collabConfidence": "mentioned",
-          "pdfVerified": false,
-          "deepxivEnhanced": true
+          "pdfVerified": false
         },
         {
           "title": "Generative Design for Direct-to-Chip Liquid Cooling for Data Centers",
@@ -20610,8 +20777,7 @@
             }
           ],
           "collabConfidence": "mentioned",
-          "pdfVerified": false,
-          "deepxivEnhanced": true
+          "pdfVerified": false
         },
         {
           "title": "The xPU-athalon: Quantifying the Competition of AI Acceleration",
@@ -20633,8 +20799,8 @@
           ],
           "comment": "Accepted to ISPASS 2026",
           "universities": [
-            "HIT",
-            "MIT"
+            "MIT",
+            "HIT"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -20657,8 +20823,7 @@
             }
           ],
           "collabConfidence": "mentioned",
-          "pdfVerified": false,
-          "deepxivEnhanced": true
+          "pdfVerified": false
         },
         {
           "title": "CovAngelo: A hybrid quantum-classical computing platform for accurate and scalable drug discovery",
@@ -20712,8 +20877,7 @@
             "nvidia"
           ],
           "pdfUnis": [],
-          "pdfHKUnis": [],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "SatReg: Regression-based Neural Architecture Search for Lightweight Satellite Image Segmentation",
@@ -20761,8 +20925,7 @@
           "pdfUnis": [
             "JohnsHopkinsUniversity JohnsHopkinsUniversity"
           ],
-          "pdfHKUnis": [],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "Long-Horizon Streaming Video Generation via Hybrid Attention with Decoupled Distillation",
@@ -20808,8 +20971,7 @@
             }
           ],
           "collabConfidence": "none",
-          "pdfVerified": false,
-          "deepxivEnhanced": true
+          "pdfVerified": false
         },
         {
           "title": "BVH-Accelerated Ray Tracing for High-Frequency Electromagnetic Backscattering",
@@ -20862,8 +21024,7 @@
           "pdfUnis": [
             "1DepartmentofComputationalScienceandTechnology,KTHRoyalInstituteofTechnology"
           ],
-          "pdfHKUnis": [],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "Statistical Properties of the King Wen Sequence: An Anti-Habituation Structure That Does Not Improve Neural Network Training",
@@ -21837,8 +21998,8 @@
           "deepxivEnhanced": true
         }
       ],
-      "count": 32,
-      "uniCollabCount": 13,
+      "count": 36,
+      "uniCollabCount": 15,
       "hkCollabCount": 1
     },
     "kuaishou": {
@@ -22298,6 +22459,46 @@
           "title": "The Unified Field Theory of Phygital Space",
           "summary": "This paper proposes a Unified Field Theory of Phygital Space, positing that contemporary reality is not a dichotomy of \"online\" and \"offline,\" but a unified ontological manifold of irreducible but coupled dimensions. We formalize Phygital Space as a sheaf over a topological site composed of the Phys",
           "published": "2026-04-13T15:23:39Z",
+          "arxivId": "2604.11619v2",
+          "arxivUrl": "http://arxiv.org/abs/2604.11619v2",
+          "pdfUrl": "https://arxiv.org/pdf/2604.11619v2",
+          "authors": [
+            "Silvio Meira"
+          ],
+          "authorCount": 1,
+          "affiliations": [],
+          "categories": [
+            "cs.SE"
+          ],
+          "comment": "",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Math",
+              "label": "数学推理",
+              "color": "#06b6d4"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "Code",
+              "label": "代码",
+              "color": "#8b5cf6"
+            }
+          ],
+          "collabConfidence": "none",
+          "pdfVerified": false
+        },
+        {
+          "title": "The Unified Field Theory of Phygital Space",
+          "summary": "This paper proposes a Unified Field Theory of Phygital Space, positing that contemporary reality is not a dichotomy of \"online\" and \"offline,\" but a unified ontological manifold of irreducible but coupled dimensions. We formalize Phygital Space as a sheaf over a topological site composed of the Phys",
+          "published": "2026-04-13T15:23:39Z",
           "arxivId": "2604.11619v1",
           "arxivUrl": "http://arxiv.org/abs/2604.11619v1",
           "pdfUrl": "https://arxiv.org/pdf/2604.11619v1",
@@ -22630,9 +22831,913 @@
           "deepxivEnhanced": true
         }
       ],
-      "count": 6,
-      "uniCollabCount": 3,
+      "count": 7,
+      "uniCollabCount": 2,
       "hkCollabCount": 0
+    },
+    "deepmind": {
+      "company": "Google DeepMind",
+      "icon": "🧠",
+      "papers": [
+        {
+          "title": "HiVLA: A Visual-Grounded-Centric Hierarchical Embodied Manipulation System",
+          "summary": "We propose HiVLA, a visual-grounded-centric hierarchical framework that explicitly decouples high-level semantic planning from low-level motor control. HiVLA significantly outperforms state-of-the-art end-to-end baselines on long-horizon skill composition and fine manipulation.",
+          "published": "2026-04-15T17:50:07Z",
+          "arxivId": "2604.14125",
+          "arxivUrl": "https://arxiv.org/abs/2604.14125",
+          "pdfUrl": "https://arxiv.org/pdf/2604.14125",
+          "authors": [
+            "Tianshuo Yang",
+            "Guanyu Chen",
+            "Yutian Chen",
+            "Zhixuan Liang",
+            "Yitian Liu",
+            "Zanxin Chen",
+            "Chunpu Xu",
+            "Haotian Liang",
+            "Jiangmiao Pang",
+            "Yao Mu",
+            "Ping Luo"
+          ],
+          "authorCount": 11,
+          "affiliations": [],
+          "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.RO"
+          ],
+          "comment": "",
+          "universities": [
+            "香港大学 (HKU)",
+            "Shanghai AI Laboratory"
+          ],
+          "hkUniversities": [
+            "香港大学 (HKU)"
+          ],
+          "hasUniCollab": true,
+          "hasHKCollab": true,
+          "directions": [
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "Vision",
+              "label": "视觉",
+              "color": "#ec4899"
+            },
+            {
+              "id": "Multimodal",
+              "label": "多模态",
+              "color": "#a855f7"
+            }
+          ],
+          "collabConfidence": "mentioned",
+          "pdfVerified": false
+        },
+        {
+          "title": "GIRL: Generative Imagination Reinforcement Learning via Information-Theoretic Hallucination Control",
+          "summary": "Model-based reinforcement learning (MBRL) improves sample efficiency by optimizing policies inside imagined rollouts, but long-horizon planning degrades when model errors compound and imagined trajectories drift off the training manifold. We introduce GIRL (Generative Imagination Reinforcement Learn",
+          "published": "2026-04-08T17:14:21Z",
+          "arxivId": "2604.07426v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.07426v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.07426v1",
+          "authors": [
+            "Prakul Sunil Hiremath"
+          ],
+          "authorCount": 1,
+          "affiliations": [],
+          "categories": [
+            "cs.LG",
+            "cs.AI"
+          ],
+          "comment": "20 pages, 2 figures, 7 tables; reinforcement learning, world models",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            },
+            {
+              "id": "Multimodal",
+              "label": "多模态",
+              "color": "#a855f7"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "Safety",
+              "label": "Safety",
+              "color": "#6b7280"
+            }
+          ],
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Visvesvaraya Technological University (VTU), Belagavi, India",
+            "Department of Computer Science and Engineering,"
+          ],
+          "pdfHKUnis": [],
+          "tldr": "[research paper] GIRL introduces a latent world-model framework that combats long-horizon imagination drift in model-based reinforcement learning through two key innovations: (1) a cross-modal grounding signal derived from a frozen DINOv2 foundation model that enforces semantic consistency in latent transitions, penalizing physics-defying hallucinations via a differentiable consistency loss; and (2) an uncertainty-adaptive trust-region bottleneck that re-formulates the KL regularizer as a Lagrange multiplier in a constrained optimization problem, dynamically calibrating the drift tolerance using Expected Information Gain and Relative Performance Loss. Theoretical analysis re-derives the value-gap bound using the Performance Difference Lemma and Integral Probability Metrics, yielding a finite, horizon-independent regret bound that directly links the I-ELBO objective to real-environment performance. Empirical results show 38–61% reduction in latent drift, 40–55% fewer environment steps for long-horizon tasks, and superior performance over TD-MPC2 in sparse-reward and high-contact settings, with robustness to visual distractors due to grounding.",
+          "deepxivKeywords": [
+            "cross-modal grounding",
+            "uncertainty-adaptive trust-region",
+            "latent world-model",
+            "physics-defying hallucinations",
+            "information-theoretic drift control"
+          ],
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "Understanding Performance Gap Between Parallel and Sequential Sampling in Large Reasoning Models",
+          "summary": "Large Reasoning Models (LRMs) have shown remarkable performance on challenging questions, such as math and coding. However, to obtain a high quality solution, one may need to sample more than once. In principal, there are two sampling strategies that can be composed to form more complex processes: s",
+          "published": "2026-04-07T13:28:09Z",
+          "arxivId": "2604.05868v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.05868v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.05868v1",
+          "authors": [
+            "Xiangming Gu",
+            "Soham De",
+            "Larisa Markeeva",
+            "Petar Veličković",
+            "Razvan Pascanu"
+          ],
+          "authorCount": 5,
+          "affiliations": [],
+          "categories": [
+            "cs.CL"
+          ],
+          "comment": "Under review",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Code",
+              "label": "代码",
+              "color": "#8b5cf6"
+            }
+          ],
+          "collabConfidence": "none",
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "deepmind"
+          ],
+          "pdfUnis": [
+            "1GoogleDeepMind 2NationalUniversityofSingapore"
+          ],
+          "pdfHKUnis": [],
+          "tldr": "[empirical research paper] The paper empirically demonstrates that parallel sampling outperforms sequential sampling in large reasoning models despite the latter's theoretical representation power, identifying insufficient exploration—caused by conditioning on prior answers—as the primary driver of the performance gap. Experiments across multiple models (Qwen3, DeepSeek-R1, Gemini 2.5) and domains (math, coding) show that aggregation and context length are not the root causes, but the sequential chain's dependency on previous outputs restricts diversity in generated solutions, leading to suboptimal final outputs.",
+          "deepxivKeywords": [
+            "exploration in reasoning models",
+            "sampling strategy comparison",
+            "sequential vs parallel generation",
+            "thinking trace diversity",
+            "reasoning model scalability"
+          ],
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "An Improved Last-Iterate Convergence Rate for Anchored Gradient Descent Ascent",
+          "summary": "We analyze the last-iterate convergence of the Anchored Gradient Descent Ascent algorithm for smooth convex-concave min-max problems. While previous work established a last-iterate rate of $\\mathcal{O}(1/t^{2-2p})$ for the squared gradient norm, where $p \\in (1/2, 1)$, it remained an open problem wh",
+          "published": "2026-04-04T16:08:55Z",
+          "arxivId": "2604.03782v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.03782v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.03782v1",
+          "authors": [
+            "Anja Surina",
+            "Arun Suggala",
+            "George Tsoukalas",
+            "Anton Kovsharov",
+            "Sergey Shirobokov",
+            "Francisco J. R. Ruiz",
+            "Pushmeet Kohli",
+            "Swarat Chaudhuri"
+          ],
+          "authorCount": 8,
+          "affiliations": [],
+          "categories": [
+            "math.OC",
+            "cs.AI"
+          ],
+          "comment": "",
+          "universities": [
+            "ETH",
+            "MIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Math",
+              "label": "数学推理",
+              "color": "#06b6d4"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#6b7280"
+            }
+          ],
+          "collabConfidence": "company_only",
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "deepmind"
+          ],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "tldr": "[research paper] Anchored Gradient Descent Ascent (GDA) achieves a last-iterate convergence rate of \\mathcal{O}(1/t) in the squared gradient norm for smooth convex-concave min-max problems, resolving an open question in the literature. This result is proven autonomously by an AI system using formal verification in Lean, demonstrating that the previously established \\mathcal{O}(1/t^{2-2p}) rate (for \\(p\\in(1/2,1)\\)) is not optimal and that \\mathcal{O}(1/t) is attainable under standard assumptions, with the proof leveraging ODE-based analysis and tight control over anchor dynamics.",
+          "deepxivKeywords": [
+            "last-iterate convergence",
+            "anchored gradient descent ascent",
+            "formal proof generation",
+            "AI-assisted mathematical reasoning",
+            "min-max optimization"
+          ],
+          "githubUrl": "https://github.com/google-deepmind/formal-conjectures",
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "The Rank and Gradient Lost in Non-stationarity: Sample Weight Decay for Mitigating Plasticity Loss in Reinforcement Learning",
+          "summary": "Deep reinforcement learning (RL) suffers from plasticity loss severely due to the nature of non-stationarity, which impairs the ability to adapt to new data and learn continually. Unfortunately, our understanding of how plasticity loss arises, dissipates, and can be dissolved remains limited to empi",
+          "published": "2026-04-02T11:29:46Z",
+          "arxivId": "2604.01913v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.01913v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.01913v1",
+          "authors": [
+            "Zihao Wu",
+            "Hongyao Tang",
+            "Yi Ma",
+            "Jiashun Liu",
+            "Yan Zheng",
+            "Jianye Hao"
+          ],
+          "authorCount": 6,
+          "affiliations": [],
+          "categories": [
+            "cs.LG"
+          ],
+          "comment": "ICLR",
+          "universities": [
+            "麻省理工学院 (MIT)"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            },
+            {
+              "id": "Math",
+              "label": "数学推理",
+              "color": "#06b6d4"
+            }
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "2InternationalJointInstituteofTianjinUniversity,Fuzhou",
+            "STATIONARITY: SAMPLE WEIGHT DECAY FOR MIT-",
+            "1SchoolofComputerSoftware,TianjinUniversity"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only",
+          "tldr": "[theoretical research paper] The paper identifies two theoretical mechanisms causing plasticity loss in deep reinforcement learning: (1) rank collapse of the Neural Tangent Kernel (NTK) Gram matrix and (2) $\\Theta(1/k)$ decay of gradient magnitude. While the first is empirically known, the second—gradient attenuation due to sequential optimization initialization—is underexplored. The authors propose Sample Weight Decay (SWD), a lightweight sampling strategy that assigns linearly decaying weights to experience replay samples based on their age, counteracting gradient decay and stabilizing learning dynamics. SWD improves performance across TD3, Double DQN, and SAC in MuJoCo, ALE, and DMC environments, achieving state-of-the-art results on challenging DMC Humanoid tasks without altering network architecture or training objectives.",
+          "deepxivKeywords": [
+            "gradient magnitude decay",
+            "neural tangent kernel",
+            "experience replay",
+            "plasticity loss",
+            "non-stationarity in RL"
+          ],
+          "githubUrl": "https://github.com/wzhhasadream/CleanRL-JAX",
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "SkyNet: Belief-Aware Planning for Partially-Observable Stochastic Games",
+          "summary": "In 2019, Google DeepMind released MuZero, a model-based reinforcement learning method that achieves strong results in perfect-information games by combining learned dynamics models with Monte Carlo Tree Search (MCTS). However, comparatively little work has extended MuZero to partially observable, st",
+          "published": "2026-03-29T16:09:50Z",
+          "arxivId": "2603.27751v1",
+          "arxivUrl": "http://arxiv.org/abs/2603.27751v1",
+          "pdfUrl": "https://arxiv.org/pdf/2603.27751v1",
+          "authors": [
+            "Adam Haile"
+          ],
+          "authorCount": 1,
+          "affiliations": [],
+          "categories": [
+            "cs.AI"
+          ],
+          "comment": "",
+          "universities": [
+            "HIT",
+            "ANU",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            }
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "none",
+          "tldr": "[research paper] SkyNet introduces belief-aware auxiliary heads—ego-conditioned winner and rank prediction tasks—to MuZero, enabling latent state representations that implicitly encode uncertainty in partially observable, stochastic, multi-player environments like Skyjo. Unlike full belief-state methods, it avoids explicit belief tracking or search modifications, instead leveraging outcome-predictive supervision to improve representation learning under partial observability; empirical results show a 75.3% peak win rate against baseline (+194 Elo), with performance only emerging after sufficient training throughput, indicating that auxiliary supervision enhances representation quality under data saturation.",
+          "deepxivKeywords": [
+            "belief-aware representation learning",
+            "partially observable stochastic games",
+            "auxiliary prediction heads",
+            "latent state uncertainty modeling",
+            "multi-agent decision dynamics"
+          ],
+          "githubUrl": "https://github.com/DevArtech/skynet",
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "FlowRL: A Taxonomy and Modular Framework for Reinforcement Learning with Diffusion Policies",
+          "summary": "Thanks to their remarkable flexibility, diffusion models and flow models have emerged as promising candidates for policy representation. However, efficient reinforcement learning (RL) upon these policies remains a challenge due to the lack of explicit log-probabilities for vanilla policy gradient es",
+          "published": "2026-03-29T00:02:50Z",
+          "arxivId": "2603.27450v1",
+          "arxivUrl": "http://arxiv.org/abs/2603.27450v1",
+          "pdfUrl": "https://arxiv.org/pdf/2603.27450v1",
+          "authors": [
+            "Chenxiao Gao",
+            "Edward Chen",
+            "Tianyi Chen",
+            "Bo Dai"
+          ],
+          "authorCount": 4,
+          "affiliations": [],
+          "categories": [
+            "cs.LG"
+          ],
+          "comment": "preprint",
+          "universities": [
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "Multimodal",
+              "label": "Multimodal",
+              "color": "#6b7280"
+            }
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "1GeorgiaInstituteofTechnology"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only",
+          "tldr": "[research paper] FlowRL introduces a unified taxonomy for reinforcement learning with diffusion and flow policies, classifying methods by guidance mechanism and reference policy choice, revealing underlying mathematical relationships. It presents a modular, JAX-based codebase enabling high-throughput training and easy component swapping, and conducts systematic benchmarks across three control suites, providing actionable insights for practitioners on algorithm selection based on task requirements and performance trade-offs in action distribution modeling.",
+          "deepxivKeywords": [
+            "diffusion policy",
+            "flow policy",
+            "guidance mechanism",
+            "reference policy",
+            "reinforcement learning taxonomy"
+          ],
+          "githubUrl": "https://github.com/typoverflow/flow-rl",
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "Experimental investigation of magnetic properties of MnFeCo$_{4}$Si$_{2}$ discovered by GNoME",
+          "summary": "AI-driven inorganic materials research has garnered significant attention due to its ability to reduce the time, labor, and cost associated with experiments. An AI model known as GNoME, recently developed by Google DeepMind, is particularly fascinating because it is integrated with the Materials Pro",
+          "published": "2026-03-24T03:23:16Z",
+          "arxivId": "2603.22748v1",
+          "arxivUrl": "http://arxiv.org/abs/2603.22748v1",
+          "pdfUrl": "https://arxiv.org/pdf/2603.22748v1",
+          "authors": [
+            "Shuhei Naganuma",
+            "Jiro Kitagawa"
+          ],
+          "authorCount": 2,
+          "affiliations": [],
+          "categories": [
+            "cond-mat.mtrl-sci"
+          ],
+          "comment": "to appear in J. Magn. Magn, Mater",
+          "universities": [
+            "ANU"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#6b7280"
+            }
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Department of Electrical Engineering, Faculty of Engineering, Fukuoka Institute "
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only",
+          "tldr": "[experimental research paper] The authors experimentally verify MnFeCo4Si2, a rare-earth-free magnetic compound predicted by GNoME, confirming its rhombohedral crystal structure and soft ferromagnetic behavior with a Curie temperature of 1039 K. Synthesis via arc melting with Mn excess compensation is validated by XRD and SEM, while magnetization measurements and KKR-based electronic structure calculations align on magnetic properties, supporting the reliability of AI-driven predictions in materials discovery.",
+          "deepxivKeywords": [
+            "agentic materials prediction",
+            "rare-earth-free magnetic compounds",
+            "crystal structure verification",
+            "soft ferromagnetism",
+            "AI-driven materials discovery"
+          ],
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "R2-Dreamer: Redundancy-Reduced World Models without Decoders or Augmentation",
+          "summary": "A central challenge in image-based Model-Based Reinforcement Learning (MBRL) is to learn representations that distill essential information from irrelevant visual details. While promising, reconstruction-based methods often waste capacity on large task-irrelevant regions. Decoder-free methods instea",
+          "published": "2026-03-18T18:54:07Z",
+          "arxivId": "2603.18202v2",
+          "arxivUrl": "http://arxiv.org/abs/2603.18202v2",
+          "pdfUrl": "https://arxiv.org/pdf/2603.18202v2",
+          "authors": [
+            "Naoki Morihira",
+            "Amal Nahar",
+            "Kartik Bharadwaj",
+            "Yasuhiro Kato",
+            "Akinobu Hayashi",
+            "Tatsuya Harada"
+          ],
+          "authorCount": 6,
+          "affiliations": [],
+          "categories": [
+            "cs.LG",
+            "cs.AI",
+            "cs.RO"
+          ],
+          "comment": "20 pages, 12 figures, 2 tables",
+          "universities": [
+            "MIT",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            }
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "1HondaR&DCo.,Ltd. 2TheUniversityofTokyo 3RIKENAIP"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only",
+          "tldr": "[research paper] R2-Dreamer introduces a decoder-free, data-augmentation-free world model for image-based Model-Based Reinforcement Learning (MBRL) by replacing external data augmentation with an internal redundancy-reduction objective inspired by Barlow Twins. This objective minimizes information redundancy between image embeddings and latent states, enabling stable representation learning without overfitting to background details or task-irrelevant regions, resulting in competitive performance on DMC and Meta-World benchmarks and superior results on DMC-Subtle (with tiny task-relevant objects), while training 1.59× faster than DreamerV3 due to the absence of a decoder.",
+          "deepxivKeywords": [
+            "redundancy-reduction",
+            "decoder-free world models",
+            "self-supervised representation learning",
+            "information-theoretic regularization",
+            "RSSM-based MBRL"
+          ],
+          "githubUrl": "https://github.com/NM512/r2dreamer",
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "ResWM: Residual-Action World Model for Visual RL",
+          "summary": "Learning predictive world models from raw visual observations is a central challenge in reinforcement learning (RL), especially for robotics and continuous control. Conventional model-based RL frameworks directly condition future predictions on absolute actions, which makes optimization unstable: th",
+          "published": "2026-03-11T11:27:08Z",
+          "arxivId": "2603.11110v1",
+          "arxivUrl": "http://arxiv.org/abs/2603.11110v1",
+          "pdfUrl": "https://arxiv.org/pdf/2603.11110v1",
+          "authors": [
+            "Jseen Zhang",
+            "Gabriel Adineera",
+            "Jinzhou Tan",
+            "Jinoh Kim"
+          ],
+          "authorCount": 4,
+          "affiliations": [],
+          "categories": [
+            "cs.RO",
+            "cs.AI"
+          ],
+          "comment": "Submit KDD2026",
+          "universities": [
+            "MIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            }
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "UniversityofCalifornia,SanDiego TexasA&MUniversity-Commerce"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only",
+          "tldr": "[research paper] ResWM introduces a residual-action reformulation in model-based reinforcement learning, replacing absolute actions with incremental residual adjustments to enforce temporal smoothness and reduce control variance. The framework integrates an Observation Difference Encoder that models frame-level changes to extract dynamics-aware latent representations, enabling more stable, energy-efficient, and physically plausible action trajectories. Empirical results on the DeepMind Control Suite show superior sample efficiency, asymptotic returns, and control smoothness over Dreamer and TD-MPC, with improved stability critical for real-world robotics deployment.",
+          "deepxivKeywords": [
+            "residual action",
+            "observation difference encoding",
+            "latent dynamics",
+            "continuous control",
+            "action smoothness"
+          ],
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "Context Engineering: From Prompts to Corporate Multi-Agent Architecture",
+          "summary": "As artificial intelligence (AI) systems evolve from stateless chatbots to autonomous multi-step agents, prompt engineering (PE), the discipline of crafting individual queries, proves necessary but insufficient. This paper introduces context engineering (CE) as a standalone discipline concerned with ",
+          "published": "2026-03-10T12:58:31Z",
+          "arxivId": "2603.09619v2",
+          "arxivUrl": "http://arxiv.org/abs/2603.09619v2",
+          "pdfUrl": "https://arxiv.org/pdf/2603.09619v2",
+          "authors": [
+            "Vera V. Vishnyakova"
+          ],
+          "authorCount": 1,
+          "affiliations": [],
+          "categories": [
+            "cs.AI",
+            "cs.MA"
+          ],
+          "comment": "25 pages, 1 figure",
+          "universities": [
+            "CAS",
+            "HIT",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            }
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "HSE University, Moscow"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only",
+          "tldr": "[research paper] The paper introduces context engineering (CE) as a foundational discipline for multi-agent AI systems, proposing five production-grade context quality criteria—relevance, sufficiency, isolation, economy, and provenance—positioning context as the agent's operating system. It extends CE with intent engineering (IE) and specification engineering (SE) to address organizational goals and scalable policy enforcement, forming a cumulative four-level maturity pyramid where each layer builds upon the prior. The framework addresses real-world deployment gaps, citing enterprise data and the Klarna case to demonstrate that technical capability without intentional and structural alignment leads to strategic misalignment and operational failure.",
+          "deepxivKeywords": [
+            "context engineering",
+            "intent engineering",
+            "specification engineering",
+            "cumulative maturity pyramid",
+            "multi-agent systems"
+          ],
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "Decoupling Task and Behavior: A Two-Stage Reward Curriculum in Reinforcement Learning for Robotics",
+          "summary": "Deep Reinforcement Learning is a promising tool for robotic control, yet practical application is often hindered by the difficulty of designing effective reward functions. Real-world tasks typically require optimizing multiple objectives simultaneously, necessitating precise tuning of their weights ",
+          "published": "2026-03-05T12:34:27Z",
+          "arxivId": "2603.05113v1",
+          "arxivUrl": "http://arxiv.org/abs/2603.05113v1",
+          "pdfUrl": "https://arxiv.org/pdf/2603.05113v1",
+          "authors": [
+            "Kilian Freitag",
+            "Knut Åkesson",
+            "Morteza Haghir Chehreghani"
+          ],
+          "authorCount": 3,
+          "affiliations": [],
+          "categories": [
+            "cs.LG",
+            "cs.RO"
+          ],
+          "comment": "",
+          "universities": [
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            },
+            {
+              "id": "Safety",
+              "label": "安全",
+              "color": "#ef4444"
+            }
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "1ChalmersUniversityofTechnology"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "uni_only",
+          "tldr": "[research paper] A two-stage reward curriculum decouples task and behavioral objectives in reinforcement learning for robotics, enabling agents to first master task-specific goals via simplified rewards before gradually incorporating auxiliary behavioral terms (e.g., energy efficiency, smoothness). The method introduces sample reuse across phases via a dual-reward replay buffer, improving stability and robustness to reward weightings; ablation studies show that phase transition strategies and sample reuse are critical, with superior performance and generalization on DM Control Suite, ManiSkill3, and a mobile robot environment compared to direct full-reward training.",
+          "deepxivKeywords": [
+            "reward curriculum",
+            "multi-objective reinforcement learning",
+            "behavioral objectives",
+            "sample reuse",
+            "curriculum learning in robotics"
+          ],
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "Contextual Latent World Models for Offline Meta Reinforcement Learning",
+          "summary": "Offline meta-reinforcement learning seeks to learn policies that generalize across related tasks from fixed datasets. Context-based methods infer a task representation from transition histories, but learning effective task representations without supervision remains a challenge. In parallel, latent ",
+          "published": "2026-03-03T12:45:20Z",
+          "arxivId": "2603.02935v1",
+          "arxivUrl": "http://arxiv.org/abs/2603.02935v1",
+          "pdfUrl": "https://arxiv.org/pdf/2603.02935v1",
+          "authors": [
+            "Mohammadreza Nakheai",
+            "Aidan Scannell",
+            "Kevin Luck",
+            "Joni Pajarinen"
+          ],
+          "authorCount": 4,
+          "affiliations": [],
+          "categories": [
+            "cs.LG"
+          ],
+          "comment": "",
+          "universities": [
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            },
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#6b7280"
+            }
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "none",
+          "tldr": "[research paper] The paper proposes Self-Predictive Contextual Offline Meta-RL (SPC), a method that conditions latent world models on task representations inferred from transition histories, enforcing task-conditioned temporal consistency during context encoding. By jointly training a context encoder and a latent world model via contrastive learning and self-predictive dynamics, SPC learns task representations that capture long-horizon, task-specific dynamics rather than just task discrimination, leading to significantly improved generalization across MuJoCo, Contextual-DeepMind Control, and Meta-World benchmarks.",
+          "deepxivKeywords": [
+            "contextual latent world models",
+            "task-conditioned temporal consistency",
+            "offline meta-reinforcement learning",
+            "self-supervised representation learning",
+            "latent dynamics inference"
+          ],
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "Next Embedding Prediction Makes World Models Stronger",
+          "summary": "Capturing temporal dependencies is critical for model-based reinforcement learning (MBRL) in partially observable, high-dimensional domains. We introduce NE-Dreamer, a decoder-free MBRL agent that leverages a temporal transformer to predict next-step encoder embeddings from latent state sequences, d",
+          "published": "2026-03-03T09:04:28Z",
+          "arxivId": "2603.02765v1",
+          "arxivUrl": "http://arxiv.org/abs/2603.02765v1",
+          "pdfUrl": "https://arxiv.org/pdf/2603.02765v1",
+          "authors": [
+            "George Bredis",
+            "Nikita Balagansky",
+            "Daniil Gavrilov",
+            "Ruslan Rakhimov"
+          ],
+          "authorCount": 4,
+          "affiliations": [],
+          "categories": [
+            "cs.LG",
+            "cs.AI"
+          ],
+          "comment": "",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            }
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "none",
+          "tldr": "[research paper] NE-Dreamer introduces a decoder-free model-based reinforcement learning agent that replaces pixel reconstruction with next-embedding prediction using a causal temporal transformer, directly optimizing temporal predictive alignment in latent state sequences. By predicting the next encoder embedding from past embeddings and aligning it via redundancy-reduction (Barlow Twins), the method enforces long-horizon coherence without auxiliary supervision, achieving state-of-the-art performance on memory- and navigation-heavy DMLab tasks while matching or exceeding DreamerV3 on standard control benchmarks.",
+          "deepxivKeywords": [
+            "next-embedding prediction",
+            "temporal transformer",
+            "representation learning",
+            "latent dynamics",
+            "causal sequence modeling"
+          ],
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "Real-Time Generative Policy via Langevin-Guided Flow Matching for Autonomous Driving",
+          "summary": "Reinforcement learning (RL) is a fundamental methodology in autonomous driving systems, where generative policies exhibit considerable potential by leveraging their ability to model complex distributions to enhance exploration. However, their inherent high inference latency severely impedes their de",
+          "published": "2026-03-03T05:35:53Z",
+          "arxivId": "2603.02613v1",
+          "arxivUrl": "http://arxiv.org/abs/2603.02613v1",
+          "pdfUrl": "https://arxiv.org/pdf/2603.02613v1",
+          "authors": [
+            "Tianze Zhu",
+            "Yinuo Wang",
+            "Wenjun Zou",
+            "Tianyi Zhang",
+            "Likun Wang",
+            "Letian Tao",
+            "Feihong Zhang",
+            "Yao Lyu"
+          ],
+          "authorCount": 9,
+          "affiliations": [],
+          "categories": [
+            "cs.LG",
+            "cs.RO"
+          ],
+          "comment": "",
+          "universities": [
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            }
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "none",
+          "tldr": "[research paper] DACER-F introduces a dynamic target guidance mechanism using Langevin dynamics to sample action distributions from an energy-based Q-function target, enabling flow matching to learn real-time, low-latency policies in online reinforcement learning. The method generates exploratory yet high-Q-value actions without requiring a stationary target distribution, achieving 28–34% higher rewards than DACER and DSAC in driving simulations while reducing inference time by 84%, and outperforms prior methods on DMC benchmarks with strong scalability.",
+          "deepxivKeywords": [
+            "flow matching",
+            "dynamic target distribution",
+            "Langevin dynamics",
+            "real-time reinforcement learning",
+            "energy-based policy modeling"
+          ],
+          "deepxivEnhanced": true
+        }
+      ],
+      "count": 15,
+      "uniCollabCount": 1,
+      "hkCollabCount": 1
     },
     "baidu": {
       "company": "百度",
@@ -24196,7 +25301,7 @@
         }
       ],
       "count": 3,
-      "uniCollabCount": 0,
+      "uniCollabCount": 2,
       "hkCollabCount": 0,
       "paperCount": 1
     }

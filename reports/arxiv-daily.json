@@ -1,7 +1,7 @@
 {
   "generatedAt": "2026-04-16T10:16:07.470709Z",
   "since": "2026-03-01",
-  "totalPapers": 434,
+  "totalPapers": 432,
   "totalUniCollab": 106,
   "totalHKCollab": 16,
   "companies": {
@@ -22838,65 +22838,6 @@
       "icon": "🧠",
       "papers": [
         {
-          "title": "HiVLA: A Visual-Grounded-Centric Hierarchical Embodied Manipulation System",
-          "summary": "We propose HiVLA, a visual-grounded-centric hierarchical framework that explicitly decouples high-level semantic planning from low-level motor control. HiVLA significantly outperforms state-of-the-art end-to-end baselines on long-horizon skill composition and fine manipulation.",
-          "published": "2026-04-15T17:50:07Z",
-          "arxivId": "2604.14125",
-          "arxivUrl": "https://arxiv.org/abs/2604.14125",
-          "pdfUrl": "https://arxiv.org/pdf/2604.14125",
-          "authors": [
-            "Tianshuo Yang",
-            "Guanyu Chen",
-            "Yutian Chen",
-            "Zhixuan Liang",
-            "Yitian Liu",
-            "Zanxin Chen",
-            "Chunpu Xu",
-            "Haotian Liang",
-            "Jiangmiao Pang",
-            "Yao Mu",
-            "Ping Luo"
-          ],
-          "authorCount": 11,
-          "affiliations": [],
-          "categories": [
-            "cs.CV",
-            "cs.AI",
-            "cs.RO"
-          ],
-          "comment": "",
-          "universities": [
-            "HKU",
-            "CUHK",
-            "SJTU"
-          ],
-          "hkUniversities": [
-            "HKU",
-            "CUHK"
-          ],
-          "hasUniCollab": true,
-          "hasHKCollab": true,
-          "directions": [
-            {
-              "id": "Agent",
-              "label": "Agent",
-              "color": "#f97316"
-            },
-            {
-              "id": "Vision",
-              "label": "视觉",
-              "color": "#ec4899"
-            },
-            {
-              "id": "Multimodal",
-              "label": "多模态",
-              "color": "#a855f7"
-            }
-          ],
-          "collabConfidence": "confirmed",
-          "pdfVerified": false
-        },
-        {
           "title": "GIRL: Generative Imagination Reinforcement Learning via Information-Theoretic Hallucination Control",
           "summary": "Model-based reinforcement learning (MBRL) improves sample efficiency by optimizing policies inside imagined rollouts, but long-horizon planning degrades when model errors compound and imagined trajectories drift off the training manifold. We introduce GIRL (Generative Imagination Reinforcement Learn",
           "published": "2026-04-08T17:14:21Z",
@@ -23736,8 +23677,9 @@
         }
       ],
       "count": 15,
-      "uniCollabCount": 1,
-      "hkCollabCount": 1
+      "uniCollabCount": 0,
+      "hkCollabCount": 0,
+      "paperCount": 14
     },
     "baidu": {
       "company": "百度",
@@ -25304,6 +25246,74 @@
       "uniCollabCount": 2,
       "hkCollabCount": 0,
       "paperCount": 1
+    },
+    "shanghai_ai_lab": {
+      "name": "上海AI Lab",
+      "icon": "🔭",
+      "paperCount": 1,
+      "uniCollabCount": 1,
+      "hkCollabCount": 1,
+      "papers": [
+        {
+          "title": "HiVLA: A Visual-Grounded-Centric Hierarchical Embodied Manipulation System",
+          "summary": "We propose HiVLA, a visual-grounded-centric hierarchical framework that explicitly decouples high-level semantic planning from low-level motor control. HiVLA significantly outperforms state-of-the-art end-to-end baselines on long-horizon skill composition and fine manipulation.",
+          "published": "2026-04-15T17:50:07Z",
+          "arxivId": "2604.14125",
+          "arxivUrl": "https://arxiv.org/abs/2604.14125",
+          "pdfUrl": "https://arxiv.org/pdf/2604.14125",
+          "authors": [
+            "Tianshuo Yang",
+            "Guanyu Chen",
+            "Yutian Chen",
+            "Zhixuan Liang",
+            "Yitian Liu",
+            "Zanxin Chen",
+            "Chunpu Xu",
+            "Haotian Liang",
+            "Jiangmiao Pang",
+            "Yao Mu",
+            "Ping Luo"
+          ],
+          "authorCount": 11,
+          "affiliations": [],
+          "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.RO"
+          ],
+          "comment": "",
+          "universities": [
+            "HKU",
+            "CUHK",
+            "SJTU"
+          ],
+          "hkUniversities": [
+            "HKU",
+            "CUHK"
+          ],
+          "hasUniCollab": true,
+          "hasHKCollab": true,
+          "directions": [
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "Vision",
+              "label": "视觉",
+              "color": "#ec4899"
+            },
+            {
+              "id": "Multimodal",
+              "label": "多模态",
+              "color": "#a855f7"
+            }
+          ],
+          "collabConfidence": "confirmed",
+          "pdfVerified": false
+        }
+      ]
     }
   }
 }

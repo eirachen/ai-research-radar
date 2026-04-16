@@ -472,6 +472,10 @@ COMPANY_QUERIES = {
         "keywords": ['"iFLYTEK"', '"IFLYTEK"', '"Xunfei"'],
         "speech_only": True
     },
+    "shanghai_ai_lab": {
+        "name": "上海AI Lab", "icon": "🔭",
+        "keywords": ['"Shanghai AI Laboratory"', '"Shanghai Artificial Intelligence Laboratory"', '"Shanghai AI Lab"', '"Pjlab"']
+    },
 }
 
 ARXIV_API = "https://export.arxiv.org/api/query"

@@ -1,67 +1,14 @@
 {
-  "generatedAt": "2026-04-16T10:00:54.000265Z",
+  "generatedAt": "2026-04-16T10:16:07.470709Z",
   "since": "2026-03-01",
   "totalPapers": 434,
-  "totalUniCollab": 117,
+  "totalUniCollab": 106,
   "totalHKCollab": 16,
   "companies": {
     "bytedance": {
       "company": "字节Seed",
       "icon": "🌱",
       "papers": [
-        {
-          "title": "SparseBalance: Load-Balanced Long Context Training with Dynamic Sparse Attention",
-          "summary": "Sparse attention alleviates computational bottlenecks in long-context LLM training but exhibits extreme heterogeneity in distributed training. We propose SparseBalance, a novel algorithm-system co-design framework achieving up to 1.33x end-to-end training speedup.",
-          "published": "2026-04-15T13:18:07Z",
-          "arxivId": "2604.13847",
-          "arxivUrl": "https://arxiv.org/abs/2604.13847",
-          "pdfUrl": "https://arxiv.org/pdf/2604.13847",
-          "authors": [
-            "Hongtao Xu",
-            "Jianchao Tan",
-            "Yuxuan Hu",
-            "Pengju Lu",
-            "Hongyu Wang",
-            "Xunliang Cai",
-            "Mingzhen Li",
-            "Weile Jia"
-          ],
-          "authorCount": 11,
-          "affiliations": [
-            "ByteDance"
-          ],
-          "categories": [
-            "cs.LG",
-            "cs.AI"
-          ],
-          "comment": "",
-          "universities": [
-            "University of Chinese Academy of Sciences"
-          ],
-          "hkUniversities": [],
-          "hasUniCollab": true,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "Infra",
-              "label": "Infra",
-              "color": "#22c55e"
-            },
-            {
-              "id": "LLM",
-              "label": "LLM",
-              "color": "#3b82f6"
-            }
-          ],
-          "collabConfidence": "uni_only",
-          "pdfVerified": true,
-          "pdfCompanies": [],
-          "pdfUnis": [
-            "1School of Advanced Interdisciplinary Sciences, University of Chinese Academy of"
-          ],
-          "pdfHKUnis": [],
-          "deepxivEnhanced": true
-        },
         {
           "title": "Seedance 2.0: Advancing Video Generation for World Complexity",
           "summary": "Seedance 2.0 is a new native multimodal audio-video generation model. It adopts a unified, efficient, large-scale multimodal joint audio-video generation architecture supporting text, image, audio and video inputs with comprehensive multimodal content reference and editing capabilities.",
@@ -118,6 +65,59 @@
             "bytedance"
           ],
           "pdfUnis": [],
+          "pdfHKUnis": [],
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "SparseBalance: Load-Balanced Long Context Training with Dynamic Sparse Attention",
+          "summary": "Sparse attention alleviates computational bottlenecks in long-context LLM training but exhibits extreme heterogeneity in distributed training. We propose SparseBalance, a novel algorithm-system co-design framework achieving up to 1.33x end-to-end training speedup.",
+          "published": "2026-04-15T13:18:07Z",
+          "arxivId": "2604.13847",
+          "arxivUrl": "https://arxiv.org/abs/2604.13847",
+          "pdfUrl": "https://arxiv.org/pdf/2604.13847",
+          "authors": [
+            "Hongtao Xu",
+            "Jianchao Tan",
+            "Yuxuan Hu",
+            "Pengju Lu",
+            "Hongyu Wang",
+            "Xunliang Cai",
+            "Mingzhen Li",
+            "Weile Jia"
+          ],
+          "authorCount": 11,
+          "affiliations": [
+            "ByteDance"
+          ],
+          "categories": [
+            "cs.LG",
+            "cs.AI"
+          ],
+          "comment": "",
+          "universities": [
+            "University of Chinese Academy of Sciences"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            }
+          ],
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "1School of Advanced Interdisciplinary Sciences, University of Chinese Academy of"
+          ],
           "pdfHKUnis": [],
           "deepxivEnhanced": true
         },
@@ -186,8 +186,7 @@
             "ShanghaiJiaoTongUniversity ShanghaiJiaoTongUniversity TianjinUniversity",
             "ShanghaiJiaoTongUniversity, StateKeyLaboratoryofComplex& ShanghaiInnovationInsti"
           ],
-          "pdfHKUnis": [],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "Long-Horizon Streaming Video Generation via Hybrid Attention with Decoupled Distribution",
@@ -983,58 +982,6 @@
           "deepxivEnhanced": true
         },
         {
-          "title": "YOCO++: Enhancing YOCO with KV Residual Connections for Efficient LLM Inference",
-          "summary": "Cross-layer key-value (KV) compression has proven effective for efficient LLM inference. We propose YOCO++, adding weighted residual connections to YOCO. At 50% KV cache compression, YOCO++ achieves state-of-the-art and surpasses standard Transformer.",
-          "published": "2026-04-15T07:05:14Z",
-          "arxivId": "2604.13556",
-          "arxivUrl": "https://arxiv.org/abs/2604.13556",
-          "pdfUrl": "https://arxiv.org/pdf/2604.13556",
-          "authors": [
-            "You Wu",
-            "Ziheng Chen",
-            "Yizhen Zhang",
-            "Haoyi Wu",
-            "Chengting Yu",
-            "Yuchi Xu",
-            "Wenbo Su",
-            "Bo Zheng",
-            "Kewei Tu"
-          ],
-          "authorCount": 9,
-          "affiliations": [
-            "Alibaba DAMO Academy",
-            "ShanghaiTech University"
-          ],
-          "categories": [
-            "cs.CL"
-          ],
-          "comment": "",
-          "universities": [
-            "ShanghaiTech University"
-          ],
-          "hkUniversities": [],
-          "hasUniCollab": true,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "Infra",
-              "label": "Infra",
-              "color": "#22c55e"
-            },
-            {
-              "id": "LLM",
-              "label": "LLM",
-              "color": "#3b82f6"
-            }
-          ],
-          "collabConfidence": "mentioned",
-          "pdfVerified": true,
-          "pdfCompanies": [],
-          "pdfUnis": [],
-          "pdfHKUnis": [],
-          "deepxivEnhanced": true
-        },
-        {
           "title": "UI-Copilot: Advancing Long-Horizon GUI Automation via Tool-Integrated Policy Optimization",
           "summary": "MLLM-based GUI agents have demonstrated strong capabilities in complex user interface interaction tasks. However, long-horizon scenarios remain challenging, as these agents are burdened with tasks beyond their intrinsic capabilities, suffering from memory degradation, progress confusion, and math ha",
           "published": "2026-04-15T12:55:46Z",
@@ -1084,8 +1031,7 @@
           "pdfUnis": [
             "1ZhejiangUniversity 2Apple 3Tencent"
           ],
-          "pdfHKUnis": [],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "The cognitive companion: a lightweight parallel monitoring architecture for detecting and recovering from reasoning degradation in LLM agents",
@@ -1135,8 +1081,7 @@
           "pdfUnis": [
             "Dublin,Ireland CitiPolytechnicInstitute"
           ],
-          "pdfHKUnis": [],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "Syn-TurnTurk: A Synthetic Dataset for Turn-Taking Prediction in Turkish Dialogues",
@@ -1190,8 +1135,7 @@
             "Syn-TurnTurk: A Synthetic Dataset for Turn-Taking",
             "IEEE ICASI 2026. [4]. Understanding the underlying structure of speech is es-"
           ],
-          "pdfHKUnis": [],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "AVID: A Benchmark for Omni-Modal Audio-Visual Inconsistency Understanding via Agent-Driven Construction",
@@ -1254,6 +1198,57 @@
           "pdfUnis": [
             "ShanghaiJiaoTongUniversity AntGroup TheChineseUniversityofHongKong"
           ],
+          "pdfHKUnis": []
+        },
+        {
+          "title": "YOCO++: Enhancing YOCO with KV Residual Connections for Efficient LLM Inference",
+          "summary": "Cross-layer key-value (KV) compression has proven effective for efficient LLM inference. We propose YOCO++, adding weighted residual connections to YOCO. At 50% KV cache compression, YOCO++ achieves state-of-the-art and surpasses standard Transformer.",
+          "published": "2026-04-15T07:05:14Z",
+          "arxivId": "2604.13556",
+          "arxivUrl": "https://arxiv.org/abs/2604.13556",
+          "pdfUrl": "https://arxiv.org/pdf/2604.13556",
+          "authors": [
+            "You Wu",
+            "Ziheng Chen",
+            "Yizhen Zhang",
+            "Haoyi Wu",
+            "Chengting Yu",
+            "Yuchi Xu",
+            "Wenbo Su",
+            "Bo Zheng",
+            "Kewei Tu"
+          ],
+          "authorCount": 9,
+          "affiliations": [
+            "Alibaba DAMO Academy",
+            "ShanghaiTech University"
+          ],
+          "categories": [
+            "cs.CL"
+          ],
+          "comment": "",
+          "universities": [
+            "ShanghaiTech University"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            }
+          ],
+          "collabConfidence": "mentioned",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
           "pdfHKUnis": [],
           "deepxivEnhanced": true
         },
@@ -1306,8 +1301,7 @@
           "pdfUnis": [
             "HarvardUniversity HarvardUniversity StanfordUniversity"
           ],
-          "pdfHKUnis": [],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "See, Point, Refine: Multi-Turn Approach to GUI Grounding with Visual Feedback",
@@ -1358,8 +1352,7 @@
             "1Microsoft 2CarnegieMellonUniversity",
             "HimangiMittal1,2∗,GauravMittal1,NelsonDanielTroncoso1,YuHu1"
           ],
-          "pdfHKUnis": [],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "QuarkMedSearch: A Long-Horizon Deep Search Agent for Exploring Medical Intelligence",
@@ -1415,8 +1408,7 @@
             "1QwenApplicationsBusinessGroup,Alibaba,2ShanghaiJiaoTongUniversity",
             "Asagenticfoundationmodelscontinuetoevolve,howtofurtherimprovetheirperformanceinv"
           ],
-          "pdfHKUnis": [],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "IDEA: An Interpretable and Editable Decision-Making Framework for LLMs via Verbal-to-Numeric Calibration",
@@ -1469,8 +1461,7 @@
           "pdfHKUnis": [
             "HKUST",
             "HKU"
-          ],
-          "deepxivEnhanced": true
+          ]
         },
         {
           "title": "Latent Planning Emerges with Scale",
@@ -1516,8 +1507,7 @@
           "pdfUnis": [
             "ILLC,UniversityofAmsterdam Anthropic"
           ],
-          "pdfHKUnis": [],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "ReflectCAP: Detailed Image Captioning with Reflective Memory",
@@ -1569,8 +1559,7 @@
           "pdfUnis": [
             "1 IPAI, Seoul National University"
           ],
-          "pdfHKUnis": [],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "Self-Adversarial One Step Generation via Condition Shifting",
@@ -1618,8 +1607,7 @@
           "pdfUnis": [
             "1WestlakeUniversity 2ZhejiangUniversity 3ShanghaiInnovationInstitute 4PekingUniv"
           ],
-          "pdfHKUnis": [],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "SOLARIS: Speculative Offloading of Latent-bAsed Representation for Inference Scaling",
@@ -1671,8 +1659,7 @@
             "alibaba"
           ],
           "pdfUnis": [],
-          "pdfHKUnis": [],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "Narrative over Numbers: The Identifiable Victim Effect and its Amplification Under Alignment and Reasoning in Large Language Models",
@@ -1721,8 +1708,7 @@
           "pdfUnis": [
             "Islamic University of Technology, Board Bazar, Gazipur, 1704, Dhaka, Bangladesh."
           ],
-          "pdfHKUnis": [],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "Robust Explanations for User Trust in Enterprise NLP Systems",
@@ -1777,8 +1763,7 @@
           "pdfVerified": true,
           "pdfCompanies": [],
           "pdfUnis": [],
-          "pdfHKUnis": [],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "LottieGPT: Tokenizing Vector Animation for Autoregressive Generation",
@@ -1825,11 +1810,6 @@
               "id": "Multimodal",
               "label": "多模态",
               "color": "#a855f7"
-            },
-            {
-              "id": "RAG",
-              "label": "RAG",
-              "color": "#6b7280"
             }
           ],
           "collabConfidence": "uni_only",
@@ -1841,16 +1821,7 @@
             "6GuangdongLaboratoryofArtificialIntelligenceandDigitalEconomy(SZ)",
             "infinitely,andenabledirecteditingofshapesandmotion.Thesecapabilitiesareimpossibl"
           ],
-          "pdfHKUnis": [],
-          "tldr": "[research paper] LottieGPT introduces the first autoregressive framework for native vector animation generation by designing a novel Lottie Tokenizer that encodes hierarchical geometric primitives, transforms, keyframes, and temporal dynamics into a compact token stream, enabling scalable and semantically editable animation synthesis. The framework is powered by LottieAnimation-660K—the largest curated vector animation dataset—combined with a fine-tuned Qwen-VL model, achieving state-of-the-art performance on SVG generation and demonstrating strong generalization across diverse animation styles and input modalities.",
-          "deepxivKeywords": [
-            "vector animation tokenization",
-            "autoregressive structured generation",
-            "Lottie format encoding",
-            "temporal geometry modeling",
-            "hierarchical motion representation"
-          ],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "Eliciting Medical Reasoning with Knowledge-enhanced Data Synthesis: A Semi-Supervised Reinforcement Learning Approach",
@@ -1905,8 +1876,7 @@
             "6InstituteofArtificialIntelligenceforMedicine,ShanghaiJiaoTongUniversitySchoolof",
             "1CollegeofComputerScienceandArtificialIntelligence,FudanUniversity 2ShanghaiAILa"
           ],
-          "pdfHKUnis": [],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "PaperScope: A Multi-Modal Multi-Document Benchmark for Agentic Deep Research Across Massive Scientific Papers",
@@ -1949,11 +1919,6 @@
               "id": "Data",
               "label": "数据",
               "color": "#78716c"
-            },
-            {
-              "id": "LLM",
-              "label": "LLM",
-              "color": "#6b7280"
             }
           ],
           "collabConfidence": "uni_only",
@@ -1963,17 +1928,7 @@
             "2BeijingAcademyofArtificialIntelligence,Beijing,China",
             "1GaolingSchoolofArtificialIntelligence,RenminUniversityofChina,Beijing,China"
           ],
-          "pdfHKUnis": [],
-          "tldr": "[research paper] PaperScope introduces a multi-modal, multi-document benchmark for agentic deep research in scientific papers, leveraging a knowledge graph of over 2,000 AI papers to enable structured, semantically dense, cross-document reasoning. It evaluates systems on four tasks—reasoning, topic induction, summarization, and problem solving—across heterogeneous sources (text, tables, figures, formulas), revealing significant performance gaps in multi-source retrieval, multimodal integration, and long-context synthesis, even among leading Deep Research agents like OpenAI and Tongyi.",
-          "deepxivKeywords": [
-            "agentic deep research",
-            "multi-document retrieval",
-            "knowledge graph grounding",
-            "multi-modal scientific reasoning",
-            "cross-source information synthesis"
-          ],
-          "githubUrl": "https://github.com/CherYou/PaperScope.",
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "MathAgent: Adversarial Evolution of Constraint Graphs for Mathematical Reasoning Data Synthesis",
@@ -2032,8 +1987,7 @@
             "1HuaweiLargeModelDataTechnologyLab 2TsinghuaUniversity",
             "3HarbinInstituteofTechnology,Shenzhen 4KyotoUniversity"
           ],
-          "pdfHKUnis": [],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "BITS Pilani at SemEval-2026 Task 9: Structured Supervised Fine-Tuning with DPO Refinement for Polarization Detection",
@@ -2080,16 +2034,7 @@
           "pdfUnis": [
             "1BirlaInstituteofTechnologyandScience,Pilani,India"
           ],
-          "pdfHKUnis": [],
-          "tldr": "[research paper] A two-stage method for multilingual polarization detection in social media text combines structured supervised fine-tuning of Qwen 2.5-7B-Instruct via LoRA with a rigid JSON-like template (target, claim type, manifestation checklist, justification) to enforce interpretable, consistent outputs across languages and events. DPO refinement with automatically generated preference pairs reduces false negatives by discouraging conservative predictions, improving recall from 0.5085 to 0.7797 and macro-F1 by 5 points on the English development set without manual annotation.",
-          "deepxivKeywords": [
-            "structured output schema",
-            "direct preference optimization (DPO)",
-            "multilingual polarization detection",
-            "parameter-efficient fine-tuning (LoRA)",
-            "false negative reduction"
-          ],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "Persona Non Grata: Single-Method Safety Evaluation Is Incomplete for Persona-Imbued LLMs",
@@ -2149,8 +2094,7 @@
             "Persona Non Grata: Single-Method Safety Evaluation Is Incom-",
             "{wenkail}@cs.cmu.edu"
           ],
-          "pdfHKUnis": [],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "Shared Emotion Geometry Across Small Language Models: A Cross-Architecture Study of Representation, Behavior, and Methodological Confounds",
@@ -2203,16 +2147,7 @@
             "Daegu Gyeongbuk Institute of Science and Technology (DGIST)",
             "Department of Electrical Engineering and Computer Science"
           ],
-          "pdfHKUnis": [],
-          "tldr": "[research paper] Small language models across diverse architectures exhibit a shared, stable emotion vector geometry in activation space, independent of behavioral profiles or model size, with geometric maturity increasing with scale. RLHF only reshapes immature representations (e.g., Gemma-3 1B), while mature models show negligible changes; methodological artifacts—such as extraction mode, numerical precision, and backend differences—systematically distort cross-model comparisons, revealing four distinct layers of bias that must be controlled for valid inference.",
-          "deepxivKeywords": [
-            "emotion geometry",
-            "representation stability",
-            "residual stream anisotropy",
-            "cross-architecture generalization",
-            "methodological confounds"
-          ],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "FineEdit: Fine-Grained Image Edit with Bounding Box Guidance",
@@ -2265,8 +2200,7 @@
             "huawei"
           ],
           "pdfUnis": [],
-          "pdfHKUnis": [],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "Your Model Diversity, Not Method, Determines Reasoning Strategy",
@@ -2292,11 +2226,11 @@
           ],
           "comment": "",
           "universities": [
-            "MIT",
-            "ETH"
+            "ETH",
+            "MIT"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -2315,9 +2249,13 @@
               "color": "#64748b"
             }
           ],
-          "collabConfidence": "mentioned",
-          "pdfVerified": false,
-          "deepxivEnhanced": true
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "YOUR MODEL DIVERSITY, NOT METHOD, DETER-"
+          ],
+          "pdfHKUnis": []
         },
         {
           "title": "Teaching Language Models How to Code Like Learners: Conversational Serialization for Student Simulation",
@@ -2340,11 +2278,11 @@
           ],
           "comment": "8 pages, 2 figures, 2 tables. Accepted to Educational Data Mining 2026",
           "universities": [
-            "ETH",
-            "Mila"
+            "Mila",
+            "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -2363,18 +2301,13 @@
               "color": "#eab308"
             }
           ],
-          "collabConfidence": "mentioned",
-          "pdfVerified": false,
-          "tldr": "[research paper] The paper proposes a method to train open-weight language models to simulate authentic student debugging behavior by serializing real student log data into conversational dialogues, where code submissions and automated feedback form alternating turns. It introduces a training pipeline combining supervised fine-tuning with preference optimization (via Direct and Group Relative methods) to align models with iterative debugging processes, outperforming code-only and prompted LLM baselines in functional alignment and code similarity on real Python programming assignment data.",
-          "deepxivKeywords": [
-            "conversational serialization",
-            "student-environment interaction",
-            "debugging behavior simulation",
-            "preference optimization",
-            "process data modeling"
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "AaltoUniversity AaltoUniversity AaltoUniversity"
           ],
-          "githubUrl": "https://github.com/KoutchemeCharles/edm-conv-ser",
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "Seeing No Evil: Blinding Large Vision-Language Models to Safety Instructions via Adversarial Attention Hijacking",
@@ -2585,16 +2518,7 @@
           "pdfUnis": [
             "Max Planck Institute for Software Systems (MPI-SWS), Saarbrücken, Germany"
           ],
-          "pdfHKUnis": [],
-          "tldr": "[research paper] Introduces a three-agent architecture (diagnosis, planning, verification) with a typed instruction set architecture (ISA) and a transactional microkernel to enable safe, parallel recovery in dynamic microservice systems. Recovery boundaries are inferred online from distributed traces to account for runtime dependency shifts, reducing agent-caused harm by 95% in simulation and achieving 0% harm in live experiments through scoped, rollback-enabled actuation. The core innovation lies in separating planning from actuation with explicit side-effect semantics, ensuring safety via formal constraints rather than heuristic runbooks or untrusted LLM agents.",
-          "deepxivKeywords": [
-            "agentic memory",
-            "online recovery boundary inference",
-            "transactional actuation",
-            "dynamic dependency graphs",
-            "typed instruction set architecture"
-          ],
-          "deepxivEnhanced": true
+          "pdfHKUnis": []
         },
         {
           "title": "SPASM: Stable Persona-driven Agent Simulation for Multi-turn Dialogue Generation",
@@ -7666,7 +7590,7 @@
         }
       ],
       "count": 113,
-      "uniCollabCount": 23,
+      "uniCollabCount": 21,
       "hkCollabCount": 6
     },
     "deepseek": {
@@ -7719,7 +7643,10 @@
             }
           ],
           "collabConfidence": "mentioned",
-          "pdfVerified": false
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": []
         },
         {
           "title": "IDEA: An Interpretable and Editable Decision-Making Framework for LLMs via Verbal-to-Numeric Calibration",
@@ -7760,8 +7687,19 @@
               "color": "#78716c"
             }
           ],
-          "collabConfidence": "mentioned",
-          "pdfVerified": false
+          "collabConfidence": "confirmed",
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "huawei"
+          ],
+          "pdfUnis": [
+            "{yhe720, ywu240}@connect.hkust-gz.edu.cn, jiang.yuxin2@huawei.com,",
+            "1TheHongKongUniversityofScienceandTechnology(Guangzhou)"
+          ],
+          "pdfHKUnis": [
+            "HKUST",
+            "HKU"
+          ]
         },
         {
           "title": "DeepSeek Robustness Against Semantic-Character Dual-Space Mutated Prompt Injection",
@@ -7783,11 +7721,8 @@
           ],
           "comment": "Preprint",
           "universities": [
-            "USC",
-            "MIT",
-            "CAS",
-            "NYU",
-            "ETH"
+            "Jinan University",
+            "UIC"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -7810,7 +7745,14 @@
             }
           ],
           "collabConfidence": "mentioned",
-          "pdfVerified": false
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "deepseek"
+          ],
+          "pdfUnis": [
+            "Junyu Ren, Xingjian Pan, Wensheng Gan*, Philip S. Yu, Life Fellow, IEEE"
+          ],
+          "pdfHKUnis": []
         },
         {
           "title": "Beyond Single-Dimension Novelty: How Combinations of Theory, Method, and Results-based Novelty Shape Scientific Impact",
@@ -7839,7 +7781,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -7853,8 +7795,15 @@
               "color": "#78716c"
             }
           ],
-          "collabConfidence": "mentioned",
-          "pdfVerified": false
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "2 Department of Information Management, Nanjing University of Science and Techno",
+            "Theory, Method, and Results-based Novelty Shape",
+            "1 School of Management, Anhui University, Hefei 230039, China"
+          ],
+          "pdfHKUnis": []
         },
         {
           "title": "Cooperative Memory Paging with Keyword Bookmarks for Long-Horizon LLM Conversations",
@@ -7897,7 +7846,10 @@
             }
           ],
           "collabConfidence": "mentioned",
-          "pdfVerified": false
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": []
         },
         {
           "title": "Narrative over Numbers: The Identifiable Victim Effect and its Amplification Under Alignment and Reasoning in Large Language Models",
@@ -7921,7 +7873,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -7940,8 +7892,13 @@
               "color": "#78716c"
             }
           ],
-          "collabConfidence": "mentioned",
-          "pdfVerified": false
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Islamic University of Technology, Board Bazar, Gazipur, 1704, Dhaka, Bangladesh."
+          ],
+          "pdfHKUnis": []
         },
         {
           "title": "Solving Physics Olympiad via Reinforcement Learning on Physics Simulators",
@@ -7972,7 +7929,7 @@
             "MIT"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -7991,8 +7948,15 @@
               "color": "#eab308"
             }
           ],
-          "collabConfidence": "mentioned",
-          "pdfVerified": false
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "CarnegieMellonUniversity Lambda",
+            "Figure1 | Wepresent SIM2REASON: amethodforturningphysicssimulatorsintoscalable",
+            "What is the momentum of the Zero-Shot generalization to"
+          ],
+          "pdfHKUnis": []
         },
         {
           "title": "Three Roles, One Model: Role Orchestration at Inference Time to Close the Performance Gap Between Small and Large Agents",
@@ -8017,7 +7981,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -8036,8 +8000,14 @@
               "color": "#78716c"
             }
           ],
-          "collabConfidence": "mentioned",
-          "pdfVerified": false
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "2NewYorkUniversity,NewYork,NY,USA",
+            "*pleasedirectcorrespondenceto: Dr. AntoniosSaravanos(saravanos@nyu.edu)"
+          ],
+          "pdfHKUnis": []
         },
         {
           "title": "Three Roles, One Model: Role Orchestration at Inference Time to Close the Performance Gap Between Small and Large Agents",
@@ -8062,7 +8032,7 @@
             "ETH"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -8081,9 +8051,15 @@
               "color": "#f97316"
             }
           ],
-          "collabConfidence": "mentioned",
-          "pdfVerified": false,
-          "deepxivEnhanced": true
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "deepxivEnhanced": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "2NewYorkUniversity,NewYork,NY,USA",
+            "*pleasedirectcorrespondenceto: Dr. AntoniosSaravanos(saravanos@nyu.edu)"
+          ],
+          "pdfHKUnis": []
         },
         {
           "title": "Persona Non Grata: Single-Method Safety Evaluation Is Incomplete for Persona-Imbued LLMs",
@@ -8106,11 +8082,11 @@
           "comment": "",
           "universities": [
             "ETH",
-            "HIT",
-            "USC"
+            "USC",
+            "HIT"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -8135,8 +8111,15 @@
               ]
             }
           ],
-          "collabConfidence": "mentioned",
-          "pdfVerified": false
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "{wenkail}@cs.cmu.edu",
+            "Persona Non Grata: Single-Method Safety Evaluation Is Incom-",
+            "1CarnegieMellonUniversity 2FujitsuResearchofAmericaInc."
+          ],
+          "pdfHKUnis": []
         },
         {
           "title": "AOP-Smart: A RAG-Enhanced Large Language Model Framework for Adverse Outcome Pathway Analysis",
@@ -8157,11 +8140,11 @@
           ],
           "comment": "",
           "universities": [
-            "MIT",
-            "ETH"
+            "ETH",
+            "MIT"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -8175,8 +8158,13 @@
               "color": "#3b82f6"
             }
           ],
-          "collabConfidence": "mentioned",
-          "pdfVerified": false
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "1Nanyang Normal University, Nanyang, China"
+          ],
+          "pdfHKUnis": []
         },
         {
           "title": "Do LLMs Build Spatial World Models? Evidence from Grid-World Maze Tasks",
@@ -8201,7 +8189,7 @@
             "MIT"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -8220,8 +8208,13 @@
               "color": "#64748b"
             }
           ],
-          "collabConfidence": "mentioned",
-          "pdfVerified": false
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "UniversityofNotreDame ColumbiaUniversity"
+          ],
+          "pdfHKUnis": []
         },
         {
           "title": "MoEITS: A Green AI approach for simplifying MoE-LLMs",
@@ -8248,7 +8241,7 @@
             "HIT"
           ],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -8267,8 +8260,13 @@
               "color": "#78716c"
             }
           ],
-          "collabConfidence": "mentioned",
-          "pdfVerified": false
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "DiCITS,iMUDS,DaSCI UniversityofGranada,Granada,Spain18071"
+          ],
+          "pdfHKUnis": []
         },
         {
           "title": "CARO: Chain-of-Analogy Reasoning Optimization for Robust Content Moderation",
@@ -8342,11 +8340,11 @@
           ],
           "comment": "11 pages, 5 figures, 8 tables. Submitted to IEEE Transactions on Parallel and Distributed Systems (TPDS)",
           "universities": [
-            "ANU",
+            "ETH",
             "MIT",
-            "CAS",
             "HIT",
-            "ETH"
+            "ANU",
+            "CAS"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -8446,8 +8444,8 @@
           ],
           "comment": "Accepted to ACL 2026 main conference",
           "universities": [
-            "MIT",
-            "ETH"
+            "ETH",
+            "MIT"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -12403,7 +12401,7 @@
         }
       ],
       "count": 82,
-      "uniCollabCount": 23,
+      "uniCollabCount": 14,
       "hkCollabCount": 3
     },
     "moonshot": {
@@ -13550,8 +13548,8 @@
           ],
           "comment": "",
           "universities": [
-            "MIT",
-            "ETH"
+            "ETH",
+            "MIT"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -13641,8 +13639,8 @@
           ],
           "comment": "",
           "universities": [
-            "ETH",
-            "Mila"
+            "Mila",
+            "ETH"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -17440,9 +17438,9 @@
           "comment": "29 pages, 7 figures, appendix includes representative prompts made to Claude, supplementary info includes codes generated by Claude",
           "universities": [
             "MIT",
-            "ANU",
+            "USC",
             "NUS",
-            "USC"
+            "ANU"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -20253,11 +20251,11 @@
           ],
           "comment": "",
           "universities": [
-            "USC",
-            "MIT",
-            "CAS",
+            "ETH",
             "NUS",
-            "ETH"
+            "MIT",
+            "USC",
+            "CAS"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -20301,8 +20299,8 @@
           ],
           "comment": "11 pages, 6 figures, 8 tables. Dataset available at https://huggingface.co/datasets/ShivamChand/SemiFA-930. Code available at https://github.com/Shivamckaushik/SemiFA",
           "universities": [
-            "CAS",
-            "Mila"
+            "Mila",
+            "CAS"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -20433,9 +20431,9 @@
           ],
           "comment": "36 pages, 22 figures, Comments welcome!",
           "universities": [
-            "NTU",
             "ETH",
-            "HIT"
+            "HIT",
+            "NTU"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -20486,13 +20484,13 @@
           ],
           "comment": "",
           "universities": [
-            "ANU",
-            "UW",
-            "MIT",
-            "CAS",
-            "HIT",
+            "ETH",
             "NUS",
-            "ETH"
+            "MIT",
+            "HIT",
+            "ANU",
+            "CAS",
+            "UW"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -20538,9 +20536,9 @@
           ],
           "comment": "11 pages",
           "universities": [
-            "NTU",
+            "ETH",
             "MIT",
-            "ETH"
+            "NTU"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -20621,8 +20619,8 @@
           ],
           "comment": "",
           "universities": [
-            "MIT",
-            "ETH"
+            "ETH",
+            "MIT"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -20714,9 +20712,9 @@
           ],
           "comment": "",
           "universities": [
+            "Mila",
             "MIT",
-            "HIT",
-            "Mila"
+            "HIT"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -22868,11 +22866,13 @@
           ],
           "comment": "",
           "universities": [
-            "香港大学 (HKU)",
-            "Shanghai AI Laboratory"
+            "HKU",
+            "CUHK",
+            "SJTU"
           ],
           "hkUniversities": [
-            "香港大学 (HKU)"
+            "HKU",
+            "CUHK"
           ],
           "hasUniCollab": true,
           "hasHKCollab": true,
@@ -22893,7 +22893,7 @@
               "color": "#a855f7"
             }
           ],
-          "collabConfidence": "mentioned",
+          "collabConfidence": "confirmed",
           "pdfVerified": false
         },
         {

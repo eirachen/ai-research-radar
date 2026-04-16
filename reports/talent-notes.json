@@ -9527,7 +9527,12 @@
       "direction": "LLM / 强化学习 / 数据",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（OpenAI）",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-08",
+      "chineseName": "梁志轩",
+      "group": "students",
+      "papers": [
+        "HiVLA: A Visual-Grounded-Centric Hierarchical Embodied Manipulation System"
+      ]
     },
     "Weiliang Tang": {
       "name": "Weiliang Tang",
@@ -9578,12 +9583,17 @@
       "status": "待确认",
       "advisor": "待确认",
       "lab": "",
-      "homepage": "",
-      "scholar": "",
+      "homepage": "https://yaomarkmu.github.io/",
+      "scholar": "https://scholar.google.com/citations?user=HK4x3fkAAAAJ",
       "direction": "LLM / 强化学习 / 数据",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（OpenAI）",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-08",
+      "chineseName": "穆尧",
+      "group": "scholars",
+      "papers": [
+        "HiVLA: A Visual-Grounded-Centric Hierarchical Embodied Manipulation System"
+      ]
     },
     "Yongjie Guan": {
       "name": "Yongjie Guan",
@@ -18704,12 +18714,17 @@
       "status": "待确认",
       "advisor": "待确认",
       "lab": "",
-      "homepage": "",
-      "scholar": "",
+      "homepage": "https://tianshuoy.github.io/",
+      "scholar": "https://scholar.google.com/citations?user=9b5dE40AAAAJ",
       "direction": "Agent / 视觉 / 多模态",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（Google DeepMind）",
-      "editedAt": "2026-04-16"
+      "editedAt": "2026-04-16",
+      "chineseName": "杨天硕",
+      "group": "students",
+      "papers": [
+        "HiVLA: A Visual-Grounded-Centric Hierarchical Embodied Manipulation System"
+      ]
     },
     "Guanyu Chen": {
       "name": "Guanyu Chen",
@@ -18723,7 +18738,12 @@
       "direction": "Agent / 视觉 / 多模态",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（Google DeepMind）",
-      "editedAt": "2026-04-16"
+      "editedAt": "2026-04-16",
+      "chineseName": "陈冠宇",
+      "group": "students",
+      "papers": [
+        "HiVLA: A Visual-Grounded-Centric Hierarchical Embodied Manipulation System"
+      ]
     },
     "Yutian Chen": {
       "name": "Yutian Chen",
@@ -18751,7 +18771,11 @@
       "direction": "Agent / 视觉 / 多模态",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（Google DeepMind）",
-      "editedAt": "2026-04-16"
+      "editedAt": "2026-04-16",
+      "group": "students",
+      "papers": [
+        "HiVLA: A Visual-Grounded-Centric Hierarchical Embodied Manipulation System"
+      ]
     },
     "Zanxin Chen": {
       "name": "Zanxin Chen",
@@ -18765,7 +18789,11 @@
       "direction": "Agent / 视觉 / 多模态",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（Google DeepMind）",
-      "editedAt": "2026-04-16"
+      "editedAt": "2026-04-16",
+      "group": "students",
+      "papers": [
+        "HiVLA: A Visual-Grounded-Centric Hierarchical Embodied Manipulation System"
+      ]
     },
     "Chunpu Xu": {
       "name": "Chunpu Xu",
@@ -18816,12 +18844,33 @@
       "status": "待确认",
       "advisor": "待确认",
       "lab": "",
-      "homepage": "",
-      "scholar": "",
+      "homepage": "http://luoping.me/",
+      "scholar": "https://scholar.google.com/citations?user=aXdjxb4AAAAJ",
       "direction": "Agent / 视觉 / 多模态",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（Google DeepMind）",
-      "editedAt": "2026-04-16"
+      "editedAt": "2026-04-16",
+      "chineseName": "罗平",
+      "group": "scholars",
+      "contactInfo": {
+        "email": "pluo@cs.hku.hk"
+      },
+      "papers": [
+        "HiVLA: A Visual-Grounded-Centric Hierarchical Embodied Manipulation System"
+      ]
+    },
+    "Yutian Chen_cuhk": {
+      "name": "Yutian Chen",
+      "chineseName": "陈宇天",
+      "university": "The Chinese University of Hong Kong",
+      "isHK": true,
+      "status": "PhD student (MMLab@CUHK, Tianfan Xue group), Shanghai AI Lab intern",
+      "homepage": "https://yutian10.github.io/",
+      "scholar": "https://scholar.google.com/citations?user=7jCxPCEAAAAJ",
+      "group": "students",
+      "papers": [
+        "HiVLA: A Visual-Grounded-Centric Hierarchical Embodied Manipulation System"
+      ]
     }
   },
   "lastUpdated": "2026-04-13T14:43:10"

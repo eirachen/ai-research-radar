@@ -19019,6 +19019,66 @@
       "isHK": false,
       "status": "待确认",
       "group": "待确认"
+    },
+    "Yanji He1,\nYuxin Jiang2,\nYiwen Wu1,\nBo Huang1,\nJiaheng Wei1,\nWei Wang11footnotemark:11,31The Hong Kong University of Science and Technology (Guangzhou)2Huawei Technologies Co.,Ltd,3The Hong Kong University of Science and Technology{yhe720, ywu240}@connect.hkust-gz.edu.cn, jiang.yuxin2@huawei.com,bhuangas@connect.ust.hk, jiahengwei@hkust-gz.edu.cn, weiwcs@ust.hk": {
+      "name": "Yanji He1,\nYuxin Jiang2,\nYiwen Wu1,\nBo Huang1,\nJiaheng Wei1,\nWei Wang11footnotemark:11,31The Hong Kong University of Science and Technology (Guangzhou)2Huawei Technologies Co.,Ltd,3The Hong Kong University of Science and Technology{yhe720, ywu240}@connect.hkust-gz.edu.cn, jiang.yuxin2@huawei.com,bhuangas@connect.ust.hk, jiahengwei@hkust-gz.edu.cn, weiwcs@ust.hk",
+      "university": "Hong Kong University of Science and Technology",
+      "isHK": true,
+      "status": "待确认",
+      "group": "待确认",
+      "contactInfo": {
+        "email": "weiwcs@ust.hk"
+      }
+    },
+    "Ravi Ranjan*Florida International UniversityMiami, USArkuma031@fiu.edu": {
+      "name": "Ravi Ranjan*Florida International UniversityMiami, USArkuma031@fiu.edu",
+      "university": "Utkarsh Grover University of South Florida Tampa, USA utkarshgrover@usf.edu This version includes additional supplementary materials.",
+      "isHK": false,
+      "status": "待确认",
+      "group": "待确认",
+      "contactInfo": {
+        "email": "apolyzou@fiu.edu"
+      }
+    },
+    "Utkarsh GroverUniversity of South FloridaTampa, USAutkarshgrover@usf.edu": {
+      "name": "Utkarsh GroverUniversity of South FloridaTampa, USAutkarshgrover@usf.edu",
+      "university": "Mayur Akewar Florida International University Miami, USA makew@fiu.edu Code: https://github.com/raviranjan-ai/CatRAG-IJCNN-",
+      "isHK": false,
+      "status": "待确认",
+      "group": "待确认",
+      "contactInfo": {
+        "email": "utkarshgrover@usf.edu"
+      }
+    },
+    "Mayur AkewarFlorida International UniversityMiami, USAmakew001@fiu.edu": {
+      "name": "Mayur AkewarFlorida International UniversityMiami, USAmakew001@fiu.edu",
+      "university": "Xiaomin Lin University of South Florida Tampa, USA xlin@usf.edu",
+      "isHK": false,
+      "status": "待确认",
+      "group": "待确认",
+      "contactInfo": {
+        "email": "makew001@fiu.edu"
+      }
+    },
+    "Xiaomin LinUniversity of South FloridaTampa, USAxlin2@usf.edu": {
+      "name": "Xiaomin LinUniversity of South FloridaTampa, USAxlin2@usf.edu",
+      "university": "Agoritsa Polyzou Florida International University Miami, USA apolyzou@fiu.edu",
+      "isHK": false,
+      "status": "待确认",
+      "group": "待确认",
+      "contactInfo": {
+        "email": "rkuma031@fiu.edu"
+      }
+    },
+    "Agoritsa PolyzouFlorida International UniversityMiami, USAapolyzou@fiu.edu": {
+      "name": "Agoritsa PolyzouFlorida International UniversityMiami, USAapolyzou@fiu.edu",
+      "university": "Ravi Ranjan Florida International University Miami, USA rkuma@fiu.edu Accepted to IJCNN (part of IEEE WCCI ).",
+      "isHK": false,
+      "status": "待确认",
+      "group": "待确认",
+      "contactInfo": {
+        "email": "xlin2@usf.edu"
+      }
     }
   },
   "lastUpdated": "2026-04-13T14:43:10"

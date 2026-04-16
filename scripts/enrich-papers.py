@@ -14,6 +14,7 @@ enrich-papers.py — 用 arxiv_scanner HTML 解析增强 confirmed 论文作者�
   python scripts/enrich-papers.py --ids 2604.12345   # 只处理指定论文
   python scripts/enrich-papers.py --new-only         # 只处理还没增强过的论文
   python scripts/enrich-papers.py --with-identity    # 同时搜索 Scholar/GitHub
+  python scripts/enrich-papers.py --with-scholar     # 只搜索 Scholar（带缓存，安全）
 """
 from __future__ import annotations
 
@@ -205,6 +206,8 @@ def main():
     parser.add_argument("--ids", nargs="+", help="只处理指定的 arXiv ID")
     parser.add_argument("--new-only", action="store_true", help="只处理还没增强过的论文")
     parser.add_argument("--with-identity", action="store_true", help="同时搜索 Scholar/GitHub")
+    parser.add_argument("--with-scholar", action="store_true", help="只搜索 Scholar（带 7 天缓存，更安全）")
+    parser.add_argument("--scholar-max", type=int, default=20, help="Scholar 搜索最多处理人数（防封禁）")
     parser.add_argument("--max-authors", type=int, default=10, help="每篇论文最多处理作者数")
     parser.add_argument("--dry-run", action="store_true", help="只打印，不写文件")
     args = parser.parse_args()
@@ -248,16 +251,25 @@ def main():
     html_parser = HtmlParser(config, http)
 
     # 可选：身份搜索器
+    scholar_searcher = None
     identity_searchers = []
-    if args.with_identity:
+    use_scholar = args.with_scholar or args.with_identity
+    if use_scholar:
         try:
-            identity_searchers.append(ScholarSearcher(config))
+            scholar_searcher = ScholarSearcher(config)
+            identity_searchers.append(scholar_searcher)
+            logger.info("✅ Scholar 搜索器已就绪（带 7 天本地缓存）")
         except Exception as e:
             logger.warning(f"Scholar 搜索器初始化失败: {e}")
+    if args.with_identity:
         try:
             identity_searchers.append(GitHubSearcher(config, http))
+            logger.info("✅ GitHub 搜索器已就绪")
         except Exception as e:
             logger.warning(f"GitHub 搜索器初始化失败: {e}")
+    
+    scholar_count = 0  # Scholar 查询计数器（防封禁）
+    scholar_max = args.scholar_max
 
     # ── 统计 ──
     stats = {
@@ -371,8 +383,16 @@ def main():
                            (f" [{pa.email}]" if pa.email else "") +
                            (" 🇭🇰" if is_hk else ""))
 
-            # Step 3: 可选身份搜索
-            if identity_searchers and not (existing and existing.get("scholar")):
+            # Step 3: 可选身份搜索（Scholar / GitHub）
+            talent = notes[talent_key]
+            should_search = identity_searchers and not talent.get("scholar")
+            
+            # Scholar 计数限制
+            if should_search and scholar_searcher and scholar_count >= scholar_max:
+                logger.info(f"  ⏸ Scholar 已达上限 ({scholar_max})，跳过")
+                should_search = False
+            
+            if should_search:
                 author_obj = Author(
                     name=pa.name,
                     affiliation=affiliation,
@@ -381,24 +401,56 @@ def main():
                 )
                 for searcher in identity_searchers:
                     try:
+                        if searcher.platform == "google_scholar":
+                            scholar_count += 1
                         searcher.search(author_obj)
                     except Exception as e:
                         logger.warning(f"  [{searcher.platform}] 搜索失败: {e}")
+                        # Scholar 被封禁时停止所有后续 Scholar 搜索
+                        if "blocked" in str(e).lower() or "MaxTriesExceeded" in str(e):
+                            logger.error("  🚫 Scholar 已被封禁，停止所有 Scholar 查询")
+                            scholar_count = scholar_max
 
                 # 回写 Scholar 信息
                 if author_obj.identity.google_scholar:
                     gs = author_obj.identity.google_scholar
-                    talent = notes[talent_key]
-                    if not talent.get("scholar"):
-                        talent["scholar"] = gs.url
-                    if gs.citations and not talent.get("citations"):
-                        talent["citations"] = gs.citations
-                    logger.info(f"  📚 Scholar: {gs.citations} citations")
+                    
+                    # affiliation 交叉验证：Scholar 返回的机构和论文 HTML 的要有关联
+                    scholar_aff = (gs.affiliation or "").lower()
+                    paper_aff = (affiliation or "").lower()
+                    aff_match = True
+                    if scholar_aff and paper_aff:
+                        # 提取关键词比对（至少有一个主要词匹配）
+                        scholar_tokens = set(re.findall(r'[a-z]{3,}', scholar_aff))
+                        paper_tokens = set(re.findall(r'[a-z]{3,}', paper_aff))
+                        overlap = scholar_tokens & paper_tokens
+                        if not overlap and len(scholar_tokens) > 0 and len(paper_tokens) > 0:
+                            aff_match = False
+                            logger.warning(
+                                f"  ⚠️ Scholar 机构不匹配: Scholar='{gs.affiliation}' "
+                                f"vs HTML='{affiliation}' → 可能是同名不同人，跳过"
+                            )
+                    
+                    if aff_match:
+                        if not talent.get("scholar"):
+                            talent["scholar"] = gs.url
+                        if gs.citations and not talent.get("citations"):
+                            talent["citations"] = gs.citations
+                        if gs.h_index:
+                            talent["hIndex"] = gs.h_index
+                        if gs.affiliation and (not talent.get("university") or talent["university"] == "待确认"):
+                            talent["university"] = gs.affiliation
+                        if gs.interests:
+                            talent["researchInterests"] = gs.interests[:5]
+                        stats["scholar_found"] = stats.get("scholar_found", 0) + 1
+                        logger.info(
+                            f"  📚 Scholar: {gs.citations} citations, h={gs.h_index}, "
+                            f"机构='{gs.affiliation}'"
+                        )
 
                 # 回写 GitHub 信息
                 if author_obj.identity.github:
                     gh = author_obj.identity.github
-                    talent = notes[talent_key]
                     if not talent.get("github"):
                         talent["github"] = gh.url
                     logger.info(f"  🐙 GitHub: @{gh.username}")
@@ -424,6 +476,8 @@ HTML 解析失败: {stats['html_failed']}
 人才更新: {stats['talents_updated']}
 人才新增: {stats['talents_new']}
 港校人才: {stats['hk_talents']}
+Scholar 查到: {stats.get('scholar_found', 0)}
+Scholar 查询数: {scholar_count}/{scholar_max}
 {'='*50}
 """)
 

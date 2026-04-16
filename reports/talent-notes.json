@@ -231,7 +231,8 @@
         },
         "scannedAt": "2026-04-10",
         "hasContactKeywords": true,
-        "hasContact": true
+        "hasContact": true,
+        "email": "dihe@pku.edu.cn"
       }
     },
     "Di He": {
@@ -4998,7 +4999,8 @@
         },
         "scannedAt": "2026-04-10",
         "hasContactKeywords": true,
-        "hasContact": true
+        "hasContact": true,
+        "email": "tongzhowu3-c@my.cityu.edu.hk"
       },
       "verified": true,
       "source": "AML Lab team page + CityU Scholars portal"
@@ -5028,7 +5030,8 @@
         },
         "scannedAt": "2026-04-10",
         "hasContactKeywords": true,
-        "hasContact": true
+        "hasContact": true,
+        "email": "yhwang25-c@my.cityu.edu.hk"
       },
       "verified": true,
       "source": "AML Lab team page + personal homepage CV"
@@ -5061,7 +5064,10 @@
       "direction": "强化学习 / Agent / RAG/检索",
       "gradYear": "待确认",
       "statusNote": "DeepResearch-9K论文合作者，身份待确认",
-      "editedAt": "2026-04-10"
+      "editedAt": "2026-04-10",
+      "contactInfo": {
+        "email": "hexiuqiang@sztu.edu.cn"
+      }
     },
     "Shuaiqiang Wang": {
       "name": "Shuaiqiang Wang",
@@ -5142,7 +5148,8 @@
         "social": {},
         "scannedAt": "2026-04-10",
         "hasContactKeywords": true,
-        "hasContact": false
+        "hasContact": false,
+        "email": "xianzhao@cityu.edu.hk"
       },
       "verified": true,
       "source": "CityU staff profile + Google Scholar"
@@ -6408,7 +6415,7 @@
     },
     "Jiakai Hu": {
       "name": "Jiakai Hu",
-      "university": "待确认",
+      "university": "Shanghai AI Laboratory",
       "isHK": false,
       "status": "待确认",
       "advisor": "待确认",
@@ -6422,7 +6429,7 @@
     },
     "Aijun Yang": {
       "name": "Aijun Yang",
-      "university": "待确认",
+      "university": "Shanghai AI Laboratory",
       "isHK": false,
       "status": "待确认",
       "advisor": "待确认",
@@ -6436,7 +6443,7 @@
     },
     "Zheng Cai": {
       "name": "Zheng Cai",
-      "university": "待确认",
+      "university": "Shanghai AI Laboratory",
       "isHK": false,
       "status": "待确认",
       "advisor": "待确认",
@@ -6450,7 +6457,7 @@
     },
     "Zixian Huang": {
       "name": "Zixian Huang",
-      "university": "待确认",
+      "university": "Shanghai AI Laboratory",
       "isHK": false,
       "status": "待确认",
       "advisor": "待确认",
@@ -6464,7 +6471,7 @@
     },
     "Sheng Yuan": {
       "name": "Sheng Yuan",
-      "university": "待确认",
+      "university": "Shanghai AI Laboratory",
       "isHK": false,
       "status": "待确认",
       "advisor": "待确认",
@@ -6478,7 +6485,7 @@
     },
     "Qinxiu Cheng": {
       "name": "Qinxiu Cheng",
-      "university": "待确认",
+      "university": "Shanghai AI Laboratory",
       "isHK": false,
       "status": "待确认",
       "advisor": "待确认",
@@ -9578,7 +9585,7 @@
     },
     "Yao Mu": {
       "name": "Yao Mu",
-      "university": "待确认",
+      "university": "Shanghai Jiao Tong University",
       "isHK": false,
       "status": "待确认",
       "advisor": "待确认",
@@ -9593,7 +9600,10 @@
       "group": "scholars",
       "papers": [
         "HiVLA: A Visual-Grounded-Centric Hierarchical Embodied Manipulation System"
-      ]
+      ],
+      "contactInfo": {
+        "email": "muyao@sjtu.edu.cn"
+      }
     },
     "Yongjie Guan": {
       "name": "Yongjie Guan",
@@ -10005,7 +10015,7 @@
     },
     "Chaoyuan Peng": {
       "name": "Chaoyuan Peng",
-      "university": "待确认",
+      "university": "Zhejiang University",
       "isHK": false,
       "status": "待确认",
       "advisor": "待确认",
@@ -10019,7 +10029,7 @@
     },
     "Lei Wu": {
       "name": "Lei Wu",
-      "university": "待确认",
+      "university": "Zhejiang University",
       "isHK": false,
       "status": "待确认",
       "advisor": "待确认",
@@ -12654,7 +12664,10 @@
       "statusNote": "来自1篇企业合作论文（快手）",
       "editedAt": "2026-04-08",
       "chineseName": "徐文怡",
-      "researchArea": "Multimodal Search, Information Retrieval"
+      "researchArea": "Multimodal Search, Information Retrieval",
+      "contactInfo": {
+        "email": "xuwenyi@zju.edu.cn"
+      }
     },
     "Chao Zhang": {
       "name": "Chao Zhang",
@@ -12697,7 +12710,8 @@
         "social": {},
         "scannedAt": "2026-04-16",
         "hasContactKeywords": true,
-        "hasContact": true
+        "hasContact": true,
+        "email": "yuren.mao@zju.edu.cn"
       }
     },
     "Yunjun Gao": {
@@ -12724,7 +12738,8 @@
         "social": {},
         "scannedAt": "2026-04-09",
         "hasContactKeywords": true,
-        "hasContact": true
+        "hasContact": true,
+        "email": "gaoyj@zju.edu.cn"
       }
     },
     "Yi Zhang": {
@@ -13200,7 +13215,7 @@
     },
     "Zili Geng": {
       "name": "Zili Geng",
-      "university": "待确认",
+      "university": "University of Electronic Science and Technology of China Chengdu China",
       "isHK": false,
       "status": "待确认",
       "advisor": "待确认",
@@ -13210,7 +13225,10 @@
       "direction": "强化学习 / LLM / Infra",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（阿里淘天）",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-08",
+      "contactInfo": {
+        "email": "gengzili@std.uestc.edu.cn"
+      }
     },
     "Qiang Liu": {
       "name": "Qiang Liu",
@@ -13696,7 +13714,10 @@
       "direction": "计算化学 / AI for Science",
       "gradYear": "",
       "statusNote": "FermiLink通讯作者，PNNL+University of Delaware，与OpenAI合作",
-      "editedAt": "2026-04-09"
+      "editedAt": "2026-04-09",
+      "contactInfo": {
+        "email": "taoeli@udel.edu"
+      }
     },
     "Wenyu Liu": {
       "name": "Wenyu Liu",
@@ -13735,7 +13756,7 @@
     },
     "Gang Meng": {
       "name": "Gang Meng",
-      "university": "待确认",
+      "university": "Department of Physics and Astronomy, University of Delaware, Newark, Delaware , USA",
       "isHK": false,
       "status": "待确认",
       "advisor": "待确认",
@@ -13749,7 +13770,7 @@
     },
     "Andres Felipe Bocanegra Vargas": {
       "name": "Andres Felipe Bocanegra Vargas",
-      "university": "待确认",
+      "university": "Department of Physics and Astronomy, University of Delaware, Newark, Delaware , USA",
       "isHK": false,
       "status": "待确认",
       "advisor": "待确认",
@@ -13763,7 +13784,7 @@
     },
     "Xinwei Ji": {
       "name": "Xinwei Ji",
-      "university": "待确认",
+      "university": "Department of Physics and Astronomy, University of Delaware, Newark, Delaware , USA",
       "isHK": false,
       "status": "待确认",
       "advisor": "待确认",
@@ -13777,7 +13798,7 @@
     },
     "Federico Garcia-Gaitan": {
       "name": "Federico Garcia-Gaitan",
-      "university": "待确认",
+      "university": "Department of Physics and Astronomy, University of Delaware, Newark, Delaware , USA",
       "isHK": false,
       "status": "待确认",
       "advisor": "待确认",
@@ -13791,7 +13812,7 @@
     },
     "Felipe Reyes-Osorio": {
       "name": "Felipe Reyes-Osorio",
-      "university": "待确认",
+      "university": "Department of Physics and Astronomy, University of Delaware, Newark, Delaware , USA",
       "isHK": false,
       "status": "待确认",
       "advisor": "待确认",
@@ -13805,7 +13826,7 @@
     },
     "Jalil Varela-Manjarres": {
       "name": "Jalil Varela-Manjarres",
-      "university": "待确认",
+      "university": "Department of Physics and Astronomy, University of Delaware, Newark, Delaware , USA",
       "isHK": false,
       "status": "待确认",
       "advisor": "待确认",
@@ -13819,7 +13840,7 @@
     },
     "Yafei Ren": {
       "name": "Yafei Ren",
-      "university": "待确认",
+      "university": "Department of Physics and Astronomy, University of Delaware, Newark, Delaware , USA",
       "isHK": false,
       "status": "待确认",
       "advisor": "待确认",
@@ -13833,7 +13854,7 @@
     },
     "Mohammadhasan Dinpajooh": {
       "name": "Mohammadhasan Dinpajooh",
-      "university": "待确认",
+      "university": "Physical and Computational Sciences Directorate, Pacific Northwest National Laboratory, Richland WA , USA",
       "isHK": false,
       "status": "待确认",
       "advisor": "待确认",
@@ -18871,6 +18892,133 @@
       "papers": [
         "HiVLA: A Visual-Grounded-Centric Hierarchical Embodied Manipulation System"
       ]
+    },
+    "Yanming Guo3": {
+      "name": "Yanming Guo3",
+      "university": "Fudan University",
+      "isHK": false,
+      "status": "待确认",
+      "group": "待确认",
+      "contactInfo": {
+        "email": "xingjunma@fudan.edu.cn"
+      }
+    },
+    "He Du†\\dagger": {
+      "name": "He Du†\\dagger",
+      "university": "Shanghai AI Laboratory",
+      "isHK": false,
+      "status": "待确认",
+      "group": "待确认"
+    },
+    "Qiming Ge†\\dagger": {
+      "name": "Qiming Ge†\\dagger",
+      "university": "Shanghai AI Laboratory",
+      "isHK": false,
+      "status": "待确认",
+      "group": "待确认"
+    },
+    "Xinchen Xie": {
+      "name": "Xinchen Xie",
+      "university": "Shanghai AI Laboratory",
+      "isHK": false,
+      "status": "待确认",
+      "group": "待确认"
+    },
+    "Yicheng Chen": {
+      "name": "Yicheng Chen",
+      "university": "Shanghai AI Laboratory",
+      "isHK": false,
+      "status": "待确认",
+      "group": "待确认",
+      "contactInfo": {
+        "email": "chenkai@pjlab.org.cn"
+      }
+    },
+    "Yining Li": {
+      "name": "Yining Li",
+      "university": "Shanghai AI Laboratory",
+      "isHK": false,
+      "status": "待确认",
+      "group": "待确认"
+    },
+    "Hui Wang": {
+      "name": "Hui Wang",
+      "university": "Shanghai AI Laboratory",
+      "isHK": false,
+      "status": "待确认",
+      "group": "待确认"
+    },
+    "Bowen Zhou": {
+      "name": "Bowen Zhou",
+      "university": "Shanghai AI Laboratory",
+      "isHK": false,
+      "status": "待确认",
+      "group": "待确认",
+      "contactInfo": {
+        "email": "libowen@pjlab.org.cn"
+      }
+    },
+    "Bowen Li‡\\ddagger": {
+      "name": "Bowen Li‡\\ddagger",
+      "university": "Shanghai AI Laboratory",
+      "isHK": false,
+      "status": "待确认",
+      "group": "待确认"
+    },
+    "Qipeng Guo‡\\ddagger": {
+      "name": "Qipeng Guo‡\\ddagger",
+      "university": "Shanghai AI Laboratory",
+      "isHK": false,
+      "status": "待确认",
+      "group": "待确认",
+      "contactInfo": {
+        "email": "guoqipeng@pjlab.org.cn"
+      }
+    },
+    "Kai Chen‡\\ddagger": {
+      "name": "Kai Chen‡\\ddagger",
+      "university": "Shanghai AI Laboratory",
+      "isHK": false,
+      "status": "待确认",
+      "group": "待确认"
+    },
+    "Ao Qu1,8∗Han Zheng1∗Zijian Zhou2,3∗Yihao YanYihong Tang4Shao Yong Ong2Fenglu Hong5,6Kaichen Zhou1Chonghe Jiang1,8Minwei Kong8Jiacheng Zhu7‡Xuan Jiang9‡Sirui Li10‡Cathy Wu1†Bryan Kian Hsiang Low2,8†Jinhua Zhao1,8†Paul Pu Liang1,8†1MIT2NUS3MiniMax4McGill5Stanford6SambaNova7Meta8Singapore-MIT Alliance for Research and Technology9Amazon10Microsoft∗*Equal contribution (alphabetical order)†\\daggerJoint advising‡\\ddaggerWork done outside the authors’ employment.": {
+      "name": "Ao Qu1,8∗Han Zheng1∗Zijian Zhou2,3∗Yihao YanYihong Tang4Shao Yong Ong2Fenglu Hong5,6Kaichen Zhou1Chonghe Jiang1,8Minwei Kong8Jiacheng Zhu7‡Xuan Jiang9‡Sirui Li10‡Cathy Wu1†Bryan Kian Hsiang Low2,8†Jinhua Zhao1,8†Paul Pu Liang1,8†1MIT2NUS3MiniMax4McGill5Stanford6SambaNova7Meta8Singapore-MIT Alliance for Research and Technology9Amazon10Microsoft∗*Equal contribution (alphabetical order)†\\daggerJoint advising‡\\ddaggerWork done outside the authors’ employment.",
+      "university": "MIT",
+      "isHK": false,
+      "status": "待确认",
+      "group": "待确认",
+      "contactInfo": {
+        "email": "hanzheng@mit.edu"
+      }
+    },
+    "Jingwei Ni§\\S,*": {
+      "name": "Jingwei Ni§\\S,*",
+      "university": "ETH Zürich",
+      "isHK": false,
+      "status": "待确认",
+      "group": "待确认"
+    },
+    "Yihao Liu§\\S,*": {
+      "name": "Yihao Liu§\\S,*",
+      "university": "Peking University",
+      "isHK": false,
+      "status": "待确认",
+      "group": "待确认"
+    },
+    "Xinpeng Liu§\\S,*": {
+      "name": "Xinpeng Liu§\\S,*",
+      "university": "Peking University",
+      "isHK": false,
+      "status": "待确认",
+      "group": "待确认"
+    },
+    "Yutao Sun§\\S,*": {
+      "name": "Yutao Sun§\\S,*",
+      "university": "Zhejiang University",
+      "isHK": false,
+      "status": "待确认",
+      "group": "待确认"
     }
   },
   "lastUpdated": "2026-04-13T14:43:10"

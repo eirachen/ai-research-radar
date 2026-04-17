@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-16T10:04:02Z",
+  "generatedAt": "2026-04-17T10:12:56Z",
   "notes": {
     "Ye Tian": {
       "name": "田野 (Ye Tian)",
@@ -9602,7 +9602,24 @@
         "HiVLA: A Visual-Grounded-Centric Hierarchical Embodied Manipulation System"
       ],
       "contactInfo": {
-        "email": "muyao@sjtu.edu.cn"
+        "emails": [
+          "muyao@sjtu.edu.cn"
+        ],
+        "wechat": [
+          "muyao20167"
+        ],
+        "phone": [],
+        "cv": [
+          "https://YaoMarkMu.github.io/research/Resume_YaoMarkMu.pdf"
+        ],
+        "social": {
+          "twitter": "@YaoMarkMu1",
+          "github": "github.com/YaoMarkMu",
+          "linkedin": "linkedin.com/in/mu-yao-308607185"
+        },
+        "scannedAt": "2026-04-17",
+        "hasContactKeywords": true,
+        "hasContact": true
       }
     },
     "Yongjie Guan": {
@@ -18745,7 +18762,20 @@
       "group": "students",
       "papers": [
         "HiVLA: A Visual-Grounded-Centric Hierarchical Embodied Manipulation System"
-      ]
+      ],
+      "contactInfo": {
+        "emails": [],
+        "wechat": [],
+        "phone": [],
+        "cv": [],
+        "social": {
+          "twitter": "@Tianshuo_Y",
+          "github": "github.com/TianshuoY"
+        },
+        "scannedAt": "2026-04-17",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Guanyu Chen": {
       "name": "Guanyu Chen",
@@ -18874,7 +18904,21 @@
       "chineseName": "罗平",
       "group": "scholars",
       "contactInfo": {
-        "email": "pluo@cs.hku.hk"
+        "emails": [
+          "pluo.lhi@gmail.com"
+        ],
+        "wechat": [],
+        "phone": [],
+        "cv": [
+          "http://luoping.me/files/cv.pdf"
+        ],
+        "social": {
+          "github": "github.com/RERV",
+          "linkedin": "linkedin.com/in/li-chen-30b256167"
+        },
+        "scannedAt": "2026-04-17",
+        "hasContactKeywords": true,
+        "hasContact": true
       },
       "papers": [
         "HiVLA: A Visual-Grounded-Centric Hierarchical Embodied Manipulation System"
@@ -18891,7 +18935,21 @@
       "group": "students",
       "papers": [
         "HiVLA: A Visual-Grounded-Centric Hierarchical Embodied Manipulation System"
-      ]
+      ],
+      "contactInfo": {
+        "emails": [],
+        "wechat": [],
+        "phone": [],
+        "cv": [
+          "https://yutian10.github.io/assets/CV_YutianChen3.pdf"
+        ],
+        "social": {
+          "github": "github.com/yutian10"
+        },
+        "scannedAt": "2026-04-17",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Yanming Guo3": {
       "name": "Yanming Guo3",
@@ -19079,6 +19137,118 @@
       "contactInfo": {
         "email": "xlin2@usf.edu"
       }
+    },
+    "Jonathan Coles": {
+      "name": "Jonathan Coles",
+      "university": "EPFL",
+      "isHK": false,
+      "status": "待确认",
+      "advisor": "待确认",
+      "lab": "",
+      "homepage": "",
+      "scholar": "",
+      "direction": "LLM / RAG/检索",
+      "gradYear": "待确认",
+      "statusNote": "来自2篇企业合作论文（NVIDIA）",
+      "editedAt": "2026-04-17"
+    },
+    "Stefano Schuppli": {
+      "name": "Stefano Schuppli",
+      "university": "EPFL",
+      "isHK": false,
+      "status": "待确认",
+      "advisor": "待确认",
+      "lab": "",
+      "homepage": "",
+      "scholar": "",
+      "direction": "LLM / RAG/检索",
+      "gradYear": "待确认",
+      "statusNote": "来自2篇企业合作论文（NVIDIA）",
+      "editedAt": "2026-04-17"
+    },
+    "Lukas Drescher": {
+      "name": "Lukas Drescher",
+      "university": "EPFL",
+      "isHK": false,
+      "status": "待确认",
+      "advisor": "待确认",
+      "lab": "",
+      "homepage": "",
+      "scholar": "",
+      "direction": "LLM / RAG/检索",
+      "gradYear": "待确认",
+      "statusNote": "来自2篇企业合作论文（NVIDIA）",
+      "editedAt": "2026-04-17"
+    },
+    "Fawzi Roberto Mohamed": {
+      "name": "Fawzi Roberto Mohamed",
+      "university": "EPFL",
+      "isHK": false,
+      "status": "待确认",
+      "advisor": "待确认",
+      "lab": "",
+      "homepage": "",
+      "scholar": "",
+      "direction": "LLM / RAG/检索",
+      "gradYear": "待确认",
+      "statusNote": "来自2篇企业合作论文（NVIDIA）",
+      "editedAt": "2026-04-17"
+    },
+    "Elia Palme": {
+      "name": "Elia Palme",
+      "university": "EPFL",
+      "isHK": false,
+      "status": "待确认",
+      "advisor": "待确认",
+      "lab": "",
+      "homepage": "",
+      "scholar": "",
+      "direction": "LLM / RAG/检索",
+      "gradYear": "待确认",
+      "statusNote": "来自2篇企业合作论文（NVIDIA）",
+      "editedAt": "2026-04-17"
+    },
+    "Henrique Mendonça": {
+      "name": "Henrique Mendonça",
+      "university": "EPFL",
+      "isHK": false,
+      "status": "待确认",
+      "advisor": "待确认",
+      "lab": "",
+      "homepage": "",
+      "scholar": "",
+      "direction": "LLM / RAG/检索",
+      "gradYear": "待确认",
+      "statusNote": "来自2篇企业合作论文（NVIDIA）",
+      "editedAt": "2026-04-17"
+    },
+    "Miguel Gila": {
+      "name": "Miguel Gila",
+      "university": "EPFL",
+      "isHK": false,
+      "status": "待确认",
+      "advisor": "待确认",
+      "lab": "",
+      "homepage": "",
+      "scholar": "",
+      "direction": "LLM / RAG/检索",
+      "gradYear": "待确认",
+      "statusNote": "来自2篇企业合作论文（NVIDIA）",
+      "editedAt": "2026-04-17"
+    },
+    "Mark Klein": {
+      "name": "Mark Klein",
+      "university": "EPFL",
+      "isHK": false,
+      "status": "待确认",
+      "advisor": "待确认",
+      "lab": "",
+      "homepage": "",
+      "scholar": "",
+      "direction": "LLM / RAG/检索",
+      "gradYear": "待确认",
+      "statusNote": "来自2篇企业合作论文（NVIDIA）",
+      "editedAt": "2026-04-17"
     }
   },
   "lastUpdated": "2026-04-13T14:43:10"

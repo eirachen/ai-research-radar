@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-17T10:12:56Z",
+  "generatedAt": "2026-04-20T09:53:14Z",
   "notes": {
     "Ye Tian": {
       "name": "田野 (Ye Tian)",
@@ -331,7 +331,10 @@
       "direction": "网络安全 / LLM安全",
       "gradYear": "待确认",
       "statusNote": "HKUST访问学生，与Shuai Wang合作，发表USENIX Security 2025",
-      "editedAt": "2026-04-08"
+      "editedAt": "2026-04-08",
+      "github": "https://github.com/lltsdyp",
+      "orcid": "https://orcid.org/0009-0002-7014-9030",
+      "verified": true
     },
     "Ao Qu": {
       "name": "瞿骜 (Ao Qu)",
@@ -3343,12 +3346,32 @@
       "status": "待确认（论文标注MMLab CUHK编号1）",
       "advisor": "待确认",
       "lab": "MMLab, CUHK (论文标注)",
-      "homepage": "",
+      "homepage": "https://manyuan97.github.io/",
       "scholar": "",
       "direction": "Agent / 强化学习 / 数据",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（阿里通义）",
-      "editedAt": "2026-04-10"
+      "editedAt": "2026-04-10",
+      "googleScholar": "https://scholar.google.com.hk/citations?user=ZYmcm0EAAAAJ",
+      "note": "MMLab CUHK PhD, now Staff Researcher at Meituan-M17 HK",
+      "verified": true,
+      "contactInfo": {
+        "emails": [
+          "zhangmanyuan@link.cuhk.edu.hk"
+        ],
+        "wechat": [],
+        "phone": [],
+        "cv": [
+          "https://manyuan97.github.io/cv.pdf"
+        ],
+        "social": {
+          "github": "github.com/manyuan97",
+          "linkedin": "linkedin.com/in/manyuan-zhang-32997814b"
+        },
+        "scannedAt": "2026-04-20",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Shuang Chen": {
       "name": "Shuang Chen",
@@ -14034,12 +14057,12 @@
     },
     "Chonghan Qin": {
       "name": "Chonghan Qin",
-      "university": "The University of Hong Kong (HKU)",
+      "university": "香港大学 (HKU)",
       "isHK": true,
       "status": "待确认 (可能博士生)",
       "advisor": "Lingpeng Kong (待确认)",
       "lab": "HKU NLP Lab (待确认)",
-      "homepage": "",
+      "homepage": "https://www.chonghanqin.com/",
       "scholar": "",
       "direction": "NLP, LLM行为评估",
       "gradYear": "",
@@ -14047,7 +14070,23 @@
       "editedAt": "2026-04-10",
       "papers": [
         "http://arxiv.org/abs/2604.08064v1"
-      ]
+      ],
+      "googleScholar": "https://scholar.google.com/citations?user=oCEfsm0AAAAJ",
+      "note": "HKU undergrad, HKUNLP group, also Shanghai AI Lab",
+      "verified": true,
+      "contactInfo": {
+        "emails": [],
+        "wechat": [],
+        "phone": [],
+        "cv": [],
+        "social": {
+          "github": "github.com/qinchonghanzuibang",
+          "linkedin": "linkedin.com/in/chonghanqin"
+        },
+        "scannedAt": "2026-04-20",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Weitao Ma": {
       "name": "Weitao Ma",
@@ -14129,12 +14168,12 @@
     },
     "Lujun Li": {
       "name": "Lujun Li",
-      "university": "Hong Kong University of Science and Technology (HKUST)",
+      "university": "香港科技大学 (HKUST)",
       "isHK": true,
       "status": "博士生",
       "advisor": "待确认",
       "lab": "",
-      "homepage": "",
+      "homepage": "https://llieeai.github.io/",
       "scholar": "",
       "direction": "模型量化, 神经网络压缩, 高效深度学习",
       "gradYear": "",
@@ -14142,7 +14181,26 @@
       "editedAt": "2026-04-10",
       "papers": [
         "http://arxiv.org/abs/2604.07888v1"
-      ]
+      ],
+      "googleScholar": "https://scholar.google.com/citations?user=aPl3DjIAAAAJ",
+      "note": "HKUST PhD candidate, 1813 citations, Efficient ML & LLM",
+      "verified": true,
+      "contactInfo": {
+        "emails": [
+          "lliee@ust.hk",
+          "lilujunai@gmail.com"
+        ],
+        "wechat": [],
+        "phone": [],
+        "cv": [],
+        "social": {
+          "twitter": "@luking66",
+          "github": "github.com/lliai"
+        },
+        "scannedAt": "2026-04-20",
+        "hasContactKeywords": true,
+        "hasContact": true
+      }
     },
     "Bei Liu": {
       "name": "Bei Liu",
@@ -19249,7 +19307,245 @@
       "gradYear": "待确认",
       "statusNote": "来自2篇企业合作论文（NVIDIA）",
       "editedAt": "2026-04-17"
+    },
+    "Qwen Team": {
+      "name": "Qwen Team",
+      "university": "HIT",
+      "isHK": false,
+      "status": "待确认",
+      "advisor": "待确认",
+      "lab": "",
+      "homepage": "",
+      "scholar": "",
+      "direction": "语音 / Infra / 多模态",
+      "gradYear": "待确认",
+      "statusNote": "来自1篇企业合作论文（阿里通义）",
+      "editedAt": "2026-04-20"
+    },
+    "Nicolò Pagan": {
+      "name": "Nicolò Pagan",
+      "university": "MIT",
+      "isHK": false,
+      "status": "待确认",
+      "advisor": "待确认",
+      "lab": "",
+      "homepage": "",
+      "scholar": "",
+      "direction": "LLM / 安全 / 数学推理",
+      "gradYear": "待确认",
+      "statusNote": "来自1篇企业合作论文（OpenAI）",
+      "editedAt": "2026-04-20"
+    },
+    "Christopher Barrie": {
+      "name": "Christopher Barrie",
+      "university": "MIT",
+      "isHK": false,
+      "status": "待确认",
+      "advisor": "待确认",
+      "lab": "",
+      "homepage": "",
+      "scholar": "",
+      "direction": "LLM / 安全 / 数学推理",
+      "gradYear": "待确认",
+      "statusNote": "来自1篇企业合作论文（OpenAI）",
+      "editedAt": "2026-04-20"
+    },
+    "Chris Andrew Bail": {
+      "name": "Chris Andrew Bail",
+      "university": "MIT",
+      "isHK": false,
+      "status": "待确认",
+      "advisor": "待确认",
+      "lab": "",
+      "homepage": "",
+      "scholar": "",
+      "direction": "LLM / 安全 / 数学推理",
+      "gradYear": "待确认",
+      "statusNote": "来自1篇企业合作论文（OpenAI）",
+      "editedAt": "2026-04-20"
+    },
+    "Petter Törnberg": {
+      "name": "Petter Törnberg",
+      "university": "MIT",
+      "isHK": false,
+      "status": "待确认",
+      "advisor": "待确认",
+      "lab": "",
+      "homepage": "",
+      "scholar": "",
+      "direction": "LLM / 安全 / 数学推理",
+      "gradYear": "待确认",
+      "statusNote": "来自1篇企业合作论文（OpenAI）",
+      "editedAt": "2026-04-20"
+    },
+    "Ziwu Sun": {
+      "name": "Ziwu Sun",
+      "university": "ETH",
+      "isHK": false,
+      "status": "待确认",
+      "advisor": "待确认",
+      "lab": "",
+      "homepage": "",
+      "scholar": "",
+      "direction": "强化学习 / LLM / 安全",
+      "gradYear": "待确认",
+      "statusNote": "来自1篇企业合作论文（Anthropic）",
+      "editedAt": "2026-04-20"
+    },
+    "Zhen Gao": {
+      "name": "Zhen Gao",
+      "university": "ETH",
+      "isHK": false,
+      "status": "待确认",
+      "advisor": "待确认",
+      "lab": "",
+      "homepage": "",
+      "scholar": "",
+      "direction": "强化学习 / LLM / 安全",
+      "gradYear": "待确认",
+      "statusNote": "来自1篇企业合作论文（Anthropic）",
+      "editedAt": "2026-04-20"
+    },
+    "Jiyong Zhang": {
+      "name": "Jiyong Zhang",
+      "university": "ETH",
+      "isHK": false,
+      "status": "待确认",
+      "advisor": "待确认",
+      "lab": "",
+      "homepage": "",
+      "scholar": "",
+      "direction": "强化学习 / LLM / 安全",
+      "gradYear": "待确认",
+      "statusNote": "来自1篇企业合作论文（Anthropic）",
+      "editedAt": "2026-04-20"
+    },
+    "Jiaheng Li": {
+      "name": "Jiaheng Li",
+      "university": "ETH",
+      "isHK": false,
+      "status": "待确认",
+      "advisor": "待确认",
+      "lab": "",
+      "homepage": "",
+      "scholar": "",
+      "direction": "强化学习 / LLM / 安全",
+      "gradYear": "待确认",
+      "statusNote": "来自1篇企业合作论文（Anthropic）",
+      "editedAt": "2026-04-20"
+    },
+    "Bo Zhao": {
+      "name": "Bo Zhao",
+      "university": "CAS",
+      "isHK": false,
+      "status": "待确认",
+      "advisor": "待确认",
+      "lab": "",
+      "homepage": "",
+      "scholar": "",
+      "direction": "Agent / LLM / 视觉",
+      "gradYear": "待确认",
+      "statusNote": "来自1篇企业合作论文（快手）",
+      "editedAt": "2026-04-20"
+    },
+    "Kairui Guo": {
+      "name": "Kairui Guo",
+      "university": "CAS",
+      "isHK": false,
+      "status": "待确认",
+      "advisor": "待确认",
+      "lab": "",
+      "homepage": "",
+      "scholar": "",
+      "direction": "Agent / LLM / 视觉",
+      "gradYear": "待确认",
+      "statusNote": "来自1篇企业合作论文（快手）",
+      "editedAt": "2026-04-20"
+    },
+    "Runnan Du": {
+      "name": "Runnan Du",
+      "university": "CAS",
+      "isHK": false,
+      "status": "待确认",
+      "advisor": "待确认",
+      "lab": "",
+      "homepage": "",
+      "scholar": "",
+      "direction": "Agent / LLM / 视觉",
+      "gradYear": "待确认",
+      "statusNote": "来自1篇企业合作论文（快手）",
+      "editedAt": "2026-04-20"
+    },
+    "Haiyang Sun": {
+      "name": "Haiyang Sun",
+      "university": "CAS",
+      "isHK": false,
+      "status": "待确认",
+      "advisor": "待确认",
+      "lab": "",
+      "homepage": "",
+      "scholar": "",
+      "direction": "Agent / LLM / 视觉",
+      "gradYear": "待确认",
+      "statusNote": "来自1篇企业合作论文（快手）",
+      "editedAt": "2026-04-20"
+    },
+    "Pengshan Wang": {
+      "name": "Pengshan Wang",
+      "university": "CAS",
+      "isHK": false,
+      "status": "待确认",
+      "advisor": "待确认",
+      "lab": "",
+      "homepage": "",
+      "scholar": "",
+      "direction": "Agent / LLM / 视觉",
+      "gradYear": "待确认",
+      "statusNote": "来自1篇企业合作论文（快手）",
+      "editedAt": "2026-04-20"
+    },
+    "Huan Yang": {
+      "name": "Huan Yang",
+      "university": "CAS",
+      "isHK": false,
+      "status": "待确认",
+      "advisor": "待确认",
+      "lab": "",
+      "homepage": "",
+      "scholar": "",
+      "direction": "Agent / LLM / 视觉",
+      "gradYear": "待确认",
+      "statusNote": "来自1篇企业合作论文（快手）",
+      "editedAt": "2026-04-20"
+    },
+    "Kun Gai": {
+      "name": "Kun Gai",
+      "university": "CAS",
+      "isHK": false,
+      "status": "待确认",
+      "advisor": "待确认",
+      "lab": "",
+      "homepage": "",
+      "scholar": "",
+      "direction": "Agent / LLM / 视觉",
+      "gradYear": "待确认",
+      "statusNote": "来自1篇企业合作论文（快手）",
+      "editedAt": "2026-04-20"
+    },
+    "Yixin Cao": {
+      "name": "Yixin Cao",
+      "university": "CAS",
+      "isHK": false,
+      "status": "待确认",
+      "advisor": "待确认",
+      "lab": "",
+      "homepage": "",
+      "scholar": "",
+      "direction": "Agent / LLM / 视觉",
+      "gradYear": "待确认",
+      "statusNote": "来自1篇企业合作论文（快手）",
+      "editedAt": "2026-04-20"
     }
   },
-  "lastUpdated": "2026-04-13T14:43:10"
+  "lastUpdated": "2026-04-20T09:00:00Z"
 }

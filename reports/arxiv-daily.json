@@ -1,14 +1,185 @@
 {
-  "generatedAt": "2026-04-21T09:40:18.237127Z",
+  "generatedAt": "2026-04-22T09:44:23.040294Z",
   "since": "2026-03-01",
-  "totalPapers": 412,
-  "totalUniCollab": 94,
-  "totalHKCollab": 18,
+  "totalPapers": 418,
+  "totalUniCollab": 98,
+  "totalHKCollab": 20,
   "companies": {
     "bytedance": {
       "company": "字节Seed",
       "icon": "🌱",
       "papers": [
+        {
+          "title": "Beyond Verifiable Rewards: Rubric-Based GRM for Reinforced Fine-Tuning SWE Agents",
+          "summary": "Proposes a rubric-based generative reward model (GRM) for SWE tasks, providing richer learning signals beyond terminal verification rewards for reinforced fine-tuning of LLM agents.",
+          "published": "2026-04-21T00:00:00Z",
+          "arxivId": "2604.16335",
+          "arxivUrl": "https://arxiv.org/abs/2604.16335",
+          "pdfUrl": "https://arxiv.org/pdf/2604.16335",
+          "authors": [
+            "Jiawei Huang",
+            "Qingping Yang",
+            "Renjie Zheng",
+            "Jiaze Chen"
+          ],
+          "authorCount": 4,
+          "affiliations": [
+            "ByteDance",
+            "ETH Zurich"
+          ],
+          "categories": [
+            "cs.LG",
+            "cs.AI",
+            "cs.SE"
+          ],
+          "comment": "",
+          "universities": [
+            "ETH Zurich"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            }
+          ],
+          "collabConfidence": "confirmed",
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "bytedance"
+          ],
+          "pdfUnis": [
+            "1ETHZurich, 2ByteDanceSeed"
+          ],
+          "pdfHKUnis": [],
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "IceBreaker for Conversational Agents: Breaking the First-Message Barrier with Personalized Starters",
+          "summary": "Proposes IceBreaker framework for conversational agents like Doubao to generate personalized conversation starters, improving user active days by +0.184% and CTR by +9.425%. Deployed in production. ACL 2026 Industry Track.",
+          "published": "2026-04-20T15:02:03Z",
+          "arxivId": "2604.18375",
+          "arxivUrl": "https://arxiv.org/abs/2604.18375",
+          "pdfUrl": "https://arxiv.org/pdf/2604.18375",
+          "authors": [
+            "Hongwei Zheng",
+            "Weiqi Wu",
+            "Zhengjia Wang",
+            "Guanyu Jiang",
+            "Haoming Li",
+            "Tianyu Wu",
+            "Yongchun Zhu",
+            "Jingwu Chen"
+          ],
+          "authorCount": 9,
+          "affiliations": [
+            "ByteDance"
+          ],
+          "categories": [
+            "cs.CL",
+            "cs.AI"
+          ],
+          "comment": "ACL 2026 Industry Track",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            }
+          ],
+          "collabConfidence": "company_only",
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "bytedance"
+          ],
+          "pdfUnis": [
+            "HongweiZheng*,WeiqiWu*,ZhengjiaWang*,GuanyuJiang,"
+          ],
+          "pdfHKUnis": [],
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "End-to-end Listen, Look, Speak and Act (ELLSA)",
+          "summary": "First full-duplex end-to-end model simultaneously perceiving and generating vision, text, speech, and action. Uses SA-MoE architecture routing each modality to specialized experts. ICLR 2026.",
+          "published": "2026-04-20T08:04:22Z",
+          "arxivId": "2510.16756",
+          "arxivUrl": "https://arxiv.org/abs/2510.16756",
+          "pdfUrl": "https://arxiv.org/pdf/2510.16756",
+          "authors": [
+            "Siyin Wang",
+            "Wenyi Yu",
+            "Xianzhao Chen",
+            "Xiaohai Tian",
+            "Jun Zhang",
+            "Lu Lu",
+            "Chao Zhang"
+          ],
+          "authorCount": 7,
+          "affiliations": [
+            "ByteDance"
+          ],
+          "categories": [
+            "cs.AI",
+            "cs.CL",
+            "cs.CV",
+            "cs.RO",
+            "eess.AS"
+          ],
+          "comment": "ICLR 2026",
+          "universities": [
+            "Tsinghua University"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Speech",
+              "label": "语音",
+              "color": "#14b8a6"
+            },
+            {
+              "id": "MultiModal",
+              "label": "多模态",
+              "color": "#8b5cf6"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "Multimodal",
+              "label": "Multimodal",
+              "color": "#6b7280"
+            }
+          ],
+          "collabConfidence": "confirmed",
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "bytedance"
+          ],
+          "pdfUnis": [
+            "1TsinghuaUniversity 2ByteDance"
+          ],
+          "pdfHKUnis": [],
+          "tldr": "[research paper] ELLSA introduces the first end-to-end full-duplex multimodal model that simultaneously processes vision, speech, text, and action in a streaming, concurrent framework. Its core innovation, SA-MoE (Self-Attention Mixture-of-Experts), routes modalities to specialized experts (e.g., Speech Expert for dialogue, Action Expert for manipulation) while fusing them via a unified self-attention backbone to mitigate modality interference and enable cross-modal awareness. The model achieves parity with modality-specific baselines on speech and manipulation tasks while enabling novel human-like behaviors such as speaking-while-acting, context-grounded VQA during action, action barge-ins, and defective instruction rejection—demonstrating a critical step toward natural, embodied, interactive intelligence.",
+          "deepxivKeywords": [
+            "full-duplex multimodal interaction",
+            "self-attention mixture-of-experts",
+            "concurrent multimodal generation",
+            "action barge-in",
+            "embodied agent interaction"
+          ],
+          "deepxivEnhanced": true
+        },
         {
           "title": "RefereeBench: Are Video MLLMs Ready to be Multi-Sport Referees",
           "summary": "While Multimodal Large Language Models (MLLMs) excel at generic video understanding, their ability to support specialized, rule-grounded decision-making remains insufficiently explored. In this paper, we introduce RefereeBench, the first large-scale benchmark for evaluating MLLMs as automatic sports",
@@ -61,6 +232,78 @@
             "RenminUniversityofChina RenminUniversityofChina SichuanUniversity"
           ],
           "pdfHKUnis": [],
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "KRONE: Scalable LLM-Augmented Log Anomaly Detection via Hierarchical Abstraction",
+          "summary": "First hierarchical anomaly detection framework for log analysis, tested on ByteDance cloud industrial data. Improves F1-score from 82.76% to 92.83%. ICDE 2026.",
+          "published": "2026-04-17T00:00:00Z",
+          "arxivId": "2602.07303",
+          "arxivUrl": "https://arxiv.org/abs/2602.07303",
+          "pdfUrl": "https://arxiv.org/pdf/2602.07303",
+          "authors": [
+            "Lei Ma",
+            "Jinyang Liu",
+            "Tieying Zhang",
+            "Peter M. VanNostrand",
+            "Dennis M. Hofmann",
+            "Lei Cao",
+            "Elke A. Rundensteiner",
+            "Jianjun Chen"
+          ],
+          "authorCount": 8,
+          "affiliations": [
+            "ByteDance",
+            "Worcester Polytechnic Institute"
+          ],
+          "categories": [
+            "cs.DB",
+            "cs.AI",
+            "cs.SE"
+          ],
+          "comment": "ICDE 2026",
+          "universities": [
+            "University of Arizona",
+            "Worcester Polytechnic Institute"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#6b7280"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#6b7280"
+            }
+          ],
+          "collabConfidence": "confirmed",
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "bytedance"
+          ],
+          "pdfUnis": [
+            "‡University of Arizona, Tucson, USA",
+            "∗Worcester Polytechnic Institute, Worcester, USA"
+          ],
+          "pdfHKUnis": [],
+          "tldr": "[research paper] Krone introduces the first hierarchical log anomaly detection framework that automatically infers execution hierarchies from flat logs using a semantic abstraction model based on Entity-Action-Status triples. It decomposes log sequences into modular, reusable execution chunks (Krone Seqs) and employs a hybrid detection mechanism—combining a fast local-context detector with a nested-aware detector that captures cross-level dependencies—while leveraging LLMs for explanation with minimal usage. The framework achieves significant gains in accuracy (F1 ↑10.07%), data efficiency (117.3× reduction), and interpretability, while maintaining scalability through cached reuse and early-exit optimization.",
+          "deepxivKeywords": [
+            "hierarchical log abstraction",
+            "modular anomaly detection",
+            "execution hierarchy inference",
+            "nested semantic dependencies",
+            "LLM-augmented log analysis"
+          ],
           "deepxivEnhanced": true
         },
         {
@@ -1040,8 +1283,8 @@
           "deepxivEnhanced": true
         }
       ],
-      "count": 18,
-      "uniCollabCount": 8,
+      "count": 22,
+      "uniCollabCount": 11,
       "hkCollabCount": 1,
       "paperCount": 18
     },
@@ -16727,7 +16970,7 @@
       ],
       "count": 67,
       "uniCollabCount": 13,
-      "hkCollabCount": 0,
+      "hkCollabCount": 1,
       "paperCount": 67
     },
     "deepmind": {
@@ -16853,6 +17096,61 @@
             "latent world-model",
             "physics-defying hallucinations",
             "information-theoretic drift control"
+          ],
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "Understanding Performance Gap Between Parallel and Sequential Sampling in Large Reasoning Models",
+          "summary": "Large Reasoning Models (LRMs) have shown remarkable performance on challenging questions, such as math and coding. However, to obtain a high quality solution, one may need to sample more than once. In principal, there are two sampling strategies that can be composed to form more complex processes: s",
+          "published": "2026-04-07T13:28:09Z",
+          "arxivId": "2604.05868v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.05868v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.05868v1",
+          "authors": [
+            "Xiangming Gu",
+            "Soham De",
+            "Larisa Markeeva",
+            "Petar Veličković",
+            "Razvan Pascanu"
+          ],
+          "authorCount": 5,
+          "affiliations": [],
+          "categories": [
+            "cs.CL"
+          ],
+          "comment": "Under review",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Code",
+              "label": "代码",
+              "color": "#8b5cf6"
+            }
+          ],
+          "collabConfidence": "none",
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "deepmind"
+          ],
+          "pdfUnis": [
+            "1GoogleDeepMind 2NationalUniversityofSingapore"
+          ],
+          "pdfHKUnis": [],
+          "tldr": "[empirical research paper] The paper empirically demonstrates that parallel sampling outperforms sequential sampling in large reasoning models despite the latter's theoretical representation power, identifying insufficient exploration—caused by conditioning on prior answers—as the primary driver of the performance gap. Experiments across multiple models (Qwen3, DeepSeek-R1, Gemini 2.5) and domains (math, coding) show that aggregation and context length are not the root causes, but the sequential chain's dependency on previous outputs restricts diversity in generated solutions, leading to suboptimal final outputs.",
+          "deepxivKeywords": [
+            "exploration in reasoning models",
+            "sampling strategy comparison",
+            "sequential vs parallel generation",
+            "thinking trace diversity",
+            "reasoning model scalability"
           ],
           "deepxivEnhanced": true
         },
@@ -17516,61 +17814,6 @@
             "Langevin dynamics",
             "real-time reinforcement learning",
             "energy-based policy modeling"
-          ],
-          "deepxivEnhanced": true
-        },
-        {
-          "title": "Understanding Performance Gap Between Parallel and Sequential Sampling in Large Reasoning Models",
-          "summary": "Large Reasoning Models (LRMs) have shown remarkable performance on challenging questions, such as math and coding. However, to obtain a high quality solution, one may need to sample more than once. In principal, there are two sampling strategies that can be composed to form more complex processes: s",
-          "published": "2026-04-07T13:28:09Z",
-          "arxivId": "2604.05868v1",
-          "arxivUrl": "http://arxiv.org/abs/2604.05868v1",
-          "pdfUrl": "https://arxiv.org/pdf/2604.05868v1",
-          "authors": [
-            "Xiangming Gu",
-            "Soham De",
-            "Larisa Markeeva",
-            "Petar Veličković",
-            "Razvan Pascanu"
-          ],
-          "authorCount": 5,
-          "affiliations": [],
-          "categories": [
-            "cs.CL"
-          ],
-          "comment": "Under review",
-          "universities": [],
-          "hkUniversities": [],
-          "hasUniCollab": false,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "LLM",
-              "label": "LLM",
-              "color": "#3b82f6"
-            },
-            {
-              "id": "Code",
-              "label": "代码",
-              "color": "#8b5cf6"
-            }
-          ],
-          "collabConfidence": "none",
-          "pdfVerified": true,
-          "pdfCompanies": [
-            "deepmind"
-          ],
-          "pdfUnis": [
-            "1GoogleDeepMind 2NationalUniversityofSingapore"
-          ],
-          "pdfHKUnis": [],
-          "tldr": "[empirical research paper] The paper empirically demonstrates that parallel sampling outperforms sequential sampling in large reasoning models despite the latter's theoretical representation power, identifying insufficient exploration—caused by conditioning on prior answers—as the primary driver of the performance gap. Experiments across multiple models (Qwen3, DeepSeek-R1, Gemini 2.5) and domains (math, coding) show that aggregation and context length are not the root causes, but the sequential chain's dependency on previous outputs restricts diversity in generated solutions, leading to suboptimal final outputs.",
-          "deepxivKeywords": [
-            "exploration in reasoning models",
-            "sampling strategy comparison",
-            "sequential vs parallel generation",
-            "thinking trace diversity",
-            "reasoning model scalability"
           ],
           "deepxivEnhanced": true
         }
@@ -20166,6 +20409,11 @@
               "id": "Vision",
               "label": "视觉",
               "color": "#ec4899"
+            },
+            {
+              "id": "Multimodal",
+              "label": "Multimodal",
+              "color": "#6b7280"
             }
           ],
           "collabConfidence": "confirmed",
@@ -20177,7 +20425,16 @@
             "NanjingUniversity BeijingInstituteofTechnology ChinaUniversityofPetroleum",
             "zhaobo20000116@gmail.com carryguo02@gmail.com CollegeofArtificialIntelligence,"
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research paper] The paper identifies that image editing failures stem not from model limitations but from poor task formulation—specifically, ambiguous targets, weak spatial grounding, or under-specified instructions. It proposes an adaptive task reformulation framework using a lightweight MLLM agent that dynamically restructures editing queries into a sequence of structured, feedback-driven operations (e.g., region isolation, structural decoupling, intent clarification), enabling robust performance on challenging cases without modifying the underlying editing backbone. Experiments on ImgEdit, PICA, and RePlan show consistent gains, especially in edge cases involving small targets or implicit spatial dependencies.",
+          "deepxivKeywords": [
+            "task reformulation",
+            "agentic execution",
+            "multimodal large language models",
+            "image editing failure analysis",
+            "feedback-driven planning"
+          ],
+          "deepxivEnhanced": true
         },
         {
           "title": "Efficient Video Diffusion Models: Advancements and Challenges",
@@ -20235,7 +20492,16 @@
           ],
           "pdfHKUnis": [
             "香港科技大学 (HKUST)"
-          ]
+          ],
+          "tldr": "This is the first comprehensive survey on efficient video diffusion models, introducing a unified taxonomy of four acceleration paradigms—step distillation, efficient attention, model compression, and cache/trajectory optimization—each targeting either reduced function evaluations or minimized per-step overhead. The work reveals that video efficiency is fundamentally distinct from image diffusion due to compounded spatial-temporal token growth, iterative denoising, and long-horizon coherence constraints, making traditional image-based optimization strategies insufficient; it highlights critical open challenges in quality preservation under acceleration, real-time long-horizon generation, and hardware-software co-design.",
+          "deepxivKeywords": [
+            "step distillation",
+            "efficient attention",
+            "temporal coherence",
+            "KV-cache optimization",
+            "long-horizon generation"
+          ],
+          "deepxivEnhanced": true
         },
         {
           "title": "NTIRE 2026 Challenge on Short-form UGC Video Restoration in the Wild with Generative Models: Datasets, Methods and Results",
@@ -20288,7 +20554,17 @@
             "Generative Models: Datasets, Methods and Results",
             "JiachenTu GuoyiXu YaoxinJiang JiajiaLiu YaokunShi"
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research challenge / benchmark evaluation] The NTIRE 2026 Challenge introduces KwaiVIR, a novel benchmark combining synthetically distorted and real-world short-form UGC videos to evaluate generative models for S-UGC video restoration in wild conditions. It features two evaluation tracks—subjective user studies and objective metrics—addressing fidelity, perceptual quality, and temporal consistency across diverse, entangled real-world degradations. 12 teams achieve strong results, demonstrating progress in handling complex, uncontrolled distortions with generative models that preserve temporal coherence and realism.",
+          "deepxivKeywords": [
+            "generative model-based video restoration",
+            "short-form UGC video degradation",
+            "synthetic-real video pairing",
+            "temporal consistency in video restoration",
+            "wild video restoration benchmark"
+          ],
+          "githubUrl": "https://github.com/lixinustc/KVQE-Challenge-CVPR-NTIRE2026",
+          "deepxivEnhanced": true
         },
         {
           "title": "Dual-Rerank: Fusing Causality and Utility for Industrial Generative Reranking",
@@ -20343,7 +20619,16 @@
             "kuaishou"
           ],
           "pdfUnis": [],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research paper] Dual-Rerank introduces a unified industrial reranking framework that resolves the structural trade-off between autoregressive (AR) and non-autoregressive (NAR) models by leveraging sequential knowledge distillation—exploiting the quasi-deterministic, unimodal nature of video ranking distributions—to enable efficient NAR inference. It simultaneously addresses the optimization gap via list-wise decoupled reranking optimization (LDRO), which stabilizes reinforcement learning by decoupling reward signals from sequence generation, enabling stable online RL in high-throughput environments. A/B testing shows superior user satisfaction, watch time, and latency reduction compared to AR baselines, with a 75% consistency rate in ranking outputs under constrained utility constraints.",
+          "deepxivKeywords": [
+            "sequential knowledge distillation",
+            "list-wise decoupled reranking optimization",
+            "quasi-deterministic ranking distributions",
+            "industrial generative reranking",
+            "reinforcement learning stability"
+          ],
+          "deepxivEnhanced": true
         },
         {
           "title": "KAT-Coder-V2 Technical Report",
@@ -20740,7 +21025,16 @@
           "pdfUnis": [
             "Tsinghua University"
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research paper] Prefill-as-a-Service (PrfaaS) introduces a selective, cross-datacenter KVCache offloading mechanism for hybrid-attention LLMs, where only long-context prefills are transferred from compute-dense prefill clusters to decode clusters via commodity Ethernet. The design leverages reduced KVCache size from hybrid architectures to enable heterogeneous deployment without requiring shared RDMA fabrics, using length-based routing, bandwidth-aware scheduling, and a global prefix-cache manager to avoid congestion and optimize utilization. In a 1T-parameter model case study, PrfaaS achieves 54% and 32% higher throughput than homogeneous and naive heterogeneous baselines, respectively, with minimal cross-datacenter bandwidth overhead.",
+          "deepxivKeywords": [
+            "cross-datacenter KVCache transfer",
+            "selective prefill offloading",
+            "bandwidth-aware scheduling",
+            "hybrid-attention architectures",
+            "cache-aware request placement"
+          ],
+          "deepxivEnhanced": true
         },
         {
           "title": "EditCaption: Human-Aligned Instruction Synthesis for Image Editing via Supervised Fine-Tuning and Direct Preference Optimization",
@@ -20796,7 +21090,16 @@
           "pdfUnis": [
             "1PekingUniversity 2TheChineseUniversityofHongKong,Shenzhen 3TsinghuaUniversity 4"
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research paper] EditCaption introduces a two-stage post-training pipeline to fix systematic failure modes in VLM-generated image editing instructions—orientation inconsistency, viewpoint ambiguity, and lack of fine-grained attribute description—by constructing 100K human-refined supervised fine-tuning (SFT) data via GLM auto-annotation filtered with EditScore, followed by 10K human-annotated preference pairs for Direct Preference Optimization (DPO). The approach achieves state-of-the-art performance on Eval-400 (4.712), ByteMorph-Bench (4.588), and HQ-Edit, reducing critical error rates from 47.75% to 23% and correct rates from 41.75% to 66%, demonstrating that targeted data construction and preference alignment are essential for human-aligned instruction synthesis in image editing.",
+          "deepxivKeywords": [
+            "spatial reasoning",
+            "orientation consistency",
+            "viewpoint ambiguity",
+            "attribute-level description",
+            "direct preference optimization"
+          ],
+          "deepxivEnhanced": true
         },
         {
           "title": "EduIllustrate: Towards Scalable Automated Generation Of Multimodal Educational Content",
@@ -21536,7 +21839,16 @@
             "FumikazuKonishi*1 YuukiTsubouchi*1 HirofumiTsuruta*1",
             "SAKURAONE: AN OPEN ETHERNET–BASED AI HPC SYSTEM AND ITS"
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[experience report / operational study] SAKURAONE presents a real-world operational analysis of an 800-GPU, single-tenant LLM development cluster using open Ethernet (SONiC + RoCEv2) and a rail-optimized leaf-spine fabric. It reveals that small-scale jobs dominate in volume, while large-scale jobs consume most GPU time, with a shift from initial large-scale training to iterative mid-scale refinement as development progresses—highlighting distinct workload dynamics in mid-scale AI development environments lacking multi-tenancy or hyperscale scale.",
+          "deepxivKeywords": [
+            "open networking",
+            "workload dynamics",
+            "LLM development",
+            "single-tenant HPC",
+            "RoCEv2 interconnect"
+          ],
+          "deepxivEnhanced": true
         },
         {
           "title": "Efficient Multi-View 3D Object Detection by Dynamic Token Selection and Fine-Tuning",
@@ -21592,7 +21904,16 @@
           "pdfUnis": [
             "Danish Nazir1,2, Antoine Hanna-Asaad1, Lucas Go¨rnhardt2, Jan Piewek1, Thorsten "
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research paper] Proposes a dynamic layer-wise token selection mechanism and a parameter-efficient fine-tuning strategy for ViT-based multi-view 3D object detection, reducing computational complexity by 48%–55% and inference latency by 9%–25% while maintaining or slightly improving detection performance. Unlike ToC3D, which uses fixed token ratios and full backbone retraining, the method introduces an image token compensator that adapts token selection per layer based on motion context, and trains only 1.6M parameters instead of over 300M, enabling efficient deployment on real-time autonomous driving systems.",
+          "deepxivKeywords": [
+            "dynamic token selection",
+            "parameter-efficient fine-tuning",
+            "ViT backbone optimization",
+            "multi-view 3D object detection",
+            "ego-motion-based token selection"
+          ],
+          "deepxivEnhanced": true
         },
         {
           "title": "SemiFA: An Agentic Multi-Modal Framework for Autonomous Semiconductor Failure Analysis Report Generation",
@@ -21643,7 +21964,17 @@
             "School of Artificial Intelligence and Data Engineering (SAIDE)",
             "Indian Institute of Technology Jodhpur, India"
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research paper] SemiFA introduces a four-agent agentic pipeline using LangGraph to autonomously generate structured semiconductor failure analysis reports from inspection images, integrating DINOv2 visual embeddings, SECS/GEM equipment telemetry, and historical defect data via Qdrant. The system achieves 92.1% defect classification accuracy and generates complete reports in 48 seconds on an A100 GPU, with multi-modal fusion improving root cause reasoning by +0.86 (1–5 scale) over image-only baselines, where equipment telemetry is identified as the most impactful modality. This is the first framework to fuse equipment telemetry into a vision-language model pipeline for end-to-end FA report generation.",
+          "deepxivKeywords": [
+            "agentic memory",
+            "equipment telemetry fusion",
+            "multi-modal root cause analysis",
+            "semiconductor defect classification",
+            "autonomous report generation"
+          ],
+          "githubUrl": "https://github.com/Shivamckaushik/SemiFA",
+          "deepxivEnhanced": true
         },
         {
           "title": "An Engineering Journey Training Large Language Models at Scale on Alps: The Apertus Experience",
@@ -21685,6 +22016,11 @@
               "id": "RAG",
               "label": "RAG/检索",
               "color": "#64748b"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#6b7280"
             }
           ],
           "collabConfidence": "confirmed",
@@ -21696,7 +22032,16 @@
             "§EPFL",
             "¶ETH Zurich"
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research paper] Apertus, a 70B-parameter open multilingual foundation model, was trained at scale on the Alps supercomputer using NVIDIA GH200 Grace Hopper Superchips, marking the first such academic achievement at this scale. The paper details the engineering challenges of transitioning a general-purpose HPC infrastructure into a resilient, software-defined ML platform, focusing on overcoming storage bottlenecks, communication latency in distributed training, and long-running job stability. Key innovations include a tiered storage architecture, a cloud-native vCluster operating model with IaC, service orchestration, and user environment abstraction, enabling sustained training across thousands of GPUs with 6M GPU-hours and over 3 months of runtime.",
+          "deepxivKeywords": [
+            "software-defined machine learning platform",
+            "distributed training communication wall",
+            "HPC to ML infrastructure transition",
+            "long-running AI workloads",
+            "storage bottleneck in large-scale training"
+          ],
+          "deepxivEnhanced": true
         },
         {
           "title": "An Engineering Journey Training Large Language Models at Scale on Alps: The Apertus Experience",
@@ -21805,7 +22150,17 @@
           "pdfUnis": [
             "time are essential for real-time fault-tolerant quantum computing. We introduce "
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research paper] The paper presents an AI-based pre-decoder for surface code quantum error correction that operates in a block-wise parallel fashion, reducing physical errors locally with sub-microsecond decoding runtimes on NVIDIA GB300 GPUs. The architecture is modular, backend-agnostic, and compatible with spatial and temporal parallelism, enabling scalable decoding at large code distances (up to d=13) by leveraging data-driven graph weight estimation without explicit noise modeling. A noise-learning component infers decoding weights directly from syndrome statistics, outperforming traditional correlated PyMatching in certain regimes and enabling robust decoding under unknown or time-varying hardware noise.",
+          "deepxivKeywords": [
+            "pre-decoder",
+            "surface code",
+            "block-wise parallel decoding",
+            "noise-learning architecture",
+            "graph weight estimation"
+          ],
+          "githubUrl": "https://github.com/nvidia/ising-decoding",
+          "deepxivEnhanced": true
         },
         {
           "title": "Nemotron 3 Super: Open, Efficient Mixture-of-Experts Hybrid Mamba-Transformer Model for Agentic Reasoning",
@@ -21867,7 +22222,17 @@
             "nvidia"
           ],
           "pdfUnis": [],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research paper] Nemotron 3 Super introduces LatentMoE, a novel Mixture-of-Experts architecture that improves accuracy per FLOP and per parameter over standard MoEs, and integrates MTP (Multi-Token-Prediction) layers for speculative decoding to boost inference throughput. Pre-trained on 25 trillion tokens in NVFP4 with phased data selection, the model achieves up to 7.5× higher throughput than Qwen3.5-122B and 2.2× over GPT-OSS-120B on 8k input/64k output tasks, while maintaining benchmark parity, and is openly released with full training data and checkpoints.",
+          "deepxivKeywords": [
+            "LatentMoE",
+            "MTP layers",
+            "speculative decoding",
+            "NVFP4 pre-training",
+            "agentic reasoning"
+          ],
+          "githubUrl": "https://github.com/NVIDIA-NeMo/Nemotron",
+          "deepxivEnhanced": true
         },
         {
           "title": "Large-Scale Quantum Circuit Simulation on HPC Cluster via Cache Blocking, Boosting, and Gate Fusion Optimization",
@@ -21921,7 +22286,16 @@
             "NationalTaiwanUniversity NationalTaiwanUniversity NationalChengKung NationalTaiw",
             "Large-Scale Quantum Circuit Simulation on HPC Cluster via"
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research paper] Introduces a systematic framework for large-scale quantum circuit simulation on HPC clusters that combines cache-blocking, gate fusion, and adaptive execution strategies. Key innovations include a *merge booster* for diagonal-heavy gates and a *diagonal detector* that identifies diagonal gate patterns to enable efficient fusion, reducing memory access and computational overhead. Experiments on DGX-H100 GPUs show up to 160x speedup in circuit-level benchmarks and 34x in diagonal-heavy gate-level simulations via optimized data locality and gate restructuring.",
+          "deepxivKeywords": [
+            "cache blocking",
+            "gate fusion",
+            "diagonal gate detection",
+            "quantum circuit partitioning",
+            "adaptive simulation"
+          ],
+          "deepxivEnhanced": true
         },
         {
           "title": "Is There an AI Bubble? Robust Date-Stamping for Periods of Exuberance",
@@ -21957,7 +22331,16 @@
           "pdfUnis": [
             "Department of Statistics and Data Science, Cornell University"
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research paper] The paper introduces a stochastic-volatility-robust Augmented Dickey-Fuller (SV-ADF) test that extends traditional unit root methods to handle persistent time-varying volatility, enabling accurate detection and date-stamping of explosive bubble episodes without parametric assumptions. It establishes asymptotic consistency and nuisance-parameter-free inference, outperforming standard homoskedastic methods in Monte Carlo simulations, and applies the framework to AI-exposed equities, identifying strong bubble dynamics in Alphabet and TSMC with distinct timing and intensity across firms.",
+          "deepxivKeywords": [
+            "stochastic volatility",
+            "bubble date-stamping",
+            "explosive bubbles",
+            "double local-to-unity",
+            "asset price exuberance"
+          ],
+          "deepxivEnhanced": true
         },
         {
           "title": "AffordSim: A Scalable Data Generator and Benchmark for Affordance-Aware Robotic Manipulation",
@@ -22013,7 +22396,16 @@
           "pdfUnis": [
             "SchoolofArtificialIntelligence,Xi’anJiaotongUniversity"
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research paper] AffordSim introduces the first simulation framework that integrates open-vocabulary 3D affordance prediction into robotic manipulation data generation, using VoxAfford to predict functional interaction regions on point clouds and guide semantically correct grasp and motion planning. Built on NVIDIA Isaac Sim with VLM-powered task generation and DA3-based photorealistic domain randomization, it generates a 50-task benchmark across 7 manipulation categories, revealing that affordance-demanding tasks like pouring into narrow containers (1–43%) and mug hanging (0–47%) remain significantly underperforming compared to grasping (53–93%), with zero-shot sim-to-real transfer validated on a real Franka FR3.",
+          "deepxivKeywords": [
+            "affordance-aware manipulation",
+            "open-vocabulary 3D affordance detection",
+            "VLM-powered task generation",
+            "domain randomization with 3D Gaussian reconstruction",
+            "sim-to-real transfer in robotics"
+          ],
+          "deepxivEnhanced": true
         },
         {
           "title": "EdgeCIM: A Hardware-Software Co-Design for CIM-Based Acceleration of Small Language Models",
@@ -22063,7 +22455,16 @@
           "pdfVerified": true,
           "pdfCompanies": [],
           "pdfUnis": [],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research paper] EdgeCIM introduces a hardware-software co-design framework tailored to the GEMV-dominated autoregressive decoding phase of decoder-only small language models (SLMs) on edge devices. It leverages a 65nm Compute-in-Memory (CIM) macro with fine-grained tiling and pipeline optimization to balance compute throughput and DRAM bandwidth, achieving up to 7.3× higher throughput and 49.6× better energy efficiency than NVIDIA Orin Nano on LLaMA3.2-1B, and 9.95× higher throughput than Qualcomm SA8255P on LLaMA3.2-3B, through end-to-end optimization of projection, attention, and linear layers under edge constraints.",
+          "deepxivKeywords": [
+            "compute-in-memory",
+            "GEMV optimization",
+            "edge-scale inference",
+            "decoder-only architectures",
+            "hardware-software co-design"
+          ],
+          "deepxivEnhanced": true
         },
         {
           "title": "Architectural Trade-offs in the Energy-Efficient Era: A Comparative Study of power-capping NVIDIA H100 and H200",
@@ -22110,7 +22511,17 @@
           "pdfUnis": [
             "Friedrich-Alexander University of Erlangen–Nuremberg, 91058 Erlangen, Germany"
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[empirical study] This paper conducts a systematic empirical analysis of NVIDIA H100 and H200 GPUs under power-capping conditions, isolating memory bandwidth (HBM2e vs. HBM3e) as a key variable. Using compute-bound (DGEMM) and memory-bound (TheBandwidthBenchmark) workloads, it reveals that the H100 outperforms the H200 in compute-intensive tasks due to more efficient SM power allocation, while the H200 achieves superior performance-per-watt in memory-bound scenarios where memory bandwidth dominates. Regression analysis identifies outliers in memory power draw and uncovers the maximum unreported memory power consumption, providing actionable insights for energy-efficient workload selection.",
+          "deepxivKeywords": [
+            "memory bandwidth scaling",
+            "power-capping dynamics",
+            "Roofline model corner cases",
+            "HBM3e vs HBM2e efficiency",
+            "frequency throttling under power limits"
+          ],
+          "githubUrl": "https://github.com/HPC-Dwarfs/TheBandwidthBenchmark",
+          "deepxivEnhanced": true
         },
         {
           "title": "Generative Design for Direct-to-Chip Liquid Cooling for Data Centers",
@@ -22150,6 +22561,11 @@
               "id": "Data",
               "label": "数据",
               "color": "#78716c"
+            },
+            {
+              "id": "Multimodal",
+              "label": "Multimodal",
+              "color": "#6b7280"
             }
           ],
           "collabConfidence": "uni_only",
@@ -22158,7 +22574,16 @@
           "pdfUnis": [
             "UniversityofMichigan-Dearborn"
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research paper] A generative design framework leverages a physics-based finite-difference thermal model to iteratively synthesize optimized cooling channel geometries for the NVIDIA GB200 Grace Blackwell Superchip, using a constrained reaction-diffusion process that responds to spatially non-uniform heat flux. The closed-loop generation-evaluation cycle redistributes coolant flow toward high-power regions, suppressing hot spots and achieving over 5°C lower average and 35°C lower peak temperatures compared to baseline parallel channels, demonstrating the efficacy of coupling generative algorithms with lightweight thermal simulation for heterogeneous chip cooling.",
+          "deepxivKeywords": [
+            "generative design",
+            "reaction-diffusion process",
+            "thermal gradient optimization",
+            "direct-to-chip liquid cooling",
+            "non-uniform heat flux"
+          ],
+          "deepxivEnhanced": true
         },
         {
           "title": "CovAngelo: A hybrid quantum-classical computing platform for accurate and scalable drug discovery",
@@ -22204,6 +22629,11 @@
               "id": "RL",
               "label": "强化学习",
               "color": "#eab308"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG",
+              "color": "#6b7280"
             }
           ],
           "collabConfidence": "mentioned",
@@ -22212,7 +22642,16 @@
             "nvidia"
           ],
           "pdfUnis": [],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research paper] A hybrid quantum-classical platform introduces a QM/QM/MM multiscale embedding model that uses quantum-information-enhanced orbitals to accurately capture electron correlation in ligand–protein binding, enabling sub-kcal/mol reaction barrier predictions for covalent inhibitors like zanubrutinib. The method combines a quantum core with classical solvent and protein dynamics, leveraging CUDA-Q for integration with quantum hardware (up to 20 qubits) and GPU clusters, achieving up to 20× speedup over classical methods via quantum-informed orbitals and fault-tolerant quantum compatibility, while supporting scalable reaction network construction for virtual screening.",
+          "deepxivKeywords": [
+            "quantum-in-quantum-in-classical embedding",
+            "entanglement-consistent orbitals",
+            "reaction network in chemical metric space",
+            "quantum-information metrics in quantum chemistry",
+            "covalent docking energy profiles"
+          ],
+          "deepxivEnhanced": true
         },
         {
           "title": "SatReg: Regression-based Neural Architecture Search for Lightweight Satellite Image Segmentation",
@@ -22260,7 +22699,16 @@
           "pdfUnis": [
             "JohnsHopkinsUniversity JohnsHopkinsUniversity"
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research paper] SatReg introduces a regression-based neural architecture search framework that reduces the design space of CM-UNet—a hybrid CNN-Mamba segmentation model—to two key variables: encoder width (b) and decoder bottleneck width (h). By training a small set of student models via knowledge distillation and profiling them on a Jetson Orin Nano for mIoU, latency, and power, the method fits low-order surrogate models that predict hardware performance without exhaustive search. The analysis reveals that these two variables differentially impact accuracy and energy cost, enabling efficient, hardware-aware selection of lightweight configurations for edge deployment in satellite systems.",
+          "deepxivKeywords": [
+            "hardware-aware optimization",
+            "regression-based architecture search",
+            "CM-UNet",
+            "edge deployment",
+            "onboard satellite computing"
+          ],
+          "deepxivEnhanced": true
         },
         {
           "title": "BVH-Accelerated Ray Tracing for High-Frequency Electromagnetic Backscattering",
@@ -22313,7 +22761,17 @@
           "pdfUnis": [
             "1DepartmentofComputationalScienceandTechnology,KTHRoyalInstituteofTechnology"
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research paper] Introduces a BVH-accelerated shooting and bouncing rays (SBR) method for high-frequency electromagnetic backscattering, where a bounding volume hierarchy reduces costly ray-triangle intersection searches in complex geometries, enabling efficient multi-reflection transport via a trace–integrate pipeline. The incident-ray sampling rule controls phase aliasing in physical optics integration, and the method is validated against Mie solutions for a PEC sphere and applied to aircraft RCS prediction with GPU and MPI acceleration.",
+          "deepxivKeywords": [
+            "bounding volume hierarchy",
+            "shooting and bouncing rays",
+            "physical optics surface integral",
+            "ray-triangle intersection",
+            "radar cross section"
+          ],
+          "githubUrl": "https://github.com/marco-pas/SagittaSBR",
+          "deepxivEnhanced": true
         },
         {
           "title": "Statistical Properties of the King Wen Sequence: An Anti-Habituation Structure That Does Not Improve Neural Network Training",
@@ -22348,7 +22806,17 @@
           "pdfVerified": true,
           "pdfCompanies": [],
           "pdfUnis": [],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research paper] The King Wen sequence of the I-Ching exhibits four statistically significant combinatorial properties—high transition distance, negative lag-1 autocorrelation, yang-balanced groups of four, and asymmetric within-pair vs. between-pair distances—when analyzed via Monte Carlo permutation testing. Despite superficial resemblance to curriculum learning and curiosity-driven exploration principles, experiments on neural network training show no benefit: learning rate modulation degrades performance, curriculum ordering performs worse than random, and seed sensitivity reveals only degradation beyond natural variance. The core mechanism is identified as the sequence’s high variance, which destabilizes gradient-based optimization, demonstrating a critical gap between combinatorial structure and effective training dynamics.",
+          "deepxivKeywords": [
+            "anti-habituation structure",
+            "combinatorial variance",
+            "gradient instability",
+            "information-theoretic surprise",
+            "curriculum learning dynamics"
+          ],
+          "githubUrl": "https://github.com/augchan42/king-wen-agi-framework",
+          "deepxivEnhanced": true
         },
         {
           "title": "Watt Counts: Energy-Aware Benchmark for Sustainable LLM Inference on Heterogeneous GPU Architectures",
@@ -22400,7 +22868,16 @@
             "Universidad Politecnica de Madrid, Spain",
             "Zurich University of Applied Sciences, Switzerland"
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research paper] Watt Counts introduces the largest open dataset of LLM energy consumption across 50 models on 10 NVIDIA GPUs, capturing over 5,000 experiments and 14M power samples in batch and server scenarios. The benchmark enables reproducible, hardware-agnostic energy measurement without external power meters, revealing that GPU architecture (e.g., memory bandwidth, TDP) and deployment context jointly determine energy efficiency, with up to 70% energy reduction in server deployments and 20% in batch settings with minimal performance impact.",
+          "deepxivKeywords": [
+            "energy-aware dataset",
+            "GPU architecture profiling",
+            "inference power consumption",
+            "heterogeneous hardware benchmarking",
+            "system-level energy trade-offs"
+          ],
+          "deepxivEnhanced": true
         },
         {
           "title": "PriPG-RL: Privileged Planner-Guided Reinforcement Learning for Partially Observable Systems with Anytime-Feasible MPC",
@@ -22453,7 +22930,17 @@
           "pdfUnis": [
             "Mohsen Amiri1,†, Mohsen Amiri2,†, Ali Beikmohammadi1, Sindri Magnus´son1,"
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research paper] PriPG-RL introduces a privileged planner-guided RL framework for partially observable systems, where an anytime-feasible MPC planner provides access to hidden state information during training, enabling a student agent to learn via Planner-to-Policy Soft Actor-Critic (P2P-SAC). The method distills planner-generated trajectories and feasible control actions into a policy that mitigates state aliasing and improves sample efficiency and convergence in continuous control tasks, validated in both simulation and real-world quadruped navigation under obstacle-rich conditions. Theoretical analysis confirms convergence to a feasible policy under partial observability, overcoming limitations of existing RLfD and regularization approaches that fail in POMDP settings due to state aliasing and vanishing gradients.",
+          "deepxivKeywords": [
+            "anytime-feasible MPC",
+            "planner-to-policy distillation",
+            "partial observability",
+            "state aliasing mitigation",
+            "model predictive control in robotics"
+          ],
+          "githubUrl": "https://github.com/mohsen1amiri/PriPG-RL_UnitreeGo2.git",
+          "deepxivEnhanced": true
         },
         {
           "title": "Bit-by-Bit: Progressive QAT Strategy with Outlier Channel Splitting for Stable Low-Bit LLMs",
@@ -22514,7 +23001,16 @@
           "pdfHKUnis": [
             "CityU"
           ],
-          "isHK": true
+          "isHK": true,
+          "tldr": "[research paper] Bit-by-Bit introduces a progressive quantization-aware training (QAT) framework that addresses instability in ultra-low-bit LLM training by combining block-wise precision reduction, nested integer quantization grids enabling 'train once, deploy any precision', and rounding-aware outlier channel splitting to suppress quantization error without altering output. The method achieves stable convergence with 3600× reduction in training tokens compared to prior art, outperforms state-of-the-art baselines (e.g., BitDistiller, EfficientQAT) on Llama2/3 with only 2.25x PPL degradation under W2A2 settings, and leverages custom W2A2/W2A16 kernels for up to 11× speedup over BF16 via microscaling groups aligned with OCP/NVIDIA standards.",
+          "deepxivKeywords": [
+            "progressive QAT",
+            "outlier channel splitting",
+            "nested quantization grids",
+            "low-bit stability",
+            "dynamic range preservation"
+          ],
+          "deepxivEnhanced": true
         },
         {
           "title": "Measurement of Generative AI Workload Power Profiles for Whole-Facility Data Center Infrastructure Planning",
@@ -22569,6 +23065,11 @@
               "id": "Data",
               "label": "数据",
               "color": "#78716c"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#6b7280"
             }
           ],
           "collabConfidence": "uni_only",
@@ -22577,7 +23078,16 @@
           "pdfUnis": [
             "NationalLaboratoryoftheRockies(NLR),Golden,CO,USA"
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research paper] This paper presents high-resolution (0.1-second) power consumption measurements of generative AI workloads—training, fine-tuning, and inference—on NVIDIA H100 GPUs in a real-world HPC data center, using standardized MLCommons and vLLM benchmarks for reproducibility. The resulting workload profiles are scaled to whole-facility energy demand via a bottom-up, event-driven energy model that captures temporal fluctuations from AI workloads and user behavior, enabling realistic, geographically resolved energy planning for grid integration, microgrids, and infrastructure siting.",
+          "deepxivKeywords": [
+            "agentic AI workloads",
+            "GPU power consumption profiling",
+            "event-driven energy modeling",
+            "whole-facility load forecasting",
+            "real-time power variability"
+          ],
+          "deepxivEnhanced": true
         },
         {
           "title": "CADENCE: Context-Adaptive Depth Estimation for Navigation and Computational Efficiency",
@@ -22625,7 +23135,17 @@
           "pdfVerified": true,
           "pdfCompanies": [],
           "pdfUnis": [],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research paper] CADENCE introduces a context-adaptive monocular depth estimation (MDE) framework that dynamically scales computational complexity in real time using slimmable CNNs, jointly optimizing navigation actions and perception fidelity through a unified policy. Unlike static models or edge-based offloading, it closes the sensing-actuation loop by adjusting depth estimation resolution based on navigation needs and environmental context, reducing sensor acquisitions by 9.67%, inference latency by 74.8%, power consumption by 16.1%, and energy expenditure by 75.0% while improving navigation accuracy by 7.43% in a hardware-in-the-loop drone testbed.",
+          "deepxivKeywords": [
+            "slimmable neural networks",
+            "context-adaptive perception",
+            "dynamic depth estimation",
+            "navigation-actuation loop",
+            "edge-aware computational scaling"
+          ],
+          "githubUrl": "https://github.com/WreckItTim/OmniNaviPy.",
+          "deepxivEnhanced": true
         },
         {
           "title": "Making Room for AI: Multi-GPU Molecular Dynamics with Deep Potentials in GROMACS",
@@ -22679,7 +23199,16 @@
           "pdfUnis": [
             "*KTH Royal Institute of Technology, Stockholm, Sweden"
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research paper] The paper presents a scalable integration of DeePMD-kit's deep neural network potentials into GROMACS, enabling multi-GPU, domain-decomposed molecular dynamics with near-*ab initio* accuracy. A decoupled domain decomposition layer allows concurrent neural network inference across distributed processes, achieving strong-scaling efficiency of 66% at 16 GPUs and 40% at 32, with over 90% of wall time consumed by DeePMD inference—highlighting ghost-atom communication and load imbalance as primary bottlenecks.",
+          "deepxivKeywords": [
+            "domain decomposition",
+            "neural network potentials",
+            "multi-GPU scaling",
+            "ghost-atom communication",
+            "ab initio molecular dynamics"
+          ],
+          "deepxivEnhanced": true
         },
         {
           "title": "The Theorems of Dr. David Blackwell and Their Contributions to Artificial Intelligence",
@@ -23868,6 +24397,57 @@
       "icon": "📱",
       "papers": [
         {
+          "title": "OneVL: One-Step Latent Reasoning and Planning with Vision-Language Explanation",
+          "summary": "First latent CoT method to surpass explicit CoT, achieving SOTA on 4 driving benchmarks with answer-only latency. Unifies VLA with world model via compact latent tokens. 50 authors from Xiaomi Embodied Intelligence.",
+          "published": "2026-04-20T16:37:22Z",
+          "arxivId": "2604.18486",
+          "arxivUrl": "https://arxiv.org/abs/2604.18486",
+          "pdfUrl": "https://arxiv.org/pdf/2604.18486",
+          "authors": [
+            "Jinghui Lu",
+            "Jiayi Guan",
+            "Zhijian Huang",
+            "Jinlong Li",
+            "Guang Li",
+            "Lingdong Kong",
+            "Yingyan Li",
+            "Han Wang"
+          ],
+          "authorCount": 50,
+          "affiliations": [
+            "Xiaomi Embodied Intelligence"
+          ],
+          "categories": [
+            "cs.CV",
+            "cs.CL",
+            "cs.RO"
+          ],
+          "comment": "49 pages, 22 figures, 10 tables",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Robotics",
+              "label": "机器人",
+              "color": "#0ea5e9"
+            },
+            {
+              "id": "MultiModal",
+              "label": "多模态",
+              "color": "#8b5cf6"
+            }
+          ],
+          "collabConfidence": "company_only",
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "xiaomi"
+          ],
+          "pdfUnis": [],
+          "pdfHKUnis": []
+        },
+        {
           "title": "UniDriveVLA: Unifying Understanding, Perception, and Action Planning for Autonomous Driving",
           "summary": "Vision-Language-Action (VLA) models have recently emerged in autonomous driving, with the promise of leveraging rich world knowledge to improve the cognitive capabilities of driving systems. However, adapting such models for driving tasks currently faces a critical dilemma between spatial perception",
           "published": "2026-04-02T15:48:45Z",
@@ -24151,15 +24731,159 @@
           "deepxivEnhanced": true
         }
       ],
-      "count": 4,
+      "count": 5,
       "uniCollabCount": 4,
-      "hkCollabCount": 0,
+      "hkCollabCount": 1,
       "paperCount": 4
     },
     "meta": {
       "company": "Meta AI",
       "icon": "📘",
       "papers": [
+        {
+          "title": "Grokking of Diffusion Models: Case Study on Modular Addition",
+          "summary": "Demonstrates diffusion models exhibit grokking (delayed generalization) on modular addition. Reveals how models bridge continuous pixel generation with discrete symbolic reasoning. Jiatao Gu (Meta FAIR).",
+          "published": "2026-04-20T00:02:00Z",
+          "arxivId": "2604.17673",
+          "arxivUrl": "https://arxiv.org/abs/2604.17673",
+          "pdfUrl": "https://arxiv.org/pdf/2604.17673",
+          "authors": [
+            "Joon Hyeok Kim",
+            "Yong-Hyun Park",
+            "Mattis Dalsaetra Ostby",
+            "Jiatao Gu"
+          ],
+          "authorCount": 4,
+          "affiliations": [
+            "Meta FAIR"
+          ],
+          "categories": [
+            "cs.LG"
+          ],
+          "comment": "",
+          "universities": [
+            "University of Pennsylvania"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Vision",
+              "label": "视觉",
+              "color": "#ec4899"
+            }
+          ],
+          "collabConfidence": "confirmed",
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "meta"
+          ],
+          "pdfUnis": [
+            "University of Pennsylvania"
+          ],
+          "pdfHKUnis": []
+        },
+        {
+          "title": "The xPU-athalon: Quantifying the Competition of AI Acceleration",
+          "summary": "The push for greater efficiency in AI computation has given rise to an array of accelerator architectures that increasingly challenge the GPU's long-standing dominance. In this work, we provide a quantitative view of this evolving landscape of AI accelerators, including the Cerebras CS-3, SambaNova ",
+          "published": "2026-04-12T23:10:14Z",
+          "arxivId": "2604.10852v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.10852v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.10852v1",
+          "authors": [
+            "Alicia Golden",
+            "Carole-Jean Wu",
+            "Gu-Yeon Wei",
+            "David Brooks"
+          ],
+          "authorCount": 4,
+          "affiliations": [],
+          "categories": [
+            "cs.AR"
+          ],
+          "comment": "Accepted to ISPASS 2026",
+          "universities": [
+            "MIT",
+            "HIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            }
+          ],
+          "collabConfidence": "confirmed",
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "meta"
+          ],
+          "pdfUnis": [
+            "Harvard University FAIR at Meta Harvard University Harvard University"
+          ],
+          "pdfHKUnis": []
+        },
+        {
+          "title": "VDPP: Video Depth Post-Processing for Speed and Scalability",
+          "summary": "Video depth estimation is essential for providing 3D scene structure in applications ranging from autonomous driving to mixed reality. Current end-to-end video depth models have established state-of-the-art performance. Although current end-to-end (E2E) models have achieved state-of-the-art performa",
+          "published": "2026-04-08T04:33:29Z",
+          "arxivId": "2604.06665v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.06665v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.06665v1",
+          "authors": [
+            "Daewon Yoon",
+            "Injun Baek",
+            "Sangyu Han",
+            "Yearim Kim",
+            "Nojun Kwak"
+          ],
+          "authorCount": 5,
+          "affiliations": [],
+          "categories": [
+            "cs.CV"
+          ],
+          "comment": "8 pages, 6 figures. Accepted to CVPR 2024 Workshop. Project page: https://github.com/injun-baek/VDPP",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "Vision",
+              "label": "视觉",
+              "color": "#ec4899"
+            }
+          ],
+          "collabConfidence": "none",
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "meta"
+          ],
+          "pdfUnis": [
+            "1 SeoulNationalUniversity 2 SamsungElectronics",
+            "Figure 1. VDPPachieves superior speed, spatialaccuracy and temporalconsistency a"
+          ],
+          "pdfHKUnis": []
+        },
         {
           "title": "Neural Computers",
           "summary": "We propose a new frontier: Neural Computers (NCs) -- an emerging machine form that unifies computation, memory, and I/O in a learned runtime state. Unlike conventional computers, which execute explicit programs, agents, which act over external execution environments, and world models, which learn en",
@@ -24224,6 +24948,73 @@
             "interactive video modeling",
             "runtime governance"
           ],
+          "deepxivEnhanced": true
+        },
+        {
+          "title": "dTRPO: Trajectory Reduction in Policy Optimization of Diffusion Large Language Models",
+          "summary": "Diffusion Large Language Models (dLLMs) introduce a new paradigm for language generation, which in turn presents new challenges for aligning them with human preferences. In this work, we aim to improve the policy optimization for dLLMs by reducing the cost of the trajectory probability calculation, ",
+          "published": "2026-03-19T11:55:52Z",
+          "arxivId": "2603.18806v1",
+          "arxivUrl": "http://arxiv.org/abs/2603.18806v1",
+          "pdfUrl": "https://arxiv.org/pdf/2603.18806v1",
+          "authors": [
+            "Wenxuan Zhang",
+            "Lemeng Wu",
+            "Changsheng Zhao",
+            "Ernie Chang",
+            "Mingchen Zhuge",
+            "Zechun Liu",
+            "Andy Su",
+            "Hanxian Huang"
+          ],
+          "authorCount": 14,
+          "affiliations": [],
+          "categories": [
+            "cs.AI"
+          ],
+          "comment": "",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            },
+            {
+              "id": "Multimodal",
+              "label": "Multimodal",
+              "color": "#6b7280"
+            }
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "meta"
+          ],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "company_only",
+          "tldr": "[research paper] dTRPO introduces a theoretical framework for trajectory reduction in diffusion large language models (dLLMs) by proving that the probability ratio of newly unmasked tokens under reference policy regularization is an unbiased estimate of intermediate diffusion states. It further demonstrates that full trajectory probabilities can be estimated via a single forward pass of a re-masked final state, enabling efficient offline policy optimization. The method achieves up to 9.6% gains on STEM tasks, 4.3% on coding, and 3.0% on instruction-following with minimal computational overhead, making it scalable and compatible with both long-block and block-wise dLLM architectures.",
+          "deepxivKeywords": [
+            "trajectory reduction",
+            "diffusion language models",
+            "policy optimization",
+            "reference policy regularization",
+            "offline training"
+          ],
+          "githubUrl": "https://github.com/facebookresearch/dllm_post_training",
           "deepxivEnhanced": true
         },
         {
@@ -24411,177 +25202,10 @@
             "fsync semantics"
           ],
           "deepxivEnhanced": true
-        },
-        {
-          "title": "dTRPO: Trajectory Reduction in Policy Optimization of Diffusion Large Language Models",
-          "summary": "Diffusion Large Language Models (dLLMs) introduce a new paradigm for language generation, which in turn presents new challenges for aligning them with human preferences. In this work, we aim to improve the policy optimization for dLLMs by reducing the cost of the trajectory probability calculation, ",
-          "published": "2026-03-19T11:55:52Z",
-          "arxivId": "2603.18806v1",
-          "arxivUrl": "http://arxiv.org/abs/2603.18806v1",
-          "pdfUrl": "https://arxiv.org/pdf/2603.18806v1",
-          "authors": [
-            "Wenxuan Zhang",
-            "Lemeng Wu",
-            "Changsheng Zhao",
-            "Ernie Chang",
-            "Mingchen Zhuge",
-            "Zechun Liu",
-            "Andy Su",
-            "Hanxian Huang"
-          ],
-          "authorCount": 14,
-          "affiliations": [],
-          "categories": [
-            "cs.AI"
-          ],
-          "comment": "",
-          "universities": [],
-          "hkUniversities": [],
-          "hasUniCollab": false,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "LLM",
-              "label": "LLM",
-              "color": "#3b82f6"
-            },
-            {
-              "id": "Infra",
-              "label": "Infra",
-              "color": "#22c55e"
-            },
-            {
-              "id": "RL",
-              "label": "强化学习",
-              "color": "#eab308"
-            },
-            {
-              "id": "Multimodal",
-              "label": "Multimodal",
-              "color": "#6b7280"
-            }
-          ],
-          "pdfVerified": true,
-          "pdfCompanies": [
-            "meta"
-          ],
-          "pdfUnis": [],
-          "pdfHKUnis": [],
-          "collabConfidence": "company_only",
-          "tldr": "[research paper] dTRPO introduces a theoretical framework for trajectory reduction in diffusion large language models (dLLMs) by proving that the probability ratio of newly unmasked tokens under reference policy regularization is an unbiased estimate of intermediate diffusion states. It further demonstrates that full trajectory probabilities can be estimated via a single forward pass of a re-masked final state, enabling efficient offline policy optimization. The method achieves up to 9.6% gains on STEM tasks, 4.3% on coding, and 3.0% on instruction-following with minimal computational overhead, making it scalable and compatible with both long-block and block-wise dLLM architectures.",
-          "deepxivKeywords": [
-            "trajectory reduction",
-            "diffusion language models",
-            "policy optimization",
-            "reference policy regularization",
-            "offline training"
-          ],
-          "githubUrl": "https://github.com/facebookresearch/dllm_post_training",
-          "deepxivEnhanced": true
-        },
-        {
-          "title": "VDPP: Video Depth Post-Processing for Speed and Scalability",
-          "summary": "Video depth estimation is essential for providing 3D scene structure in applications ranging from autonomous driving to mixed reality. Current end-to-end video depth models have established state-of-the-art performance. Although current end-to-end (E2E) models have achieved state-of-the-art performa",
-          "published": "2026-04-08T04:33:29Z",
-          "arxivId": "2604.06665v1",
-          "arxivUrl": "http://arxiv.org/abs/2604.06665v1",
-          "pdfUrl": "https://arxiv.org/pdf/2604.06665v1",
-          "authors": [
-            "Daewon Yoon",
-            "Injun Baek",
-            "Sangyu Han",
-            "Yearim Kim",
-            "Nojun Kwak"
-          ],
-          "authorCount": 5,
-          "affiliations": [],
-          "categories": [
-            "cs.CV"
-          ],
-          "comment": "8 pages, 6 figures. Accepted to CVPR 2024 Workshop. Project page: https://github.com/injun-baek/VDPP",
-          "universities": [],
-          "hkUniversities": [],
-          "hasUniCollab": false,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "Agent",
-              "label": "Agent",
-              "color": "#f97316"
-            },
-            {
-              "id": "Vision",
-              "label": "视觉",
-              "color": "#ec4899"
-            }
-          ],
-          "collabConfidence": "none",
-          "pdfVerified": true,
-          "pdfCompanies": [
-            "meta"
-          ],
-          "pdfUnis": [
-            "1 SeoulNationalUniversity 2 SamsungElectronics",
-            "Figure 1. VDPPachieves superior speed, spatialaccuracy and temporalconsistency a"
-          ],
-          "pdfHKUnis": []
-        },
-        {
-          "title": "The xPU-athalon: Quantifying the Competition of AI Acceleration",
-          "summary": "The push for greater efficiency in AI computation has given rise to an array of accelerator architectures that increasingly challenge the GPU's long-standing dominance. In this work, we provide a quantitative view of this evolving landscape of AI accelerators, including the Cerebras CS-3, SambaNova ",
-          "published": "2026-04-12T23:10:14Z",
-          "arxivId": "2604.10852v1",
-          "arxivUrl": "http://arxiv.org/abs/2604.10852v1",
-          "pdfUrl": "https://arxiv.org/pdf/2604.10852v1",
-          "authors": [
-            "Alicia Golden",
-            "Carole-Jean Wu",
-            "Gu-Yeon Wei",
-            "David Brooks"
-          ],
-          "authorCount": 4,
-          "affiliations": [],
-          "categories": [
-            "cs.AR"
-          ],
-          "comment": "Accepted to ISPASS 2026",
-          "universities": [
-            "MIT",
-            "HIT"
-          ],
-          "hkUniversities": [],
-          "hasUniCollab": true,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "Infra",
-              "label": "Infra",
-              "color": "#22c55e"
-            },
-            {
-              "id": "LLM",
-              "label": "LLM",
-              "color": "#3b82f6"
-            },
-            {
-              "id": "Data",
-              "label": "数据",
-              "color": "#78716c"
-            }
-          ],
-          "collabConfidence": "confirmed",
-          "pdfVerified": true,
-          "pdfCompanies": [
-            "meta"
-          ],
-          "pdfUnis": [
-            "Harvard University FAIR at Meta Harvard University Harvard University"
-          ],
-          "pdfHKUnis": []
         }
       ],
-      "count": 7,
-      "uniCollabCount": 2,
+      "count": 8,
+      "uniCollabCount": 3,
       "hkCollabCount": 0,
       "paperCount": 7
     },

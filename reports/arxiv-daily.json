@@ -1,14 +1,67 @@
 {
-  "generatedAt": "2026-04-22T09:44:23.040294Z",
+  "generatedAt": "2026-04-23T01:40:13.664434Z",
   "since": "2026-03-01",
-  "totalPapers": 418,
-  "totalUniCollab": 98,
+  "totalPapers": 424,
+  "totalUniCollab": 102,
   "totalHKCollab": 20,
   "companies": {
     "bytedance": {
       "company": "字节Seed",
       "icon": "🌱",
       "papers": [
+        {
+          "title": "Guiding Distribution Matching Distillation with Gradient-Based Reinforcement Learning",
+          "summary": "Proposes GDMD, a method that combines Distribution Matching Distillation (DMD) with gradient-based RL to improve few-step image generation. Achieves high-quality generation in as few as 1-4 steps by using gradient-based reward signals to guide the distillation process.",
+          "published": "2026-04-21T02:57:13Z",
+          "arxivId": "2604.19009",
+          "arxivUrl": "https://arxiv.org/abs/2604.19009",
+          "pdfUrl": "https://arxiv.org/pdf/2604.19009",
+          "authors": [
+            "Linwei Dong",
+            "Ruoyu Guo",
+            "Ge Bai",
+            "Zehuan Yuan",
+            "Yawei Luo",
+            "Changqing Zou"
+          ],
+          "authorCount": 6,
+          "affiliations": [
+            "Zhejiang University",
+            "ByteDance Inc.",
+            "Zhejiang Lab"
+          ],
+          "categories": [
+            "cs.LG",
+            "cs.CV"
+          ],
+          "comment": "",
+          "universities": [
+            "Zhejiang University",
+            "Zhejiang Lab"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Vision",
+              "label": "视觉",
+              "color": "#ec4899"
+            }
+          ],
+          "collabConfidence": "confirmed",
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "bytedance"
+          ],
+          "pdfUnis": [
+            "Zhejiang University",
+            "ByteDance Inc.",
+            "Zhejiang Lab"
+          ],
+          "pdfHKUnis": [],
+          "deepxivEnhanced": false
+        },
         {
           "title": "Beyond Verifiable Rewards: Rubric-Based GRM for Reinforced Fine-Tuning SWE Agents",
           "summary": "Proposes a rubric-based generative reward model (GRM) for SWE tasks, providing richer learning signals beyond terminal verification rewards for reinforced fine-tuning of LLM agents.",
@@ -1283,8 +1336,8 @@
           "deepxivEnhanced": true
         }
       ],
-      "count": 22,
-      "uniCollabCount": 11,
+      "count": 23,
+      "uniCollabCount": 12,
       "hkCollabCount": 1,
       "paperCount": 18
     },
@@ -1292,6 +1345,54 @@
       "company": "阿里通义",
       "icon": "☁️",
       "papers": [
+        {
+          "title": "UAF: A Unified Audio Front-end LLM for Full-Duplex Speech Interaction",
+          "summary": "Proposes UAF, a unified audio front-end system for full-duplex speech interaction built on Qwen3-Omni-30B. Enables simultaneous listening and speaking with a single LLM architecture, evaluated on Taobao APP real-world recording data.",
+          "published": "2026-04-21T08:17:00Z",
+          "arxivId": "2604.19221",
+          "arxivUrl": "https://arxiv.org/abs/2604.19221",
+          "pdfUrl": "https://arxiv.org/pdf/2604.19221",
+          "authors": [
+            "Yadong Li",
+            "Guoxin Wu",
+            "Haiping Hou",
+            "Biye Li"
+          ],
+          "authorCount": 4,
+          "affiliations": [
+            "Alibaba Inc."
+          ],
+          "categories": [
+            "cs.AI",
+            "eess.AS"
+          ],
+          "comment": "",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Speech",
+              "label": "语音",
+              "color": "#14b8a6",
+              "subTags": [
+                {
+                  "id": "Speech-LLM",
+                  "label": "语音大模型"
+                }
+              ]
+            }
+          ],
+          "collabConfidence": "company_only",
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "alibaba"
+          ],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "deepxivEnhanced": false
+        },
         {
           "title": "CoEvolve: Training LLM Agents via Agent-Data Mutual Evolution",
           "summary": "We propose CoEvolve, a framework where agents and data co-evolve. By extracting feedback signals such as forgetfulness and uncertainty from rollout trajectories to identify failure-prone interaction patterns, and using LLM to synthesize new tasks. Qwen2.5-7B, Qwen3-4B, Qwen3-30B-A3B gain +19.43%, +15.58%, +18.14% absolute improvements on AppWorld and BFCL.",
@@ -8265,7 +8366,7 @@
           "deepxivEnhanced": true
         }
       ],
-      "count": 114,
+      "count": 115,
       "uniCollabCount": 21,
       "hkCollabCount": 7,
       "paperCount": 114
@@ -16978,6 +17079,64 @@
       "icon": "🧠",
       "papers": [
         {
+          "title": "Location Not Found: Exposing Implicit Local and Global Biases in Multilingual LLMs",
+          "summary": "Exposes implicit geographical biases in multilingual LLMs. Shows that models systematically favor certain locations over others and proposes evaluation framework for measuring local and global biases. ACL 2026 main conference paper.",
+          "published": "2026-04-21T09:57:41Z",
+          "arxivId": "2604.19292",
+          "arxivUrl": "https://arxiv.org/abs/2604.19292",
+          "pdfUrl": "https://arxiv.org/pdf/2604.19292",
+          "authors": [
+            "Guy Mor-Lan",
+            "Omer Goldman",
+            "Matan Eyal",
+            "Adi Mayrav Gilady",
+            "Sivan Eiger",
+            "Idan Szpektor",
+            "Avinatan Hassidim",
+            "Yossi Matias",
+            "Reut Tsarfaty"
+          ],
+          "authorCount": 9,
+          "affiliations": [
+            "Google Research",
+            "Bar-Ilan University"
+          ],
+          "categories": [
+            "cs.CL",
+            "cs.AI"
+          ],
+          "comment": "ACL 2026 main conference",
+          "universities": [
+            "Bar-Ilan University"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "NLP",
+              "label": "NLP",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Safety",
+              "label": "安全",
+              "color": "#ef4444"
+            }
+          ],
+          "collabConfidence": "confirmed",
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "deepmind"
+          ],
+          "pdfUnis": [
+            "Google Research",
+            "Bar-Ilan University"
+          ],
+          "pdfHKUnis": [],
+          "deepxivEnhanced": false
+        },
+        {
           "title": "Mean Flow Policy Optimization",
           "summary": "Diffusion models have recently emerged as expressive policy representations for online reinforcement learning (RL). However, their iterative generative processes introduce substantial training and inference overhead. To overcome this limitation, we propose to represent policies using MeanFlow models",
           "published": "2026-04-16T06:59:52Z",
@@ -17818,8 +17977,8 @@
           "deepxivEnhanced": true
         }
       ],
-      "count": 14,
-      "uniCollabCount": 0,
+      "count": 15,
+      "uniCollabCount": 1,
       "hkCollabCount": 0,
       "paperCount": 14
     },
@@ -21793,6 +21952,115 @@
       "icon": "💚",
       "papers": [
         {
+          "title": "Reducing the Offline-Streaming Gap for Unified ASR Transducer with Consistency Regularization",
+          "summary": "Proposes consistency regularization to reduce the performance gap between offline and streaming modes in unified ASR transducers. All authors from NVIDIA, achieving improved streaming ASR while maintaining offline accuracy.",
+          "published": "2026-04-21T03:33:00Z",
+          "arxivId": "2604.19079",
+          "arxivUrl": "https://arxiv.org/abs/2604.19079",
+          "pdfUrl": "https://arxiv.org/pdf/2604.19079",
+          "authors": [
+            "Andrei Andrusenko",
+            "Vladimir Bataev",
+            "Lilit Grigoryan",
+            "Nune Tadevosyan",
+            "Vitaly Lavrukhin",
+            "Boris Ginsburg"
+          ],
+          "authorCount": 6,
+          "affiliations": [
+            "NVIDIA"
+          ],
+          "categories": [
+            "eess.AS",
+            "cs.CL"
+          ],
+          "comment": "",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Speech",
+              "label": "语音",
+              "color": "#14b8a6",
+              "subTags": [
+                {
+                  "id": "ASR",
+                  "label": "语音识别"
+                }
+              ]
+            }
+          ],
+          "collabConfidence": "company_only",
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "nvidia"
+          ],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "deepxivEnhanced": false
+        },
+        {
+          "title": "R²-dLLM: Accelerating Diffusion Large Language Models via Spatio-Temporal Redundancy Reduction",
+          "summary": "Proposes a unified framework for reducing spatio-temporal redundancy in diffusion LLMs during decoding. Achieves up to 75% reduction in decoding steps while maintaining generation quality through spatial token pruning and temporal step reduction.",
+          "published": "2026-04-21T02:26:08Z",
+          "arxivId": "2604.18995",
+          "arxivUrl": "https://arxiv.org/abs/2604.18995",
+          "pdfUrl": "https://arxiv.org/pdf/2604.18995",
+          "authors": [
+            "Zhenbang Du",
+            "Kejing Xia",
+            "Xinrui Zhong",
+            "Yonggan Fu",
+            "Nicolai Oswald",
+            "Binfei Ji",
+            "Brucek Khailany",
+            "Pavlo Molchanov",
+            "Yingyan Lin"
+          ],
+          "authorCount": 9,
+          "affiliations": [
+            "Georgia Institute of Technology",
+            "NVIDIA"
+          ],
+          "categories": [
+            "cs.CL",
+            "cs.AI",
+            "cs.LG"
+          ],
+          "comment": "",
+          "universities": [
+            "Georgia Institute of Technology"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "NLP",
+              "label": "NLP",
+              "color": "#3b82f6"
+            }
+          ],
+          "collabConfidence": "confirmed",
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "nvidia"
+          ],
+          "pdfUnis": [
+            "Georgia Institute of Technology",
+            "NVIDIA"
+          ],
+          "pdfHKUnis": [],
+          "deepxivEnhanced": false
+        },
+        {
           "title": "SAKURAONE: An Open Ethernet-Based AI HPC System and Its Observed Workload Dynamics in a Single-Tenant LLM Development Environment",
           "summary": "SAKURAONE is a managed high performance computing (HPC) cluster developed and operated by the SAKURA Internet Research Center. It builds on the KOKARYOKU PHY bare metal GPU platform and is optimized for advanced workloads, including large language model (LLM) training. In ISC 2025 TOP500, SAKURAONE ",
           "published": "2026-04-15T08:09:15Z",
@@ -23770,8 +24038,8 @@
           "deepxivEnhanced": true
         }
       ],
-      "count": 33,
-      "uniCollabCount": 10,
+      "count": 35,
+      "uniCollabCount": 11,
       "hkCollabCount": 1,
       "paperCount": 33
     },
@@ -24741,6 +25009,78 @@
       "icon": "📘",
       "papers": [
         {
+          "title": "Scaling Test-Time Compute for Agentic Coding",
+          "summary": "Studies scaling test-time compute for agentic coding tasks. Demonstrates that longer reasoning chains and more iterations improve coding agent performance on SWE-bench. 70-page comprehensive study from Meta with academic collaborators.",
+          "published": "2026-04-16T17:39:33Z",
+          "arxivId": "2604.16529",
+          "arxivUrl": "https://arxiv.org/abs/2604.16529",
+          "pdfUrl": "https://arxiv.org/pdf/2604.16529",
+          "authors": [
+            "Joongwon Kim",
+            "Wannan Yang",
+            "Kelvin Niu",
+            "Hongming Zhang",
+            "Yun Zhu",
+            "Eryk Helenowski",
+            "Ruan Silva",
+            "Zhengxing Chen",
+            "Srinivasan Iyer",
+            "Manzil Zaheer",
+            "Daniel Fried",
+            "Hannaneh Hajishirzi",
+            "Sanjeev Arora",
+            "Gabriel Synnaeve",
+            "Ruslan Salakhutdinov",
+            "Anirudh Goyal"
+          ],
+          "authorCount": 16,
+          "affiliations": [
+            "Meta",
+            "Carnegie Mellon University",
+            "University of Washington",
+            "Princeton University"
+          ],
+          "categories": [
+            "cs.SE",
+            "cs.AI",
+            "cs.LG"
+          ],
+          "comment": "70 pages, 26 figures, 12 tables",
+          "universities": [
+            "Carnegie Mellon University",
+            "University of Washington",
+            "Princeton University"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Code",
+              "label": "代码",
+              "color": "#8b5cf6"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            }
+          ],
+          "collabConfidence": "confirmed",
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "meta"
+          ],
+          "pdfUnis": [
+            "Meta",
+            "Carnegie Mellon University",
+            "University of Washington",
+            "Princeton University"
+          ],
+          "pdfHKUnis": [],
+          "deepxivEnhanced": false
+        },
+        {
           "title": "Grokking of Diffusion Models: Case Study on Modular Addition",
           "summary": "Demonstrates diffusion models exhibit grokking (delayed generalization) on modular addition. Reveals how models bridge continuous pixel generation with discrete symbolic reasoning. Jiatao Gu (Meta FAIR).",
           "published": "2026-04-20T00:02:00Z",
@@ -25204,8 +25544,8 @@
           "deepxivEnhanced": true
         }
       ],
-      "count": 8,
-      "uniCollabCount": 3,
+      "count": 9,
+      "uniCollabCount": 4,
       "hkCollabCount": 0,
       "paperCount": 7
     },

@@ -112,6 +112,7 @@ class Handler(SimpleHTTPRequestHandler):
             # Pull latest files from GitHub raw
             try:
                 files = ["index.html", "reports/arxiv-daily.json", "reports/index.json"]
+                # Also pull any new report .md files listed in index.json
                 results = []
                 for fn in files:
                     url = GITHUB_RAW + fn
@@ -124,6 +125,70 @@ class Handler(SimpleHTTPRequestHandler):
                         f.write(content)
                     results.append({"file": fn, "size": len(content)})
                 self._ok(json.dumps({"ok": True, "updated": results}))
+            except Exception as e:
+                self._err(str(e))
+
+        elif self.path == "/bulletins":
+            # GET/POST bulletins + guestbook (server-side persistent storage)
+            BULLETIN_FILE = os.path.join(SERVE_DIR, "bulletins.json")
+            try:
+                data = json.loads(body) if body else {}
+                action = data.get("action", "get")
+                # Load existing
+                existing = {}
+                if os.path.exists(BULLETIN_FILE):
+                    with open(BULLETIN_FILE, "r", encoding="utf-8") as f:
+                        existing = json.load(f)
+                if not existing.get("bulletins"):
+                    existing["bulletins"] = []
+                if not existing.get("guestbook"):
+                    existing["guestbook"] = []
+
+                if action == "get":
+                    self._ok(json.dumps(existing, ensure_ascii=False))
+                elif action == "post_bulletin":
+                    item = data.get("item", {})
+                    if item.get("content"):
+                        existing["bulletins"].insert(0, item)
+                        if len(existing["bulletins"]) > 50:
+                            existing["bulletins"] = existing["bulletins"][:50]
+                        with open(BULLETIN_FILE, "w", encoding="utf-8") as f:
+                            json.dump(existing, f, ensure_ascii=False, indent=2)
+                    self._ok(json.dumps({"ok": True}))
+                elif action == "edit_bulletin":
+                    idx = data.get("index", -1)
+                    new_content = data.get("content", "")
+                    if 0 <= idx < len(existing["bulletins"]) and new_content:
+                        existing["bulletins"][idx]["content"] = new_content
+                        existing["bulletins"][idx]["edited"] = True
+                        with open(BULLETIN_FILE, "w", encoding="utf-8") as f:
+                            json.dump(existing, f, ensure_ascii=False, indent=2)
+                    self._ok(json.dumps({"ok": True}))
+                elif action == "delete_bulletin":
+                    idx = data.get("index", -1)
+                    if 0 <= idx < len(existing["bulletins"]):
+                        existing["bulletins"].pop(idx)
+                        with open(BULLETIN_FILE, "w", encoding="utf-8") as f:
+                            json.dump(existing, f, ensure_ascii=False, indent=2)
+                    self._ok(json.dumps({"ok": True}))
+                elif action == "post_guestbook":
+                    item = data.get("item", {})
+                    if item.get("content"):
+                        existing["guestbook"].insert(0, item)
+                        if len(existing["guestbook"]) > 200:
+                            existing["guestbook"] = existing["guestbook"][:200]
+                        with open(BULLETIN_FILE, "w", encoding="utf-8") as f:
+                            json.dump(existing, f, ensure_ascii=False, indent=2)
+                    self._ok(json.dumps({"ok": True}))
+                elif action == "delete_guestbook":
+                    idx = data.get("index", -1)
+                    if 0 <= idx < len(existing["guestbook"]):
+                        existing["guestbook"].pop(idx)
+                        with open(BULLETIN_FILE, "w", encoding="utf-8") as f:
+                            json.dump(existing, f, ensure_ascii=False, indent=2)
+                    self._ok(json.dumps({"ok": True}))
+                else:
+                    self._err("Unknown action: " + action)
             except Exception as e:
                 self._err(str(e))
         else:

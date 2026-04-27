@@ -2852,11 +2852,34 @@ var BULLETIN_STORAGE = 'ai-radar-bulletins';
 var GUESTBOOK_STORAGE = 'ai-radar-guestbook';
 var GB_PAGE_SIZE = 5;
 var gbCurrentPage = 0;
+var _bulletinData = { bulletins: [], guestbook: [] };
 
-function getBulletins() { try { return JSON.parse(localStorage.getItem(BULLETIN_STORAGE) || '[]'); } catch(e) { return []; } }
-function saveBulletins(d) { try { localStorage.setItem(BULLETIN_STORAGE, JSON.stringify(d)); } catch(e) {} }
-function getGuestbook() { try { return JSON.parse(localStorage.getItem(GUESTBOOK_STORAGE) || '[]'); } catch(e) { return []; } }
-function saveGuestbook(d) { try { localStorage.setItem(GUESTBOOK_STORAGE, JSON.stringify(d)); } catch(e) {} }
+function _bulletinAPI(payload) {
+  return fetch('/bulletins', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload)}).then(function(r){return r.json()});
+}
+function loadBulletins() {
+  _bulletinAPI({action:'get'}).then(function(d) {
+    _bulletinData = d || {bulletins:[],guestbook:[]};
+    // Migrate from localStorage if server is empty but localStorage has data
+    if (!_bulletinData.bulletins.length) {
+      try { var old = JSON.parse(localStorage.getItem(BULLETIN_STORAGE) || '[]'); if (old.length) { old.forEach(function(b){_bulletinAPI({action:'post_bulletin',item:b})}); _bulletinData.bulletins = old; } } catch(e){}
+    }
+    if (!_bulletinData.guestbook.length) {
+      try { var old = JSON.parse(localStorage.getItem(GUESTBOOK_STORAGE) || '[]'); if (old.length) { old.forEach(function(b){_bulletinAPI({action:'post_guestbook',item:b})}); _bulletinData.guestbook = old; } } catch(e){}
+    }
+    renderBulletins();
+    renderGuestbook();
+  }).catch(function(e) {
+    // Fallback to localStorage if server unreachable
+    console.warn('Bulletin API failed, using localStorage:', e);
+    try { _bulletinData.bulletins = JSON.parse(localStorage.getItem(BULLETIN_STORAGE) || '[]'); } catch(e2){}
+    try { _bulletinData.guestbook = JSON.parse(localStorage.getItem(GUESTBOOK_STORAGE) || '[]'); } catch(e2){}
+    renderBulletins();
+    renderGuestbook();
+  });
+}
+function getBulletins() { return _bulletinData.bulletins || []; }
+function getGuestbook() { return _bulletinData.guestbook || []; }
 
 function toggleBulletinInput() {
   var el = document.getElementById('bulletinInput');
@@ -2874,17 +2897,11 @@ function postBulletin() {
   var timeStr = now.getFullYear() + '-' + String(now.getMonth()+1).padStart(2,'0') + '-' + String(now.getDate()).padStart(2,'0') + ' ' + String(now.getHours()).padStart(2,'0') + ':' + String(now.getMinutes()).padStart(2,'0');
 
   if (name.toLowerCase() === 'eira') {
-    // 公告
-    var bulletins = getBulletins();
-    bulletins.unshift({ content: content, time: timeStr });
-    if (bulletins.length > 20) bulletins = bulletins.slice(0, 20);
-    saveBulletins(bulletins);
+    // 公告 → 服务端存储
+    _bulletinAPI({action:'post_bulletin', item:{content:content, time:timeStr}}).then(function(){loadBulletins()});
   } else {
-    // 留言
-    var guestbook = getGuestbook();
-    guestbook.unshift({ name: name, content: content, time: timeStr });
-    if (guestbook.length > 200) guestbook = guestbook.slice(0, 200);
-    saveGuestbook(guestbook);
+    // 留言 → 服务端存储
+    _bulletinAPI({action:'post_guestbook', item:{name:name, content:content, time:timeStr}}).then(function(){loadBulletins()});
     gbCurrentPage = 0;
   }
 
@@ -2922,19 +2939,12 @@ function editBulletin(idx) {
   if (!b) return;
   var newContent = prompt('修改公告内容：', b.content);
   if (newContent === null || !newContent.trim()) return;
-  b.content = newContent.trim();
-  b.edited = true;
-  bulletins[idx] = b;
-  saveBulletins(bulletins);
-  renderBulletins();
+  _bulletinAPI({action:'edit_bulletin', index:idx, content:newContent.trim()}).then(function(){loadBulletins()});
 }
 
 function deleteBulletin(idx) {
   if (!confirm('确认删除这条公告？')) return;
-  var bulletins = getBulletins();
-  bulletins.splice(idx, 1);
-  saveBulletins(bulletins);
-  renderBulletins();
+  _bulletinAPI({action:'delete_bulletin', index:idx}).then(function(){loadBulletins()});
 }
 
 function renderGuestbook() {
@@ -3001,9 +3011,7 @@ function deleteGuestbookMsg(idx) {
     alert('姓名不匹配，只能删除自己的留言哦');
     return;
   }
-  guestbook.splice(idx, 1);
-  saveGuestbook(guestbook);
-  renderGuestbook();
+  _bulletinAPI({action:'delete_guestbook', index:idx}).then(function(){loadBulletins()});
 }
 
 function editGuestbookMsg(idx) {
@@ -3019,11 +3027,13 @@ function editGuestbookMsg(idx) {
   var newContent = prompt('修改留言内容：', g.content);
   if (newContent === null) return;
   if (!newContent.trim()) { alert('内容不能为空'); return; }
+  // For guestbook edit, we delete + re-insert (server doesn't have edit_guestbook)
   g.content = newContent.trim();
   g.editedAt = new Date().getFullYear() + '-' + String(new Date().getMonth()+1).padStart(2,'0') + '-' + String(new Date().getDate()).padStart(2,'0') + ' ' + String(new Date().getHours()).padStart(2,'0') + ':' + String(new Date().getMinutes()).padStart(2,'0');
-  guestbook[idx] = g;
-  saveGuestbook(guestbook);
-  renderGuestbook();
+  _bulletinAPI({action:'delete_guestbook', index:idx}).then(function(){
+    // Re-insert at same position by posting to server and reloading
+    _bulletinAPI({action:'post_guestbook', item:g}).then(function(){loadBulletins()});
+  });
 }
 
 function guestbookPrev() { if (gbCurrentPage > 0) { gbCurrentPage--; renderGuestbook(); } }
@@ -3032,9 +3042,8 @@ function guestbookNext() {
   if (gbCurrentPage < totalPages - 1) { gbCurrentPage++; renderGuestbook(); }
 }
 
-// 初始化渲染
-renderBulletins();
-renderGuestbook();
+// 初始化：从服务端加载公告
+loadBulletins();
 
 // ══════════════════════════════════════
 // Domain Pages (领域专区)

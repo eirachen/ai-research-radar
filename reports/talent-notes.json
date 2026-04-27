@@ -9642,7 +9642,8 @@
         },
         "scannedAt": "2026-04-17",
         "hasContactKeywords": true,
-        "hasContact": true
+        "hasContact": true,
+        "email": "muyao@sjtu.edu.cn"
       }
     },
     "Yongjie Guan": {
@@ -15637,7 +15638,10 @@
       "direction": "LLM / Agent / 安全",
       "gradYear": "待确认",
       "statusNote": "来自2篇企业合作论文（OpenAI）",
-      "editedAt": "2026-04-16"
+      "editedAt": "2026-04-16",
+      "contactInfo": {
+        "email": "qinliu@nju.edu.cn"
+      }
     },
     "Zheng Liu": {
       "name": "Zheng Liu",
@@ -18976,7 +18980,8 @@
         },
         "scannedAt": "2026-04-17",
         "hasContactKeywords": true,
-        "hasContact": true
+        "hasContact": true,
+        "email": "pluo@cs.hku.hk"
       },
       "papers": [
         "HiVLA: A Visual-Grounded-Centric Hierarchical Embodied Manipulation System"
@@ -19446,7 +19451,10 @@
       "direction": "Agent / LLM / 视觉",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（快手）",
-      "editedAt": "2026-04-20"
+      "editedAt": "2026-04-20",
+      "contactInfo": {
+        "email": "zhaobo20000116@gmail.com"
+      }
     },
     "Kairui Guo": {
       "name": "Kairui Guo",
@@ -19460,7 +19468,10 @@
       "direction": "Agent / LLM / 视觉",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（快手）",
-      "editedAt": "2026-04-20"
+      "editedAt": "2026-04-20",
+      "contactInfo": {
+        "email": "carryguo02@gmail.com"
+      }
     },
     "Runnan Du": {
       "name": "Runnan Du",
@@ -19642,7 +19653,10 @@
       "direction": "视觉 / Infra",
       "gradYear": "待确认",
       "statusNote": "HKUST-GZ is NOT a HK university. isHK=False.",
-      "editedAt": "2026-04-21"
+      "editedAt": "2026-04-21",
+      "contactInfo": {
+        "email": "sshao213@connect.hkust-gz.edu.cn"
+      }
     },
     "Lichen Bai": {
       "name": "Lichen Bai",
@@ -19656,7 +19670,10 @@
       "direction": "视觉 / Infra",
       "gradYear": "待确认",
       "statusNote": "HKUST-GZ is NOT a HK university. isHK=False.",
-      "editedAt": "2026-04-21"
+      "editedAt": "2026-04-21",
+      "contactInfo": {
+        "email": "lbai292@connect.hkust-gz.edu.cn"
+      }
     },
     "Pengfei Wan": {
       "name": "Pengfei Wan",
@@ -19695,7 +19712,8 @@
         "cv": [],
         "social": {},
         "scannedAt": "2026-04-21",
-        "hasContactKeywords": true
+        "hasContactKeywords": true,
+        "email": "jamesk@cse.ust.hk"
       }
     },
     "Zeke Xie": {
@@ -19710,7 +19728,10 @@
       "direction": "视觉 / Infra",
       "gradYear": "待确认",
       "statusNote": "HKUST-GZ is NOT a HK university. isHK=False.",
-      "editedAt": "2026-04-21"
+      "editedAt": "2026-04-21",
+      "contactInfo": {
+        "email": "zekexie@hkust-gz.edu.cn"
+      }
     },
     "Ruoyu Qin": {
       "name": "Ruoyu Qin",
@@ -20130,7 +20151,10 @@
       "direction": "Agent",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（字节Seed）",
-      "editedAt": "2026-04-22"
+      "editedAt": "2026-04-22",
+      "contactInfo": {
+        "email": "jiawei.huang@inf.ethz.ch"
+      }
     },
     "Siyin Wang": {
       "name": "Siyin Wang",
@@ -22160,7 +22184,10 @@
       "direction": "LLM / 安全",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（Meta AI）",
-      "editedAt": "2026-04-24"
+      "editedAt": "2026-04-24",
+      "contactInfo": {
+        "email": "irtihaq@uw.edu"
+      }
     },
     "Belén Saldías": {
       "name": "Belén Saldías",
@@ -22174,7 +22201,10 @@
       "direction": "LLM / 安全",
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（Meta AI）",
-      "editedAt": "2026-04-24"
+      "editedAt": "2026-04-24",
+      "contactInfo": {
+        "email": "belencsf@uw.edu"
+      }
     },
     "Fan Li": {
       "name": "Fan Li",
@@ -22287,6 +22317,87 @@
       "gradYear": "待确认",
       "statusNote": "来自1篇企业合作论文（华为诺亚）",
       "editedAt": "2026-04-24"
+    },
+    "Linwei Dong1,2Ruoyu Guo2†Ge Bai2Zehuan Yuan2Yawei Luo1Changqing Zou1,3": {
+      "name": "Linwei Dong1,2Ruoyu Guo2†Ge Bai2Zehuan Yuan2Yawei Luo1Changqing Zou1,3",
+      "university": "Zhejiang University Bytedance Inc. Zhejiang Lab Project Page: https://gdmd-guide.github.io/",
+      "isHK": false,
+      "status": "待确认",
+      "group": "待确认"
+    },
+    "Siyin Wang1, Wenyi Yu1∗, Xianzhao Chen2, Xiaohai Tian2, Jun Zhang2, Lu Lu2, Chao Zhang11Tsinghua University2ByteDance{wangsiyi23,ywy22}@mails.tsinghua.edu.cn, cz277@tsinghua.edu.cn": {
+      "name": "Siyin Wang1, Wenyi Yu1∗, Xianzhao Chen2, Xiaohai Tian2, Jun Zhang2, Lu Lu2, Chao Zhang11Tsinghua University2ByteDance{wangsiyi23,ywy22}@mails.tsinghua.edu.cn, cz277@tsinghua.edu.cn",
+      "university": "Tsinghua University",
+      "isHK": false,
+      "status": "待确认",
+      "group": "待确认",
+      "contactInfo": {
+        "email": "cz277@tsinghua.edu.cn"
+      }
+    },
+    "Ruoyu Qin1,2Weiran He1Yaoyu Wang1Zheming Li1Xinran Xu1Yongwei Wu2Weimin Zheng2Mingxing Zhang21Moonshot AI2Tsinghua University": {
+      "name": "Ruoyu Qin1,2Weiran He1Yaoyu Wang1Zheming Li1Xinran Xu1Yongwei Wu2Weimin Zheng2Mingxing Zhang21Moonshot AI2Tsinghua University",
+      "university": "Tsinghua University",
+      "isHK": false,
+      "status": "待确认",
+      "group": "待确认",
+      "contactInfo": {
+        "email": "zhang_mingxing@mail.tsinghua.edu.cn"
+      }
+    },
+    "Arkava Ganguly\\aff1": {
+      "name": "Arkava Ganguly\\aff1",
+      "university": "Ankur Gupta \\aff \\corresp \\aff Department of Chemical and Biological Engineering, University of Colorado Boulder, Boulder, CO , USA",
+      "isHK": false,
+      "status": "待确认",
+      "group": "待确认"
+    },
+    "Ankur Gupta\\aff1\\corresp": {
+      "name": "Ankur Gupta\\aff1\\corresp",
+      "university": "\\aff Department of Chemical and Biological Engineering, University of Colorado Boulder, Boulder, CO , USA",
+      "isHK": false,
+      "status": "待确认",
+      "group": "待确认"
+    },
+    "Wei Ji": {
+      "name": "Wei Ji",
+      "university": "Nanjing University China",
+      "isHK": false,
+      "status": "待确认",
+      "group": "待确认",
+      "contactInfo": {
+        "email": "weiji@nju.edu.cn"
+      }
+    },
+    "Pufan Zeng1,3, Yilun Liu1✉, Mingchen Dai1,3, Mengyao Piao1, Chunguang Zhao1, Lingqi Miao1, Shimin Tao1, Weibin Meng2, Minggui He1, Chenxin Liu1, Zhenzhen Qin1, Li Zhang1, Hongxia Ma1, Boxing Chen2, Daimeng Wei1": {
+      "name": "Pufan Zeng1,3, Yilun Liu1✉, Mingchen Dai1,3, Mengyao Piao1, Chunguang Zhao1, Lingqi Miao1, Shimin Tao1, Weibin Meng2, Minggui He1, Chenxin Liu1, Zhenzhen Qin1, Li Zhang1, Hongxia Ma1, Boxing Chen2, Daimeng Wei1",
+      "university": "Huawei China Huawei Canada University of Science and Technology of China, Hefei China",
+      "isHK": false,
+      "status": "待确认",
+      "group": "待确认",
+      "contactInfo": {
+        "email": "liuyilun3@huawei.com"
+      }
+    },
+    "Nathaniel Daw": {
+      "name": "Nathaniel Daw",
+      "chineseName": "",
+      "university": "Princeton University",
+      "isHK": false,
+      "status": "Huo Professor in Computational and Theoretical Neuroscience",
+      "group": "scholars",
+      "homepage": "https://dawlab.princeton.edu/",
+      "scholar": "https://scholar.google.com/citations?user=BxlScrEAAAAJ",
+      "contactInfo": {
+        "email": "ndaw@princeton.edu"
+      },
+      "researchInterests": [
+        "computational neuroscience",
+        "reinforcement learning",
+        "decision making"
+      ],
+      "statusNote": "DeepMind x Princeton confirmed paper",
+      "editedAt": "2026-04-27"
     }
   },
   "lastUpdated": "2026-04-20T09:00:00Z"

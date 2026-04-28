@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-04-27T10:30:18.800011Z",
+  "generatedAt": "2026-04-28T09:49:12.115341Z",
   "since": "2026-03-01",
-  "totalPapers": 524,
-  "totalUniCollab": 131,
-  "totalHKCollab": 21,
+  "totalPapers": 535,
+  "totalUniCollab": 108,
+  "totalHKCollab": 15,
   "companies": {
     "bytedance": {
       "company": "字节Seed",
@@ -1612,6 +1612,61 @@
           "pdfHKUnis": []
         },
         {
+          "title": "RespondeoQA: a Benchmark for Bilingual Latin-English Question Answering",
+          "summary": "We introduce a benchmark dataset for question answering and translation in bilingual Latin and English settings, containing about 7,800 question-answer pairs. The questions are drawn from Latin pedagogical sources, including exams, quizbowl-style trivia, and textbooks ranging from the 1800s to the p",
+          "published": "2026-04-22T16:24:46Z",
+          "arxivId": "2604.20738v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.20738v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.20738v1",
+          "authors": [
+            "Marisa Hudspeth",
+            "Patrick J. Burns",
+            "Brendan O'Connor"
+          ],
+          "authorCount": 3,
+          "affiliations": [],
+          "categories": [
+            "cs.CL"
+          ],
+          "comment": "Published in LREC 2026",
+          "universities": [
+            "CAS",
+            "MIT",
+            "ANU",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            },
+            {
+              "id": "Math",
+              "label": "数学推理",
+              "color": "#06b6d4"
+            }
+          ],
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "2InstitutefortheStudyoftheAncientWorld,NewYorkUniversity",
+            "1ManningCollegeofInformation&ComputerSciences,UniversityofMassachusettsAmherst",
+            "Marisa Hudspeth1 Patrick J. Burns2 Brendan O’Connor1",
+            "{mhudspeth,brenocon}@cs.umass.edu pjb311@nyu.edu"
+          ],
+          "pdfHKUnis": []
+        },
+        {
           "title": "WebGen-R1: Incentivizing Large Language Models to Generate Functional and Aesthetic Websites with Reinforcement Learning",
           "summary": "While Large Language Models (LLMs) excel at function-level code generation, project-level tasks such as generating functional and visually aesthetic multi-page websites remain highly challenging. Existing works are often limited to single-page static websites, while agentic frameworks typically rely",
           "published": "2026-04-22T10:04:46Z",
@@ -1947,6 +2002,55 @@
             "cross-task dependency learning",
             "real-time interruption detection"
           ]
+        },
+        {
+          "title": "AlignCultura: Towards Culturally Aligned Large Language Models?",
+          "summary": "Cultural alignment in Large Language Models (LLMs) is essential for producing contextually aware, respectful, and trustworthy outputs. Without it, models risk generating stereotyped, insensitive, or misleading responses that fail to reflect cultural diversity w.r.t Helpful, Harmless, and Honest (HHH",
+          "published": "2026-04-21T03:06:50Z",
+          "arxivId": "2604.19016v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.19016v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.19016v1",
+          "authors": [
+            "Gautam Siddharth Kashyap",
+            "Mark Dras",
+            "Usman Naseem"
+          ],
+          "authorCount": 3,
+          "affiliations": [],
+          "categories": [
+            "cs.CL"
+          ],
+          "comment": "Accepted at ACL Mains 2026",
+          "universities": [
+            "MIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            },
+            {
+              "id": "Safety",
+              "label": "安全",
+              "color": "#ef4444"
+            }
+          ],
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "SchoolofComputing,MacquarieUniversity,Australia"
+          ],
+          "pdfHKUnis": []
         },
         {
           "title": "Towards Understanding the Robustness of Sparse Autoencoders",
@@ -9693,10 +9797,10 @@
           "status": "downgraded"
         }
       ],
-      "count": 134,
+      "count": 140,
       "uniCollabCount": 24,
       "hkCollabCount": 7,
-      "paperCount": 134
+      "paperCount": 140
     },
     "deepseek": {
       "company": "DeepSeek",
@@ -10201,55 +10305,6 @@
           "pdfCompanies": [],
           "pdfUnis": [
             "1SchoolofInformatics,XiamenUniversity,China"
-          ],
-          "pdfHKUnis": []
-        },
-        {
-          "title": "AlignCultura: Towards Culturally Aligned Large Language Models?",
-          "summary": "Cultural alignment in Large Language Models (LLMs) is essential for producing contextually aware, respectful, and trustworthy outputs. Without it, models risk generating stereotyped, insensitive, or misleading responses that fail to reflect cultural diversity w.r.t Helpful, Harmless, and Honest (HHH",
-          "published": "2026-04-21T03:06:50Z",
-          "arxivId": "2604.19016v1",
-          "arxivUrl": "http://arxiv.org/abs/2604.19016v1",
-          "pdfUrl": "https://arxiv.org/pdf/2604.19016v1",
-          "authors": [
-            "Gautam Siddharth Kashyap",
-            "Mark Dras",
-            "Usman Naseem"
-          ],
-          "authorCount": 3,
-          "affiliations": [],
-          "categories": [
-            "cs.CL"
-          ],
-          "comment": "Accepted at ACL Mains 2026",
-          "universities": [
-            "MIT"
-          ],
-          "hkUniversities": [],
-          "hasUniCollab": false,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "LLM",
-              "label": "LLM",
-              "color": "#3b82f6"
-            },
-            {
-              "id": "Data",
-              "label": "数据",
-              "color": "#78716c"
-            },
-            {
-              "id": "Safety",
-              "label": "安全",
-              "color": "#ef4444"
-            }
-          ],
-          "collabConfidence": "uni_only",
-          "pdfVerified": true,
-          "pdfCompanies": [],
-          "pdfUnis": [
-            "SchoolofComputing,MacquarieUniversity,Australia"
           ],
           "pdfHKUnis": []
         },
@@ -15404,10 +15459,10 @@
           "status": "downgraded"
         }
       ],
-      "count": 94,
+      "count": 93,
       "uniCollabCount": 13,
       "hkCollabCount": 5,
-      "paperCount": 94
+      "paperCount": 93
     },
     "moonshot": {
       "company": "月之暗面",
@@ -15471,6 +15526,61 @@
           "pdfUnis": [
             "5MicrosoftAI 6MassachusettsInstituteofTechnology",
             "1UniversityofMichigan 2StanfordUniversity 3AllHandsAI 4GoogleDeepmind"
+          ],
+          "pdfHKUnis": []
+        },
+        {
+          "title": "When Agents Look the Same: Quantifying Distillation-Induced Similarity in Tool-Use Behaviors",
+          "summary": "Model distillation is a primary driver behind the rapid progress of LLM agents, yet it often leads to behavioral homogenization. Many emerging agents share nearly identical reasoning steps and failure modes, suggesting they may be distilled echoes of a few dominant teachers. Existing metrics, howeve",
+          "published": "2026-04-23T03:48:56Z",
+          "arxivId": "2604.21255v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.21255v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.21255v1",
+          "authors": [
+            "Chenghao Yang",
+            "Yuning Zhang",
+            "Zhoufutu Wen",
+            "Tao Gong",
+            "Jiaheng Liu",
+            "Qi Chu",
+            "Nenghai Yu"
+          ],
+          "authorCount": 7,
+          "affiliations": [],
+          "categories": [
+            "cs.CL"
+          ],
+          "comment": "Accepted by ACL 2026 Main Conference",
+          "universities": [
+            "Mila"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            }
+          ],
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "When Agents Look the Same: Quantifying Distillation-Induced Similarity",
+            "1SchoolofCyberScienceandTechnology,USTC,",
+            "2AnhuiProvinceKeyLaboratoryofDigitalSecurity,3M-A-P,4NJU"
           ],
           "pdfHKUnis": []
         },
@@ -16756,6 +16866,211 @@
       "icon": "🤖",
       "papers": [
         {
+          "title": "Evaluating Large Language Models on Computer Science University Exams in Data Structures",
+          "summary": "We present a comprehensive evaluation of Large Language Models (LLMs) on Computer Science (CS) Data Structure examination questions. Our work introduces a new benchmark dataset comprising exam questions from Tel Aviv University (TAU), curated to assess LLMs' abilities in handling closed and multiple",
+          "published": "2026-04-25T15:08:51Z",
+          "arxivId": "2604.23347v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.23347v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.23347v1",
+          "authors": [
+            "Edan Gabay",
+            "Yael Maoz",
+            "Jonathan Stahl",
+            "Naama Maoz",
+            "Abdo Amer",
+            "Orr Eilat",
+            "Hanoch Levy",
+            "Michal Kleinbort"
+          ],
+          "authorCount": 10,
+          "affiliations": [],
+          "categories": [
+            "cs.CL"
+          ],
+          "comment": "",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            }
+          ],
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Science University Exams in Data Structures",
+            "Blavatnik School of Computer Science and AI"
+          ],
+          "pdfHKUnis": []
+        },
+        {
+          "title": "Evaluating Jailbreaking Vulnerabilities in LLMs Deployed as Assistants for Smart Grid Operations: A Benchmark Against NERC Standards",
+          "summary": "The deployment of Large Language Models (LLMs) as assistants in electric grid operations promises to streamline compliance and decision-making but exposes new vulnerabilities to prompt-based adversarial attacks. This paper evaluates the risk of jailbreaking LLMs, i.e., circumventing safety alignment",
+          "published": "2026-04-25T15:01:12Z",
+          "arxivId": "2604.23341v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.23341v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.23341v1",
+          "authors": [
+            "Taha Hammadia",
+            "Lucas Rea",
+            "Ahmad Mohammad Saber",
+            "Amr Youssef",
+            "Deepa Kundur"
+          ],
+          "authorCount": 5,
+          "affiliations": [],
+          "categories": [
+            "cs.CR",
+            "cs.AI"
+          ],
+          "comment": "",
+          "universities": [
+            "CAS",
+            "ETH",
+            "USC"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Safety",
+              "label": "安全",
+              "color": "#ef4444"
+            },
+            {
+              "id": "Speech",
+              "label": "语音",
+              "color": "#14b8a6",
+              "subTags": [
+                {
+                  "id": "ASR",
+                  "label": "语音识别"
+                }
+              ]
+            }
+          ],
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Taha Hammadia 1, Lucas Rea1, Ahmad Mohammad Saber 1, Amr Youssef 2 and Deepa Kun",
+            "1ECE Department, University of Toronto, Toronto, ON Canada"
+          ],
+          "pdfHKUnis": []
+        },
+        {
+          "title": "Judging the Judges: A Systematic Evaluation of Bias Mitigation Strategies in LLM-as-a-Judge Pipelines",
+          "summary": "LLM-as-a-Judge has become the dominant paradigm for evaluating language model outputs, yet LLM judges exhibit systematic biases that compromise evaluation reliability. We present a comprehensive empirical study comparing nine debiasing strategies across five judge models from four provider families ",
+          "published": "2026-04-25T07:18:30Z",
+          "arxivId": "2604.23178v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.23178v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.23178v1",
+          "authors": [
+            "Sadman Kabir Soumik"
+          ],
+          "authorCount": 1,
+          "affiliations": [],
+          "categories": [
+            "cs.AI"
+          ],
+          "comment": "16 pages, 4 figures, 6 tables. Under review at TMLR",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Safety",
+              "label": "安全",
+              "color": "#ef4444"
+            }
+          ],
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Judging the Judges: A Systematic Evaluation of Bias Miti-"
+          ],
+          "pdfHKUnis": []
+        },
+        {
+          "title": "Transient Turn Injection: Exposing Stateless Multi-Turn Vulnerabilities in Large Language Models",
+          "summary": "Large language models (LLMs) are increasingly integrated into sensitive workflows, raising the stakes for adversarial robustness and safety. This paper introduces Transient Turn Injection(TTI), a new multi-turn attack technique that systematically exploits stateless moderation by distributing advers",
+          "published": "2026-04-23T16:56:14Z",
+          "arxivId": "2604.21860v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.21860v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.21860v1",
+          "authors": [
+            "Naheed Rayhan",
+            "Sohely Jahan"
+          ],
+          "authorCount": 2,
+          "affiliations": [],
+          "categories": [
+            "cs.CR",
+            "cs.AI"
+          ],
+          "comment": "",
+          "universities": [
+            "ETH",
+            "MIT",
+            "HIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Safety",
+              "label": "安全",
+              "color": "#ef4444"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            }
+          ],
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Jagannath University University of Barishal"
+          ],
+          "pdfHKUnis": []
+        },
+        {
           "title": "A systematic review of generative AI usage for IT project management",
           "summary": "This paper aims to synthesize current knowledge on generative AI in IT project management using the PRISMA methodology to provide researchers with a comprehensive perspective on techniques, applications, adoption trends, limitations, and integration across project management tools and process groups",
           "published": "2026-04-23T11:10:37Z",
@@ -16845,61 +17160,6 @@
           "pdfCompanies": [],
           "pdfUnis": [
             "The Limits of Price Discovery"
-          ],
-          "pdfHKUnis": []
-        },
-        {
-          "title": "RespondeoQA: a Benchmark for Bilingual Latin-English Question Answering",
-          "summary": "We introduce a benchmark dataset for question answering and translation in bilingual Latin and English settings, containing about 7,800 question-answer pairs. The questions are drawn from Latin pedagogical sources, including exams, quizbowl-style trivia, and textbooks ranging from the 1800s to the p",
-          "published": "2026-04-22T16:24:46Z",
-          "arxivId": "2604.20738v1",
-          "arxivUrl": "http://arxiv.org/abs/2604.20738v1",
-          "pdfUrl": "https://arxiv.org/pdf/2604.20738v1",
-          "authors": [
-            "Marisa Hudspeth",
-            "Patrick J. Burns",
-            "Brendan O'Connor"
-          ],
-          "authorCount": 3,
-          "affiliations": [],
-          "categories": [
-            "cs.CL"
-          ],
-          "comment": "Published in LREC 2026",
-          "universities": [
-            "ETH",
-            "ANU",
-            "MIT",
-            "CAS"
-          ],
-          "hkUniversities": [],
-          "hasUniCollab": false,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "LLM",
-              "label": "LLM",
-              "color": "#3b82f6"
-            },
-            {
-              "id": "Data",
-              "label": "数据",
-              "color": "#78716c"
-            },
-            {
-              "id": "Math",
-              "label": "数学推理",
-              "color": "#06b6d4"
-            }
-          ],
-          "collabConfidence": "uni_only",
-          "pdfVerified": true,
-          "pdfCompanies": [],
-          "pdfUnis": [
-            "1ManningCollegeofInformation&ComputerSciences,UniversityofMassachusettsAmherst",
-            "2InstitutefortheStudyoftheAncientWorld,NewYorkUniversity",
-            "Marisa Hudspeth1 Patrick J. Burns2 Brendan O’Connor1",
-            "{mhudspeth,brenocon}@cs.umass.edu pjb311@nyu.edu"
           ],
           "pdfHKUnis": []
         },
@@ -21314,15 +21574,70 @@
           "status": "confirmed"
         }
       ],
-      "count": 76,
-      "uniCollabCount": 16,
+      "count": 79,
+      "uniCollabCount": 17,
       "hkCollabCount": 1,
-      "paperCount": 76
+      "paperCount": 79
     },
     "deepmind": {
       "company": "Google DeepMind",
       "icon": "🧠",
       "papers": [
+        {
+          "title": "ProEval: Proactive Failure Discovery and Efficient Performance Estimation for Generative AI Evaluation",
+          "summary": "Evaluating generative AI models is increasingly resource-intensive due to slow inference, expensive raters, and a rapidly growing landscape of models and benchmarks. We propose ProEval, a proactive evaluation framework that leverages transfer learning to efficiently estimate performance and identify",
+          "published": "2026-04-25T01:33:57Z",
+          "arxivId": "2604.23099v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.23099v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.23099v1",
+          "authors": [
+            "Yizheng Huang",
+            "Wenjun Zeng",
+            "Aditi Kumaresan",
+            "Zi Wang"
+          ],
+          "authorCount": 4,
+          "affiliations": [],
+          "categories": [
+            "cs.LG",
+            "cs.AI",
+            "stat.ML"
+          ],
+          "comment": "Our open-sourced code and data can be found at https://github.com/google-deepmind/proeval",
+          "universities": [
+            "CAS"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Safety",
+              "label": "安全",
+              "color": "#ef4444"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            }
+          ],
+          "collabConfidence": "confirmed",
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "deepmind"
+          ],
+          "pdfUnis": [
+            "failurecases. ProEval employspre-trainedGaussianProcesses(GPs)assurrogatesforthe",
+            "classificationbenchmarksdemonstratethat ProEval issignificantlymoreefficientthan"
+          ],
+          "pdfHKUnis": []
+        },
         {
           "title": "How LLMs Detect and Correct Their Own Errors: The Role of Internal Confidence Signals",
           "summary": "Large language models can detect their own errors and sometimes correct them without external feedback, but the underlying mechanisms remain unknown. We investigate this through the lens of second-order models of confidence from decision neuroscience. In a first-order system, confidence derives from",
@@ -22401,121 +22716,15 @@
           "status": "downgraded"
         }
       ],
-      "count": 18,
-      "uniCollabCount": 3,
+      "count": 19,
+      "uniCollabCount": 4,
       "hkCollabCount": 0,
-      "paperCount": 18
+      "paperCount": 19
     },
     "anthropic": {
       "company": "Anthropic",
       "icon": "🔬",
       "papers": [
-        {
-          "title": "Transient Turn Injection: Exposing Stateless Multi-Turn Vulnerabilities in Large Language Models",
-          "summary": "Large language models (LLMs) are increasingly integrated into sensitive workflows, raising the stakes for adversarial robustness and safety. This paper introduces Transient Turn Injection(TTI), a new multi-turn attack technique that systematically exploits stateless moderation by distributing advers",
-          "published": "2026-04-23T16:56:14Z",
-          "arxivId": "2604.21860v1",
-          "arxivUrl": "http://arxiv.org/abs/2604.21860v1",
-          "pdfUrl": "https://arxiv.org/pdf/2604.21860v1",
-          "authors": [
-            "Naheed Rayhan",
-            "Sohely Jahan"
-          ],
-          "authorCount": 2,
-          "affiliations": [],
-          "categories": [
-            "cs.CR",
-            "cs.AI"
-          ],
-          "comment": "",
-          "universities": [
-            "ETH",
-            "HIT",
-            "MIT"
-          ],
-          "hkUniversities": [],
-          "hasUniCollab": false,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "Safety",
-              "label": "安全",
-              "color": "#ef4444"
-            },
-            {
-              "id": "LLM",
-              "label": "LLM",
-              "color": "#3b82f6"
-            },
-            {
-              "id": "Agent",
-              "label": "Agent",
-              "color": "#f97316"
-            }
-          ],
-          "collabConfidence": "uni_only",
-          "pdfVerified": true,
-          "pdfCompanies": [],
-          "pdfUnis": [
-            "Jagannath University University of Barishal"
-          ],
-          "pdfHKUnis": []
-        },
-        {
-          "title": "When Agents Look the Same: Quantifying Distillation-Induced Similarity in Tool-Use Behaviors",
-          "summary": "Model distillation is a primary driver behind the rapid progress of LLM agents, yet it often leads to behavioral homogenization. Many emerging agents share nearly identical reasoning steps and failure modes, suggesting they may be distilled echoes of a few dominant teachers. Existing metrics, howeve",
-          "published": "2026-04-23T03:48:56Z",
-          "arxivId": "2604.21255v1",
-          "arxivUrl": "http://arxiv.org/abs/2604.21255v1",
-          "pdfUrl": "https://arxiv.org/pdf/2604.21255v1",
-          "authors": [
-            "Chenghao Yang",
-            "Yuning Zhang",
-            "Zhoufutu Wen",
-            "Tao Gong",
-            "Jiaheng Liu",
-            "Qi Chu",
-            "Nenghai Yu"
-          ],
-          "authorCount": 7,
-          "affiliations": [],
-          "categories": [
-            "cs.CL"
-          ],
-          "comment": "Accepted by ACL 2026 Main Conference",
-          "universities": [
-            "Mila"
-          ],
-          "hkUniversities": [],
-          "hasUniCollab": false,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "LLM",
-              "label": "LLM",
-              "color": "#3b82f6"
-            },
-            {
-              "id": "Agent",
-              "label": "Agent",
-              "color": "#f97316"
-            },
-            {
-              "id": "Infra",
-              "label": "Infra",
-              "color": "#22c55e"
-            }
-          ],
-          "collabConfidence": "uni_only",
-          "pdfVerified": true,
-          "pdfCompanies": [],
-          "pdfUnis": [
-            "2AnhuiProvinceKeyLaboratoryofDigitalSecurity,3M-A-P,4NJU",
-            "1SchoolofCyberScienceandTechnology,USTC,",
-            "When Agents Look the Same: Quantifying Distillation-Induced Similarity"
-          ],
-          "pdfHKUnis": []
-        },
         {
           "title": "Cross-Session Threats in AI Agents: Benchmark, Evaluation, and Algorithms",
           "summary": "AI-agent guardrails are memoryless: each message is judged in isolation, so an adversary who spreads a single attack across dozens of sessions slips past every session-bound detector because only the aggregate carries the payload. We make three contributions to cross-session threat detection.   (1) ",
@@ -24995,10 +25204,10 @@
           "status": "downgraded"
         }
       ],
-      "count": 43,
+      "count": 41,
       "uniCollabCount": 11,
       "hkCollabCount": 0,
-      "paperCount": 43
+      "paperCount": 41
     },
     "meta": {
       "company": "Meta AI",
@@ -25714,6 +25923,320 @@
       "icon": "💚",
       "papers": [
         {
+          "title": "Hallo-Live: Real-Time Streaming Joint Audio-Video Avatar Generation with Asynchronous Dual-Stream and Human-Centric Preference Distillation",
+          "summary": "Real-time text-driven joint audio-video avatar generation requires jointly synthesizing portrait video and speech with high fidelity and precise synchronization, yet existing audio-visual diffusion models remain too slow for interactive use and often degrade noticeably after aggressive acceleration.",
+          "published": "2026-04-26T09:46:58Z",
+          "arxivId": "2604.23632v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.23632v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.23632v1",
+          "authors": [
+            "Chunyu Li",
+            "Jiaye Li",
+            "Ruiqiao Mei",
+            "Haoyuan Xia",
+            "Hao Zhu",
+            "Jingdong Wang",
+            "Siyu Zhu"
+          ],
+          "authorCount": 7,
+          "affiliations": [],
+          "categories": [
+            "cs.CV",
+            "cs.MM",
+            "cs.SD"
+          ],
+          "comment": "",
+          "universities": [
+            "Fudan University",
+            "Shanghai Innovation Institute"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "Speech",
+              "label": "语音",
+              "color": "#14b8a6",
+              "subTags": [
+                {
+                  "id": "AudioCap",
+                  "label": "音频理解"
+                }
+              ]
+            },
+            {
+              "id": "Multimodal",
+              "label": "多模态",
+              "color": "#a855f7"
+            }
+          ],
+          "collabConfidence": "confirmed",
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "nvidia",
+            "baidu"
+          ],
+          "pdfUnis": [
+            "1ShanghaiInnovationInstitute 2FudanUniversity",
+            "Figure1:Ourmethodenablesreal-timestreamingtext-drivenjointaudio-videoavatargener",
+            "ChunyuLi1,2,* JiayeLi2,* RuiqiaoMei2 HaoyuanXia1,3"
+          ],
+          "pdfHKUnis": []
+        },
+        {
+          "title": "Adaptive Swin Transformer Partitioning over AI-RAN Networks",
+          "summary": "This paper demonstrates the feasibility of transformer-based split inference for real-time video object detection over dynamic 5G AI-RAN networks. We extend throughput-aware adaptive splitting from CNNs to a Swin Transformer backbone and show that practical split execution is achievable for transfor",
+          "published": "2026-04-26T06:29:45Z",
+          "arxivId": "2604.23554v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.23554v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.23554v1",
+          "authors": [
+            "Tam Thanh Nguyen",
+            "Yong Hao Pua",
+            "Tuan Van Ngo",
+            "Mao V. Ngo",
+            "Jihong Park",
+            "Binbin Chen",
+            "Tony Q. S. Quek"
+          ],
+          "authorCount": 7,
+          "affiliations": [],
+          "categories": [
+            "cs.NI"
+          ],
+          "comment": "6 pages. Accepted version for presentation at the 2026 IEEE Vehicular Technology Conference (VTC2026-Spring), Nice, France 9 - 12 June 2026. copyright 2026 IEEE. Personal use of this material is permi",
+          "universities": [
+            "MIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Vision",
+              "label": "视觉",
+              "color": "#ec4899"
+            }
+          ],
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "{nguyen thanhtam, yonghao pua, vantuan ngo, vanmao ngo, jihong park, binbin chen"
+          ],
+          "pdfHKUnis": []
+        },
+        {
+          "title": "ClusterFusion++: Expanding Cluster-Level Fusion to Full Transformer-Block Decoding",
+          "summary": "Large language model (LLM) decoding is latency-sensitive and often bottlenecked by fragmented operator execution and repeated off-chip materialization of intermediate tensors. Prior work expands fusion scope by leveraging thread-block clusters and on-chip inter-block collectives to fuse attention-si",
+          "published": "2026-04-26T06:25:48Z",
+          "arxivId": "2604.23553v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.23553v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.23553v1",
+          "authors": [
+            "ChiHeng Jin",
+            "Hongche Yu",
+            "Xihui Chen"
+          ],
+          "authorCount": 3,
+          "affiliations": [],
+          "categories": [
+            "cs.DC"
+          ],
+          "comment": "",
+          "universities": [
+            "Mila"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "Code",
+              "label": "代码",
+              "color": "#8b5cf6"
+            }
+          ],
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "ShanghaiJiaoTongUniversity"
+          ],
+          "pdfHKUnis": []
+        },
+        {
+          "title": "Evaluating CUDA Tile for AI Workloads on Hopper and Blackwell GPUs",
+          "summary": "NVIDIA's CUDA Tile (CuTile) introduces a Python-based, tile-centric abstraction for GPU kernel development that aims to simplify programming while retaining Tensor Core and Tensor Memory Accelerator (TMA) efficiency on modern GPUs. We present the first independent, cross-architecture evaluation of C",
+          "published": "2026-04-25T23:13:47Z",
+          "arxivId": "2604.23466v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.23466v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.23466v1",
+          "authors": [
+            "Divakar Kumar Yadav",
+            "Tian Zhao",
+            "Deepak Kumar"
+          ],
+          "authorCount": 3,
+          "affiliations": [],
+          "categories": [
+            "cs.LG",
+            "cs.AI",
+            "cs.AR"
+          ],
+          "comment": "",
+          "universities": [
+            "HIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            }
+          ],
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "University of Wisconsin–Milwaukee University of Wisconsin–Milwaukee Illinois Ins"
+          ],
+          "pdfHKUnis": []
+        },
+        {
+          "title": "When the Agent Is the Adversary: Architectural Requirements for Agentic AI Containment After the April 2026 Frontier Model Escape",
+          "summary": "The April 2026 disclosure that a frontier large language model escaped its security sandbox, executed unauthorized actions, and concealed its modifications to version control history demonstrates that agentic AI systems with autonomous tool access can circumvent the containment mechanisms designed t",
+          "published": "2026-04-25T19:41:00Z",
+          "arxivId": "2604.23425v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.23425v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.23425v1",
+          "authors": [
+            "Richard Joseph Mitchell"
+          ],
+          "authorCount": 1,
+          "affiliations": [],
+          "categories": [
+            "cs.CR"
+          ],
+          "comment": "17 pages, 30 references, 5 tables. Derives five architectural requirements (R1-R5) for agentic AI containment from the April 2026 Mythos Preview incidents. Assesses AEGIS, Microsoft AGT, NVIDIA OpenSh",
+          "universities": [
+            "MIT",
+            "HIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "Safety",
+              "label": "安全",
+              "color": "#ef4444"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            }
+          ],
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "Preprint — Submitted to arXiv [cs.CR]"
+          ],
+          "pdfHKUnis": []
+        },
+        {
+          "title": "ARCHES: Adaptive Real-Time Switching of AI Models for the RAN",
+          "summary": "Artificial Intelligence (AI) has become a powerful tool for model-free Radio Access Network (RAN) signal processing and optimization. However, designing a single model that generalizes across all radio environments is challenging. Specialized AI models outperform conventional algorithms only under s",
+          "published": "2026-04-25T18:04:21Z",
+          "arxivId": "2604.23397v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.23397v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.23397v1",
+          "authors": [
+            "Neagin Neasamoni Santhi",
+            "Davide Villa",
+            "Michele Polese",
+            "Salvatore D'Oro",
+            "Yunseong Lee",
+            "Koichiro Furueda",
+            "Tommaso Melodia"
+          ],
+          "authorCount": 7,
+          "affiliations": [],
+          "categories": [
+            "cs.NI"
+          ],
+          "comment": "10 pages, 11 figures, 1 table",
+          "universities": [
+            "Northeastern University"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            }
+          ],
+          "collabConfidence": "confirmed",
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "nvidia"
+          ],
+          "pdfUnis": [
+            "InstituteforIntelligentNetworkSystems,NortheasternUniversity,Boston,MA,U.S.A.",
+            "ThisworkhasbeensubmittedtotheACMforpossiblepublication.Copyrightmaybetransferred"
+          ],
+          "pdfHKUnis": []
+        },
+        {
           "title": "A comprehensive evaluation of spatial co-execution on GPUs using MPS and MIG technologies",
           "summary": "To mitigate the increasingly common underutilization of computational resources in modern GPUs, spatial sharing methods enable multiple applications to use them simultaneously. This work presents a comprehensive evaluation of NVIDIA's primary technologies to achieve that goal: Multi-Process Service ",
           "published": "2026-04-24T10:42:35Z",
@@ -25966,8 +26489,8 @@
           ],
           "comment": "28 pages, 1 figure",
           "universities": [
-            "MIT",
-            "CAS"
+            "CAS",
+            "MIT"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -26291,8 +26814,8 @@
           "comment": "",
           "universities": [
             "ETH",
-            "Mila",
-            "MIT"
+            "MIT",
+            "Mila"
           ],
           "hkUniversities": [],
           "hasUniCollab": true,
@@ -29164,10 +29687,677 @@
           "status": "confirmed"
         }
       ],
-      "count": 62,
-      "uniCollabCount": 19,
+      "count": 68,
+      "uniCollabCount": 21,
       "hkCollabCount": 1,
-      "paperCount": 62
+      "paperCount": 68
+    },
+    "kuaishou": {
+      "company": "快手",
+      "icon": "📹",
+      "papers": [
+        {
+          "title": "Beyond Static Collision Handling: Adaptive Semantic ID Learning for Multimodal Recommendation at Industrial Scale",
+          "summary": "Modern recommendation systems involve massive catalogs of multimodal items, where scalable item identification must balance compactness, semantic fidelity, and downstream effectiveness. Semantic IDs (SIDs) address this need by representing items as short discrete token sequences derived from multimo",
+          "published": "2026-04-26T03:59:35Z",
+          "arxivId": "2604.23522v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.23522v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.23522v1",
+          "authors": [
+            "Yongsen Pan",
+            "Yuxin Chen",
+            "Zheng Hu",
+            "Xu Yuan",
+            "Daoyuan Wang",
+            "Yuting Yin",
+            "Songhao Ni",
+            "Hongyang Wang"
+          ],
+          "authorCount": 11,
+          "affiliations": [],
+          "categories": [
+            "cs.IR",
+            "cs.MM"
+          ],
+          "comment": "",
+          "universities": [
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            }
+          ],
+          "collabConfidence": "mentioned",
+          "pdfVerified": false
+        },
+        {
+          "title": "Making Image Editing Easier via Adaptive Task Reformulation with Agentic Executions",
+          "summary": "Instruction guided image editing has advanced substantially with recent generative models, yet it still fails to produce reliable results across many seemingly simple cases. We observe that a large portion of these failures stem not from insufficient model capacity, but from poorly formulated editin",
+          "published": "2026-04-17T10:17:22Z",
+          "arxivId": "2604.15917v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.15917v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.15917v1",
+          "authors": [
+            "Bo Zhao",
+            "Kairui Guo",
+            "Runnan Du",
+            "Haiyang Sun",
+            "Pengshan Wang",
+            "Huan Yang",
+            "Kun Gai",
+            "Yixin Cao"
+          ],
+          "authorCount": 9,
+          "affiliations": [],
+          "categories": [
+            "cs.CV"
+          ],
+          "comment": "9pages",
+          "universities": [
+            "CAS"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Vision",
+              "label": "视觉",
+              "color": "#ec4899"
+            },
+            {
+              "id": "Multimodal",
+              "label": "Multimodal",
+              "color": "#6b7280"
+            }
+          ],
+          "collabConfidence": "confirmed",
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "kuaishou"
+          ],
+          "pdfUnis": [
+            "NanjingUniversity BeijingInstituteofTechnology ChinaUniversityofPetroleum",
+            "zhaobo20000116@gmail.com carryguo02@gmail.com CollegeofArtificialIntelligence,"
+          ],
+          "pdfHKUnis": [],
+          "tldr": "[research paper] The paper identifies that image editing failures stem not from model limitations but from poor task formulation—specifically, ambiguous targets, weak spatial grounding, or under-specified instructions. It proposes an adaptive task reformulation framework using a lightweight MLLM agent that dynamically restructures editing queries into a sequence of structured, feedback-driven operations (e.g., region isolation, structural decoupling, intent clarification), enabling robust performance on challenging cases without modifying the underlying editing backbone. Experiments on ImgEdit, PICA, and RePlan show consistent gains, especially in edge cases involving small targets or implicit spatial dependencies.",
+          "deepxivKeywords": [
+            "task reformulation",
+            "agentic execution",
+            "multimodal large language models",
+            "image editing failure analysis",
+            "feedback-driven planning"
+          ],
+          "deepxivEnhanced": true,
+          "status": "confirmed"
+        },
+        {
+          "title": "Efficient Video Diffusion Models: Advancements and Challenges",
+          "summary": "A comprehensive survey on efficient video diffusion models. Reviews four paradigms: step distillation, efficient attention, model compression, and cache/trajectory optimization. Discusses two core optimization targets: reducing NFE and minimizing per-step cost. First survey dedicated to efficient video diffusion.",
+          "published": "2026-04-17T10:11:39Z",
+          "arxivId": "2604.15911v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.15911v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.15911v1",
+          "authors": [
+            "Shitong Shao",
+            "Lichen Bai",
+            "Pengfei Wan",
+            "James Kwok",
+            "Zeke Xie"
+          ],
+          "authorCount": 5,
+          "affiliations": [
+            "Kuaishou Technology",
+            "HKUST(GZ)",
+            "HKUST"
+          ],
+          "categories": [
+            "cs.CV"
+          ],
+          "comment": "First survey on efficient video diffusion models. Pengfei Wan from Kling Team, Kuaishou Technology.",
+          "universities": [
+            "香港科技大学（广州）(HKUST-GZ)",
+            "香港科技大学 (HKUST)"
+          ],
+          "hkUniversities": [
+            "香港科技大学 (HKUST)"
+          ],
+          "hasUniCollab": true,
+          "hasHKCollab": true,
+          "directions": [
+            {
+              "id": "Vision",
+              "label": "视觉",
+              "color": "#ec4899"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            }
+          ],
+          "collabConfidence": "confirmed",
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "Kuaishou Technology"
+          ],
+          "pdfUnis": [
+            "The Hong Kong University of Science and Technology (Guangzhou)",
+            "The Hong Kong University of Science and Technology"
+          ],
+          "pdfHKUnis": [
+            "香港科技大学 (HKUST)"
+          ],
+          "tldr": "This is the first comprehensive survey on efficient video diffusion models, introducing a unified taxonomy of four acceleration paradigms—step distillation, efficient attention, model compression, and cache/trajectory optimization—each targeting either reduced function evaluations or minimized per-step overhead. The work reveals that video efficiency is fundamentally distinct from image diffusion due to compounded spatial-temporal token growth, iterative denoising, and long-horizon coherence constraints, making traditional image-based optimization strategies insufficient; it highlights critical open challenges in quality preservation under acceleration, real-time long-horizon generation, and hardware-software co-design.",
+          "deepxivKeywords": [
+            "step distillation",
+            "efficient attention",
+            "temporal coherence",
+            "KV-cache optimization",
+            "long-horizon generation"
+          ],
+          "deepxivEnhanced": true,
+          "status": "confirmed",
+          "isHK": true
+        },
+        {
+          "title": "NTIRE 2026 Challenge on Short-form UGC Video Restoration in the Wild with Generative Models: Datasets, Methods and Results",
+          "summary": "This paper presents an overview of the NTIRE 2026 Challenge on Short-form UGC Video Restoration in the Wild with Generative Models. This challenge utilizes a new short-form UGC (S-UGC) video restoration benchmark, termed KwaiVIR, which is contributed by USTC and Kuaishou Technology. It contains both",
+          "published": "2026-04-12T09:43:13Z",
+          "arxivId": "2604.10551v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.10551v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.10551v1",
+          "authors": [
+            "Xin Li",
+            "Jiachao Gong",
+            "Xijun Wang",
+            "Shiyao Xiong",
+            "Bingchen Li",
+            "Suhang Yao",
+            "Chao Zhou",
+            "Zhibo Chen"
+          ],
+          "authorCount": 78,
+          "affiliations": [],
+          "categories": [
+            "cs.CV"
+          ],
+          "comment": "Accepted by CVPR 2026 workshop; NTIRE 2026",
+          "universities": [
+            "ETH",
+            "USTC",
+            "MIT"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            }
+          ],
+          "collabConfidence": "uni_only",
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [
+            "WeiZhou LinfengLi HangSong QiXu KunYuan YizhenShao YulinRen",
+            "Generative Models: Datasets, Methods and Results",
+            "JiachenTu GuoyiXu YaoxinJiang JiajiaLiu YaokunShi"
+          ],
+          "pdfHKUnis": [],
+          "tldr": "[research challenge / benchmark evaluation] The NTIRE 2026 Challenge introduces KwaiVIR, a novel benchmark combining synthetically distorted and real-world short-form UGC videos to evaluate generative models for S-UGC video restoration in wild conditions. It features two evaluation tracks—subjective user studies and objective metrics—addressing fidelity, perceptual quality, and temporal consistency across diverse, entangled real-world degradations. 12 teams achieve strong results, demonstrating progress in handling complex, uncontrolled distortions with generative models that preserve temporal coherence and realism.",
+          "deepxivKeywords": [
+            "generative model-based video restoration",
+            "short-form UGC video degradation",
+            "synthetic-real video pairing",
+            "temporal consistency in video restoration",
+            "wild video restoration benchmark"
+          ],
+          "githubUrl": "https://github.com/lixinustc/KVQE-Challenge-CVPR-NTIRE2026",
+          "deepxivEnhanced": true,
+          "status": "downgraded"
+        },
+        {
+          "title": "Dual-Rerank: Fusing Causality and Utility for Industrial Generative Reranking",
+          "summary": "Kuaishou serves over 400 million daily active users, processing hundreds of millions of search queries daily against a repository of tens of billions of short videos. As the final decision layer, the reranking stage determines user experience by optimizing whole-page utility. While traditional score",
+          "published": "2026-04-08T14:54:10Z",
+          "arxivId": "2604.07420v1",
+          "arxivUrl": "http://arxiv.org/abs/2604.07420v1",
+          "pdfUrl": "https://arxiv.org/pdf/2604.07420v1",
+          "authors": [
+            "Chao Zhang",
+            "Shuai Lin",
+            "ChengLei Dai",
+            "Ye Qian",
+            "Fan Mingyang",
+            "Yi Zhang",
+            "Yi Wang",
+            "Jingwei Zhuo"
+          ],
+          "authorCount": 8,
+          "affiliations": [],
+          "categories": [
+            "cs.IR",
+            "cs.LG"
+          ],
+          "comment": "",
+          "universities": [
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            },
+            {
+              "id": "Code",
+              "label": "代码",
+              "color": "#8b5cf6"
+            }
+          ],
+          "collabConfidence": "company_only",
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "kuaishou"
+          ],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "tldr": "[research paper] Dual-Rerank introduces a unified industrial reranking framework that resolves the structural trade-off between autoregressive (AR) and non-autoregressive (NAR) models by leveraging sequential knowledge distillation—exploiting the quasi-deterministic, unimodal nature of video ranking distributions—to enable efficient NAR inference. It simultaneously addresses the optimization gap via list-wise decoupled reranking optimization (LDRO), which stabilizes reinforcement learning by decoupling reward signals from sequence generation, enabling stable online RL in high-throughput environments. A/B testing shows superior user satisfaction, watch time, and latency reduction compared to AR baselines, with a 75% consistency rate in ranking outputs under constrained utility constraints.",
+          "deepxivKeywords": [
+            "sequential knowledge distillation",
+            "list-wise decoupled reranking optimization",
+            "quasi-deterministic ranking distributions",
+            "industrial generative reranking",
+            "reinforcement learning stability"
+          ],
+          "deepxivEnhanced": true,
+          "status": "confirmed"
+        },
+        {
+          "title": "KAT-Coder-V2 Technical Report",
+          "summary": "We present KAT-Coder-V2, an agentic coding model developed by the KwaiKAT team at Kuaishou. KAT-Coder-V2 adopts a \"Specialize-then-Unify\" paradigm that decomposes agentic coding into five expert domains - SWE, WebCoding, Terminal, WebSearch, and General - each undergoing independent supervised fine-",
+          "published": "2026-03-29T14:01:35Z",
+          "arxivId": "2603.27703v1",
+          "arxivUrl": "http://arxiv.org/abs/2603.27703v1",
+          "pdfUrl": "https://arxiv.org/pdf/2603.27703v1",
+          "authors": [
+            "Fengxiang Li",
+            "Han Zhang",
+            "Haoyang Huang",
+            "Jinghui Wang",
+            "Jinhua Hao",
+            "Kun Yuan",
+            "Mengtong Li",
+            "Minglei Zhang"
+          ],
+          "authorCount": 46,
+          "affiliations": [],
+          "categories": [
+            "cs.CL",
+            "cs.LG"
+          ],
+          "comment": "22 pages, 7 figures",
+          "universities": [],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#f97316"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "RL",
+              "label": "RL",
+              "color": "#6b7280"
+            }
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "kuaishou"
+          ],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "company_only",
+          "tldr": "[research paper] KAT-Coder-V2 introduces a Specialize-then-Unify paradigm that decomposes agentic coding into five orthogonal expert domains—SWE, WebCoding, Terminal, WebSearch, and General—each trained independently via supervised fine-tuning and reinforcement learning, then fused via on-policy distillation to avoid exposure bias. The system leverages KwaiEnv, a modular infrastructure enabling high-throughput, decoupled sandbox orchestration across diverse datasets and scaffolds, and employs MCLA to stabilize MoE RL training while Tree Training eliminates redundant computation in tree-structured trajectories, achieving up to 6.2× speedup. Results show strong performance on SWE-bench Verified (79.6%), PinchBench (88.7%), and generalist benchmarks (Terminal-Bench Hard: 46.8, τ²-Bench: 93.9), outperforming GLM-5 and MiniMax M2.7 and matching or surpassing Claude Opus across multiple scaffolds.",
+          "deepxivKeywords": [
+            "agentic memory",
+            "modular sandbox orchestration",
+            "on-policy distillation",
+            "tree-structured trajectory pruning",
+            "MoE reinforcement learning stabilization"
+          ],
+          "deepxivEnhanced": true,
+          "status": "company_only"
+        },
+        {
+          "title": "Unbiased Multimodal Reranking for Long-Tail Short-Video Search",
+          "summary": "Kuaishou serving hundreds of millions of searches daily, the quality of short-video search is paramount. However, it suffers from a severe Matthew effect on long-tail queries: sparse user behavior data causes models to amplify low-quality content such as clickbait and shallow content. The recent adv",
+          "published": "2026-03-26T03:07:15Z",
+          "arxivId": "2603.24975v2",
+          "arxivUrl": "http://arxiv.org/abs/2603.24975v2",
+          "pdfUrl": "https://arxiv.org/pdf/2603.24975v2",
+          "authors": [
+            "Wenyi Xu",
+            "Feiran Zhu",
+            "Songyang Li",
+            "Renzhe Zhou",
+            "Chao Zhang",
+            "Chenglei Dai",
+            "Yuren Mao",
+            "Yunjun Gao"
+          ],
+          "authorCount": 9,
+          "affiliations": [],
+          "categories": [
+            "cs.IR"
+          ],
+          "comment": "",
+          "universities": [
+            "浙江大学 (ZJU)"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": true,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "Multimodal",
+              "label": "多模态",
+              "color": "#a855f7"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#6b7280"
+            }
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "kuaishou"
+          ],
+          "pdfUnis": [
+            "ZhejiangUniversity KuaishouTechnology KuaishouTechnology"
+          ],
+          "pdfHKUnis": [],
+          "collabConfidence": "confirmed",
+          "tldr": "[research paper] Proposes an LLM-driven multimodal reranking framework that addresses long-tail short-video search biases by generating query-aware experience scores from titles, ASR, OCR, covers, and key frames—without relying on user behavior. The method uses two-stage training: (1) supervised fine-tuning with LLM-generated high-quality annotations for intent-content consistency and intrinsic quality, and (2) pairwise preference optimization to learn partial orderings. At inference, experience scores suppress clickbait and shallow content via reranking and guide page-level reinforcement learning to correct exposure bias, achieving consistent gains in offline metrics (AUC, NDCG@K, human preference) and online user experience/consumption metrics.",
+          "deepxivKeywords": [
+            "agentic multimodal parsing",
+            "query-aware experience scoring",
+            "long-tail video search",
+            "user-behavior-agnostic ranking",
+            "cross-modal inconsistency detection"
+          ],
+          "deepxivEnhanced": true,
+          "status": "confirmed"
+        },
+        {
+          "title": "SaFRO: Satisfaction-Aware Fusion via Dual-Relative Policy Optimization for Short-Video Search",
+          "summary": "Multi-Task Fusion plays a pivotal role in industrial short-video search systems by aggregating heterogeneous prediction signals into a unified ranking score. However, existing approaches predominantly optimize for immediate engagement metrics, which often fail to align with long-term user satisfacti",
+          "published": "2026-03-20T02:57:50Z",
+          "arxivId": "2603.19585v1",
+          "arxivUrl": "http://arxiv.org/abs/2603.19585v1",
+          "pdfUrl": "https://arxiv.org/pdf/2603.19585v1",
+          "authors": [
+            "Renzhe Zhou",
+            "Songyang Li",
+            "Feiran Zhu",
+            "Chenglei Dai",
+            "Yi Zhang",
+            "Yi Wang",
+            "Jingwei Zhuo"
+          ],
+          "authorCount": 7,
+          "affiliations": [],
+          "categories": [
+            "cs.IR"
+          ],
+          "comment": "9 pages, 8 figures",
+          "universities": [
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            },
+            {
+              "id": "RAG",
+              "label": "RAG/检索",
+              "color": "#64748b"
+            },
+            {
+              "id": "Data",
+              "label": "数据",
+              "color": "#78716c"
+            }
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [
+            "kuaishou"
+          ],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "company_only",
+          "tldr": "[research paper] SaFRO introduces a satisfaction-aware multi-task fusion framework for short-video search that addresses data sparsity and delayed feedback by constructing a query-level reward model combining engagement and user retention. It employs Dual-Relative Policy Optimization (DRPO) to enable efficient policy updates via group-wise and batch-wise relative preference comparisons, and incorporates a Task-Relation-Aware Fusion module to model inter-task dependencies for context-sensitive trade-offs, achieving superior long-term user satisfaction and retention over baselines.",
+          "deepxivKeywords": [
+            "satisfaction-aware reward modeling",
+            "dual-relative policy optimization",
+            "task relation awareness",
+            "short-video search",
+            "long-term user retention"
+          ],
+          "deepxivEnhanced": true,
+          "status": "confirmed"
+        },
+        {
+          "title": "FlashEvaluator: Expanding Search Space with Parallel Evaluation",
+          "summary": "The Generator-Evaluator (G-E) framework, i.e., evaluating K sequences from a generator and selecting the top-ranked one according to evaluator scores, is a foundational paradigm in tasks such as Recommender Systems (RecSys) and Natural Language Processing (NLP). Traditional evaluators process sequen",
+          "published": "2026-03-03T03:35:34Z",
+          "arxivId": "2603.02565v1",
+          "arxivUrl": "http://arxiv.org/abs/2603.02565v1",
+          "pdfUrl": "https://arxiv.org/pdf/2603.02565v1",
+          "authors": [
+            "Chao Feng",
+            "Yuanhao Pu",
+            "Chenghao Zhang",
+            "Shanqi Liu",
+            "Shuchang Liu",
+            "Xiang Li",
+            "Yongqi Liu",
+            "Lantao Hu"
+          ],
+          "authorCount": 11,
+          "affiliations": [],
+          "categories": [
+            "cs.IR",
+            "cs.CL",
+            "cs.LG"
+          ],
+          "comment": "23 pages, 2 figures",
+          "universities": [
+            "MIT",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            },
+            {
+              "id": "Data",
+              "label": "Data",
+              "color": "#6b7280"
+            }
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "none",
+          "tldr": "[research paper] FlashEvaluator introduces a joint, parallel evaluation framework that replaces traditional one-by-one sequence scoring in Generator-Evaluator (G-E) systems with a single forward pass where all candidate sequences share context and interact cross-list. This enables sublinear $\\mathcal{O}(1/K)$ computational complexity and $\\mathcal{O}(1/\\sqrt{K})$ generational error, while enabling explicit cross-sequence comparisons that improve selection accuracy through shared feature interactions and inter-list modeling. Validated on recommendation and NLP tasks, the method achieves significant speedups and accuracy gains, with real-world deployment in Kuaishou’s recommender system yielding sustained revenue improvements.",
+          "deepxivKeywords": [
+            "cross-sequence interaction",
+            "parallel evaluation",
+            "list-agnostic context modeling",
+            "sublinear computational complexity",
+            "inter-candidate relationship modeling"
+          ],
+          "deepxivEnhanced": true,
+          "status": "downgraded"
+        },
+        {
+          "title": "SOLAR: SVD-Optimized Lifelong Attention for Recommendation",
+          "summary": "Attention mechanism remains the defining operator in Transformers since it provides expressive global credit assignment, yet its $O(N^2 d)$ time and memory cost in sequence length $N$ makes long-context modeling expensive and often forces truncation or other heuristics. Linear attention reduces comp",
+          "published": "2026-03-03T03:28:36Z",
+          "arxivId": "2603.02561v1",
+          "arxivUrl": "http://arxiv.org/abs/2603.02561v1",
+          "pdfUrl": "https://arxiv.org/pdf/2603.02561v1",
+          "authors": [
+            "Chenghao Zhang",
+            "Chao Feng",
+            "Yuanhao Pu",
+            "Xunyong Yang",
+            "Wenhui Yu",
+            "Xiang Li",
+            "Yongqi Liu",
+            "Lantao Hu"
+          ],
+          "authorCount": 11,
+          "affiliations": [],
+          "categories": [
+            "cs.IR",
+            "cs.CV",
+            "cs.LG"
+          ],
+          "comment": "18 pages, 4 figures",
+          "universities": [
+            "CAS",
+            "ETH"
+          ],
+          "hkUniversities": [],
+          "hasUniCollab": false,
+          "hasHKCollab": false,
+          "directions": [
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#22c55e"
+            },
+            {
+              "id": "LLM",
+              "label": "LLM",
+              "color": "#3b82f6"
+            },
+            {
+              "id": "RL",
+              "label": "强化学习",
+              "color": "#eab308"
+            }
+          ],
+          "pdfVerified": true,
+          "pdfCompanies": [],
+          "pdfUnis": [],
+          "pdfHKUnis": [],
+          "collabConfidence": "none",
+          "tldr": "[research paper] SOLAR introduces SVD-Attention, a theoretically lossless attention mechanism that preserves softmax while reducing computational complexity from \\mathcal{O}(N^2d) to \\mathcal{O}(Ndr) by exploiting the inherent low-rank structure of user behavior matrices. Unlike linear attention, which distorts attention distributions via kernel feature maps, SVD-Attention maintains competitive allocation semantics and enables lifelong sequence modeling over ten-thousand-scale user histories and thousands of candidates without filtering, achieving a 0.68% gain in Video Views in Kuaishou’s online deployment through improved ranking fidelity under set-wise competition.",
+          "deepxivKeywords": [
+            "low-rank structure",
+            "set-wise recommendation",
+            "softmax preservation",
+            "lifelong user behavior modeling",
+            "SVD-attention"
+          ],
+          "deepxivEnhanced": true,
+          "status": "downgraded"
+        }
+      ],
+      "count": 10,
+      "uniCollabCount": 4,
+      "hkCollabCount": 1,
+      "paperCount": 10
     },
     "xiaomi": {
       "company": "小米",
@@ -29914,623 +31104,6 @@
       "uniCollabCount": 1,
       "hkCollabCount": 0,
       "paperCount": 5
-    },
-    "kuaishou": {
-      "company": "快手",
-      "icon": "📹",
-      "papers": [
-        {
-          "title": "Making Image Editing Easier via Adaptive Task Reformulation with Agentic Executions",
-          "summary": "Instruction guided image editing has advanced substantially with recent generative models, yet it still fails to produce reliable results across many seemingly simple cases. We observe that a large portion of these failures stem not from insufficient model capacity, but from poorly formulated editin",
-          "published": "2026-04-17T10:17:22Z",
-          "arxivId": "2604.15917v1",
-          "arxivUrl": "http://arxiv.org/abs/2604.15917v1",
-          "pdfUrl": "https://arxiv.org/pdf/2604.15917v1",
-          "authors": [
-            "Bo Zhao",
-            "Kairui Guo",
-            "Runnan Du",
-            "Haiyang Sun",
-            "Pengshan Wang",
-            "Huan Yang",
-            "Kun Gai",
-            "Yixin Cao"
-          ],
-          "authorCount": 9,
-          "affiliations": [],
-          "categories": [
-            "cs.CV"
-          ],
-          "comment": "9pages",
-          "universities": [
-            "CAS"
-          ],
-          "hkUniversities": [],
-          "hasUniCollab": true,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "Agent",
-              "label": "Agent",
-              "color": "#f97316"
-            },
-            {
-              "id": "LLM",
-              "label": "LLM",
-              "color": "#3b82f6"
-            },
-            {
-              "id": "Vision",
-              "label": "视觉",
-              "color": "#ec4899"
-            },
-            {
-              "id": "Multimodal",
-              "label": "Multimodal",
-              "color": "#6b7280"
-            }
-          ],
-          "collabConfidence": "confirmed",
-          "pdfVerified": true,
-          "pdfCompanies": [
-            "kuaishou"
-          ],
-          "pdfUnis": [
-            "NanjingUniversity BeijingInstituteofTechnology ChinaUniversityofPetroleum",
-            "zhaobo20000116@gmail.com carryguo02@gmail.com CollegeofArtificialIntelligence,"
-          ],
-          "pdfHKUnis": [],
-          "tldr": "[research paper] The paper identifies that image editing failures stem not from model limitations but from poor task formulation—specifically, ambiguous targets, weak spatial grounding, or under-specified instructions. It proposes an adaptive task reformulation framework using a lightweight MLLM agent that dynamically restructures editing queries into a sequence of structured, feedback-driven operations (e.g., region isolation, structural decoupling, intent clarification), enabling robust performance on challenging cases without modifying the underlying editing backbone. Experiments on ImgEdit, PICA, and RePlan show consistent gains, especially in edge cases involving small targets or implicit spatial dependencies.",
-          "deepxivKeywords": [
-            "task reformulation",
-            "agentic execution",
-            "multimodal large language models",
-            "image editing failure analysis",
-            "feedback-driven planning"
-          ],
-          "deepxivEnhanced": true,
-          "status": "confirmed"
-        },
-        {
-          "title": "Efficient Video Diffusion Models: Advancements and Challenges",
-          "summary": "A comprehensive survey on efficient video diffusion models. Reviews four paradigms: step distillation, efficient attention, model compression, and cache/trajectory optimization. Discusses two core optimization targets: reducing NFE and minimizing per-step cost. First survey dedicated to efficient video diffusion.",
-          "published": "2026-04-17T10:11:39Z",
-          "arxivId": "2604.15911v1",
-          "arxivUrl": "http://arxiv.org/abs/2604.15911v1",
-          "pdfUrl": "https://arxiv.org/pdf/2604.15911v1",
-          "authors": [
-            "Shitong Shao",
-            "Lichen Bai",
-            "Pengfei Wan",
-            "James Kwok",
-            "Zeke Xie"
-          ],
-          "authorCount": 5,
-          "affiliations": [
-            "Kuaishou Technology",
-            "HKUST(GZ)",
-            "HKUST"
-          ],
-          "categories": [
-            "cs.CV"
-          ],
-          "comment": "First survey on efficient video diffusion models. Pengfei Wan from Kling Team, Kuaishou Technology.",
-          "universities": [
-            "香港科技大学（广州）(HKUST-GZ)",
-            "香港科技大学 (HKUST)"
-          ],
-          "hkUniversities": [
-            "香港科技大学 (HKUST)"
-          ],
-          "hasUniCollab": true,
-          "hasHKCollab": true,
-          "directions": [
-            {
-              "id": "Vision",
-              "label": "视觉",
-              "color": "#ec4899"
-            },
-            {
-              "id": "Infra",
-              "label": "Infra",
-              "color": "#22c55e"
-            }
-          ],
-          "collabConfidence": "confirmed",
-          "pdfVerified": true,
-          "pdfCompanies": [
-            "Kuaishou Technology"
-          ],
-          "pdfUnis": [
-            "The Hong Kong University of Science and Technology (Guangzhou)",
-            "The Hong Kong University of Science and Technology"
-          ],
-          "pdfHKUnis": [
-            "香港科技大学 (HKUST)"
-          ],
-          "tldr": "This is the first comprehensive survey on efficient video diffusion models, introducing a unified taxonomy of four acceleration paradigms—step distillation, efficient attention, model compression, and cache/trajectory optimization—each targeting either reduced function evaluations or minimized per-step overhead. The work reveals that video efficiency is fundamentally distinct from image diffusion due to compounded spatial-temporal token growth, iterative denoising, and long-horizon coherence constraints, making traditional image-based optimization strategies insufficient; it highlights critical open challenges in quality preservation under acceleration, real-time long-horizon generation, and hardware-software co-design.",
-          "deepxivKeywords": [
-            "step distillation",
-            "efficient attention",
-            "temporal coherence",
-            "KV-cache optimization",
-            "long-horizon generation"
-          ],
-          "deepxivEnhanced": true,
-          "status": "confirmed",
-          "isHK": true
-        },
-        {
-          "title": "NTIRE 2026 Challenge on Short-form UGC Video Restoration in the Wild with Generative Models: Datasets, Methods and Results",
-          "summary": "This paper presents an overview of the NTIRE 2026 Challenge on Short-form UGC Video Restoration in the Wild with Generative Models. This challenge utilizes a new short-form UGC (S-UGC) video restoration benchmark, termed KwaiVIR, which is contributed by USTC and Kuaishou Technology. It contains both",
-          "published": "2026-04-12T09:43:13Z",
-          "arxivId": "2604.10551v1",
-          "arxivUrl": "http://arxiv.org/abs/2604.10551v1",
-          "pdfUrl": "https://arxiv.org/pdf/2604.10551v1",
-          "authors": [
-            "Xin Li",
-            "Jiachao Gong",
-            "Xijun Wang",
-            "Shiyao Xiong",
-            "Bingchen Li",
-            "Suhang Yao",
-            "Chao Zhou",
-            "Zhibo Chen"
-          ],
-          "authorCount": 78,
-          "affiliations": [],
-          "categories": [
-            "cs.CV"
-          ],
-          "comment": "Accepted by CVPR 2026 workshop; NTIRE 2026",
-          "universities": [
-            "ETH",
-            "USTC",
-            "MIT"
-          ],
-          "hkUniversities": [],
-          "hasUniCollab": false,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "Data",
-              "label": "数据",
-              "color": "#78716c"
-            },
-            {
-              "id": "RAG",
-              "label": "RAG/检索",
-              "color": "#64748b"
-            }
-          ],
-          "collabConfidence": "uni_only",
-          "pdfVerified": true,
-          "pdfCompanies": [],
-          "pdfUnis": [
-            "WeiZhou LinfengLi HangSong QiXu KunYuan YizhenShao YulinRen",
-            "Generative Models: Datasets, Methods and Results",
-            "JiachenTu GuoyiXu YaoxinJiang JiajiaLiu YaokunShi"
-          ],
-          "pdfHKUnis": [],
-          "tldr": "[research challenge / benchmark evaluation] The NTIRE 2026 Challenge introduces KwaiVIR, a novel benchmark combining synthetically distorted and real-world short-form UGC videos to evaluate generative models for S-UGC video restoration in wild conditions. It features two evaluation tracks—subjective user studies and objective metrics—addressing fidelity, perceptual quality, and temporal consistency across diverse, entangled real-world degradations. 12 teams achieve strong results, demonstrating progress in handling complex, uncontrolled distortions with generative models that preserve temporal coherence and realism.",
-          "deepxivKeywords": [
-            "generative model-based video restoration",
-            "short-form UGC video degradation",
-            "synthetic-real video pairing",
-            "temporal consistency in video restoration",
-            "wild video restoration benchmark"
-          ],
-          "githubUrl": "https://github.com/lixinustc/KVQE-Challenge-CVPR-NTIRE2026",
-          "deepxivEnhanced": true,
-          "status": "downgraded"
-        },
-        {
-          "title": "Dual-Rerank: Fusing Causality and Utility for Industrial Generative Reranking",
-          "summary": "Kuaishou serves over 400 million daily active users, processing hundreds of millions of search queries daily against a repository of tens of billions of short videos. As the final decision layer, the reranking stage determines user experience by optimizing whole-page utility. While traditional score",
-          "published": "2026-04-08T14:54:10Z",
-          "arxivId": "2604.07420v1",
-          "arxivUrl": "http://arxiv.org/abs/2604.07420v1",
-          "pdfUrl": "https://arxiv.org/pdf/2604.07420v1",
-          "authors": [
-            "Chao Zhang",
-            "Shuai Lin",
-            "ChengLei Dai",
-            "Ye Qian",
-            "Fan Mingyang",
-            "Yi Zhang",
-            "Yi Wang",
-            "Jingwei Zhuo"
-          ],
-          "authorCount": 8,
-          "affiliations": [],
-          "categories": [
-            "cs.IR",
-            "cs.LG"
-          ],
-          "comment": "",
-          "universities": [
-            "ETH"
-          ],
-          "hkUniversities": [],
-          "hasUniCollab": false,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "Infra",
-              "label": "Infra",
-              "color": "#22c55e"
-            },
-            {
-              "id": "RL",
-              "label": "强化学习",
-              "color": "#eab308"
-            },
-            {
-              "id": "Code",
-              "label": "代码",
-              "color": "#8b5cf6"
-            }
-          ],
-          "collabConfidence": "company_only",
-          "pdfVerified": true,
-          "pdfCompanies": [
-            "kuaishou"
-          ],
-          "pdfUnis": [],
-          "pdfHKUnis": [],
-          "tldr": "[research paper] Dual-Rerank introduces a unified industrial reranking framework that resolves the structural trade-off between autoregressive (AR) and non-autoregressive (NAR) models by leveraging sequential knowledge distillation—exploiting the quasi-deterministic, unimodal nature of video ranking distributions—to enable efficient NAR inference. It simultaneously addresses the optimization gap via list-wise decoupled reranking optimization (LDRO), which stabilizes reinforcement learning by decoupling reward signals from sequence generation, enabling stable online RL in high-throughput environments. A/B testing shows superior user satisfaction, watch time, and latency reduction compared to AR baselines, with a 75% consistency rate in ranking outputs under constrained utility constraints.",
-          "deepxivKeywords": [
-            "sequential knowledge distillation",
-            "list-wise decoupled reranking optimization",
-            "quasi-deterministic ranking distributions",
-            "industrial generative reranking",
-            "reinforcement learning stability"
-          ],
-          "deepxivEnhanced": true,
-          "status": "confirmed"
-        },
-        {
-          "title": "KAT-Coder-V2 Technical Report",
-          "summary": "We present KAT-Coder-V2, an agentic coding model developed by the KwaiKAT team at Kuaishou. KAT-Coder-V2 adopts a \"Specialize-then-Unify\" paradigm that decomposes agentic coding into five expert domains - SWE, WebCoding, Terminal, WebSearch, and General - each undergoing independent supervised fine-",
-          "published": "2026-03-29T14:01:35Z",
-          "arxivId": "2603.27703v1",
-          "arxivUrl": "http://arxiv.org/abs/2603.27703v1",
-          "pdfUrl": "https://arxiv.org/pdf/2603.27703v1",
-          "authors": [
-            "Fengxiang Li",
-            "Han Zhang",
-            "Haoyang Huang",
-            "Jinghui Wang",
-            "Jinhua Hao",
-            "Kun Yuan",
-            "Mengtong Li",
-            "Minglei Zhang"
-          ],
-          "authorCount": 46,
-          "affiliations": [],
-          "categories": [
-            "cs.CL",
-            "cs.LG"
-          ],
-          "comment": "22 pages, 7 figures",
-          "universities": [],
-          "hkUniversities": [],
-          "hasUniCollab": false,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "LLM",
-              "label": "LLM",
-              "color": "#3b82f6"
-            },
-            {
-              "id": "Agent",
-              "label": "Agent",
-              "color": "#f97316"
-            },
-            {
-              "id": "Infra",
-              "label": "Infra",
-              "color": "#22c55e"
-            },
-            {
-              "id": "RL",
-              "label": "RL",
-              "color": "#6b7280"
-            }
-          ],
-          "pdfVerified": true,
-          "pdfCompanies": [
-            "kuaishou"
-          ],
-          "pdfUnis": [],
-          "pdfHKUnis": [],
-          "collabConfidence": "company_only",
-          "tldr": "[research paper] KAT-Coder-V2 introduces a Specialize-then-Unify paradigm that decomposes agentic coding into five orthogonal expert domains—SWE, WebCoding, Terminal, WebSearch, and General—each trained independently via supervised fine-tuning and reinforcement learning, then fused via on-policy distillation to avoid exposure bias. The system leverages KwaiEnv, a modular infrastructure enabling high-throughput, decoupled sandbox orchestration across diverse datasets and scaffolds, and employs MCLA to stabilize MoE RL training while Tree Training eliminates redundant computation in tree-structured trajectories, achieving up to 6.2× speedup. Results show strong performance on SWE-bench Verified (79.6%), PinchBench (88.7%), and generalist benchmarks (Terminal-Bench Hard: 46.8, τ²-Bench: 93.9), outperforming GLM-5 and MiniMax M2.7 and matching or surpassing Claude Opus across multiple scaffolds.",
-          "deepxivKeywords": [
-            "agentic memory",
-            "modular sandbox orchestration",
-            "on-policy distillation",
-            "tree-structured trajectory pruning",
-            "MoE reinforcement learning stabilization"
-          ],
-          "deepxivEnhanced": true,
-          "status": "company_only"
-        },
-        {
-          "title": "Unbiased Multimodal Reranking for Long-Tail Short-Video Search",
-          "summary": "Kuaishou serving hundreds of millions of searches daily, the quality of short-video search is paramount. However, it suffers from a severe Matthew effect on long-tail queries: sparse user behavior data causes models to amplify low-quality content such as clickbait and shallow content. The recent adv",
-          "published": "2026-03-26T03:07:15Z",
-          "arxivId": "2603.24975v2",
-          "arxivUrl": "http://arxiv.org/abs/2603.24975v2",
-          "pdfUrl": "https://arxiv.org/pdf/2603.24975v2",
-          "authors": [
-            "Wenyi Xu",
-            "Feiran Zhu",
-            "Songyang Li",
-            "Renzhe Zhou",
-            "Chao Zhang",
-            "Chenglei Dai",
-            "Yuren Mao",
-            "Yunjun Gao"
-          ],
-          "authorCount": 9,
-          "affiliations": [],
-          "categories": [
-            "cs.IR"
-          ],
-          "comment": "",
-          "universities": [
-            "浙江大学 (ZJU)"
-          ],
-          "hkUniversities": [],
-          "hasUniCollab": true,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "LLM",
-              "label": "LLM",
-              "color": "#3b82f6"
-            },
-            {
-              "id": "Infra",
-              "label": "Infra",
-              "color": "#22c55e"
-            },
-            {
-              "id": "Multimodal",
-              "label": "多模态",
-              "color": "#a855f7"
-            },
-            {
-              "id": "Agent",
-              "label": "Agent",
-              "color": "#6b7280"
-            }
-          ],
-          "pdfVerified": true,
-          "pdfCompanies": [
-            "kuaishou"
-          ],
-          "pdfUnis": [
-            "ZhejiangUniversity KuaishouTechnology KuaishouTechnology"
-          ],
-          "pdfHKUnis": [],
-          "collabConfidence": "confirmed",
-          "tldr": "[research paper] Proposes an LLM-driven multimodal reranking framework that addresses long-tail short-video search biases by generating query-aware experience scores from titles, ASR, OCR, covers, and key frames—without relying on user behavior. The method uses two-stage training: (1) supervised fine-tuning with LLM-generated high-quality annotations for intent-content consistency and intrinsic quality, and (2) pairwise preference optimization to learn partial orderings. At inference, experience scores suppress clickbait and shallow content via reranking and guide page-level reinforcement learning to correct exposure bias, achieving consistent gains in offline metrics (AUC, NDCG@K, human preference) and online user experience/consumption metrics.",
-          "deepxivKeywords": [
-            "agentic multimodal parsing",
-            "query-aware experience scoring",
-            "long-tail video search",
-            "user-behavior-agnostic ranking",
-            "cross-modal inconsistency detection"
-          ],
-          "deepxivEnhanced": true,
-          "status": "confirmed"
-        },
-        {
-          "title": "SaFRO: Satisfaction-Aware Fusion via Dual-Relative Policy Optimization for Short-Video Search",
-          "summary": "Multi-Task Fusion plays a pivotal role in industrial short-video search systems by aggregating heterogeneous prediction signals into a unified ranking score. However, existing approaches predominantly optimize for immediate engagement metrics, which often fail to align with long-term user satisfacti",
-          "published": "2026-03-20T02:57:50Z",
-          "arxivId": "2603.19585v1",
-          "arxivUrl": "http://arxiv.org/abs/2603.19585v1",
-          "pdfUrl": "https://arxiv.org/pdf/2603.19585v1",
-          "authors": [
-            "Renzhe Zhou",
-            "Songyang Li",
-            "Feiran Zhu",
-            "Chenglei Dai",
-            "Yi Zhang",
-            "Yi Wang",
-            "Jingwei Zhuo"
-          ],
-          "authorCount": 7,
-          "affiliations": [],
-          "categories": [
-            "cs.IR"
-          ],
-          "comment": "9 pages, 8 figures",
-          "universities": [
-            "ETH"
-          ],
-          "hkUniversities": [],
-          "hasUniCollab": false,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "RL",
-              "label": "强化学习",
-              "color": "#eab308"
-            },
-            {
-              "id": "RAG",
-              "label": "RAG/检索",
-              "color": "#64748b"
-            },
-            {
-              "id": "Data",
-              "label": "数据",
-              "color": "#78716c"
-            }
-          ],
-          "pdfVerified": true,
-          "pdfCompanies": [
-            "kuaishou"
-          ],
-          "pdfUnis": [],
-          "pdfHKUnis": [],
-          "collabConfidence": "company_only",
-          "tldr": "[research paper] SaFRO introduces a satisfaction-aware multi-task fusion framework for short-video search that addresses data sparsity and delayed feedback by constructing a query-level reward model combining engagement and user retention. It employs Dual-Relative Policy Optimization (DRPO) to enable efficient policy updates via group-wise and batch-wise relative preference comparisons, and incorporates a Task-Relation-Aware Fusion module to model inter-task dependencies for context-sensitive trade-offs, achieving superior long-term user satisfaction and retention over baselines.",
-          "deepxivKeywords": [
-            "satisfaction-aware reward modeling",
-            "dual-relative policy optimization",
-            "task relation awareness",
-            "short-video search",
-            "long-term user retention"
-          ],
-          "deepxivEnhanced": true,
-          "status": "confirmed"
-        },
-        {
-          "title": "FlashEvaluator: Expanding Search Space with Parallel Evaluation",
-          "summary": "The Generator-Evaluator (G-E) framework, i.e., evaluating K sequences from a generator and selecting the top-ranked one according to evaluator scores, is a foundational paradigm in tasks such as Recommender Systems (RecSys) and Natural Language Processing (NLP). Traditional evaluators process sequen",
-          "published": "2026-03-03T03:35:34Z",
-          "arxivId": "2603.02565v1",
-          "arxivUrl": "http://arxiv.org/abs/2603.02565v1",
-          "pdfUrl": "https://arxiv.org/pdf/2603.02565v1",
-          "authors": [
-            "Chao Feng",
-            "Yuanhao Pu",
-            "Chenghao Zhang",
-            "Shanqi Liu",
-            "Shuchang Liu",
-            "Xiang Li",
-            "Yongqi Liu",
-            "Lantao Hu"
-          ],
-          "authorCount": 11,
-          "affiliations": [],
-          "categories": [
-            "cs.IR",
-            "cs.CL",
-            "cs.LG"
-          ],
-          "comment": "23 pages, 2 figures",
-          "universities": [
-            "MIT",
-            "ETH"
-          ],
-          "hkUniversities": [],
-          "hasUniCollab": false,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "Infra",
-              "label": "Infra",
-              "color": "#22c55e"
-            },
-            {
-              "id": "LLM",
-              "label": "LLM",
-              "color": "#3b82f6"
-            },
-            {
-              "id": "RL",
-              "label": "强化学习",
-              "color": "#eab308"
-            },
-            {
-              "id": "Data",
-              "label": "Data",
-              "color": "#6b7280"
-            }
-          ],
-          "pdfVerified": true,
-          "pdfCompanies": [],
-          "pdfUnis": [],
-          "pdfHKUnis": [],
-          "collabConfidence": "none",
-          "tldr": "[research paper] FlashEvaluator introduces a joint, parallel evaluation framework that replaces traditional one-by-one sequence scoring in Generator-Evaluator (G-E) systems with a single forward pass where all candidate sequences share context and interact cross-list. This enables sublinear $\\mathcal{O}(1/K)$ computational complexity and $\\mathcal{O}(1/\\sqrt{K})$ generational error, while enabling explicit cross-sequence comparisons that improve selection accuracy through shared feature interactions and inter-list modeling. Validated on recommendation and NLP tasks, the method achieves significant speedups and accuracy gains, with real-world deployment in Kuaishou’s recommender system yielding sustained revenue improvements.",
-          "deepxivKeywords": [
-            "cross-sequence interaction",
-            "parallel evaluation",
-            "list-agnostic context modeling",
-            "sublinear computational complexity",
-            "inter-candidate relationship modeling"
-          ],
-          "deepxivEnhanced": true,
-          "status": "downgraded"
-        },
-        {
-          "title": "SOLAR: SVD-Optimized Lifelong Attention for Recommendation",
-          "summary": "Attention mechanism remains the defining operator in Transformers since it provides expressive global credit assignment, yet its $O(N^2 d)$ time and memory cost in sequence length $N$ makes long-context modeling expensive and often forces truncation or other heuristics. Linear attention reduces comp",
-          "published": "2026-03-03T03:28:36Z",
-          "arxivId": "2603.02561v1",
-          "arxivUrl": "http://arxiv.org/abs/2603.02561v1",
-          "pdfUrl": "https://arxiv.org/pdf/2603.02561v1",
-          "authors": [
-            "Chenghao Zhang",
-            "Chao Feng",
-            "Yuanhao Pu",
-            "Xunyong Yang",
-            "Wenhui Yu",
-            "Xiang Li",
-            "Yongqi Liu",
-            "Lantao Hu"
-          ],
-          "authorCount": 11,
-          "affiliations": [],
-          "categories": [
-            "cs.IR",
-            "cs.CV",
-            "cs.LG"
-          ],
-          "comment": "18 pages, 4 figures",
-          "universities": [
-            "CAS",
-            "ETH"
-          ],
-          "hkUniversities": [],
-          "hasUniCollab": false,
-          "hasHKCollab": false,
-          "directions": [
-            {
-              "id": "Infra",
-              "label": "Infra",
-              "color": "#22c55e"
-            },
-            {
-              "id": "LLM",
-              "label": "LLM",
-              "color": "#3b82f6"
-            },
-            {
-              "id": "RL",
-              "label": "强化学习",
-              "color": "#eab308"
-            }
-          ],
-          "pdfVerified": true,
-          "pdfCompanies": [],
-          "pdfUnis": [],
-          "pdfHKUnis": [],
-          "collabConfidence": "none",
-          "tldr": "[research paper] SOLAR introduces SVD-Attention, a theoretically lossless attention mechanism that preserves softmax while reducing computational complexity from \\mathcal{O}(N^2d) to \\mathcal{O}(Ndr) by exploiting the inherent low-rank structure of user behavior matrices. Unlike linear attention, which distorts attention distributions via kernel feature maps, SVD-Attention maintains competitive allocation semantics and enables lifelong sequence modeling over ten-thousand-scale user histories and thousands of candidates without filtering, achieving a 0.68% gain in Video Views in Kuaishou’s online deployment through improved ranking fidelity under set-wise competition.",
-          "deepxivKeywords": [
-            "low-rank structure",
-            "set-wise recommendation",
-            "softmax preservation",
-            "lifelong user behavior modeling",
-            "SVD-attention"
-          ],
-          "deepxivEnhanced": true,
-          "status": "downgraded"
-        }
-      ],
-      "count": 9,
-      "uniCollabCount": 3,
-      "hkCollabCount": 1,
-      "paperCount": 9
     },
     "baidu": {
       "company": "百度",

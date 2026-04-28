@@ -2,7 +2,7 @@
   "generatedAt": "2026-04-28T09:49:12.115341Z",
   "since": "2026-03-01",
   "totalPapers": 535,
-  "totalUniCollab": 108,
+  "totalUniCollab": 106,
   "totalHKCollab": 15,
   "companies": {
     "bytedance": {
@@ -110,7 +110,17 @@
           "pdfVerified": true,
           "pdfCompanies": [],
           "pdfUnis": [],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research paper] A systematic cross-model and cross-lingual analysis reveals that frontier LLMs exhibit pervasive verbal tics—repetitive, formulaic linguistic patterns such as sycophantic openers, pseudo-empathy, and overused vocabulary—quantified via the Verbal Tic Index (VTI). Gemini 3.1 Pro shows the highest tic prevalence (VTI=0.590), while DeepSeek V3.2 is the lowest (0.295), with tics accumulating over multi-turn conversations and showing distinct patterns in English and Chinese. Human evaluation confirms a strong inverse correlation between sycophancy and perceived naturalness (r = -0.87, p < 0.001), indicating that alignment techniques like RLHF impose a 'linguistic tax' that degrades authenticity in human-AI interaction.",
+          "deepxivKeywords": [
+            "verbal tics",
+            "sycophancy",
+            "alignment tax",
+            "lexical diversity",
+            "cross-lingual patterns"
+          ],
+          "githubUrl": "https://github.com/Noah-Wu66/Vectaix-AI",
+          "deepxivEnhanced": true
         },
         {
           "title": "Guiding Distribution Matching Distillation with Gradient-Based Reinforcement Learning",
@@ -288,7 +298,16 @@
           "pdfUnis": [
             "HongweiZheng*,WeiqiWu*,ZhengjiaWang*,GuanyuJiang,"
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research paper] IceBreaker introduces a two-step proactive initiation framework for conversational agents to overcome the 'first-message barrier' in cold-start scenarios. It first distills user-triggered interests via resonance-aware interest distillation from session summaries, then generates personalized starter questions through interaction-oriented generation with preference alignment and self-reinforcement, significantly improving user active days (+1.84‰) and click-through rate (+94.25‰) in production deployment.",
+          "deepxivKeywords": [
+            "proactive conversation initiation",
+            "resonance-aware interest distillation",
+            "personalized starter generation",
+            "cold-start user engagement",
+            "self-reinforced interaction loop"
+          ],
+          "deepxivEnhanced": true
         },
         {
           "title": "IceBreaker for Conversational Agents: Breaking the First-Message Barrier with Personalized Starters",
@@ -1552,7 +1571,17 @@
             "alibaba"
           ],
           "pdfUnis": [],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research paper] AgenticQwen introduces a family of small agentic language models trained via multi-round reinforcement learning using dual data flywheels: a reasoning flywheel that generates harder problems from model errors via self-instruct and larger models, and an agentic flywheel that evolves linear workflows into multi-branch behavior trees by expanding decision paths and introducing misleading user actions. The models achieve competitive performance on agentic benchmarks and close the performance gap with large-scale models (e.g., Qwen3-235B) in industrial tool-use tasks while reducing inference cost by orders of magnitude.",
+          "deepxivKeywords": [
+            "agentic memory",
+            "behavior tree generation",
+            "error-driven data synthesis",
+            "multi-branch decision planning",
+            "synthetic task augmentation"
+          ],
+          "githubUrl": "https://github.com/haruhi-sudo/data_synth_and_rl",
+          "deepxivEnhanced": true
         },
         {
           "title": "Breaking Bad: Interpretability-Based Safety Audits of State-of-the-Art LLMs",
@@ -1609,7 +1638,16 @@
             "NuSCIResearchGroup,ComputerScienceLaboratory,SRI",
             "SusmitJha"
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research paper] A systematic interpretability-based safety audit of eight state-of-the-art open-source LLMs reveals significant disparities in jailbreaking vulnerability: Llama-3 models (especially Llama-3.3-70B-4bt) are highly susceptible (up to 91% jailbroken via Universal Steering and 83% via Representation Engineering), while GPT-oss-120B remains robust. The study introduces an adaptive two-stage grid search algorithm to optimize steering coefficients for unsafe concepts, enabling precise, concept-level manipulation of model behavior through top-down interpretability methods. Results highlight the dual-use risk of interpretability tools and underscore the need for architecture-specific internal safety defenses.",
+          "deepxivKeywords": [
+            "concept steering",
+            "interpretability-based jailbreaking",
+            "universal steering",
+            "representation engineering",
+            "LLM safety audit"
+          ],
+          "deepxivEnhanced": true
         },
         {
           "title": "RespondeoQA: a Benchmark for Bilingual Latin-English Question Answering",
@@ -1664,7 +1702,17 @@
             "Marisa Hudspeth1 Patrick J. Burns2 Brendan O’Connor1",
             "{mhudspeth,brenocon}@cs.umass.edu pjb311@nyu.edu"
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research paper] RespondeoQA introduces a 7,800-pair bilingual Latin-English question answering benchmark derived from pedagogical texts (exams, textbooks, trivia), covering knowledge-based, skill-based, multihop, and translation tasks. The dataset enables evaluation of LLMs on culturally specific linguistic skills—such as scansion, literary devices, and grammar—revealing that generative models struggle with skill-oriented tasks despite improved performance on literary analysis; QwQ shows slight advantage in Latin-asked questions, while LLaMa3 and o3-mini exhibit strong task dependency.",
+          "deepxivKeywords": [
+            "bilingual question answering",
+            "historical language evaluation",
+            "scansion",
+            "literary device recognition",
+            "skill-based language tasks"
+          ],
+          "githubUrl": "https://github.com/slanglab/RespondeoQA",
+          "deepxivEnhanced": true
         },
         {
           "title": "WebGen-R1: Incentivizing Large Language Models to Generate Functional and Aesthetic Websites with Reinforcement Learning",
@@ -1771,6 +1819,11 @@
               "id": "Vision",
               "label": "视觉",
               "color": "#ec4899"
+            },
+            {
+              "id": "Multimodal",
+              "label": "Multimodal",
+              "color": "#6b7280"
             }
           ],
           "collabConfidence": "uni_only",
@@ -1780,7 +1833,16 @@
             "TheUniversityofSydney TheUniversityofSydney TheUniversityofSydney",
             "Rethinking Where to Edit: Task-Aware Localization for"
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research paper] The paper identifies over-editing in instruction-based image editing (IIE) as stemming from a lack of task-aware edit localization, proposing a training-free framework that leverages stream-specific attention and latent feature centroids to generate task-dependent edit masks. By dynamically combining source and target image stream cues—such as emergence in target or disappearance in source—the method achieves precise spatial localization, improving non-edit region consistency without sacrificing instruction-following performance in diffusion transformer-based models.",
+          "deepxivKeywords": [
+            "task-aware localization",
+            "edit mask construction",
+            "diffusion transformer",
+            "latent feature extraction",
+            "spatial semantic partitioning"
+          ],
+          "deepxivEnhanced": true
         },
         {
           "title": "Bootstrapping Post-training Signals for Open-ended Tasks via Rubric-based Self-play on Pre-training Text",
@@ -1821,6 +1883,11 @@
               "id": "Code",
               "label": "代码",
               "color": "#8b5cf6"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#6b7280"
             }
           ],
           "collabConfidence": "uni_only",
@@ -1829,7 +1896,17 @@
           "pdfUnis": [
             "DepartmentofComputerScience,CornellUniversity"
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research paper] POP introduces a rubric-based self-play framework that enables post-training of LLMs on open-ended tasks by having the same model generate questions, answers, and evaluation rubrics—all grounded in a content-rich pretraining corpus. This design creates a generation-verification gap to prevent reward hacking, avoids mode collapse via corpus-grounded query synthesis, and uses Direct Preference Optimization to learn contrastive signals from high/low-scoring answer pairs. Empirical results show performance gains of up to 9% on instruction following, 5% on creative writing, and 4% on healthcare QA across diverse open-ended domains.",
+          "deepxivKeywords": [
+            "rubric-based self-play",
+            "generation-verification gap",
+            "open-ended task training",
+            "direct preference optimization",
+            "agentic self-improvement"
+          ],
+          "githubUrl": "https://github.com/HCY123902/POP",
+          "deepxivEnhanced": true
         },
         {
           "title": "SafetyALFRED: Evaluating Safety-Conscious Planning of Multimodal Large Language Models",
@@ -1878,6 +1955,16 @@
               "id": "LLM",
               "label": "LLM",
               "color": "#3b82f6"
+            },
+            {
+              "id": "Multimodal",
+              "label": "Multimodal",
+              "color": "#6b7280"
+            },
+            {
+              "id": "Safety",
+              "label": "Safety",
+              "color": "#6b7280"
             }
           ],
           "collabConfidence": "uni_only",
@@ -1887,7 +1974,17 @@
             "YichiZhang1,RadaMihalcea1,CaseyKennington2,JoyceChai1",
             "1UniversityofMichigan,2BoiseStateUniversity"
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research paper] SafetyALFRED introduces a novel embodied safety evaluation benchmark that assesses multimodal large language models (MLLMs) not just on hazard recognition via question-answering, but on their ability to generate corrective action plans in dynamic physical environments. The benchmark augments ALFRED with six real-world kitchen hazards—appliance misuse, spoilage, fall/trip hazards, fire, property damage, and unsanitary conditions—and evaluates eleven state-of-the-art MLLMs across two modes: static hazard identification and embodied mitigation. Results reveal a significant alignment gap: models achieve up to 92% accuracy in hazard recognition via QA, yet only below 60% success in executing mitigation actions, demonstrating that current safety evaluations fail to capture real-world physical safety behavior, thus advocating for embodied planning as a critical component of safety-conscious agent design.",
+          "deepxivKeywords": [
+            "embodied safety planning",
+            "hazard mitigation in dynamic environments",
+            "agentic alignment gap",
+            "multimodal large language model evaluation",
+            "physical risk correction"
+          ],
+          "githubUrl": "https://github.com/sled-group/SafetyALFRED.git",
+          "deepxivEnhanced": true
         },
         {
           "title": "Detecting Hallucinations in SpeechLLMs at Inference Time Using Attention Maps",
@@ -1936,6 +2033,11 @@
               "id": "Infra",
               "label": "Infra",
               "color": "#22c55e"
+            },
+            {
+              "id": "Safety",
+              "label": "Safety",
+              "color": "#6b7280"
             }
           ],
           "collabConfidence": "uni_only",
@@ -1944,7 +2046,16 @@
           "pdfUnis": [
             "1UniversityofEdinburgh 2AmazonAGI"
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research paper] Proposes four audio-specific attention metrics—AudioRatio, AudioConsistency, AudioEntropy, and TextEntropy—to detect hallucinations in SpeechLLMs at inference time by capturing pathological attention patterns. Trains lightweight logistic regression classifiers on these features, achieving up to +0.23 PR-AUC improvement over uncertainty-based and prior attention baselines on Qwen-2-Audio and Voxtral-3B, with strong performance using only ~100 attention heads, enhancing out-of-domain generalization and enabling real-time, reference-free detection.",
+          "deepxivKeywords": [
+            "audio-specific attention",
+            "hallucination detection",
+            "speech-to-text alignment",
+            "attention entropy",
+            "inference-time filtering"
+          ],
+          "deepxivEnhanced": true
         },
         {
           "title": "UAF: A Unified Audio Front-end LLM for Full-Duplex Speech Interaction",
@@ -2050,7 +2161,17 @@
           "pdfUnis": [
             "SchoolofComputing,MacquarieUniversity,Australia"
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research paper] AlignCultura introduces CulturaX, a culturally grounded HHH-aligned dataset built using UNESCO’s Framework for Cultural Statistics taxonomy, with 1,500 samples across 30 subdomains of tangible and intangible culture. It employs query reclassification via Mistral-7B-Instruct and query expansion with Llama-3.1-8B-Instruct (using SimHash) to ensure diversity and prevent data leakage, then applies two-stage rejection sampling to generate HHH-compliant responses. Empirical results show culturally fine-tuned models achieve 4%–6% improvement in joint HHH, 18% reduction in cultural failures, and 10%–12% efficiency gains while limiting leakage to 0.3%.",
+          "deepxivKeywords": [
+            "cultural taxonomy",
+            "UNESCO Framework for Cultural Statistics",
+            "cultural alignment",
+            "HHH paradigm",
+            "query expansion"
+          ],
+          "githubUrl": "https://github.com/gskgautam/AlignCultura",
+          "deepxivEnhanced": true
         },
         {
           "title": "Towards Understanding the Robustness of Sparse Autoencoders",
@@ -2101,7 +2222,17 @@
           "pdfUnis": [
             "UniversityofVirginia IndependentResearcher UniversityofVirginia"
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[empirical research paper] The paper empirically demonstrates that inserting pretrained Sparse Autoencoders (Sae) into transformer residual streams at inference time—without modifying weights or blocking gradients—reduces jailbreak success rates by up to 5× under white-box attacks (GCG, Beast) and black-box benchmarks. Key findings include a monotonic relationship between L₀ sparsity and attack success, a layer-dependent tradeoff between robustness and clean performance, and reduced cross-model attack transferability, supporting a representational bottleneck hypothesis where sparse projections alter the optimization geometry exploited by gradient-aligned jailbreaks.",
+          "deepxivKeywords": [
+            "activation-space intervention",
+            "representational bottleneck",
+            "gradient-aligned optimization",
+            "layer-dependent robustness",
+            "sparse encode-decode bottleneck"
+          ],
+          "githubUrl": "https://github.com/AikyamLab/sparse-jailbreak",
+          "deepxivEnhanced": true
         },
         {
           "title": "S2H-DPO: Hardness-Aware Preference Optimization for Vision-Language Models",
@@ -2151,7 +2282,16 @@
           "pdfUnis": [
             "MichiganStateUniversity CarnegieMellonUniversity"
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research paper] S2H-DPO introduces a hardness-aware preference optimization framework that constructs multi-image reasoning datasets across three hierarchical levels—single-image localized, multi-image localized comparison, and global visual search—to systematically train vision-language models on progressively more complex reasoning tasks. Unlike prior methods that rely on pre-specified image indices, it uses prompt-driven complexity to generate synthetic preference pairs that target autonomous visual search and cross-image comparison, enabling models to develop robust, generalizable multi-image reasoning capabilities without degrading single-image performance. Evaluations on LLaVA and Qwen-VL show significant gains over baseline methods, especially on challenging global search tasks, demonstrating superior generalization across reasoning difficulty levels.",
+          "deepxivKeywords": [
+            "multi-image reasoning",
+            "global visual search",
+            "hierarchical reasoning",
+            "prompt-driven complexity",
+            "synthetic preference data"
+          ],
+          "deepxivEnhanced": true
         },
         {
           "title": "Revisiting Change VQA in Remote Sensing with Structured and Native Multimodal Qwen Models",
@@ -2198,7 +2338,16 @@
           "pdfVerified": true,
           "pdfCompanies": [],
           "pdfUnis": [],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research letter] This study evaluates two multimodal model architectures—structured (Qwen3-VL) and native (Qwen3.5)—on the CDVQA benchmark for change visual question answering in remote sensing. Results show that native multimodal models outperform structured pipelines, even without change-specific modules, indicating that tightly integrated vision-language alignment enables more effective semantic change reasoning across bi-temporal images. Performance does not scale monotonically with model size, suggesting that architectural integration matters more than scale for this task.",
+          "deepxivKeywords": [
+            "native multimodal alignment",
+            "change visual question answering",
+            "bi-temporal remote sensing",
+            "multimodal model architecture",
+            "temporal semantic reasoning"
+          ],
+          "deepxivEnhanced": true
         },
         {
           "title": "Training and Agentic Inference Strategies for LLM-based Manim Animation Generation",
@@ -2243,6 +2392,16 @@
               "id": "RL",
               "label": "强化学习",
               "color": "#eab308"
+            },
+            {
+              "id": "Infra",
+              "label": "Infra",
+              "color": "#6b7280"
+            },
+            {
+              "id": "Code",
+              "label": "Code",
+              "color": "#6b7280"
             }
           ],
           "collabConfidence": "uni_only",
@@ -2251,7 +2410,17 @@
           "pdfUnis": [
             "1DepartmentofComputerScience,NottinghamTrentUniversity,Nottingham,UnitedKingdom,"
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research paper] This study introduces ManimTrainer and ManimAgent—a unified training and inference pipeline for LLM-based text-to-code-to-video generation using Manim. ManimTrainer combines Supervised Fine-tuning (SFT) with Group Relative Policy Optimisation (GRPO) via a fused code-visual reward signal, while ManimAgent employs Renderer-in-the-loop (RITL) and API-documentation-augmented RITL (RITL-DOC) strategies at inference. Evaluating 17 sub-30B LLMs across nine strategy combinations, results show SFT improves code quality, GRPO enhances visual fidelity, and RITL-DOC achieves the highest performance (94% RSR, 85.7% VS), outperforming GPT-4.1. Critically, inference strategies improve visual output but reduce code-visual metric correlation, revealing a disconnect between code correctness and visual accuracy that undermines code-only evaluation.",
+          "deepxivKeywords": [
+            "agentic inference",
+            "text-to-code-to-video",
+            "reinforcement learning in code generation",
+            "renderer-in-the-loop",
+            "manim animation pipeline"
+          ],
+          "githubUrl": "https://github.com/SuienS/manim-trainer",
+          "deepxivEnhanced": true
         },
         {
           "title": "ComPASS: Towards Personalized Agentic Social Support via Tool-Augmented Companionship",
@@ -2296,6 +2465,11 @@
               "id": "LLM",
               "label": "LLM",
               "color": "#3b82f6"
+            },
+            {
+              "id": "RL",
+              "label": "RL",
+              "color": "#6b7280"
             }
           ],
           "collabConfidence": "uni_only",
@@ -2304,7 +2478,17 @@
           "pdfUnis": [
             "RenminUniversityofChina BeihangUniversity BeihangUniversity"
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research paper] The paper introduces ComPASS, a framework that enables large language models (LLMs) to deliver personalized social support by integrating external tools (e.g., music sharing, psychological knowledge retrieval) into agent interactions. It proposes ComPASS-Bench—the first benchmark for evaluating LLMs in personalized social support—through synthetic, user-persona-driven data generation and manual refinement, covering emotional, informational, and instrumental support dimensions. Fine-tuning Qwen3-8B with tool-augmented interaction records yields ComPASS-Qwen, which outperforms base models in response quality and demonstrates superior performance over direct empathetic dialogue, especially in contextually appropriate tool selection and response synthesis.",
+          "deepxivKeywords": [
+            "tool-augmented agent",
+            "personalized social support",
+            "emotional support interaction",
+            "multi-dimensional social support",
+            "LLM fine-tuning for HCI"
+          ],
+          "githubUrl": "https://github.com/hzp3517/ComPASS",
+          "deepxivEnhanced": true
         },
         {
           "title": "State Transfer Reveals Reuse in Controlled Routing",
@@ -2354,7 +2538,16 @@
           "pdfUnis": [
             "Shanghai Qizhi Institute Southeast University"
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[empirical research paper] The paper introduces a strict evidential standard—held-out transfer at a fixed interface with matched necessity, sufficiency, and wrong-interface controls—to distinguish between prompt-induced routing behavior that reuses an existing internal state versus one that rebuilds a new signal. In GPT-2 routing tasks, fixed-interface transfer is observed in triop (exact transfer at early interface), while add/sub tasks show that zero-retrain transfer at a fixed interface preserves donor accuracy, whereas trainable prompt slots require additional support and optimization to replicate behavior at other positions, indicating functional distinction between reuse and relocation. Cross-architecture validation on Qwen confirms consistent matched-interface patterns at the operator token, though donor-specific identity on the local V-path remains unresolved. Generation and reasoning branches reveal that control becomes less identifiable as trajectory length increases or reasoning complexity grows, suggesting scope limitations in state reuse.",
+          "deepxivKeywords": [
+            "fixed-interface state transfer",
+            "prompt relocation vs reuse",
+            "controlled routing",
+            "internal state identifiability",
+            "multi-step trajectory control"
+          ],
+          "deepxivEnhanced": true
         },
         {
           "title": "Modeling Multiple Support Strategies within a Single Turn for Emotional Support Conversations",
@@ -2410,7 +2603,8 @@
           "pdfUnis": [
             "1SchoolofComputerScienceandTechnology,SoochowUniversity"
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "deepxivEnhanced": true
         },
         {
           "title": "LiteResearcher: A Scalable Agentic RL Training Framework for Deep Research Agent",
@@ -2466,7 +2660,8 @@
             "WanliLi1,2,∗, BinceQu1,2,∗, BoPan1, JianyuZhang1, ZhengLiu3,†, PanZhang2",
             "1ZhejiangUniversity 2SimplexAI 3TheHongKongPolytechnicUniversity"
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "deepxivEnhanced": true
         },
         {
           "title": "Language models recognize dropout and Gaussian noise applied to their activations",
@@ -9859,7 +10054,8 @@
             "xiaomi"
           ],
           "pdfUnis": [],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "deepxivEnhanced": true
         },
         {
           "title": "When Cow Urine Cures Constipation on YouTube: Limits of LLMs in Detecting Culture-specific Health Misinformation",
@@ -9902,7 +10098,8 @@
             "When Cow Urine Cures Constipation on YouTube: Limits of LLMs in Detecting",
             "1UniversityofMichigan,2UniversityofKansas,3IITJodhpur"
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "deepxivEnhanced": true
         },
         {
           "title": "Stealthy Backdoor Attacks against LLMs Based on Natural Style Triggers",
@@ -9954,7 +10151,16 @@
           "pdfVerified": true,
           "pdfCompanies": [],
           "pdfUnis": [],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research paper] BadStyle introduces a novel backdoor attack framework that generates natural, style-level triggers via LLM-powered style transfer, enabling imperceptible and semantically fluent poisoned samples. It employs an auxiliary target loss to stabilize payload injection during fine-tuning, improving attack success rates by ~30% across seven LLMs and maintaining effectiveness in downstream deployment and under input/output defenses. The attack is grounded in a realistic threat model that maps trigger injection through natural user prompts and activation during routine generation, addressing key gaps in prior work on backdoor robustness and stealth.",
+          "deepxivKeywords": [
+            "style-level triggers",
+            "auxiliary target loss",
+            "poisoned sample generation",
+            "prompt-induced backdoor injection",
+            "PEFT-based backdoor attacks"
+          ],
+          "deepxivEnhanced": true
         },
         {
           "title": "Strategic Heterogeneous Multi-Agent Architecture for Cost-Effective Code Vulnerability Detection",
@@ -10004,7 +10210,16 @@
             "zwang000@usc.edu",
             "UniversityofSouthernCalifornia"
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research paper] A game-theoretic framework designs a heterogeneous multi-agent architecture for cost-effective code vulnerability detection, combining three cloud-based LLM experts (DeepSeek-V3) analyzing code structure, security patterns, and debugging logic in parallel with a local lightweight verifier (Qwen3-8B) performing adversarial validation. The two-layer game model—cooperative expert coalition with super-additive value and adversarial verification—demonstrates 77.2% F1 score, 100% recall, and +10.3 precision points over baselines at $0.002/sample, with 3.0× speedup via parallel execution and zero marginal cost for verification.",
+          "deepxivKeywords": [
+            "heterogeneous multi-agent systems",
+            "game-theoretic design",
+            "adversarial verification",
+            "LLM-based vulnerability detection",
+            "cost-sensitive software engineering"
+          ],
+          "deepxivEnhanced": true
         },
         {
           "title": "Exploiting LLM-as-a-Judge Disposition on Free Text Legal QA via Prompt Optimization",
@@ -10050,7 +10265,17 @@
           "pdfUnis": [
             "TechnicalUniversityofMunich TechnicalUniversityofMunich"
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research paper] The paper conducts a systematic study of prompt optimization in LLM-as-a-Judge evaluations for legal question answering on the LEXam benchmark, demonstrating that automatic prompt optimization via ProTeGi outperforms human-designed baselines. Lenient judge feedback (e.g., Qwen3-32B) yields higher and more consistent improvements than strict feedback (e.g., DeepSeek-V3), and prompts optimized with lenient judges transfer better to strict judges—indicating that judge disposition shapes prompt generalizability and that permissive feedback enables broader applicability in cross-judge settings.",
+          "deepxivKeywords": [
+            "prompt optimization",
+            "judge disposition",
+            "cross-judge transfer",
+            "legal NLP",
+            "LLM-as-a-Judge"
+          ],
+          "githubUrl": "https://github.com/TUMLegalTech/icail2026-llm-judge-gaming",
+          "deepxivEnhanced": true
         },
         {
           "title": "Less Languages, Less Tokens: An Efficient Unified Logic Cross-lingual Chain-of-Thought Reasoning Framework",
@@ -10108,7 +10333,17 @@
             "2 CentralSouthUniversity",
             "ChenyuanZhang1,6* QiguangChen2* XieChen5,6 ZhuotaoTian1 BowenXing4"
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research paper] UL-XCoT introduces a unified logic space to enable cross-lingual reasoning with reduced computational overhead by (1) selecting a small subset of relevant languages via language-invariant logic representation and (2) dynamically pruning low-quality reasoning trajectories during decoding using trajectory-level logic consistency monitoring. This dual mechanism achieves over 50% reduction in token usage and latency compared to full-language, full-trajectory baselines, with superior stability on low-resource languages where standard XCoT fails due to weak signal strength.",
+          "deepxivKeywords": [
+            "unified logic space",
+            "cross-lingual trajectory pruning",
+            "language-invariant reasoning",
+            "dynamic CoT pruning",
+            "self-consistency efficiency"
+          ],
+          "githubUrl": "https://github.com/chenyuanTKCY/UL-XCoT",
+          "deepxivEnhanced": true
         },
         {
           "title": "Do LLMs Game Formalization? Evaluating Faithfulness in Logical Reasoning",
@@ -10159,7 +10394,8 @@
           "pdfUnis": [
             "EPFL EPFL"
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "deepxivEnhanced": true
         },
         {
           "title": "Understanding Password Preferences, Memorability, and Security through a Human-Centered Lens",
@@ -10198,7 +10434,8 @@
           "pdfUnis": [
             "TechnicalUniversityofMunich TechnicalUniversityofMunich, TechnicalUniversityofMu"
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "deepxivEnhanced": true
         },
         {
           "title": "DebugRepair: Enhancing LLM-Based Automated Program Repair via Self-Directed Debugging",
@@ -10256,7 +10493,16 @@
             "traces,whichindicatehowfailuresareobservedbutfailtoexposetheintermediateruntimes",
             "ShandongUniversity,China"
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research paper] DebugRepair introduces a self-directed debugging framework that enhances LLM-based program repair by incorporating intermediate runtime evidence through simulated instrumentation, enabling more accurate root-cause analysis. It integrates test semantic purification to isolate failure contexts, simulated debugging to collect runtime traces (with rule-based fallbacks for compilation errors), and a hierarchical conversational repair process that iteratively refines patches using both prior attempts and observed runtime states. Evaluated on Defects4J across Java and Python, DebugRepair achieves 26.2%–59% more correct fixes than SOTA baselines and shows consistent model-agnostic gains, with ablation studies confirming each component's critical contribution.",
+          "deepxivKeywords": [
+            "simulated instrumentation",
+            "intermediate runtime evidence",
+            "debugging-driven conversational repair",
+            "test semantic purification",
+            "self-directed debugging"
+          ],
+          "deepxivEnhanced": true
         },
         {
           "title": "ReflectMT: Internalizing Reflection for Efficient and High-Quality Machine Translation",
@@ -10298,6 +10544,16 @@
               "id": "Data",
               "label": "数据",
               "color": "#78716c"
+            },
+            {
+              "id": "RL",
+              "label": "RL",
+              "color": "#6b7280"
+            },
+            {
+              "id": "Agent",
+              "label": "Agent",
+              "color": "#6b7280"
             }
           ],
           "collabConfidence": "uni_only",
@@ -10306,7 +10562,16 @@
           "pdfUnis": [
             "1SchoolofInformatics,XiamenUniversity,China"
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research paper] ReflectMT introduces a 'post-thinking' paradigm in machine translation where structured reflection is learned during training via multi-agent data generation and two-stage reinforcement learning, enabling high-quality translations on first pass without explicit reasoning. The model first learns a 'translate-reflect-refine' workflow to build reflection capability, then internalizes this knowledge so that inference proceeds directly, achieving 2.16-point GPT-based quality gains over DeepSeek-R1 while reducing token consumption by 94.33%.",
+          "deepxivKeywords": [
+            "reflection internalization",
+            "structured reflection process",
+            "reinforcement learning training",
+            "multi-agent data generation",
+            "first-pass translation"
+          ],
+          "deepxivEnhanced": true
         },
         {
           "title": "Assessing Capabilities of Large Language Models in Social Media Analytics: A Multi-task Quest",
@@ -10360,7 +10625,16 @@
           "pdfUnis": [
             "UtahStateUniversity UtahStateUniversity IndependentResearcher"
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research paper] This study presents the first unified empirical evaluation of modern LLMs—GPT-4, Gemini 1.5 Pro, DeepSeek-V3, Llama 3.2, and BERT—across three core social media analytics tasks: authorship verification, post generation, and user attribute inference. For authorship verification, it introduces a systematic sampling framework and evaluates generalization on out-of-distribution tweets from January 2024 to combat seen-data bias; for post generation, it uses real-user perception studies and comprehensive metrics to assess authenticity and personalization; for attribute inference, it benchmarks models against standardized taxonomies (IAB Tech Lab and U.S. SOC) with fine-grained occupational and interest classification. Results reveal significant performance gaps in style mimicry and demographic prediction, especially among non-LLM baselines and smaller models, highlighting limitations in LLMs' ability to capture nuanced user identity signals.",
+          "deepxivKeywords": [
+            "authorship verification",
+            "post generation authenticity",
+            "user attribute inference",
+            "seen-data bias mitigation",
+            "stylometric modeling"
+          ],
+          "deepxivEnhanced": true
         },
         {
           "title": "MathNet: a Global Multimodal Benchmark for Mathematical Reasoning and Retrieval",
@@ -10410,6 +10684,11 @@
               "id": "Data",
               "label": "数据",
               "color": "#78716c"
+            },
+            {
+              "id": "Math",
+              "label": "Math",
+              "color": "#6b7280"
             }
           ],
           "collabConfidence": "uni_only",
@@ -10418,7 +10697,17 @@
           "pdfUnis": [
             "1MIT 2KAUST 3HUMAIN 4IndividualResearcher ∗†EqualContribution"
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research paper] MathNet introduces a large-scale, multilingual, Olympiad-level math dataset (30,676 expert-authored problems across 17 languages and 47 countries) with three core tasks: problem solving, math-aware retrieval (distinguishing structurally equivalent problems via symbolic invariance), and retrieval-augmented problem solving. State-of-the-art models (e.g., Gemini-3.1-Pro, GPT-5) achieve only 78.4% and 69.3% accuracy on problem solving, while embedding-based retrieval fails to recognize mathematically equivalent formulations—e.g., mistaking $x+y=1$ for $x^2+y^2=1$—demonstrating a critical gap in symbolic reasoning. RAG performance is highly dependent on retrieval quality, with DeepSeek-V3.2-Special achieving up to 12% gains when retrieving structure-aligned, mathematically equivalent problems.",
+          "deepxivKeywords": [
+            "math-aware retrieval",
+            "symbolic invariance",
+            "equivalent problem matching",
+            "retrieval-augmented problem solving",
+            "Olympiad-level mathematical reasoning"
+          ],
+          "githubUrl": "https://github.com/ShadeAlsha/MathNet",
+          "deepxivEnhanced": true
         },
         {
           "title": "From Program Slices to Causal Clarity: Evaluating Faithful, Actionable LLM-Generated Failure Explanations via Context Partitioning and LLM-as-a-Judge",
@@ -10472,7 +10761,16 @@
           "pdfUnis": [
             "HassoPlattnerInstitute,Universityof HassoPlattnerInstitute,Universityof HassoPla"
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[empirical research paper] The paper systematically evaluates how different context compositions affect the quality of LLM-generated failure explanations by varying debugging artifacts across 93 configurations on real bugs. It introduces a context-module catalog and partitioning pipeline, evaluates explanations using six criteria (faithfulness, causality, actionability, clarity, conciseness, and grounding), and validates LLM-as-a-judge scores against human ratings. Results show that failure-specific, executable artifacts (e.g., code, test cases) significantly improve explanation quality and downstream repair success, while broad or prose-heavy contexts degrade clarity and actionability, with low-quality explanations sometimes underperforming baseline no-explanation cases.",
+          "deepxivKeywords": [
+            "context partitioning",
+            "failure explanation quality",
+            "causal clarity",
+            "program slicing",
+            "LLM-as-a-judge"
+          ],
+          "deepxivEnhanced": true
         },
         {
           "title": "First, Do No Harm (With LLMs): Mitigating Racial Bias via Agentic Workflows",
@@ -10524,7 +10822,16 @@
             "UniversityCollegeDublin",
             "TechnologicalUniversityDublin"
           ],
-          "pdfHKUnis": []
+          "pdfHKUnis": [],
+          "tldr": "[research paper] This study evaluates racial bias across five LLMs in two medical tasks—synthetic patient-case generation and differential diagnosis—using U.S. race-stratified epidemiological data and expert diagnostic benchmarks. All models exhibit implicit racial bias in case generation, with GPT-4.1 showing the least deviation; DeepSeek V3 performs best in differential diagnosis. When embedded in an agentic workflow, DeepSeek V3 improves diagnostic p-values (mean +0.0348, median +0.1166) and mean difference (+0.0949), suggesting retrieval-based agentic workflows can reduce explicit bias in diagnostic ranking, though gains are metric-dependent.",
+          "deepxivKeywords": [
+            "agentic workflows",
+            "racial bias mitigation",
+            "differential diagnosis",
+            "synthetic patient generation",
+            "epidemiological benchmarking"
+          ],
+          "deepxivEnhanced": true
         },
         {
           "title": "CodePivot: Bootstrapping Multilingual Transpilation in LLMs via Reinforcement Learning without Parallel Corpora",
@@ -21604,11 +21911,9 @@
             "stat.ML"
           ],
           "comment": "Our open-sourced code and data can be found at https://github.com/google-deepmind/proeval",
-          "universities": [
-            "CAS"
-          ],
+          "universities": [],
           "hkUniversities": [],
-          "hasUniCollab": true,
+          "hasUniCollab": false,
           "hasHKCollab": false,
           "directions": [
             {
@@ -21627,15 +21932,12 @@
               "color": "#3b82f6"
             }
           ],
-          "collabConfidence": "confirmed",
+          "collabConfidence": "company_only",
           "pdfVerified": true,
           "pdfCompanies": [
             "deepmind"
           ],
-          "pdfUnis": [
-            "failurecases. ProEval employspre-trainedGaussianProcesses(GPs)assurrogatesforthe",
-            "classificationbenchmarksdemonstratethat ProEval issignificantlymoreefficientthan"
-          ],
+          "pdfUnis": [],
           "pdfHKUnis": []
         },
         {
